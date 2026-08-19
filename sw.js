@@ -1,5 +1,5 @@
 // service worker: 导航/数据网络优先(每日新鲜)，静态资源缓存优先
-const CACHE = 'migration-intel-2026-08-18-0816';
+const CACHE = 'migration-intel-2026-08-19-1022';
 const CORE = ['./', './index.html', './manifest.json', './icons/icon.svg'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(CORE)).then(() => self.skipWaiting()));
