@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>全球移民与边境安全态势感知日报 · 2026-08-26</title>
+<style>
+:root {
+  --bg:#f4f6fa; --card:#ffffff; --ink:#16213a; --muted:#5a647c; --line:#e2e7f0;
+  --navy:#0f2e5c; --accent:#1a4f9c; --accent2:#0e7a6f; --gold:#d99114; --soft:#eaf0fa;
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; font-family:"Microsoft YaHei","PingFang SC","Segoe UI",sans-serif; background:var(--bg); color:var(--ink); line-height:1.75; }
+.wrap { max-width:1080px; margin:0 auto; padding:0 16px 60px; }
+header { background:linear-gradient(120deg,#0a1f40 0%,#0f2e5c 55%,#1a4f9c 100%); color:#fff; padding:38px 16px 30px; }
+header h1 { margin:0 0 6px; font-size:26px; letter-spacing:1px; }
+header .sub { opacity:.9; font-size:13px; }
+.stats { display:flex; gap:12px; flex-wrap:wrap; margin:20px 0 0; }
+.stat { background:rgba(255,255,255,.13); border:1px solid rgba(255,255,255,.25); border-radius:12px; padding:8px 16px; }
+.stat b { font-size:20px; display:block; }
+.stat span { font-size:12px; opacity:.9; }
+.navbar { position:sticky; top:0; z-index:9; background:rgba(255,255,255,.97); backdrop-filter:blur(6px); border-bottom:1px solid var(--line); padding:8px 12px; overflow-x:auto; -webkit-overflow-scrolling:touch; }
+.navbar .inner { max-width:1080px; margin:0 auto; display:flex; gap:8px; flex-wrap:nowrap; }
+@media (min-width:768px) { .navbar .inner { flex-wrap:wrap; } }
+.nav-chip { font-size:12.5px; color:var(--accent); background:var(--soft); border:1px solid #cfdcf5; border-radius:999px; padding:4px 12px; text-decoration:none; white-space:nowrap; }
+.nav-chip b { color:#fff; background:var(--accent); border-radius:999px; padding:0 6px; font-size:11px; margin-left:2px; }
+.panel { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:22px 24px; margin-top:24px; box-shadow:0 2px 10px rgba(15,46,92,.05); }
+.panel h2 { margin:0 0 12px; font-size:20px; border-left:5px solid var(--accent); padding-left:12px; }
+.overview-text h4 { margin:14px 0 6px; color:var(--accent); font-size:15.5px; }
+.overview-text p, .overview-text li { margin:6px 0; color:#2e3850; font-size:14.5px; }
+.top10 { list-style:none; margin:8px 0 0; padding:0; counter-reset:t10; }
+.top10 li { border-bottom:1px dashed var(--line); padding:10px 4px; counter-increment:t10; }
+.top10 li:last-child { border-bottom:none; }
+.top10 a { display:flex; gap:8px; align-items:baseline; text-decoration:none; color:var(--ink); flex-wrap:wrap; }
+.top10 a::before { content:counter(t10); min-width:24px; height:24px; border-radius:8px; background:var(--accent); color:#fff; font-size:13px; display:inline-flex; align-items:center; justify-content:center; font-weight:700; }
+.top10 li:nth-child(-n+3) a::before { background:var(--gold); }
+.t10-rate { color:var(--gold); font-size:13px; letter-spacing:1px; }
+.t10-sec { font-size:12px; color:var(--accent2); background:#e5f4f1; border-radius:999px; padding:1px 10px; }
+.t10-title { font-weight:600; font-size:14.5px; }
+.t10-reason { font-size:12.5px; color:var(--muted); margin:3px 0 0 32px; }
+/* ============ 手风琴板块 ============ */
+details.section { margin-top:16px; background:var(--card); border:1px solid var(--line); border-radius:14px; box-shadow:0 1px 6px rgba(15,46,92,.04); overflow:hidden; }
+details.section > summary { list-style:none; cursor:pointer; display:flex; align-items:center; gap:10px; flex-wrap:wrap; padding:16px 18px; background:linear-gradient(90deg,var(--soft),#fff); border-left:5px solid var(--accent); user-select:none; }
+details.section > summary::-webkit-details-marker { display:none; }
+details.section[open] > summary { border-bottom:1px solid var(--line); }
+.sec-title { font-size:17px; font-weight:700; }
+.sec-desc { font-size:12px; color:var(--muted); flex:1 1 100%; order:9; }
+@media (min-width:768px) { .sec-desc { flex:1; order:0; } }
+.sec-count { font-size:12px; color:#fff; background:var(--accent); border-radius:999px; padding:2px 10px; }
+.sec-arrow { color:var(--accent); transition:transform .2s; }
+details.section[open] .sec-arrow { transform:rotate(180deg); }
+.sec-body { padding:4px 14px 16px; }
+.sec-foot { text-align:center; margin-top:14px; }
+.collapse-btn { font-size:13px; color:var(--accent2); text-decoration:none; border:1px solid #c9e6e1; background:#f0faf8; border-radius:999px; padding:6px 18px; }
+.item { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px 18px; margin-top:12px; }
+.item-head { display:flex; gap:10px; align-items:baseline; flex-wrap:wrap; }
+.rate { color:var(--gold); font-size:13px; letter-spacing:2px; white-space:nowrap; }
+.item h4 { margin:0; font-size:16px; }
+.item h4 a { color:var(--ink); text-decoration:none; }
+.item h4 a:hover { color:var(--accent); text-decoration:underline; }
+.title-en { color:var(--muted); font-size:12.5px; font-style:italic; margin:4px 0 8px; }
+.chips { display:flex; gap:6px; flex-wrap:wrap; margin-bottom:10px; }
+.chip { font-size:12px; color:var(--accent); background:var(--soft); border-radius:999px; padding:2px 10px; }
+.summary { font-size:14px; color:#2e3850; background:#f7f9fd; border-radius:10px; padding:10px 14px; margin:0 0 10px; }
+.summary b { color:var(--accent); }
+.brief { border:1px dashed #c7d6ef; border-radius:10px; padding:8px 14px; background:#fafcff; }
+.brief summary { cursor:pointer; color:var(--accent); font-weight:600; font-size:13.5px; }
+.brief p { font-size:13.8px; color:#37415a; margin:10px 0 4px; }
+.meta { display:flex; gap:14px; flex-wrap:wrap; font-size:12.5px; color:var(--muted); margin-top:10px; border-top:1px solid var(--line); padding-top:9px; }
+.meta a { color:var(--accent); text-decoration:none; }
+.meta .back { margin-left:auto; color:var(--accent2); }
+footer { text-align:center; color:var(--muted); font-size:12.5px; margin-top:40px; }
+#toTop { position:fixed; right:16px; bottom:20px; z-index:20; display:none; width:42px; height:42px; border-radius:50%; border:0; background:var(--accent); color:#fff; font-size:18px; cursor:pointer; box-shadow:0 4px 12px rgba(15,46,92,.3); }
+</style>
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#0f2e5c">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="态势感知日报">
+<link rel="apple-touch-icon" href="../icons/icon.svg">
+<link rel="icon" type="image/svg+xml" sizes="any" href="../icons/icon.svg">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>🛡️ 全球移民与边境安全态势感知日报</h1>
+    <div class="sub">2026-08-26 · 每日全球移民管理与边境安全情报智能体 · 八大板块 / 政府官网 · 国际组织 · 权威媒体 · 智库 · 学术 · 数据库</div>
+    <div class="stats">
+      <div class="stat"><b>52</b><span>今日情报条数</span></div>
+      <div class="stat"><b>8</b><span>覆盖板块</span></div>
+      <div class="stat"><b>43</b><span>信息来源机构</span></div>
+      <div class="stat"><b>3.9</b><span>平均推荐指数</span></div>
+    </div>
+  </div>
+</header>
+<div class="navbar"><div class="inner"><a class="nav-chip" href="#overview">⭐ 总体态势</a><a class="nav-chip" href="#sec-global_migration">🌍 全球移民管理热点 <b>7</b></a><a class="nav-chip" href="#sec-border_security">🛡️ 全球边境安全热点 <b>6</b></a><a class="nav-chip" href="#sec-usa">🗽 美国移民与边境管理 <b>6</b></a><a class="nav-chip" href="#sec-eu">🇪🇺 欧盟移民与边境管理 <b>6</b></a><a class="nav-chip" href="#sec-china_neighbors">🧭 中国周边国家动态 <b>6</b></a><a class="nav-chip" href="#sec-global_south">🌏 全球南方国家动态 <b>6</b></a><a class="nav-chip" href="#sec-tech">🤖 移民与边境技术 <b>6</b></a><a class="nav-chip" href="#sec-research">📚 移民与边境研究 <b>9</b></a></div></div>
+<div class="wrap">
+  <div class="panel" id="overview">
+    <h2>⭐ 每日总体关键态势简报</h2>
+    <div class="overview-text"><p>全球移民与边境安全态势感知日报（2026-08-26）</p>
+<h4>今日核心研判</h4>
+<p><strong>1. 美国执法强度持续加码，庇护受理程序明显收紧。</strong> 移民海关执法局（ICE）「安全社区行动」在华盛顿周边逮捕 1,328 人；美移民局（USCIS）以临时最终规则将庇护受理改为可不面谈即移交移民法官，审查环节被削弱；华盛顿上诉法院重启 CHNV（古巴/海地/尼加拉瓜/委内瑞拉）快速遣返规则。叠加国土安全部终结留学生「身份存续期」、改为固定居留期限，美国移民管控从边境、庇护到合法身份全链条同步收紧。</p>
+<p><strong>2. 欧盟移民与庇护公约进入实质压力测试，技术防线与政治分歧并行。</strong> 欧盟出入境系统（EES）全面运行后已识破伪造身份，技术围栏效用初显；但成员国就第三国遣返中心与团结机制出现明显分裂，英法海峡「一进一出」遣返试点延至十月，德国上半年强制遣返人数不升反降、法国内政部悄然收紧入籍规则，显示公约落地面临成员国执行温差。</p>
+<p><strong>3. 地中海与边境人道风险再度抬升，全球南方遣返潮同步升温。</strong> 突尼斯东南部海域移民船倾覆致 12 人遇难、希腊克里特岛以南充气船沉没 18 人遇难、希腊北部拘留中心 35 人冲突破墙逃脱；与此同时哥伦比亚总统下令大规模遣返无证移民、委内瑞拉驱逐千余名哥伦比亚人、南非反移民清退引发成本与外交紧张，显示供需两端压力均在累积。</p>
+<h4>分板块要点</h4>
+<p><strong>全球移民管理热点（7条）</strong></p>
+<ul>
+<li>西班牙出台休达移民应对方案并拟修订庇护法（5星）</li>
+<li>美国终结留学生「身份存续期」改为固定居留期限（5星）</li>
+<li>英国8月3日起合并庇护面谈削弱审查程序（4星）</li>
+<li>澳大利亚调整技术移民签证审理优先级（4星）</li>
+<li>新西兰技术移民类别8月24日起实施新居留路径（4星）</li>
+<li>欧盟移民与庇护公约面临首次重大考验（4星）</li>
+<li>加拿大为巴勒斯坦临时居民出台两项公共政策（3星）</li>
+</ul>
+<p><strong>全球边境安全热点（6条）</strong></p>
+<ul>
+<li>突尼斯东南部海域移民船倾覆致12人遇难（4星）</li>
+<li>希腊克里特岛以南充气船沉没18人遇难（4星）</li>
+<li>希腊北部拘留中心移民冲突破墙35人逃脱（4星）</li>
+<li>英吉利海峡小型船只越境人数同比大降但单船密度创新高（4星）</li>
+<li>阿尔及利亚与毛里塔尼亚拦截逾500名赴欧非法移民（3星）</li>
+<li>南非推出生物识别电子旅行授权系统强化边境管理（3星）</li>
+</ul>
+<p><strong>美国移民与边境管理（6条）</strong></p>
+<ul>
+<li>移民海关执法局华盛顿周边逮捕1328人（5星）</li>
+<li>美移民局庇护规则改为可不面谈移交法官（4星）</li>
+<li>海关边境保护局罗马港查获1070磅冰毒（4星）</li>
+<li>华盛顿上诉法院重启快速遣返规则（4星）</li>
+<li>第一巡回法院裁定长期居留者须可保释（4星）</li>
+<li>爱荷华联邦法官斥政府释放南苏丹妇（3星）</li>
+</ul>
+<p><strong>欧盟移民与边境管理（6条）</strong></p>
+<ul>
+<li>欧盟出入境系统启用后查获假身份（4星）</li>
+<li>英法海峡遣返试点延至十月（4星）</li>
+<li>欧盟成员国就遣返中心与团结机制分裂（4星）</li>
+<li>德国上半年强制遣返人数不升反降（3星）</li>
+<li>法国内政部悄然收紧入籍规则（3星）</li>
+<li>意大利2026年海上抵达人数减半（3星）</li>
+</ul>
+<p><strong>中国周边国家动态（6条）</strong></p>
+<ul>
+<li>泰方在桑卡拉武里逮捕100余名缅籍非法入境者（4星）</li>
+<li>泰警方在甘乍那武里截获36名缅籍非法入境者（4星）</li>
+<li>缅甸七个月累计遣返9000余名外籍非法入境者（4星）</li>
+<li>印度向孟加拉国提交2680名疑似非法移民名单（4星）</li>
+<li>越南开展打击人口贩运与网络诈骗专项行动（3星）</li>
+<li>印尼茉莉芬查处中国籍男子逾期务工案（3星）</li>
+</ul>
+<p><strong>全球南方国家动态（6条）</strong></p>
+<ul>
+<li>突尼斯沉船事故引发抗议 搜救持续（5星）</li>
+<li>哥伦比亚总统下令大规模遣返无证移民（4星）</li>
+<li>南非反移民清退引发成本与外交紧张（4星）</li>
+<li>南非判处两名无证外籍人员入狱后遣返（4星）</li>
+<li>委内瑞拉驱逐千余名哥伦比亚人（4星）</li>
+<li>黎巴嫩拟放宽60万叙利亚人入境限制（3星）</li>
+</ul>
+<p><strong>移民与边境技术（6条）</strong></p>
+<ul>
+<li>伊拉克接管难民身份登记 生物识别成核心（5星）</li>
+<li>美法官阻止政府调取驾照数据库用于移民执法（5星）</li>
+<li>德国安全局警告AI可凭手部照片复刻指纹（4星）</li>
+<li>苏格兰研讨实时人脸识别治理 警方吁禁口罩（4星）</li>
+<li>印度电信新规弃用跨运营商生物数据库（3星）</li>
+<li>印度CSM科技加入开源数字身份平台生态（3星）</li>
+</ul>
+<p><strong>移民与边境研究（9条）</strong></p>
+<ul>
+<li>重新思考正规移民路径（IOM，5星）</li>
+<li>印尼移工女性的跨国政治参与（4星）</li>
+<li>庇护时代的人蛇走私（4星）</li>
+<li>抵制移民虚假信息的游戏化策略（4星）</li>
+<li>埃塞俄比亚的连锁性流离失所（4星）</li>
+<li>菲欧护理移民协定的欧洲转向（4星）</li>
+<li>移民对城市年龄结构的影响（4星）</li>
+<li>城市化与难民归化：同族网络（4星）</li>
+<li>老年移民的移动民族志反思（3星）</li>
+</ul>
+<h4>追踪信号</h4>
+<ul>
+<li><strong>美国庇护规则修改的司法走向</strong>：USCIS 临时最终规则削弱面谈环节，预计将引发权益组织诉讼，需跟踪联邦法院是否签发暂缓令。</li>
+<li><strong>欧盟 EES 系统扩大化</strong>：假身份被识破后，系统能否覆盖陆路申根口岸及成员国数据互通，是公约落地的关键变量。</li>
+<li><strong>地中海夏末航行风险</strong>：沉船死亡集中出现，预警夏末至秋季小型船只越境可能随海况变化再度攀升，关注意大利、希腊、突尼斯沿岸。</li>
+<li><strong>全球南方遣返连锁反应</strong>：哥伦比亚—委内瑞拉相互驱逐、南非清退行动，可能外溢至区域外交与劳动力短缺议题。</li>
+<li><strong>生物识别治理争议</strong>：美法官阻止驾照数据库用于移民执法、德英对人脸识别的争论，反映技术治理的司法与伦理边界正在重塑。</li>
+</ul></div>
+    <h2 style="margin-top:24px">🔥 今日关键情报 Top 8<small style="font-size:12.5px;color:var(--muted);font-weight:400;margin-left:10px">按推荐指数排序 · 点击自动展开对应板块</small></h2>
+    <ol class="top10"><li><a href="#item-global_migration-1"><span class="t10-rate">★★★★★</span><span class="t10-sec">🌍 全球移民管理热点</span><span class="t10-title">西班牙出台休达移民应对方案并拟修订庇护法</span></a><div class="t10-reason">直接涉及移民与庇护法律的修订及边境管控政策调整，是近期欧盟移民治理格局中的关键节点，政策信号与连锁影响显著。</div></li><li><a href="#item-global_migration-6"><span class="t10-rate">★★★★★</span><span class="t10-sec">🌍 全球移民管理热点</span><span class="t10-title">美国终结留学生「身份存续期」改为固定居留期限</span></a><div class="t10-reason">近五十年来国际学生签证制度最重大变革，直接影响全球数十万留学生与高校，战略与政策意义突出。</div></li><li><a href="#item-usa-1"><span class="t10-rate">★★★★★</span><span class="t10-sec">🗽 美国移民与边境管理</span><span class="t10-title">移民海关执法局华盛顿周边逮捕1328人</span></a><div class="t10-reason">单次区域行动逮捕人数创纪录，集中体现特朗普政府强化境内移民执法的力度与优先事项，对美国移民政策走向具明确指标意义。</div></li><li><a href="#item-global_south-3"><span class="t10-rate">★★★★★</span><span class="t10-sec">🌏 全球南方国家动态</span><span class="t10-title">突尼斯沉船事故引发抗议 搜救持续</span></a><div class="t10-reason">地中海移民危机标志性事件，引发抗议与人道关注，发布于8月25日，来源权威且细节充分。</div></li><li><a href="#item-tech-1"><span class="t10-rate">★★★★★</span><span class="t10-sec">🤖 移民与边境技术</span><span class="t10-title">伊拉克接管难民身份登记 生物识别成核心</span></a><div class="t10-reason">主权国家接管难民生物识别登记是移民数字身份治理的重要转折，兼具技术部署与政策示范意义，且由权威行业媒体详实报道，时效性强。</div></li><li><a href="#item-tech-5"><span class="t10-rate">★★★★★</span><span class="t10-sec">🤖 移民与边境技术</span><span class="t10-title">美法官阻止政府调取驾照数据库用于移民执法</span></a><div class="t10-reason">揭示身份数据库被转用于移民执法监控的争议，直接关联边境技术治理与隐私法冲突，由联邦诉讼支撑，权威性强且影响广泛。</div></li><li><a href="#item-research-9"><span class="t10-rate">★★★★★</span><span class="t10-sec">📚 移民与边境研究</span><span class="t10-title">重新思考正规移民路径</span></a><div class="t10-reason">IOM 旗舰报告核心章节，系统澄清政策迷思、证据扎实且具全球政策影响力，是移民治理研究的必读文献。</div></li><li><a href="#item-global_migration-2"><span class="t10-rate">★★★★☆</span><span class="t10-sec">🌍 全球移民管理热点</span><span class="t10-title">新西兰技术移民类别8月24日起实施新居留路径</span></a><div class="t10-reason">大洋洲主要移民国家实质性调整技术移民居留路径，对全球高技能人才的流动方向与规划具有示范意义。</div></li></ol>
+  </div>
+  
+<details class="section" id="sec-global_migration">
+  <summary>
+    <span class="sec-title">🌍 全球移民管理热点</span>
+    <span class="sec-desc">各国移民政策调整、签证制度改革、国际移民治理动态</span>
+    <span class="sec-count">7 条</span>
+    <span class="sec-arrow">▾</span>
+  </summary>
+  <div class="sec-body">
+    
+<article class="item" id="item-global_migration-1">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★★</span>
+    <h4><a href="https://ysxw.cctv.cn/article.html?toc_style_id=feeds_default&amp;item_id=16391786695258655200&amp;channelId=1119" target="_blank" rel="noopener">西班牙出台休达移民应对方案并拟修订庇护法</a></h4>
+  </div>
+  <div class="title-en">Spain unveils Ceuta migration response plan and draft asylum law reform</div>
+  <div class="chips"><span class="chip">西班牙</span><span class="chip">休达</span><span class="chip">移民政策</span><span class="chip">庇护法改革</span><span class="chip">边境管控</span><span class="chip">遣返</span></div>
+  <p class="summary"><b>内容提要</b>　当地时间8月25日，西班牙内阁召开会议，讨论应对休达移民危机的经济与卫生措施，并批准一项改革部分移民与庇护法的法案草案。计划包括加快将部分移民遣返摩洛哥、将500名未成年女性移民转移至本土、进一步加强边境管控，并将当前局势宣布为「涉及国家安全利益的局势」，设立统一指挥机制协调应对。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>8月25日，西班牙政府召开内阁会议，专门讨论如何应对飞地休达自7月底至8月初爆发的大规模非法越境危机。会议批准了一份旨在改革部分移民与庇护法律的法案草案，这是西班牙在危机后首次从立法层面作出系统性回应。具体措施包括：加快将部分移民遣返回摩洛哥；将约500名未成年女性移民转移至西班牙本土安置；进一步扩充并强化边境管控力量；将休达当前局势定性为「涉及国家安全利益的局势」，并设立统一指挥机制协调内政、卫生与地方部门的应对行动。与此同时，政府还将扩充休达社会经济综合发展计划，增加安全、移民返回管理与经济重振等方面的投入。休达位于北非地中海沿岸，与摩洛哥接壤，7月底至8月初曾因社交媒体误传边境开放而出现逾7万人涌入，成为西班牙近年来最严重的边境移民危机。此次法案若获通过，将对西班牙的庇护申请门槛、遣返程序与边境管理权限产生实质影响，也折射出欧盟内部在移民分担责任问题上的深层分歧。</p></details>
+  <div class="meta">
+    <span>来源：<b>央视新闻（中央广播电视总台）</b></span>
+    <span>推荐理由：直接涉及移民与庇护法律的修订及边境管控政策调整，是近期欧盟移民治理格局中的关键节点，政策信号与连锁影响显著。</span>
+    <a href="https://ysxw.cctv.cn/article.html?toc_style_id=feeds_default&amp;item_id=16391786695258655200&amp;channelId=1119" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-global_migration-2">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://visaaide.co.nz/skilled-migrant-category-changes-august-2026" target="_blank" rel="noopener">新西兰技术移民类别8月24日起实施新居留路径</a></h4>
+  </div>
+  <div class="title-en">New Zealand launches new Skilled Migrant Category residence pathways from Aug 24</div>
+  <div class="chips"><span class="chip">新西兰</span><span class="chip">技术移民</span><span class="chip">居留签证</span><span class="chip">技术劳工</span><span class="chip">移民政策</span></div>
+  <p class="summary"><b>内容提要</b>　新西兰移民局（INZ）自8月24日起正式施行技术移民类别（SMC）两项全新非打分制居留路径：贸易与技术员居留路径，以及技术工作经验居留路径。新规锁定签证获批时的工资门槛，并允许以雇主服务证明替代海外税单，2027年起还将开放AEWV工签延期以补足居留所需经验。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>新西兰移民局（INZ）就技术移民类别（Skilled Migrant Category, SMC）居留签证框架敲定操作细则，自2026年8月24日起生效两项全新非打分制居留路径。其一为「贸易与技术员居留路径」，合格贸易专业人士与特定技术员可凭认可贸易资质与经核实的工作经验直接申请居留，绕开传统学位打分指标；其二为「技术工作经验居留路径」，在ANZSCO 1至3级岗位、薪资不低于中位数1.1倍的申请人，可仅凭3年海外经验加2年新西兰技术工作经验申请居留。重要变化还包括：从8月24日起，多数SMC申请人只需满足签证获批时的工资门槛即可开始累积技术工作经验，并在申请居留时继续达到该标准，免受后续门槛上调影响；未提交 legacy EOI 草案将于当日作废；雇主服务证明可替代部分司法管辖区的税单作为海外经验证明；2027年拟推出AEWV工签延期，使需补足12个月经验者得以完成居留路径。整体而言，改革在提升可预期性的同时，也对特定职业引入更严格的真实雇佣审查。</p></details>
+  <div class="meta">
+    <span>来源：<b>VisaAide（新西兰移民顾问机构）</b></span>
+    <span>推荐理由：大洋洲主要移民国家实质性调整技术移民居留路径，对全球高技能人才的流动方向与规划具有示范意义。</span>
+    <a href="https://visaaide.co.nz/skilled-migrant-category-changes-august-2026" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-global_migration-3">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://canada.ca/en/immigration-refugees-citizenship/corporate/mandate/policies-operational-instructions-agreements/public-policies.html" target="_blank" rel="noopener">加拿大为巴勒斯坦临时居民出台两项公共政策</a></h4>
+  </div>
+  <div class="title-en">Canada introduces temporary public policies for Palestinian temporary residents</div>
+  <div class="chips"><span class="chip">加拿大</span><span class="chip">巴勒斯坦</span><span class="chip">临时居民</span><span class="chip">开放工签</span><span class="chip">人道主义</span></div>
+  <p class="summary"><b>内容提要</b>　加拿大移民、难民及公民部（IRCC）于8月24日公布两项临时性公共政策：为在2027年9月30日前以临时居民身份抵达加拿大的巴勒斯坦籍外国公民提供便利的开放工签延期；并延续此前加沙特别措施下已获临时居民签证者的相关安排，体现加方人道主义移民回应。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>加拿大移民、难民及公民部（IRCC）公共政策页面显示，加方于2026年8月24日新增两项临时性公共政策，专门针对受冲突影响的巴勒斯坦籍外国公民。第一项政策为在2027年9月30日或之前以临时居民身份抵达加拿大的巴勒斯坦籍人士，提供便利的开放工签（open work permit）延期通道；第二项则延续此前加沙特别措施框架下已获临时居民签证者相关的工签便利安排。两项政策均属有时限的人道主义举措，旨在为身处加拿大境内、因原籍国冲突而难以返回的群体提供合法居留与工作的过渡保障。该动向延续了加拿大近年来以临时性公共政策回应突发国际危机的一贯做法，与此前针对乌克兰、阿富汗等群体的类似安排一脉相承，反映其移民体系中人道维度与灵活工具的组合运用。</p></details>
+  <div class="meta">
+    <span>来源：<b>加拿大移民、难民及公民部（IRCC）</b></span>
+    <span>推荐理由：属针对性人道主义移民政策，直接影响群体规模有限，但体现加拿大移民政策的人道维度与临时政策工具箱的运用。</span>
+    <a href="https://canada.ca/en/immigration-refugees-citizenship/corporate/mandate/policies-operational-instructions-agreements/public-policies.html" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-global_migration-4">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://kpmg.com/xx/en/our-insights/gms-flash-alert/2026/flash-alert-2026-211.html" target="_blank" rel="noopener">澳大利亚调整技术移民签证审理优先级</a></h4>
+  </div>
+  <div class="title-en">Australia revises skilled visa processing priorities under Direction 119</div>
+  <div class="chips"><span class="chip">澳大利亚</span><span class="chip">技术移民</span><span class="chip">签证审理</span><span class="chip">优先次序</span><span class="chip">移民政策</span></div>
+  <p class="summary"><b>内容提要</b>　澳大利亚政府于7月25日起施行第119号部长指令（Direction 119），取代第105号指令，建立五档技术移民签证审理优先次序，将执法与国防、医疗教学建筑等职业及在澳申请人置于前列，同时取消偏远地区与认证担保人的优先地位，适用于新递交及未决申请。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>澳大利亚政府引入第119号部长指令（Ministerial Direction 119），自2026年7月25日起生效，取代此前的第105号指令，对多项技术类与雇主担保类签证的审理优先次序作出重大重构。新框架设五档优先级：第一、二档分别为在澳及离岸的执法与国防职业；第三档为在澳的医疗、教学与建筑职业；第四、五档为其他在澳及其他离岸申请。受影响的签证涵盖雇主担保（186）、技能短缺（482）、独立技术（189）、州担保（190）、偏远地区（491/494/887/191）等十余个类别。最关键的变化是：偏远地区与认证担保人（Accredited Sponsor）不再享有优先审理待遇，申请人在澳与否成为核心优先因素，建筑职业与医疗、教学并列获得优先。该指令不仅适用于7月25日之后递交的申请，也回溯适用于此前已递交但尚未最终决定的案件，意味着依赖偏远地区或认证担保渠道的雇主与申请人将面临不同的审理节奏。这一调整凸显澳方以国家利益与境内需求为导向的技能人才筛选逻辑。</p></details>
+  <div class="meta">
+    <span>来源：<b>KPMG（基于澳大利亚政府移民局公告）</b></span>
+    <span>推荐理由：发达国家技术移民体系的实质性调整，直接影响雇主担保与高技能人才的签证规划，对相关行业招聘具有现实影响。</span>
+    <a href="https://kpmg.com/xx/en/our-insights/gms-flash-alert/2026/flash-alert-2026-211.html" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-global_migration-5">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://righttoremain.org.uk/a-major-change-to-asylum-interviews-from-3-august-2026/" target="_blank" rel="noopener">英国8月3日起合并庇护面谈削弱审查程序</a></h4>
+  </div>
+  <div class="title-en">UK merges asylum interviews from 3 August, raising fair-hearing concerns</div>
+  <div class="chips"><span class="chip">英国</span><span class="chip">庇护</span><span class="chip">移民规则</span><span class="chip">避难申请</span><span class="chip">程序改革</span></div>
+  <p class="summary"><b>内容提要</b>　根据7月9日公布的《移民规则变更声明》（HC 259），英国自8月3日起引入「合并登记」（merged registration）程序，将筛查面谈与实质庇护面谈合二为一。部分被认为「明显无根据」或来自「安全国家」的申索可能在无单独面谈、甚至无权上诉的情况下被拒。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>英国政府于2026年7月9日发布《移民规则变更声明》（HC 259），其中一项关键但被低调处理的改动自8月3日起生效：引入所谓「合并登记」（merged registration）程序。以往庇护申请人通常先接受筛查面谈，数月甚至数年后才进行实质庇护面谈；新规下，部分案件将仅以一次合并面谈完成登记、筛查与实质问询，内政部可据此直接作出通过、转常规程序或拒绝的决定。值得注意的是，内政部可能将那些其认定为「明显无根据」的申索，以及来自其「安全国家」清单（包括美国、加拿大、澳大利亚、日本、韩国、新西兰等）的申请，在不安排单独实质面谈、且可能被认定为「明显无根据」从而剥夺向裁判所上诉权利的情况下驳回。法律援助组织Right to Remain指出，这一改动削弱了申请人充分陈述庇护理由的机会，尤其在早期法律代理可及性不足的背景下，对来自所谓「安全国家」的弱势个体构成实质风险。该变化是英国近年来持续收紧庇护审查、加快处置积压案的延续。</p></details>
+  <div class="meta">
+    <span>来源：<b>Right to Remain（英国移民法律援助组织）</b></span>
+    <span>推荐理由：触及庇护申请核心程序收紧，关乎难民权利与程序公正，政策信号强烈且引发权益组织关切。</span>
+    <a href="https://righttoremain.org.uk/a-major-change-to-asylum-interviews-from-3-august-2026/" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-global_migration-6">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★★</span>
+    <h4><a href="https://studyinthestates.dhs.gov/final-rule-establishing-a-fixed-time-period-of-admission-and-an-extension-of-stay-procedure-quick" target="_blank" rel="noopener">美国终结留学生「身份存续期」改为固定居留期限</a></h4>
+  </div>
+  <div class="title-en">US ends duration-of-status for F-1/J-1, imposes fixed admission period</div>
+  <div class="chips"><span class="chip">美国</span><span class="chip">学生签证</span><span class="chip">移民规则</span><span class="chip">身份存续期</span><span class="chip">国际学生</span></div>
+  <p class="summary"><b>内容提要</b>　美国国土安全部（DHS）于2026年7月17日在《联邦公报》发布最终规则，将于9月15日生效，终结F-1、J-1等非移民「身份存续期」（duration of status）制度，改为附固定截止日的「准入直至日期」，最长不超过四年加30天离境宽限期，并收紧转学、转专业与宽限期规定。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>美国国土安全部（DHS）通过学生与交流访问者项目（SEVP）于2026年7月17日发布最终规则，并定于9月15日正式生效，彻底终结施行近五十年的「身份存续期」（duration of status, D/S）制度。新规下，F-1与J-1持有人入境后将获一个固定的「准入直至日期」（Admit Until Date, AUD），以I-20或DS-2019所列项目结束日期为准，最长不超过四年，另加30天离境准备期；语言培训学生限24个月。若需更长时间完成学业、OPT/STEM OPT或转学转专业，须向美国公民及移民服务局（USCIS）及时提交I-539延期停留（EOS）申请并缴费、采集生物信息。F-1离境宽限期由60天缩短至30天；研究生阶段禁止更改教育目标或转学；已在美且持D/S者享有分阶段过渡期。该规则被视为数十年来国际学生签证制度最重大的变革，可能提高合规成本与非法滞留风险，对美国吸引全球人才的竞争力构成影响，高校与留学群体正密集评估应对。</p></details>
+  <div class="meta">
+    <span>来源：<b>美国国土安全部（DHS）/ SEVP</b></span>
+    <span>推荐理由：近五十年来国际学生签证制度最重大变革，直接影响全球数十万留学生与高校，战略与政策意义突出。</span>
+    <a href="https://studyinthestates.dhs.gov/final-rule-establishing-a-fixed-time-period-of-admission-and-an-extension-of-stay-procedure-quick" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-global_migration-7">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://eureflect.com/europes-migration-crisis-deepens" target="_blank" rel="noopener">欧盟移民与庇护公约面临首次重大考验</a></h4>
+  </div>
+  <div class="title-en">EU Migration and Asylum Pact faces first major test amid member clashes</div>
+  <div class="chips"><span class="chip">欧盟</span><span class="chip">移民公约</span><span class="chip">庇护</span><span class="chip">团结机制</span><span class="chip">边境管理</span></div>
+  <p class="summary"><b>内容提要</b>　欧盟《移民与庇护公约》自6月12日全面适用后，首次遭遇重大压力测试：意大利与德国围绕庇护责任归属激烈交锋；希腊北部辛蒂基拘留中心8月23日发生移民冲突、35人破墙逃脱；德国自8月19日起恢复向意大利遣送都柏林条例下的庇护申请人，凸显团结机制落地困难。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>欧盟《移民与庇护公约》（Pact on Migration and Asylum）于2026年6月12日全面适用，建立了加快外边境筛查、统一庇护与边境程序、强化遣返及 solidarity 机制的新框架。然而仅在数周后，该体系便迎来首次重大考验。意大利与德国围绕「首入国责任」爆发公开分歧：柏林要求将经意大利入境后北上的庇护申请人遣返罗马，意方则以德国非政府组织救援船在意大利港口靠岸为由提出异议，甚至暗示向柏林索赔。与此同时，希腊北部辛蒂基（Sintiki）临时收容中心于8月23日发生移民与警察冲突，约35人剪断围栏逃脱、半数被追回、5人送医，事件与庇护申请被拒及拘留期延长直接相关。德国则自8月19日起恢复依据《都柏林条例》向意大利遣送庇护申请人。分析指出，公约虽试图以团结机制平衡前线国家压力，但「首入国担责」逻辑未根本消失，南北欧在责任分担上的结构性矛盾恐将持续侵蚀共同移民治理的有效性。</p></details>
+  <div class="meta">
+    <span>来源：<b>EUReflect（欧洲政策分析）</b></span>
+    <span>推荐理由：反映欧盟共同移民治理框架落地过程中的结构性矛盾与首轮危机应对，具备宏观战略参考价值。</span>
+    <a href="https://eureflect.com/europes-migration-crisis-deepens" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+    <div class="sec-foot"><a href="#sec-global_migration" class="collapse-btn" data-collapse="sec-global_migration">▴ 收起本板块</a></div>
+  </div>
+</details>
+<details class="section" id="sec-border_security">
+  <summary>
+    <span class="sec-title">🛡️ 全球边境安全热点</span>
+    <span class="sec-desc">边境冲突、非法越境、边境管控措施、跨境犯罪治理</span>
+    <span class="sec-count">6 条</span>
+    <span class="sec-arrow">▾</span>
+  </summary>
+  <div class="sec-body">
+    
+<article class="item" id="item-border_security-1">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://abcnews.com/International/wireStory/migrants-clash-police-cut-fence-greek-detention-center-135879666" target="_blank" rel="noopener">希腊北部拘留中心移民冲突破墙35人逃脱</a></h4>
+  </div>
+  <div class="title-en">Migrants clash with police, cut fence at Greek detention center; 35 escape</div>
+  <div class="chips"><span class="chip">希腊</span><span class="chip">移民拘留</span><span class="chip">边境安全</span><span class="chip">冲突</span><span class="chip">遣返</span></div>
+  <p class="summary"><b>内容提要</b>　希腊北部辛蒂基（Sintiki）临时收容中心8月23日发生移民与警察冲突， detainees 投掷石块并剪断周边围栏，约35人逃脱、半数被追回，5人送医。该中心距保加利亚边境不远，羁押约450名等待庇护裁决者，事件与庇护被拒及拘留期延长直接相关。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>8月23日晚至24日凌晨，希腊北部辛蒂基（Sintiki）一处临时收容中心发生移民与警方的严重冲突。据希腊警方通报，被羁押的庇护申请人在晚餐期间袭击看守、向警卫投掷石块，并剪断中心周边围栏，约35人趁乱逃脱，警方随后展开搜捕，追回约一半逃者，另有5人受伤送医。该中心位于希腊与保加利亚边境附近，羁押约450名等待庇护申请裁定的人员。希腊警方调派特种部队并以闪光震爆弹应对，冲突持续至次日凌晨。希腊政府近期推行欧洲最严厉的移民政策之一，允许最长24个月拘留，并对非法入境或逾期停留者科以2至5年徒刑；移民部长普列夫里斯表示，对在拘留期间实施犯罪者将启动加速遣返程序。此次冲突被普遍解读为羁押条件恶化、庇护驳回与拘留期延长引发的不满爆发，凸显欧盟外边境收容设施的安全与治理压力。</p></details>
+  <div class="meta">
+    <span>来源：<b>ABC News（美联社电讯）</b></span>
+    <span>推荐理由：欧盟外边境关键收容设施发生破墙逃脱事件，直接关联边境管控与遣返秩序，安全警示意义强。</span>
+    <a href="https://abcnews.com/International/wireStory/migrants-clash-police-cut-fence-greek-detention-center-135879666" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-border_security-2">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://www.aljazeera.com/news/2026/8/22/at-least-13-tunisians-missing-as-migrant-boat-headed-for-italy-capsizes" target="_blank" rel="noopener">突尼斯东南部海域移民船倾覆致12人遇难</a></h4>
+  </div>
+  <div class="title-en">Migrant boat capsizes off Tunisia&#x27;s Zarzis; 12 dead, 2 missing</div>
+  <div class="chips"><span class="chip">突尼斯</span><span class="chip">地中海</span><span class="chip">非法越境</span><span class="chip">沉船</span><span class="chip">偷渡</span></div>
+  <p class="summary"><b>内容提要</b>　一艘载有15人的非法移民船在突尼斯东南部宰尔吉斯（Zarzis）外海约14海里处沉没，船上14人来自边境城市本格尔丹，目的地为意大利。截至8月23日已寻获12具遗体，仅1人获救，仍有2人失踪，当地居民为此举行抗议并封锁道路。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>突尼斯国民警卫队通报，一艘载有15人的非法移民船于8月21日晚在东南部宰尔吉斯（Zarzis）外海约14海里处遇险沉没，船上14名乘客来自毗邻利比亚边境的边境城市本格尔丹，正驶往意大利。当晚仅1名遇险者获救，救援力量持续搜寻其余人员；至8月23日，已寻获11至12具遗体，仍有2至3人失踪，搜救行动仍在继续。8月22日晚，本格尔丹大量居民因沉船事件举行抗议并封锁道路，表达不满。突尼斯地处北非地中海沿岸，距意大利兰佩杜萨岛仅约145公里，是通往欧洲的重要出发地之一。国际移民组织（IOM）数据显示，2026年前4个月地中海中部航线死亡人数同比翻倍以上，今年以来该航线已有至少914名移民死亡或失踪。此事件再次凸显地中海中部这一全球最致命偷渡航线的持续风险，以及欧盟—突尼斯边境管控合作下仍难遏制的危险越境活动。</p></details>
+  <div class="meta">
+    <span>来源：<b>Al Jazeera（引述突尼斯国民警卫队/美联社）</b></span>
+    <span>推荐理由：地中海中部最致命偷渡航线上的典型海难，直观反映跨境人员流动的安全代价与边境管控盲区。</span>
+    <a href="https://www.aljazeera.com/news/2026/8/22/at-least-13-tunisians-missing-as-migrant-boat-headed-for-italy-capsizes" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-border_security-3">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://trtworld.com/article/9b3646bed3c8" target="_blank" rel="noopener">阿尔及利亚与毛里塔尼亚拦截逾500名赴欧非法移民</a></h4>
+  </div>
+  <div class="title-en">Algeria, Mauritania intercept/rescue over 500 Europe-bound irregular migrants</div>
+  <div class="chips"><span class="chip">阿尔及利亚</span><span class="chip">毛里塔尼亚</span><span class="chip">边境管控</span><span class="chip">海上拦截</span><span class="chip">偷渡</span></div>
+  <p class="summary"><b>内容提要</b>　阿尔及利亚国防部称，8月12日至18日其海岸警卫队挫败223起赴欧非法渡海企图，并在境内逮捕211名不同国籍的非法移民；毛里塔尼亚海岸警卫队则在努瓦迪布外海救起一艘来自冈比亚、载有315人的船只，凸显北非与西非沿岸拦截力度加大。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>阿尔及利亚国防部在每周例行通报中披露，8月12日至18日期间，其海岸警卫队在地中海沿岸挫败223起搭乘传统船只前往欧洲的非法移民企图，并在境内其他地区逮捕211名不同国籍的非法移民。与此同时，毛里塔尼亚海岸警卫队通报，于8月19日前后在西北部努瓦迪布（Nouadhibou）外海救起一艘来自冈比亚、载有315人的船只，乘客中包含妇女、儿童与婴幼儿，处境艰难但均获妥善安置与人道救助；其中191人为塞内加尔籍、120人为冈比亚籍、1人为马里籍。两国均表示相关措施旨在遏制走私网络、阻止非法海上渡海的组织化运作。阿尔及利亚东海岸主要指向意大利撒丁岛，中、西海岸则多通往西班牙本土及巴利阿里群岛；毛里塔尼亚则是撒哈拉以南非洲经大西洋前往西班牙加那利群岛及欧洲大陆的重要中转国。两起行动显示北非与西非国家在欧洲外部边境压力传导下，持续强化海岸管控与截堵力度。</p></details>
+  <div class="meta">
+    <span>来源：<b>TRT World（国际新闻网）</b></span>
+    <span>推荐理由：反映北非与西非沿岸国家在欧盟支持下加大海上边境拦截力度，是跨境犯罪治理与边境管控的典型样本。</span>
+    <a href="https://trtworld.com/article/9b3646bed3c8" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-border_security-4">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://en.portnews.ru/news/385476/" target="_blank" rel="noopener">希腊克里特岛以南充气船沉没18人遇难</a></h4>
+  </div>
+  <div class="title-en">Inflatable migrant boat sinks south of Crete; 18 dead, 2 survivors</div>
+  <div class="chips"><span class="chip">希腊</span><span class="chip">克里特</span><span class="chip">地中海</span><span class="chip">偷渡沉船</span><span class="chip">海岸警卫队</span></div>
+  <p class="summary"><b>内容提要</b>　希腊海岸警卫队在克里特岛以南赫里西岛（Chrysi）外约26海里处发现一艘半沉且严重泄气的充气船，共寻获18具遗体、2人幸存。该船系自利比亚驶往克里特，沿线近期出发量激增；希腊与Frontex联合展开大规模搜救。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>希腊海岸警卫队通报，一艘充气船在克里特岛以南、赫里西岛（Chrysi）外约26海里处的利比亚海（Libyan Sea）沉没，船体半沉且严重泄气。一艘途经的土耳其籍货轮首先发现并警报，希腊联合救援协调中心（JRCC）随即组织大规模搜救，出动2艘海岸警卫队巡逻艇、1艘Frontex船只、3艘过往商船、1架超级美洲狮直升机及1架Frontex飞机，最终从船体及周边水域寻获18具遗体，并将2名幸存者送往克里特岛救治，未确认更多失踪者，搜救行动宣告结束。该船疑似自利比亚出发驶往克里特，近月来自利比亚经克里特、加夫佐斯（Gavdos）与赫里西一线的渡海出发量明显上升。联合国难民署（UNHCR）数据显示，2026年经此航线抵达克里特者已逾16,770人。此次沉没是地中海中部危险航线持续恶化的最新例证，凸显海上边境管控与人道救援之间的紧张。</p></details>
+  <div class="meta">
+    <span>来源：<b>PortNews（援引希腊海岸警卫队）</b></span>
+    <span>推荐理由：地中海东部新兴偷渡航线的致命海难，体现海上边境管控与搜救体系的持续承压。</span>
+    <a href="https://en.portnews.ru/news/385476/" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-border_security-5">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://www.the-independent.com/news/uk/home-news/small-boat-channel-crossing-uk-labour-b3026439.html" target="_blank" rel="noopener">英吉利海峡小型船只越境人数同比大降但单船密度创新高</a></h4>
+  </div>
+  <div class="title-en">UK Channel small-boat arrivals down 43% but per-boat numbers at record high</div>
+  <div class="chips"><span class="chip">英国</span><span class="chip">英吉利海峡</span><span class="chip">小型船只</span><span class="chip">非法越境</span><span class="chip">偷渡</span></div>
+  <p class="summary"><b>内容提要</b>　截至2026年8月1日，经小型船只横渡英吉利海峡抵英者为14,526人，较去年同期下降43%；但单船平均载运72人创历史新高，单艇最高达165人。厄立特里亚、阿富汗、苏丹与伊朗为前四大来源国，英法66.2亿英镑协议部署无人机与直升机拦截偷渡。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>据英国内政部 provisional 数据，截至2026年8月1日，本年度经小型船只横渡英吉利海峡抵达英国者累计14,526人，较2025年同期的25,436人下降43%，亦低于2024年同期水平，整体呈回落态势。然而结构性隐患突出：单船平均载运人数升至72人的历史峰值，7月一个月仅用32艘船即运送2,316人，其中一艘充气艇载运165人创单艇纪录，反映走私网络为规避拦截而将更多人 cram 进「巨型橡皮艇」。按国籍看，截至3月底的12个月中，厄立特里亚（17.9%）、阿富汗（11.4%）、苏丹（11.2%）与伊朗（11.1%）为前四大来源国。为遏制越境，英法于4月签署为期三年、总额约66.2亿英镑（8.91亿美元）的合作协议，部署无人机、两架直升机与摄像系统，并增派海滩警力拦截蛇头。尽管英方称拦截供应链已见成效，但单船密度飙升带来的窒息与翻沉风险仍令人担忧，边境安全与偷渡治理压力未减。</p></details>
+  <div class="meta">
+    <span>来源：<b>The Independent（援引英国内政部/PA）</b></span>
+    <span>推荐理由：欧洲最核心的非法越境走廊之一，数据同时呈现总量回落与单船风险飙升的悖论，对边境管控策略具参考价值。</span>
+    <a href="https://www.the-independent.com/news/uk/home-news/small-boat-channel-crossing-uk-labour-b3026439.html" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-border_security-6">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://idtechwire.com/id-tech-digest-august-20-2026/" target="_blank" rel="noopener">南非推出生物识别电子旅行授权系统强化边境管理</a></h4>
+  </div>
+  <div class="title-en">South Africa launches biometric Electronic Travel Authorisation at OR Tambo</div>
+  <div class="chips"><span class="chip">南非</span><span class="chip">电子旅行授权</span><span class="chip">生物识别</span><span class="chip">边境管理</span><span class="chip">签证</span></div>
+  <p class="summary"><b>内容提要</b>　南非总统拉马福萨与内政部长施雷伯在奥利弗·坦博国际机场正式启用线上电子旅行授权（ETA）系统，结合实时人脸采集、机器学习与升级版eMCS 2.0平台，在旅客抵前完成预筛，以即时线上许可替代传统纸质签证，推动边境管理自动化。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>南非总统西里尔·拉马福萨（Cyril Ramaphosa）与内政部长莱昂·施雷伯（Leon Schreiber）在约翰内斯堡奥利弗·坦博国际机场（OR Tambo）正式启用线上电子旅行授权（Electronic Travel Authorisation, ETA）系统，标志南非边境管理向自动化生物识别处理转型。该系统结合实时人脸采集、机器学习算法与升级版eMCS 2.0人员流动管控平台，允许抵达主要国际机场的访客以即时线上许可替代传统纸质签证，许可直接与其护照关联。此前经G20试点验证，系统在旅客抵前即完成预筛，以提升通关效率并强化入境风险管控。作为非洲重要的入境枢纽，南非此举意在以技术手段平衡开放旅游、商贸往来与边境安全之间的关系，减少人工查验漏洞，并与国际趋势（多国推行ETA/电子签）接轨。该措施亦被视为南非内政部现代化改革的一环，后续或将扩展至更多口岸与签证类别，对边境管控的数字化治理具有区域示范意义。</p></details>
+  <div class="meta">
+    <span>来源：<b>ID Tech Wire（科技与身份识别资讯）</b></span>
+    <span>推荐理由：体现发展中国家以生物识别与电子化手段升级边境管控的趋势，属边境管理技术治理的典型案例。</span>
+    <a href="https://idtechwire.com/id-tech-digest-august-20-2026/" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+    <div class="sec-foot"><a href="#sec-border_security" class="collapse-btn" data-collapse="sec-border_security">▴ 收起本板块</a></div>
+  </div>
+</details>
+<details class="section" id="sec-usa">
+  <summary>
+    <span class="sec-title">🗽 美国移民与边境管理</span>
+    <span class="sec-desc">DHS/CBP/ICE/USCIS 动态、国会立法、司法裁决、美墨边境态势</span>
+    <span class="sec-count">6 条</span>
+    <span class="sec-arrow">▾</span>
+  </summary>
+  <div class="sec-body">
+    
+<article class="item" id="item-usa-1">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★★</span>
+    <h4><a href="https://www.dhs.gov/news/2026/08/24/ice-operation-safe-community-washington-dc-arrests-more-1300-illegal-aliens" target="_blank" rel="noopener">移民海关执法局华盛顿周边逮捕1328人</a></h4>
+  </div>
+  <div class="title-en">ICE Operation Safe Community – Washington, D.C. Arrests More Than 1,300 Illegal Aliens in Virginia, Maryland</div>
+  <div class="chips"><span class="chip">移民海关执法局</span><span class="chip">ICE</span><span class="chip">华盛顿特区</span><span class="chip">刑事非法移民</span><span class="chip">MS-13</span><span class="chip">庇护政策</span><span class="chip">大规模逮捕</span></div>
+  <p class="summary"><b>内容提要</b>　美国国土安全部8月24日公布，移民海关执法局（ICE）于8月1日至14日在弗吉尼亚州与马里兰州开展「Operation Safe Community – Washington, D.C.」专项行动，共逮捕1,328名非法移民。其中近400人曾在美国被定罪或面临刑事指控，涉及性侵、绑架、醉酒驾驶、肇事逃逸、身份盗窃与抢劫，并含谋杀及强奸等重罪逮捕。行动还抓获MS-13、18街帮与Tren de Aragua等跨国帮派成员。国土安全部长穆林批评两地庇护政策，称联邦探员在地方不配合下仍完成执法，并指该行动紧随7月亚特兰大同类型行动（拘逾1,200人）。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>美国国土安全部于2026年8月24日发布新闻稿，公布移民海关执法局（ICE）在8月1日至14日开展的「Operation Safe Community – Washington, D.C.」专项行动成果。行动覆盖弗吉尼亚州与马里兰州全境，重点针对华盛顿特区郊区的非法移民聚居地带，最终逮捕1,328人，平均每日近95人。国土安全部表示，被捕者中有近400人曾在美国被定罪或正面临刑事指控，罪名涵盖性侵、绑架、醉酒驾驶、肇事逃逸、身份盗窃与抢劫，另有谋杀、企图谋杀与强奸等重罪逮捕记录。ICE执法与遣返行动代理助理主任帕特里夏·海德称，探员在多地仍完成锁定与逮捕，尽管弗州与马里兰许多县实施限制地方与联邦合作的庇护政策。行动中还抓获萨尔瓦多MS-13、18街帮以及委内瑞拉Tren de Aragua等跨国犯罪街头帮派成员。国土安全部长马奎恩·穆林将矛头指向两地「庇护政客」，称其将非法移民需求置于美国公民安全之上，并强调特朗普政府始终把美国人放在第一位。此次行动是继7月亚特兰大「Operation Safe Community」拘捕逾1,200人之后的又一次大规模区域执法，被DHS称为近年来最具成效的行动之一，凸显联邦政府持续强化境内移民执法的战略走向，也加剧与庇护地方政府之间的联邦制张力。</p></details>
+  <div class="meta">
+    <span>来源：<b>美国国土安全部（DHS）</b></span>
+    <span>推荐理由：单次区域行动逮捕人数创纪录，集中体现特朗普政府强化境内移民执法的力度与优先事项，对美国移民政策走向具明确指标意义。</span>
+    <a href="https://www.dhs.gov/news/2026/08/24/ice-operation-safe-community-washington-dc-arrests-more-1300-illegal-aliens" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-usa-2">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://www.uscis.gov/newsroom/news-releases/uscis-announces-rule-change-to-asylum-system-to-reduce-backlog" target="_blank" rel="noopener">美移民局庇护规则改为可不面谈移交法官</a></h4>
+  </div>
+  <div class="title-en">USCIS Announces Rule Change to Asylum System to Reduce Backlog</div>
+  <div class="chips"><span class="chip">美移民局</span><span class="chip">USCIS</span><span class="chip">庇护改革</span><span class="chip">积压</span><span class="chip">移民法官</span><span class="chip">临时最终规则</span><span class="chip">听证</span></div>
+  <p class="summary"><b>内容提要</b>　美移民局（USCIS）7月27日宣布、7月28日以临时最终规则（91 FR 47101）在联邦公报发布并立即生效：允许庇护官在审阅书面材料与背景核查后，将部分「肯定性」庇护申请直接移交司法部移民法官，而无需先举行庇护面谈。规则适用于所有待审与未来申请，预计影响约31%待审案（逾44万宗，总待审逾140万）。公众意见截止9月28日。批评者指此举将 backlog 由移民局转移至本已拥挤的移民法庭，削弱申请人正当程序。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>美国公民及移民服务局（USCIS）于2026年7月27日由国土安全部发布声明，宣布一项旨在削减庇护系统积压的临时最终规则，并于7月28日正式刊载于联邦公报（编号91 FR 47101），即时生效。新规核心在于：USCIS庇护官在审阅书面申请与背景核查后，可认定某宗「肯定性」庇护申请（即申请人未处于遣返程序中的申请）不具可受理性或应予移交，并直接将其交由司法部下属的移民审查执行办公室（EOIR）移民法官审理，而无须先由庇护官进行面谈。此前，USCIS通常会先面谈再决定是否批准或移交，新规删除了规则中关于申请人「有权」获得面谈的表述。USCIS局长约瑟夫·埃德洛称，庇护制度长期被用作拖延与工作许可的工具，规则可将面谈资源集中于更具可信度的案件。DHS估计，该规则每年将使逾13.2万宗庇护案不经面谈即移交移民法庭，并可能影响约31%的待审案件（逾44万宗，整体待审量超过140万宗）。批评者、包括美国移民律师协会指出，庇护官审理速度快于法官，绕开非对抗性面谈将把更多弱势申请人推向对抗性的遣返程序，反而加重法庭积压并损害正当程序。规则以临时最终规则形式运作，公众可在9月28日前提交意见。</p></details>
+  <div class="meta">
+    <span>来源：<b>美国公民及移民服务局（USCIS）</b></span>
+    <span>推荐理由：改变庇护审理的核心程序环节，直接影响逾百万宗待审案件与申请人的程序权利，并引发行政效率与正当程序的尖锐争议。</span>
+    <a href="https://www.uscis.gov/newsroom/news-releases/uscis-announces-rule-change-to-asylum-system-to-reduce-backlog" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-usa-3">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://www.cbp.gov/newsroom/local-media-release/roma-cbp-officers-seize-over-1000-pounds-methamphetamine-concealed" target="_blank" rel="noopener">海关边境保护局罗马港查获1070磅冰毒</a></h4>
+  </div>
+  <div class="title-en">Roma CBP Officers Seize Over 1,000 Pounds of Methamphetamine Concealed in Laundry Detergent Shipment</div>
+  <div class="chips"><span class="chip">海关边境保护局</span><span class="chip">CBP</span><span class="chip">冰毒</span><span class="chip">罗马港</span><span class="chip">美墨边境</span><span class="chip">毒品缉私</span><span class="chip">非侵入式扫描</span></div>
+  <p class="summary"><b>内容提要</b>　美国海关边境保护局（CBP）8月11日在得州罗马国际大桥（Roma International Bridge）查验一辆自墨西哥入境、申报载运洗衣液的自走式拖车，经非侵入式成像系统发现异常，开箱查出240包、合计485.78公斤（约1,070磅）疑似冰毒，市值估约957万美元。毒贩将毒品藏匿于洗衣粉货柜中试图蒙混过关。涉案司机、车辆与毒品已移交罗马警方，刑事调查进行中。罗马港主任安德烈斯·格拉表态强调边境查验成效。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>美国海关边境保护局（CBP）于2026年8月中旬公布，其官员在得克萨斯州 Roma（罗马）口岸的罗马国际大桥（连接得州罗马与墨西哥塔毛利帕斯州米格尔阿莱曼市）查获一起大宗冰毒走私案。8月11日，一名CBP官员将一辆2012年出厂、自墨西哥入境并申报载运洗衣液（洗衣粉）的拖车引导至二次查验。非侵入式成像系统扫描显示货物内部存在异常，执法人员随后进行物理开箱检查，共发现240个包裹，内含合计485.78公斤（约1,071磅）的疑似甲基苯丙胺（冰毒），街头估值高达9,573,752美元。毒贩试图利用日常商业货运、将毒品夹藏于一整拖车洗衣粉之中的方式规避查验，但被前线官员与科技手段识破。CBP将嫌疑毒品、拖车及司机一并移交罗马警察局，后者已启动刑事调查，官方未公布司机身份或提出指控。罗马港主任安德烈斯·格拉（Andres Guerra）在声明中称赞官员的警觉、专业与边境安保承诺。此案是美墨边境货运渠道毒品缉私的典型案例，显示即便申报货物与文件看似常规，商业货运仍为大宗非法毒品提供藏匿空间，凸显边境非侵入式查验设备与一线经验在遏制跨境毒品流入中的关键作用。</p></details>
+  <div class="meta">
+    <span>来源：<b>美国海关边境保护局（CBP）</b></span>
+    <span>推荐理由：单次货运藏毒量巨大且手法典型，凸显美墨边境货运渠道禁毒压力，以及CBP查验能力与科技手段在边境安保中的实际成效。</span>
+    <a href="https://www.cbp.gov/newsroom/local-media-release/roma-cbp-officers-seize-over-1000-pounds-methamphetamine-concealed" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-usa-4">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://www.barsacross.com/us-appeals-court-revives-trump-s-fast-track-deportation" target="_blank" rel="noopener">华盛顿上诉法院重启快速遣返规则</a></h4>
+  </div>
+  <div class="title-en">US Appeals Court Revives Trump&#x27;s Fast-Track Deportation Rules for Cuba, Haiti, Nicaragua and Venezuela Parolees</div>
+  <div class="chips"><span class="chip">快速遣返</span><span class="chip">上诉法院</span><span class="chip">CHNV</span><span class="chip">假释</span><span class="chip">遣返</span><span class="chip">正当程序</span><span class="chip">华盛顿巡回</span></div>
+  <p class="summary"><b>内容提要</b>　美国哥伦比亚特区巡回上诉法院（DC Circuit）于2026年8月11日以三名法官一致意见，推翻地区法院法官贾亚·科布此前阻止特朗普政府指令的禁令，允许政府继续对部分古巴、海地、尼加拉瓜与委内瑞拉（CHNV）人道主义假释入境者适用快速遣返（expedited removal）程序。上诉法院并未裁定该指令本身合法，仅认定挑战方缺乏阻止执行的资格；该法院6月亦曾支持将快速遣返扩至美国境内更广泛人群。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>美国哥伦比亚特区巡回上诉法院（DC Circuit）于2026年8月11日作出一致裁决，推翻地区法院法官贾亚·科布（Jia Cobb）此前发布的禁令，使特朗普政府得以继续对特定移民群体适用更快的遣返程序。本案争议对象为经拜登政府时期古巴、海地、尼加拉瓜与委内瑞拉（CHNV）人道主义假释项目入境、后被特朗普政府指示考虑适用快速遣返的移民。快速遣返允许执法人员在未经完整移民法庭程序的情况下驱逐部分人。地区法院曾认定这些假释者当年系依规则入境、应受保护，但上诉法院三名法官组成的合议庭并未就指令的合法性或是否违反正当程序作出实体判断，而是聚焦于程序门槛，认为提出挑战的移民团体未能证明阻止该指令会改变其代表对象的处境——因为旧有规则仍可能将许多人纳入快速遣返。裁决同时延续了该法院2026年6月的一项更广为适用的决定，即支持将快速遣返扩展至美国境内（而不仅限于边境附近）发现的更多无证移民。政府将政策辩护为重要的执法工具，而移民与民权团体则警告更快程序会削弱被遣返者可用的保护。截至目前，上诉法院仅清除了程序障碍，相关合法性之争仍将继续。</p></details>
+  <div class="meta">
+    <span>来源：<b>Bars Across（美国上诉法院报导）</b></span>
+    <span>推荐理由：直接关乎数十万CHNV假释者能否被快速驱逐，是联邦行政权扩张与司法审查之间博弈的关键节点，影响面极广。</span>
+    <a href="https://www.barsacross.com/us-appeals-court-revives-trump-s-fast-track-deportation" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-usa-5">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://www.newsbreak.com/raw-story-2096750/4828240508548-dhs-slammed-for-contorting-law-beyond-recognition-to-hide-elephants-in-mouseholes" target="_blank" rel="noopener">第一巡回法院裁定长期居留者须可保释</a></h4>
+  </div>
+  <div class="title-en">DHS Slammed for Contorting Law to Jail Longtime Undocumented Immigrants Without Bond</div>
+  <div class="chips"><span class="chip">第一巡回法院</span><span class="chip">保释</span><span class="chip">无保释拘留</span><span class="chip">移民海关执法局</span><span class="chip">长期居留</span><span class="chip">国土安全部</span><span class="chip">遣返</span></div>
+  <p class="summary"><b>内容提要</b>　美国第一巡回上诉法院以2比1作出裁决，驳回特朗普政府关于「申请入境者」即属「寻求入境」、故可适用强制无保释拘留的解释。主笔法官拉腊·蒙特卡尔沃指出，该论点「将『入境』的明文含义扭曲到难以辨识」。裁决推翻了2025年7月DHS政策及随后由移民上诉委员会（BOIA）确立的、将长期居留者重新分类为无保释拘留的做法——该做法推动ICE在押人数于2026年1月达到约7.3万的史上最高。法院并批评政府「不在老鼠洞里藏大象」。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>美国第一巡回上诉法院作出2比1裁决，对特朗普政府试图以无保释（mandatory detention）方式长期关押早年非法入境者的法律解释予以重挫。争议源于政府将某些已在美国长期居留、被认定为「申请入境者（applicant for admission）」的移民归入可强制无保释拘留的类别，并在2025年7月由国土安全部发布政策、后经移民上诉委员会（BOIA）确立为约束性解释，借以驱动移民海关执法局（ICE）在押规模，至2026年1月达到约7.3万人、创历史最高。主笔法官拉腊·蒙特卡尔沃在意见中写道，若认定这些人「正在寻求入境」将「把『入境』一词的明文含义扭曲到难以辨识」，并援引国会「不会在老鼠洞里藏大象」的谚语，批评政府曲解法律。裁决澄清，早已非法入境者并不属于「寻求入境」范畴，从而应可获保释听证。法院指出，过去三十余年、五届政府均按文本要求实施相关法规，政府做法偏离历史惯例。此判决直接削弱政府无限期无保释拘留的法律基础，对成千上万在押移民的处境具实质影响，也体现了联邦法院对行政扩权的制衡。</p></details>
+  <div class="meta">
+    <span>来源：<b>NewsBreak（转引原始报道）</b></span>
+    <span>推荐理由：直接削弱政府无限期无保释拘留的法律基础，可能影响数万在押移民，是移民执法与司法审查之间的重要判例。</span>
+    <a href="https://www.newsbreak.com/raw-story-2096750/4828240508548-dhs-slammed-for-contorting-law-beyond-recognition-to-hide-elephants-in-mouseholes" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-usa-6">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://iowacapitaldispatch.com/2026/08/19/judge-doj-claims-are-hard-to-take-seriously-in-iowa-deportation-case/" target="_blank" rel="noopener">爱荷华联邦法官斥政府释放南苏丹妇</a></h4>
+  </div>
+  <div class="title-en">Judge: DOJ Claims Are &#x27;Hard to Take Seriously&#x27; in Iowa Deportation Case</div>
+  <div class="chips"><span class="chip">爱荷华</span><span class="chip">联邦法官</span><span class="chip">释放令</span><span class="chip">南苏丹</span><span class="chip">国土安全部</span><span class="chip">移民海关执法局</span><span class="chip">拘留</span></div>
+  <p class="summary"><b>内容提要</b>　美国爱荷华州联邦地区法院法官斯蒂芬·洛克（Stephen Locher）于2026年8月裁定，立即释放南苏丹出生、自幼以难民身份来美的尼阿穆奥奇·托马斯·杜奥思。她自2025年3月被ICE再次拘押，尽管其遣返令已于2025年12月最终生效，且政府始终无法证明能在可预见未来将其遣往原籍国或第三国（埃塞俄比亚）。法官批评司法部「难以严肃对待」其论点，指出其犯罪记录可溯至2017年且多年在社区无事故，已证明可安全释放。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>美国爱荷华州联邦地区法院法官斯蒂芬·洛克（Stephen Locher）在2026年8月的一起遣返案件中，未经过全面听证即裁定政府应立即释放尼阿穆奥奇·托马斯·杜奥思（Nyamuoch Thomas Duoth）。杜奥思出生于埃塞俄比亚的难民营，1994年以难民身份、4岁时抵达美国，1995年调整为合法永久居民；2008至2017年间曾因拒捕、盗窃、袭警等罪名被定罪，2020年9月一名移民法官判令将其遣返南苏丹或（替代地）埃塞俄比亚。2022年5月她曾因遣返前景渺茫而被置于监督释放，但ICE于2025年3月再度拘押，并称有「在可预见未来遣返的重大可能性」。其遣返令于2025年12月26日最终生效，然而至2026年7月她仍被关押且未被遣返。洛克指出，政府仅泛称「正积极与国务院及国土安全部合作寻求第三国遣返」，却未提供任何具体行动或埃塞俄比亚将发放旅行证件的证据，因此「难以严肃对待」其持续拘留的理由；鉴于其犯罪记录久远且多年在社区无事故，已证明可安全释放，遂下令ICE在24小时内释放。此案反映联邦法官对政府「无法遣返却长期拘留」做法的质疑，凸显移民执法与司法之间的张力。</p></details>
+  <div class="meta">
+    <span>来源：<b>Iowa Capital Dispatch</b></span>
+    <span>推荐理由：反映联邦法官对政府以「无法遣返」为由长期拘留移民的质疑，凸显行政执行与司法审查之间的持续张力，具代表性意义。</span>
+    <a href="https://iowacapitaldispatch.com/2026/08/19/judge-doj-claims-are-hard-to-take-seriously-in-iowa-deportation-case/" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+    <div class="sec-foot"><a href="#sec-usa" class="collapse-btn" data-collapse="sec-usa">▴ 收起本板块</a></div>
+  </div>
+</details>
+<details class="section" id="sec-eu">
+  <summary>
+    <span class="sec-title">🇪🇺 欧盟移民与边境管理</span>
+    <span class="sec-desc">欧盟委员会/Frontex/EUAA 动态、移民与庇护公约执行、申根区管控、成员国政策</span>
+    <span class="sec-count">6 条</span>
+    <span class="sec-arrow">▾</span>
+  </summary>
+  <div class="sec-body">
+    
+<article class="item" id="item-eu-1">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://home-affairs.ec.europa.eu/news/ees-prevents-people-fake-identities-entering-eu-2026-08-06_en" target="_blank" rel="noopener">欧盟出入境系统启用后查获假身份</a></h4>
+  </div>
+  <div class="title-en">EES Prevents People with Fake Identities from Entering the EU</div>
+  <div class="chips"><span class="chip">欧盟出入境系统</span><span class="chip">EES</span><span class="chip">生物识别</span><span class="chip">申根</span><span class="chip">身份欺诈</span><span class="chip">eu-LISA</span><span class="chip">边境管控</span></div>
+  <p class="summary"><b>内容提要</b>　欧盟委员会8月6日通报，欧盟出入境系统（EES）自2026年4月10日起在全部申根外部边境口岸全面运行，迄今已登记逾1.5亿次出入境记录。系统可协助边境官员与执法部门识别安全风险、打击严重犯罪与恐怖主义；官方举例，2026年2月该系统识破一名试图以三种不同身份、三次尝试进入申根区的人士，若无系统则无法拦截。EES对非欧盟短期停留国民采集旅行证件与生物识别（指纹、面部）数据。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>欧盟委员会 Migration and Home Affairs 于2026年8月6日发布通报，介绍欧盟出入境系统（Entry/Exit System, EES）的运行成效。EES自2026年4月10日起在全部申根区外部边境口岸全面投入运行，取代人工护照盖章，迄今已登记超过1.5亿次出入境记录。系统面向非欧盟国籍、赴申根短期停留的旅客，记录其旅行证件数据、生物识别信息（指纹与面部图像）以及每次出入境的时间与地点，并登记被拒入境情况。委员会强调，EES可帮助边境官员与执法部门识别安全风险、支持打击严重犯罪与恐怖主义。官方援引2026年2月的一起案例：该系统发现一名人士并非其所声称的身份，并揭示其此前曾以三种不同身份、三次尝试进入申根区，若无可互操作的数字化系统，此人本不会被拦截。EES由欧盟大型IT系统运行机构 eu-LISA 具体运维，并与欧盟其他信息系统集成，以加强内部安全与逾期停留追踪。委员会同时说明，欧盟公民及冰岛、列支敦士登、挪威、瑞士国民不在登记范围内。该通报被视为欧盟「智能边境」战略落地的重要宣示，对边境安全与身份核验具长远意义，也为后续欧洲旅行信息与授权系统（ETIAS）的启动铺垫基础。</p></details>
+  <div class="meta">
+    <span>来源：<b>欧盟委员会（Migration and Home Affairs）</b></span>
+    <span>推荐理由：标志欧盟智能边境系统全面运行并实际发挥身份核验与反恐作用，是《移民与庇护公约》技术支柱落地的关键进展。</span>
+    <a href="https://home-affairs.ec.europa.eu/news/ees-prevents-people-fake-identities-entering-eu-2026-08-06_en" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-eu-2">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://sputniknews.cn/20260817/1072804886.html" target="_blank" rel="noopener">德国上半年强制遣返人数不升反降</a></h4>
+  </div>
+  <div class="title-en">Germany Fails to Meet Expanded Deportation Target in First Half of 2026</div>
+  <div class="chips"><span class="chip">德国</span><span class="chip">遣返</span><span class="chip">内政部</span><span class="chip">移民政策</span><span class="chip">驱逐</span><span class="chip">默茨</span><span class="chip">数据</span></div>
+  <p class="summary"><b>内容提要</b>　据德国《周日世界报》援引内政部数据，尽管政府高调宣称加强驱逐移民行动，2026年上半年被强制驱逐出境的外国人仅9,663人，低于去年同期的11,807人，所谓「遣返行动」目前更多停留在口号层面。德国内政部数据还显示，截至2025年底，德国境内仍有232,067人属于应当离境状态。该落差凸显德国在强化遣返政治宣示与实际执行之间的差距。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>据俄罗斯卫星通讯社2026年8月17日报道，德国《周日世界报》（Welt am Sonntag）援引德国内政部数据披露，尽管联邦政府上台后一再强调要加强并扩大对非法居留者的驱逐行动，但2026年上半年实际被强制遣返出境的外国人数量为9,663人，较去年同期的11,807人显著下降。报道援引内政部数据直指，截至目前所谓「遣返的行动（Abschiebungsoffensive）」更多只是口头承诺，执行层面并未出现相应增长。数据同时显示，截至2025年底，德国境内仍有232,067人被认定为应当离境（ausreisepflichtig），但实际完成遣返的比例有限。这一落差发生在总理默茨领导的联合政府试图以强硬移民立场回应极右翼选择党（AfD）民调上升的背景之下，凸显德国在强化遣返上的政治宣示与行政、外交现实之间的张力——包括第三国接收意愿不足、法律救济程序冗长以及部分成员国间遣返协作不畅等因素。该报道从数据角度戳破了「扩大遣返」叙事，也折射出欧盟核心国家在移民管控执行端普遍面临的困境，为观察德国及欧盟整体遣返政策成效提供了重要切口。</p></details>
+  <div class="meta">
+    <span>来源：<b>俄罗斯卫星通讯社</b></span>
+    <span>推荐理由：以官方数据揭示德国「强化遣返」政治口号与实际执行之间的落差，反映欧盟核心国移民执法面临的现实困境，具观察价值。</span>
+    <a href="https://sputniknews.cn/20260817/1072804886.html" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-eu-3">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://new-app.spectator.co.uk/article/558051/content.html" target="_blank" rel="noopener">法国内政部悄然收紧入籍规则</a></h4>
+  </div>
+  <div class="title-en">France Is Quietly Tightening Its Citizenship Rules</div>
+  <div class="chips"><span class="chip">法国</span><span class="chip">入籍</span><span class="chip">归化</span><span class="chip">内政部</span><span class="chip">雷塔约</span><span class="chip">移民融合</span><span class="chip">庇护</span></div>
+  <p class="summary"><b>内容提要</b>　法国内政部长布鲁诺·雷塔约（Bruno Retailleau）向各地行政长官发出内部通函，悄然收紧归化入籍审查：任何曾有非法入境记录者，即便现已取得身份，也可成为拒批理由；自明年起，首次申领居留卡者须参加融入考试作为日后入籍前提；任何过往（无论多轻微或久远）违规都将计入不利因素。左翼与NGO批评此举系向极右 rhetoric 看齐。2024年法国逾10万人取得国籍。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>据《旁观者》（The Spectator）报道，法国内政部长布鲁诺·雷塔约（Bruno Retailleau）向各行政区行政长官（prefects）发出一份内部通函，指示在不经议会辩论、立法或公开宣传的情况下收紧国籍归化审查标准。核心变化包括：重新确立「国籍非权利而是特权」的原则，任何曾有非法移民记录的申请人——即便现已合法化——均可成为拒批理由；自明年起，首次申领居留卡者将被要求参加融入考试，作为未来入籍的前提条件；任何过往、无论多轻微或久远的违规或身份瑕疵都将被计入不利评估。雷塔约系深具天主教保守 worldview 的政治人物，年初已限制「正规化（regularisations）」路径，此次进一步将收紧延伸至入籍环节，被左翼与NGO批评为向极右翼 rhetoric 投降、在共和模式周围「筑墙」。报道指出，2024年法国有逾10万人取得国籍，主要来源国为阿尔及利亚、摩洛哥、突尼斯及撒哈拉以南非洲与南亚。法国长期以来以相对宽松的归化评估著称，雷塔约的调整改变了这一传统，体现马克龙政府时期法国内政路线明显右转，对在法外国人的长远融入路径产生实质影响，也折射出整个欧洲在移民融合议题上的收紧趋势。</p></details>
+  <div class="meta">
+    <span>来源：<b>The Spectator</b></span>
+    <span>推荐理由：以行政手段（非立法）悄然收紧入籍，体现法国移民政策右转，将实质影响在法外国人长远融入，亦反映欧洲整体趋紧态势。</span>
+    <a href="https://new-app.spectator.co.uk/article/558051/content.html" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-eu-4">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://www.gov.uk/government/news/france-prevents-185-boats-and-4300-migrants-reaching-uk-shores" target="_blank" rel="noopener">英法海峡遣返试点延至十月</a></h4>
+  </div>
+  <div class="title-en">France Prevents 185 Boats and 4,300 Migrants Reaching UK Shores</div>
+  <div class="chips"><span class="chip">英法</span><span class="chip">海峡</span><span class="chip">小船</span><span class="chip">遣返</span><span class="chip">非法移民</span><span class="chip">边境安全</span><span class="chip">试点</span></div>
+  <p class="summary"><b>内容提要</b>　英国政府（GOV.UK）通报，在2026年春签署的英法国协议框架下，法方 units 于4月27日至8月2日阻止185起小船越境事件，拦截率达61%（同比升近5个百分点），直接阻止逾4,300次越境企图，并有4周实现100%拦截。海滩试点已拘押119人、遣返40人。与此同时，双方「一进一出」海峡遣返试点已延至2026年10月1日（英方遣返605人、转入581人），体现跨境协作成效。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>英国政府（GOV.UK）发布通报，介绍2026年新签署的英法国协议在遏制英吉利海峡小型船只偷渡上的阶段性成效。根据法方提供的数据，在4月27日至8月2日的三个月间，由英国出资、法国部署的执法 units 共阻止185起小船（small boat）越境事件，事件拦截率达61%，较前一年同期上升近5个百分点；法方行动直接阻止超过4,300次越境企图，并有4周实现潜在越境事件100%拦截。法方采取海滩直接干预、拦截离岸船只、查扣船只与发动机、逮捕走私者等战术，并自5月1日起试点从法国海滩带走非法移民，迄今拘押119人，其中40人已被遣返（回原籍国或其所经欧盟国家）。内政大臣沙巴娜·马哈茂德称新协议「已产生实质影响」。与此同时，英法「一进一出（one-in-one-out）」海峡遣返试点已延长至2026年10月1日，英方自英遣返605人、自法转入581人，维持强制遣返与合法庇护路径挂钩的互惠结构。该协议辅以英国承诺的多年期6.62亿英镑对法支持，用于强化海上行动与情报共享。数据被视为检验欧盟外部边境跨境协作、打击走私网络的关键指标。</p></details>
+  <div class="meta">
+    <span>来源：<b>英国政府（GOV.UK）</b></span>
+    <span>推荐理由：提供英法跨境协作遏制海峡偷渡的核心量化数据，直接检验欧盟外边境合作与打击走私网络的实效，具政策指标意义。</span>
+    <a href="https://www.gov.uk/government/news/france-prevents-185-boats-and-4300-migrants-reaching-uk-shores" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-eu-5">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://topafricanews.com/2026/08/06/italy-records-sharp-drop-in-migrant-sea-arrivals-in-2026-amid-ongoing-policy-debates" target="_blank" rel="noopener">意大利2026年海上抵达人数减半</a></h4>
+  </div>
+  <div class="title-en">Italy Records Sharp Drop in Migrant Sea Arrivals in 2026</div>
+  <div class="chips"><span class="chip">意大利</span><span class="chip">海上抵达</span><span class="chip">梅洛尼</span><span class="chip">庇护</span><span class="chip">欧盟公约</span><span class="chip">兰佩杜萨</span><span class="chip">北非</span></div>
+  <p class="summary"><b>内容提要</b>　官方数据显示，2026年1至7月意大利海上抵达的移民与 asylum seekers 约16,567人，较2025年同期（逾3.6万）下降逾50%，较2023年峰值（约15.7万）回落约82%；7月单月2,179人，环比降21%。兰佩杜萨 hotspot 在押不足130人。政府将降幅归因于与北非双边协议、阿尔巴尼亚境外处理安排及国内规则调整；2025年首次庇护申请仍逾12.6万，欧盟《移民与庇护公约》已通过 decree-law 落地。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>据 TOP AFRICA NEWS 2026年8月6日报道，意大利官方统计显示，2026年1至7月乘船抵达意大利的移民与寻求庇护者约为16,567人，较2025年同期的逾36,000人下降超过50%，更较2023年约157,000人的峰值骤降约82%；7月单月抵达2,179人，较前月再降21%。传统主要登陆点兰佩杜萨（Lampedusa）收容中心目前在押人数不足130人，8月6日前后仅有约100人分三批小规模登陆。梅洛尼政府将降幅归因于多重因素：与北非国家签署双边协议以在出发前拦截船只、在阿尔巴尼亚设立境外处理设施、以及调整国内此前较宽的保护与居留规则。与此同时，首次庇护申请数量仍高于纯粹海上抵达数（2025年逾12.6万），全国接待系统仍容纳数万人。近期抵达者国籍包括孟加拉国、索马里、苏丹、阿尔及利亚、巴基斯坦等。意大利已通过一项 decree-law 在2026年内在国内落实欧盟《移民与庇护公约》，并传出可能与卢旺达就临时保护与申索处理开展合作的讨论。政府称当前水平不构成紧急状态，反对派则批评非正规入境与长期融合、遣返挑战仍未解决，使移民议题持续成为意大利政治辩论焦点。</p></details>
+  <div class="meta">
+    <span>来源：<b>TOP AFRICA NEWS</b></span>
+    <span>推荐理由：地中海主线抵达量大幅回落，为检验意大利及欧盟边境管控、外包处理与北非协作策略成效提供重要实证，具区域指示意义。</span>
+    <a href="https://topafricanews.com/2026/08/06/italy-records-sharp-drop-in-migrant-sea-arrivals-in-2026-amid-ongoing-policy-debates" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-eu-6">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://www.163.com/dy/article/L3HI64920514BIIR.html" target="_blank" rel="noopener">欧盟成员国就遣返中心与团结机制分裂</a></h4>
+  </div>
+  <div class="title-en">EU Internally Divided Over Third-Country Return Hubs and Solidarity Mechanism</div>
+  <div class="chips"><span class="chip">欧盟</span><span class="chip">团结机制</span><span class="chip">遣返中心</span><span class="chip">申根</span><span class="chip">休达</span><span class="chip">成员国分歧</span><span class="chip">移民公约</span></div>
+  <p class="summary"><b>内容提要</b>　8月4日欧盟各国内政部长就休达危机召开紧急视频会议，由梅洛尼与弗雷泽里克森牵头、含默茨在内的22国领导人联名致信要求「即时协调应对」，但法国、葡萄牙、卢森堡拒签。马克龙明确反对在第三国设立「遣返中心」；意大利力推该中心并拟将GSP+贸易优惠与配合遣返挂钩；北欧多国支持评估暂停西班牙申根资格；匈牙利称仅接受技术援助、拒斥公约团结支柱。会议暴露《移民与庇护公约》落地前的深刻裂痕。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>据网易援引《费加罗报》等法媒报道，面对7月底涌入西班牙北非飞地休达（Ceuta）的非法移民潮，欧盟成员国内政部长于2026年8月4日召开紧急视频会议商讨联合应对。会前由意大利总理梅洛尼与丹麦首相弗雷泽里克森牵头、并获德国总理默茨等支持的22名成员国领导人联名致信欧盟及轮值主席国爱尔兰，要求对非法移民危机作出「即时且协调一致的应对」，但法国、葡萄牙与卢森堡拒绝在公开信上签字，西班牙首相桑切斯则反指部分成员国态度「违背欧洲长期利益」。会议暴露出欧盟在边境管控与设立第三国遣返中心等核心议题上的深刻分裂：马克龙明确反对在撒哈拉以南非洲、北非及埃及、埃塞俄比亚等第三国设立由欧盟出资的遣返中心，称其「低效且不符原则」；意大利内政部长皮安泰多西则力推该构想，并拟将2027年生效的「普惠制+（GSP+）」贸易优惠与发展中国家配合遣返的力度挂钩。在解决路径上，意大利率先提议临时暂停西班牙申根资格，丹麦、芬兰、捷克、瑞典表态支持评估包括暂停申根在内的所有可能性；匈牙利则重申仅接受团结机制中的技术援助支柱，拒斥配额分配与财政补偿。此次危机使《移民与庇护公约》全面生效前的欧盟团结失灵暴露无遗，也预示公约落地仍将受制于成员国主权与利益分歧。</p></details>
+  <div class="meta">
+    <span>来源：<b>网易（援引费加罗报等）</b></span>
+    <span>推荐理由：直接暴露《移民与庇护公约》团结机制与第三国遣返中心构想落地前的成员国分裂，关乎欧盟边境治理能否真正统一，是欧盟移民政治的核心议题。</span>
+    <a href="https://www.163.com/dy/article/L3HI64920514BIIR.html" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+    <div class="sec-foot"><a href="#sec-eu" class="collapse-btn" data-collapse="sec-eu">▴ 收起本板块</a></div>
+  </div>
+</details>
+<details class="section" id="sec-china_neighbors">
+  <summary>
+    <span class="sec-title">🧭 中国周边国家动态</span>
+    <span class="sec-desc">东南亚、南亚、中亚、东北亚国家移民管理与边境安全要闻</span>
+    <span class="sec-count">6 条</span>
+    <span class="sec-arrow">▾</span>
+  </summary>
+  <div class="sec-body">
+    
+<article class="item" id="item-china_neighbors-1">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://elevenmyanmar.com/news/thai-authorities-arrest-36-undocumented-myanmar-migrants-in-kanchanaburi" target="_blank" rel="noopener">泰警方在甘乍那武里截获36名缅籍非法入境者</a></h4>
+  </div>
+  <div class="title-en">Thai authorities arrest 36 undocumented Myanmar migrants in Kanchanaburi</div>
+  <div class="chips"><span class="chip">泰国</span><span class="chip">缅甸</span><span class="chip">非法入境</span><span class="chip">遣返</span><span class="chip">边境管控</span><span class="chip">人口走私</span></div>
+  <p class="summary"><b>内容提要</b>　8月26日清晨，泰国甘乍那武里府赛育县警方在盘查车辆时拦截并逮捕36名缅甸籍无证人员及3名司机。这些人员分别自通帕蓬及桑卡拉武里边境地区被带入，每人向蛇头支付6000至1万泰铢，抵达目的地后还需再付1.5万至2万泰铢。泰方已依法对相关人员提起诉讼。此前8月25日，桑卡拉武里地区也曾有100名缅籍人员因非法入境被捕。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>据泰国媒体8月26日报道，泰国甘乍那武里府赛育县警方在例行盘查时发现4辆车辆自桑卡拉武里方向驶往甘乍那武里，警方示意停车后司机加速逃逸，最终在赛育国家公园入口附近截停3辆车，逮捕36名缅甸籍无证人员及3名司机，另有1辆车逃脱。被捕者供称，部分人从通帕蓬水坝附近、部分从桑卡拉武里边境一带被带出，每人已向蛇头支付6000至1万泰铢，抵达目的地后还需缴纳1.5万至2万泰铢。泰方依本国法律对36名缅甸籍人员及3名司机启动诉讼程序。该事件凸显缅泰边境持续存在的有组织偷渡网络，也反映缅甸政局动荡与经济困境推动民众越境务工的现实。泰国方面重申将严厉打击非法入境，同时人权组织提醒遣返后当事人可能面临在本国的困境。</p></details>
+  <div class="meta">
+    <span>来源：<b>Eleven Myanmar</b></span>
+    <span>推荐理由：涉及中国周边重点邻国边境管控与偷渡治理，事件时间新（8月26日），来源为当地媒体，信息具体且具区域代表性。</span>
+    <a href="https://elevenmyanmar.com/news/thai-authorities-arrest-36-undocumented-myanmar-migrants-in-kanchanaburi" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-china_neighbors-2">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://burmainsight.com/thailand-arrests-100-myanmar-nationals-for-illegal-entry" target="_blank" rel="noopener">泰方在桑卡拉武里逮捕100余名缅籍非法入境者</a></h4>
+  </div>
+  <div class="title-en">Thailand arrests 100 Myanmar nationals for illegal entry in Sangkhla Buri</div>
+  <div class="chips"><span class="chip">泰国</span><span class="chip">缅甸</span><span class="chip">非法入境</span><span class="chip">边境</span><span class="chip">务工</span><span class="chip">遣返</span></div>
+  <p class="summary"><b>内容提要</b>　据泰国媒体8月25日报道，泰方在西部与缅甸接壤的北碧府桑卡拉武里地区丛林中拦截并拘留100余名缅甸籍人员，其中62男38女，均无合法证件。他们多来自缅甸冲突及经济困难地区，据称为寻找工作而经丛林小道入境。泰方表示将依法处理并遣返。缅甸政局动荡造成的经济与安全风险持续推动人员越境。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>泰国媒体8月25日披露，泰方在北部与缅甸交界的北碧府桑卡拉武里地区密林中逮捕100余名缅甸籍人员，62名男性、38名女性，均无合法旅行证件。这些人员称来自缅甸受冲突与经济困境影响的地区，支付蛇头费用后经由三塔山口等边境隐蔽路径入境，意图赴泰务工。泰国拥有逾2400公里缅泰边境，地形复杂难以管控，近年因缅甸政局动荡、征兵加剧及经济恶化，越境人数明显上升。当局表示将按移民法遣返。人权组织指出，许多被遣返者回国后面临有限生计甚至人身安全风险，单纯遣返难以解决根源问题。</p></details>
+  <div class="meta">
+    <span>来源：<b>Burma Insight</b></span>
+    <span>推荐理由：直接反映缅甸危机外溢至周边国家的跨境务工与边境安全议题，时间点为8月25日，来源清晰。</span>
+    <a href="https://burmainsight.com/thailand-arrests-100-myanmar-nationals-for-illegal-entry" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-china_neighbors-3">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://onenewstvchannel.com/en/travel-en/traffic-en/more-than-9000-illegal-foreigners-deported/" target="_blank" rel="noopener">缅甸七个月累计遣返9000余名外籍非法入境者</a></h4>
+  </div>
+  <div class="title-en">More than 9,000 illegal foreigners deported from Myanmar</div>
+  <div class="chips"><span class="chip">缅甸</span><span class="chip">遣返</span><span class="chip">外籍人员</span><span class="chip">网络犯罪</span><span class="chip">边境</span><span class="chip">国际合作</span></div>
+  <p class="summary"><b>内容提要</b>　缅甸移民与人口部8月26日通报，自1月30日至8月26日的7个月内，共有9000余名非法入境的外国人被遣返原籍国。当日经缅泰友谊大桥二号桥移交57人，包括37名印度人和20名印尼人，另有107人待遣返。缅方称相关行动系与邻国及国际组织合作打击网络诈骗与犯罪活动的一部分。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>缅甸移民与人口部8月26日发布通报称，自2026年1月30日至8月26日的7个月期间，共有9000余名非法入境的外国人被驱逐出境。当日，缅方通过缅泰友谊大桥二号桥向相关国家移交57人，其中37人为印度籍、20人为印尼籍，另有107人等待遣返。缅方表示，一直在与邻国及国际组织合作调查并打击网络诈骗与犯罪活动，系统性地将涉案外籍人员送返原籍国。此举与前一阶段针对电诈园区的大规模清剿行动相呼应，反映缅甸在区域安全合作框架下持续强化外籍人员管控。</p></details>
+  <div class="meta">
+    <span>来源：<b>One News TV Channel</b></span>
+    <span>推荐理由：缅甸作为区域国家治理乱象的核心节点，遣返规模数据具统计价值，发布时间为8月26日。</span>
+    <a href="https://onenewstvchannel.com/en/travel-en/traffic-en/more-than-9000-illegal-foreigners-deported/" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-china_neighbors-4">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://www.telegraphindia.com/india/india-government-shares-names-of-2680-suspected-illegal-immigrants-with-bangladesh-for-verification/cid/2163081" target="_blank" rel="noopener">印度向孟加拉国提交2680名疑似非法移民名单</a></h4>
+  </div>
+  <div class="title-en">India shares names of 2,680 suspected illegal immigrants with Bangladesh</div>
+  <div class="chips"><span class="chip">印度</span><span class="chip">孟加拉国</span><span class="chip">非法移民</span><span class="chip">国籍核查</span><span class="chip">遣返</span><span class="chip">边境</span></div>
+  <p class="summary"><b>内容提要</b>　8月25日，印度外交部发言人贾斯瓦尔在例行记者会上表示，新德里已向孟加拉国提交逾2680名人员的名单，请其核实国籍。他称「一旦国籍核验完成，便可将这些孟加拉国国民遣返」。贾斯瓦尔表示，这些核查中有部分已搁置逾5年，期待孟方尽早回复。印度强调将依法处理境内所有非法居留者。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>印度外交部发言人兰迪尔·贾斯瓦尔8月25日在新德里每周例行记者会上回应有关孟加拉国非法移民的提问时表示，印方已向孟加拉国提交超过2680个案例，请其核实所涉人员国籍。他说：「一旦这项国籍核验完成，我们就能遣返这些孟加拉国国民。此前我已说明，部分核查已搁置超过5年。」他强调，依据双边安排，这些人员可被送返孟加拉国。贾斯瓦尔还重申，印度境内所有非法居留者将依法处理，并重申印方反对一切形式的跨境恐怖主义。该表态体现印度在东部边境移民核查上的持续推进，也折射出两国在移民身份确认上的长期拉锯。</p></details>
+  <div class="meta">
+    <span>来源：<b>The Telegraph (India)</b></span>
+    <span>推荐理由：涉及南亚最大规模的非法移民核查与遣返机制，发布日为8月25日，来源为印度主流媒体，权威性较强。</span>
+    <a href="https://www.telegraphindia.com/india/india-government-shares-names-of-2680-suspected-illegal-immigrants-with-bangladesh-for-verification/cid/2163081" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-china_neighbors-5">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://en.nhandan.vn/viet-nam-steps-up-crackdown-on-tech-enabled-trafficking-online-scam-rings-post163866.html" target="_blank" rel="noopener">越南开展打击人口贩运与网络诈骗专项行动</a></h4>
+  </div>
+  <div class="title-en">Viet Nam steps up crackdown on tech-enabled trafficking, online scam rings</div>
+  <div class="chips"><span class="chip">越南</span><span class="chip">人口贩运</span><span class="chip">网络诈骗</span><span class="chip">边境管控</span><span class="chip">反诈骗</span><span class="chip">弱势群体</span></div>
+  <p class="summary"><b>内容提要</b>　越南政府批准落实2026至2030年防范打击人口贩运计划，配合「世界反人口贩运日」开展全国行动。重点打击利用高科技实施的网络诈骗与人口贩运犯罪，加强受害者保护与公众宣传。越南多地（如西宁、安江）加强边境巡查，并通过111热线、VNeID应用等渠道受理举报，防范以「高薪」为诱饵的非法出境与务工陷阱。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>越南政府批准落实2026至2030年防范打击人口贩运计划，呼应7月30日「世界反人口贩运日」。副总理范嘉土签署决定，要求各部门、地方政府与公众协同，重点打击利用数字技术实施网络诈骗与人口贩运的犯罪网络，同时加强受害者识别与保护。越南多地（西宁、安江等）加强边境巡逻，通过111热线、VNeID应用及警方社交媒体受理举报，并向民众普及「高薪诱饵」骗局识别。配套措施还包括完善受害者心理与法律援助、职业培训和生计支持，以从源头减少人口贩运风险。</p></details>
+  <div class="meta">
+    <span>来源：<b>Nhan Dan Online</b></span>
+    <span>推荐理由：反映越南在跨境防骗与边境治理上的政策动向，覆盖边境与反诈骗，来源为官方媒体，时效为近期。</span>
+    <a href="https://en.nhandan.vn/viet-nam-steps-up-crackdown-on-tech-enabled-trafficking-online-scam-rings-post163866.html" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-china_neighbors-6">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://hmguojiribao.com/197338" target="_blank" rel="noopener">印尼茉莉芬查处中国籍男子逾期务工案</a></h4>
+  </div>
+  <div class="title-en">Indonesian immigration detains Chinese national for overstay and illegal work in Madiun</div>
+  <div class="chips"><span class="chip">印尼</span><span class="chip">逾期滞留</span><span class="chip">非法务工</span><span class="chip">中国籍</span><span class="chip">遣返</span><span class="chip">移民执法</span></div>
+  <p class="summary"><b>内容提要</b>　印尼茉莉芬移民局根据群众举报查获一名46岁中国籍男子，其居留许可已于2026年6月27日到期，构成逾期滞留；原担保公司用工关系早已解除，却仍在当地餐厅非法务工。该男子对违法事实供认不讳，目前羁押于移民拘留场所，将面临行政罚款、强制驱逐及列入入境黑名单等处罚。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>印尼茉莉芬移民局根据民众举报，对当地一家餐厅涉嫌违规外籍人员展开调查，并联动三宝垄移民局核验居留信息，最终确认一名46岁中国籍男子合法居留许可已于2026年6月27日到期，构成逾期滞留，且其原担保公司用工关系早已解除，却仍在茉莉芬从事厨师工作。执法人员固定证据后将其控制并带回作深度笔录，目前羁押于移民拘留场所。移民局将统计其滞留时长、务工收入与活动轨迹，依法处以行政罚款、强制驱逐出境并录入入境黑名单。此为外籍人员常态化管控的一部分，辖区将进一步加强对居留有效期与从业许可的日常巡查。</p></details>
+  <div class="meta">
+    <span>来源：<b>国际日报</b></span>
+    <span>推荐理由：涉及中国公民在周边国家非法务工个案，具警示意义，来源为印尼华文媒体，内容具体。</span>
+    <a href="https://hmguojiribao.com/197338" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+    <div class="sec-foot"><a href="#sec-china_neighbors" class="collapse-btn" data-collapse="sec-china_neighbors">▴ 收起本板块</a></div>
+  </div>
+</details>
+<details class="section" id="sec-global_south">
+  <summary>
+    <span class="sec-title">🌏 全球南方国家动态</span>
+    <span class="sec-desc">拉美、非洲、中东等地区移民治理与边境管理动态</span>
+    <span class="sec-count">6 条</span>
+    <span class="sec-arrow">▾</span>
+  </summary>
+  <div class="sec-body">
+    
+<article class="item" id="item-global_south-1">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://english.news.cn/20260825/5af00b75c5334799910b4a5509098df2/c.html" target="_blank" rel="noopener">哥伦比亚总统下令大规模遣返无证移民</a></h4>
+  </div>
+  <div class="title-en">Colombia to mass deport undocumented migrants: president</div>
+  <div class="chips"><span class="chip">哥伦比亚</span><span class="chip">无证移民</span><span class="chip">遣返</span><span class="chip">治安</span><span class="chip">移民执法</span><span class="chip">拉美</span></div>
+  <p class="summary"><b>内容提要</b>　8月24日（周一播报），哥伦比亚总统阿韦拉多·德拉埃斯普列利亚在治安会议中下令移民局开展协调行动，追查并遣返无证移民，优先针对涉嫌犯罪及身份不合法者。他称将立即组建军警联合特遣队打击勒索犯罪，并重申将武装反叛组织视为恐怖组织。该行动被视为其上台后更严厉的安全政策组成部分。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>哥伦比亚总统阿韦拉多·德拉埃斯普列利亚在8月的治安委员会会议上誓言启动对无证移民的遣返行动，称「移民局的命令很明确：开展协调行动追查非法移民，首先是犯罪者，其次身份不合规者，最终将被遣返」。他还宣布立即组建由军、警、海军与空军组成的全国特遣队，配合总检察长办公室与司法系统打击勒索犯罪，并重启金融情报单位以调阅前任政府四年内的银行记录。分析认为，这是继上月大规模抗议之后的强硬治安转向，将对在哥的委内瑞拉等外籍群体产生直接影响。</p></details>
+  <div class="meta">
+    <span>来源：<b>新华网</b></span>
+    <span>推荐理由：拉美主要国家移民政策重大动向，发布于8月25日，来源为新华网，信息明确。</span>
+    <a href="https://english.news.cn/20260825/5af00b75c5334799910b4a5509098df2/c.html" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-global_south-2">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://world.huanqiu.com/article/9CaKrnJOQGv" target="_blank" rel="noopener">委内瑞拉驱逐千余名哥伦比亚人</a></h4>
+  </div>
+  <div class="title-en">Venezuela deports over 1,000 Colombians over document issues</div>
+  <div class="chips"><span class="chip">委内瑞拉</span><span class="chip">哥伦比亚</span><span class="chip">边境</span><span class="chip">遣返</span><span class="chip">人道主义</span><span class="chip">拉美</span></div>
+  <p class="summary"><b>内容提要</b>　据美联社8月24日报道，委内瑞拉安全部队在开展为期5天的打击边境走私与犯罪行动期间，将1012名证件存在问题的哥伦比亚人遣返给哥方，此前已遣返612人并送返139名未成年人。哥伦比亚方面谴责此举制造「人道主义悲剧」，两国边境紧张升温。今年以来相关遣返数量已增至三倍。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>据美联社8月24日报道，委内瑞拉塔奇拉州州长表示，该国正在开展为期5天的打击边境走私者与犯罪团伙行动，已将1012名证件存在问题的哥伦比亚人移交给哥伦比亚当局，此前已遣返612人并送返139名未成年人。路透社称，此举导致一些儿童与父母被迫分离，加剧两国紧张关系。哥伦比亚内政部长与外交部长已抵达库库塔协调应对，总统桑托斯呼吁对话与外交斡旋。今年以来被驱逐、放逐或遣返的哥伦比亚人数量增至三倍，哥方指责委内瑞拉在边界制造「人道主义悲剧」。</p></details>
+  <div class="meta">
+    <span>来源：<b>环球网</b></span>
+    <span>推荐理由：拉美邻国间因边境管控引发的外交与人道争议，时间点为8月24日，来源清晰且具区域影响。</span>
+    <a href="https://world.huanqiu.com/article/9CaKrnJOQGv" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-global_south-3">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★★</span>
+    <h4><a href="https://www.aljazeera.com/news/2026/8/25/search-continues-in-tunisia-after-migrant-boat-sinking-sparks-protests" target="_blank" rel="noopener">突尼斯沉船事故引发抗议 搜救持续</a></h4>
+  </div>
+  <div class="title-en">Search continues in Tunisia as migrant boat sinking sparks protests</div>
+  <div class="chips"><span class="chip">突尼斯</span><span class="chip">地中海</span><span class="chip">沉船</span><span class="chip">移民</span><span class="chip">难民</span><span class="chip">抗议</span></div>
+  <p class="summary"><b>内容提要</b>　突尼斯本加尔丹一艘载15人的移民船沉没，造成至少12人死亡、仍有2人失踪，仅1人幸存。遇难者多为本加尔丹与扎尔齐斯居民。沉船引发当地民众抗议，烧毁轮胎、封堵道路，警方以催泪瓦斯驱散。观察人士指出，经济边缘化与缺乏机会推动青年冒险横渡地中海前往欧洲。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>突尼斯本加尔丹一艘载有15人的移民船在扎尔齐斯外海约14海里处沉没，船上多数为年轻人，目的地为意大利。截至8月25日，已有12具遗体被打捞，另有2人失踪，仅1人漂流约48小时后获商用船只救起。突尼斯国民警卫队称，船上14人来自本加尔丹、1人来自扎尔齐斯，其中7人属同一家庭。沉船引发本加尔丹民众抗议，警方以催泪瓦斯驱散，示威者要求改善民生。人权观察等组织批评欧盟与突尼斯移民协议助长对移民的虐待。国际移民组织称今年地中海路线已有逾千人死亡或失踪。</p></details>
+  <div class="meta">
+    <span>来源：<b>Al Jazeera</b></span>
+    <span>推荐理由：地中海移民危机标志性事件，引发抗议与人道关注，发布于8月25日，来源权威且细节充分。</span>
+    <a href="https://www.aljazeera.com/news/2026/8/25/search-continues-in-tunisia-after-migrant-boat-sinking-sparks-protests" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-global_south-4">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://welattv.com/en/node/30791" target="_blank" rel="noopener">黎巴嫩拟放宽60万叙利亚人入境限制</a></h4>
+  </div>
+  <div class="title-en">Lebanon considers lifting security restrictions on 600,000 Syrians</div>
+  <div class="chips"><span class="chip">黎巴嫩</span><span class="chip">叙利亚</span><span class="chip">难民</span><span class="chip">入境限制</span><span class="chip">遣返</span><span class="chip">中东</span></div>
+  <p class="summary"><b>内容提要</b>　据8月18日报道，黎巴嫩总安全总局局长舒凯尔成立安全行政委员会，复核此前因居留或入境违规被列入限制名单的叙利亚人档案，预计可逐步恢复约60万人的合法入境资格，前提是未涉及刑事犯罪。此举意在区分居留违规与犯罪，缓解长期难民压力。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>据黎巴嫩《中东报》8月18日报道，黎巴嫩总安全总局局长哈桑·舒凯尔已成立安全行政委员会，复核此前因居留或入境违规被列入限制名单的叙利亚人档案。消息人士称，委员会正在审查因居留违规、非法入境或使用伪造证件（但本人不知情）被列为限制的个案，前提是不涉及刑事犯罪。黎方已复核数万份档案，预计可逐步将约60万人的限制解除。此举旨在区分一般居留违规与刑事犯罪，也呼应黎巴嫩在经济危机下寻求难民问题「永久方案」的诉求，目前黎巴嫩自称收容约200万叙利亚人。</p></details>
+  <div class="meta">
+    <span>来源：<b>Welat TV</b></span>
+    <span>推荐理由：中东难民治理的重要政策松动，涉及大规模身份合法化，来源为区域媒体，值得关注。</span>
+    <a href="https://welattv.com/en/node/30791" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-global_south-5">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://www.bbc.com/pidgin/articles/c62x28g45glo" target="_blank" rel="noopener">南非判处两名无证外籍人员入狱后遣返</a></h4>
+  </div>
+  <div class="title-en">South Africa sentences undocumented foreign nationals to prison, arrests others</div>
+  <div class="chips"><span class="chip">南非</span><span class="chip">无证移民</span><span class="chip">遣返</span><span class="chip">执法</span><span class="chip">反移民</span><span class="chip">非洲</span></div>
+  <p class="summary"><b>内容提要</b>　南非警方宣布，两名「无证外籍人员」因破坏基础设施被判刑6年及3个月，刑满后将移交内政部遣返原籍国。另在南非洲行动中查获4名从事假冒商品生意的外籍人员，并逮捕13名无证人员。反移民团体「March and March」设定9月30日为外籍人士离境新截止日。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>南非警方通报，两名「无证外籍人员」因破坏关键基础设施被判刑6年及3个月，刑满后将移交内政部移民局遣返原籍国。在另一次行动中，警方在穆西纳地区逮捕4名涉嫌贩卖假冒商品的男性外籍人员，其中两人来自埃塞俄比亚、一人来自塞内加尔，另有一名试图贿赂警员的埃塞俄比亚人获保释。8月20日的行动还拘捕13名无证人员并查扣大量假冒商品。与此同时，反移民团体「March and March」继6月30日全国抗议后，将9月30日设为外籍人士离境的新截止日，扬言每周示威施压政府。</p></details>
+  <div class="meta">
+    <span>来源：<b>BBC Pidgin</b></span>
+    <span>推荐理由：非洲最大经济体移民执法与反移民情绪的动态，发布于近期，来源为BBC，具代表性。</span>
+    <a href="https://www.bbc.com/pidgin/articles/c62x28g45glo" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-global_south-6">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://www.theeastafrican.co.ke/tea/business-tech/south-africa-anti-migrant-purge-5558150" target="_blank" rel="noopener">南非反移民清退引发成本与外交紧张</a></h4>
+  </div>
+  <div class="title-en">South Africa&#x27;s anti-migrant purge raises costs, tensions</div>
+  <div class="chips"><span class="chip">南非</span><span class="chip">移民</span><span class="chip">驱逐</span><span class="chip">外交争端</span><span class="chip">仇外</span><span class="chip">非洲</span></div>
+  <p class="summary"><b>内容提要</b>　截至6月底，已有逾17.8万名移民从南非逃离或被驱逐，涉及津巴布韦、马拉维、尼日利亚等国。南非内政部称遣返行动已耗资约2.92亿兰特（约1800万美元），并要求相关国家分担费用。多国质疑南非存在仇外暴力，加纳更将议题提交非盟。政府强调依法执法并警告民间私刑。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>据《东非人报》报道，截至6月底已有逾17.8万名移民从南非逃离或被驱逐，其中逾11.5万人返回津巴布韦、逾5.6万人返回马拉维，尼日利亚、加纳、莫桑比克、莱索托各有逾千人返回。南非内政部称相关遣返已耗资约2.92亿兰特（约1800万美元），并未编列预算，已向财政部申请追加拨款，并要求马拉维、尼日利亚、埃塞俄比亚分担费用。加纳以超100万美元自行接回公民，并向非盟投诉南非的仇外问题。南非政府重申移民执法专属国家职权，总统拉马福萨警告民间不得私刑查验身份证件，凸显移民议题与长期仇外问题交织。</p></details>
+  <div class="meta">
+    <span>来源：<b>The East African</b></span>
+    <span>推荐理由：反映非洲内部移民流动与外交摩擦，数据详实，来源为东非主流媒体，覆盖多维影响。</span>
+    <a href="https://www.theeastafrican.co.ke/tea/business-tech/south-africa-anti-migrant-purge-5558150" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+    <div class="sec-foot"><a href="#sec-global_south" class="collapse-btn" data-collapse="sec-global_south">▴ 收起本板块</a></div>
+  </div>
+</details>
+<details class="section" id="sec-tech">
+  <summary>
+    <span class="sec-title">🤖 移民与边境技术</span>
+    <span class="sec-desc">生物识别、智慧边境、AI 审查、电子签证、边境监控技术应用与争议</span>
+    <span class="sec-count">6 条</span>
+    <span class="sec-arrow">▾</span>
+  </summary>
+  <div class="sec-body">
+    
+<article class="item" id="item-tech-1">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★★</span>
+    <h4><a href="https://www.biometricupdate.com/202608/iraq-takes-over-refugee-identity-registration-from-unhcr" target="_blank" rel="noopener">伊拉克接管难民身份登记 生物识别成核心</a></h4>
+  </div>
+  <div class="title-en">Iraq takes over refugee identity registration from UNHCR</div>
+  <div class="chips"><span class="chip">难民登记</span><span class="chip">生物识别</span><span class="chip">数字身份</span><span class="chip">联合国难民署</span><span class="chip">伊拉克</span><span class="chip">主权身份管理</span></div>
+  <p class="summary"><b>内容提要</b>　伊拉克内政部难民事务常设委员会（PC-MOI）已正式启动由本国主导的难民与寻求庇护者身份登记，逐步从联合国难民署（UNHCR）手中接管这一流程。登记通过UNHCR在线门户预约，难民家庭领取转介信后到PC-MOI完成文件核验、简短面谈并采集生物识别数据，数分钟内即可签发政府身份卡。该卡为难民提供受法律保护的法律身份，降低被拘押风险，并打通医疗、教育等公共服务。移动登记队与上门服务覆盖巴格达以外及行动不便人群。此次移交始于2026年4月启动的联合登记，得到欧盟及瑞典、德国、丹麦、挪威等捐助方支持，反映各国将难民登记纳入国家数字身份体系、由主权机构接管身份管理的趋势。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>伊拉克内政部难民事务常设委员会（PC-MOI）已开始在境内接管难民与寻求庇护者的身份登记工作，结束了由联合国难民署（UNHCR）主导多年的登记模式，转向由本国政府管理的数字身份体系。新流程中，难民家庭先经UNHCR在线门户预约，领取转介信后前往PC-MOI办理登记；现场官员核验文件并作简短面谈，同时采集生物识别数据，作为签发政府身份文件的组成部分。据PC-MOI秘书长纳迪姆·阿卜杜拉·艾哈迈德准将介绍，整个流程约需15分钟，并借助UNHCR的数据库工具支持，身份卡可在数分钟内签发。
+
+对难民而言，这张政府身份卡意味着获得被承认的法律身份，显著降低因无证件而被逮捕或拘留的风险，同时为其获取医疗保健、教育及其他基本公共服务打开通道。为确保覆盖巴格达以外地区及行动不便者，当局还派出移动登记队并提供上门访问服务。
+
+此次权力移交是伊拉克与UNHCR多年伙伴关系的成果，并获欧盟及瑞典、德国、丹麦、挪威等国捐助方 backing。联合登记于2026年4月启动，当时即预期庇护登记职责将逐步从UNHCR转移到伊拉克政府。这一转向也契合埃塞俄比亚、卢旺达等国将难民登记整合进国家数字身份系统的更广泛趋势，即把身份管理责任从国际机构转移至主权机构，同时扩大公共服务可及性。该案例凸显生物识别与数字身份技术在难民保护与国家治理中的双重作用。</p></details>
+  <div class="meta">
+    <span>来源：<b>Biometric Update</b></span>
+    <span>推荐理由：主权国家接管难民生物识别登记是移民数字身份治理的重要转折，兼具技术部署与政策示范意义，且由权威行业媒体详实报道，时效性强。</span>
+    <a href="https://www.biometricupdate.com/202608/iraq-takes-over-refugee-identity-registration-from-unhcr" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-tech-2">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://www.biometricupdate.com/202608/bsi-warns-ai-can-reproduce-3d-fingerprints-from-online-photo-of-hands" target="_blank" rel="noopener">德国安全局警告AI可凭手部照片复刻指纹</a></h4>
+  </div>
+  <div class="title-en">BSI warns AI can reproduce 3D fingerprints from online photo of hands</div>
+  <div class="chips"><span class="chip">指纹识别</span><span class="chip">人工智能</span><span class="chip">3D打印</span><span class="chip">活体检测</span><span class="chip">生物识别安全</span></div>
+  <p class="summary"><b>内容提要</b>　德国联邦信息安全办公室（BSI）通过其社交平台发出警示：攻击者可利用人工智能与3D打印技术，仅凭一张手部照片即可复制出指纹。BSI强调，与个人密码不同，指纹无法轻易更换，因此任何以生物识别保护敏感访问的系统都不应将其作为唯一安全措施。该机构指出，即便做出比出「胜利」手势这样的常见动作，也可能在照片中暴露足以被先进AI工具结合3D打印复刻的指纹特征。BSI并未宣称指纹技术已失效，而是重申行业向分层认证演进的趋势——将生物识别与活体检测、设备安全及其他认证因子结合，以应对日益平民化的AI伪造攻击。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>德国联邦信息安全办公室（BSI）近期发出一项关于生物识别安全的新警示，指出人工智能正在降低「伪造生物特征」所需的成本与门槛。BSI在其社交平台发文称：「攻击者可以利用AI和3D打印机，从你的手部照片中创建指纹副本。」该机构特别警示公众，指纹与个人密码不同，一旦泄露无法像改密码那样轻易更换，因此任何依赖生物识别来保护敏感访问的措施，都不应将其作为唯一的安全手段。
+
+BSI举例说明，即便只是摆出比出「胜利」手势这类日常动作，也可能在照片中暴露出足够细节，使 sophisticated 的AI工具结合3D打印复刻出可用指纹。据ISMG报道，BSI发言人表示，犯罪分子可利用指纹的复制品制造出与真实指纹足够相似的合成指纹，从而在缺乏额外检测手段的设备上潜在解锁智能手机。
+
+不过，BSI的警告并非认定指纹技术已过时，而是强调行业正加速转向「分层认证」：将生物识别与活体检测、设备安全及其他认证因子相结合，以抵御日益accessible的AI伪造手段。事实上，早在2020年Cisco Talos的研究已显示，3D打印指纹在受控条件下即可绕过部分设备的生物认证。随着AI不断压低复刻生物特征的门槛，行业面临的挑战正从「彻底阻止欺骗」转为「检测并缓解越来越精密的攻击」，这对边境与移民场景广泛部署的指纹采集系统同样构成现实警示。</p></details>
+  <div class="meta">
+    <span>来源：<b>Biometric Update</b></span>
+    <span>推荐理由：直接触及生物识别技术核心安全短板，对移民与边境指纹采集系统的抗欺骗设计具有现实警示价值，由国家级安全机构发布，权威且时效新。</span>
+    <a href="https://www.biometricupdate.com/202608/bsi-warns-ai-can-reproduce-3d-fingerprints-from-online-photo-of-hands" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-tech-3">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://www.biometricupdate.com/202608/scotland-weighs-lfr-policies-as-police-request-mask-ban-ethics-study-launches" target="_blank" rel="noopener">苏格兰研讨实时人脸识别治理 警方吁禁口罩</a></h4>
+  </div>
+  <div class="title-en">Scotland weighs LFR policies as police request mask ban, ethics study launches</div>
+  <div class="chips"><span class="chip">实时人脸识别</span><span class="chip">执法监控</span><span class="chip">隐私争议</span><span class="chip">苏格兰</span><span class="chip">生物识别治理</span></div>
+  <p class="summary"><b>内容提要</b>　苏格兰警察联合会呼吁，若警方获准在公共场所使用实时人脸识别（LFR），则应同步禁止民众以口罩等遮挡面部，并称英国2026年《犯罪与警务法》已设立24小时「无口罩区」，希望在苏格兰仿效。与此同时，苏格兰警务研究所（SIPR）资助的「Face[REC]」项目正式启动，结合法律分析与工作坊，研究LFR在执法中的伦理意涵与监管框架，预计2027年春季完成。苏格兰此前已承诺采用实时人脸识别，但采取审慎的立法路径，可能成为全球首个以主干立法规范警方LFR使用的地区。支持与反对声音激烈交锋，凸显监控技术应用的隐私争议。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>苏格兰围绕警方是否及如何部署实时人脸识别（LFR）的争论持续升温。苏格兰警察联合会秘书长戴维·肯尼迪表示，如果警方能在公共场合使用LFR，那么个人就不应当被允许用口罩或遮挡物隐藏面部，否则「斥巨资部署的精密识别技术将形同虚设」。他援引英格兰近期通过的2026年《犯罪与警务法》——该法案允许警方设立24小时「无口罩区」，并希望在苏格兰复制类似权力，同时对宗教、文化、医疗及职业原因作出豁免。
+
+与英格兰和威尔士已部署LFR多年不同，苏格兰选择以审慎、 deliberative 的方式来决定该技术的治理框架。为此，苏格兰警务研究所（SIPR）资助了名为「Face[REC]」的学术研究项目，由斯特灵大学与爱丁堡大学的两位生物识别与隐私领域专家领衔，通过法律分析与公民、警员参与的研讨，探讨LFR的伦理意涵与适当监管。项目获SIPR约2万英镑（约合2.7万美元）资助，预计2027年春季完成，成果包括一套用于多方协商的实体卡片工具。
+
+苏格兰警方去年已明确表态将 adopting 实时人脸识别，引发从「呼吁全面禁用」到「强调需加强治理」的连续反应。苏格兰甚至可能成为全球首个以主干立法直接规范警方LFR使用的地区。近期英国生物识别专员办公室表态支持在苏格兰扩大监督角色，而苏格兰警察总监则敦促加快包括LFR在内先进技术的部署。该案集中体现了边境与公共安全领域监控技术的效率诉求与公民隐私权利之间的深层张力。</p></details>
+  <div class="meta">
+    <span>来源：<b>Biometric Update</b></span>
+    <span>推荐理由：实时人脸识别的立法治理争议是智慧边境与公共监控技术应用的典型议题，涉及伦理、立法与执法多方博弈，时效与代表性兼具。</span>
+    <a href="https://www.biometricupdate.com/202608/scotland-weighs-lfr-policies-as-police-request-mask-ban-ethics-study-launches" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-tech-4">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://www.biometricupdate.com/202608/india-drops-shared-biometric-database-from-telecom-verification-rules" target="_blank" rel="noopener">印度电信新规弃用跨运营商生物数据库</a></h4>
+  </div>
+  <div class="title-en">India drops shared biometric database from telecom verification rules</div>
+  <div class="chips"><span class="chip">生物识别</span><span class="chip">电子身份</span><span class="chip">电信验证</span><span class="chip">隐私保护</span><span class="chip">印度</span></div>
+  <p class="summary"><b>内容提要</b>　印度电信部（DoT）在最终公布的《2026年电信（用户识别）规则》中，放弃了此前拟建的跨行业「生物识别身份验证系统」（BIVS），该系统原拟为每名电信用户分配唯一ID并允许运营商互查记录。由于民间社会担心其绕开《Aadhaar法》保障、平行收集生物数据，该方案被剔除，改以电子实名（e-KYC）与数字实名（D-KYC）流程取代。新规仍强制运营商在发卡、更新与停机前完成生物识别核验，非Aadhaar用户须进行活体人脸采集、证件扫描乃至实地或警局核查。这表明印度在身份核验与隐私保护间寻求平衡。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>印度电信部（DoT）于上周五正式通知《2026年电信（用户识别）规则》，最终版本放弃了备受争议的「生物识别身份验证系统」（BIVS）。根据2023年《电信法》，运营商本须以生物识别方式核验用户身份；去年9月公布的草案曾包含BIVS，拟为每名电信客户分配唯一ID，并允许各公司在彼此记录间交叉比对身份。以互联网自由基金会为代表的民间团体批评该计划是在缺乏《Aadhaar法》 safeguards 的情况下，平行收集生物数据的多余举措。
+
+在最终规则中，BIVS被剔除，取而代之的是电子实名（e-KYC）与数字实名（D-KYC）流程。新规仍要求Airtel、Jio、Vodafone Idea、BSNL等运营商在发放SIM卡、更新记录或断开号码前确认用户身份：Aadhaar持有者通过UIDAI认证设施核验，非Aadhaar用户则须经历活体人脸采集、证件扫描，必要时还包括实地访问或警方核查。此外，停机前强制生物核验、SIM或账户变更的用户提醒系统，以及生物验证失败的报送要求一并写入规则，企业须在三个月（可延至六个月）内落地。
+
+值得注意的是，DoT另设机制：自8月23日起，其数字情报平台将从各运营商拉取用户数据与照片，以识别全国范围内持有超出允许数量手机卡的个人。整体而言，印度电信核验框架正努力在身份保障与咨询阶段提出的隐私关切之间寻求平衡，也为其他国家的数字身份与生物识别政策提供了参照。</p></details>
+  <div class="meta">
+    <span>来源：<b>Biometric Update</b></span>
+    <span>推荐理由：反映生物识别在身份核验中的常态化与隐私边界争议，虽非直接边境应用，但对数字身份治理与生物数据保护具有借鉴意义。</span>
+    <a href="https://www.biometricupdate.com/202608/india-drops-shared-biometric-database-from-telecom-verification-rules" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-tech-5">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★★</span>
+    <h4><a href="https://www.biometricupdate.com/202608/judge-blocks-trump-administration-bid-for-driver-identity-database" target="_blank" rel="noopener">美法官阻止政府调取驾照数据库用于移民执法</a></h4>
+  </div>
+  <div class="title-en">Judge blocks Trump administration bid for driver identity database</div>
+  <div class="chips"><span class="chip">身份数据库</span><span class="chip">移民执法</span><span class="chip">隐私法</span><span class="chip">美国</span><span class="chip">监控争议</span></div>
+  <p class="summary"><b>内容提要</b>　美国弗吉尼亚东区联邦地区法院资深法官安东尼·特伦加签发临时限制令，暂时阻止特朗普政府从全美约1700万商业驾驶员的驾照信息系统中批量获取含社会安全号的身份记录。21个州及哥伦比亚特区起诉交通部与联邦汽车运输安全管理局（FMCSA），指其以安全监管为名实则为移民执法大量搜集身份数据；国土安全部（DHS）亦另行发出传票索取相同数据。法官认为政府未能合理解释需求，并存在「令人信服的推断」——该举主要服务于移民执法，涉嫌违反《驾驶员隐私保护法》《隐私法》等。裁决凸显身份数据库被转用于边境监控的争议。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>美国弗吉尼亚东区资深联邦地区法官安东尼·J·特伦加（Anthony J. Trenga）签发临时限制令，暂时阻止特朗普政府接管全美商业驾驶员执照信息系统（CDLIS）中约1700万条含社会安全号的身份记录。事件源于交通部下属的联邦汽车运输安全管理局（FMCSA）于6月25日要求运营CDLIS的美国机动车管理员协会（AAMVA）提供过去五年内所有驾驶员的姓名、出生日期、州别、执照号及社会安全号等「主指针记录」，并在8月11日以取消约1000万美元拨款、寻求强制执行传票及终止合同相威胁。
+
+21个州及哥伦比亚特区随即起诉交通部与FMCSA，国土安全部（DHS）亦另行发出行政传票索取相同数据，声称用于调查商业驾照违规及移民执法。法院认为，FMCSA数十年来一直通过个案查询与州审查履行安全监管职责，却从未要求过如此大规模的批量复制，且无法说明批量获取后能做而现有访问做不到的事；加之政府承认记录将与DHS共享用于移民执法，法官得出「令人信服的推断」——此举在很大程度上由移民执法驱动，违反了《驾驶员隐私保护法》（DPPA）、《1974年隐私法》、《行政程序法》及宪法开支条款。
+
+裁决禁止AAMVA向联邦机构移交原告各州的记录，也禁止以拒交为由切断其合同与资金。这并非否定联邦对CDLIS的既有访问权，而是划清「访问」与「批量接管」的界限。案件仍在推进：各州须在8月27日前申请初步禁令，政府回应截止9月3日，听证定于9月10日。此案集中折射出身份数据库被转用于 immigration enforcement 与边境监控所引发的法治与隐私权张力。</p></details>
+  <div class="meta">
+    <span>来源：<b>Biometric Update</b></span>
+    <span>推荐理由：揭示身份数据库被转用于移民执法监控的争议，直接关联边境技术治理与隐私法冲突，由联邦诉讼支撑，权威性强且影响广泛。</span>
+    <a href="https://www.biometricupdate.com/202608/judge-blocks-trump-administration-bid-for-driver-identity-database" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-tech-6">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://www.biometricupdate.com/202608/indias-csm-technologies-joins-mosip-to-connect-govtech-with-digital-identity" target="_blank" rel="noopener">印度CSM科技加入开源数字身份平台生态</a></h4>
+  </div>
+  <div class="title-en">India&#x27;s CSM Technologies joins MOSIP to connect GovTech with digital identity</div>
+  <div class="chips"><span class="chip">数字身份</span><span class="chip">MOSIP</span><span class="chip">数字公共基础设施</span><span class="chip">政府技术</span><span class="chip">印度</span></div>
+  <p class="summary"><b>内容提要</b>　印度跨国政府技术供应商CSM Technologies宣布作为系统集成商加入模块化开源身份平台（MOSIP）的技术伙伴生态，列入MOSIP Marketplace。其技术团队已完成MOSIP全面培训，具备基于该平台设计、集成与实施数字身份解决方案的能力。CSM指出，MOSIP的模块化架构让各国能以更高灵活性与自主权构建数字身份基础设施，契合现代数字公共基础设施（DPI）需求。公司7月刚在孟买与印度国家证券交易所上市，2026财年营收近23亿卢比（约2400万美元）。此举使其可竞标多边资助的DPI项目，服务于尚无可用数字身份的数十亿人口，对各国（含移民治理）身份系统建设具参考价值。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>印度跨国政府技术（GovTech）供应商CSM Technologies宣布战略扩张，正式作为系统集成商加入模块化开源身份平台（MOSIP）的技术伙伴生态，并已在MOSIP Marketplace 列名。据公告，CSM技术团队已完成对MOSIP的全面培训，建立起基于该平台设计、集成、定制与实施数字身份解决方案的能力。
+
+MOSIP是由联合国资助支持的开源数字身份平台，其模块化架构允许各国以较传统方案更高的灵活性与自主权，构建安全、可扩展且可互操作的国家身份系统。CSM董事总经理兼CEO普里亚达尔希·潘尼表示，与MOSIP的协作强化了公司帮助各国政府建设「安全、可扩展、可互操作并契合本国制度与公民需求」的身份系统的能力，并称这不仅是技术组合的补充，更是其在新兴市场承建关键数字平台经验的重要延伸。
+
+CSM于今年7月在孟买证券交易所（BSE）与印度国家证券交易所（NSE）挂牌上市，2026财年营收接近23亿卢比（约合2400万美元）。分析指出，采用MOSIP使CSM得以竞标复杂的、由多边机构资助的数字公共基础设施（DPI）项目，并可借近期上市扩大国际业务。公司援引世界银行2026年全球DPI项目数据称，仍有约29亿人——多数位于撒哈拉以南非洲与南亚——缺乏可用于在线交易的可靠数字身份。
+
+从移民与边境技术视角看，MOSIP类开源平台正成为中低收入国家构建国家数字身份、进而支撑难民登记、电子签证与跨境身份核验的关键底座，CSM的加入意味着该生态的实施能力进一步扩容，对相关国家的身份治理具有持续外溢影响。</p></details>
+  <div class="meta">
+    <span>来源：<b>Biometric Update</b></span>
+    <span>推荐理由：指向支撑各国数字身份与移民治理的开源基础设施生态扩张，具有中长期技术与政策参考价值，但属行业动态而非突发新闻，时效性略弱。</span>
+    <a href="https://www.biometricupdate.com/202608/indias-csm-technologies-joins-mosip-to-connect-govtech-with-digital-identity" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+    <div class="sec-foot"><a href="#sec-tech" class="collapse-btn" data-collapse="sec-tech">▴ 收起本板块</a></div>
+  </div>
+</details>
+<details class="section" id="sec-research">
+  <summary>
+    <span class="sec-title">📚 移民与边境研究</span>
+    <span class="sec-desc">全球智库报告、学术论文、研究数据：移民治理与边境安全前沿研究成果</span>
+    <span class="sec-count">9 条</span>
+    <span class="sec-arrow">▾</span>
+  </summary>
+  <div class="sec-body">
+    
+<article class="item" id="item-research-1">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://link.springer.com/article/10.1186/s40878-026-00578-9" target="_blank" rel="noopener">印尼移工女性的跨国政治参与</a></h4>
+  </div>
+  <div class="title-en">Voting from the margins: transnational political participation and gendered labour of Indonesian migrant domestic workers in Kuala Lumpur and Hong Kong</div>
+  <div class="chips"><span class="chip">印尼移工</span><span class="chip">女性家庭佣工</span><span class="chip">跨国政治参与</span><span class="chip">南南流动</span><span class="chip">政治能动性</span><span class="chip">家政劳动</span></div>
+  <p class="summary"><b>内容提要</b>　基于对吉隆坡与香港40名印尼女性家庭佣工的深入访谈，本文挑战了「移工女性政治参与匮乏」的主流叙事。研究显示，这些处于不稳定就业状态的女性实则积极参与母国选举——投票、助选、担任监票志愿者并在社交媒体上动员。作者提出「韧性、回弹、疏离、抵抗」四类跨国政治参与类型学，并指出家政劳动的雇佣条件从物质层面限制甚至剥夺了她们的政治参与能力。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>本文以马来西亚吉隆坡与香港两地40名印尼女性家庭佣工为研究对象，通过印尼语深度访谈，检视她们参与母国（印尼）选举的跨国政治实践。尽管公共话语常以「匮乏」框架描述移工女性的政治参与，作者发现受访者在农村出身背景下实则高度能动：她们投票、为候选人助选、加入监票委员会，并通过社交媒体开展竞选动员；也有人因约束主动选择在政治中缺席。研究由此构建了「韧性（Resilience）、回弹（Rebound）、疏离（Remoteness）、抵抗（Resistance）」四种跨国政治参与类型学。文章核心论点在于，私人家政服务的雇佣条件（如居住隔离、工时控制、行动受限）构成了限制乃至排斥女性政治参与的物质结构。通过把 emigrants 与母国的关系置于中心，本文深化了对南南移民走廊中跨国政治参与以及移工女性政治能动性的理解。</p></details>
+  <div class="meta">
+    <span>来源：<b>Comparative Migration Studies (Springer)</b></span>
+    <span>推荐理由：以一手访谈构建类型学，弥补南南走廊中移工女性政治能动性研究的不足，方法扎实、视角新颖。</span>
+    <a href="https://link.springer.com/article/10.1186/s40878-026-00578-9" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-research-2">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://onlinelibrary.wiley.com/doi/10.1111/imig.70215" target="_blank" rel="noopener">庇护时代的人蛇走私</a></h4>
+  </div>
+  <div class="title-en">La Muerte del Coyote: Human Smuggling in the Age of Asylum</div>
+  <div class="chips"><span class="chip">人蛇走私</span><span class="chip">美墨边境</span><span class="chip">庇护制度</span><span class="chip">边境治理</span><span class="chip">有组织犯罪</span><span class="chip">非正规移民</span></div>
+  <p class="summary"><b>内容提要</b>　本文考察美墨边境「coyote」（人蛇/走私者）角色在庇护申请时代的结构性转变。作者指出，随着美国边境执法收紧与庇护制度的演变，传统跨境偷渡网络正被重新塑造，走私活动与有组织犯罪、边境治理相互纠缠。研究结合边境人类学视角，剖析走私者如何在移民政策与犯罪经济的交界处运作，并反思「土狼」形象背后的暴力、利润与移民主体性。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>本文以美墨边境的「coyote」（人蛇/走私中介）为核心，分析在庇护申请时代跨境走私活动的演变。Slack 与 López Reyes 指出，随着美国边境执法持续收紧、庇护通道收窄，传统上连接移民与跨境通道的「土狼」角色已被深刻重塑：走私网络日益与有组织犯罪、边境安全产业以及移民执法逻辑相互嵌套。作者借助边境人类学与田野观察，揭示走私者如何在移民政策、犯罪经济与边境治理的夹缝中运作，并批判主流叙事将走私者单一化为「暴力罪犯」或「受害中介」的简化倾向。文章强调，移民自身的处境与主体性在此过程中常被遮蔽，而「土狼之死」所象征的，是庇护时代下非正规跨境流动日益危险化、刑事化的结构性后果。</p></details>
+  <div class="meta">
+    <span>来源：<b>International Migration (Wiley)</b></span>
+    <span>推荐理由：紧扣边境安全与走私治理前沿议题，理论视角清晰，对理解美墨边境非正规迁移治理具有直接参考价值。</span>
+    <a href="https://onlinelibrary.wiley.com/doi/10.1111/imig.70215" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-research-3">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://onlinelibrary.wiley.com/doi/10.1111/imig.70214" target="_blank" rel="noopener">抵制移民虚假信息的游戏化策略</a></h4>
+  </div>
+  <div class="title-en">A Gamified Strategy to Resist Migration Disinformation in Adolescents</div>
+  <div class="chips"><span class="chip">移民虚假信息</span><span class="chip">游戏化干预</span><span class="chip">青少年</span><span class="chip">媒介素养</span><span class="chip">仇恨言论</span><span class="chip">数字治理</span></div>
+  <p class="summary"><b>内容提要</b>　本研究针对青少年群体中泛滥的移民相关虚假信息，提出并评估一种游戏化干预策略。作者指出，在社交媒体的推波助澜下，关于移民与难民的误导性叙事深刻影响青年的态度与社会的包容度。通过设计面向青少年的教育性游戏干预，研究检验其在提升信息辨识能力、削弱仇外叙事方面的效果，为数字时代的移民沟通与媒介素养教育提供实证依据。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>本文关注数字时代青少年如何面对并抵御与移民、难民相关的虚假信息与仇恨叙事。Ondrušková 指出，社交媒体已成为青年获取移民议题信息的主要渠道，而误导性内容极易放大排外情绪、侵蚀社会凝聚力。为此，作者设计并测试了一种面向青少年的游戏化干预方案，通过沉浸式、参与式的游戏体验，引导玩家识别信息来源、反思偏见，并在模拟情境中练习批判性判断。研究发现，游戏化策略能够显著提升青少年对移民虚假信息的辨识能力与抵抗意愿，同时促进同理心与对被迫流动者处境的理解。文章将移民治理的讨论延伸到「认知安全」与数字公民教育层面，为政策制定者、教育工作者与平台方提供了以证据为基础的反虚假信息路径。</p></details>
+  <div class="meta">
+    <span>来源：<b>International Migration (Wiley)</b></span>
+    <span>推荐理由：紧扣数字虚假信息与移民态度的现实议题，干预设计具有政策与教育可操作性，填补了该交叉领域实证空白。</span>
+    <a href="https://onlinelibrary.wiley.com/doi/10.1111/imig.70214" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-research-4">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://onlinelibrary.wiley.com/doi/10.1111/imig.70209" target="_blank" rel="noopener">老年移民的移动民族志反思</a></h4>
+  </div>
+  <div class="title-en">Rethinking Mobile Ethnography: Spatial and Social Experiences of Older Migrants</div>
+  <div class="chips"><span class="chip">老年移民</span><span class="chip">移动民族志</span><span class="chip">空间经验</span><span class="chip">社会参与</span><span class="chip">归属感</span><span class="chip">老龄化</span></div>
+  <p class="summary"><b>内容提要</b>　本文倡导以「移动民族志」方法重新审视老年移民的空间与社会经验。作者认为，既有移民研究多聚焦青壮年的跨境流动，而忽视了老年移民在日常尺度上的移动、停留与归属实践。通过追踪老年移民在居住地、社区与跨国网络之间的多重移动，研究揭示年龄、身体与数字基础设施如何共同塑造其社会参与和归属感，为老龄化与移民交叉研究提供方法学反思。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>本文呼吁移民研究采用「移动民族志（mobile ethnography）」视角，以更细腻地捕捉老年移民在空间与社会维度的日常经验。Tezel、Bilecen 与 Steverink 指出，既有文献偏向青壮年跨境流动，老年移民在居住地、社区、跨国照护网络之间的反复移动、短暂停留与情感维系长期被边缘化。作者通过追踪老年移民如何借助身体实践、数字媒介与地点互动来构建归属感，论证年龄、行动能力与基础设施可及性共同决定了其社会参与的广度。文章既是对老龄化与移民交叉议题的实证补充，也是对主流民族志方法忽视「日常尺度流动性」的反思，主张把老年移民的能动性置于移动、停留与归属的动态关系中理解。</p></details>
+  <div class="meta">
+    <span>来源：<b>International Migration (Wiley)</b></span>
+    <span>推荐理由：方法学反思价值较高，但对边境安全与政策实践的直接关联较弱，更适合作为移民研究的方法论参考。</span>
+    <a href="https://onlinelibrary.wiley.com/doi/10.1111/imig.70209" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-research-5">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://link.springer.com/article/10.1186/s40878-026-00581-0" target="_blank" rel="noopener">埃塞俄比亚的连锁性流离失所</a></h4>
+  </div>
+  <div class="title-en">Cascading displacement in Ethiopia: drought stress, insecurity, and market pressures in the remaking of mobility, settlement, and land claims</div>
+  <div class="chips"><span class="chip">埃塞俄比亚</span><span class="chip">境内流离失所</span><span class="chip">干旱</span><span class="chip">连锁性流离失所</span><span class="chip">土地权利</span><span class="chip">流动性轨迹</span></div>
+  <p class="summary"><b>内容提要</b>　本文提出「连锁性流离失所（cascading displacement）」概念，基于埃塞俄比亚三类走廊的质性田野，分析干旱压力、安全局势与市场价格压力如何使一次迁移 Episode 重塑后续的土地、就业、证件与援助获取。研究发现，部分移动、改道、家庭拆分与在节点间摇摆，使家庭得以在多地保留权利主张，却也制造了新的依赖与再流离风险，对事件本位 displacement 治理提出挑战。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>Berhanu 基于埃塞俄比亚三类走廊的质性田野（流动传记、参与式绘图与制度访谈），提出「连锁性流离失所」这一经验性概念。文章指出，埃塞的流离失所常被治理与统计简化为单一事件，但人们实则经历由干旱压力、安全局势与物价/租金压力交织驱动的连续移动。研究区分了「reported pressures（压力）、中介条件、家庭策略与空间结果」，揭示部分搬迁、改道、家庭拆分以及在服务与劳工节点间摇摆，如何使家庭在多个地点保留权利主张，同时又催生新的依赖与再流离风险。由此，作者主张以走廊与轨迹视角取代事件本位分类，关注 mobility、settlement 与 claims-making 的关联地理。该文对理解气候—冲突—市场复合压力下的重复性流离失所具有理论与政策意义。</p></details>
+  <div class="meta">
+    <span>来源：<b>Comparative Migration Studies (Springer)</b></span>
+    <span>推荐理由：概念创新清晰、田野扎实，对非洲之角流离失所治理与气候—冲突复合风险研究有直接贡献。</span>
+    <a href="https://link.springer.com/article/10.1186/s40878-026-00581-0" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-research-6">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://link.springer.com/article/10.1186/s40878-026-00558-z" target="_blank" rel="noopener">菲欧护理移民协定的欧洲转向</a></h4>
+  </div>
+  <div class="title-en">A &#x27;European Turn&#x27;? Foreign policy pivoting and bilateral labor migration agreements in the Philippines–Europe nursing migration corridor</div>
+  <div class="chips"><span class="chip">菲律宾</span><span class="chip">护理移民</span><span class="chip">双边劳务协定</span><span class="chip">劳工保护</span><span class="chip">外交转向</span><span class="chip">菲欧走廊</span></div>
+  <p class="summary"><b>内容提要</b>　本文考察菲律宾国家如何将护理劳工双边移民协定（BLMA）的重心由海湾地区「转向」欧洲。作者以英国（2021）、芬兰（2025）与奥地利维也纳（2023）三项结构各异的 BLMA 为案例，分析后疫情时代菲律宾外交部与移工部的外交逻辑，探讨国家如何在跨境护理劳动力配置中嵌入劳工保护语言，并反思「欧洲转向」能否真正转化为移民工人的权益保障。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>Malit 与 Carlos 以菲律宾—欧洲护理移民走廊为对象，分析后疫情时代菲律宾国家如何将其双边劳工移民协定（BLMA）的布局由海湾地区转向欧洲。文章聚焦三项结构各异的协定——国家间（菲—英）、私营—国家（菲—芬）与次国家（菲—维也纳）——并追溯其历史脉络与谈判逻辑。作者运用菲律宾外交部与移工部的原始文件、媒体报道与对菲籍护士的访谈，指出菲律宾正试图在新协定中写入劳工保护条款，以回应全球护理劳动力短缺。然而，研究也警示：协定文本中的保护性语言能否在接收国职场落地，取决于东道国的执行，存在显著落差。文章由此对「欧洲转向」是否等同于移民工人权益的实质改善提出审慎反思，对技能移民治理与南—北护理劳动力配置研究具有参考价值。</p></details>
+  <div class="meta">
+    <span>来源：<b>Comparative Migration Studies (Springer)</b></span>
+    <span>推荐理由：紧扣全球护理劳动力短缺与双边移民协定治理前沿，案例丰富、政策意涵明确。</span>
+    <a href="https://link.springer.com/article/10.1186/s40878-026-00558-z" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-research-7">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://onlinelibrary.wiley.com/doi/10.1111/padr.70033" target="_blank" rel="noopener">移民对城市年龄结构的影响</a></h4>
+  </div>
+  <div class="title-en">The Impact of Migration on Age Structure Conducive to Human Development Across the Urban Hierarchy</div>
+  <div class="chips"><span class="chip">国内移民</span><span class="chip">年龄结构</span><span class="chip">人口红利</span><span class="chip">城市层级</span><span class="chip">发展中国家</span><span class="chip">劳动年龄人口</span></div>
+  <p class="summary"><b>内容提要</b>　本文利用46个发展中国家103份微型普查数据，考察国内移民如何影响城市层级中的劳动年龄人口结构。研究发现，移民总体上提升城市的劳动年龄占比，但在乡村与小城镇则产生相反效应；大城市中移民对劳动年龄占比的提振作用在年轻成人（15–24岁）群体中最为显著，并随城镇规模递减乃至逆转。研究为人口红利的次国家差异提供了可推广的理论。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>Du、Beckendorff 与 Lerch 利用涵盖46个发展中国家、103份微型普查的代表性数据，系统考察国内移民如何重塑国家城市化进程中的次国家年龄结构。既有研究多关注移民的年龄选择性，却少有基于全球南方代表性数据评估其对城市内部年龄结构的影响。文章发现：移民总体上提升城市的劳动年龄人口占比，但在乡村与较小城镇反而降低该比例；在大城市中，移民对劳动年龄结构的提振作用显著，且主要由15–24岁年轻成人的迁移驱动，这一效应随城镇规模下降而减弱并最终逆转。作者由此提出一个可推广的理论，解释移民在塑造年龄结构中的作用，并帮助说明人口红利在次国家层面的差异，对针对性政策规划具有启示。</p></details>
+  <div class="meta">
+    <span>来源：<b>Population and Development Review (Wiley/Population Council)</b></span>
+    <span>推荐理由：基于大规模代表性数据的严谨人口学研究，理论贡献明确，对发展中国家城市化与人口红利政策有直接参考价值。</span>
+    <a href="https://onlinelibrary.wiley.com/doi/10.1111/padr.70033" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-research-8">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://www.iza.org/publications/dp/18590" target="_blank" rel="noopener">城市化与难民归化：同族网络</a></h4>
+  </div>
+  <div class="title-en">Invisible Immigrants? Urbanisation, Co-National Density and the Legal Integration of Refugees</div>
+  <div class="chips"><span class="chip">难民</span><span class="chip">法律融入</span><span class="chip">归化</span><span class="chip">城市化</span><span class="chip">同族网络</span><span class="chip">行政数据</span></div>
+  <p class="summary"><b>内容提要</b>　本文利用难民的准随机分配与详细行政数据，考察城市密度（特别是同族网络密度）对难民归化决策的影响。研究发现，被分配到城市地区的难民归化概率更高，主要源于更高的同族网络密度：同族密度每增加一个标准差，归化可能性上升1.3个百分点。效应在控制劳动力市场与公众态度等因素后依然稳健，提示信息网络与弱关系在移民法律融入中的关键作用。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>Cole、Koster、Ozgen 与 Yumoto 借助难民安置的准随机分配机制与详尽的行政登记数据，识别城市密度（尤其是同族网络密度）对难民归化决策的影响。研究发现，被分配至城市地区的难民更倾向于归化，其核心机制在于更高的同族同胞网络密度：同族密度每提升一个标准差，难民归化概率约增加1.3个百分点。该效应在控制劳动力市场结果、公众态度等变量后依然稳健，并且似乎源自同族网络中更低的信息成本与「弱关系」的连接力量。文章将「隐形移民」议题重新框架为城市空间与社会网络对法律融入的结构性塑造，对接收国安置政策（如初始分配地点）的设计具有明确政策含义，也为移民融入的微观机制研究提供了可靠因果证据。</p></details>
+  <div class="meta">
+    <span>来源：<b>IZA (Institute of Labor Economics)</b></span>
+    <span>推荐理由：利用准实验设计与行政数据提供因果识别，结论对难民安置与融入政策具有可操作启示。</span>
+    <a href="https://www.iza.org/publications/dp/18590" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-research-9">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★★</span>
+    <h4><a href="https://publications.iom.int/fr/node/8841" target="_blank" rel="noopener">重新思考正规移民路径</a></h4>
+  </div>
+  <div class="title-en">Rethinking regular migration pathways: myths, realities and opportunities (World Migration Report 2026, Chapter 5)</div>
+  <div class="chips"><span class="chip">正规移民路径</span><span class="chip">世界移民报告</span><span class="chip">非正规移民</span><span class="chip">移民治理</span><span class="chip">IOM</span><span class="chip">移民政策</span></div>
+  <p class="summary"><b>内容提要</b>　作为《2026年世界移民报告》第五章，本文检讨「正规移民路径」被定义、治理与真实体验的方式，并驳斥三类迷思：路径向来开放、开放必然推高移民规模、关闭路径即可「解决」非正规移民。文章以全球证据与区域案例说明，正规身份能够拓展 migrants 在权利、健康、劳动力市场与汇款投资方面的可及性，而限制性政策往往只是把流动「置换」而非减少，使其更危险、更不稳定。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>本文系《2026年世界移民报告》第五章，由 McMahon、Diallo 与 Gandini 撰写，系统审视「正规移民路径（regular migration pathways）」如何在定义、治理与实践层面被理解，并逐一拆解三类流行迷思：其一，正规路径向来开放畅通；其二，开放路径必然推高移民总量；其三，关闭路径即可「解决」非正规移民问题。作者基于全球证据与区域案例指出，正规路径事实上日益具有选择性，并沿地区、国家与群体间不平等分布，折射出人类发展、签证制度与地缘关系的深层不平等。研究进一步表明，获得正规身份能够显著拓展移民在权利、健康、劳动力市场机会以及汇款与投资方面的可及性，对原籍国与目的地国均产生正向效应；相反，限制性政策往往将流动「置换」而非消除，把人们推向更危险、更 precarious 的非正规旅程。文章呼吁以证据为基础、更具包容性的移民治理。</p></details>
+  <div class="meta">
+    <span>来源：<b>IOM (International Organization for Migration)</b></span>
+    <span>推荐理由：IOM 旗舰报告核心章节，系统澄清政策迷思、证据扎实且具全球政策影响力，是移民治理研究的必读文献。</span>
+    <a href="https://publications.iom.int/fr/node/8841" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+    <div class="sec-foot"><a href="#sec-research" class="collapse-btn" data-collapse="sec-research">▴ 收起本板块</a></div>
+  </div>
+</details>
+  <footer>全球移民与边境安全态势感知日报 · 生成时间 2026-08-26 07:57 · 数据仅供研究参考，观点以原文为准</footer>
+</div>
+<button id="toTop" title="回到顶部">↑</button>
+<script>
+(function() {
+  var secs = Array.prototype.slice.call(document.querySelectorAll('details.section'));
+  // 手风琴：展开一个板块时，自动收起其余板块（解决移动端上方板块无法收起的问题）
+  secs.forEach(function(d) {
+    d.addEventListener('toggle', function() {
+      if (d.open) {
+        secs.forEach(function(o) { if (o !== d) o.open = false; });
+        // 收起上方板块后页面高度变化，滚动对齐当前板块头部
+        setTimeout(function() {
+          var top = d.getBoundingClientRect().top + window.pageYOffset - 52;
+          window.scrollTo({ top: top, behavior: 'smooth' });
+        }, 60);
+      }
+    });
+  });
+  // 锚点跳转（导航条/Top榜/收起按钮）：自动展开目标板块，或收起当前板块
+  document.addEventListener('click', function(e) {
+    var a = e.target.closest('a[href^="#"]');
+    if (!a) return;
+    var id = a.getAttribute('href').slice(1);
+    var el = document.getElementById(id);
+    if (!el) return;
+    e.preventDefault();
+    if (a.hasAttribute('data-collapse')) {
+      el.open = false;
+      var top = el.getBoundingClientRect().top + window.pageYOffset - 52;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+      return;
+    }
+    var sec = el.closest ? (el.matches('details.section') ? el : el.closest('details.section')) : null;
+    if (sec && !sec.open) sec.open = true;
+    setTimeout(function() {
+      var top = el.getBoundingClientRect().top + window.pageYOffset - 52;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+    }, 60);
+  });
+  // 默认展开第一个板块（桌面宽屏），手机端全部收起以便总览
+  if (window.innerWidth >= 768 && secs.length) secs[0].open = true;
+  // 回到顶部按钮
+  var btn = document.getElementById('toTop');
+  window.addEventListener('scroll', function() {
+    btn.style.display = window.pageYOffset > 600 ? 'block' : 'none';
+  });
+  btn.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+})();
+</script>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('../sw.js').then(reg => {
+      reg.update();                          // 每次打开主动检查新版本
+      setInterval(() => reg.update(), 3600*1000); // 常驻页面每小时检查
+    }).catch(()=>{});
+  });
+}
+let deferredPrompt = null;
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  const btn = document.getElementById('pwa-install-btn');
+  if (btn) {
+    btn.style.display = 'inline-block';
+    btn.onclick = async () => {
+      deferredPrompt.prompt();
+      await deferredPrompt.userChoice;
+      deferredPrompt = null;
+      btn.style.display = 'none';
+    };
+  }
+});
+</script>
+</body>
+</html>
