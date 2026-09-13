@@ -13,6 +13,27 @@
 <link rel="icon" type="image/svg+xml" sizes="any" href="icons/icon.svg">
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
+
+  /* ============ 首页全库检索 ============ */
+  .searchpanel { background:#fff; border-radius:14px; padding:16px 18px; box-shadow:0 2px 10px rgba(15,46,92,.06); }
+  .searchbar { display:flex; gap:8px; flex-wrap:wrap; }
+  .searchbar input[type=search] { flex:1 1 240px; min-width:180px; border:1px solid #d6deed; border-radius:10px; padding:11px 14px; font-size:15px; outline:none; font-family:inherit; }
+  .searchbar input[type=search]:focus { border-color:#1a4f9c; }
+  .searchbar button { border:0; border-radius:10px; padding:10px 20px; font-size:14.5px; font-weight:700; background:#d99114; color:#fff; cursor:pointer; font-family:inherit; }
+  .searchbar button:hover { filter:brightness(1.08); }
+  .qhint { font-size:12.5px; color:#5a647c; margin-top:8px; }
+  .qres { display:none; margin-top:10px; max-height:480px; overflow:auto; border-top:1px dashed #e2e7f0; padding-top:8px; text-align:left; }
+  .qres h4 { font-size:13.5px; color:#0f2e5c; margin:10px 0 4px; }
+  .qres h4:first-child { margin-top:2px; }
+  .qres h4 .qr-link { font-size:12px; color:#0e7a6f; margin-left:8px; text-decoration:none; font-weight:400; }
+  .qres .qr { border-bottom:1px dashed #e2e7f0; padding:8px 2px; font-size:13.5px; }
+  .qres .qr:last-child { border-bottom:none; }
+  .qres .qr > a { color:#16213a; text-decoration:none; font-weight:600; }
+  .qres .qr > a:hover { color:#1a4f9c; }
+  .qres mark { background:#ffe9b3; border-radius:3px; padding:0 1px; }
+  .qres .qr-meta { font-size:12px; color:#5a647c; margin-top:2px; display:flex; gap:6px; flex-wrap:wrap; align-items:center; }
+  .qres .qr-meta a { color:#0e7a6f; text-decoration:none; }
+
   body { font-family:"PingFang SC","Microsoft YaHei",sans-serif; background:#f4f6fa; color:#16213a; }
   .hero { background:linear-gradient(135deg,#0a1f40,#0f2e5c 55%,#1a4f9c); color:#fff; padding:44px 20px 36px; text-align:center; }
   .hero h1 { font-size:27px; letter-spacing:2px; }
@@ -49,6 +70,15 @@
   </div>
 </div>
 <div class="wrap">
+  <h2 class="block">🔍 情报检索（今日 + 历史全库）</h2>
+  <div class="searchpanel">
+    <div class="searchbar">
+      <input id="q" type="search" autocomplete="off" placeholder="🔍 输入关键词，检索全部 42 期日报…">
+      <button id="qGo">检 索</button>
+    </div>
+    <div class="qhint" id="qHint">覆盖 42 期 · 2132 条情报（标题/摘要/关键词/来源/简报全文），输入后回车或点「检 索」开始，加载一次后即可即输即搜</div>
+    <div id="qResults" class="qres"></div>
+  </div>
   <h2 class="block">📌 最新总体态势（2026-09-13）</h2>
   <div class="overview"><h2>全球移民与边境安全态势简报（2026-09-13）</h2>
 <h3>今日核心研判</h3>
@@ -358,6 +388,91 @@ window.addEventListener('beforeinstallprompt', (e) => {
     };
   }
 });
+</script>
+<script>
+(function(){
+  var q = document.getElementById('q');
+  var btn = document.getElementById('qGo');
+  var res = document.getElementById('qResults');
+  var hint = document.getElementById('qHint');
+  var all = null, loading = false;
+  function esc(s){ return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+  function terms(str){ return (str||'').trim().toLowerCase().split(/\s+/).filter(Boolean); }
+  function hayOf(it){ var kk = Array.isArray(it.keywords) ? it.keywords.join(' ') : (it.keywords || ''); return (it.title_zh+' '+it.title_en+' '+it.section_name+' '+it.source+' '+it.url+' '+kk+' '+it.summary+' '+it.brief).toLowerCase(); }
+  function hit(it, ts){ return ts.every(function(t){ return hayOf(it).indexOf(t) >= 0; }); }
+  function hi(s, ts){
+    var out = esc(s);
+    ts.forEach(function(t){
+      if (!t) return;
+      var re = new RegExp('(' + t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'ig');
+      out = out.replace(re, '<mark>$1</mark>');
+    });
+    return out;
+  }
+  function rate(r){ return '★★★★★☆☆☆☆☆'.slice(5 - Math.min(5, Math.max(1, r|0 || 3)), 10); }
+  function itemHtml(it, ts){
+    return '<div class="qr"><a href="' + esc(it.url) + '" target="_blank" rel="noopener">' + hi(it.title_zh, ts) + '</a>' +
+      '<div class="qr-meta"><span>' + rate(it.rating) + '</span><span>' + esc(it.section_name || '') + '</span>' +
+      '<span>来源：' + esc(it.source || '') + '</span></div></div>';
+  }
+  function renderAll(ts){
+    var html = '', n = 0;
+    all.forEach(function(day){
+      var hits = day.items.filter(function(it){ return hit(it, ts); });
+      if (hits.length){
+        n += hits.length;
+        html += '<h4>📅 ' + day.date + ' · ' + hits.length + ' 条<a class="qr-link" href="reports/' + day.date + '.html">当日日报 →</a></h4>' +
+          hits.map(function(it){ return itemHtml(it, ts); }).join('');
+      }
+    });
+    res.innerHTML = (html || '<div class="qr" style="color:#5a647c">全库无匹配</div>');
+    res.style.display = 'block';
+    hint.textContent = '已加载 ' + all.length + ' 期，输入即搜（点击标题看原文，点「当日日报」看完整版）';
+  }
+  function load(cb){
+    if (all){ cb(); return; }
+    if (loading) return;
+    loading = true;
+    hint.textContent = '⏳ 正在打开全库索引…';
+    fetch('api/index.json').then(function(r){ return r.json(); }).then(function(idx){
+      var dates = (idx.dates || []).map(function(x){ return x.date; });
+      var done = 0, i = 0, conc = 4;
+      all = [];
+      function worker(){
+        if (i >= dates.length){ loading = false; cb(); return; }
+        var d = dates[i++];
+        fetch('api/' + d + '.json').then(function(r){ return r.json(); }).then(function(j){
+          var items = [];
+          (j.sections || []).forEach(function(s){
+            (s.items || []).forEach(function(it){ it.section_name = s.section_name; items.push(it); });
+          });
+          all.push({ date: d, items: items });
+        }).catch(function(){}).then(function(){
+          done++;
+          hint.textContent = '⏳ 正在加载 ' + done + '/' + dates.length + ' 期…';
+          worker();
+        });
+      }
+      for (var w = 0; w < conc && w < dates.length; w++) worker();
+    }).catch(function(){ loading = false; hint.textContent = '⚠️ 数据索引加载失败，请刷新重试'; });
+  }
+  function go(){
+    var ts = terms(q.value);
+    if (!ts.length){ res.style.display = 'none'; return; }
+    load(function(){ renderAll(ts); });
+  }
+  var deb = null;
+  q.addEventListener('input', function(){
+    if (!all) return;
+    clearTimeout(deb);
+    deb = setTimeout(function(){
+      var ts = terms(q.value);
+      if (ts.length) renderAll(ts); else res.style.display = 'none';
+    }, 200);
+  });
+  btn.addEventListener('click', go);
+  q.addEventListener('keydown', function(e){ if (e.key === 'Enter') go(); });
+})();
 </script>
 </body>
 </html>
