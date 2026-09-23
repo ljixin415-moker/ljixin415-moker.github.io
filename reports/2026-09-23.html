@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>全球移民与边境安全态势感知日报 · 2026-09-23</title>
+<style>
+:root {
+  --bg:#f4f6fa; --card:#ffffff; --ink:#16213a; --muted:#5a647c; --line:#e2e7f0;
+  --navy:#0f2e5c; --accent:#1a4f9c; --accent2:#0e7a6f; --gold:#d99114; --soft:#eaf0fa;
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; font-family:"Microsoft YaHei","PingFang SC","Segoe UI",sans-serif; background:var(--bg); color:var(--ink); line-height:1.75; }
+.wrap { max-width:1080px; margin:0 auto; padding:0 16px 60px; }
+header { background:linear-gradient(120deg,#0a1f40 0%,#0f2e5c 55%,#1a4f9c 100%); color:#fff; padding:38px 16px 30px; }
+header h1 { margin:0 0 6px; font-size:26px; letter-spacing:1px; }
+header .sub { opacity:.9; font-size:13px; }
+.stats { display:flex; gap:12px; flex-wrap:wrap; margin:20px 0 0; }
+.stat { background:rgba(255,255,255,.13); border:1px solid rgba(255,255,255,.25); border-radius:12px; padding:8px 16px; }
+.stat b { font-size:20px; display:block; }
+.stat span { font-size:12px; opacity:.9; }
+.navbar { position:sticky; top:0; z-index:9; background:rgba(255,255,255,.97); backdrop-filter:blur(6px); border-bottom:1px solid var(--line); padding:8px 12px; overflow-x:auto; -webkit-overflow-scrolling:touch; }
+.navbar .inner { max-width:1080px; margin:0 auto; display:flex; gap:8px; flex-wrap:nowrap; }
+@media (min-width:768px) { .navbar .inner { flex-wrap:wrap; } }
+.nav-chip { font-size:12.5px; color:var(--accent); background:var(--soft); border:1px solid #cfdcf5; border-radius:999px; padding:4px 12px; text-decoration:none; white-space:nowrap; }
+.nav-chip b { color:#fff; background:var(--accent); border-radius:999px; padding:0 6px; font-size:11px; margin-left:2px; }
+.panel { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:22px 24px; margin-top:24px; box-shadow:0 2px 10px rgba(15,46,92,.05); }
+.panel h2 { margin:0 0 12px; font-size:20px; border-left:5px solid var(--accent); padding-left:12px; }
+.overview-text h4 { margin:14px 0 6px; color:var(--accent); font-size:15.5px; }
+.overview-text p, .overview-text li { margin:6px 0; color:#2e3850; font-size:14.5px; }
+.top10 { list-style:none; margin:8px 0 0; padding:0; counter-reset:t10; }
+.top10 li { border-bottom:1px dashed var(--line); padding:10px 4px; counter-increment:t10; }
+.top10 li:last-child { border-bottom:none; }
+.top10 a { display:flex; gap:8px; align-items:baseline; text-decoration:none; color:var(--ink); flex-wrap:wrap; }
+.top10 a::before { content:counter(t10); min-width:24px; height:24px; border-radius:8px; background:var(--accent); color:#fff; font-size:13px; display:inline-flex; align-items:center; justify-content:center; font-weight:700; }
+.top10 li:nth-child(-n+3) a::before { background:var(--gold); }
+.t10-rate { color:var(--gold); font-size:13px; letter-spacing:1px; }
+.t10-sec { font-size:12px; color:var(--accent2); background:#e5f4f1; border-radius:999px; padding:1px 10px; }
+.t10-title { font-weight:600; font-size:14.5px; }
+.t10-reason { font-size:12.5px; color:var(--muted); margin:3px 0 0 32px; }
+/* ============ 手风琴板块 ============ */
+details.section { margin-top:16px; background:var(--card); border:1px solid var(--line); border-radius:14px; box-shadow:0 1px 6px rgba(15,46,92,.04); overflow:hidden; }
+details.section > summary { list-style:none; cursor:pointer; display:flex; align-items:center; gap:10px; flex-wrap:wrap; padding:16px 18px; background:linear-gradient(90deg,var(--soft),#fff); border-left:5px solid var(--accent); user-select:none; }
+details.section > summary::-webkit-details-marker { display:none; }
+details.section[open] > summary { border-bottom:1px solid var(--line); }
+.sec-title { font-size:17px; font-weight:700; }
+.sec-desc { font-size:12px; color:var(--muted); flex:1 1 100%; order:9; }
+@media (min-width:768px) { .sec-desc { flex:1; order:0; } }
+.sec-count { font-size:12px; color:#fff; background:var(--accent); border-radius:999px; padding:2px 10px; }
+.sec-arrow { color:var(--accent); transition:transform .2s; }
+details.section[open] .sec-arrow { transform:rotate(180deg); }
+.sec-body { padding:4px 14px 16px; }
+.sec-foot { text-align:center; margin-top:14px; }
+.collapse-btn { font-size:13px; color:var(--accent2); text-decoration:none; border:1px solid #c9e6e1; background:#f0faf8; border-radius:999px; padding:6px 18px; }
+.item { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px 18px; margin-top:12px; }
+.item-head { display:flex; gap:10px; align-items:baseline; flex-wrap:wrap; }
+.rate { color:var(--gold); font-size:13px; letter-spacing:2px; white-space:nowrap; }
+.item h4 { margin:0; font-size:16px; }
+.item h4 a { color:var(--ink); text-decoration:none; }
+.item h4 a:hover { color:var(--accent); text-decoration:underline; }
+.title-en { color:var(--muted); font-size:12.5px; font-style:italic; margin:4px 0 8px; }
+.chips { display:flex; gap:6px; flex-wrap:wrap; margin-bottom:10px; }
+.chip { font-size:12px; color:var(--accent); background:var(--soft); border-radius:999px; padding:2px 10px; }
+.summary { font-size:14px; color:#2e3850; background:#f7f9fd; border-radius:10px; padding:10px 14px; margin:0 0 10px; }
+.summary b { color:var(--accent); }
+.brief { border:1px dashed #c7d6ef; border-radius:10px; padding:8px 14px; background:#fafcff; }
+.brief summary { cursor:pointer; color:var(--accent); font-weight:600; font-size:13.5px; }
+.brief p { font-size:13.8px; color:#37415a; margin:10px 0 4px; }
+.meta { display:flex; gap:14px; flex-wrap:wrap; font-size:12.5px; color:var(--muted); margin-top:10px; border-top:1px solid var(--line); padding-top:9px; }
+.meta a { color:var(--accent); text-decoration:none; }
+.meta .back { margin-left:auto; color:var(--accent2); }
+footer { text-align:center; color:var(--muted); font-size:12.5px; margin-top:40px; }
+#toTop { position:fixed; right:16px; bottom:20px; z-index:20; display:none; width:42px; height:42px; border-radius:50%; border:0; background:var(--accent); color:#fff; font-size:18px; cursor:pointer; box-shadow:0 4px 12px rgba(15,46,92,.3); }
+
+/* ============ 检索栏 ============ */
+.searchbar { display:flex; gap:8px; flex-wrap:wrap; margin:18px 0 0; align-items:stretch; }
+.searchbar input[type=search] { flex:1 1 260px; min-width:200px; border:0; border-radius:10px; padding:11px 14px; font-size:14.5px; outline:none; font-family:inherit; }
+.searchbar label.hist { font-size:12.5px; color:#fff; opacity:.95; display:flex; gap:5px; align-items:center; background:rgba(255,255,255,.13); border:1px solid rgba(255,255,255,.25); border-radius:10px; padding:8px 12px; cursor:pointer; user-select:none; }
+.searchbar label.hist input { accent-color:var(--gold); }
+.searchbar button { border:0; border-radius:10px; padding:10px 18px; font-size:14px; font-weight:700; background:var(--gold); color:#fff; cursor:pointer; font-family:inherit; }
+.searchbar button:hover { filter:brightness(1.08); }
+.qres { background:#fff; color:var(--ink); border-radius:12px; margin-top:12px; padding:12px 16px; display:none; max-height:430px; overflow:auto; text-align:left; box-shadow:0 6px 18px rgba(0,0,0,.18); }
+.qres h4 { margin:4px 0 6px; font-size:13.5px; color:var(--accent); border-left:4px solid var(--accent); padding-left:8px; }
+.qres h4 .qr-link { font-size:12px; font-weight:400; color:var(--accent2); margin-left:8px; text-decoration:none; }
+.qres .qr { border-bottom:1px dashed var(--line); padding:8px 2px; font-size:13.5px; }
+.qres .qr:last-child { border-bottom:none; }
+.qres .qr > a { color:var(--ink); text-decoration:none; font-weight:600; }
+.qres .qr > a:hover { color:var(--accent); }
+.qres mark { background:#ffe9b3; padding:0 1px; border-radius:3px; }
+.qres .qr-meta { font-size:12px; color:var(--muted); margin-top:2px; display:flex; gap:6px; flex-wrap:wrap; align-items:center; }
+.qres .qr-meta a { color:var(--accent2); text-decoration:none; }
+.qres .qhint { font-size:12.5px; color:var(--muted); padding:6px 2px; }
+
+</style>
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#0f2e5c">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="态势感知日报">
+<link rel="apple-touch-icon" href="../icons/icon.svg">
+<link rel="icon" type="image/svg+xml" sizes="any" href="../icons/icon.svg">
+</head>
+<body data-date="2026-09-23">
+<header>
+  <div class="wrap">
+    <h1>🛡️ 全球移民与边境安全态势感知日报</h1>
+    <div class="sub">2026-09-23 · 每日全球移民管理与边境安全情报智能体 · 八大板块 / 政府官网 · 国际组织 · 权威媒体 · 智库 · 学术 · 数据库</div>
+    <div class="stats">
+      <div class="stat"><b>34</b><span>今日情报条数</span></div>
+      <div class="stat"><b>8</b><span>覆盖板块</span></div>
+      <div class="stat"><b>32</b><span>信息来源机构</span></div>
+      <div class="stat"><b>3.4</b><span>平均推荐指数</span></div>
+    </div>
+
+<div class="searchbar">
+  <input id="q" type="search" autocomplete="off" placeholder="🔍 输入关键词检索今日情报（标题 / 摘要 / 关键词 / 来源）…">
+  <label class="hist"><input type="checkbox" id="qHist" checked> 含历史日期</label>
+  <button id="qGo">检索</button>
+</div>
+<div id="qResults" class="qres"></div>
+
+  </div>
+</header>
+<div class="navbar"><div class="inner"><a class="nav-chip" href="#overview">⭐ 总体态势</a><a class="nav-chip" href="#sec-global_migration">🌍 全球移民管理热点 <b>3</b></a><a class="nav-chip" href="#sec-border_security">🛡️ 全球边境安全热点 <b>5</b></a><a class="nav-chip" href="#sec-usa">🗽 美国移民与边境管理 <b>4</b></a><a class="nav-chip" href="#sec-eu">🇪🇺 欧盟移民与边境管理 <b>6</b></a><a class="nav-chip" href="#sec-china_neighbors">🧭 中国周边国家动态 <b>4</b></a><a class="nav-chip" href="#sec-global_south">🌏 全球南方国家动态 <b>3</b></a><a class="nav-chip" href="#sec-tech">🤖 移民与边境技术 <b>4</b></a><a class="nav-chip" href="#sec-research">📚 移民与边境研究 <b>5</b></a></div></div>
+<div class="wrap">
+  <div class="panel" id="overview">
+    <h2>⭐ 每日总体关键态势简报</h2>
+    <div class="overview-text"><h4>今日核心研判</h4>
+<ul>
+<li><strong>欧美拘留与遣返体系的正当性争议同步升温，司法与政治博弈加剧。</strong>美国一侧，众院监督委员会民主党公布吹哨人披露，指认佛州拘留点超员羁押近七倍、并有议员指控最大拘留营地阻挠监督访问、多州代表团限期安全部答复；欧洲一侧，荷兰安全调查委员会认定紧急收容所儿童安置违法，五国力推境外遣返中心并试图与欧盟预算挂钩，西班牙首相公开点名摩洛哥对休达边控失效负责。拘留条件与人权合规正从个案演变为跨大西洋的共同政治议题，预计将持续牵引各自国内立法与预算谈判。</li>
+<li><strong>跨区域联合执法进入「平台化」阶段，人口贩运与证件造假为重点打击对象。</strong>欧盟与拉美加勒比35国「阿特拉斯纽带」行动公布战果：近500人被捕、156.9吨毒品查获、18名受害人获救，为两区域迄今最大规模联合行动；欧洲刑警组织、边境管理局、国际刑警组织等多机构协同的模式正在成为跨境移民犯罪治理的模板。</li>
+<li><strong>冲突驱动型流离持续外溢，技术治理双侧提速。</strong>也门9月以来新增近13万流离者且已出现渡红海抵吉布提的跨境逃难；朝鲜亚运代表团两名成员在日寻求庇护属罕见个案。同期中美两国移民治理数字化同日发力——美方扩展远程身份核验并纳入深伪检测，我海关总署启动智慧海关2.0、移民局推广住宿登记全程网办，边境治理的「技术竞赛」特征更加明显。</li>
+</ul>
+<h4>涉我风险待研（内参选题参考）</h4>
+<ul>
+<li><strong>移民治理数字化的「中西对照」与制度话语权</strong>：我智慧海关2.0与外国人住宿登记网办同日落地，恰逢美方扩展远程身份核验测试、新西兰签证系统整体迁移，可梳理各国边境治理数字化的路径差异、隐私权衡与标准竞争，为我在国际移民治理规则制定中争取话语权提供素材（需阅板块：tech）。</li>
+<li><strong>欧盟境外遣返中心与预算挂钩的立法动向</strong>：丹麦等五国推动欧盟预算为第三国境外遣返中心出资，叠加西班牙就休达危机向摩洛哥追责，欧盟外部化移民管控正在从口号走向预算安排，其演变对我公民赴欧签证环境、中欧人员往来便利化谈判具有前瞻参考价值（需阅板块：eu、usa）。</li>
+<li><strong>中国周边劳务移民通道治理与海外公民权益保护</strong>：尼泊尔两月逾13万人获外劳审批、印度使馆警示国民勿借马来西亚免签务工、吉尔吉斯斯坦大赦后万余外侨离境，周边国家劳务移民政策密集调整，对我海外劳务合作合规管理、我公民海外权益预警机制建设具有直接参考意义（需阅板块：china_neighbors）。</li>
+<li><strong>数字平台与跨境劳工网络治理</strong>：「族裔与移民研究期刊」新论文揭示微信如何成为中国建筑工人的移民基础设施，既展现数字平台的托底功能也暴露群体内数字不平等，可为理解我海外劳工社群组织形态、平台治理与移民服务供给提供学术支撑（需阅板块：research）。</li>
+<li><strong>乌克兰人员回流与武器扩散风险的欧洲安全外溢</strong>：欧盟密件警示返乡作战人员携带武器部件进入申根区，德波捷等国承压，该议题与欧洲对华安全叙事的联动值得跟踪，防范相关论调向中欧交往领域蔓延（需阅板块：eu）。</li>
+</ul>
+<h4>分板块要点</h4>
+<ul>
+<li><strong>全球移民管理热点（3条）</strong>：人权观察首份报告揭美国遣返海地者抵达即失援；英吉利海峡极右翼人士割破偷渡艇引发谴责；国际移民组织通报也门9月以来新增近13万流离者。</li>
+<li><strong>全球边境安全热点（5条）</strong>：欧盟对外行动署公布「阿特拉斯纽带」行动，35国联合拘捕近500人；美国边境巡逻队员被控转运途中勒喉在押者；马来西亚吉兰丹偷渡改走海路、拆96座非法码头；泰南截获320万粒冰毒并查获涉赌边境转移设备。</li>
+<li><strong>美国移民与边境管理（4条）</strong>：马萨诸塞三城执法拘捕逾24人；众院监督委员会公布佛州拘留点超员羁押吹哨人证据；议员指控执法局阻挠最大拘留营地监督访问；马里兰代表团限期安全部答复执法争议。</li>
+<li><strong>欧盟移民与边境管理（6条）</strong>：西班牙首相指摩洛哥应对休达边控失效负责；荷兰安全报告称紧急收容所儿童安置违法；丹麦等五国力推境外遣返中心并将议欧盟预算出资；拉脱维亚前八月庇护申请过千多经白俄入境；诺曼底60人橡皮艇被护送横渡海峡；欧盟密件警示乌克兰返乡人员武器扩散风险。</li>
+<li><strong>中国周边国家动态（4条）</strong>：朝鲜亚运代表团两名成员拟在日寻求庇护；印度使馆警示国人勿借马来西亚免签务工；尼泊尔两月逾13万人获外劳审批；吉尔吉斯斯坦大赦结束万余外侨离境。</li>
+<li><strong>全球南方国家动态（3条）</strong>：突尼斯外海天然气平台31名移民被困四日后获救；联合国专家指尼加拉瓜镇压驱动民众外流；刚果（金）爆发史上最重埃博拉疫情、移民组织紧急筹款。</li>
+<li><strong>移民与边境技术（4条）</strong>：海关总署启动智慧海关2.0、43个口岸入智慧工程；美国扩展远程身份核验测试并纳入深伪与AI证件检测；移民局全国推广外国人住宿登记全程网办；新西兰访客签证下周起迁移增强版在线系统。</li>
+<li><strong>移民与边境研究（5条）</strong>：欧洲难民理事会连发两份庇护拘留比较报告（场所条件与26国法律框架）；难民署与世行联合发布马来西亚难民劳工市场报告；难民署发布南苏丹难民收容社区多维贫困专题简报；新论文考察微信作为中国建筑工人移民基础设施的角色。</li>
+</ul>
+<h4>追踪信号</h4>
+<ul>
+<li>欧盟成员国常驻代表委员会9月23日讨论乌克兰战场武器回流与申根区走私风险，关注后续理事结论。</li>
+<li>欧盟预算谈判中境外遣返中心出资安排的走向，及丹麦等五国联盟是否扩容。</li>
+<li>美国众院监督委员会对佛州米拉马与奥兰多拘留设施调查的后续听证与文件披露。</li>
+<li>朝鲜代表团两名成员庇护申请在日审查进展及日朝沟通动向。</li>
+<li>马来西亚免签通道管理后续（MDAC数字入境卡执行与印度务工流治理）。</li>
+<li>也门曼德海峡方向战事演变对红海航运与吉布提收容压力的外溢。</li>
+</ul></div>
+    <h2 style="margin-top:24px">🔥 今日关键情报 Top 8<small style="font-size:12.5px;color:var(--muted);font-weight:400;margin-left:10px">按推荐指数排序 · 点击自动展开对应板块</small></h2>
+    <ol class="top10"><li><a href="#item-tech-2"><span class="t10-rate">★★★★★</span><span class="t10-sec">🤖 移民与边境技术</span><span class="t10-title">海关总署启动智慧海关2.0 四十三口岸入智慧工程</span></a><div class="t10-reason">涉华重大口岸科技政策：国家层面全面启动智慧海关2.0并纳入43个重点口岸，代表中国边境智能查验与无感通关体系的十五五顶层设计，影响深远</div></li><li><a href="#item-global_migration-1"><span class="t10-rate">★★★★☆</span><span class="t10-sec">🌍 全球移民管理热点</span><span class="t10-title">人权观察揭美遣返海地者落地即失援</span></a><div class="t10-reason">首份系统披露美国对海地遣返链条末端处境的权威报告，涉及数千人规模的政策争议，国际关注度高，重要性突出。</div></li><li><a href="#item-global_migration-2"><span class="t10-rate">★★★★☆</span><span class="t10-sec">🌍 全球移民管理热点</span><span class="t10-title">极右翼人士英海峡割破偷渡艇引谴责</span></a><div class="t10-reason">极右翼人士首次在海峡现场割破偷渡艇并波及救援人员，叠加创纪录渡海时长与大规模抗议布控，反映英国边境与移民政治对抗明显升级。</div></li><li><a href="#item-global_migration-3"><span class="t10-rate">★★★★☆</span><span class="t10-sec">🌍 全球移民管理热点</span><span class="t10-title">也门战事九月以来新致十三万人流离</span></a><div class="t10-reason">联合国难民署权威通报也门一个月内新增13万流离失所者，属规模较大的人道与人口流动动态，但为战乱流离类常规跟进信息。</div></li><li><a href="#item-border_security-4"><span class="t10-rate">★★★★☆</span><span class="t10-sec">🛡️ 全球边境安全热点</span><span class="t10-title">欧美加三十五国联合行动拘四百九十人</span></a><div class="t10-reason">35国协作、近500人被捕、157吨毒品的跨大西洋最大规模联合行动，直接涉及人口贩运与证件造假等边境安全核心议题，国际影响显著。</div></li><li><a href="#item-usa-1"><span class="t10-rate">★★★★☆</span><span class="t10-sec">🗽 美国移民与边境管理</span><span class="t10-title">马萨诸塞三城移民执法拘捕逾二十四人</span></a><div class="t10-reason">单一都会区两日大规模街头拘捕、州长与市长公开问责并叠加人身保护令诉讼，属近期地方执法强度升级的标志性事件。</div></li><li><a href="#item-eu-1"><span class="t10-rate">★★★★☆</span><span class="t10-sec">🇪🇺 欧盟移民与边境管理</span><span class="t10-title">西班牙首相指摩洛哥应对休达边控失效负责</span></a><div class="t10-reason">首相层面首次直接指认邻国边控失效，牵动欧盟对摩关系与申根内部边检走向，属危机外交的标志性节点。</div></li><li><a href="#item-eu-2"><span class="t10-rate">★★★★☆</span><span class="t10-sec">🇪🇺 欧盟移民与边境管理</span><span class="t10-title">荷兰安全报告称紧急收容所儿童安置违法</span></a><div class="t10-reason">独立官方机构认定收容体系违反国际条约并设定六个月整改时限，对荷兰庇护政策与欧盟形象影响直接。</div></li></ol>
+  </div>
+  
+<details class="section" id="sec-global_migration">
+  <summary>
+    <span class="sec-title">🌍 全球移民管理热点</span>
+    <span class="sec-desc">各国移民政策调整、签证制度改革、国际移民治理动态</span>
+    <span class="sec-count">3 条</span>
+    <span class="sec-arrow">▾</span>
+  </summary>
+  <div class="sec-body">
+    
+<article class="item" id="item-global_migration-1">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://apnews.com/article/haiti-deported-us-report-human-rights-6f94c9c087d375538779fe0ece4fd2ec" target="_blank" rel="noopener">人权观察揭美遣返海地者落地即失援</a></h4>
+  </div>
+  <div class="title-en">Report offers rare insight into the risks and challenges facing US deportees in Haiti</div>
+  <div class="chips"><span class="chip">海地</span><span class="chip">美国遣返</span><span class="chip">临时保护身份</span><span class="chip">人权观察</span><span class="chip">海地角</span><span class="chip">帮派暴力</span><span class="chip">人道危机</span></div>
+  <p class="summary"><b>内容提要</b>　事件9-22、报道9-22。人权观察发布报告，首次系统披露被美国遣返至海地人员返乡后的真实处境。报告访谈44名遣返者及多方官员，发现多数人在美羁押期间长时间缺食少水、抵达后随身财物与证件未获归还，登记后即被要求自行谋生，仅获一顿餐食与约77美元补助。自7月底海地临时保护身份终止以来，美国已向海地遣返逾470人，航班均降落北部海地角，因太子港主机场被认定过于危险。海地角市长称该市人口两年内增至逾百万。人权观察呼吁美方立即停止此类遣返。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>美联社9月22日报道，人权观察于本周一发布报告，首次深入记录被美国遣返至海地人员的生存状况。此前遣返者因担心遭帮派报复，长期拒绝接受媒体长篇采访，该报告因此被视为罕见的一手材料。报告核心事实包括：自2026年7月27日美国终止海地临时保护身份以来，美方已遣返超过470人，其中许多人系临时保护身份持有人；因太子港国际机场被认定不安全，遣返航班全部改降北部海地角。海地角市长米歇尔·圣克鲁瓦告诉人权观察，两年间该市人口增长两倍至逾百万，遣返者与国内流离者双双涌入，令本已匮乏的资源更趋紧张。人权观察共访谈44名遣返者及海地与国际官员，并核查8月两班遣返航班的乘客舱单，发现舱单既未标注遣返者的移民身份，也未说明遣返理由。受访者普遍反映，在美羁押期间数小时无食水、数日无法洗漱换衣；抵达海地后财物、证件与现金未获归还；登记后仅获一顿餐食、一杯饮品和约77美元现金，此后即无人跟进。多数受访者称曾在美国佛罗里达、纽约、印第安纳、俄亥俄等州定居二至十四年，从事建筑、医疗护理与制造业，其中有人在美国拥有美国公民配偶或子女。报告同时引述联合国数据指，2023年1月至2026年6月海地至少1.938万人被杀，首都约七成区域处于武装团伙控制之下，未来数月逾25.3万名五岁以下儿童将面临急性营养不良。人权观察美洲高级研究员科特里诺表示，美国正在把部分庇护申请仍在审理中的人遣返至一个无力保护他们的国家，呼吁立即停止。美国移民与海关执法局及国土安全部暂未回应置评请求。该报告为评估美国遣返政策的人道后果提供了首份系统性证据，预计将加剧相关诉讼与国际批评。</p></details>
+  <div class="meta">
+    <span>来源：<b>美联社</b></span>
+    <span>推荐理由：首份系统披露美国对海地遣返链条末端处境的权威报告，涉及数千人规模的政策争议，国际关注度高，重要性突出。</span>
+    <a href="https://apnews.com/article/haiti-deported-us-report-human-rights-6f94c9c087d375538779fe0ece4fd2ec" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-global_migration-2">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://www.theguardian.com/world/2026/sep/22/far-right-activist-daniel-thomas-slashes-dinghy-with-blade-while-rescue-worker-onboard" target="_blank" rel="noopener">极右翼人士英海峡割破偷渡艇引谴责</a></h4>
+  </div>
+  <div class="title-en">Far-right activist Daniel Thomas slashes dinghy with blade while rescue worker onboard</div>
+  <div class="chips"><span class="chip">英国</span><span class="chip">英吉利海峡</span><span class="chip">偷渡小艇</span><span class="chip">极右翼</span><span class="chip">反移民抗议</span><span class="chip">边境部队</span><span class="chip">寻求庇护者</span></div>
+  <p class="summary"><b>内容提要</b>　事件9-22、报道9-22。英国反移民组织「爱国者平台」创始人丹尼尔·托马斯（网名「丹尼·汤莫」）22日在英吉利海峡乘小艇追随两艘载有寻求庇护者的橡皮艇并全程直播，趁救援人员登艇作业时用刀连刺并割破一艘已空的偷渡橡皮艇，当时艇上仍有救援人员，直播吸引约10万人观看，遭难民慈善组织谴责为「暴力且危险」行为。当日约60名移民所乘小艇从法国诺曼底出发后在海上漂泊逾33小时拒法方救援、坚持抵英，英国皇家救生艇协会称部分人员已在水上36小时，创小艇渡海时长纪录。数百名抗议者应托马斯号召聚集汉普郡戈斯波特企图阻拦靠岸，边境部队最终将移民经海路转移至150多英里外的多佛登陆，警方大规模布控。托马斯曾因企图绑架与持刀犯罪服刑两年。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>卫报9月22日报道，英国反移民运动人士丹尼尔·托马斯当天下午乘小艇进入英吉利海峡，直播追踪两艘从法国驶向英国的寻求庇护者橡皮艇。托马斯自称「丹尼·汤莫」，系今夏整合数十个民族主义抗议团体组成的「爱国者平台」发起人，曾因2016年企图绑架罪入狱两年，亦有持刀犯罪前科。当日上午，一批移民乘充气小艇从诺曼底维尔滨海村附近出发，法国海岸警卫队通报约60人在「不稳定状态」下于海上漂泊超过33小时，拒绝法方救援、称「不惜一切代价也要抵达英国」；英国皇家救生艇协会称获救者在水上已36小时，被认为是有记录以来小艇渡海耗时最长的一次，且橡皮艇面临「灾难性解体」风险。托马斯在直播中高喊「把那艘船处理掉」，靠近其中一艘已空置、满载救生衣的橡皮艇后用刀多次刺割艇身，放气声清晰可闻，并叫喊「这是英格兰，这里不再是法国」；发现艇上有一名穿橙色救生衣的救援人员后，又喝令对方「快下船」。其直播吸引约10万观众，随后驾艇逃离。移民慈善组织「移民福利联合委员会」谴责该行为「暴力且危险」；「反种族主义行动」组织指出托马斯本就有持刀犯罪记录。托马斯当天还号召支持者前往预计登陆地汉普郡戈斯波特「阻拦靠岸」，数百人响应，另有人聚集于尚未启用的哈斯勒移民遣返中心外，当地出动大批警车与警力封路维持秩序。但边境部队改变计划，将移民经海路转移至150多英里外的多佛登陆，避免了现场对峙。汉普郡警察与犯罪事务专员琼斯则施压内政部，称汉普郡「没有条件和准备」承接此类登陆，警方应对移民抵达与抗议活动的负担「不可持续」。英国政府发言人回应称，边境安全指挥部将全天候运作，对每一名小艇抵达者实施拘留、核查与处理。此事件标志着有组织的反移民抗议从岸上延伸到海上救援现场，引发对救援人员安全与海峡执法秩序的新一轮担忧。</p></details>
+  <div class="meta">
+    <span>来源：<b>卫报</b></span>
+    <span>推荐理由：极右翼人士首次在海峡现场割破偷渡艇并波及救援人员，叠加创纪录渡海时长与大规模抗议布控，反映英国边境与移民政治对抗明显升级。</span>
+    <a href="https://www.theguardian.com/world/2026/sep/22/far-right-activist-daniel-thomas-slashes-dinghy-with-blade-while-rescue-worker-onboard" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-global_migration-3">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://mena.iom.int/news/new-iom-data-nearly-130000-displaced-yemen-due-escalating-conflict" target="_blank" rel="noopener">也门战事九月以来新致十三万人流离</a></h4>
+  </div>
+  <div class="title-en">Displacement still rising in Yemen as fighting continues</div>
+  <div class="chips"><span class="chip">也门</span><span class="chip">胡塞武装</span><span class="chip">流离失所</span><span class="chip">联合国难民署</span><span class="chip">塔伊兹</span><span class="chip">曼德海峡</span><span class="chip">人道危机</span></div>
+  <p class="summary"><b>内容提要</b>　事件9-1至9-21、报道9-22。国际移民组织9月21日通报，也门安全局势持续恶化，9月以来已有近13万人逃离家园，许多家庭已不止一次流离。组织9月18日记录的境内流离人数为118086人，三天后新增11352人，攀升至129438人，涉及全国七个省份。塔伊兹省仍是危机中心，收容73494人流离者，占总量逾五成七；拉赫季、亚丁与荷台达等省也接收大量新增流离人口。本轮流离潮与胡塞武装近数周沿红海沿岸快速南下、直抵曼德海峡一带并与也门政府军激战直接相关。截至9月20日晚，已有3106人渡红海抵达吉布提，跨境逃难压力显现。组织区域主任贝尔贝西呼吁国际社会加紧支援流离家庭与收容社区，预警人数将继续攀升。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>国际移民组织中东与北非区域办事处9月21日发布最新境内流离失所监测数据：随着也门战事沿多条战线扩大，9月以来全国七个省份累计记录129438人流离失所（约21573户），其中许多人已经第二次甚至第三次逃离家园。该组织区域主任贝尔贝西表示，人数还在持续攀升——9月18日记录为118086人，仅三天后即新增11352人。分省看，塔伊兹省收容73494人，是危机的震中；拉赫季省33828人次之，亚丁省8946人、荷台达省8244人，阿比扬、哈德拉毛与马里卜等省亦有新增。本轮流离潮的直接背景，是胡塞武装近数周沿也门西海岸快速南下、兵锋直抵红海门户曼德海峡一带，与沙特支持的也门政府军爆发激烈交火，战事范围与强度较此前明显升级。跨境维度同样值得警惕：截至9月20日晚，已有3106人从也门渡过红海抵达吉布提，组织正向其提供紧急援助，并呼吁国际社会加大对流离家庭与收容社区的支持。该组织同日发布的第10期监测数据集显示，自6月本轮局势升级以来累计流离人数已达132330人。分析认为，也门战事若持续向曼德海峡核心区推进，不仅加剧境内流离失所，还可能对红海航运与周边国家的边境安全构成外溢影响，区域人口流动与避难压力未来数周料继续上升。</p></details>
+  <div class="meta">
+    <span>来源：<b>国际移民组织（IOM）中东与北非区域办事处</b></span>
+    <span>推荐理由：联合国难民署权威通报也门一个月内新增13万流离失所者，属规模较大的人道与人口流动动态，但为战乱流离类常规跟进信息。</span>
+    <a href="https://mena.iom.int/news/new-iom-data-nearly-130000-displaced-yemen-due-escalating-conflict" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+    <div class="sec-foot"><a href="#sec-global_migration" class="collapse-btn" data-collapse="sec-global_migration">▴ 收起本板块</a></div>
+  </div>
+</details>
+<details class="section" id="sec-border_security">
+  <summary>
+    <span class="sec-title">🛡️ 全球边境安全热点</span>
+    <span class="sec-desc">边境冲突、非法越境、边境管控措施、跨境犯罪治理</span>
+    <span class="sec-count">5 条</span>
+    <span class="sec-arrow">▾</span>
+  </summary>
+  <div class="sec-body">
+    
+<article class="item" id="item-border_security-1">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="http://cbp.gov/newsroom/national-media-release/2-illegal-aliens-charged-after-choking-border-patrol-agent-houston" target="_blank" rel="noopener">两名墨籍在押者转运途中勒喉巡逻特工被控</a></h4>
+  </div>
+  <div class="title-en">2 illegal aliens charged after choking Border Patrol agent in Houston</div>
+  <div class="chips"><span class="chip">美国</span><span class="chip">边境巡逻队</span><span class="chip">休斯敦</span><span class="chip">袭击特工</span><span class="chip">墨西哥籍</span><span class="chip">联邦指控</span><span class="chip">移民执法</span></div>
+  <p class="summary"><b>内容提要</b>　事件9-22、报道9-22。美国海关与边境保护局通报，两名墨西哥籍无证男子帕德龙·门德斯与帕德龙·巴龙22日在休斯敦地区被边境巡逻队确认无合法身份后押送途中，门德斯挣脱束带解开安全带，从后座用手臂勒住特工颈部，巴龙则下车取回个人物品徒步逃跑。特工随即呼叫支援，两名嫌犯很快被抓回。遇袭特工送医检查治疗后已出院。两人现被控袭击联邦执法人员等罪名重回联邦羁押。官方强调执法部门的快速反应确保了抓捕，事件再度凸显一线边检人员面对的在押人员暴力风险。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>美国海关与边境保护局9月22日发布新闻稿，通报休斯敦地区一起针对边境巡逻特工的暴力袭击事件。涉事两人为29岁的胡安·卡门·帕德龙·门德斯与23岁的胡安·卡洛斯·帕德龙·巴龙，均系墨西哥籍。9月22日，边境巡逻队确认两人非法居留美国后，将其戴上柔性束带押上执法车辆，转运至拘留设施途中，嫌犯门德斯挣脱束带、解开安全带，从后座用手臂环绕并勒住特工颈部；巴龙趁机下车，取回两人个人物品后徒步逃跑。门德斯随后松手并同样弃车逃跑。遇袭特工立即呼叫支援，执法人员迅速将两名嫌犯全部抓获。特工被送往当地医院评估治疗，现已出院。联邦诉状指控两人在羁押转运期间袭击联邦执法人员，现重回联邦羁押候审。海关与边境保护局表示，执法人员反应迅速确保了抓捕，并将全面追究两名嫌犯的刑事责任。该事件发生在特朗普政府强化西南边境与内陆移民执法、在押人员数量高企的背景下，一线特工在单人押送与转运环节暴露出的防护短板再度受到关注；此前已有特工在交通拦截与拘留行动中遭遇袭击甚至伤亡的记录，执法部门亦多次通报在押者袭击、逃脱类案件上升。此类案件一方面被官方用于论证边境执法风险与扩编必要性，另一方面也引发关于羁押转运规程、束带使用标准与双人押送配置是否到位的检讨声音。</p></details>
+  <div class="meta">
+    <span>来源：<b>美国海关与边境保护局</b></span>
+    <span>推荐理由：美国边境执法环节的暴力对抗事件，官方一手通报，属常规但具代表性的边境安全动态。</span>
+    <a href="http://cbp.gov/newsroom/national-media-release/2-illegal-aliens-charged-after-choking-border-patrol-agent-houston" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-border_security-2">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://www.bernama.com/en/crime_courts/news.php?id=2610270" target="_blank" rel="noopener">吉兰丹偷渡改走海路 马方拆96座非法码头</a></h4>
+  </div>
+  <div class="title-en">Migrants Turn To Sea Routes To Sneak Into Kelantan - Police</div>
+  <div class="chips"><span class="chip">马来西亚</span><span class="chip">吉兰丹</span><span class="chip">马泰边境</span><span class="chip">偷渡</span><span class="chip">海上路线</span><span class="chip">非法码头</span><span class="chip">跨国执法合作</span></div>
+  <p class="summary"><b>内容提要</b>　事件9-22、报道9-22。马来西亚吉兰丹州总警长莫哈末尤索夫马末22日在州警察总部月度集会后表示，偷渡入境吉兰丹的外籍人员正更多改用泰国陶公府塔拜一带的海上路线，经吉兰丹河进入境内，而非传统陆路哥乐河边界，陆路安保未因此受影响。警方已加强海上路线监控，并与泰方共享活跃在塔拜地区的团伙情报联合打击。为强化边境管控，警方迄今已拆除96座非法码头，并警告将对新建设施采取行动。他同时呼吁民众勿对缅甸难民或涉嫌违法的移民擅自动用私刑，发现线索应移交执法部门处理。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>马来西亚国家新闻社9月22日报道，吉兰丹州总警长拿督莫哈末尤索夫马末当日在哥打巴鲁州警察总部出席2026年9月月度集会后向记者表示，监测显示偷渡入境吉兰丹的外籍人员路线发生明显转移：偷渡者不再主要经由哥乐河陆路边界，而是更多取道泰国南部陶公府塔拜附近海域，再沿吉兰丹河水路潜入。他强调，这一变化并未影响陆路边境的安保，该段边界仍由普通行动部队、马来西亚武装部队及相关机构联合管控。针对新态势，警方正在加强海上路线监视，并已与泰国当局共享被认定为活跃于塔拜地区的走私团伙情报，以便双方采取进一步行动。在边境基础设施方面，他表示警方迄今已拆除96座非法码头，以收紧边控；一旦发现新建、可能危害安全的类似结构，将一律采取行动拆除。这位总警长还就近期涉移民的社会治安议题表态，呼吁公众不要对缅甸难民或涉嫌违法的外籍移民擅自采取私刑行动，因为此类行为可能引发斗殴等意外事件，也会令执法工作复杂化；他强调警方有能力处理犯罪与边境问题，民众发现线索应直接举报由当局处置。分析认为，吉兰丹此次路线转移通报反映出在马泰陆路围栏与联合巡逻加压后，人口走私网络正向海上与内河通道转移，双方情报共享与水路巡逻能力将成为下一阶段边控重点，亦与马来西亚今年以来持续开展的全国性突查拘捕行动形成内外呼应。</p></details>
+  <div class="meta">
+    <span>来源：<b>马来西亚国家新闻社</b></span>
+    <span>推荐理由：马泰边境偷渡路线出现结构性转移并伴随大规模码头拆除，属地区边境治理的常规重要动态。</span>
+    <a href="https://www.bernama.com/en/crime_courts/news.php?id=2610270" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-border_security-3">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://en.thairath.co.th/news/crime/2961236" target="_blank" rel="noopener">泰南邦截获三百二十万粒冰毒 扣押运毒车</a></h4>
+  </div>
+  <div class="title-en">Border Police Seize 3.2 Million Methamphetamine Pills, Chase Drug Agent Who Crashed While Fleeing</div>
+  <div class="chips"><span class="chip">泰国</span><span class="chip">南邦</span><span class="chip">冰毒</span><span class="chip">边境巡逻警察</span><span class="chip">清莱</span><span class="chip">毒品走私</span><span class="chip">跨境贩毒</span></div>
+  <p class="summary"><b>内容提要</b>　事件9-21、报道9-22。泰国边境巡逻警察与南邦府旺纽县警方9月21日下午在旺纽至帕尧公路查获一辆翻覆的白色皮卡，车斗15个水果箱内藏约320万粒冰毒，35岁泰籍司机苏帕山被当场拘押。警方20日晚接线报称有人受雇将冰毒自清莱运往中部地区，遂沿线追踪，嫌疑车辆察觉被跟监后加速逃逸，在弯道失控翻覆。嫌犯供称仅受雇运毒，已按一级毒品贩运等罪名移送侦办。清莱至中部走廊近期连成大宗冰毒外运干线，此次为该通道近期最大单案缴获之一。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>泰国日报英文版9月22日报道，泰国边境巡逻警察第327连联合旺纽警察局及南邦府旺纽县级行政机构，于9月21日下午对一辆与贩毒网络有关的翻覆皮卡实施检查，在车斗15个水果箱内起获约320万粒冰毒，35岁泰籍司机苏帕山被当场拘押，涉案车辆与毒品一并扣押。案情显示，警方20日晚接获线报，指有人受雇将大宗冰毒从清莱府运往泰国中部，涉事车辆为曼谷登记的白色三菱皮卡，预计将经南邦旺纽县驶往帕尧方向。缉毒与边境巡逻警力据此布控跟监；司机察觉被追踪后加速逃逸，车辆在弯道失控翻覆。检查中警方在车斗发现藏于水果箱内的大量冰毒。嫌犯初步供称本人仅为受雇运输者，负责将冰毒自清莱运往中部，对货源与收货网络并不掌握。其被控以意图分销的一级毒品（甲基苯丙胺）贩运等罪名，将接受进一步侦办与深挖。此次行动由边境巡逻警察第327连、第32边境巡逻警察师、第三区边境巡逻警察指挥部、旺纽警察局及地方行政机构联合实施。南邦此案所在通道位于清莱至泰国中部的传统贩毒走廊，金三角方向冰毒经泰北入境后南下分销的干线近期已连续发生大宗截获，包括清莱方向的多次追车缴毒行动；本次约320万粒的单案缴获量为该走廊近期之最，显示跨境贩运集团在雨季尾声加快出货，也反映泰方沿干线布设情报线与机动追缉的战术仍在持续加压。案件后续将围绕上线雇主的资金流与通讯记录展开深挖。</p></details>
+  <div class="meta">
+    <span>来源：<b>泰国日报英文版</b></span>
+    <span>推荐理由：泰北贩毒干线单案缴获320万粒冰毒属大宗，但为区域缉毒常规成果，重要性与典型性兼备。</span>
+    <a href="https://en.thairath.co.th/news/crime/2961236" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-border_security-4">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://www.eeas.europa.eu/delegations/costa-rica/atlas-nexus-la-mayor-operacion-conjunta-ue-lac-desmantela-decenas-de-redes-criminales_und_he" target="_blank" rel="noopener">欧美加三十五国联合行动拘四百九十人</a></h4>
+  </div>
+  <div class="title-en">Several dozen transnational criminal networks dismantled in joint operation between EU, Latin America and Caribbean</div>
+  <div class="chips"><span class="chip">欧盟</span><span class="chip">拉美</span><span class="chip">加勒比</span><span class="chip">跨国犯罪</span><span class="chip">人口贩运</span><span class="chip">欧洲刑警组织</span><span class="chip">联合执法</span></div>
+  <p class="summary"><b>内容提要</b>　事件9-22、报道9-22。欧盟与拉美及加勒比地区迄今规模最大的联合警务行动「阿特拉斯纽带」成果22日公布：跨国拘捕近500人，瓦解数十个跨国犯罪网络。行动由欧盟犯罪威胁多学科平台与加勒比社区犯罪与安全影响执行署共同协调，35国参战，欧洲刑警组织、欧洲边境与海岸警卫局、国际刑警组织、美洲警察组织等机构协作，动用逾8600名警力与司法人员，针对毒品贩运、人口贩运、证件造假、枪支走私与环境犯罪五大重点市场。累计查获毒品约157吨、枪支201支、弹药及爆炸物3190发（枚）、现金与加密货币13.5万美元，解救受害者18人，另查扣野生动物与牲畜803头（只）、房产169处、珠宝464件及伪造证件468份。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>欧洲动态通讯社9月22日报道，欧盟与拉丁美洲、加勒比地区历史上规模最大的联合警务行动「阿特拉斯纽带」当天由官方通报成果：瓦解数十个跨国犯罪网络，跨国拘捕约490人。行动属欧盟犯罪威胁多学科平台框架下「最具威胁犯罪网络与个人」优先行动的跨大西洋协同部分，由欧盟「拉美加勒比缉罪合作计划2.0」提供支持，欧洲边境与海岸警卫局与加勒比社区犯罪与安全影响执行署共同牵头协调，共有拉美、加勒比、欧洲及其他地区35国参与，欧洲刑警组织、国际刑警组织、美洲警察组织、海事分析中心及区域安全系统等机构协同，澳大利亚、黑山、挪威、瑞典、英国与美国亦提供支持，累计动员超过8680名警务与司法人员。行动锁定五大重点犯罪市场：毒品贩运、人口贩运、证件造假、枪支走私与环境犯罪。汇总成果包括：查获各类毒品156.9吨，枪支201支，弹药与爆炸物3131至3190发（枚），现金及加密货币13.5万美元，黄金0.83公斤，野生动物与牲畜803头（只），房产169处，珠宝464件，伪造证件468份，解救人口贩运受害者18人。分国别看，哥斯达黎加拘捕人数最多，约375人；巴拉圭创下大麻查获纪录；爱尔兰方面首次发现并捣毁境内可卡因加工点——去年6月警方在从哥伦比亚进口的木板夹层中查获74公斤可卡因（估值约520万欧元）并起获移动加工设备，7月又在都柏林港借助缉毒犬与移动X光设备从南美冷柜中查获24公斤可卡因，数名嫌疑人已被起诉。法属圭亚那则查处两处非法金矿。分析指出，该行动不同于以往单点缉私，强调打掉网络底层结构与经济基础，人口贩运与偷渡证件造假链条亦在打击范围内，预计相关司法协作与资产追缴将持续推进。</p></details>
+  <div class="meta">
+    <span>来源：<b>欧盟对外行动署（EEAS）</b></span>
+    <span>推荐理由：35国协作、近500人被捕、157吨毒品的跨大西洋最大规模联合行动，直接涉及人口贩运与证件造假等边境安全核心议题，国际影响显著。</span>
+    <a href="https://www.eeas.europa.eu/delegations/costa-rica/atlas-nexus-la-mayor-operacion-conjunta-ue-lac-desmantela-decenas-de-redes-criminales_und_he" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-border_security-5">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://en.thairath.co.th/news/crime/2961330" target="_blank" rel="noopener">泰东边境查获五十七件涉赌转移设备</a></h4>
+  </div>
+  <div class="title-en">Cambodia Orders Closure of Gambling Websites, Finds Large Computer Equipment Cache Hidden Near Chanthaburi Border Suspected of Moving Base to Thailand</div>
+  <div class="chips"><span class="chip">泰国</span><span class="chip">柬埔寨</span><span class="chip">尖竹汶</span><span class="chip">边境巡查</span><span class="chip">网赌设备</span><span class="chip">拜林</span><span class="chip">走私</span></div>
+  <p class="summary"><b>内容提要</b>　事件9-22、报道9-22。泰国尖竹汶府边防部队9月22日上午9时许在邦南隆县空艾分区边境种植园巡查时，发现一处无门牌木屋内外可疑堆放大量物品，共起获57件：塑料箱34个、纸箱7个、行李箱8个、麻袋8条，内藏大量电脑设备及配件、个人物品，并查获护照页与记事本等文件。全数物品已扣押送空邦南隆部队详细查验，并协调邦南隆警方依法立案、追查来源。因柬埔寨拜林省9月初下令辖内赌场与网络博彩网站9月30日前停业，近期持续出现设备财物跨境搬运动向，当局初步怀疑该藏匿点系经边境自然通道入境泰国、拟转运腹地前的中转仓库。设备归属、入境路径及是否确与赌场网赌集团有关仍在核查中。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>泰国日报英文版9月22日报道，尖竹汶府与达叻府边防部队经尖竹汶海上任务指挥部、第四海防游骑管制单位及驻空邦南隆第543海防游骑连，于22日上午9时许在尖竹汶府邦南隆县空艾分区第四村边境地带执行巡逻。巡逻人员在种植园内发现一座未悬挂门牌的木屋，屋内及周边可疑地集中堆放着大量塑料箱、纸箱、行李箱与麻袋。执法人员随后协调空艾地方行政机构联合查验，初步清点包括塑料箱34个、纸箱7个、行李箱8个、麻袋8条，合计57件，内装电脑设备与零部件、个人物品及杂物，另发现护照页、记事本等文件，全部物品当场扣押并运回空邦南隆部队驻地详细检查，追查来源，再交邦南隆警察局依法办理并扩大侦查涉案人员。此案背景引人关注：据当地消息，2026年9月初，柬埔寨拜林省当局下令与泰国版帕叻永久性口岸隔境相望的萨拉阁县斯通卡吉乡班帕沙普一带的赌场及网络博彩运营商，须在9月30日前停止营业。此后边境一线持续观察到设备与财物经自然通道从柬埔寨一侧搬运出境的动向。执法人员据此研判，本次起获的大批电脑设备或与赌场、网赌集团向泰国境内转移据点有关，藏匿点疑似设备入境后的临时中转仓库，但尚未排除其他可能。目前核查重点包括全部设备的归属、入境口岸与路径，以及与报称的赌场网赌业务是否存在关联。分析认为，柬西南边境博彩业清退正催生新一轮设备与人员跨境转移潮，泰柬边境一线的巡查、查扣与联合核查将成为下一阶段边境治理重点，此类「设备先行、人员跟进」的迁移模式亦对泰方非法用工与网赌清剿构成新的压力。</p></details>
+  <div class="meta">
+    <span>来源：<b>泰国日报英文版</b></span>
+    <span>推荐理由：柬边境赌业清退引发设备跨境转移，泰方边境巡查及时查获中转藏匿点，属区域边境安全与网赌治理的代表性动态。</span>
+    <a href="https://en.thairath.co.th/news/crime/2961330" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+    <div class="sec-foot"><a href="#sec-border_security" class="collapse-btn" data-collapse="sec-border_security">▴ 收起本板块</a></div>
+  </div>
+</details>
+<details class="section" id="sec-usa">
+  <summary>
+    <span class="sec-title">🗽 美国移民与边境管理</span>
+    <span class="sec-desc">DHS/CBP/ICE/USCIS 动态、国会立法、司法裁决、美墨边境态势</span>
+    <span class="sec-count">4 条</span>
+    <span class="sec-arrow">▾</span>
+  </summary>
+  <div class="sec-body">
+    
+<article class="item" id="item-usa-1">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://www.wgbh.org/news/local/2026-09-22/at-least-2-dozen-immigrants-detained-in-ice-arrest-wave-across-new-bedford-dartmouth-and-fall-river" target="_blank" rel="noopener">马萨诸塞三城移民执法拘捕逾二十四人</a></h4>
+  </div>
+  <div class="title-en">At least 2 dozen immigrants detained in ICE arrest wave across New Bedford, Dartmouth and Fall River</div>
+  <div class="chips"><span class="chip">美国移民与海关执法局</span><span class="chip">马萨诸塞</span><span class="chip">街头拘捕</span><span class="chip">无证移民</span><span class="chip">州长问责</span><span class="chip">人身保护令</span><span class="chip">正当程序</span></div>
+  <p class="summary"><b>内容提要</b>　事件9-21、报道9-22。9月21日至22日，美国移民与海关执法局在马萨诸塞州新贝德福德、达特茅斯和福尔里弗三地展开街头拘捕行动，至少24名移民被带走，仅新贝德福德21日单日就至少拘捕12人。目击者称执法人员驾车前后堵截平民车辆，将司机从驾驶座强行带离，被捕者多为在渔厂、超市和建筑工地务工的拉丁裔男子，多数无犯罪记录。社区团体称21日有14辆联邦执法车聚集在达特茅斯商场周边。州长希利公开要求联邦机构立即说明拘捕对象与理由，多名律师连夜向联邦法院提交人身保护令申请，阻止当事人被转移出州。国土安全部回应称，政府正依法推进「史上最大规模驱逐行动」，被遣返者均已获得正当程序。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>本轮行动始于9月21日中午。居民卢卡斯称，她与伴侣从一家非营利机构驾车返家途中被两辆车前后堵死，执法人员拉开驾驶座车门将其伴侣伊克斯库纳强行带走，车内两名三岁和九岁的女儿目睹全程，执法人员留下「给他找律师」一句话即离开。社区经济发展中心执行主任威廉姆斯说，执法小组在加油站、超市等通勤热点定点蹲守，「被针对的因素很明确，就是拉丁裔移民和男性」。危地马拉、洪都拉斯和厄瓜多尔籍人员居多。州长希利22日对媒体表示，许多被捕者已在此生活多年、有家庭，有人被捕时家中还有一个月大的婴儿，也有八岁男孩在校门口等不到父亲，她要求移民与海关执法局立即公布名单与拘捕依据。新贝德福德市长米切尔批评该局即使换了管理层依然「过度扩张」，行动前未通报地方警方，威胁到可能到场警员的安全。国土安全部以未提供具体姓名和出生日期为由拒绝向媒体公布被拘者信息，仅发表声明称正动用一切合法手段执行总统承诺的史上最大规模驱逐行动，并称所有被遣返者均已获得充分正当程序。哈贝斯项目的律师透露，约有二十名志愿者律师参与，已提交十余份人身保护令申请，重点防止被拘者被转移至外州羁押设施。此前联邦法院已多次就无证逮捕问题对该局发布限制令，本轮行动料将引发新一轮司法审查。</p></details>
+  <div class="meta">
+    <span>来源：<b>WGBH News</b></span>
+    <span>推荐理由：单一都会区两日大规模街头拘捕、州长与市长公开问责并叠加人身保护令诉讼，属近期地方执法强度升级的标志性事件。</span>
+    <a href="https://www.wgbh.org/news/local/2026-09-22/at-least-2-dozen-immigrants-detained-in-ice-arrest-wave-across-new-bedford-dartmouth-and-fall-river" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-usa-2">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://www.theguardian.com/us-news/2026/sep/22/texas-democrat-visit-ice-detention-camp-east-montana" target="_blank" rel="noopener">议员控执法局阻挠最大拘留营地监督访问</a></h4>
+  </div>
+  <div class="title-en">Democrat says ICE blocked her oversight visit to country&#x27;s largest detention camp</div>
+  <div class="chips"><span class="chip">国会监督</span><span class="chip">拘留营地</span><span class="chip">布利斯堡</span><span class="chip">骚乱事件</span><span class="chip">国土安全部</span><span class="chip">正当程序</span><span class="chip">透明度</span></div>
+  <p class="summary"><b>内容提要</b>　事件9-22、报道9-22。美国联邦众议员埃斯科瓦尔接受《卫报》专访称，她上月在得克萨斯州布利斯堡军营内「东蒙大拿营地」执行国会监督时，被禁止与任何被拘留移民交谈，申请调阅两起骚乱监控录像也未获提供。该营地是全国最大移民拘留设施，为可容纳五千人的帐篷式营地，国土安全部通报9月1日和7日各发生一起「骚乱」，后一起涉及约130名被拘留者。埃斯科瓦尔指出，承包商两周内两度失去对营区控制却对外淡化，有官员将原因归咎于委内瑞拉籍被拘者「难管」。国土安全部否认阻挠监督，称只要被拘者本人同意即可安排会面，并称部分监督访问属「媒体秀」。去年联邦法官曾就议员探访权诉讼作出支持议员的裁决，但受限情况仍持续发生。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>代表埃尔帕索选区的民主党籍众议员埃斯科瓦尔上月底前往「东蒙大拿营地」考察。这座营地去年夏天在布利斯堡军事基地内仓促搭建，属「软体帐篷」结构，设计收容能力五千人，自启用以来投诉不断。此前数周内该营地先后发生两起被通报的「骚乱」：9月1日，国土安全部称被拘者殴打、脚踢安保人员并投掷平板电脑；9月7日，约130名被拘者投掷物品、掀翻家具、关闭监控摄像头，并拆除了帐篷居住舱之间的隔断，据《埃尔帕索时报》报道，现场有官员拨打911报警。埃斯科瓦尔称，她到访时不获准与任何被拘者交谈，申请的监控录像至今未收到；一名副手将骚乱归因于被拘者国籍，称「委内瑞拉人是难管的人群」。她表示，与第一届政府相比，本届政府期间的国会监督「明显更加困难」，行政当局系统性地阻碍监督。国土安全部回应称，任何议员都可申请与在押者会面，该局并未阻止，还称许多监督访问是「表演行为」，并否认收到过正式的数据与影像调取请求。去年12月，联邦法官曾在议员起诉政府的案件中裁定议员有权进入拘留设施探访，此后仍陆续发生议员被拒或受限的情况。监督团体担忧，营地运营承包商管理失控、信息不透明叠加国会监督受阻，将使被拘者处境进一步脱离公共视线。</p></details>
+  <div class="meta">
+    <span>来源：<b>The Guardian</b></span>
+    <span>推荐理由：国会监督受阻并非新问题，但涉全国最大拘留设施与连续两起骚乱的核实，具有持续关注价值。</span>
+    <a href="https://www.theguardian.com/us-news/2026/sep/22/texas-democrat-visit-ice-detention-camp-east-montana" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-usa-3">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://frost.house.gov/media/press-releases/oversight-ranking-members-robert-garcia-bennie-thompson-and-maxwell-frost-demand-answers-from-ice-on-dangerous-conditions-in-florida-immigration-facilities" target="_blank" rel="noopener">众院民主党公布佛州拘留点超员羁押证据</a></h4>
+  </div>
+  <div class="title-en">Whistleblower Claims Florida ICE Facility Held Nearly Seven Times Its Intended Capacity, Detainees Slept Shackled</div>
+  <div class="chips"><span class="chip">吹哨人</span><span class="chip">超员羁押</span><span class="chip">佛罗里达</span><span class="chip">国会调查</span><span class="chip">拘押条件</span><span class="chip">戴镣睡觉</span><span class="chip">众议院监督委员会</span></div>
+  <p class="summary"><b>内容提要</b>　事件9-21、报道9-22。美国国会众议院监督与政府改革委员会民主党籍议员21日公布一名吹哨人提供的照片与指控，称佛罗里达州米拉马尔拘押点设计收容上限为五十人，实际一度关押多达342人，约为设计容量近七倍；部分被拘者被迫戴镣铐睡觉，有年长者每天被束缚长达十六小时。照片显示人员睡在地面与成排折叠床上，移动厕所外溢，有人只能在水管下洗漱。议员称拘押室长期处于设计容量两至三倍状态，高峰时仅三名官员看管三百余人，卫生用品与清洁衣物供应不足。委员会宣布对米拉马尔及奥兰多另一处设施展开调查。此前州运营的佛州湿地拘留中心已被监察长认定不符联邦标准并关闭。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>米拉马尔拘留分所历史上主要承担常规移民报到功能，近期被越来越多地用于实际关押。《迈阿密先驱报》此前调查发现，2025年7月至2026年7月该设施拨打911的次数急剧上升，涉及癫痫发作、呼吸困难和糖尿病急症等。此次公布的吹哨人材料显示，拘押室内马桶堵塞并渗漏至羁押区域，被拘者长期缺乏干净衣物、肥皂等基本卫生用品；照片中数百人挤在仅供短暂停留的「安全通道」内，有人连续多日睡在地面。奥兰多设施方面，吹哨人指控被拘者有时连续两周不能到室外透气、全天戴镣，通风管道内发现黑色霉菌。参与调查的佛州民主党籍众议员弗罗斯特表示，这些指控印证了拘留体系正在「惩罚人而非维护基本人的尊严与正义」的担忧。此次披露发生在美国国土安全部监察长上周认定州运营的「鳄鱼恶魔岛」湿地拘留中心不符合联邦拘留标准、包括使用室外金属笼作为惩罚手段之后，该中心已于六月永久关闭。民主党议员表示将继续传唤文件并要求国土安全部与移民与海关执法局作出说明，共和党方面则强调被关押者多涉重罪指控。佛州历来是联邦拘留与州协作执法的重镇，此番连续曝光料将推动国会层面就拘留容量、承包商责任与医疗救助机制举行新一轮听证。</p></details>
+  <div class="meta">
+    <span>来源：<b>联邦众议员弗罗斯特办公室（众院监督委员会民主党）</b></span>
+    <span>推荐理由：吹哨人爆料加国会立案调查属常规重要动态，与前周监察长报告同属拘留条件议题但对象不同。</span>
+    <a href="https://frost.house.gov/media/press-releases/oversight-ranking-members-robert-garcia-bennie-thompson-and-maxwell-frost-demand-answers-from-ice-on-dangerous-conditions-in-florida-immigration-facilities" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-usa-4">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://mcclaindelaney.house.gov/media/press-releases/mcclain-delaney-and-maryland-delegation-demand-independent-investigation-after" target="_blank" rel="noopener">马里兰代表团限期安全部答复执法争议</a></h4>
+  </div>
+  <div class="title-en">McClain Delaney and Maryland Delegation Demand Independent Investigation After ICE Operation in Frederick</div>
+  <div class="chips"><span class="chip">马里兰</span><span class="chip">国会调查</span><span class="chip">独立调查</span><span class="chip">执法手段</span><span class="chip">无证逮捕</span><span class="chip">使用武力</span><span class="chip">限期答复</span></div>
+  <p class="summary"><b>内容提要</b>　事件9-22、报道9-22。马里兰州国会代表团全体民主党议员致函国土安全部部长马林、移民与海关执法局代理局长文图拉及监察长库法里，要求对9月3日至4日弗雷德里克市执法行动使用的手法立即启动独立、透明调查，并限定10月1日前答复。议员列举的事实包括：联邦执法车辆驶上人行道撞倒一名围观者、警棍击打抗议者、一人被从住宅台阶上拖走，以及一名警官当面复述地方民选官员的姓名、车牌与住址。信函并追问行动是否持有令状、属行政还是司法令状，以及何种武力使用政策允许上述行为。议员援引部门数据称，上月在马里兰与弗吉尼亚为期两周的行动共逮捕1328人，其中近七成无犯罪记录。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>弗雷德里克行动发生在9月3日至4日，约四十小时内集中出现多起争议场面，且均有影像记录。联邦执法车沿人行道行驶撞倒一名旁观者，警员对示威者使用警棍，一名女性地方官员在当面交涉时被执法人员复述其个人信息，被认为带有威慑意味。该州第六选区众议员麦克莱恩·德莱尼牵头，联合参议员范·霍伦、奥索布鲁克斯及霍耶、拉斯金、艾维、姆富米等全体民主党团签署致函。信函向国土安全部部长马林、移民与海关执法局代理局长文图拉和监察长库法里提出四组问题：行动前是否取得令状及其性质；是否允许以车辆驱散和平围观者；地方官员个人信息如何被获取并被当众复述；以及上月起横跨马里兰与弗吉尼亚的两周大规模行动中，1328名被逮捕者里近七成无犯罪记录是否符合「针对最危险分子」的官方口径。议员将答复期限定在10月1日，并强调「社区理应知道谁批准了这次行动」。此前明尼苏达、俄勒冈等地已就无证逮捕与武力使用出现多起联邦诉讼和法官限制令，马里兰此信料成为国会层面对执法手法系统性问责的新一环，监察长办公室是否立案将是下一观察点。</p></details>
+  <div class="meta">
+    <span>来源：<b>众议员麦克莱恩·德莱尼办公室</b></span>
+    <span>推荐理由：全州代表团联名致函并设定答复时限，属执法问责链条中的常规但具标志性进展。</span>
+    <a href="https://mcclaindelaney.house.gov/media/press-releases/mcclain-delaney-and-maryland-delegation-demand-independent-investigation-after" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+    <div class="sec-foot"><a href="#sec-usa" class="collapse-btn" data-collapse="sec-usa">▴ 收起本板块</a></div>
+  </div>
+</details>
+<details class="section" id="sec-eu">
+  <summary>
+    <span class="sec-title">🇪🇺 欧盟移民与边境管理</span>
+    <span class="sec-desc">欧盟委员会/Frontex/EUAA 动态、移民与庇护公约执行、申根区管控、成员国政策</span>
+    <span class="sec-count">6 条</span>
+    <span class="sec-arrow">▾</span>
+  </summary>
+  <div class="sec-body">
+    
+<article class="item" id="item-eu-1">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://big5.cri.cn/gate/big5/news.cri.cn/20260923/c62f637e-8c87-fae0-afae-3876ca4efcaa.html" target="_blank" rel="noopener">西班牙首相指摩洛哥应对休达边控失效负责</a></h4>
+  </div>
+  <div class="title-en">Spanish PM: Morocco should answer for failure to control irregular migration surge into Ceuta</div>
+  <div class="chips"><span class="chip">西班牙</span><span class="chip">摩洛哥</span><span class="chip">休达</span><span class="chip">边境管控</span><span class="chip">桑切斯</span><span class="chip">申根</span><span class="chip">遣返</span></div>
+  <p class="summary"><b>内容提要</b>　事件9-22、报道9-22。西班牙首相桑切斯22日在受访时表示，摩洛哥应对7月30日至31日未能有效阻止大批非法移民涌入西班牙北非飞地休达承担责任，称摩方边境管控明显失效，应就此作出解释、纠正错误并采取更多举措，摩洛哥方面暂未回应。西班牙方面估算本轮涌入规模约八万人，主要集中在7月30日，是近年来西班牙最严重的边境移民危机。桑切斯此番直接点名摩洛哥，标志着马德里在休达问题上的公开立场显著趋硬，此前欧洲议会已于17日通过决议要求加强外部边界保护并加快遣返，意西等国也互延了申根内部边检。摩洛哥此前否认介入移民潮，两国围绕边境责任的争执料继续发酵。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>自7月底危机爆发以来，西班牙官方首次由首相层面明确将失控责任归于摩洛哥一侧。桑切斯在采访中说，摩洛哥边境管控「明显失效」，7月30日和31日未能阻止大规模越境，摩方应「给出解释、纠正错误并采取更多举措」。西班牙官方估算约八万人在这轮涌入中进入休达，其中大部分集中在7月30日单日，远超当地八万余人的常住人口承受能力，收容与遣返体系一度濒临崩溃。此前马德里在公开表述上相对克制，强调与拉巴特合作恢复秩序并推进自愿返回，而欧洲议会17日通过的决议除谴责将非法移民作为「混合战争工具」外，也要求欧盟评估西班牙大规模合法化政策对跨境流动的影响，令桑切斯政府内外承压。意大利于8月1日起对来自西班牙的旅客实施边检，西班牙8日起对等回应，双方措施已多轮延长，德奥波等国的内部边检也借机延长至明年三月。摩洛哥方面此前否认介入或放行移民潮，并将责任归于人口走私网络，对西班牙新表态尚未回应。分析人士指出，休达问题正在从边境管理事件演变为欧盟与摩洛哥关系及申根区内互信的双重考验，拉巴特的配合度将直接决定滞留者遣返与营地清空进度。</p></details>
+  <div class="meta">
+    <span>来源：<b>国际在线（央视新闻）</b></span>
+    <span>推荐理由：首相层面首次直接指认邻国边控失效，牵动欧盟对摩关系与申根内部边检走向，属危机外交的标志性节点。</span>
+    <a href="https://big5.cri.cn/gate/big5/news.cri.cn/20260923/c62f637e-8c87-fae0-afae-3876ca4efcaa.html" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-eu-2">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://www.dutchnews.nl/2026/09/urgent-help-needed-for-children-in-emergency-asylum-shelters/" target="_blank" rel="noopener">荷兰安全报告称紧急收容所儿童安置违法</a></h4>
+  </div>
+  <div class="title-en">Urgent help needed for children in emergency asylum shelters, Dutch Safety Board finds</div>
+  <div class="chips"><span class="chip">荷兰</span><span class="chip">安全调查委员会</span><span class="chip">庇护儿童</span><span class="chip">紧急收容所</span><span class="chip">国际条约</span><span class="chip">整改时限</span><span class="chip">未成年人保护</span></div>
+  <p class="summary"><b>内容提要</b>　事件9-22、报道9-22。荷兰安全调查委员会22日发布历时两年的调查报告，指全国约七千名寻求庇护儿童生活在紧急收容所中，处境不安全且违反国际条约义务，荷兰已「低于最低标准」。报告称，空置办公楼、船只、活动大厅和集装箱住房等临时设施已占全部收容地点的六成，儿童普遍面临噪音、完全缺乏隐私、频繁转移（最多十次）以及遭受身体和性暴力的高风险，部分无人陪伴未成年人出现自伤与自杀倾向，平均滞留约八个月远超规定的六个月上限。委员会要求庇护与移民事务部长范登布林克在六个月内推行全面整改，包括设定紧急收容最长时限、整治危险点位并结构性压缩对临时收容的依赖，同时致函全体市议员吁地方尽责。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>荷兰安全调查委员会以调查重大事故见长，此次将职权延伸至庇护接待领域的「日常安全」。报告显示，2023年监察机构首次警告以来，紧急收容所中儿童数量从约四千人增至逾七千人，几乎翻倍，结构性问题不降反升。主席范达姆表示，「紧急收容本非常态，最初只是短期安排，如今儿童有时要在这种环境里生活数年」。报告列举的具体危害包括：房间仅以隔板分隔、毫无隐私，噪音持续，淋浴与厕所设施常常不合格，儿童在短时间内被反复转移、最高达十次，无法正常上学，疫苗接种与传染病筛查出现缺口；无人陪伴未成年人中出现自伤乃至自杀倾向。委员会将此定性为「宪政国家不可饶恕的结构性疏忽」，根子在于「政治意愿与行政能力双重缺乏」，并批评管理方陷入「危机无法控制」的接受逻辑。委员会提出三条整改路径：短期内盘点并消除收容所内所有危险点位，无法整改的须转移儿童；为儿童在紧急收容的最长时限设定硬性上限；以结构性方案逐步摆脱对临时收容的高度依赖。委员会同步向全国市政议员发出公开信，呼吁各市讨论自身可为改善儿童安全做什么。庇护与移民事务部长范登布林克22日表示将尽快正式回应，围绕《分配收容法》的府会博弈料随之升温。</p></details>
+  <div class="meta">
+    <span>来源：<b>DutchNews.nl</b></span>
+    <span>推荐理由：独立官方机构认定收容体系违反国际条约并设定六个月整改时限，对荷兰庇护政策与欧盟形象影响直接。</span>
+    <a href="https://www.dutchnews.nl/2026/09/urgent-help-needed-for-children-in-emergency-asylum-shelters/" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-eu-3">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://www.euronews.com/video/2026/09/22/next-eu-budget-should-finance-migration-solutions-greek-deputy-minister-says" target="_blank" rel="noopener">五国力推境外遣返中心 将议欧盟预算出资</a></h4>
+  </div>
+  <div class="title-en">Next EU budget should finance migration solutions, Greek deputy minister says</div>
+  <div class="chips"><span class="chip">境外遣返中心</span><span class="chip">欧盟预算</span><span class="chip">希腊</span><span class="chip">五国联盟</span><span class="chip">遣返条例</span><span class="chip">布鲁纳</span><span class="chip">移民外交</span></div>
+  <p class="summary"><b>内容提要</b>　事件9-22、报道9-22。希腊外交部副部长哈齐瓦西利乌22日对欧洲新闻台表示，欧盟须为境外遣返中心等「创新性」移民解决方案筹措足够资源，正在谈判中的下一份欧盟长期预算可望提供资金答案。由希腊、奥地利、丹麦、德国和荷兰组成的五国阵营正加紧推动设立境外遣返中心，此前六月获批的新遣返条例允许成员国与第三国达成双边协议；按现行规则遣返中心由成员国全额出资，随长期预算谈判推进，要求布鲁塞尔分摊费用的呼声渐高。五国定于本周六在慕尼黑一场有17名欧盟成员国移民部长及欧盟移民事务委员布鲁纳出席的会议间隙复会，力争年内敲定首批外部协议、明年投入运营。法国与西班牙则公开反对该路线。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>哈齐瓦西利乌在访谈中说，「如果我们决定推行任何创新性的移民方案，就意味着欧洲必须找到相应资源」，并点明下一份多年期财政框架谈判正处关键期，欧盟层面出资或成破局关键。欧盟六月完成对遣返规则的大修后，成员国获准与第三国签订协议、在其领土设立遣返中心，但费用须由推动国自担，还可辅以资金、商业合作等激励争取第三国接受。据报道，逾半数成员国近日联署呼吁就此采取紧急协调行动，乌干达等非洲及亚洲国家在潜在伙伴名单之列，埃及与利比亚因人口贩运风险被从初选中剔除。希腊移民部门证实双边接触正在进行，五国阵营的目标是在年底前达成首批外部协议、明年实现中心运营。同时阻力明显：法国总统马克龙在欧盟峰会后明确反对以欧盟资金建设或维持此类中心，称「不确信那是我们想要的欧洲，也不确信它有效」；西班牙亦持反对立场。按规则，任何实施转移的成员国须事先向欧盟委员会及其他成员国正式通报。本周六慕尼黑会议间隙的复会将是五国阵营首次在如此多部长与布鲁纳在场的情况下协调立场，欧盟预算是否纳入遣返中心开支，料成为年底前欧盟移民政策博弈的焦点之一。</p></details>
+  <div class="meta">
+    <span>来源：<b>Euronews</b></span>
+    <span>推荐理由：遣返中心进入出资与日程实质博弈阶段，慕尼黑部长级复会为年内落地关键节点，欧盟内部分歧公开化。</span>
+    <a href="https://www.euronews.com/video/2026/09/22/next-eu-budget-should-finance-migration-solutions-greek-deputy-minister-says" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-eu-4">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://news.inbox.eu/150s0as-a-law-allowing-for-a-rapid-increase-in-transit-fees-for-russian-grain-has-come-into-effect-in-latvia" target="_blank" rel="noopener">拉脱维亚前八月庇护申请过千多经白俄入境</a></h4>
+  </div>
+  <div class="title-en">1,100 people applied for asylum in Latvia in eight months: most arrived via Belarus</div>
+  <div class="chips"><span class="chip">拉脱维亚</span><span class="chip">庇护申请</span><span class="chip">白俄罗斯</span><span class="chip">东部边境</span><span class="chip">安全状态</span><span class="chip">边防</span><span class="chip">混合威胁</span></div>
+  <p class="summary"><b>内容提要</b>　事件9-22、报道9-22。拉脱维亚公民与移民事务局局长扬索内-舒尔迈斯特雷22日在电视节目中通报，今年前八个月全国共受理1100份初次庇护申请，另有100份重复申请和155份恢复程序请求，申请者以阿富汗、巴基斯坦、索马里和埃及公民居多，绝大多数经白俄罗斯方向入境；获得国际保护者仅占少数。她指出，东部边境持续承压是申请数量变化的关键背景，政府已将卢扎、克拉斯拉瓦、陶格夫匹尔斯等边境地区的强化安全状态延长至2026年底。边防部门通报，去年共阻止12046起非法越境企图，其中仅31人出于人道原因获准入境，而2024年为5388起、26人获准，越境压力呈持续攀升态势。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>拉脱维亚公民与移民事务事务局负责人在「900秒」节目中披露的年度中期数据显示，庇护申请规模虽远不及南欧边境国家，但构成与路线高度集中：初次申请1100份，另含100份重复申请与155份恢复程序请求，来源国前四位为阿富汗、巴基斯坦、索马里和埃及，绝大多数经由白俄罗斯一侧进入。局长强调，多数申请人未满足法律规定的国际保护条件，获批者仅占少数。与申请数据同步的是边境态势：国家边防部门通报，去年阻止非法越境企图12046起，其中仅31人出于人道考虑获准入境；2024年这两个数字分别为5388起和26人，两年间阻止次数翻倍有余。为应对压力，政府已把卢扎、克拉斯拉瓦、奥格斯道加瓦、陶格夫匹尔斯及雷泽克涅部分教区的强化安全状态延长至2026年12月31日，措施涵盖通行限制与查验强化。拉脱维亚长期将明斯克方面的有组织推送定性为针对全欧的混合威胁，此次官方数据发布正值波兰宣布10月起对德、立陶宛方向恢复边检至明年3月底、欧盟内部就东部边境安全与申根平衡再起讨论之际，波罗的海一线的边境压力与庇护审批之间的联动料继续成为欧盟东部政策议程的常设议题。</p></details>
+  <div class="meta">
+    <span>来源：<b>BB.LV</b></span>
+    <span>推荐理由：官方数据发布属常规动态，但反映欧盟东部边境压力的连续走势，具区域参考价值。</span>
+    <a href="https://news.inbox.eu/150s0as-a-law-allowing-for-a-rapid-increase-in-transit-fees-for-russian-grain-has-come-into-effect-in-latvia" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-eu-5">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://www.the-independent.com/bulletin/news/migrant-dinghy-boat-channel-rnli-rescue-b3054445.html" target="_blank" rel="noopener">诺曼底六十人橡皮艇被护送横渡海峡逾一天</a></h4>
+  </div>
+  <div class="title-en">Migrant dinghy with around 60 on board escorted across Channel after more than 24 hours at sea</div>
+  <div class="chips"><span class="chip">英吉利海峡</span><span class="chip">诺曼底</span><span class="chip">超大型橡皮艇</span><span class="chip">护送</span><span class="chip">边境部队</span><span class="chip">偷渡路线西移</span><span class="chip">法国海事部门</span></div>
+  <p class="summary"><b>内容提要</b>　事件9-21、报道9-22。一艘载有约六十人的超大型充气艇21日上午从法国诺曼底贝桑附近海滨出发，途中又在东行三十英里处搭载11人，仅凭一台小舷机在海上漂航超过24小时。法国海事部门下令四艘救生艇与「自由蜜蜂」号拖轮全程护送而不拦截，英国方面出动黑斯廷斯与伊斯特本两艘救生艇及海岸警卫队飞机接应，被救人员随后移交边境部队。救援方称小艇状况很差、吃水极浅。此为继本月早些时候140人小艇从诺曼底创纪录抵英后，偷渡团伙西移发船点、以远航线规避加莱重点监控的又一例。英国内政部数据显示今年迄今约17480人渡海抵英，同比下降46%。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>该艇21日上午十时前不久从贝桑附近的波尔昂贝桑港出发，据信首载约五十人，晚间在向东三十英里的「花岸」又接上十一人，合计逾六十人。救援人员描述小艇「状况很差、吃水极浅，只有一台小舷机」，因洋流与风力一度沿法国海岸漂行而未直驶英国。法国海事部门称，行动由格里斯内角海事救援协调中心指挥，属搜救义务与国际海洋法框架内的护航；四艘法国全国海上救生协会救生艇与拖轮「自由蜜蜂」号全程随行。英国海事与海岸警卫队署应请求派出黑斯廷斯、伊斯特本两艘救生艇并起飞固定翼飞机，将人员接驳后移交边境部队处理。此次航线距传统多佛海峡走廊远得多，从诺曼底出发的单程可达一百英里、约为加莱至多佛的四倍。此前本月初一艘46英尺「超大型橡皮艇」载140人从诺曼底完成约七十英里航程抵达朴次茅斯，引发沿岸城镇对峙与抗议，官员当时称属一次性事件，而连续两次西向发船显示走私团伙正系统性转移发射点以规避加莱、敦刻尔克的强监控。英国防务国务大臣波拉德称边境「安全但需要更强」，内政部已就周一另一艘小艇在肯特福克斯通一年来首次未被察觉登陆一事展开调查。今年迄今渡海抵英约17480人，较去年同期下降46%，但单船规模与航线半径均在扩大，法方已开始划毁小艇、没收舷机以压缩供给链。</p></details>
+  <div class="meta">
+    <span>来源：<b>The Independent</b></span>
+    <span>推荐理由：海峡偷渡战术西移的又一标志性案例，与已采集的福克斯通未察觉登陆为不同事件，属常规重要动态。</span>
+    <a href="https://www.the-independent.com/bulletin/news/migrant-dinghy-boat-channel-rnli-rescue-b3054445.html" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-eu-6">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://www.euronews.com/my-europe/2026/09/22/exclusive-eu-countries-sound-alarm-over-weapons-brought-back-from-ukraine-front-line" target="_blank" rel="noopener">欧盟密件警示乌克兰返乡人员武器扩散风险</a></h4>
+  </div>
+  <div class="title-en">EU capitals find weapon parts on returning fighters, confidential Council report warns</div>
+  <div class="chips"><span class="chip">欧盟理事会</span><span class="chip">机密报告</span><span class="chip">乌克兰</span><span class="chip">武器走私</span><span class="chip">申根</span><span class="chip">常驻代表委员会</span><span class="chip">边境查验</span></div>
+  <p class="summary"><b>内容提要</b>　事件9-22、报道9-22。欧洲新闻台22日援引欧盟理事会一份机密报告称，多个成员国在从乌克兰前线返乡的作战人员身上查获武器部件与军事装备，文件认为这表明存在武器部件或装备自乌克兰战场走私入欧的潜在风险。欧盟成员国常驻代表委员会定于23日开会讨论枪支自乌克兰向成员国走私的问题。文件显示，接收大量乌克兰难民的国家如德国、波兰和捷克情况尤其令人担忧；由于申根区内缺乏内部边境管制，欧洲当局将此视为全欧共同问题。该议题与近期多国延长申根内部边检、强化口岸查验的动向相互呼应，料推动成员国在武器查验与情报共享上加码。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>这份理事会文件由欧洲新闻台获得并披露。文件称，成员国报告在从乌克兰前线返回的作战人员身上「发现武器部件和军事装备」，此类案例表明「武器部件或其他装备可能从乌克兰战场走私到欧盟」的潜在风险。常驻代表委员会计划于9月23日就枪支自乌克兰向成员国走私问题进行专门讨论。文件点名接收乌克兰难民较多的德国、波兰和捷克为尤其令人担忧的国家，同时强调，由于申根区内人员自由流动、缺乏系统性内部边境管制，任何成员国的查获都应被视为牵动全欧的共同问题，需要跨境情报协同应对。此前奥地利、德国、波兰、丹麦等国已以移民压力与安全形势为由将申根内部边检延长至2027年3月，意大利、西班牙围绕休达危机亦互延对彼此空海口岸的检查；此次密件披露或为内部边检延续提供新的安全论证，也将考验欧盟在武器禁运、难民身份甄别与口岸抽检之间的平衡。边防与警务专家指出，返乡人员的行李抽检、邮递渠道查缉与武器零部件溯源将是后续重点，23日常驻代表委员会的讨论结果及是否形成新的行动建议值得跟踪。</p></details>
+  <div class="meta">
+    <span>来源：<b>欧洲新闻台（Euronews独家）</b></span>
+    <span>推荐理由：涉申根内部边控与安全查验的边境管理议题，与移民流动治理存在交叉，属常规重要动态。</span>
+    <a href="https://www.euronews.com/my-europe/2026/09/22/exclusive-eu-countries-sound-alarm-over-weapons-brought-back-from-ukraine-front-line" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+    <div class="sec-foot"><a href="#sec-eu" class="collapse-btn" data-collapse="sec-eu">▴ 收起本板块</a></div>
+  </div>
+</details>
+<details class="section" id="sec-china_neighbors">
+  <summary>
+    <span class="sec-title">🧭 中国周边国家动态</span>
+    <span class="sec-desc">东南亚、南亚、中亚、东北亚国家移民管理与边境安全要闻</span>
+    <span class="sec-count">4 条</span>
+    <span class="sec-arrow">▾</span>
+  </summary>
+  <div class="sec-body">
+    
+<article class="item" id="item-china_neighbors-1">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://www.thehindu.com/news/international/two-north-korea-members-of-asian-games-seek-asylum-in-japan-report-says/article71494990.ece" target="_blank" rel="noopener">朝鲜亚运代表团两名成员拟在日寻求庇护</a></h4>
+  </div>
+  <div class="title-en">Two North Korea members of Asian Games seek asylum in Japan, report says</div>
+  <div class="chips"><span class="chip">朝</span><span class="chip">鲜</span><span class="chip">,</span><span class="chip"> </span><span class="chip">亚</span><span class="chip">运</span><span class="chip">会</span><span class="chip">,</span><span class="chip"> </span><span class="chip">庇</span><span class="chip">护</span><span class="chip">,</span><span class="chip"> </span><span class="chip">日</span><span class="chip">本</span><span class="chip">,</span><span class="chip"> </span><span class="chip">名</span><span class="chip">古</span><span class="chip">屋</span><span class="chip">,</span><span class="chip"> </span><span class="chip">代</span><span class="chip">表</span><span class="chip">团</span><span class="chip">,</span><span class="chip"> </span><span class="chip">投</span><span class="chip">诚</span></div>
+  <p class="summary"><b>内容提要</b>　事件9-22、报道9-22。韩国《月刊朝鲜》9月22日援引一名自称与日本内阁情报调查室有关的知情人士报道，参加爱知·名古屋亚运会的朝鲜代表团中两名成员正寻求在日本申请庇护，并明确表示倾向留日而非前往韩国，已表达不返回朝鲜的意愿。两人身份和在代表团内职务未公开，此次接触最终是否会发展为正式投诚或庇护申请尚不明确。朝鲜此次派出约180名运动员和官员参赛，包括体育相金日国，系时隔41年来最大规模访日代表团。路透社等国际媒体当日跟进报道，因日本假期，政府方面暂无法回应。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>韩国《月刊朝鲜》杂志9月22日报道称，正在日本参加2026年爱知·名古屋亚洲运动会的朝鲜代表团中，有两名成员正在寻求在日本申请庇护。该报道的消息来源是一名被描述为与日本内阁情报调查室有关、同时与亲平壤的在日朝鲜人总联合会有关联的人士。报道指出，这两人属于规模约180人的朝鲜代表团，他们表达了倾向在日本而非韩国申请庇护的意愿，并已向外界传达不打算返回朝鲜的态度。两人的具体身份和在代表团中的职务均未对外披露，其接触行为是否会最终演变为正式的投诚事件或庇护申请，目前仍不确定。朝鲜此次派出包括体育相（相当于部长）金日国在内的约180名运动员和官员赴日参赛，是1985年以来朝鲜时隔41年最大规模的访日团队。此前日本原则上限制朝鲜国籍者入境，国际体育赛事为例外通道。路透社当日跟进报道并指出，因日本国内假期，日方政府部门暂无法就此事置评。媒体分析认为，此事若坐实，将成为近年来罕见的朝鲜人员在高规格外交体育场合脱离事件，可能对朝日接触氛围及代表团安全管理安排产生影响；但也有观察者对消息源单一、报道路径提出疑问，提醒在申请正式提交前需保持审慎。</p></details>
+  <div class="meta">
+    <span>来源：<b>路透社／印度教徒报</b></span>
+    <span>推荐理由：涉朝鲜人员脱离与日本庇护程序，事件罕见且处于亚运敏感节点，属周边板块重要动态；消息尚待官方确认，故评4分。</span>
+    <a href="https://www.thehindu.com/news/international/two-north-korea-members-of-asian-games-seek-asylum-in-japan-report-says/article71494990.ece" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-china_neighbors-2">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://www.bernama.com/en/world/news.php?id=2610220" target="_blank" rel="noopener">印度使馆警示国人勿借免签赴马寻工</a></h4>
+  </div>
+  <div class="title-en">Indian Mission in Kuala Lumpur Warns Against Visa Free Job Hunting</div>
+  <div class="chips"><span class="chip">印</span><span class="chip">度</span><span class="chip">,</span><span class="chip"> </span><span class="chip">马</span><span class="chip">来</span><span class="chip">西</span><span class="chip">亚</span><span class="chip">,</span><span class="chip"> </span><span class="chip">免</span><span class="chip">签</span><span class="chip">,</span><span class="chip"> </span><span class="chip">务</span><span class="chip">工</span><span class="chip">警</span><span class="chip">示</span><span class="chip">,</span><span class="chip"> </span><span class="chip">中</span><span class="chip">介</span><span class="chip">欺</span><span class="chip">诈</span><span class="chip">,</span><span class="chip"> </span><span class="chip">数</span><span class="chip">字</span><span class="chip">入</span><span class="chip">境</span><span class="chip">卡</span></div>
+  <p class="summary"><b>内容提要</b>　事件9-22、报道9-22。印度驻吉隆坡高级专员公署9月22日发布公告，明确警示印度公民不得利用马来西亚30天免签便利入境寻找工作。公告指出，近期以免签身份抵马后求职的印度公民明显增多，其中不少人受不良中介「保证高薪职位」等虚假承诺误导。公告强调该免签便利仅适用于旅游和社会探访，借此务工明显违反马来西亚移民法规，后果包括逾期滞留、沦为非法身份、遭受剥削、被拘留及法律追责。赴马务工者须在出发前取得有效工作许可或参考签证（签证附函），并提醒旅客在抵马前3天内提交马来西亚数字入境卡、确保护照有效期不少于6个月、备妥回程机票与酒店订单。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>印度驻吉隆坡高级专员公署于9月22日发布正式警示公告，针对印度公民利用马来西亚30天免签入境政策赴马求职的现象作出明确规劝。公告指出，使馆注意到以免签旅游身份抵马后试图找工作的印度公民数量出现明显上升，背后多有不良中介运作，以「免签入境、落地高薪」等不实承诺招揽。使馆强调，马来西亚免签政策覆盖范围仅为旅游与社会探访，以此为目的进入后寻找工作属于明显违反当地移民法规的行为，可能导致的后果包括逾期滞留、身份非法化、遭受雇主或中介剥削、被拘留、被遣返以及面临法律诉讼。使馆要求所有拟赴马务工人员在出发前必须通过马来西亚雇主担保取得工作许可或附函签证，切勿相信可在马境内将旅游身份转为工作身份的说法。公告同时提醒普通游客，出发前3天内须在线提交马来西亚数字入境卡，护照有效期须不少于6个月，并应携带确认的回程机票与住宿凭证备查。业内人士指出，此类警示通常与领区求助案件上升直接相关，反映南亚劳工经由东南亚中介链条赴马务工的灰色渠道依然活跃，印马两国在劳务信息互通与中介监管上的协调需求进一步上升。</p></details>
+  <div class="meta">
+    <span>来源：<b>马来西亚国家通讯社（Bernama）</b></span>
+    <span>推荐理由：涉及印度与马来西亚两大劳务流动国之间的移民合规警示，反映免签通道被务工中介利用的趋势，属常规重要条目。</span>
+    <a href="https://www.bernama.com/en/world/news.php?id=2610220" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-china_neighbors-3">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://english.aarthiknews.com/news/detail/20310" target="_blank" rel="noopener">尼泊尔两月逾13万人获外劳审批赴海外</a></h4>
+  </div>
+  <div class="title-en">Over 130,000 Nepalis Seek Foreign Employment In Two Months</div>
+  <div class="chips"><span class="chip">尼</span><span class="chip">泊</span><span class="chip">尔</span><span class="chip">,</span><span class="chip"> </span><span class="chip">外</span><span class="chip">劳</span><span class="chip">,</span><span class="chip"> </span><span class="chip">劳</span><span class="chip">务</span><span class="chip">输</span><span class="chip">出</span><span class="chip">,</span><span class="chip"> </span><span class="chip">阿</span><span class="chip">联</span><span class="chip">酋</span><span class="chip">,</span><span class="chip"> </span><span class="chip">劳</span><span class="chip">工</span><span class="chip">审</span><span class="chip">批</span><span class="chip">,</span><span class="chip"> </span><span class="chip">侨</span><span class="chip">汇</span></div>
+  <p class="summary"><b>内容提要</b>　事件9-22、报道9-22。尼泊尔外国就业司9月22日发布的统计显示，本财年前两个月（7月中旬至9月中旬）共有130,483人获得出境务工最终审批，其中沙旺月70,441人、巴德拉月60,042人（含新批35,627人、续签24,415人），两月合计同比上财年同期下降4.11%。巴德拉月新批人员中男性29,984人、女性5,643人；经中介公司出国者25,415人，个人渠道9,224人，政府间协定渠道866人（韩国789人、以色列77人）。阿联酋为当月最大目的地（18,477人），其后为卡塔尔、马来西亚、沙特、科威特。技术工人占比达56.9%，首次过半。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>据尼泊尔外国就业司9月22日公布的最新统计，本财年（2026/27）前两个月申请并取得海外就业最终审批的尼泊尔公民达130,483人，延续高位外流态势。其中沙旺月（7月中旬至8月中旬）70,441人，巴德拉月（8月中旬至9月中旬）60,042人；巴德拉月新获批者35,627人，续签者24,415人，显示每月仍有超过3.5万名首次出境务工者成行。与上财年同期136,082人的审批总量相比下降约4.11%，其中经中介公司办理的新批人数由33,001人降至25,415人，减少约7,600人，反映正规中介渠道吸纳能力收缩。目的地结构方面，阿联酋以18,477人居首，占当月审批总量近31%，卡塔尔10,471人、马来西亚8,091人、沙特6,787人、科威特3,898人紧随其后；日本、罗马尼亚、阿曼、韩国、土耳其等国规模较小但呈多元化。技能结构出现值得关注的变化：巴德拉月获批者中技术工人34,167人，占比56.9%，首次过半，但非技术及半技术工人合计仍超过25,000人。审批人数较集中的原籍地为马德西省与戈西省。业内分析指出，海外就业依然是尼泊尔家庭生计与侨汇的支柱，侨汇流入支撑外汇与消费，但低技能岗位集中、中介费用与权益保障问题仍然突出，劳务治理与技能提升是改善输出质量的关键。</p></details>
+  <div class="meta">
+    <span>来源：<b>Aarthik News（尼泊尔）</b></span>
+    <span>推荐理由：南亚主要劳务输出国官方数据更新，反映出境务工规模与结构变化，属常规监测条目。</span>
+    <a href="https://english.aarthiknews.com/news/detail/20310" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-china_neighbors-4">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://streamlinefeed.co.ke/news/kyrgyzstan-reports-11000-foreign-nationals-departed-under-immigration-amnesty" target="_blank" rel="noopener">吉尔吉斯斯坦大赦结束万余外侨离境</a></h4>
+  </div>
+  <div class="title-en">Kyrgyzstan Reports 11,000 Foreign Nationals Departed Under Recent Immigration Amnesty</div>
+  <div class="chips"><span class="chip">吉</span><span class="chip">尔</span><span class="chip">吉</span><span class="chip">斯</span><span class="chip">斯</span><span class="chip">坦</span><span class="chip">,</span><span class="chip"> </span><span class="chip">移</span><span class="chip">民</span><span class="chip">大</span><span class="chip">赦</span><span class="chip">,</span><span class="chip"> </span><span class="chip">逾</span><span class="chip">期</span><span class="chip">居</span><span class="chip">留</span><span class="chip">,</span><span class="chip"> </span><span class="chip">免</span><span class="chip">签</span><span class="chip">收</span><span class="chip">紧</span><span class="chip">,</span><span class="chip"> </span><span class="chip">再</span><span class="chip">入</span><span class="chip">境</span><span class="chip">禁</span><span class="chip">令</span><span class="chip">,</span><span class="chip"> </span><span class="chip">绿</span><span class="chip">色</span><span class="chip">通</span><span class="chip">道</span></div>
+  <p class="summary"><b>内容提要</b>　事件9-22、报道9-22。吉尔吉斯斯坦政府9月22日（周二）通报，7月1日至31日运行的「绿色通道」自愿离境程序共促使约11,000名逾期居留的外国公民及无国籍人员离境，期间免收行政罚款与出境签证国家规费。该程序依据总统扎帕罗夫签署的第233号令设立，适用于签证过期、居留许可被撤销、登记失效或申报目的与实际活动不符者，但不适用于涉刑事案件、有生效判决或欠税人员。9月起内阁以第855号决议收紧免签规则，将部分国家公民免签停留限定为60天内不超30天，并规定逾期居留将自动触发与免签期对应的再入境禁令。劳动部同日承认，家政服务业目前几乎没有合法雇佣的外籍劳工。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>吉尔吉斯斯坦政府9月22日通报「绿色通道」移民大赦的最终成果：约11,000名违反居留规定的外国公民与无国籍人员在大赦期内自愿离境。该临时程序依据总统扎帕罗夫签署的第233号令，于7月1日至31日运行31天，允许签证过期、居留许可被撤销、登记失效或实际活动与申报目的不符者在免于行政罚款和出境签证国家规费的条件下离开。当事人需先向属地警局申领无违法证明，再经电子签证门户申办出境签证；涉刑事程序、有生效法院判决或欠税者被排除在外。官方强调大赦仅为自愿离境机制，并非合法化连续居留的途径。大赦结束后，执法于9月起全面恢复并显著收紧：内阁第855号决议将部分国家公民的免签停留上限设定为60天内累计不超过30天，实质终结「跑签」操作，逾期居留者将自动面临与原免签期长度对应的再入境禁令。当局同时推动数字化管理，将移民违规信息接入边境管控系统，逐步建立外籍居民综合数据库。劳动部在周二的通报中直言，目前家政服务业几乎没有一名外籍工人是合法雇佣，暴露劳动力需求与严格移民框架之间的落差。分析认为，吉尔吉斯斯坦正从周期性宽赦转向常态化严管，雇主合规压力将明显上升。</p></details>
+  <div class="meta">
+    <span>来源：<b>Streamline Feed（援引吉尔吉斯斯坦政府通报）</b></span>
+    <span>推荐理由：中亚国家移民治理由宽赦转向严管的标志性数据更新，与大赦后新规落地互为补充，属常规条目。</span>
+    <a href="https://streamlinefeed.co.ke/news/kyrgyzstan-reports-11000-foreign-nationals-departed-under-immigration-amnesty" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+    <div class="sec-foot"><a href="#sec-china_neighbors" class="collapse-btn" data-collapse="sec-china_neighbors">▴ 收起本板块</a></div>
+  </div>
+</details>
+<details class="section" id="sec-global_south">
+  <summary>
+    <span class="sec-title">🌏 全球南方国家动态</span>
+    <span class="sec-desc">拉美、非洲、中东等地区移民治理与边境管理动态</span>
+    <span class="sec-count">3 条</span>
+    <span class="sec-arrow">▾</span>
+  </summary>
+  <div class="sec-body">
+    
+<article class="item" id="item-global_south-1">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://ae.marketscreener.com/news/latest/Migrants-rescued-from-energy-platform-off-Tunisia-after-four-days-charity-says-49220900/" target="_blank" rel="noopener">突尼斯外海天然气平台31名移民被困获救</a></h4>
+  </div>
+  <div class="title-en">Migrants rescued from energy platform off Tunisia after four days, charity says</div>
+  <div class="chips"><span class="chip">突</span><span class="chip">尼</span><span class="chip">斯</span><span class="chip">,</span><span class="chip"> </span><span class="chip">地</span><span class="chip">中</span><span class="chip">海</span><span class="chip">,</span><span class="chip"> </span><span class="chip">海</span><span class="chip">上</span><span class="chip">救</span><span class="chip">援</span><span class="chip">,</span><span class="chip"> </span><span class="chip">移</span><span class="chip">民</span><span class="chip">,</span><span class="chip"> </span><span class="chip">海</span><span class="chip">上</span><span class="chip">观</span><span class="chip">察</span><span class="chip">,</span><span class="chip"> </span><span class="chip">利</span><span class="chip">比</span><span class="chip">亚</span><span class="chip">,</span><span class="chip"> </span><span class="chip">天</span><span class="chip">然</span><span class="chip">气</span><span class="chip">平</span><span class="chip">台</span></div>
+  <p class="summary"><b>内容提要</b>　事件9-19、报道9-22。海上救援组织「海上观察」9月22日（周二）通报，其快速救援船「极光号」当日清晨自意大利兰佩杜萨岛出发，将被困突尼斯外海米斯卡尔天然气平台4天的30余名移民（含两名儿童）救起，全员现获照护。该组织侦察机周六发现这批人员时，附近漂浮着一只空橡皮艇；他们所乘橡皮艇自利比亚出发后漂流失控，被困平台期间「暴露于寒冷中四天、无人照料」。移民求助热线称周日与被困者通话时，已有一人死亡、多人患病。该组织批评海上救援缺位致险情拖延。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>国际救援组织「海上观察」9月22日宣布，其驻兰佩杜萨的快速救援船「极光号」当天早晨驶往突尼斯外海，将受困于米斯卡尔天然气平台的30余名移民救起，其中包括两名儿童。该组织的侦察机于周六（9月19日前后）发现这群人站在平台上，平台附近海面漂着一只空的橡皮艇——他们乘该艇逃离利比亚途中发动机失效漂流，最终攀上平台被困整整四天。组织声明称，被困期间这些人「暴露在寒冷之中、四天无人施救」；移民求助热线「警报电话」周一透露，周日与被困者通话时对方称已有一人死亡、多人身体不适。周二上午完成救援后，「海上观察」表示所有人员已脱离险境并由船员照护。这一事件再次凸显地中海中部航线的高危属性：突尼斯与利比亚海岸外油气设施近年多次成为漂流移民的临时栖身点，而沿岸国家搜救响应迟缓、欧洲与北非国家间的拦截遣返合作受人权组织批评，使此类险情从发现到获救往往拖延数日。分析人士指出，尽管今年以来地中海海路抵达欧洲总人数下降，但单次事故的死亡风险不降反升，海上搜救责任与国家义务之争仍是欧盟与北非国家之间最敏感的移民议题之一。</p></details>
+  <div class="meta">
+    <span>来源：<b>路透社（经MarketScreener转载）</b></span>
+    <span>推荐理由：地中海中部航线典型险情获救事件，反映海路死亡风险上升的总体趋势，属常规监测条目。</span>
+    <a href="https://ae.marketscreener.com/news/latest/Migrants-rescued-from-energy-platform-off-Tunisia-after-four-days-charity-says-49220900/" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-global_south-2">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★☆☆☆</span>
+    <h4><a href="https://news.un.org/en/audio/2026/09/1168396" target="_blank" rel="noopener">联合国专家指尼加拉瓜镇压驱动民众外流</a></h4>
+  </div>
+  <div class="title-en">Nicaragua: democracy &#x27;dismantled&#x27;, political opponents disappeared</div>
+  <div class="chips"><span class="chip">尼</span><span class="chip">加</span><span class="chip">拉</span><span class="chip">瓜</span><span class="chip">,</span><span class="chip"> </span><span class="chip">联</span><span class="chip">合</span><span class="chip">国</span><span class="chip">人</span><span class="chip">权</span><span class="chip">理</span><span class="chip">事</span><span class="chip">会</span><span class="chip">,</span><span class="chip"> </span><span class="chip">强</span><span class="chip">迫</span><span class="chip">失</span><span class="chip">踪</span><span class="chip">,</span><span class="chip"> </span><span class="chip">政</span><span class="chip">治</span><span class="chip">镇</span><span class="chip">压</span><span class="chip">,</span><span class="chip"> </span><span class="chip">难</span><span class="chip">民</span><span class="chip">外</span><span class="chip">流</span><span class="chip">,</span><span class="chip"> </span><span class="chip">中</span><span class="chip">美</span><span class="chip">洲</span></div>
+  <p class="summary"><b>内容提要</b>　事件9-22、报道9-22。联合国人权理事会任命的尼加拉瓜独立人权专家小组9月22日在日内瓦发布新报告并举行记者会，指尼加拉瓜民主治理基础已「被拆除」：自2018年以来记录逾150起强迫失踪案件，其中近30人至今下落不明；被拘留的反对者死于国家拘押之中。牵头专家西蒙表示，强迫失踪已被「武器化」用于压制异见、控制人口；专家布罗迪举例指原住民权益人士里维埃拉被拘押直至今年5月死亡。报告还详述拘留条件恶劣、医疗缺失及任意拘押受害者的处境。尼加拉瓜近年政局持续收紧，数十万人出逃哥斯达黎加、美国等地寻求庇护，成为中美洲重要的人口外流来源之一。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>联合国人权理事会任命的尼加拉瓜独立人权专家小组9月22日在日内瓦发布最新报告并在记者会上通报结论。牵头专家扬-迈克尔·西蒙表示，自2018年以来专家小组已记录超过150起强迫失踪案件，其中约30人至今下落不明；强迫失踪被「武器化」用以压制异见、控制人口。专家里德·布罗迪举例称，曾在加勒比海岸为原住民集体权利奔走的布鲁克林·里维埃拉遭当局「上门」拘押，直至今年5月在关押中死亡。报告指出，两个月前尼加拉瓜联合总统奥尔特加宣布终结竞争性选举，「关键不在于宣布本身，而在于民主治理的基础早已被拆除」；报告并详述被拘押者面临的恶劣羁押条件、缺乏医疗保障及任意拘押的普遍化。专家们指出，镇压机器的持续运转在尼加拉瓜社会制造弥漫性恐惧，是天主教会、学生、原住民、农民运动等群体成员及其家属选择出逃的重要推力；近年来数十万尼加拉瓜人前往哥斯达黎加、美国、西班牙等国寻求庇护或居留，使尼加拉瓜成为中美洲仅次于委内瑞拉危机区域的重要人口外流来源。随着奥尔特加政府宣布终结竞争性选举，专家警告强迫失踪、任意拘押与跨国镇压可能进一步加剧，流离规模与跨境庇护需求或继续上升。</p></details>
+  <div class="meta">
+    <span>来源：<b>联合国新闻</b></span>
+    <span>推荐理由：联合国专家报告聚焦人权与民主恶化，与尼加拉瓜人口外流为背景性间接关联，属全球南方常规监测条目。</span>
+    <a href="https://news.un.org/en/audio/2026/09/1168396" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-global_south-3">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★☆☆☆</span>
+    <h4><a href="https://www.iom.int/news/iom-chief-calls-urgent-support-drc-faces-largest-ebola-outbreak-record" target="_blank" rel="noopener">刚果（金）史上最重埃博拉疫情 移民组织急筹款</a></h4>
+  </div>
+  <div class="title-en">IOM Chief Calls for Urgent Support as DRC Faces Largest Ebola Outbreak on Record</div>
+  <div class="chips"><span class="chip">刚</span><span class="chip">果</span><span class="chip">（</span><span class="chip">金</span><span class="chip">）</span><span class="chip">,</span><span class="chip"> </span><span class="chip">埃</span><span class="chip">博</span><span class="chip">拉</span><span class="chip">,</span><span class="chip"> </span><span class="chip">国</span><span class="chip">际</span><span class="chip">移</span><span class="chip">民</span><span class="chip">组</span><span class="chip">织</span><span class="chip">,</span><span class="chip"> </span><span class="chip">人</span><span class="chip">口</span><span class="chip">流</span><span class="chip">动</span><span class="chip">监</span><span class="chip">测</span><span class="chip">,</span><span class="chip"> </span><span class="chip">边</span><span class="chip">境</span><span class="chip">筛</span><span class="chip">查</span><span class="chip">,</span><span class="chip"> </span><span class="chip">跨</span><span class="chip">境</span><span class="chip">传</span><span class="chip">播</span><span class="chip">,</span><span class="chip"> </span><span class="chip">人</span><span class="chip">道</span><span class="chip">资</span><span class="chip">金</span></div>
+  <p class="summary"><b>内容提要</b>　事件9-22、报道9-22。国际移民组织9月22日在日内瓦/内罗毕发布通报，总干事波普表示刚果（金）本轮埃博拉疫情已确认为该国史上最大规模：自2026年5月宣布疫情以来，确诊病例已超过7400例，世卫组织截至9月16日统计死亡逾3600人，疫情叠加武装冲突与大规模流离失所令应对雪上加霜。移民组织正依托人口流动测绘与流量监测，在刚果（金）主要交通线、刚果河沿岸及边境口岸强化疾病监测，本德-本德检查点日均筛查约1000名旅客，区域内累计支持完成逾3300万人次健康筛查，并与乌干达、南苏丹、布隆迪、卢旺达、中非共和国等邻国协同防范跨境传播。移民组织为多国埃博拉防范应对计划寻求1.1亿美元资金，目前仅到位2960万美元。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>国际移民组织总干事艾米·波普9月22日通报，刚果（金）本迪布焦型埃博拉疫情已成为该国历史上规模最大的埃博拉疫情：疫情于2026年5月宣布，截至通报日确诊病例超过7400例，世卫组织截至9月16日记录死亡逾3600人，波普指出疫情发生在冲突持续、人口大规模流离失所的地区，家庭本已承受冲突与危机之苦，疫情令处境更加艰难。应对层面，移民组织将卫生监测嵌入人口流动治理：通过人口流动测绘与流量监测识别高风险流动走廊、边境社区、口岸及非正规过境点，协助当局精准布防；在刚果河这条通往金沙萨的关键水路沿线及流离失所者安置点扩大监测，其中本德-本德检查点日均筛查约1000名旅客；本轮疫情期间已累计支持完成超过3300万人次健康筛查。波普强调「病毒不会停在边境」，移民组织正与乌干达、南苏丹、布隆迪、卢旺达、中非共和国等邻国政府与伙伴协作强化防范，降低跨境传播风险；此前该组织数据显示，仅伊图里省每天即有逾1.6万人穿越边境，疫情亦曾一度外溢至乌干达。资金方面，移民组织为多国埃博拉防范与应对计划寻求1.1亿美元，目前仅收到2960万美元，不足三分之一；波普警告若资金缺口不能弥合，关键流动路线上的监测体系将难以为继。分析认为，刚果（金）东部冲突与流离失所叠加疫情，正使跨境人口流动成为区域公共卫生与边境安全交织的复合议题，口岸卫生筛查能力与周边国家联防机制面临持续考验。</p></details>
+  <div class="meta">
+    <span>来源：<b>国际移民组织（IOM）</b></span>
+    <span>推荐理由：埃博拉疫情通报聚焦边境口岸筛查与人口流动监测，属跨境人口流动治理议题，与移民动态为间接关联，评分2分。</span>
+    <a href="https://www.iom.int/news/iom-chief-calls-urgent-support-drc-faces-largest-ebola-outbreak-record" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+    <div class="sec-foot"><a href="#sec-global_south" class="collapse-btn" data-collapse="sec-global_south">▴ 收起本板块</a></div>
+  </div>
+</details>
+<details class="section" id="sec-tech">
+  <summary>
+    <span class="sec-title">🤖 移民与边境技术</span>
+    <span class="sec-desc">生物识别、智慧边境、AI 审查、电子签证、边境监控技术应用与争议</span>
+    <span class="sec-count">4 条</span>
+    <span class="sec-arrow">▾</span>
+  </summary>
+  <div class="sec-body">
+    
+<article class="item" id="item-tech-1">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://dhs.gov/science-and-technology/news/2026/09/21/st-launches-industry-competition-develop-revolutionary-identity-verification-tech" target="_blank" rel="noopener">美扩展远程身份核验测试 纳入深伪与AI证件检测</a></h4>
+  </div>
+  <div class="title-en">DHS expands Remote Identity Validation Rally to deepfakes and AI-generated IDs</div>
+  <div class="chips"><span class="chip">国土安全部</span><span class="chip">远程身份核验</span><span class="chip">深度伪造</span><span class="chip">AI伪造证件</span><span class="chip">生物识别</span><span class="chip">技术挑战赛</span><span class="chip">身份欺诈</span></div>
+  <p class="summary"><b>内容提要</b>　「事件9-21（美东时间）、报道9-22（北京时间）」美国国土安全部科技司9月21日在华盛顿宣布扩展2026年度「远程身份核验挑战赛」，首次将生物特征深度伪造检测纳入官方测试范围，并扩大证件真伪鉴别攻击库。根据公告，10月开放证件真伪识别与自拍摄人脸比对两类报名，11月向机构征集深度伪造攻击样本用于构建测试数据集，12月开放呈现攻击检测与生物特征深伪检测赛道。本轮测试还将引入更多国家真实与伪造护照、驾照样本及更复杂攻击手法，用于评估商业身份核验系统在真实条件下的表现。此前2025年度测试结果显示，多数系统在最严苛条件下接受伪造证件的比例高达五至七成，仅一家厂商三项指标全部达标。该赛事结果将直接影响美国政府部门远程开户、签证与移民身份核验技术标准的制定。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>美国国土安全部科技司于美东时间9月21日发布新闻稿，宣布以行业竞赛方式扩展「远程身份核验挑战赛」。该赛事由科技司主办，联合运输安全管理局、国土安全调查局法证实验室与国家标准技术研究院共同推进，旨在测试和改进商业远程身份核验技术，打击依赖身份欺诈的人口贩运、金融诈骗等犯罪。科技部副部长阿连德表示，身份欺诈不仅影响政府系统，也波及公民日常生活与私营部门经济安全，赛事将汇聚初创企业、科技巨头、联邦伙伴与测试资源，共同构筑数字基础设施安全防线。2026年度挑战赛采取分阶段报名：10月开放「证件真伪核验」（区分真实证件与AI生成的伪造证件）与「自拍—证件人脸匹配」两个方向；11月征集深度伪造攻击样本与制作方法，用于扩充攻击数据集；12月开放「呈现攻击检测」（识别口罩、照片等物理欺骗）与新增的「生物特征深度伪造检测」赛道，后者覆盖视频聊天与远程会议中的AI换脸冒充场景。本轮测试还大幅扩展证件库，纳入更多真实与伪造外国护照与美国州驾照，攻击手法更复杂，并覆盖更多终端设备与真实环境用例。生物识别与身份事务高级顾问维穆里称，随着AI生成证件与实时视频冒充日益精進，防御能力必须更快进化。行业媒体报道指出，扩展决定源于2025年度测试暴露的巨大性能差距：七套证件核验系统中仅一家的三项错误率全部控制在10%高性能阈值内，没有系统达到1%目标；部分系统在最坏条件下接受伪造证件比例高达76.68%。赛事结果将通过马里兰测试设施匿名发布，为美国各机构及国际伙伴制定身份核验标准、测试协议与采购要求提供依据，也将牵动各国签证数字化与远程身份认证生态。</p></details>
+  <div class="meta">
+    <span>来源：<b>美国国土安全部科技司</b></span>
+    <span>推荐理由：美国联邦层面对抗AI伪造证件与深度伪造的官方测试框架扩容，直接影响全球身份核验技术基准与移民签证数字化安全标准，属边境身份技术领域风向标事件</span>
+    <a href="https://dhs.gov/science-and-technology/news/2026/09/21/st-launches-industry-competition-develop-revolutionary-identity-verification-tech" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-tech-2">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★★</span>
+    <h4><a href="https://xinwen.bjd.com.cn/content/s6a608ccce4b0e45f3fd5097e.html" target="_blank" rel="noopener">海关总署启动智慧海关2.0 四十三口岸入智慧工程</a></h4>
+  </div>
+  <div class="title-en">China Customs to fully launch Smart Customs 2.0 in the 15th Five-Year Plan period</div>
+  <div class="chips"><span class="chip">智慧海关</span><span class="chip">智慧口岸</span><span class="chip">十五五规划</span><span class="chip">人工智能</span><span class="chip">无感通关</span><span class="chip">智能审图</span><span class="chip">口岸现代化</span></div>
+  <p class="summary"><b>内容提要</b>　「事件9-22、报道9-22」国务院新闻办公室9月22日举行「开局起步『十五五』」系列主题新闻发布会，海关总署负责人介绍，「十五五」时期将全面启动智慧海关2.0建设，加快部署智能扫描设备、手持终端与巡检机器人，对集装箱快速透视筛查，压缩货物口岸停留时间。海关总署与国家发展改革委近日联合印发《口岸现代化「十五五」规划》，将43个重点口岸纳入「智慧口岸建设工程」，深化「人工智能+」口岸场景应用，推动智慧口岸与智慧边检、智慧海事融合发展。旅客通关方面，将贯通体温监测、核辐射探测与行李监管，航空口岸托运行李在提取前完成机检，实现精准拦截风险的同时让合法旅客「无感通关」。针对高资信企业的「智审」通关新模式已实现通关时间压缩近一半、机检审图识别准确率达100%。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>9月22日，国务院新闻办公室举行「开局起步『十五五』」系列主题新闻发布会，海关总署副署长王军、张宝峰等介绍「十五五」时期智慧海关与口岸现代化建设安排。王军表示，「十五五」时期将全面启动智慧海关2.0建设，加快部署智能扫描设备、手持终端和巡检机器人，对集装箱进行快速透视筛查，大幅减少现场开箱掏箱人工作业，最大限度压缩货物在口岸的停留时间。面向高资信企业推出「智审」通关新模式，综合运用智能设备非侵入式扫描与机检图像智能审图，实现「一企一算法」精准识别风险，货物通关时间压缩近一半，识别准确率达100%，二期算法迭代后通关时效还将再压缩30%。旅客通关环节将把体温监测、核辐射探测、行李监管前后贯通，后台智能研判与现场执法联动，航空口岸托运行李在旅客提取前即完成机器检查，在精准拦截风险的同时让进出境合法旅客「无感通关」。张宝峰介绍了海关总署与国家发展改革委联合印发的《口岸现代化「十五五」规划》，提出加快落实边境口岸重大项目，同步实施57个口岸设施改造项目，加快吐尔尕特、甘其毛都等铁路口岸建设，推动向南、向西、向北大通道跨境通行能力；43个重点口岸纳入「智慧口岸建设工程」，加大「人工智能+」口岸场景深度应用，推动智慧口岸与智慧海关、智慧边检、智慧海事融合发展，并已启动全国口岸标准化技术委员会申建，统筹构建口岸标准体系。发布会还披露上半年「口岸经济」向新向好，舟山港保税燃油加注业务进入世界前三，边境「口岸游」带动就业与基础设施完善。该规划是中国口岸数字化与智能查验体系的顶层部署，对跨境物流、出入境旅客通关体验及区域口岸合作具有系统影响。</p></details>
+  <div class="meta">
+    <span>来源：<b>北京日报（国新办发布会）</b></span>
+    <span>推荐理由：涉华重大口岸科技政策：国家层面全面启动智慧海关2.0并纳入43个重点口岸，代表中国边境智能查验与无感通关体系的十五五顶层设计，影响深远</span>
+    <a href="https://xinwen.bjd.com.cn/content/s6a608ccce4b0e45f3fd5097e.html" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-tech-3">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://www.nia.gov.cn/n741440/n741577/c1771556/content.html" target="_blank" rel="noopener">移民局全国推广外国人住宿登记全程网办</a></h4>
+  </div>
+  <div class="title-en">China launches nationwide online accommodation registration for foreigners</div>
+  <div class="chips"><span class="chip">国家移民管理局</span><span class="chip">住宿登记</span><span class="chip">全程网办</span><span class="chip">外籍人士</span><span class="chip">数字政务</span><span class="chip">出入境便利化</span></div>
+  <p class="summary"><b>内容提要</b>　「事件9-21、报道9-22」国家移民管理局9月21日决定，自当日起在全国范围推广网上办理外国人旅馆以外住宿登记，外籍人士投亲访友、租住民宿或居住自有住所时，无需再到派出所现场办理，可全程通过政务平台线上完成。办理渠道涵盖移民局政务服务网站、「12367」应用及微信、支付宝小程序，支持中英法俄日韩多语种，线上登记与现场登记具有同等法律效力，住宿登记须在入住后24小时内完成，逾期未登记者可处警告或最高2000元罚款。此前该服务已在7个省区市试点。新政同步明确简化情形：外国人返回境内自有住所或持居留证件在经常住所居住的，境内外旅行后返回无需重复登记。多家外媒与移民服务机构评价称，此举显著降低外籍人员入境后第一周的合规成本，预计派出所相关业务量将大幅下降。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>据国家移民管理局官方发布及多家媒体9月22日报道，国家移民管理局自9月21日起在全国推广网上办理外国人旅馆以外住宿登记。根据《中华人民共和国出境入境管理法》第三十九条，外国人在旅馆以外的其他住所居住或住宿的，应当在入住后24小时内由本人或留宿人向居住地公安机关办理登记。此前该流程通常需要本人前往派出所，对外籍旅客、留学生与长期在华外籍人员构成一定负担。新政实施后，留宿人或住宿人可登录国家移民管理局政务服务网站、「移民局12367」应用及微信、支付宝小程序，进入「外国人服务—住宿登记」模块按步骤提交，支持中、英、法、俄、日、韩六种语言，线上登记与现场登记具备同等法律效力，并可在「登记记录查询」中随时查看记录。首次登记建议由对住所信息更熟悉的留宿人协助办理；曾通过政务平台办理过登记并在同一住所再次登记者，以及居住在自有住所者，可自行办理。简化情形方面，外国人在中国境内自有住所居住、境内外旅行后返回的，以及持居留证件或永久居留证件在经常住所居住、同一证件有效期内境内外旅行后返回的，无需再次登记。未按规定办理住宿登记的，依法给予警告并可并处最高2000元罚款。该服务此前已在7个省区市试点，此次推广至全国。国际移动服务媒体指出，新政策显著简化外籍员工与商务旅客入境后的合规流程，跨国企业应将线上住宿登记纳入外派人员抵达清单。这是继出入境证件「全国通办」、口岸「免出示证件通道」之后，中国移民管理政务数字化的又一重要节点。</p></details>
+  <div class="meta">
+    <span>来源：<b>国家移民管理局</b></span>
+    <span>推荐理由：涉华移民管理数字化重要举措：外国人住宿登记全国全程网办，直接惠及外籍人士在华居留便利，属出入境政务服务数字化的标志性进展</span>
+    <a href="https://www.nia.gov.cn/n741440/n741577/c1771556/content.html" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-tech-4">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://bevisa.co.nz/en/blogs/visitor-visa-immigration-online-2026" target="_blank" rel="noopener">新西兰访客签证下周起迁移增强版在线系统</a></h4>
+  </div>
+  <div class="title-en">New Zealand visitor visas move to enhanced Immigration Online from 24 September</div>
+  <div class="chips"><span class="chip">新西兰</span><span class="chip">访客签证</span><span class="chip">移民在线系统</span><span class="chip">签证数字化</span><span class="chip">系统迁移</span><span class="chip">移民局</span></div>
+  <p class="summary"><b>内容提要</b>　「事件9-22（公布安排）、报道9-22」据签证服务媒体9月22日报道，新西兰移民局宣布自9月24日起，绝大多数新递交的访客签证申请必须通过升级后的「移民在线」系统创建与提交，旧系统当日停止受理约20个访客类别的新申请，涵盖标准访客签证、商务访客签证、父母祖父母访客签证、医疗访客签证与团体访客签证等。旧系统内未提交的草稿将于10月7日为最后提交日，10月8日旧门户关闭并删除全部草档。已递交的申请继续在原系统正常审理，申请人无需重新递交。少数类别如新西兰公民或居民的伴侣、子女访客签证暂缓迁移，等待另行安排。报道提示，新系统受理的申请将获得审理优先级倾斜，中介与申请人应尽快审计所有在办文件并决定提交路径。此举是新西兰签证处理全面数字化转型的延续。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>据签证服务媒体9月22日消息，新西兰移民局宣布访客签证申请系统迁移时间表：自2026年9月24日起，约20个访客类别的新申请必须通过增强版「移民在线」系统创建与递交，包括标准访客签证、商务访客签证、父母与祖父母访客签证、医疗治疗访客签证以及团体访客签证等；旧系统同日停止受理上述类别新申请。旧系统内的未提交草稿设置硬性截止：10月7日为最后提交日，10月8日旧门户正式关闭，所有未提交草稿将被删除，申请人须重新在新系统录入。已在旧系统递交的申请继续按原流程正常审理，无需重新申请。新西兰公民或居民的伴侣访客签证、子女访客签证等少数类别暂不迁移，保留在旧系统等待另行安排。报道强调，通过新系统递交的申请还将获得审理优先排序，建议中介机构与申请人本周内逐案审计所有未决文件，决定是在10月7日前于旧系统提交，还是直接转入新系统重开申请，避免草稿灭失造成损失。此次迁移是新西兰签证处理数字化转型的延续，此前新西兰移民局的数字化技术升级项目曾因收益高估等问题于本月中旬被审计方面披露部分暂停，此次访客签证整体切换表明核心在线申办系统的迭代仍在按计划推进。行业人士提示，新系统首次使用需要注册并熟悉界面，临近旧系统关闭期可能出现集中提交拥堵，建议预留充足时间，并注意新系统中随行家庭成员信息、体检与无犯罪证明等附件的上传格式要求。</p></details>
+  <div class="meta">
+    <span>来源：<b>Be Visa（据新西兰移民局公告）</b></span>
+    <span>推荐理由：南太平洋主要移民国家签证申办系统整体切换，影响面覆盖访客类签证全流程，属常规但具有实操意义的签证数字化动态</span>
+    <a href="https://bevisa.co.nz/en/blogs/visitor-visa-immigration-online-2026" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+    <div class="sec-foot"><a href="#sec-tech" class="collapse-btn" data-collapse="sec-tech">▴ 收起本板块</a></div>
+  </div>
+</details>
+<details class="section" id="sec-research">
+  <summary>
+    <span class="sec-title">📚 移民与边境研究</span>
+    <span class="sec-desc">全球智库报告、学术论文、研究数据：移民治理与边境安全前沿研究成果</span>
+    <span class="sec-count">5 条</span>
+    <span class="sec-arrow">▾</span>
+  </summary>
+  <div class="sec-body">
+    
+<article class="item" id="item-research-1">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://data.unhcr.org/en/documents/details/124022" target="_blank" rel="noopener">难民署世行联合发布马来西亚难民劳工市场报告</a></h4>
+  </div>
+  <div class="title-en">Well-Being and Labor Market Outcomes of Refugees in Malaysia: Insights from the HARMONY Survey</div>
+  <div class="chips"><span class="chip">马来西亚</span><span class="chip">难民福祉</span><span class="chip">劳动力市场</span><span class="chip">HARMONY调查</span><span class="chip">联合国难民署</span><span class="chip">世界银行</span><span class="chip">经济包容</span></div>
+  <p class="summary"><b>内容提要</b>　发布9-11。联合国难民署与世界银行联合数据中心发布马来西亚难民福祉与劳动力市场报告，基于「马来西亚经济中收容者与难民」（HARMONY）调查，系首个系统性比较难民与收容社区家庭的经济社会调查。报告显示，截至2024年7月马来西亚登记难民约19.2万人，绝大多数来自缅甸，因缺乏国家难民政策框架，他们无法合法就业，难以获得教育、社会保护与金融服务，多以非正规劳动者身份谋生。研究为人道援助向发展政策衔接提供基准数据，主张将难民纳入生产性体面就业议程。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>研究问题：在没有难民法律框架的收容国，难民的人力资本、工作条件与经济福祉处于何种水平，与收容社区差距多大。方法：难民署与世界银行联合实施的HARMONY住户调查，首次对马来西亚难民与收容社区家庭进行系统对比，涵盖人口特征、技能、就业、收入与生计等维度，数据于2026年9月发布于难民署业务数据门户，世界银行同步披露全文（报告编号214616）。核心发现：马来西亚登记难民约191710人（2024年7月），约九成来自缅甸；难民虽被允许基于人道理由居留，但因无正式难民政策，被排除在合法就业、教育、社会保护与金融服务之外，多数以非正规经济维生，工作条件脆弱、收入不稳定。报告强调生成难民与收容社区的可比数据，可为难民「生产性与体面工作」准入政策提供依据。政策含义：报告主张在马来西亚推进国家难民管理框架讨论的背景下，以证据为基础逐步扩大难民自给自足与经济包容空间，为政府、捐助方与发展机构设计干预措施提供基准。该报告对东南亚其他未加入难民公约的国家亦具参照意义。</p></details>
+  <div class="meta">
+    <span>来源：<b>联合国难民署与世界银行联合数据中心</b></span>
+    <span>推荐理由：国际组织联合实证调查，为无难民框架国家的难民经济包容提供基准数据，属常规重要研究。</span>
+    <a href="https://data.unhcr.org/en/documents/details/124022" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-research-2">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://ecre.org/aida-comparative-report-at-the-margins-places-and-conditions-of-detention/" target="_blank" rel="noopener">欧洲难民理事会发布庇护拘留场所条件比较报告</a></h4>
+  </div>
+  <div class="title-en">AIDA Comparative Report – At the margins: Places and conditions of detention</div>
+  <div class="chips"><span class="chip">欧洲难民理事会</span><span class="chip">AIDA</span><span class="chip">庇护拘留</span><span class="chip">拘留条件</span><span class="chip">弱势群体</span><span class="chip">欧盟公约</span><span class="chip">比较研究</span></div>
+  <p class="summary"><b>内容提要</b>　发布9-09。欧洲难民与流亡者理事会（欧洲难民理事会）发布AIDA比较报告「边缘之地：拘留场所与条件」，基于21个欧盟成员国与5个非欧盟欧洲国家的庇护信息数据库国别报告，系统评估寻求国际保护者的拘留场所、设施管理、拘留条件与弱势群体处境。报告指出监狱、警察局等不适宜设施被广泛用于行政拘留，生活条件、医疗、户外活动与监督机制存在普遍缺陷，儿童拘留问题突出，警告欧盟移民与庇护公约扩大拘留理由将加剧既有结构性缺陷。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>研究问题：欧洲各国在何处以及以何种条件拘留寻求国际保护者，法律与实践之间存在哪些差距。方法：依托覆盖27个欧洲国家的庇护信息数据库（AIDA），汇总由各国专家在非政府组织、律师与当局协作下撰写并经ECRE核验的国别报告，辅以案头研究，聚焦21个欧盟成员国与5个非欧盟国家。核心发现：一是拘留场所方面，监狱、警察局及其他不适于行政拘留的设施仍被广泛使用，报告建议各国确保拘留设施选址与配置适当，任何扩容都须配套充足资金、人员与保障；二是拘留条件方面，生活条件、医疗（含预防、急诊、专科与心理健康服务）、露天活动空间、律师与非政府组织探视及独立监督均存在不足；三是弱势群体方面，报告强调拘留应为例外措施并基于个体脆弱性评估，主张不拘留儿童，确需拘留时应提供适龄设施、教育与心理支持。结论指出，欧盟移民与庇护公约下拘留条件法律框架虽大体未变，但庇护申请人拘留理由的扩大可能加剧既有结构性缺陷。政策含义：报告呼吁确保拘留替代措施可用并有效适用，加大拘留条件投入，强化监督，摆脱以强制为导向的拘留路径，为欧盟各国落实公约时的拘留合规提供操作基准。</p></details>
+  <div class="meta">
+    <span>来源：<b>欧洲难民与流亡者理事会（ECRE）</b></span>
+    <span>推荐理由：覆盖26国的大型比较研究，直接评估欧盟新公约实施中的拘留合规风险，对欧洲边境治理走向有重要参考价值。</span>
+    <a href="https://ecre.org/aida-comparative-report-at-the-margins-places-and-conditions-of-detention/" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-research-3">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://ecre.org/aida-comparative-report-the-legal-framework-for-the-detention-of-people-seeking-asylum-in-europe/" target="_blank" rel="noopener">欧洲难民理事会梳理26国庇护拘留法律框架</a></h4>
+  </div>
+  <div class="title-en">AIDA Comparative Report – The legal framework for the detention of people seeking asylum in Europe</div>
+  <div class="chips"><span class="chip">欧洲难民理事会</span><span class="chip">AIDA</span><span class="chip">拘留法律框架</span><span class="chip">程序保障</span><span class="chip">拘留替代措施</span><span class="chip">遣返拘留</span><span class="chip">比较法</span></div>
+  <p class="summary"><b>内容提要</b>　发布9-10。欧洲难民与流亡者理事会发布AIDA比较报告「欧洲寻求庇护者拘留的法律框架」，覆盖21个欧盟成员国与5个非欧盟国家，系统梳理拘留、事实拘禁与行动自由限制的概念界定、庇护程序中拘留的合法性与非任意性、拘留替代措施、弱势申请人保护、程序保障以及遣返程序中的拘留制度，与「边缘之地」条件报告构成姊妹篇，为欧盟移民与庇护公约全面实施前夕的法律合规提供全景式参照。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>研究问题：欧洲各国庇护与遣返程序中拘留的法律依据、边界与保障机制如何规定，是否符合国际与欧盟法标准。方法：基于庇护信息数据库（AIDA）27国国别信息，对21个欧盟成员国与5个非欧盟国家的立法与判例进行系统比较，聚焦四大主题：拘留、事实拘禁与自由限制的概念；庇护程序中拘留的合法性、非任意性、替代措施与弱势申请人保护；期限、司法审查与法律援助等程序保障；遣返程序中适用的拘留框架。核心发现：各国对「事实拘禁」的认定与实践差异显著，边境与过境区扣留、押送羁押等变相拘留形式普遍存在；拘留替代措施虽在法律上普遍设立，但适用不足，导致羁押成为默认选项；弱势申请人（包括儿童、幸存者与病患）的特殊保障在法律与实践中均有缺口；遣返程序中拘留门槛较低且审查较弱，随欧盟遣返条例趋严而风险上升。政策含义：报告与条件篇共同构成欧盟公约实施基准，提示成员国在扩大边境程序与快速遣返的背景下，须防范拘留滥用与人权诉讼风险，为立法者、律师与法院提供系统的法律比较依据。</p></details>
+  <div class="meta">
+    <span>来源：<b>欧洲难民与流亡者理事会（ECRE）</b></span>
+    <span>推荐理由：26国拘留法律制度的系统比较，恰逢欧盟公约全面实施与遣返条例改革关键期，法律参考价值突出。</span>
+    <a href="https://ecre.org/aida-comparative-report-the-legal-framework-for-the-detention-of-people-seeking-asylum-in-europe/" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-research-4">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://reporting.unhcr.org/media/fds-thematic-brief-04-multidimensional-poverty-refugees-and-host-communities-south-sudan" target="_blank" rel="noopener">难民署南苏丹调查揭示难民收容社区多维贫困</a></h4>
+  </div>
+  <div class="title-en">FDS Thematic Brief 04 – Multidimensional Poverty of Refugees and Host Communities in South Sudan</div>
+  <div class="chips"><span class="chip">南苏丹</span><span class="chip">多维贫困</span><span class="chip">强制流离失所调查</span><span class="chip">难民</span><span class="chip">收容社区</span><span class="chip">粮食不安全</span><span class="chip">自给自足</span></div>
+  <p class="summary"><b>内容提要</b>　发布9-11。联合国难民署发布南苏丹强制流离失所调查第四期主题简报，聚焦难民与收容社区的多维贫困。简报采用多维贫困指数方法，从教育、健康与生活水平等维度测度剥夺，比较难民、回返者与收容社区的贫困发生率与构成，结果显示相当比例人口处于多维贫困或濒临贫困状态，粮食不安全与收入下滑叠加，苏丹冲突外溢使本已脆弱的收容环境更趋恶化，建议将人道援助与发展投资挂钩以增强自给自足能力。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>研究问题：南苏丹难民与收容社区的多维贫困程度、结构及群体间差异如何。方法：基于难民署强制流离失所调查（FDS）住户数据，该调查是与国际统计标准对接、可跨国别与人群比较的标准化住户调查，本期简报运用多维贫困指数，从教育、健康与生活水平等维度测度剥夺并给出群体间比较。核心发现：难民与收容社区面临相似的结构性困境——此前发布的调查结果显示约74%的难民与收容社区家庭在过去一个月经历饥饿，超过四成家庭各类收入较上年下降；多维贫困测度进一步显示相当比例人口处于多维贫困或易陷于贫困的状态，教育、医疗与基本生活服务的剥夺相互叠加。苏丹战争外溢导致持续涌入（日均一度约1600人）并冲击南苏丹经济，特别是主要输油管道中断，令收容地区资源更趋紧张。政策含义：简报主张将人道援助与稳定和发展项目衔接，推动难民纳入国家服务体系的长期投资，避免资源紧张转化为社区紧张关系；多维贫困数据将为援助瞄准与优先排序提供依据，也为「人道—发展纽带」在南苏丹落地提供量化基础。</p></details>
+  <div class="meta">
+    <span>来源：<b>联合国难民署（UNHCR）</b></span>
+    <span>推荐理由：国际组织标准化住户调查的主题简报，量化证据扎实，服务援助瞄准与政策衔接，属常规重要研究。</span>
+    <a href="https://reporting.unhcr.org/media/fds-thematic-brief-04-multidimensional-poverty-refugees-and-host-communities-south-sudan" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-research-5">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://rsa.tandfonline.com/doi/full/10.1080/1369183X.2026.2732569" target="_blank" rel="noopener">研究揭示微信如何成为中国建筑工人移民基础设施</a></h4>
+  </div>
+  <div class="title-en">WeChat as a migration infrastructure: translocal support mobilisation and digital inequalities among construction migrant workers in urban China</div>
+  <div class="chips"><span class="chip">微信</span><span class="chip">移民基础设施</span><span class="chip">建筑工人</span><span class="chip">跨地方性</span><span class="chip">数字不平等</span><span class="chip">社会支持</span><span class="chip">中国</span></div>
+  <p class="summary"><b>内容提要</b>　发布9-15。「族裔与移民研究期刊」上线开放获取论文，考察微信在中国城市建筑业农民工跨境本地支持动员中的作用。研究基于对成都四个建筑工地34名农民工的半结构化访谈，发现微信帮助工人维系跨地域的家庭、同乡、工地与行业关系网络，获取情感、信息与工具性支持；但教育、年龄、性别与雇佣地位的差异导致微信接入与使用能力分化，形成高度投入型、情感导向型、受限型与不使用型四类用户，揭示了数字不平等在移民支持体系中的再生产机制。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>研究问题：微信如何中介中国建筑业农民工在多重社会空间情境中的跨地方支持动员，群体内部的数字不平等如何塑造这种动员能力。方法：作者来自清华大学、西交利物浦大学与南京大学等机构，在成都四个建筑工地对34名建筑农民工进行半结构化访谈，以跨地方性视角分析工人借助微信管理、维系与拓展分散的家庭与同乡纽带、现工地纽带及更广的行业纽带。核心发现：微信构成一种「移民基础设施」，工人通过它获取情感性、信息性与工具性支持；但收益分配不均，教育、年龄、性别与雇佣位置的交叠塑造了不平等的微信接入与使用能力，据此识别出四类用户：高度投入的管理与班组长型用户、情感导向的体力工人用户、受限用户与不使用用户。研究将数字中介支持与数字不平等纳入跨地方视角，并揭示其嵌入于分包劳动体制之中。政策含义：论文提示，面向农民工的数字服务与社会保障设计须正视群体内部的数字分化，避免以「接入」为中心的政策掩盖使用能力与动员能力的深层差距；对理解平台时代劳动力流动中的支持网络具有方法论启示。</p></details>
+  <div class="meta">
+    <span>来源：<b>族裔与移民研究期刊（JEMS）</b></span>
+    <span>推荐理由：顶刊开放获取论文，聚焦中国国内流动劳动力的数字支持网络，学术价值清晰，与边境安全关联较弱故评常规分。</span>
+    <a href="https://rsa.tandfonline.com/doi/full/10.1080/1369183X.2026.2732569" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+    <div class="sec-foot"><a href="#sec-research" class="collapse-btn" data-collapse="sec-research">▴ 收起本板块</a></div>
+  </div>
+</details>
+  <footer>全球移民与边境安全态势感知日报 · 生成时间 2026-09-23 08:08 · 数据仅供研究参考，观点以原文为准</footer>
+</div>
+<button id="toTop" title="回到顶部">↑</button>
+<script>
+(function() {
+  var secs = Array.prototype.slice.call(document.querySelectorAll('details.section'));
+  // 手风琴：展开一个板块时，自动收起其余板块（解决移动端上方板块无法收起的问题）
+  secs.forEach(function(d) {
+    d.addEventListener('toggle', function() {
+      if (d.open) {
+        secs.forEach(function(o) { if (o !== d) o.open = false; });
+        // 收起上方板块后页面高度变化，滚动对齐当前板块头部
+        setTimeout(function() {
+          var top = d.getBoundingClientRect().top + window.pageYOffset - 52;
+          window.scrollTo({ top: top, behavior: 'smooth' });
+        }, 60);
+      }
+    });
+  });
+  // 锚点跳转（导航条/Top榜/收起按钮）：自动展开目标板块，或收起当前板块
+  document.addEventListener('click', function(e) {
+    var a = e.target.closest('a[href^="#"]');
+    if (!a) return;
+    var id = a.getAttribute('href').slice(1);
+    var el = document.getElementById(id);
+    if (!el) return;
+    e.preventDefault();
+    if (a.hasAttribute('data-collapse')) {
+      el.open = false;
+      var top = el.getBoundingClientRect().top + window.pageYOffset - 52;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+      return;
+    }
+    var sec = el.closest ? (el.matches('details.section') ? el : el.closest('details.section')) : null;
+    if (sec && !sec.open) sec.open = true;
+    setTimeout(function() {
+      var top = el.getBoundingClientRect().top + window.pageYOffset - 52;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+    }, 60);
+  });
+  // 默认展开第一个板块（桌面宽屏），手机端全部收起以便总览
+  if (window.innerWidth >= 768 && secs.length) secs[0].open = true;
+  // 回到顶部按钮
+  var btn = document.getElementById('toTop');
+  window.addEventListener('scroll', function() {
+    btn.style.display = window.pageYOffset > 600 ? 'block' : 'none';
+  });
+  btn.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+})();
+</script>
+<script>
+(function(){
+  var TODAY = [{"a": "item-global_migration-1", "t": "人权观察揭美遣返海地者落地即失援", "e": "Report offers rare insight into the risks and challenges facing US deportees in Haiti", "s": "全球移民管理热点", "r": 4, "k": ["海地", "美国遣返", "临时保护身份", "人权观察", "海地角", "帮派暴力", "人道危机"], "src": "美联社", "u": "https://apnews.com/article/haiti-deported-us-report-human-rights-6f94c9c087d375538779fe0ece4fd2ec", "sum": "事件9-22、报道9-22。人权观察发布报告，首次系统披露被美国遣返至海地人员返乡后的真实处境。报告访谈44名遣返者及多方官员，发现多数人在美羁押期间长时间缺食少水、抵达后随身财物与证件未获归还，登记后即被要求自行谋生，仅获一顿餐食与约77美元补助。自7月底海地临时保护身份终止以来，美国已向海地遣返逾470人，航班均降落北部海地角，因太子港主机场被认定过于危险。海地角市长称该市人口两年内增至逾百万。人权观察呼吁美方立即停止此类遣返。", "b": "美联社9月22日报道，人权观察于本周一发布报告，首次深入记录被美国遣返至海地人员的生存状况。此前遣返者因担心遭帮派报复，长期拒绝接受媒体长篇采访，该报告因此被视为罕见的一手材料。报告核心事实包括：自2026年7月27日美国终止海地临时保护身份以来，美方已遣返超过470人，其中许多人系临时保护身份持有人；因太子港国际机场被认定不安全，遣返航班全部改降北部海地角。海地角市长米歇尔·圣克鲁瓦告诉人权观察，两年间该市人口增长两倍至逾百万，遣返者与国内流离者双双涌入，令本已匮乏的资源更趋紧张。人权观察共访谈44名遣返者及海地与国际官员，并核查8月两班遣返航班的乘客舱单，发现舱单既未标注遣返者的移民身份，也未说明遣返理由。受访者普遍反映，在美羁押期间数小时无食水、数日无法洗漱换衣；抵达海地后财物、证件与现金未获归还；登记后仅获一顿餐食、一杯饮品和约77美元现金，此后即无人跟进。多数受访者称曾在美国佛罗里达、纽约、印第安纳、俄亥俄等州定居二至十四年，从事建筑、医疗护理与制造业，其中有人在美国拥有美国公民配偶或子女。报告同时引述联合国数据指，2023年1月至2026年6月海地至少1.938万人被杀，首都约七成区域处于武装团伙控制之下，未来数月逾25.3万名五岁以下儿童将面临急性营养不良。人权观察美洲高级研究员科特里诺表示，美国正在把部分庇护申请仍在审理中的人遣返至一个无力保护他们的国家，呼吁立即停止。美国移民与海关执法局及国土安全部暂未回应置评请求。该报告为评估美国遣返政策的人道后果提供了首份系统性证据，预计将加剧相关诉讼与国际批评。"}, {"a": "item-global_migration-2", "t": "极右翼人士英海峡割破偷渡艇引谴责", "e": "Far-right activist Daniel Thomas slashes dinghy with blade while rescue worker onboard", "s": "全球移民管理热点", "r": 4, "k": ["英国", "英吉利海峡", "偷渡小艇", "极右翼", "反移民抗议", "边境部队", "寻求庇护者"], "src": "卫报", "u": "https://www.theguardian.com/world/2026/sep/22/far-right-activist-daniel-thomas-slashes-dinghy-with-blade-while-rescue-worker-onboard", "sum": "事件9-22、报道9-22。英国反移民组织「爱国者平台」创始人丹尼尔·托马斯（网名「丹尼·汤莫」）22日在英吉利海峡乘小艇追随两艘载有寻求庇护者的橡皮艇并全程直播，趁救援人员登艇作业时用刀连刺并割破一艘已空的偷渡橡皮艇，当时艇上仍有救援人员，直播吸引约10万人观看，遭难民慈善组织谴责为「暴力且危险」行为。当日约60名移民所乘小艇从法国诺曼底出发后在海上漂泊逾33小时拒法方救援、坚持抵英，英国皇家救生艇协会称部分人员已在水上36小时，创小艇渡海时长纪录。数百名抗议者应托马斯号召聚集汉普郡戈斯波特企图阻拦靠岸，边境部队最终将移民经海路转移至150多英里外的多佛登陆，警方大规模布控。托马斯曾因企图绑架与持刀犯罪服刑两年。", "b": "卫报9月22日报道，英国反移民运动人士丹尼尔·托马斯当天下午乘小艇进入英吉利海峡，直播追踪两艘从法国驶向英国的寻求庇护者橡皮艇。托马斯自称「丹尼·汤莫」，系今夏整合数十个民族主义抗议团体组成的「爱国者平台」发起人，曾因2016年企图绑架罪入狱两年，亦有持刀犯罪前科。当日上午，一批移民乘充气小艇从诺曼底维尔滨海村附近出发，法国海岸警卫队通报约60人在「不稳定状态」下于海上漂泊超过33小时，拒绝法方救援、称「不惜一切代价也要抵达英国」；英国皇家救生艇协会称获救者在水上已36小时，被认为是有记录以来小艇渡海耗时最长的一次，且橡皮艇面临「灾难性解体」风险。托马斯在直播中高喊「把那艘船处理掉」，靠近其中一艘已空置、满载救生衣的橡皮艇后用刀多次刺割艇身，放气声清晰可闻，并叫喊「这是英格兰，这里不再是法国」；发现艇上有一名穿橙色救生衣的救援人员后，又喝令对方「快下船」。其直播吸引约10万观众，随后驾艇逃离。移民慈善组织「移民福利联合委员会」谴责该行为「暴力且危险」；「反种族主义行动」组织指出托马斯本就有持刀犯罪记录。托马斯当天还号召支持者前往预计登陆地汉普郡戈斯波特「阻拦靠岸」，数百人响应，另有人聚集于尚未启用的哈斯勒移民遣返中心外，当地出动大批警车与警力封路维持秩序。但边境部队改变计划，将移民经海路转移至150多英里外的多佛登陆，避免了现场对峙。汉普郡警察与犯罪事务专员琼斯则施压内政部，称汉普郡「没有条件和准备」承接此类登陆，警方应对移民抵达与抗议活动的负担「不可持续」。英国政府发言人回应称，边境安全指挥部将全天候运作，对每一名小艇抵达者实施拘留、核查与处理。此事件标志着有组织的反移民抗议从岸上延伸到海上救援现场，引发对救援人员安全与海峡执法秩序的新一轮担忧。"}, {"a": "item-global_migration-3", "t": "也门战事九月以来新致十三万人流离", "e": "Displacement still rising in Yemen as fighting continues", "s": "全球移民管理热点", "r": 4, "k": ["也门", "胡塞武装", "流离失所", "联合国难民署", "塔伊兹", "曼德海峡", "人道危机"], "src": "国际移民组织（IOM）中东与北非区域办事处", "u": "https://mena.iom.int/news/new-iom-data-nearly-130000-displaced-yemen-due-escalating-conflict", "sum": "事件9-1至9-21、报道9-22。国际移民组织9月21日通报，也门安全局势持续恶化，9月以来已有近13万人逃离家园，许多家庭已不止一次流离。组织9月18日记录的境内流离人数为118086人，三天后新增11352人，攀升至129438人，涉及全国七个省份。塔伊兹省仍是危机中心，收容73494人流离者，占总量逾五成七；拉赫季、亚丁与荷台达等省也接收大量新增流离人口。本轮流离潮与胡塞武装近数周沿红海沿岸快速南下、直抵曼德海峡一带并与也门政府军激战直接相关。截至9月20日晚，已有3106人渡红海抵达吉布提，跨境逃难压力显现。组织区域主任贝尔贝西呼吁国际社会加紧支援流离家庭与收容社区，预警人数将继续攀升。", "b": "国际移民组织中东与北非区域办事处9月21日发布最新境内流离失所监测数据：随着也门战事沿多条战线扩大，9月以来全国七个省份累计记录129438人流离失所（约21573户），其中许多人已经第二次甚至第三次逃离家园。该组织区域主任贝尔贝西表示，人数还在持续攀升——9月18日记录为118086人，仅三天后即新增11352人。分省看，塔伊兹省收容73494人，是危机的震中；拉赫季省33828人次之，亚丁省8946人、荷台达省8244人，阿比扬、哈德拉毛与马里卜等省亦有新增。本轮流离潮的直接背景，是胡塞武装近数周沿也门西海岸快速南下、兵锋直抵红海门户曼德海峡一带，与沙特支持的也门政府军爆发激烈交火，战事范围与强度较此前明显升级。跨境维度同样值得警惕：截至9月20日晚，已有3106人从也门渡过红海抵达吉布提，组织正向其提供紧急援助，并呼吁国际社会加大对流离家庭与收容社区的支持。该组织同日发布的第10期监测数据集显示，自6月本轮局势升级以来累计流离人数已达132330人。分析认为，也门战事若持续向曼德海峡核心区推进，不仅加剧境内流离失所，还可能对红海航运与周边国家的边境安全构成外溢影响，区域人口流动与避难压力未来数周料继续上升。"}, {"a": "item-border_security-1", "t": "两名墨籍在押者转运途中勒喉巡逻特工被控", "e": "2 illegal aliens charged after choking Border Patrol agent in Houston", "s": "全球边境安全热点", "r": 3, "k": ["美国", "边境巡逻队", "休斯敦", "袭击特工", "墨西哥籍", "联邦指控", "移民执法"], "src": "美国海关与边境保护局", "u": "http://cbp.gov/newsroom/national-media-release/2-illegal-aliens-charged-after-choking-border-patrol-agent-houston", "sum": "事件9-22、报道9-22。美国海关与边境保护局通报，两名墨西哥籍无证男子帕德龙·门德斯与帕德龙·巴龙22日在休斯敦地区被边境巡逻队确认无合法身份后押送途中，门德斯挣脱束带解开安全带，从后座用手臂勒住特工颈部，巴龙则下车取回个人物品徒步逃跑。特工随即呼叫支援，两名嫌犯很快被抓回。遇袭特工送医检查治疗后已出院。两人现被控袭击联邦执法人员等罪名重回联邦羁押。官方强调执法部门的快速反应确保了抓捕，事件再度凸显一线边检人员面对的在押人员暴力风险。", "b": "美国海关与边境保护局9月22日发布新闻稿，通报休斯敦地区一起针对边境巡逻特工的暴力袭击事件。涉事两人为29岁的胡安·卡门·帕德龙·门德斯与23岁的胡安·卡洛斯·帕德龙·巴龙，均系墨西哥籍。9月22日，边境巡逻队确认两人非法居留美国后，将其戴上柔性束带押上执法车辆，转运至拘留设施途中，嫌犯门德斯挣脱束带、解开安全带，从后座用手臂环绕并勒住特工颈部；巴龙趁机下车，取回两人个人物品后徒步逃跑。门德斯随后松手并同样弃车逃跑。遇袭特工立即呼叫支援，执法人员迅速将两名嫌犯全部抓获。特工被送往当地医院评估治疗，现已出院。联邦诉状指控两人在羁押转运期间袭击联邦执法人员，现重回联邦羁押候审。海关与边境保护局表示，执法人员反应迅速确保了抓捕，并将全面追究两名嫌犯的刑事责任。该事件发生在特朗普政府强化西南边境与内陆移民执法、在押人员数量高企的背景下，一线特工在单人押送与转运环节暴露出的防护短板再度受到关注；此前已有特工在交通拦截与拘留行动中遭遇袭击甚至伤亡的记录，执法部门亦多次通报在押者袭击、逃脱类案件上升。此类案件一方面被官方用于论证边境执法风险与扩编必要性，另一方面也引发关于羁押转运规程、束带使用标准与双人押送配置是否到位的检讨声音。"}, {"a": "item-border_security-2", "t": "吉兰丹偷渡改走海路 马方拆96座非法码头", "e": "Migrants Turn To Sea Routes To Sneak Into Kelantan - Police", "s": "全球边境安全热点", "r": 3, "k": ["马来西亚", "吉兰丹", "马泰边境", "偷渡", "海上路线", "非法码头", "跨国执法合作"], "src": "马来西亚国家新闻社", "u": "https://www.bernama.com/en/crime_courts/news.php?id=2610270", "sum": "事件9-22、报道9-22。马来西亚吉兰丹州总警长莫哈末尤索夫马末22日在州警察总部月度集会后表示，偷渡入境吉兰丹的外籍人员正更多改用泰国陶公府塔拜一带的海上路线，经吉兰丹河进入境内，而非传统陆路哥乐河边界，陆路安保未因此受影响。警方已加强海上路线监控，并与泰方共享活跃在塔拜地区的团伙情报联合打击。为强化边境管控，警方迄今已拆除96座非法码头，并警告将对新建设施采取行动。他同时呼吁民众勿对缅甸难民或涉嫌违法的移民擅自动用私刑，发现线索应移交执法部门处理。", "b": "马来西亚国家新闻社9月22日报道，吉兰丹州总警长拿督莫哈末尤索夫马末当日在哥打巴鲁州警察总部出席2026年9月月度集会后向记者表示，监测显示偷渡入境吉兰丹的外籍人员路线发生明显转移：偷渡者不再主要经由哥乐河陆路边界，而是更多取道泰国南部陶公府塔拜附近海域，再沿吉兰丹河水路潜入。他强调，这一变化并未影响陆路边境的安保，该段边界仍由普通行动部队、马来西亚武装部队及相关机构联合管控。针对新态势，警方正在加强海上路线监视，并已与泰国当局共享被认定为活跃于塔拜地区的走私团伙情报，以便双方采取进一步行动。在边境基础设施方面，他表示警方迄今已拆除96座非法码头，以收紧边控；一旦发现新建、可能危害安全的类似结构，将一律采取行动拆除。这位总警长还就近期涉移民的社会治安议题表态，呼吁公众不要对缅甸难民或涉嫌违法的外籍移民擅自采取私刑行动，因为此类行为可能引发斗殴等意外事件，也会令执法工作复杂化；他强调警方有能力处理犯罪与边境问题，民众发现线索应直接举报由当局处置。分析认为，吉兰丹此次路线转移通报反映出在马泰陆路围栏与联合巡逻加压后，人口走私网络正向海上与内河通道转移，双方情报共享与水路巡逻能力将成为下一阶段边控重点，亦与马来西亚今年以来持续开展的全国性突查拘捕行动形成内外呼应。"}, {"a": "item-border_security-3", "t": "泰南邦截获三百二十万粒冰毒 扣押运毒车", "e": "Border Police Seize 3.2 Million Methamphetamine Pills, Chase Drug Agent Who Crashed While Fleeing", "s": "全球边境安全热点", "r": 3, "k": ["泰国", "南邦", "冰毒", "边境巡逻警察", "清莱", "毒品走私", "跨境贩毒"], "src": "泰国日报英文版", "u": "https://en.thairath.co.th/news/crime/2961236", "sum": "事件9-21、报道9-22。泰国边境巡逻警察与南邦府旺纽县警方9月21日下午在旺纽至帕尧公路查获一辆翻覆的白色皮卡，车斗15个水果箱内藏约320万粒冰毒，35岁泰籍司机苏帕山被当场拘押。警方20日晚接线报称有人受雇将冰毒自清莱运往中部地区，遂沿线追踪，嫌疑车辆察觉被跟监后加速逃逸，在弯道失控翻覆。嫌犯供称仅受雇运毒，已按一级毒品贩运等罪名移送侦办。清莱至中部走廊近期连成大宗冰毒外运干线，此次为该通道近期最大单案缴获之一。", "b": "泰国日报英文版9月22日报道，泰国边境巡逻警察第327连联合旺纽警察局及南邦府旺纽县级行政机构，于9月21日下午对一辆与贩毒网络有关的翻覆皮卡实施检查，在车斗15个水果箱内起获约320万粒冰毒，35岁泰籍司机苏帕山被当场拘押，涉案车辆与毒品一并扣押。案情显示，警方20日晚接获线报，指有人受雇将大宗冰毒从清莱府运往泰国中部，涉事车辆为曼谷登记的白色三菱皮卡，预计将经南邦旺纽县驶往帕尧方向。缉毒与边境巡逻警力据此布控跟监；司机察觉被追踪后加速逃逸，车辆在弯道失控翻覆。检查中警方在车斗发现藏于水果箱内的大量冰毒。嫌犯初步供称本人仅为受雇运输者，负责将冰毒自清莱运往中部，对货源与收货网络并不掌握。其被控以意图分销的一级毒品（甲基苯丙胺）贩运等罪名，将接受进一步侦办与深挖。此次行动由边境巡逻警察第327连、第32边境巡逻警察师、第三区边境巡逻警察指挥部、旺纽警察局及地方行政机构联合实施。南邦此案所在通道位于清莱至泰国中部的传统贩毒走廊，金三角方向冰毒经泰北入境后南下分销的干线近期已连续发生大宗截获，包括清莱方向的多次追车缴毒行动；本次约320万粒的单案缴获量为该走廊近期之最，显示跨境贩运集团在雨季尾声加快出货，也反映泰方沿干线布设情报线与机动追缉的战术仍在持续加压。案件后续将围绕上线雇主的资金流与通讯记录展开深挖。"}, {"a": "item-border_security-4", "t": "欧美加三十五国联合行动拘四百九十人", "e": "Several dozen transnational criminal networks dismantled in joint operation between EU, Latin America and Caribbean", "s": "全球边境安全热点", "r": 4, "k": ["欧盟", "拉美", "加勒比", "跨国犯罪", "人口贩运", "欧洲刑警组织", "联合执法"], "src": "欧盟对外行动署（EEAS）", "u": "https://www.eeas.europa.eu/delegations/costa-rica/atlas-nexus-la-mayor-operacion-conjunta-ue-lac-desmantela-decenas-de-redes-criminales_und_he", "sum": "事件9-22、报道9-22。欧盟与拉美及加勒比地区迄今规模最大的联合警务行动「阿特拉斯纽带」成果22日公布：跨国拘捕近500人，瓦解数十个跨国犯罪网络。行动由欧盟犯罪威胁多学科平台与加勒比社区犯罪与安全影响执行署共同协调，35国参战，欧洲刑警组织、欧洲边境与海岸警卫局、国际刑警组织、美洲警察组织等机构协作，动用逾8600名警力与司法人员，针对毒品贩运、人口贩运、证件造假、枪支走私与环境犯罪五大重点市场。累计查获毒品约157吨、枪支201支、弹药及爆炸物3190发（枚）、现金与加密货币13.5万美元，解救受害者18人，另查扣野生动物与牲畜803头（只）、房产169处、珠宝464件及伪造证件468份。", "b": "欧洲动态通讯社9月22日报道，欧盟与拉丁美洲、加勒比地区历史上规模最大的联合警务行动「阿特拉斯纽带」当天由官方通报成果：瓦解数十个跨国犯罪网络，跨国拘捕约490人。行动属欧盟犯罪威胁多学科平台框架下「最具威胁犯罪网络与个人」优先行动的跨大西洋协同部分，由欧盟「拉美加勒比缉罪合作计划2.0」提供支持，欧洲边境与海岸警卫局与加勒比社区犯罪与安全影响执行署共同牵头协调，共有拉美、加勒比、欧洲及其他地区35国参与，欧洲刑警组织、国际刑警组织、美洲警察组织、海事分析中心及区域安全系统等机构协同，澳大利亚、黑山、挪威、瑞典、英国与美国亦提供支持，累计动员超过8680名警务与司法人员。行动锁定五大重点犯罪市场：毒品贩运、人口贩运、证件造假、枪支走私与环境犯罪。汇总成果包括：查获各类毒品156.9吨，枪支201支，弹药与爆炸物3131至3190发（枚），现金及加密货币13.5万美元，黄金0.83公斤，野生动物与牲畜803头（只），房产169处，珠宝464件，伪造证件468份，解救人口贩运受害者18人。分国别看，哥斯达黎加拘捕人数最多，约375人；巴拉圭创下大麻查获纪录；爱尔兰方面首次发现并捣毁境内可卡因加工点——去年6月警方在从哥伦比亚进口的木板夹层中查获74公斤可卡因（估值约520万欧元）并起获移动加工设备，7月又在都柏林港借助缉毒犬与移动X光设备从南美冷柜中查获24公斤可卡因，数名嫌疑人已被起诉。法属圭亚那则查处两处非法金矿。分析指出，该行动不同于以往单点缉私，强调打掉网络底层结构与经济基础，人口贩运与偷渡证件造假链条亦在打击范围内，预计相关司法协作与资产追缴将持续推进。"}, {"a": "item-border_security-5", "t": "泰东边境查获五十七件涉赌转移设备", "e": "Cambodia Orders Closure of Gambling Websites, Finds Large Computer Equipment Cache Hidden Near Chanthaburi Border Suspected of Moving Base to Thailand", "s": "全球边境安全热点", "r": 3, "k": ["泰国", "柬埔寨", "尖竹汶", "边境巡查", "网赌设备", "拜林", "走私"], "src": "泰国日报英文版", "u": "https://en.thairath.co.th/news/crime/2961330", "sum": "事件9-22、报道9-22。泰国尖竹汶府边防部队9月22日上午9时许在邦南隆县空艾分区边境种植园巡查时，发现一处无门牌木屋内外可疑堆放大量物品，共起获57件：塑料箱34个、纸箱7个、行李箱8个、麻袋8条，内藏大量电脑设备及配件、个人物品，并查获护照页与记事本等文件。全数物品已扣押送空邦南隆部队详细查验，并协调邦南隆警方依法立案、追查来源。因柬埔寨拜林省9月初下令辖内赌场与网络博彩网站9月30日前停业，近期持续出现设备财物跨境搬运动向，当局初步怀疑该藏匿点系经边境自然通道入境泰国、拟转运腹地前的中转仓库。设备归属、入境路径及是否确与赌场网赌集团有关仍在核查中。", "b": "泰国日报英文版9月22日报道，尖竹汶府与达叻府边防部队经尖竹汶海上任务指挥部、第四海防游骑管制单位及驻空邦南隆第543海防游骑连，于22日上午9时许在尖竹汶府邦南隆县空艾分区第四村边境地带执行巡逻。巡逻人员在种植园内发现一座未悬挂门牌的木屋，屋内及周边可疑地集中堆放着大量塑料箱、纸箱、行李箱与麻袋。执法人员随后协调空艾地方行政机构联合查验，初步清点包括塑料箱34个、纸箱7个、行李箱8个、麻袋8条，合计57件，内装电脑设备与零部件、个人物品及杂物，另发现护照页、记事本等文件，全部物品当场扣押并运回空邦南隆部队驻地详细检查，追查来源，再交邦南隆警察局依法办理并扩大侦查涉案人员。此案背景引人关注：据当地消息，2026年9月初，柬埔寨拜林省当局下令与泰国版帕叻永久性口岸隔境相望的萨拉阁县斯通卡吉乡班帕沙普一带的赌场及网络博彩运营商，须在9月30日前停止营业。此后边境一线持续观察到设备与财物经自然通道从柬埔寨一侧搬运出境的动向。执法人员据此研判，本次起获的大批电脑设备或与赌场、网赌集团向泰国境内转移据点有关，藏匿点疑似设备入境后的临时中转仓库，但尚未排除其他可能。目前核查重点包括全部设备的归属、入境口岸与路径，以及与报称的赌场网赌业务是否存在关联。分析认为，柬西南边境博彩业清退正催生新一轮设备与人员跨境转移潮，泰柬边境一线的巡查、查扣与联合核查将成为下一阶段边境治理重点，此类「设备先行、人员跟进」的迁移模式亦对泰方非法用工与网赌清剿构成新的压力。"}, {"a": "item-usa-1", "t": "马萨诸塞三城移民执法拘捕逾二十四人", "e": "At least 2 dozen immigrants detained in ICE arrest wave across New Bedford, Dartmouth and Fall River", "s": "美国移民与边境管理", "r": 4, "k": ["美国移民与海关执法局", "马萨诸塞", "街头拘捕", "无证移民", "州长问责", "人身保护令", "正当程序"], "src": "WGBH News", "u": "https://www.wgbh.org/news/local/2026-09-22/at-least-2-dozen-immigrants-detained-in-ice-arrest-wave-across-new-bedford-dartmouth-and-fall-river", "sum": "事件9-21、报道9-22。9月21日至22日，美国移民与海关执法局在马萨诸塞州新贝德福德、达特茅斯和福尔里弗三地展开街头拘捕行动，至少24名移民被带走，仅新贝德福德21日单日就至少拘捕12人。目击者称执法人员驾车前后堵截平民车辆，将司机从驾驶座强行带离，被捕者多为在渔厂、超市和建筑工地务工的拉丁裔男子，多数无犯罪记录。社区团体称21日有14辆联邦执法车聚集在达特茅斯商场周边。州长希利公开要求联邦机构立即说明拘捕对象与理由，多名律师连夜向联邦法院提交人身保护令申请，阻止当事人被转移出州。国土安全部回应称，政府正依法推进「史上最大规模驱逐行动」，被遣返者均已获得正当程序。", "b": "本轮行动始于9月21日中午。居民卢卡斯称，她与伴侣从一家非营利机构驾车返家途中被两辆车前后堵死，执法人员拉开驾驶座车门将其伴侣伊克斯库纳强行带走，车内两名三岁和九岁的女儿目睹全程，执法人员留下「给他找律师」一句话即离开。社区经济发展中心执行主任威廉姆斯说，执法小组在加油站、超市等通勤热点定点蹲守，「被针对的因素很明确，就是拉丁裔移民和男性」。危地马拉、洪都拉斯和厄瓜多尔籍人员居多。州长希利22日对媒体表示，许多被捕者已在此生活多年、有家庭，有人被捕时家中还有一个月大的婴儿，也有八岁男孩在校门口等不到父亲，她要求移民与海关执法局立即公布名单与拘捕依据。新贝德福德市长米切尔批评该局即使换了管理层依然「过度扩张」，行动前未通报地方警方，威胁到可能到场警员的安全。国土安全部以未提供具体姓名和出生日期为由拒绝向媒体公布被拘者信息，仅发表声明称正动用一切合法手段执行总统承诺的史上最大规模驱逐行动，并称所有被遣返者均已获得充分正当程序。哈贝斯项目的律师透露，约有二十名志愿者律师参与，已提交十余份人身保护令申请，重点防止被拘者被转移至外州羁押设施。此前联邦法院已多次就无证逮捕问题对该局发布限制令，本轮行动料将引发新一轮司法审查。"}, {"a": "item-usa-2", "t": "议员控执法局阻挠最大拘留营地监督访问", "e": "Democrat says ICE blocked her oversight visit to country's largest detention camp", "s": "美国移民与边境管理", "r": 3, "k": ["国会监督", "拘留营地", "布利斯堡", "骚乱事件", "国土安全部", "正当程序", "透明度"], "src": "The Guardian", "u": "https://www.theguardian.com/us-news/2026/sep/22/texas-democrat-visit-ice-detention-camp-east-montana", "sum": "事件9-22、报道9-22。美国联邦众议员埃斯科瓦尔接受《卫报》专访称，她上月在得克萨斯州布利斯堡军营内「东蒙大拿营地」执行国会监督时，被禁止与任何被拘留移民交谈，申请调阅两起骚乱监控录像也未获提供。该营地是全国最大移民拘留设施，为可容纳五千人的帐篷式营地，国土安全部通报9月1日和7日各发生一起「骚乱」，后一起涉及约130名被拘留者。埃斯科瓦尔指出，承包商两周内两度失去对营区控制却对外淡化，有官员将原因归咎于委内瑞拉籍被拘者「难管」。国土安全部否认阻挠监督，称只要被拘者本人同意即可安排会面，并称部分监督访问属「媒体秀」。去年联邦法官曾就议员探访权诉讼作出支持议员的裁决，但受限情况仍持续发生。", "b": "代表埃尔帕索选区的民主党籍众议员埃斯科瓦尔上月底前往「东蒙大拿营地」考察。这座营地去年夏天在布利斯堡军事基地内仓促搭建，属「软体帐篷」结构，设计收容能力五千人，自启用以来投诉不断。此前数周内该营地先后发生两起被通报的「骚乱」：9月1日，国土安全部称被拘者殴打、脚踢安保人员并投掷平板电脑；9月7日，约130名被拘者投掷物品、掀翻家具、关闭监控摄像头，并拆除了帐篷居住舱之间的隔断，据《埃尔帕索时报》报道，现场有官员拨打911报警。埃斯科瓦尔称，她到访时不获准与任何被拘者交谈，申请的监控录像至今未收到；一名副手将骚乱归因于被拘者国籍，称「委内瑞拉人是难管的人群」。她表示，与第一届政府相比，本届政府期间的国会监督「明显更加困难」，行政当局系统性地阻碍监督。国土安全部回应称，任何议员都可申请与在押者会面，该局并未阻止，还称许多监督访问是「表演行为」，并否认收到过正式的数据与影像调取请求。去年12月，联邦法官曾在议员起诉政府的案件中裁定议员有权进入拘留设施探访，此后仍陆续发生议员被拒或受限的情况。监督团体担忧，营地运营承包商管理失控、信息不透明叠加国会监督受阻，将使被拘者处境进一步脱离公共视线。"}, {"a": "item-usa-3", "t": "众院民主党公布佛州拘留点超员羁押证据", "e": "Whistleblower Claims Florida ICE Facility Held Nearly Seven Times Its Intended Capacity, Detainees Slept Shackled", "s": "美国移民与边境管理", "r": 3, "k": ["吹哨人", "超员羁押", "佛罗里达", "国会调查", "拘押条件", "戴镣睡觉", "众议院监督委员会"], "src": "联邦众议员弗罗斯特办公室（众院监督委员会民主党）", "u": "https://frost.house.gov/media/press-releases/oversight-ranking-members-robert-garcia-bennie-thompson-and-maxwell-frost-demand-answers-from-ice-on-dangerous-conditions-in-florida-immigration-facilities", "sum": "事件9-21、报道9-22。美国国会众议院监督与政府改革委员会民主党籍议员21日公布一名吹哨人提供的照片与指控，称佛罗里达州米拉马尔拘押点设计收容上限为五十人，实际一度关押多达342人，约为设计容量近七倍；部分被拘者被迫戴镣铐睡觉，有年长者每天被束缚长达十六小时。照片显示人员睡在地面与成排折叠床上，移动厕所外溢，有人只能在水管下洗漱。议员称拘押室长期处于设计容量两至三倍状态，高峰时仅三名官员看管三百余人，卫生用品与清洁衣物供应不足。委员会宣布对米拉马尔及奥兰多另一处设施展开调查。此前州运营的佛州湿地拘留中心已被监察长认定不符联邦标准并关闭。", "b": "米拉马尔拘留分所历史上主要承担常规移民报到功能，近期被越来越多地用于实际关押。《迈阿密先驱报》此前调查发现，2025年7月至2026年7月该设施拨打911的次数急剧上升，涉及癫痫发作、呼吸困难和糖尿病急症等。此次公布的吹哨人材料显示，拘押室内马桶堵塞并渗漏至羁押区域，被拘者长期缺乏干净衣物、肥皂等基本卫生用品；照片中数百人挤在仅供短暂停留的「安全通道」内，有人连续多日睡在地面。奥兰多设施方面，吹哨人指控被拘者有时连续两周不能到室外透气、全天戴镣，通风管道内发现黑色霉菌。参与调查的佛州民主党籍众议员弗罗斯特表示，这些指控印证了拘留体系正在「惩罚人而非维护基本人的尊严与正义」的担忧。此次披露发生在美国国土安全部监察长上周认定州运营的「鳄鱼恶魔岛」湿地拘留中心不符合联邦拘留标准、包括使用室外金属笼作为惩罚手段之后，该中心已于六月永久关闭。民主党议员表示将继续传唤文件并要求国土安全部与移民与海关执法局作出说明，共和党方面则强调被关押者多涉重罪指控。佛州历来是联邦拘留与州协作执法的重镇，此番连续曝光料将推动国会层面就拘留容量、承包商责任与医疗救助机制举行新一轮听证。"}, {"a": "item-usa-4", "t": "马里兰代表团限期安全部答复执法争议", "e": "McClain Delaney and Maryland Delegation Demand Independent Investigation After ICE Operation in Frederick", "s": "美国移民与边境管理", "r": 3, "k": ["马里兰", "国会调查", "独立调查", "执法手段", "无证逮捕", "使用武力", "限期答复"], "src": "众议员麦克莱恩·德莱尼办公室", "u": "https://mcclaindelaney.house.gov/media/press-releases/mcclain-delaney-and-maryland-delegation-demand-independent-investigation-after", "sum": "事件9-22、报道9-22。马里兰州国会代表团全体民主党议员致函国土安全部部长马林、移民与海关执法局代理局长文图拉及监察长库法里，要求对9月3日至4日弗雷德里克市执法行动使用的手法立即启动独立、透明调查，并限定10月1日前答复。议员列举的事实包括：联邦执法车辆驶上人行道撞倒一名围观者、警棍击打抗议者、一人被从住宅台阶上拖走，以及一名警官当面复述地方民选官员的姓名、车牌与住址。信函并追问行动是否持有令状、属行政还是司法令状，以及何种武力使用政策允许上述行为。议员援引部门数据称，上月在马里兰与弗吉尼亚为期两周的行动共逮捕1328人，其中近七成无犯罪记录。", "b": "弗雷德里克行动发生在9月3日至4日，约四十小时内集中出现多起争议场面，且均有影像记录。联邦执法车沿人行道行驶撞倒一名旁观者，警员对示威者使用警棍，一名女性地方官员在当面交涉时被执法人员复述其个人信息，被认为带有威慑意味。该州第六选区众议员麦克莱恩·德莱尼牵头，联合参议员范·霍伦、奥索布鲁克斯及霍耶、拉斯金、艾维、姆富米等全体民主党团签署致函。信函向国土安全部部长马林、移民与海关执法局代理局长文图拉和监察长库法里提出四组问题：行动前是否取得令状及其性质；是否允许以车辆驱散和平围观者；地方官员个人信息如何被获取并被当众复述；以及上月起横跨马里兰与弗吉尼亚的两周大规模行动中，1328名被逮捕者里近七成无犯罪记录是否符合「针对最危险分子」的官方口径。议员将答复期限定在10月1日，并强调「社区理应知道谁批准了这次行动」。此前明尼苏达、俄勒冈等地已就无证逮捕与武力使用出现多起联邦诉讼和法官限制令，马里兰此信料成为国会层面对执法手法系统性问责的新一环，监察长办公室是否立案将是下一观察点。"}, {"a": "item-eu-1", "t": "西班牙首相指摩洛哥应对休达边控失效负责", "e": "Spanish PM: Morocco should answer for failure to control irregular migration surge into Ceuta", "s": "欧盟移民与边境管理", "r": 4, "k": ["西班牙", "摩洛哥", "休达", "边境管控", "桑切斯", "申根", "遣返"], "src": "国际在线（央视新闻）", "u": "https://big5.cri.cn/gate/big5/news.cri.cn/20260923/c62f637e-8c87-fae0-afae-3876ca4efcaa.html", "sum": "事件9-22、报道9-22。西班牙首相桑切斯22日在受访时表示，摩洛哥应对7月30日至31日未能有效阻止大批非法移民涌入西班牙北非飞地休达承担责任，称摩方边境管控明显失效，应就此作出解释、纠正错误并采取更多举措，摩洛哥方面暂未回应。西班牙方面估算本轮涌入规模约八万人，主要集中在7月30日，是近年来西班牙最严重的边境移民危机。桑切斯此番直接点名摩洛哥，标志着马德里在休达问题上的公开立场显著趋硬，此前欧洲议会已于17日通过决议要求加强外部边界保护并加快遣返，意西等国也互延了申根内部边检。摩洛哥此前否认介入移民潮，两国围绕边境责任的争执料继续发酵。", "b": "自7月底危机爆发以来，西班牙官方首次由首相层面明确将失控责任归于摩洛哥一侧。桑切斯在采访中说，摩洛哥边境管控「明显失效」，7月30日和31日未能阻止大规模越境，摩方应「给出解释、纠正错误并采取更多举措」。西班牙官方估算约八万人在这轮涌入中进入休达，其中大部分集中在7月30日单日，远超当地八万余人的常住人口承受能力，收容与遣返体系一度濒临崩溃。此前马德里在公开表述上相对克制，强调与拉巴特合作恢复秩序并推进自愿返回，而欧洲议会17日通过的决议除谴责将非法移民作为「混合战争工具」外，也要求欧盟评估西班牙大规模合法化政策对跨境流动的影响，令桑切斯政府内外承压。意大利于8月1日起对来自西班牙的旅客实施边检，西班牙8日起对等回应，双方措施已多轮延长，德奥波等国的内部边检也借机延长至明年三月。摩洛哥方面此前否认介入或放行移民潮，并将责任归于人口走私网络，对西班牙新表态尚未回应。分析人士指出，休达问题正在从边境管理事件演变为欧盟与摩洛哥关系及申根区内互信的双重考验，拉巴特的配合度将直接决定滞留者遣返与营地清空进度。"}, {"a": "item-eu-2", "t": "荷兰安全报告称紧急收容所儿童安置违法", "e": "Urgent help needed for children in emergency asylum shelters, Dutch Safety Board finds", "s": "欧盟移民与边境管理", "r": 4, "k": ["荷兰", "安全调查委员会", "庇护儿童", "紧急收容所", "国际条约", "整改时限", "未成年人保护"], "src": "DutchNews.nl", "u": "https://www.dutchnews.nl/2026/09/urgent-help-needed-for-children-in-emergency-asylum-shelters/", "sum": "事件9-22、报道9-22。荷兰安全调查委员会22日发布历时两年的调查报告，指全国约七千名寻求庇护儿童生活在紧急收容所中，处境不安全且违反国际条约义务，荷兰已「低于最低标准」。报告称，空置办公楼、船只、活动大厅和集装箱住房等临时设施已占全部收容地点的六成，儿童普遍面临噪音、完全缺乏隐私、频繁转移（最多十次）以及遭受身体和性暴力的高风险，部分无人陪伴未成年人出现自伤与自杀倾向，平均滞留约八个月远超规定的六个月上限。委员会要求庇护与移民事务部长范登布林克在六个月内推行全面整改，包括设定紧急收容最长时限、整治危险点位并结构性压缩对临时收容的依赖，同时致函全体市议员吁地方尽责。", "b": "荷兰安全调查委员会以调查重大事故见长，此次将职权延伸至庇护接待领域的「日常安全」。报告显示，2023年监察机构首次警告以来，紧急收容所中儿童数量从约四千人增至逾七千人，几乎翻倍，结构性问题不降反升。主席范达姆表示，「紧急收容本非常态，最初只是短期安排，如今儿童有时要在这种环境里生活数年」。报告列举的具体危害包括：房间仅以隔板分隔、毫无隐私，噪音持续，淋浴与厕所设施常常不合格，儿童在短时间内被反复转移、最高达十次，无法正常上学，疫苗接种与传染病筛查出现缺口；无人陪伴未成年人中出现自伤乃至自杀倾向。委员会将此定性为「宪政国家不可饶恕的结构性疏忽」，根子在于「政治意愿与行政能力双重缺乏」，并批评管理方陷入「危机无法控制」的接受逻辑。委员会提出三条整改路径：短期内盘点并消除收容所内所有危险点位，无法整改的须转移儿童；为儿童在紧急收容的最长时限设定硬性上限；以结构性方案逐步摆脱对临时收容的高度依赖。委员会同步向全国市政议员发出公开信，呼吁各市讨论自身可为改善儿童安全做什么。庇护与移民事务部长范登布林克22日表示将尽快正式回应，围绕《分配收容法》的府会博弈料随之升温。"}, {"a": "item-eu-3", "t": "五国力推境外遣返中心 将议欧盟预算出资", "e": "Next EU budget should finance migration solutions, Greek deputy minister says", "s": "欧盟移民与边境管理", "r": 4, "k": ["境外遣返中心", "欧盟预算", "希腊", "五国联盟", "遣返条例", "布鲁纳", "移民外交"], "src": "Euronews", "u": "https://www.euronews.com/video/2026/09/22/next-eu-budget-should-finance-migration-solutions-greek-deputy-minister-says", "sum": "事件9-22、报道9-22。希腊外交部副部长哈齐瓦西利乌22日对欧洲新闻台表示，欧盟须为境外遣返中心等「创新性」移民解决方案筹措足够资源，正在谈判中的下一份欧盟长期预算可望提供资金答案。由希腊、奥地利、丹麦、德国和荷兰组成的五国阵营正加紧推动设立境外遣返中心，此前六月获批的新遣返条例允许成员国与第三国达成双边协议；按现行规则遣返中心由成员国全额出资，随长期预算谈判推进，要求布鲁塞尔分摊费用的呼声渐高。五国定于本周六在慕尼黑一场有17名欧盟成员国移民部长及欧盟移民事务委员布鲁纳出席的会议间隙复会，力争年内敲定首批外部协议、明年投入运营。法国与西班牙则公开反对该路线。", "b": "哈齐瓦西利乌在访谈中说，「如果我们决定推行任何创新性的移民方案，就意味着欧洲必须找到相应资源」，并点明下一份多年期财政框架谈判正处关键期，欧盟层面出资或成破局关键。欧盟六月完成对遣返规则的大修后，成员国获准与第三国签订协议、在其领土设立遣返中心，但费用须由推动国自担，还可辅以资金、商业合作等激励争取第三国接受。据报道，逾半数成员国近日联署呼吁就此采取紧急协调行动，乌干达等非洲及亚洲国家在潜在伙伴名单之列，埃及与利比亚因人口贩运风险被从初选中剔除。希腊移民部门证实双边接触正在进行，五国阵营的目标是在年底前达成首批外部协议、明年实现中心运营。同时阻力明显：法国总统马克龙在欧盟峰会后明确反对以欧盟资金建设或维持此类中心，称「不确信那是我们想要的欧洲，也不确信它有效」；西班牙亦持反对立场。按规则，任何实施转移的成员国须事先向欧盟委员会及其他成员国正式通报。本周六慕尼黑会议间隙的复会将是五国阵营首次在如此多部长与布鲁纳在场的情况下协调立场，欧盟预算是否纳入遣返中心开支，料成为年底前欧盟移民政策博弈的焦点之一。"}, {"a": "item-eu-4", "t": "拉脱维亚前八月庇护申请过千多经白俄入境", "e": "1,100 people applied for asylum in Latvia in eight months: most arrived via Belarus", "s": "欧盟移民与边境管理", "r": 3, "k": ["拉脱维亚", "庇护申请", "白俄罗斯", "东部边境", "安全状态", "边防", "混合威胁"], "src": "BB.LV", "u": "https://news.inbox.eu/150s0as-a-law-allowing-for-a-rapid-increase-in-transit-fees-for-russian-grain-has-come-into-effect-in-latvia", "sum": "事件9-22、报道9-22。拉脱维亚公民与移民事务局局长扬索内-舒尔迈斯特雷22日在电视节目中通报，今年前八个月全国共受理1100份初次庇护申请，另有100份重复申请和155份恢复程序请求，申请者以阿富汗、巴基斯坦、索马里和埃及公民居多，绝大多数经白俄罗斯方向入境；获得国际保护者仅占少数。她指出，东部边境持续承压是申请数量变化的关键背景，政府已将卢扎、克拉斯拉瓦、陶格夫匹尔斯等边境地区的强化安全状态延长至2026年底。边防部门通报，去年共阻止12046起非法越境企图，其中仅31人出于人道原因获准入境，而2024年为5388起、26人获准，越境压力呈持续攀升态势。", "b": "拉脱维亚公民与移民事务事务局负责人在「900秒」节目中披露的年度中期数据显示，庇护申请规模虽远不及南欧边境国家，但构成与路线高度集中：初次申请1100份，另含100份重复申请与155份恢复程序请求，来源国前四位为阿富汗、巴基斯坦、索马里和埃及，绝大多数经由白俄罗斯一侧进入。局长强调，多数申请人未满足法律规定的国际保护条件，获批者仅占少数。与申请数据同步的是边境态势：国家边防部门通报，去年阻止非法越境企图12046起，其中仅31人出于人道考虑获准入境；2024年这两个数字分别为5388起和26人，两年间阻止次数翻倍有余。为应对压力，政府已把卢扎、克拉斯拉瓦、奥格斯道加瓦、陶格夫匹尔斯及雷泽克涅部分教区的强化安全状态延长至2026年12月31日，措施涵盖通行限制与查验强化。拉脱维亚长期将明斯克方面的有组织推送定性为针对全欧的混合威胁，此次官方数据发布正值波兰宣布10月起对德、立陶宛方向恢复边检至明年3月底、欧盟内部就东部边境安全与申根平衡再起讨论之际，波罗的海一线的边境压力与庇护审批之间的联动料继续成为欧盟东部政策议程的常设议题。"}, {"a": "item-eu-5", "t": "诺曼底六十人橡皮艇被护送横渡海峡逾一天", "e": "Migrant dinghy with around 60 on board escorted across Channel after more than 24 hours at sea", "s": "欧盟移民与边境管理", "r": 3, "k": ["英吉利海峡", "诺曼底", "超大型橡皮艇", "护送", "边境部队", "偷渡路线西移", "法国海事部门"], "src": "The Independent", "u": "https://www.the-independent.com/bulletin/news/migrant-dinghy-boat-channel-rnli-rescue-b3054445.html", "sum": "事件9-21、报道9-22。一艘载有约六十人的超大型充气艇21日上午从法国诺曼底贝桑附近海滨出发，途中又在东行三十英里处搭载11人，仅凭一台小舷机在海上漂航超过24小时。法国海事部门下令四艘救生艇与「自由蜜蜂」号拖轮全程护送而不拦截，英国方面出动黑斯廷斯与伊斯特本两艘救生艇及海岸警卫队飞机接应，被救人员随后移交边境部队。救援方称小艇状况很差、吃水极浅。此为继本月早些时候140人小艇从诺曼底创纪录抵英后，偷渡团伙西移发船点、以远航线规避加莱重点监控的又一例。英国内政部数据显示今年迄今约17480人渡海抵英，同比下降46%。", "b": "该艇21日上午十时前不久从贝桑附近的波尔昂贝桑港出发，据信首载约五十人，晚间在向东三十英里的「花岸」又接上十一人，合计逾六十人。救援人员描述小艇「状况很差、吃水极浅，只有一台小舷机」，因洋流与风力一度沿法国海岸漂行而未直驶英国。法国海事部门称，行动由格里斯内角海事救援协调中心指挥，属搜救义务与国际海洋法框架内的护航；四艘法国全国海上救生协会救生艇与拖轮「自由蜜蜂」号全程随行。英国海事与海岸警卫队署应请求派出黑斯廷斯、伊斯特本两艘救生艇并起飞固定翼飞机，将人员接驳后移交边境部队处理。此次航线距传统多佛海峡走廊远得多，从诺曼底出发的单程可达一百英里、约为加莱至多佛的四倍。此前本月初一艘46英尺「超大型橡皮艇」载140人从诺曼底完成约七十英里航程抵达朴次茅斯，引发沿岸城镇对峙与抗议，官员当时称属一次性事件，而连续两次西向发船显示走私团伙正系统性转移发射点以规避加莱、敦刻尔克的强监控。英国防务国务大臣波拉德称边境「安全但需要更强」，内政部已就周一另一艘小艇在肯特福克斯通一年来首次未被察觉登陆一事展开调查。今年迄今渡海抵英约17480人，较去年同期下降46%，但单船规模与航线半径均在扩大，法方已开始划毁小艇、没收舷机以压缩供给链。"}, {"a": "item-eu-6", "t": "欧盟密件警示乌克兰返乡人员武器扩散风险", "e": "EU capitals find weapon parts on returning fighters, confidential Council report warns", "s": "欧盟移民与边境管理", "r": 3, "k": ["欧盟理事会", "机密报告", "乌克兰", "武器走私", "申根", "常驻代表委员会", "边境查验"], "src": "欧洲新闻台（Euronews独家）", "u": "https://www.euronews.com/my-europe/2026/09/22/exclusive-eu-countries-sound-alarm-over-weapons-brought-back-from-ukraine-front-line", "sum": "事件9-22、报道9-22。欧洲新闻台22日援引欧盟理事会一份机密报告称，多个成员国在从乌克兰前线返乡的作战人员身上查获武器部件与军事装备，文件认为这表明存在武器部件或装备自乌克兰战场走私入欧的潜在风险。欧盟成员国常驻代表委员会定于23日开会讨论枪支自乌克兰向成员国走私的问题。文件显示，接收大量乌克兰难民的国家如德国、波兰和捷克情况尤其令人担忧；由于申根区内缺乏内部边境管制，欧洲当局将此视为全欧共同问题。该议题与近期多国延长申根内部边检、强化口岸查验的动向相互呼应，料推动成员国在武器查验与情报共享上加码。", "b": "这份理事会文件由欧洲新闻台获得并披露。文件称，成员国报告在从乌克兰前线返回的作战人员身上「发现武器部件和军事装备」，此类案例表明「武器部件或其他装备可能从乌克兰战场走私到欧盟」的潜在风险。常驻代表委员会计划于9月23日就枪支自乌克兰向成员国走私问题进行专门讨论。文件点名接收乌克兰难民较多的德国、波兰和捷克为尤其令人担忧的国家，同时强调，由于申根区内人员自由流动、缺乏系统性内部边境管制，任何成员国的查获都应被视为牵动全欧的共同问题，需要跨境情报协同应对。此前奥地利、德国、波兰、丹麦等国已以移民压力与安全形势为由将申根内部边检延长至2027年3月，意大利、西班牙围绕休达危机亦互延对彼此空海口岸的检查；此次密件披露或为内部边检延续提供新的安全论证，也将考验欧盟在武器禁运、难民身份甄别与口岸抽检之间的平衡。边防与警务专家指出，返乡人员的行李抽检、邮递渠道查缉与武器零部件溯源将是后续重点，23日常驻代表委员会的讨论结果及是否形成新的行动建议值得跟踪。"}, {"a": "item-china_neighbors-1", "t": "朝鲜亚运代表团两名成员拟在日寻求庇护", "e": "Two North Korea members of Asian Games seek asylum in Japan, report says", "s": "中国周边国家动态", "r": 4, "k": "朝鲜, 亚运会, 庇护, 日本, 名古屋, 代表团, 投诚", "src": "路透社／印度教徒报", "u": "https://www.thehindu.com/news/international/two-north-korea-members-of-asian-games-seek-asylum-in-japan-report-says/article71494990.ece", "sum": "事件9-22、报道9-22。韩国《月刊朝鲜》9月22日援引一名自称与日本内阁情报调查室有关的知情人士报道，参加爱知·名古屋亚运会的朝鲜代表团中两名成员正寻求在日本申请庇护，并明确表示倾向留日而非前往韩国，已表达不返回朝鲜的意愿。两人身份和在代表团内职务未公开，此次接触最终是否会发展为正式投诚或庇护申请尚不明确。朝鲜此次派出约180名运动员和官员参赛，包括体育相金日国，系时隔41年来最大规模访日代表团。路透社等国际媒体当日跟进报道，因日本假期，政府方面暂无法回应。", "b": "韩国《月刊朝鲜》杂志9月22日报道称，正在日本参加2026年爱知·名古屋亚洲运动会的朝鲜代表团中，有两名成员正在寻求在日本申请庇护。该报道的消息来源是一名被描述为与日本内阁情报调查室有关、同时与亲平壤的在日朝鲜人总联合会有关联的人士。报道指出，这两人属于规模约180人的朝鲜代表团，他们表达了倾向在日本而非韩国申请庇护的意愿，并已向外界传达不打算返回朝鲜的态度。两人的具体身份和在代表团中的职务均未对外披露，其接触行为是否会最终演变为正式的投诚事件或庇护申请，目前仍不确定。朝鲜此次派出包括体育相（相当于部长）金日国在内的约180名运动员和官员赴日参赛，是1985年以来朝鲜时隔41年最大规模的访日团队。此前日本原则上限制朝鲜国籍者入境，国际体育赛事为例外通道。路透社当日跟进报道并指出，因日本国内假期，日方政府部门暂无法就此事置评。媒体分析认为，此事若坐实，将成为近年来罕见的朝鲜人员在高规格外交体育场合脱离事件，可能对朝日接触氛围及代表团安全管理安排产生影响；但也有观察者对消息源单一、报道路径提出疑问，提醒在申请正式提交前需保持审慎。"}, {"a": "item-china_neighbors-2", "t": "印度使馆警示国人勿借免签赴马寻工", "e": "Indian Mission in Kuala Lumpur Warns Against Visa Free Job Hunting", "s": "中国周边国家动态", "r": 3, "k": "印度, 马来西亚, 免签, 务工警示, 中介欺诈, 数字入境卡", "src": "马来西亚国家通讯社（Bernama）", "u": "https://www.bernama.com/en/world/news.php?id=2610220", "sum": "事件9-22、报道9-22。印度驻吉隆坡高级专员公署9月22日发布公告，明确警示印度公民不得利用马来西亚30天免签便利入境寻找工作。公告指出，近期以免签身份抵马后求职的印度公民明显增多，其中不少人受不良中介「保证高薪职位」等虚假承诺误导。公告强调该免签便利仅适用于旅游和社会探访，借此务工明显违反马来西亚移民法规，后果包括逾期滞留、沦为非法身份、遭受剥削、被拘留及法律追责。赴马务工者须在出发前取得有效工作许可或参考签证（签证附函），并提醒旅客在抵马前3天内提交马来西亚数字入境卡、确保护照有效期不少于6个月、备妥回程机票与酒店订单。", "b": "印度驻吉隆坡高级专员公署于9月22日发布正式警示公告，针对印度公民利用马来西亚30天免签入境政策赴马求职的现象作出明确规劝。公告指出，使馆注意到以免签旅游身份抵马后试图找工作的印度公民数量出现明显上升，背后多有不良中介运作，以「免签入境、落地高薪」等不实承诺招揽。使馆强调，马来西亚免签政策覆盖范围仅为旅游与社会探访，以此为目的进入后寻找工作属于明显违反当地移民法规的行为，可能导致的后果包括逾期滞留、身份非法化、遭受雇主或中介剥削、被拘留、被遣返以及面临法律诉讼。使馆要求所有拟赴马务工人员在出发前必须通过马来西亚雇主担保取得工作许可或附函签证，切勿相信可在马境内将旅游身份转为工作身份的说法。公告同时提醒普通游客，出发前3天内须在线提交马来西亚数字入境卡，护照有效期须不少于6个月，并应携带确认的回程机票与住宿凭证备查。业内人士指出，此类警示通常与领区求助案件上升直接相关，反映南亚劳工经由东南亚中介链条赴马务工的灰色渠道依然活跃，印马两国在劳务信息互通与中介监管上的协调需求进一步上升。"}, {"a": "item-china_neighbors-3", "t": "尼泊尔两月逾13万人获外劳审批赴海外", "e": "Over 130,000 Nepalis Seek Foreign Employment In Two Months", "s": "中国周边国家动态", "r": 3, "k": "尼泊尔, 外劳, 劳务输出, 阿联酋, 劳工审批, 侨汇", "src": "Aarthik News（尼泊尔）", "u": "https://english.aarthiknews.com/news/detail/20310", "sum": "事件9-22、报道9-22。尼泊尔外国就业司9月22日发布的统计显示，本财年前两个月（7月中旬至9月中旬）共有130,483人获得出境务工最终审批，其中沙旺月70,441人、巴德拉月60,042人（含新批35,627人、续签24,415人），两月合计同比上财年同期下降4.11%。巴德拉月新批人员中男性29,984人、女性5,643人；经中介公司出国者25,415人，个人渠道9,224人，政府间协定渠道866人（韩国789人、以色列77人）。阿联酋为当月最大目的地（18,477人），其后为卡塔尔、马来西亚、沙特、科威特。技术工人占比达56.9%，首次过半。", "b": "据尼泊尔外国就业司9月22日公布的最新统计，本财年（2026/27）前两个月申请并取得海外就业最终审批的尼泊尔公民达130,483人，延续高位外流态势。其中沙旺月（7月中旬至8月中旬）70,441人，巴德拉月（8月中旬至9月中旬）60,042人；巴德拉月新获批者35,627人，续签者24,415人，显示每月仍有超过3.5万名首次出境务工者成行。与上财年同期136,082人的审批总量相比下降约4.11%，其中经中介公司办理的新批人数由33,001人降至25,415人，减少约7,600人，反映正规中介渠道吸纳能力收缩。目的地结构方面，阿联酋以18,477人居首，占当月审批总量近31%，卡塔尔10,471人、马来西亚8,091人、沙特6,787人、科威特3,898人紧随其后；日本、罗马尼亚、阿曼、韩国、土耳其等国规模较小但呈多元化。技能结构出现值得关注的变化：巴德拉月获批者中技术工人34,167人，占比56.9%，首次过半，但非技术及半技术工人合计仍超过25,000人。审批人数较集中的原籍地为马德西省与戈西省。业内分析指出，海外就业依然是尼泊尔家庭生计与侨汇的支柱，侨汇流入支撑外汇与消费，但低技能岗位集中、中介费用与权益保障问题仍然突出，劳务治理与技能提升是改善输出质量的关键。"}, {"a": "item-china_neighbors-4", "t": "吉尔吉斯斯坦大赦结束万余外侨离境", "e": "Kyrgyzstan Reports 11,000 Foreign Nationals Departed Under Recent Immigration Amnesty", "s": "中国周边国家动态", "r": 3, "k": "吉尔吉斯斯坦, 移民大赦, 逾期居留, 免签收紧, 再入境禁令, 绿色通道", "src": "Streamline Feed（援引吉尔吉斯斯坦政府通报）", "u": "https://streamlinefeed.co.ke/news/kyrgyzstan-reports-11000-foreign-nationals-departed-under-immigration-amnesty", "sum": "事件9-22、报道9-22。吉尔吉斯斯坦政府9月22日（周二）通报，7月1日至31日运行的「绿色通道」自愿离境程序共促使约11,000名逾期居留的外国公民及无国籍人员离境，期间免收行政罚款与出境签证国家规费。该程序依据总统扎帕罗夫签署的第233号令设立，适用于签证过期、居留许可被撤销、登记失效或申报目的与实际活动不符者，但不适用于涉刑事案件、有生效判决或欠税人员。9月起内阁以第855号决议收紧免签规则，将部分国家公民免签停留限定为60天内不超30天，并规定逾期居留将自动触发与免签期对应的再入境禁令。劳动部同日承认，家政服务业目前几乎没有合法雇佣的外籍劳工。", "b": "吉尔吉斯斯坦政府9月22日通报「绿色通道」移民大赦的最终成果：约11,000名违反居留规定的外国公民与无国籍人员在大赦期内自愿离境。该临时程序依据总统扎帕罗夫签署的第233号令，于7月1日至31日运行31天，允许签证过期、居留许可被撤销、登记失效或实际活动与申报目的不符者在免于行政罚款和出境签证国家规费的条件下离开。当事人需先向属地警局申领无违法证明，再经电子签证门户申办出境签证；涉刑事程序、有生效法院判决或欠税者被排除在外。官方强调大赦仅为自愿离境机制，并非合法化连续居留的途径。大赦结束后，执法于9月起全面恢复并显著收紧：内阁第855号决议将部分国家公民的免签停留上限设定为60天内累计不超过30天，实质终结「跑签」操作，逾期居留者将自动面临与原免签期长度对应的再入境禁令。当局同时推动数字化管理，将移民违规信息接入边境管控系统，逐步建立外籍居民综合数据库。劳动部在周二的通报中直言，目前家政服务业几乎没有一名外籍工人是合法雇佣，暴露劳动力需求与严格移民框架之间的落差。分析认为，吉尔吉斯斯坦正从周期性宽赦转向常态化严管，雇主合规压力将明显上升。"}, {"a": "item-global_south-1", "t": "突尼斯外海天然气平台31名移民被困获救", "e": "Migrants rescued from energy platform off Tunisia after four days, charity says", "s": "全球南方国家动态", "r": 3, "k": "突尼斯, 地中海, 海上救援, 移民, 海上观察, 利比亚, 天然气平台", "src": "路透社（经MarketScreener转载）", "u": "https://ae.marketscreener.com/news/latest/Migrants-rescued-from-energy-platform-off-Tunisia-after-four-days-charity-says-49220900/", "sum": "事件9-19、报道9-22。海上救援组织「海上观察」9月22日（周二）通报，其快速救援船「极光号」当日清晨自意大利兰佩杜萨岛出发，将被困突尼斯外海米斯卡尔天然气平台4天的30余名移民（含两名儿童）救起，全员现获照护。该组织侦察机周六发现这批人员时，附近漂浮着一只空橡皮艇；他们所乘橡皮艇自利比亚出发后漂流失控，被困平台期间「暴露于寒冷中四天、无人照料」。移民求助热线称周日与被困者通话时，已有一人死亡、多人患病。该组织批评海上救援缺位致险情拖延。", "b": "国际救援组织「海上观察」9月22日宣布，其驻兰佩杜萨的快速救援船「极光号」当天早晨驶往突尼斯外海，将受困于米斯卡尔天然气平台的30余名移民救起，其中包括两名儿童。该组织的侦察机于周六（9月19日前后）发现这群人站在平台上，平台附近海面漂着一只空的橡皮艇——他们乘该艇逃离利比亚途中发动机失效漂流，最终攀上平台被困整整四天。组织声明称，被困期间这些人「暴露在寒冷之中、四天无人施救」；移民求助热线「警报电话」周一透露，周日与被困者通话时对方称已有一人死亡、多人身体不适。周二上午完成救援后，「海上观察」表示所有人员已脱离险境并由船员照护。这一事件再次凸显地中海中部航线的高危属性：突尼斯与利比亚海岸外油气设施近年多次成为漂流移民的临时栖身点，而沿岸国家搜救响应迟缓、欧洲与北非国家间的拦截遣返合作受人权组织批评，使此类险情从发现到获救往往拖延数日。分析人士指出，尽管今年以来地中海海路抵达欧洲总人数下降，但单次事故的死亡风险不降反升，海上搜救责任与国家义务之争仍是欧盟与北非国家之间最敏感的移民议题之一。"}, {"a": "item-global_south-2", "t": "联合国专家指尼加拉瓜镇压驱动民众外流", "e": "Nicaragua: democracy 'dismantled', political opponents disappeared", "s": "全球南方国家动态", "r": 2, "k": "尼加拉瓜, 联合国人权理事会, 强迫失踪, 政治镇压, 难民外流, 中美洲", "src": "联合国新闻", "u": "https://news.un.org/en/audio/2026/09/1168396", "sum": "事件9-22、报道9-22。联合国人权理事会任命的尼加拉瓜独立人权专家小组9月22日在日内瓦发布新报告并举行记者会，指尼加拉瓜民主治理基础已「被拆除」：自2018年以来记录逾150起强迫失踪案件，其中近30人至今下落不明；被拘留的反对者死于国家拘押之中。牵头专家西蒙表示，强迫失踪已被「武器化」用于压制异见、控制人口；专家布罗迪举例指原住民权益人士里维埃拉被拘押直至今年5月死亡。报告还详述拘留条件恶劣、医疗缺失及任意拘押受害者的处境。尼加拉瓜近年政局持续收紧，数十万人出逃哥斯达黎加、美国等地寻求庇护，成为中美洲重要的人口外流来源之一。", "b": "联合国人权理事会任命的尼加拉瓜独立人权专家小组9月22日在日内瓦发布最新报告并在记者会上通报结论。牵头专家扬-迈克尔·西蒙表示，自2018年以来专家小组已记录超过150起强迫失踪案件，其中约30人至今下落不明；强迫失踪被「武器化」用以压制异见、控制人口。专家里德·布罗迪举例称，曾在加勒比海岸为原住民集体权利奔走的布鲁克林·里维埃拉遭当局「上门」拘押，直至今年5月在关押中死亡。报告指出，两个月前尼加拉瓜联合总统奥尔特加宣布终结竞争性选举，「关键不在于宣布本身，而在于民主治理的基础早已被拆除」；报告并详述被拘押者面临的恶劣羁押条件、缺乏医疗保障及任意拘押的普遍化。专家们指出，镇压机器的持续运转在尼加拉瓜社会制造弥漫性恐惧，是天主教会、学生、原住民、农民运动等群体成员及其家属选择出逃的重要推力；近年来数十万尼加拉瓜人前往哥斯达黎加、美国、西班牙等国寻求庇护或居留，使尼加拉瓜成为中美洲仅次于委内瑞拉危机区域的重要人口外流来源。随着奥尔特加政府宣布终结竞争性选举，专家警告强迫失踪、任意拘押与跨国镇压可能进一步加剧，流离规模与跨境庇护需求或继续上升。"}, {"a": "item-global_south-3", "t": "刚果（金）史上最重埃博拉疫情 移民组织急筹款", "e": "IOM Chief Calls for Urgent Support as DRC Faces Largest Ebola Outbreak on Record", "s": "全球南方国家动态", "r": 2, "k": "刚果（金）, 埃博拉, 国际移民组织, 人口流动监测, 边境筛查, 跨境传播, 人道资金", "src": "国际移民组织（IOM）", "u": "https://www.iom.int/news/iom-chief-calls-urgent-support-drc-faces-largest-ebola-outbreak-record", "sum": "事件9-22、报道9-22。国际移民组织9月22日在日内瓦/内罗毕发布通报，总干事波普表示刚果（金）本轮埃博拉疫情已确认为该国史上最大规模：自2026年5月宣布疫情以来，确诊病例已超过7400例，世卫组织截至9月16日统计死亡逾3600人，疫情叠加武装冲突与大规模流离失所令应对雪上加霜。移民组织正依托人口流动测绘与流量监测，在刚果（金）主要交通线、刚果河沿岸及边境口岸强化疾病监测，本德-本德检查点日均筛查约1000名旅客，区域内累计支持完成逾3300万人次健康筛查，并与乌干达、南苏丹、布隆迪、卢旺达、中非共和国等邻国协同防范跨境传播。移民组织为多国埃博拉防范应对计划寻求1.1亿美元资金，目前仅到位2960万美元。", "b": "国际移民组织总干事艾米·波普9月22日通报，刚果（金）本迪布焦型埃博拉疫情已成为该国历史上规模最大的埃博拉疫情：疫情于2026年5月宣布，截至通报日确诊病例超过7400例，世卫组织截至9月16日记录死亡逾3600人，波普指出疫情发生在冲突持续、人口大规模流离失所的地区，家庭本已承受冲突与危机之苦，疫情令处境更加艰难。应对层面，移民组织将卫生监测嵌入人口流动治理：通过人口流动测绘与流量监测识别高风险流动走廊、边境社区、口岸及非正规过境点，协助当局精准布防；在刚果河这条通往金沙萨的关键水路沿线及流离失所者安置点扩大监测，其中本德-本德检查点日均筛查约1000名旅客；本轮疫情期间已累计支持完成超过3300万人次健康筛查。波普强调「病毒不会停在边境」，移民组织正与乌干达、南苏丹、布隆迪、卢旺达、中非共和国等邻国政府与伙伴协作强化防范，降低跨境传播风险；此前该组织数据显示，仅伊图里省每天即有逾1.6万人穿越边境，疫情亦曾一度外溢至乌干达。资金方面，移民组织为多国埃博拉防范与应对计划寻求1.1亿美元，目前仅收到2960万美元，不足三分之一；波普警告若资金缺口不能弥合，关键流动路线上的监测体系将难以为继。分析认为，刚果（金）东部冲突与流离失所叠加疫情，正使跨境人口流动成为区域公共卫生与边境安全交织的复合议题，口岸卫生筛查能力与周边国家联防机制面临持续考验。"}, {"a": "item-tech-1", "t": "美扩展远程身份核验测试 纳入深伪与AI证件检测", "e": "DHS expands Remote Identity Validation Rally to deepfakes and AI-generated IDs", "s": "移民与边境技术", "r": 4, "k": ["国土安全部", "远程身份核验", "深度伪造", "AI伪造证件", "生物识别", "技术挑战赛", "身份欺诈"], "src": "美国国土安全部科技司", "u": "https://dhs.gov/science-and-technology/news/2026/09/21/st-launches-industry-competition-develop-revolutionary-identity-verification-tech", "sum": "「事件9-21（美东时间）、报道9-22（北京时间）」美国国土安全部科技司9月21日在华盛顿宣布扩展2026年度「远程身份核验挑战赛」，首次将生物特征深度伪造检测纳入官方测试范围，并扩大证件真伪鉴别攻击库。根据公告，10月开放证件真伪识别与自拍摄人脸比对两类报名，11月向机构征集深度伪造攻击样本用于构建测试数据集，12月开放呈现攻击检测与生物特征深伪检测赛道。本轮测试还将引入更多国家真实与伪造护照、驾照样本及更复杂攻击手法，用于评估商业身份核验系统在真实条件下的表现。此前2025年度测试结果显示，多数系统在最严苛条件下接受伪造证件的比例高达五至七成，仅一家厂商三项指标全部达标。该赛事结果将直接影响美国政府部门远程开户、签证与移民身份核验技术标准的制定。", "b": "美国国土安全部科技司于美东时间9月21日发布新闻稿，宣布以行业竞赛方式扩展「远程身份核验挑战赛」。该赛事由科技司主办，联合运输安全管理局、国土安全调查局法证实验室与国家标准技术研究院共同推进，旨在测试和改进商业远程身份核验技术，打击依赖身份欺诈的人口贩运、金融诈骗等犯罪。科技部副部长阿连德表示，身份欺诈不仅影响政府系统，也波及公民日常生活与私营部门经济安全，赛事将汇聚初创企业、科技巨头、联邦伙伴与测试资源，共同构筑数字基础设施安全防线。2026年度挑战赛采取分阶段报名：10月开放「证件真伪核验」（区分真实证件与AI生成的伪造证件）与「自拍—证件人脸匹配」两个方向；11月征集深度伪造攻击样本与制作方法，用于扩充攻击数据集；12月开放「呈现攻击检测」（识别口罩、照片等物理欺骗）与新增的「生物特征深度伪造检测」赛道，后者覆盖视频聊天与远程会议中的AI换脸冒充场景。本轮测试还大幅扩展证件库，纳入更多真实与伪造外国护照与美国州驾照，攻击手法更复杂，并覆盖更多终端设备与真实环境用例。生物识别与身份事务高级顾问维穆里称，随着AI生成证件与实时视频冒充日益精進，防御能力必须更快进化。行业媒体报道指出，扩展决定源于2025年度测试暴露的巨大性能差距：七套证件核验系统中仅一家的三项错误率全部控制在10%高性能阈值内，没有系统达到1%目标；部分系统在最坏条件下接受伪造证件比例高达76.68%。赛事结果将通过马里兰测试设施匿名发布，为美国各机构及国际伙伴制定身份核验标准、测试协议与采购要求提供依据，也将牵动各国签证数字化与远程身份认证生态。"}, {"a": "item-tech-2", "t": "海关总署启动智慧海关2.0 四十三口岸入智慧工程", "e": "China Customs to fully launch Smart Customs 2.0 in the 15th Five-Year Plan period", "s": "移民与边境技术", "r": 5, "k": ["智慧海关", "智慧口岸", "十五五规划", "人工智能", "无感通关", "智能审图", "口岸现代化"], "src": "北京日报（国新办发布会）", "u": "https://xinwen.bjd.com.cn/content/s6a608ccce4b0e45f3fd5097e.html", "sum": "「事件9-22、报道9-22」国务院新闻办公室9月22日举行「开局起步『十五五』」系列主题新闻发布会，海关总署负责人介绍，「十五五」时期将全面启动智慧海关2.0建设，加快部署智能扫描设备、手持终端与巡检机器人，对集装箱快速透视筛查，压缩货物口岸停留时间。海关总署与国家发展改革委近日联合印发《口岸现代化「十五五」规划》，将43个重点口岸纳入「智慧口岸建设工程」，深化「人工智能+」口岸场景应用，推动智慧口岸与智慧边检、智慧海事融合发展。旅客通关方面，将贯通体温监测、核辐射探测与行李监管，航空口岸托运行李在提取前完成机检，实现精准拦截风险的同时让合法旅客「无感通关」。针对高资信企业的「智审」通关新模式已实现通关时间压缩近一半、机检审图识别准确率达100%。", "b": "9月22日，国务院新闻办公室举行「开局起步『十五五』」系列主题新闻发布会，海关总署副署长王军、张宝峰等介绍「十五五」时期智慧海关与口岸现代化建设安排。王军表示，「十五五」时期将全面启动智慧海关2.0建设，加快部署智能扫描设备、手持终端和巡检机器人，对集装箱进行快速透视筛查，大幅减少现场开箱掏箱人工作业，最大限度压缩货物在口岸的停留时间。面向高资信企业推出「智审」通关新模式，综合运用智能设备非侵入式扫描与机检图像智能审图，实现「一企一算法」精准识别风险，货物通关时间压缩近一半，识别准确率达100%，二期算法迭代后通关时效还将再压缩30%。旅客通关环节将把体温监测、核辐射探测、行李监管前后贯通，后台智能研判与现场执法联动，航空口岸托运行李在旅客提取前即完成机器检查，在精准拦截风险的同时让进出境合法旅客「无感通关」。张宝峰介绍了海关总署与国家发展改革委联合印发的《口岸现代化「十五五」规划》，提出加快落实边境口岸重大项目，同步实施57个口岸设施改造项目，加快吐尔尕特、甘其毛都等铁路口岸建设，推动向南、向西、向北大通道跨境通行能力；43个重点口岸纳入「智慧口岸建设工程」，加大「人工智能+」口岸场景深度应用，推动智慧口岸与智慧海关、智慧边检、智慧海事融合发展，并已启动全国口岸标准化技术委员会申建，统筹构建口岸标准体系。发布会还披露上半年「口岸经济」向新向好，舟山港保税燃油加注业务进入世界前三，边境「口岸游」带动就业与基础设施完善。该规划是中国口岸数字化与智能查验体系的顶层部署，对跨境物流、出入境旅客通关体验及区域口岸合作具有系统影响。"}, {"a": "item-tech-3", "t": "移民局全国推广外国人住宿登记全程网办", "e": "China launches nationwide online accommodation registration for foreigners", "s": "移民与边境技术", "r": 4, "k": ["国家移民管理局", "住宿登记", "全程网办", "外籍人士", "数字政务", "出入境便利化"], "src": "国家移民管理局", "u": "https://www.nia.gov.cn/n741440/n741577/c1771556/content.html", "sum": "「事件9-21、报道9-22」国家移民管理局9月21日决定，自当日起在全国范围推广网上办理外国人旅馆以外住宿登记，外籍人士投亲访友、租住民宿或居住自有住所时，无需再到派出所现场办理，可全程通过政务平台线上完成。办理渠道涵盖移民局政务服务网站、「12367」应用及微信、支付宝小程序，支持中英法俄日韩多语种，线上登记与现场登记具有同等法律效力，住宿登记须在入住后24小时内完成，逾期未登记者可处警告或最高2000元罚款。此前该服务已在7个省区市试点。新政同步明确简化情形：外国人返回境内自有住所或持居留证件在经常住所居住的，境内外旅行后返回无需重复登记。多家外媒与移民服务机构评价称，此举显著降低外籍人员入境后第一周的合规成本，预计派出所相关业务量将大幅下降。", "b": "据国家移民管理局官方发布及多家媒体9月22日报道，国家移民管理局自9月21日起在全国推广网上办理外国人旅馆以外住宿登记。根据《中华人民共和国出境入境管理法》第三十九条，外国人在旅馆以外的其他住所居住或住宿的，应当在入住后24小时内由本人或留宿人向居住地公安机关办理登记。此前该流程通常需要本人前往派出所，对外籍旅客、留学生与长期在华外籍人员构成一定负担。新政实施后，留宿人或住宿人可登录国家移民管理局政务服务网站、「移民局12367」应用及微信、支付宝小程序，进入「外国人服务—住宿登记」模块按步骤提交，支持中、英、法、俄、日、韩六种语言，线上登记与现场登记具备同等法律效力，并可在「登记记录查询」中随时查看记录。首次登记建议由对住所信息更熟悉的留宿人协助办理；曾通过政务平台办理过登记并在同一住所再次登记者，以及居住在自有住所者，可自行办理。简化情形方面，外国人在中国境内自有住所居住、境内外旅行后返回的，以及持居留证件或永久居留证件在经常住所居住、同一证件有效期内境内外旅行后返回的，无需再次登记。未按规定办理住宿登记的，依法给予警告并可并处最高2000元罚款。该服务此前已在7个省区市试点，此次推广至全国。国际移动服务媒体指出，新政策显著简化外籍员工与商务旅客入境后的合规流程，跨国企业应将线上住宿登记纳入外派人员抵达清单。这是继出入境证件「全国通办」、口岸「免出示证件通道」之后，中国移民管理政务数字化的又一重要节点。"}, {"a": "item-tech-4", "t": "新西兰访客签证下周起迁移增强版在线系统", "e": "New Zealand visitor visas move to enhanced Immigration Online from 24 September", "s": "移民与边境技术", "r": 3, "k": ["新西兰", "访客签证", "移民在线系统", "签证数字化", "系统迁移", "移民局"], "src": "Be Visa（据新西兰移民局公告）", "u": "https://bevisa.co.nz/en/blogs/visitor-visa-immigration-online-2026", "sum": "「事件9-22（公布安排）、报道9-22」据签证服务媒体9月22日报道，新西兰移民局宣布自9月24日起，绝大多数新递交的访客签证申请必须通过升级后的「移民在线」系统创建与提交，旧系统当日停止受理约20个访客类别的新申请，涵盖标准访客签证、商务访客签证、父母祖父母访客签证、医疗访客签证与团体访客签证等。旧系统内未提交的草稿将于10月7日为最后提交日，10月8日旧门户关闭并删除全部草档。已递交的申请继续在原系统正常审理，申请人无需重新递交。少数类别如新西兰公民或居民的伴侣、子女访客签证暂缓迁移，等待另行安排。报道提示，新系统受理的申请将获得审理优先级倾斜，中介与申请人应尽快审计所有在办文件并决定提交路径。此举是新西兰签证处理全面数字化转型的延续。", "b": "据签证服务媒体9月22日消息，新西兰移民局宣布访客签证申请系统迁移时间表：自2026年9月24日起，约20个访客类别的新申请必须通过增强版「移民在线」系统创建与递交，包括标准访客签证、商务访客签证、父母与祖父母访客签证、医疗治疗访客签证以及团体访客签证等；旧系统同日停止受理上述类别新申请。旧系统内的未提交草稿设置硬性截止：10月7日为最后提交日，10月8日旧门户正式关闭，所有未提交草稿将被删除，申请人须重新在新系统录入。已在旧系统递交的申请继续按原流程正常审理，无需重新申请。新西兰公民或居民的伴侣访客签证、子女访客签证等少数类别暂不迁移，保留在旧系统等待另行安排。报道强调，通过新系统递交的申请还将获得审理优先排序，建议中介机构与申请人本周内逐案审计所有未决文件，决定是在10月7日前于旧系统提交，还是直接转入新系统重开申请，避免草稿灭失造成损失。此次迁移是新西兰签证处理数字化转型的延续，此前新西兰移民局的数字化技术升级项目曾因收益高估等问题于本月中旬被审计方面披露部分暂停，此次访客签证整体切换表明核心在线申办系统的迭代仍在按计划推进。行业人士提示，新系统首次使用需要注册并熟悉界面，临近旧系统关闭期可能出现集中提交拥堵，建议预留充足时间，并注意新系统中随行家庭成员信息、体检与无犯罪证明等附件的上传格式要求。"}, {"a": "item-research-1", "t": "难民署世行联合发布马来西亚难民劳工市场报告", "e": "Well-Being and Labor Market Outcomes of Refugees in Malaysia: Insights from the HARMONY Survey", "s": "移民与边境研究", "r": 3, "k": ["马来西亚", "难民福祉", "劳动力市场", "HARMONY调查", "联合国难民署", "世界银行", "经济包容"], "src": "联合国难民署与世界银行联合数据中心", "u": "https://data.unhcr.org/en/documents/details/124022", "sum": "发布9-11。联合国难民署与世界银行联合数据中心发布马来西亚难民福祉与劳动力市场报告，基于「马来西亚经济中收容者与难民」（HARMONY）调查，系首个系统性比较难民与收容社区家庭的经济社会调查。报告显示，截至2024年7月马来西亚登记难民约19.2万人，绝大多数来自缅甸，因缺乏国家难民政策框架，他们无法合法就业，难以获得教育、社会保护与金融服务，多以非正规劳动者身份谋生。研究为人道援助向发展政策衔接提供基准数据，主张将难民纳入生产性体面就业议程。", "b": "研究问题：在没有难民法律框架的收容国，难民的人力资本、工作条件与经济福祉处于何种水平，与收容社区差距多大。方法：难民署与世界银行联合实施的HARMONY住户调查，首次对马来西亚难民与收容社区家庭进行系统对比，涵盖人口特征、技能、就业、收入与生计等维度，数据于2026年9月发布于难民署业务数据门户，世界银行同步披露全文（报告编号214616）。核心发现：马来西亚登记难民约191710人（2024年7月），约九成来自缅甸；难民虽被允许基于人道理由居留，但因无正式难民政策，被排除在合法就业、教育、社会保护与金融服务之外，多数以非正规经济维生，工作条件脆弱、收入不稳定。报告强调生成难民与收容社区的可比数据，可为难民「生产性与体面工作」准入政策提供依据。政策含义：报告主张在马来西亚推进国家难民管理框架讨论的背景下，以证据为基础逐步扩大难民自给自足与经济包容空间，为政府、捐助方与发展机构设计干预措施提供基准。该报告对东南亚其他未加入难民公约的国家亦具参照意义。"}, {"a": "item-research-2", "t": "欧洲难民理事会发布庇护拘留场所条件比较报告", "e": "AIDA Comparative Report – At the margins: Places and conditions of detention", "s": "移民与边境研究", "r": 4, "k": ["欧洲难民理事会", "AIDA", "庇护拘留", "拘留条件", "弱势群体", "欧盟公约", "比较研究"], "src": "欧洲难民与流亡者理事会（ECRE）", "u": "https://ecre.org/aida-comparative-report-at-the-margins-places-and-conditions-of-detention/", "sum": "发布9-09。欧洲难民与流亡者理事会（欧洲难民理事会）发布AIDA比较报告「边缘之地：拘留场所与条件」，基于21个欧盟成员国与5个非欧盟欧洲国家的庇护信息数据库国别报告，系统评估寻求国际保护者的拘留场所、设施管理、拘留条件与弱势群体处境。报告指出监狱、警察局等不适宜设施被广泛用于行政拘留，生活条件、医疗、户外活动与监督机制存在普遍缺陷，儿童拘留问题突出，警告欧盟移民与庇护公约扩大拘留理由将加剧既有结构性缺陷。", "b": "研究问题：欧洲各国在何处以及以何种条件拘留寻求国际保护者，法律与实践之间存在哪些差距。方法：依托覆盖27个欧洲国家的庇护信息数据库（AIDA），汇总由各国专家在非政府组织、律师与当局协作下撰写并经ECRE核验的国别报告，辅以案头研究，聚焦21个欧盟成员国与5个非欧盟国家。核心发现：一是拘留场所方面，监狱、警察局及其他不适于行政拘留的设施仍被广泛使用，报告建议各国确保拘留设施选址与配置适当，任何扩容都须配套充足资金、人员与保障；二是拘留条件方面，生活条件、医疗（含预防、急诊、专科与心理健康服务）、露天活动空间、律师与非政府组织探视及独立监督均存在不足；三是弱势群体方面，报告强调拘留应为例外措施并基于个体脆弱性评估，主张不拘留儿童，确需拘留时应提供适龄设施、教育与心理支持。结论指出，欧盟移民与庇护公约下拘留条件法律框架虽大体未变，但庇护申请人拘留理由的扩大可能加剧既有结构性缺陷。政策含义：报告呼吁确保拘留替代措施可用并有效适用，加大拘留条件投入，强化监督，摆脱以强制为导向的拘留路径，为欧盟各国落实公约时的拘留合规提供操作基准。"}, {"a": "item-research-3", "t": "欧洲难民理事会梳理26国庇护拘留法律框架", "e": "AIDA Comparative Report – The legal framework for the detention of people seeking asylum in Europe", "s": "移民与边境研究", "r": 4, "k": ["欧洲难民理事会", "AIDA", "拘留法律框架", "程序保障", "拘留替代措施", "遣返拘留", "比较法"], "src": "欧洲难民与流亡者理事会（ECRE）", "u": "https://ecre.org/aida-comparative-report-the-legal-framework-for-the-detention-of-people-seeking-asylum-in-europe/", "sum": "发布9-10。欧洲难民与流亡者理事会发布AIDA比较报告「欧洲寻求庇护者拘留的法律框架」，覆盖21个欧盟成员国与5个非欧盟国家，系统梳理拘留、事实拘禁与行动自由限制的概念界定、庇护程序中拘留的合法性与非任意性、拘留替代措施、弱势申请人保护、程序保障以及遣返程序中的拘留制度，与「边缘之地」条件报告构成姊妹篇，为欧盟移民与庇护公约全面实施前夕的法律合规提供全景式参照。", "b": "研究问题：欧洲各国庇护与遣返程序中拘留的法律依据、边界与保障机制如何规定，是否符合国际与欧盟法标准。方法：基于庇护信息数据库（AIDA）27国国别信息，对21个欧盟成员国与5个非欧盟国家的立法与判例进行系统比较，聚焦四大主题：拘留、事实拘禁与自由限制的概念；庇护程序中拘留的合法性、非任意性、替代措施与弱势申请人保护；期限、司法审查与法律援助等程序保障；遣返程序中适用的拘留框架。核心发现：各国对「事实拘禁」的认定与实践差异显著，边境与过境区扣留、押送羁押等变相拘留形式普遍存在；拘留替代措施虽在法律上普遍设立，但适用不足，导致羁押成为默认选项；弱势申请人（包括儿童、幸存者与病患）的特殊保障在法律与实践中均有缺口；遣返程序中拘留门槛较低且审查较弱，随欧盟遣返条例趋严而风险上升。政策含义：报告与条件篇共同构成欧盟公约实施基准，提示成员国在扩大边境程序与快速遣返的背景下，须防范拘留滥用与人权诉讼风险，为立法者、律师与法院提供系统的法律比较依据。"}, {"a": "item-research-4", "t": "难民署南苏丹调查揭示难民收容社区多维贫困", "e": "FDS Thematic Brief 04 – Multidimensional Poverty of Refugees and Host Communities in South Sudan", "s": "移民与边境研究", "r": 3, "k": ["南苏丹", "多维贫困", "强制流离失所调查", "难民", "收容社区", "粮食不安全", "自给自足"], "src": "联合国难民署（UNHCR）", "u": "https://reporting.unhcr.org/media/fds-thematic-brief-04-multidimensional-poverty-refugees-and-host-communities-south-sudan", "sum": "发布9-11。联合国难民署发布南苏丹强制流离失所调查第四期主题简报，聚焦难民与收容社区的多维贫困。简报采用多维贫困指数方法，从教育、健康与生活水平等维度测度剥夺，比较难民、回返者与收容社区的贫困发生率与构成，结果显示相当比例人口处于多维贫困或濒临贫困状态，粮食不安全与收入下滑叠加，苏丹冲突外溢使本已脆弱的收容环境更趋恶化，建议将人道援助与发展投资挂钩以增强自给自足能力。", "b": "研究问题：南苏丹难民与收容社区的多维贫困程度、结构及群体间差异如何。方法：基于难民署强制流离失所调查（FDS）住户数据，该调查是与国际统计标准对接、可跨国别与人群比较的标准化住户调查，本期简报运用多维贫困指数，从教育、健康与生活水平等维度测度剥夺并给出群体间比较。核心发现：难民与收容社区面临相似的结构性困境——此前发布的调查结果显示约74%的难民与收容社区家庭在过去一个月经历饥饿，超过四成家庭各类收入较上年下降；多维贫困测度进一步显示相当比例人口处于多维贫困或易陷于贫困的状态，教育、医疗与基本生活服务的剥夺相互叠加。苏丹战争外溢导致持续涌入（日均一度约1600人）并冲击南苏丹经济，特别是主要输油管道中断，令收容地区资源更趋紧张。政策含义：简报主张将人道援助与稳定和发展项目衔接，推动难民纳入国家服务体系的长期投资，避免资源紧张转化为社区紧张关系；多维贫困数据将为援助瞄准与优先排序提供依据，也为「人道—发展纽带」在南苏丹落地提供量化基础。"}, {"a": "item-research-5", "t": "研究揭示微信如何成为中国建筑工人移民基础设施", "e": "WeChat as a migration infrastructure: translocal support mobilisation and digital inequalities among construction migrant workers in urban China", "s": "移民与边境研究", "r": 3, "k": ["微信", "移民基础设施", "建筑工人", "跨地方性", "数字不平等", "社会支持", "中国"], "src": "族裔与移民研究期刊（JEMS）", "u": "https://rsa.tandfonline.com/doi/full/10.1080/1369183X.2026.2732569", "sum": "发布9-15。「族裔与移民研究期刊」上线开放获取论文，考察微信在中国城市建筑业农民工跨境本地支持动员中的作用。研究基于对成都四个建筑工地34名农民工的半结构化访谈，发现微信帮助工人维系跨地域的家庭、同乡、工地与行业关系网络，获取情感、信息与工具性支持；但教育、年龄、性别与雇佣地位的差异导致微信接入与使用能力分化，形成高度投入型、情感导向型、受限型与不使用型四类用户，揭示了数字不平等在移民支持体系中的再生产机制。", "b": "研究问题：微信如何中介中国建筑业农民工在多重社会空间情境中的跨地方支持动员，群体内部的数字不平等如何塑造这种动员能力。方法：作者来自清华大学、西交利物浦大学与南京大学等机构，在成都四个建筑工地对34名建筑农民工进行半结构化访谈，以跨地方性视角分析工人借助微信管理、维系与拓展分散的家庭与同乡纽带、现工地纽带及更广的行业纽带。核心发现：微信构成一种「移民基础设施」，工人通过它获取情感性、信息性与工具性支持；但收益分配不均，教育、年龄、性别与雇佣位置的交叠塑造了不平等的微信接入与使用能力，据此识别出四类用户：高度投入的管理与班组长型用户、情感导向的体力工人用户、受限用户与不使用用户。研究将数字中介支持与数字不平等纳入跨地方视角，并揭示其嵌入于分包劳动体制之中。政策含义：论文提示，面向农民工的数字服务与社会保障设计须正视群体内部的数字分化，避免以「接入」为中心的政策掩盖使用能力与动员能力的深层差距；对理解平台时代劳动力流动中的支持网络具有方法论启示。"}];
+  var CUR = document.body.getAttribute('data-date');
+  var q = document.getElementById('q');
+  var qGo = document.getElementById('qGo');
+  var qHist = document.getElementById('qHist');
+  var res = document.getElementById('qResults');
+  var histCache = {}, idxProm = null, PATH = null;
+  // 跨天数据索引候选路径：站点日报页 / 站点首页 / 本地仓库预览
+  var PATHS = [
+    { idx:'../api/index.json', api:'../api/', rep:function(d){ return d + '.html'; } },
+    { idx:'api/index.json', api:'api/', rep:function(d){ return 'reports/' + d + '.html'; } },
+    { idx:'../../site/api/index.json', api:'../../site/api/', rep:function(d){ return '../../reports/' + d + '/migration-intel-daily-' + d + '.html'; } }
+  ];
+  function esc(s){ return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+  function terms(str){ return (str||'').trim().toLowerCase().split(/\s+/).filter(Boolean); }
+  function hayOf(it){ var kk = Array.isArray(it.k) ? it.k.join(' ') : (it.k || ''); return (it.t+' '+it.e+' '+it.s+' '+it.src+' '+it.u+' '+kk+' '+it.sum+' '+it.b).toLowerCase(); }
+  function hit(it, ts){ return ts.every(function(t){ return hayOf(it).indexOf(t) >= 0; }); }
+  function hi(s, ts){
+    var out = esc(s);
+    ts.forEach(function(t){
+      if (!t) return;
+      var re = new RegExp('(' + t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'ig');
+      out = out.replace(re, '<mark>$1</mark>');
+    });
+    return out;
+  }
+  function getIndex(){
+    if (idxProm) return idxProm;
+    idxProm = new Promise(function(resolve){
+      var i = 0;
+      function tryNext(){
+        if (i >= PATHS.length) return resolve(null);
+        var p = PATHS[i++];
+        fetch(p.idx).then(function(r){ if (!r.ok) throw 0; return r.json(); })
+          .then(function(j){ PATH = p; resolve(j); })
+          .catch(tryNext);
+      }
+      tryNext();
+    });
+    return idxProm;
+  }
+  function todayHtml(ts){
+    var hits = TODAY.filter(function(it){ return hit(it, ts); });
+    return '<h4>今日（' + esc(CUR) + '）· ' + hits.length + ' 条</h4>' +
+      (hits.map(function(it){
+        return '<div class="qr"><a href="#' + it.a + '">' + hi(it.t, ts) + '</a>' +
+          '<div class="qr-meta"><span>' + '★★★★★☆☆☆☆☆'.slice(5 - Math.min(5, Math.max(1, it.r|0)), 10) + '</span>' +
+          '<span>' + esc(it.s) + '</span><span>来源：' + esc(it.src) + '</span>' +
+          '<a href="' + esc(it.u) + '" target="_blank" rel="noopener">原文 ↗</a></div></div>';
+      }).join('') || '<div class="qr" style="color:#5a647c">今日无匹配</div>');
+  }
+  function render(){
+    var ts = terms(q.value);
+    if (!ts.length){ res.style.display = 'none'; res.innerHTML = ''; return; }
+    var histHint = qHist.checked
+      ? '<div class="qhint">💡 按回车或点击「检索」，在全部历史日期中继续查找…</div>'
+      : '<div class="qhint">未启用历史日期检索</div>';
+    res.innerHTML = todayHtml(ts) + '<div id="qHistBox">' + histHint + '</div>';
+    res.style.display = 'block';
+  }
+  function histItemHtml(it, ts, repUrl){
+    return '<div class="qr"><a href="' + esc(it.url) + '" target="_blank" rel="noopener">' + hi(it.title_zh, ts) + '</a>' +
+      '<div class="qr-meta"><span>' + '★★★★★☆☆☆☆☆'.slice(5 - Math.min(5, Math.max(1, it.rating|0 || 3)), 10) + '</span>' +
+      '<span>' + esc(it.section_name || '') + '</span><span>来源：' + esc(it.source || '') + '</span>' +
+      '<a href="' + repUrl + '">当日日报 →</a></div></div>';
+  }
+  function searchHist(){
+    var ts = terms(q.value);
+    if (!ts.length || !qHist.checked) return;
+    var box = document.getElementById('qHistBox');
+    if (!box) return;
+    box.innerHTML = '<div class="qhint">⏳ 正在打开历史数据索引…</div>';
+    getIndex().then(function(idx){
+      if (!idx){ box.innerHTML = '<div class="qhint">⚠️ 当前环境读取不到历史数据索引（file:// 本地直开不支持跨天检索，请通过站点在线访问：https://ljixin415-moker.github.io/ ）。</div>'; return; }
+      var dates = (idx.dates || []).map(function(x){ return x.date; }).filter(function(d){ return d !== CUR; });
+      var done = 0, i = 0, total = dates.length, conc = 4;
+      function worker(){
+        if (i >= dates.length){ finish(); return; }
+        var d = dates[i++];
+        fetch(PATH.api + d + '.json').then(function(r){ return r.json(); }).then(function(j){
+          var items = [];
+          (j.sections || []).forEach(function(s){
+            (s.items || []).forEach(function(it){ it.section_name = s.section_name; items.push(it); });
+          });
+          histCache[d] = items;
+        }).catch(function(){ histCache[d] = []; }).then(function(){
+          done++;
+          var b = document.getElementById('qHistBox');
+          if (b) b.innerHTML = '<div class="qhint">⏳ 正在检索历史 ' + done + '/' + total + ' 期…</div>';
+          worker();
+        });
+      }
+      for (var w = 0; w < conc && w < total; w++) worker();
+      function finish(){
+        var html2 = '', n = 0;
+        (idx.dates || []).forEach(function(x){
+          var d = x.date;
+          if (d === CUR) return;
+          var items = histCache[d] || [];
+          var hits = items.filter(function(it){
+            return hit({ t:it.title_zh, e:it.title_en, s:it.section_name || '', src:it.source || '', u:it.url || '', k:it.keywords || [], sum:it.summary || '', b:it.brief || '' }, ts);
+          });
+          if (hits.length){
+            n += hits.length;
+            html2 += '<h4 style="margin-top:12px">📅 ' + d + ' · ' + hits.length + ' 条<a class="qr-link" href="' + PATH.rep(d) + '">当日日报 →</a></h4>' +
+              hits.map(function(it){ return histItemHtml(it, ts, PATH.rep(d)); }).join('');
+          }
+        });
+        var b = document.getElementById('qHistBox');
+        if (b) b.innerHTML = '<h4>历史日期 · ' + n + ' 条（共检索 ' + total + ' 期）</h4>' +
+          (html2 || '<div class="qr" style="color:#5a647c">历史日期无匹配</div>');
+      }
+    });
+  }
+  var deb = null;
+  q.addEventListener('input', function(){ clearTimeout(deb); deb = setTimeout(render, 200); });
+  qGo.addEventListener('click', function(){ render(); searchHist(); });
+  q.addEventListener('keydown', function(e){ if (e.key === 'Enter'){ render(); searchHist(); } });
+  qHist.addEventListener('change', function(){
+    if (!qHist.checked){ var b = document.getElementById('qHistBox'); if (b) b.innerHTML = '<div class="qhint">未启用历史日期检索</div>'; }
+  });
+})();
+</script>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('../sw.js').then(reg => {
+      reg.update();                          // 每次打开主动检查新版本
+      setInterval(() => reg.update(), 3600*1000); // 常驻页面每小时检查
+    }).catch(()=>{});
+  });
+}
+let deferredPrompt = null;
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  const btn = document.getElementById('pwa-install-btn');
+  if (btn) {
+    btn.style.display = 'inline-block';
+    btn.onclick = async () => {
+      deferredPrompt.prompt();
+      await deferredPrompt.userChoice;
+      deferredPrompt = null;
+      btn.style.display = 'none';
+    };
+  }
+});
+</script>
+</body>
+</html>
