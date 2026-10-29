@@ -1,0 +1,1484 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>全球移民与边境安全态势感知日报 · 2026-10-29</title>
+<style>
+:root {
+  --bg:#f4f6fa; --card:#ffffff; --ink:#16213a; --muted:#5a647c; --line:#e2e7f0;
+  --navy:#0f2e5c; --accent:#1a4f9c; --accent2:#0e7a6f; --gold:#d99114; --soft:#eaf0fa;
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; font-family:"Microsoft YaHei","PingFang SC","Segoe UI",sans-serif; background:var(--bg); color:var(--ink); line-height:1.75; }
+.wrap { max-width:1080px; margin:0 auto; padding:0 16px 60px; }
+header { background:linear-gradient(120deg,#0a1f40 0%,#0f2e5c 55%,#1a4f9c 100%); color:#fff; padding:38px 16px 30px; }
+header h1 { margin:0 0 6px; font-size:26px; letter-spacing:1px; }
+header .sub { opacity:.9; font-size:13px; }
+.stats { display:flex; gap:12px; flex-wrap:wrap; margin:20px 0 0; }
+.stat { background:rgba(255,255,255,.13); border:1px solid rgba(255,255,255,.25); border-radius:12px; padding:8px 16px; }
+.stat b { font-size:20px; display:block; }
+.stat span { font-size:12px; opacity:.9; }
+.navbar { position:sticky; top:0; z-index:9; background:rgba(255,255,255,.97); backdrop-filter:blur(6px); border-bottom:1px solid var(--line); padding:8px 12px; overflow-x:auto; -webkit-overflow-scrolling:touch; }
+.navbar .inner { max-width:1080px; margin:0 auto; display:flex; gap:8px; flex-wrap:nowrap; }
+@media (min-width:768px) { .navbar .inner { flex-wrap:wrap; } }
+.nav-chip { font-size:12.5px; color:var(--accent); background:var(--soft); border:1px solid #cfdcf5; border-radius:999px; padding:4px 12px; text-decoration:none; white-space:nowrap; }
+.nav-chip b { color:#fff; background:var(--accent); border-radius:999px; padding:0 6px; font-size:11px; margin-left:2px; }
+.panel { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:22px 24px; margin-top:24px; box-shadow:0 2px 10px rgba(15,46,92,.05); }
+.panel h2 { margin:0 0 12px; font-size:20px; border-left:5px solid var(--accent); padding-left:12px; }
+.overview-text h4 { margin:14px 0 6px; color:var(--accent); font-size:15.5px; }
+.overview-text p, .overview-text li { margin:6px 0; color:#2e3850; font-size:14.5px; }
+.top10 { list-style:none; margin:8px 0 0; padding:0; counter-reset:t10; }
+.top10 li { border-bottom:1px dashed var(--line); padding:10px 4px; counter-increment:t10; }
+.top10 li:last-child { border-bottom:none; }
+.top10 a { display:flex; gap:8px; align-items:baseline; text-decoration:none; color:var(--ink); flex-wrap:wrap; }
+.top10 a::before { content:counter(t10); min-width:24px; height:24px; border-radius:8px; background:var(--accent); color:#fff; font-size:13px; display:inline-flex; align-items:center; justify-content:center; font-weight:700; }
+.top10 li:nth-child(-n+3) a::before { background:var(--gold); }
+.t10-rate { color:var(--gold); font-size:13px; letter-spacing:1px; }
+.t10-sec { font-size:12px; color:var(--accent2); background:#e5f4f1; border-radius:999px; padding:1px 10px; }
+.t10-title { font-weight:600; font-size:14.5px; }
+.t10-reason { font-size:12.5px; color:var(--muted); margin:3px 0 0 32px; }
+/* ============ 手风琴板块 ============ */
+details.section { margin-top:16px; background:var(--card); border:1px solid var(--line); border-radius:14px; box-shadow:0 1px 6px rgba(15,46,92,.04); overflow:hidden; }
+details.section > summary { list-style:none; cursor:pointer; display:flex; align-items:center; gap:10px; flex-wrap:wrap; padding:16px 18px; background:linear-gradient(90deg,var(--soft),#fff); border-left:5px solid var(--accent); user-select:none; }
+details.section > summary::-webkit-details-marker { display:none; }
+details.section[open] > summary { border-bottom:1px solid var(--line); }
+.sec-title { font-size:17px; font-weight:700; }
+.sec-desc { font-size:12px; color:var(--muted); flex:1 1 100%; order:9; }
+@media (min-width:768px) { .sec-desc { flex:1; order:0; } }
+.sec-count { font-size:12px; color:#fff; background:var(--accent); border-radius:999px; padding:2px 10px; }
+.sec-arrow { color:var(--accent); transition:transform .2s; }
+details.section[open] .sec-arrow { transform:rotate(180deg); }
+.sec-body { padding:4px 14px 16px; }
+.sec-foot { text-align:center; margin-top:14px; }
+.collapse-btn { font-size:13px; color:var(--accent2); text-decoration:none; border:1px solid #c9e6e1; background:#f0faf8; border-radius:999px; padding:6px 18px; }
+.item { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px 18px; margin-top:12px; }
+.item-head { display:flex; gap:10px; align-items:baseline; flex-wrap:wrap; }
+.rate { color:var(--gold); font-size:13px; letter-spacing:2px; white-space:nowrap; }
+.item h4 { margin:0; font-size:16px; }
+.item h4 a { color:var(--ink); text-decoration:none; }
+.item h4 a:hover { color:var(--accent); text-decoration:underline; }
+.title-en { color:var(--muted); font-size:12.5px; font-style:italic; margin:4px 0 8px; }
+.chips { display:flex; gap:6px; flex-wrap:wrap; margin-bottom:10px; }
+.chip { font-size:12px; color:var(--accent); background:var(--soft); border-radius:999px; padding:2px 10px; }
+.summary { font-size:14px; color:#2e3850; background:#f7f9fd; border-radius:10px; padding:10px 14px; margin:0 0 10px; }
+.summary b { color:var(--accent); }
+.brief { border:1px dashed #c7d6ef; border-radius:10px; padding:8px 14px; background:#fafcff; }
+.brief summary { cursor:pointer; color:var(--accent); font-weight:600; font-size:13.5px; }
+.brief p { font-size:13.8px; color:#37415a; margin:10px 0 4px; }
+.meta { display:flex; gap:14px; flex-wrap:wrap; font-size:12.5px; color:var(--muted); margin-top:10px; border-top:1px solid var(--line); padding-top:9px; }
+.meta a { color:var(--accent); text-decoration:none; }
+.meta .back { margin-left:auto; color:var(--accent2); }
+footer { text-align:center; color:var(--muted); font-size:12.5px; margin-top:40px; }
+#toTop { position:fixed; right:16px; bottom:20px; z-index:20; display:none; width:42px; height:42px; border-radius:50%; border:0; background:var(--accent); color:#fff; font-size:18px; cursor:pointer; box-shadow:0 4px 12px rgba(15,46,92,.3); }
+
+/* ============ 检索栏 ============ */
+.searchbar { display:flex; gap:8px; flex-wrap:wrap; margin:18px 0 0; align-items:stretch; }
+.searchbar input[type=search] { flex:1 1 260px; min-width:200px; border:0; border-radius:10px; padding:11px 14px; font-size:14.5px; outline:none; font-family:inherit; }
+.searchbar label.hist { font-size:12.5px; color:#fff; opacity:.95; display:flex; gap:5px; align-items:center; background:rgba(255,255,255,.13); border:1px solid rgba(255,255,255,.25); border-radius:10px; padding:8px 12px; cursor:pointer; user-select:none; }
+.searchbar label.hist input { accent-color:var(--gold); }
+.searchbar button { border:0; border-radius:10px; padding:10px 18px; font-size:14px; font-weight:700; background:var(--gold); color:#fff; cursor:pointer; font-family:inherit; }
+.searchbar button:hover { filter:brightness(1.08); }
+.qres { background:#fff; color:var(--ink); border-radius:12px; margin-top:12px; padding:12px 16px; display:none; max-height:430px; overflow:auto; text-align:left; box-shadow:0 6px 18px rgba(0,0,0,.18); }
+.qres h4 { margin:4px 0 6px; font-size:13.5px; color:var(--accent); border-left:4px solid var(--accent); padding-left:8px; }
+.qres h4 .qr-link { font-size:12px; font-weight:400; color:var(--accent2); margin-left:8px; text-decoration:none; }
+.qres .qr { border-bottom:1px dashed var(--line); padding:8px 2px; font-size:13.5px; }
+.qres .qr:last-child { border-bottom:none; }
+.qres .qr > a { color:var(--ink); text-decoration:none; font-weight:600; }
+.qres .qr > a:hover { color:var(--accent); }
+.qres mark { background:#ffe9b3; padding:0 1px; border-radius:3px; }
+.qres .qr-meta { font-size:12px; color:var(--muted); margin-top:2px; display:flex; gap:6px; flex-wrap:wrap; align-items:center; }
+.qres .qr-meta a { color:var(--accent2); text-decoration:none; }
+.qres .qhint { font-size:12.5px; color:var(--muted); padding:6px 2px; }
+
+</style>
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#0f2e5c">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="态势感知日报">
+<link rel="apple-touch-icon" href="../icons/icon.svg">
+<link rel="icon" type="image/svg+xml" sizes="any" href="../icons/icon.svg">
+</head>
+<body data-date="2026-10-29">
+<header>
+  <div class="wrap">
+    <h1>🛡️ 全球移民与边境安全态势感知日报</h1>
+    <div class="sub">2026-10-29 · 每日全球移民管理与边境安全情报智能体 · 八大板块 / 政府官网 · 国际组织 · 权威媒体 · 智库 · 学术 · 数据库</div>
+    <div class="stats">
+      <div class="stat"><b>44</b><span>今日情报条数</span></div>
+      <div class="stat"><b>8</b><span>覆盖板块</span></div>
+      <div class="stat"><b>41</b><span>信息来源机构</span></div>
+      <div class="stat"><b>3.2</b><span>平均推荐指数</span></div>
+    </div>
+
+<div class="searchbar">
+  <input id="q" type="search" autocomplete="off" placeholder="🔍 输入关键词检索今日情报（标题 / 摘要 / 关键词 / 来源）…">
+  <label class="hist"><input type="checkbox" id="qHist" checked> 含历史日期</label>
+  <button id="qGo">检索</button>
+</div>
+<div id="qResults" class="qres"></div>
+
+  </div>
+</header>
+<div class="navbar"><div class="inner"><a class="nav-chip" href="#overview">⭐ 总体态势</a><a class="nav-chip" href="#sec-global_migration">🌍 全球移民管理热点 <b>5</b></a><a class="nav-chip" href="#sec-border_security">🛡️ 全球边境安全热点 <b>7</b></a><a class="nav-chip" href="#sec-usa">🗽 美国移民与边境管理 <b>5</b></a><a class="nav-chip" href="#sec-eu">🇪🇺 欧盟移民与边境管理 <b>5</b></a><a class="nav-chip" href="#sec-china_neighbors">🧭 中国周边国家动态 <b>5</b></a><a class="nav-chip" href="#sec-global_south">🌏 全球南方国家动态 <b>5</b></a><a class="nav-chip" href="#sec-tech">🤖 移民与边境技术 <b>6</b></a><a class="nav-chip" href="#sec-research">📚 移民与边境研究 <b>6</b></a></div></div>
+<div class="wrap">
+  <div class="panel" id="overview">
+    <h2>⭐ 每日总体关键态势简报</h2>
+    <div class="overview-text"><p>全球移民与边境安全态势感知日报 · 2026-10-29</p>
+<p>采集窗口：2026-10-28 23:00 — 2026-10-29 23:40（北京时间）。共 8 板块 44 条，平均推荐 3.16★（5★1、4★16、3★16、2★11），来源 41 家。</p>
+<h4>今日核心研判</h4>
+<p><strong>一、欧盟把「回返」推上中心，边境能力走向集中化与外置化两条腿。</strong> 欧盟委员会 10 月 27 日提出重写欧洲边境与海岸警卫局（Frontex）条例的草案：常备队伍逐步扩至 3 万人，新设 1.7 万人「欧洲边境与回返预备队」，新设回返协调中心，并首次允许在第三国同意前提下协助「从一个第三国向另一第三国」回返。与此同时，卢旺达外长 10 月 28 日向法新社确认，正与丹麦、奥地利、希腊、德国、荷兰五国磋商在卢境内设立「回返枢纽」，协议最早可能下月签署。两条线互为表里：一边把遣返的组织权收到欧盟层面，一边把接收端放到欧盟境外。前者尚需欧洲议会与理事会通过，后者连地点都未公布，但方向已明确。</p>
+<p><strong>二、东南亚的执法重心从「口岸拦截」移向「居留—劳动—诈骗」链条。</strong> 马来西亚移民局 10 月 28 至 29 日两天在吉隆坡四间公寓与「矿场」住宅区拘捕 64 名外籍人员（44 名中国籍、19 名越南籍、1 名缅甸籍），指其参与网络诈骗集团；印尼巴厘岛同日在一处住宅区拘捕 21 名外籍人员，指其运营国际网络赌博网站；菲律宾移民局在尼诺·阿基诺机场拦下三名拟经新加坡转吉隆坡的「先出境再谈细节」招聘受害者。泰国武装部队最高司令 10 月 29 日要求各军种与警察总署加大打击跨境电诈与人口贩运，总参谋长承认相关网络已「转移至邻国内陆」。四件事指向同一结构：入口端收得越紧，违法用工与诈骗窝点越往居留许可与腹地住宅区沉淀。</p>
+<p><strong>三、美国移民执法的争议从街头转向法庭与数据库。</strong> 四家移民法律服务机构 10 月 28 日在马萨诸塞州联邦法院起诉国土安全部（DHS）与移民与海关执法局（ICE）自 9 月起不再公开部分在押者关押地点；同一周，一个可检索数据库公开了 DHS 逾 4.1 万名雇员与承包商资料，其中 2.1 万余人隶属海关与边境保护局（CBP）；纽约南区联邦法官阿尔文·赫勒斯坦 10 月 28 日去世，令挑战「以人工智能监控移民社交媒体」的诉讼突生变数。执法强度上升与透明度下降同时发生，司法与技术两条战线正在成为主战场。</p>
+<h4>涉我风险待研（内参选题参考）</h4>
+<p><strong>选题一：马方集中清查网赌窝点中我国籍人员占比过半的处置与领事保护问题。</strong> 10 月 28 至 29 日吉隆坡行动拘捕 64 名外籍人员，其中中国籍 44 人，均指涉网络诈骗集团；涉案场所为豪华公寓与独立式洋房，属「居留许可—封闭作业—跨境引流」的典型形态。可沿「人员诱骗路径、当地司法处置周期、领事探视与法律援助衔接」三条线做实证梳理，回答我海外公民涉赌涉诈风险的早期识别缺口。（需阅板块：中国周边国家动态、全球边境安全热点）</p>
+<p><strong>选题二：东南亚「先出境、后谈工作」招聘陷阱对我青年劳务出行的警示价值。</strong> 菲方在机场拦下三名拟经新加坡转吉隆坡的人员，其供述的工作安排须抵达马来西亚后才商谈；菲移民局长明确称「海外工作机会绝不应该要求你先出境、之后再了解细节」。该判据可直接转化为我出境劳务风险提示的操作性标准，亦可比对我在东南亚劳务合作中的告知义务与中介监管。（需阅板块：中国周边国家动态）</p>
+<p><strong>选题三：「回返枢纽」模式扩散对全球遣返治理及我海外人员权益的溢出效应。</strong> 欧盟委员会草案允许 Frontex 在第三国间组织回返，卢旺达与欧洲五国的枢纽磋商紧随其后，英国此前亦有同类安排。若该模式在非洲之角、西巴尔干复制，将改变「遣返目的国—过境国—接收国」的责任分配，对我国海外劳务人员被第三国转运处置的风险评估、以及我参与全球移民治理的话语建构均有关联。（需阅板块：欧盟移民与边境管理）</p>
+<p><strong>选题四：泰缅边境商品管制扩容与电诈网络「内移」对澜湄联合执法的挑战。</strong> 泰方称依 1981 年《边境商品管制皇家法令》，目前化学品、前体物质、手机 SIM 卡等 70 多类商品受管制、出口须走正式口岸；同时承认相关网络已转移至邻国内陆。管制清单化与犯罪内移化的错位，正是跨境联合执法需要回答的命题，可结合我方口岸与边检合作机制作对策研究。（需阅板块：全球边境安全热点）</p>
+<p><strong>选题五：生物识别与数据治理双重风险下的赴美人员与企业合规。</strong> DHS 逾 4.1 万人资料外泄、联邦采购被指锁定单一供应商（五年期、估算额度 26.57 亿美元的一揽子协议）、以及社媒 AI 监控诉讼因主审法官去世而变量陡增，三者叠加意味着赴美人员的身份数据既面临泄露风险，也处于宽口径监控之下。可就从美人员数据安全提示与企业跨境数据合规义务作专题分析。（需阅板块：美国移民与边境管理、移民与边境技术）</p>
+<h4>分板块要点</h4>
+<p><strong>全球移民管理热点（5条）</strong>：英国《移民规则》修订声明 HC 584 涉宗教类签证条款 10 月 29 日生效，牧师路径取消 6 年总期限上限；马来西亚沙巴 10 月 29 日在山打根港遣返 800 名菲律宾籍被羁者，本周累计 1069 人；叙伊德利卜 229 户流离家庭 10 月 29 日返回五省；马移民局称将持续清查外侨聚居区与违法经营场所；日本否认承诺引进十万孟加拉籍劳工。</p>
+<p><strong>全球边境安全热点（7条）</strong>：英国国家打击犯罪局（NCA）侦破的 21 人偷渡集团系列宣判，累计刑期逾 84 年，该集团将持合法签证入境者从英国偷运至法国以规避欧盟边检；泰缅友谊一号桥口岸查获约 274 万粒甲基苯丙胺片剂；泰军下令严打跨境电诈与偷渡；阿富汗尼姆鲁兹省解救 127 名被贩运者；波兰边防卫队瓦解为外国人伪造学历证件的团伙，23 人被起诉；孟加拉国边防局在切尼达拦截 9 名越境者；越老边防年度会谈通报累计处理 558 起违法行为。</p>
+<p><strong>美国移民与边境管理（5条）</strong>：移民法律服务机构起诉 ICE 隐匿在押者关押地；DHS 逾 4 万人资料外泄（CBP 2.1 万余人、ICE 近 6600 人）；ICE 通报称拘捕数十名涉嫌非法投票者；韩国国会议员赴美签证被拒、美国国务院称「美国优先」；艾奥瓦城三名建筑工人上班途中被带走。</p>
+<p><strong>欧盟移民与边境管理（5条）</strong>：欧委会提 Frontex 新条例草案（3 万人、回返协调中心、第三国间回返权限、118 亿欧元预算）；卢旺达证实与欧洲五国磋商回返枢纽；欧洲议会代表团结束布达佩斯访问，指匈牙利庇护准入仍存关切、暂不就终止第七条程序表态；法国经社环理会年度报告强调移民经济贡献；塞浦路斯就 4 名涉协助非法入境者发出八日羁押令。</p>
+<p><strong>中国周边国家动态（5条）</strong>：马来西亚两天清查网赌窝点拘 64 名外籍（含中国籍 44 人）；印尼巴厘岛拘 21 名外籍涉网赌；菲律宾机场拦下 3 名拟赴马假招聘受害者；马来西亚高等法院驳回律师公会暂缓申请，约 5000 名缅籍人员的遣返续行，司法复核定于 12 月 8 日；越柬两省边防年度会晤签署纪要。</p>
+<p><strong>全球南方国家动态（5条）</strong>：利比亚东部政府禁止伊朗、阿富汗籍人员经东部全部口岸入境；加纳与俄罗斯阿拉布加经济特区签署劳务协议；大赦国际要求肯尼亚查找并保护被带走的坦桑尼亚籍活动人士；肯尼亚机场法庭判索马里籍伪造身份者罚款并遣返；利比亚信息总局通报建成流离失所者数据平台。</p>
+<p><strong>移民与边境技术（6条）</strong>：美国土安全部生物识别与身份系统采购被指锁定少数既有供应商；美法官赫勒斯坦去世令社媒 AI 监控诉讼生变；国际航协调查显示约六成旅客一年内使用过生物识别、87% 满意；喀麦隆赴科特迪瓦考察数字民事登记；世界银行诊断海地身份证件缺口；澳大利亚推动美方在旅客预检中改用生物特征核验。</p>
+<p><strong>移民与边境研究（6条）</strong>：国际货币基金组织第 228 号工作论文发现，撒哈拉以南非洲的大规模难民流入在五年期内对东道国 GDP、通胀与经常账户无统计显著影响；皮尤刻画美国归化选民群体（2024 年约 2520 万、占 10.3%）；伯克利报告指加州气候迁移尚未纳入规划；皮尤指经济是拉美裔选民首要议题；欧盟基本权利署季报盘点三季度移民权利风险（地中海与加那利航线至少 852 人死亡或失踪）；国际移民组织周报追踪中东流离态势。</p>
+<h4>追踪信号</h4>
+<ul>
+<li><strong>12 月 8 日</strong>：马来西亚高等法院对律师公会司法复核许可申请的审理，将决定约 5000 名缅籍人员遣返是否中止。</li>
+<li><strong>欧盟 Frontex 新条例草案</strong>：须经欧洲议会与理事会审议，「第三国间回返」条款是最大争点，关注二读时间表与成员国反对声量。</li>
+<li><strong>卢旺达回返枢纽</strong>：五国协议若在下月签署，将是欧盟「外置化」首个落地文本，需核签署方、接收规模与法律基础。</li>
+<li><strong>美国中期选举（下周）前后</strong>：ICE 执法强度与「非法投票者」通报的政治化程度，观察是否出现新的联邦诉讼。</li>
+<li><strong>利比亚东部入境禁令</strong>：10 月 28 日深夜宣布，执行细则与豁免范围尚未公布，关注对萨赫勒—地中海中段流动的实际影响。</li>
+<li><strong>日本孟加拉籍劳工备忘录</strong>：定于 2027 年 4 月 1 日启动招募、初始期五年，日方已否认「十万人」说法，关注后续官方口径。</li>
+</ul></div>
+    <h2 style="margin-top:24px">🔥 今日关键情报 Top 8<small style="font-size:12.5px;color:var(--muted);font-weight:400;margin-left:10px">按推荐指数排序 · 点击自动展开对应板块</small></h2>
+    <ol class="top10"><li><a href="#item-research-2"><span class="t10-rate">★★★★★</span><span class="t10-sec">📚 移民与边境研究</span><span class="t10-title">基金组织研究非洲被迫流离宏观影响</span></a><div class="t10-reason">IMF正式工作论文，方法透明（LP-DiD）、样本与事件识别过程可复核，含三国案例的微观佐证，并明确标注因果识别的局限，对非洲被迫流离的宏观经济争论提供了高质量证据，评5分。</div></li><li><a href="#item-border_security-1"><span class="t10-rate">★★★★☆</span><span class="t10-sec">🛡️ 全球边境安全热点</span><span class="t10-title">英人蛇集团21人被判逾84年</span></a><div class="t10-reason">为英国执法机构主导、法院判决已生效的跨境偷渡案件，人物、金额、刑期与拦截数据均具体可核，来源为权威媒体直接采访NCA，信息完整度高。</div></li><li><a href="#item-border_security-2"><span class="t10-rate">★★★★☆</span><span class="t10-sec">🛡️ 全球边境安全热点</span><span class="t10-title">泰缅口岸查获274万粒冰毒片</span></a><div class="t10-reason">为海关当日在口岸的查缉结果通报，缴获数量、估值、涉案人身份与法律依据均具体，多部门联合行动细节清晰，来源为通讯社口岸通报，可信度高。</div></li><li><a href="#item-usa-1"><span class="t10-rate">★★★★☆</span><span class="t10-sec">🗽 美国移民与边境管理</span><span class="t10-title">移民团体起诉移民局隐匿在押者关押地</span></a><div class="t10-reason">涉及联邦法院新诉讼与ICE在押人员信息政策的实质变化，直接影响数万名在押者获得律师与司法救济的能力；消息源为原告方官方新闻稿并经美联社报道印证，属当日具备制度影响的执法争议。</div></li><li><a href="#item-eu-1"><span class="t10-rate">★★★★☆</span><span class="t10-sec">🇪🇺 欧盟移民与边境管理</span><span class="t10-title">卢旺达证实与欧洲五国磋商回返枢纽</span></a><div class="t10-reason">由当事国外长在法新社采访中直接确认，涉及欧盟五国的境外回返枢纽选址与可能的下月签约时间表，属欧盟遣返政策落地的关键进展，信息源权威度较高。</div></li><li><a href="#item-eu-5"><span class="t10-rate">★★★★☆</span><span class="t10-sec">🇪🇺 欧盟移民与边境管理</span><span class="t10-title">欧委会提新规 边境局拟扩至三万人</span></a><div class="t10-reason">欧盟边境治理架构级调整，回返权限与第三国回返条款对未来遣返合作影响深远；但事件发生在10-27，报道见于10-29，属进行中立法进程，非当日新增事实。</div></li><li><a href="#item-china_neighbors-1"><span class="t10-rate">★★★★☆</span><span class="t10-sec">🧭 中国周边国家动态</span><span class="t10-title">马突查网赌窝点拘六十四名外籍</span></a><div class="t10-reason">马来西亚官方通讯社现场记者会一手报道，涉案人数、国籍构成、查获物品与法条均明确，属当日重大执法行动</div></li><li><a href="#item-china_neighbors-4"><span class="t10-rate">★★★★☆</span><span class="t10-sec">🧭 中国周边国家动态</span><span class="t10-title">马高院驳回暂缓 缅籍遣返续行</span></a><div class="t10-reason">官方通讯社报道部长就法院裁决后的政策表态，涉及约五千人遣返与司法复核时点，具政策与法律双重意义</div></li></ol>
+  </div>
+  
+<details class="section" id="sec-global_migration">
+  <summary>
+    <span class="sec-title">🌍 全球移民管理热点</span>
+    <span class="sec-desc">各国移民政策调整、签证制度改革、国际移民治理动态</span>
+    <span class="sec-count">5 条</span>
+    <span class="sec-arrow">▾</span>
+  </summary>
+  <div class="sec-body">
+    
+<article class="item" id="item-global_migration-1">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://www.gov.uk/government/publications/statement-of-changes-to-the-immigration-rules-hc-584-3-september-2026/explanatory-memorandum-to-the-statement-of-changes-in-immigration-rules-hc-584-3-september-2026-accessible" target="_blank" rel="noopener">英国宗教类签证新规生效</a></h4>
+  </div>
+  <div class="title-en">UK Immigration Rules changes for Minister of Religion and Religious Worker take effect on 29 October 2026</div>
+  <div class="chips"><span class="chip">英国</span><span class="chip">移民规则</span><span class="chip">宗教工作者</span><span class="chip">牧师签证</span><span class="chip">担保方</span><span class="chip">签证制度</span><span class="chip">内政部</span></div>
+  <p class="summary"><b>内容提要</b>　政策9-03公布、10-29生效。英国《移民规则》修订声明 HC 584（2026年9月3日提交议会）中涉及宗教类签证的条款于10月29日生效，涉及 T2 牧师（Minister of Religion）与临时工作—宗教工作者（Religious Worker）两条路径。据内政部解释性备忘录，牧师路径取消原有6年总期限上限，单次许可最长3年，仍可通往永居；宗教工作者路径最长2年、不直接通往永居，原「居民劳动力审查」要求被取消，改为岗位资格条件：岗位属超编增设、申请人为修会成员且主要居于修会、或申请前6个月内已在与担保机构同属一个信仰组织的海外机构从事宗教工作。两类路径均调整了申请人不受最低工资保障时的生活费与住宿担保要求，须由 A 级担保方在担保证书上承诺。10月29日前提交的申请一般按10月28日有效的规则审理。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>英国政府9月3日向议会提交的《移民规则修订声明》HC 584 中，涉及宗教类签证的条款自10月29日起生效。修订覆盖附录 T2 牧师（Minister of Religion）与临时工作—宗教工作者（Religious Worker）两条路径。
+
+牧师路径方面：单次许可上限为3年，原规定的6年总期限被删除，符合条件者可分段续期，但并非一次申请即获无限期许可；该路径仍可通往永居；路径描述明确涵盖牧师、传教士及其他以牧职为主的人员，以及修会成员，修会成员可从事教学、媒体制作、家务或行政等以非牧职为主的工作。
+
+宗教工作者路径方面：仍为临时路径，最长2年，不直接通往永居，配偶与子女可随行。岗位须以非牧职宗教工作为主，不得包含主持礼拜、讲道等牧师职责；原有的本地招聘测试被替换为三项择一条件——岗位属担保机构常规编制之外的增设岗位、申请人主要居于修会并为其成员、或申请前6个月内在与担保机构有关联的同一宗教组织的海外机构从事宗教工作并提供证明信。
+
+财务要求方面：对不适用国家最低工资的岗位，担保方须在担保证书上承诺在许可期内为申请人及其合资格家属提供生活保障与住宿，申请人不再需要满足1270英镑个人资金证明；适用最低工资的岗位仍按原规定核查资金。
+
+过渡安排方面：10月29日前递交的申请一般按10月28日有效的规则审理；若担保证书在10月29日前签发而申请在此后递交，担保方可能需要补充担保说明。</p></details>
+  <div class="meta">
+    <span>来源：<b>英国内政部（Home Office）《移民规则》修订声明 HC 584</b></span>
+    <span>推荐理由：政策生效日属实质节点，规则原文可核；但原始报道站已下线，改为直引 gov.uk 文件，传播度有限。</span>
+    <a href="https://www.gov.uk/government/publications/statement-of-changes-to-the-immigration-rules-hc-584-3-september-2026/explanatory-memorandum-to-the-statement-of-changes-in-immigration-rules-hc-584-3-september-2026-accessible" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-global_migration-2">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://www.thestar.com.my/news/nation/2026/10/29/sabah-immigration-deports-800-filipino-detainees-six-more-repatriation-exercises-planned" target="_blank" rel="noopener">沙巴遣返八百名菲律宾籍被羁者</a></h4>
+  </div>
+  <div class="title-en">Sabah Immigration deports 800 Filipino detainees, six more repatriation exercises planned</div>
+  <div class="chips"><span class="chip">马来西亚</span><span class="chip">沙巴</span><span class="chip">遣返</span><span class="chip">菲律宾</span><span class="chip">拘留营</span><span class="chip">移民局</span><span class="chip">超容</span></div>
+  <p class="summary"><b>内容提要</b>　事件10-29、报道10-29。马来西亚沙巴州移民局10月29日在山打根港执行遣返，将800名菲律宾籍被羁押人员送返菲律宾三宝颜市，乘坐 MV Antonia 1。沙巴移民局局长西蒂·萨利哈（Sh. Sitti Saleha Habib Yussof）称，被遣返者包括590名成年男性、88名成年女性、64名男童和58名女童，来自斗湖、山打根与吧巴三处移民拘留营，年龄最小16天、最大83岁，儿童均由父母或监护人陪同。连同10月27日遣返的269人，本周已送回1069人。她表示，接下来每周将再执行一次约800人的大规模遣返，共六轮，以缓解拘留营超容。今年沙巴已遣返各国籍被羁押者7490人，其中菲律宾籍5357人、印尼籍1789人。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>马来西亚沙巴州移民局10月29日从山打根港执行大规模遣返，800名菲律宾籍被羁押人员乘坐 MV Antonia 1 返回菲律宾三宝颜市。沙巴移民局局长西蒂·萨利哈在现场表示，被遣返者构成为590名成年男性、88名成年女性、64名男童与58名女童，分别来自斗湖、山打根和吧巴移民拘留营；年龄跨度自16天至83岁，儿童均由父母或监护人陪同。
+
+她称，该局计划在后续行动中每周遣返约800名菲律宾籍被羁押者，共六轮，从本周开始持续执行，目的是避免沙巴各拘留营超容。连同10月27日已送返的269人，本周遣返总数达1069人。
+
+数据显示，今年以来沙巴已遣返各国籍被羁押者7490人，其中菲律宾籍5357人、印度尼西亚籍1789人、巴基斯坦籍139人、中国籍141人、越南籍29人，其他国家籍35人。
+
+西蒂·萨利哈表示，拘留营腾出的空间将使移民局及其他执法机构得以加强对无证移民的行动；她并促请各国使领馆加快签发旅行证件，以便被羁押者尽快回国。她提出的目标是，在执法机构移交或当事人服刑完毕后尽快送返，尽可能在一个月内完成；在使领馆协助下，其他国籍被羁押者可在进入拘留营一周内遣返。她同时提醒雇主确保所雇外籍劳工证件有效。就设施改善，她提到斗湖拘留营的升级工程因承包商延误尚未交付。</p></details>
+  <div class="meta">
+    <span>来源：<b>马来西亚沙巴州移民局（据《星报》报道）</b></span>
+    <span>推荐理由：为当日现场执行的官方通报，人数构成、船只、累计数据与后续计划均具体可核；属常规遣返行动，影响面限于一地，故未列更高。</span>
+    <a href="https://www.thestar.com.my/news/nation/2026/10/29/sabah-immigration-deports-800-filipino-detainees-six-more-repatriation-exercises-planned" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-global_migration-3">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://sana.sy/en/syria/2354364" target="_blank" rel="noopener">叙伊德利卜229户流离家庭返乡</a></h4>
+  </div>
+  <div class="title-en">Nearly 230 displaced families return home from northern Syria camps</div>
+  <div class="chips"><span class="chip">叙利亚</span><span class="chip">伊德利卜</span><span class="chip">返乡</span><span class="chip">流离失所</span><span class="chip">营地</span><span class="chip">重建</span><span class="chip">无营地叙利亚</span></div>
+  <p class="summary"><b>内容提要</b>　事件10-29、报道10-29。据叙利亚阿拉伯通讯社报道，10月29日一支载有229户流离失所家庭的队伍从叙利亚北部的营地出发，返回伊德利卜、哈马、霍姆斯、大马士革郊区与代尔祖尔五省的家园。行动由国家「无营地叙利亚」倡议委员会监督，叙紧急事务与灾害管理部团队沿途提供医疗服务并协调安全措施，同属执行第59号法令（聚焦受损地区重建与为返乡创造条件）的一部分。此前10月25日，已有220户从伊德利卜北部营地返回八省。伊德利卜乡村 Madinat al-Munawara 营地负责人苏韦德（Ahmed al-Suwaid）称，该营地家庭数已从1700户降至约1000户，滞留者多因无力修复受损房屋或另寻住所。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>叙利亚阿拉伯通讯社10月29日自伊德利卜报道，一支载有229户流离失所家庭的队伍当日从叙利亚北部的营地出发，前往伊德利卜、哈马、霍姆斯、大马士革郊区与代尔祖尔五省的家园。
+
+报道称，行动由国家「无营地叙利亚」倡议委员会监督，叙紧急事务与灾害管理部负责执行；该部团队与其他机构合作，在途中提供医疗服务并协调安全措施。此次返乡也是落实第59号法令的一部分，该法令聚焦受损地区重建和为流离居民返乡创造条件。
+
+这是近期第二次同类行动。10月25日，已有220户家庭从伊德利卜北部营地返回八个省的社区，那次行动由伊德利卜省政府会同地方当局、联合国难民署、叙利亚红新月会及人道组织组织，返乡家庭获得援助和基本家用物资。
+
+报道同时呈现返乡的现实制约：伊德利卜乡村 Madinat al-Munawara 营地负责人苏韦德本周早些时候表示，该营地家庭数已从1700户降至约1000户；仍滞留者多因缺乏资金修复受损房屋或另觅住所，而已返乡者通常是具备重建或修复能力家庭。营地居民仍面临生活条件困难和基本物资短缺，持久返乡因此仍受制约。</p></details>
+  <div class="meta">
+    <span>来源：<b>叙利亚阿拉伯通讯社（SANA），引述叙紧急事务与灾害管理部</b></span>
+    <span>推荐理由：为国家通讯社当日发布的返乡行动通报，家庭数量、目的地省份与政策依据具体；但数据仅来自叙官方一侧，缺少独立核实，故评为中等。</span>
+    <a href="https://sana.sy/en/syria/2354364" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-global_migration-4">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★☆☆☆</span>
+    <h4><a href="https://www.bernama.com/tv/news.php?id=2627465" target="_blank" rel="noopener">马移民局称持续清查外侨聚居区</a></h4>
+  </div>
+  <div class="title-en">JIM To Continue Crackdown On Illegal Foreigners&#x27; Settlements And Businesses - DG</div>
+  <div class="chips"><span class="chip">马来西亚</span><span class="chip">移民局</span><span class="chip">执法行动</span><span class="chip">无证外侨</span><span class="chip">聚居区</span><span class="chip">网络诈骗</span><span class="chip">举报</span></div>
+  <p class="summary"><b>内容提要</b>　事件10-29、报道10-29。马来西亚移民局总监扎卡里亚·沙阿班（Zakaria Shaaban）10月29日在布城记者会上表示，移民局不会停止对违反移民法外国人的执法，范围包括被指形成「聚居区」的外国人居住地及其经营活动集中的商业场所，并将在全国持续加强；行动同时针对网络诈骗集团与违法商业活动。他称今年几乎每天都有逮捕和执法行动，但以不影响行动为由拒绝披露当前重点地点。他呼吁公众在向当局举报前不要先在网上散布信息，并以彭亨珍德拜（Janda Baik）案例说明：相关信息在网络流传后，执法人员到场时场所已空，证据也可能被销毁。他并强调社区配合对后续有效执法很重要。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>马来西亚移民局总监扎卡里亚·沙阿班10月29日在布城记者会上表示，移民局不会停止对违反移民法的外国人的执法行动，包括被指形成「聚居区」的外国人居住区域，以及外国人经营活动集中的商业场所。
+
+他说，随着今年逮捕与行动数量增加，全国范围的执法行动将持续加强；行动不只针对外国人居住地，也涉及网络诈骗集团和违反移民法的商业活动。他称，只要属于马来西亚移民局管辖范围，执法就不会止于某一处；无论涉及安置、网络诈骗集团还是商业活动，都会持续加强，今年几乎每天都有逮捕和行动。
+
+对于当前重点监控地点，他表示不能披露，以免影响执法。他并提醒公众，在向当局举报前不要在网络上散布疑似违法外国人的活动信息，因为提前曝光可能导致目标人物逃离、增加执法难度并为销毁证据创造机会。
+
+他以彭亨珍德拜（Janda Baik）事件为例：相关信息在媒体和网络流传后，执法人员赶到时场所已空。他因此呼吁公众先安静地把信息提供给移民局，不要提前公布或传播，否则到场时人员可能已离开，证据也可能被销毁。他强调，社区合作对确保每条信息都能转化为有效执法行动很重要。当日他另主持了移民局级别的全国体育日活动。</p></details>
+  <div class="meta">
+    <span>来源：<b>马来西亚移民局（据马新社报道）</b></span>
+    <span>推荐理由：为部门主管在记者会上的表态，属执法方向性说明，未披露具体行动数据或个案细节，信息增量有限，故评为较低。</span>
+    <a href="https://www.bernama.com/tv/news.php?id=2627465" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-global_migration-5">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★☆☆☆</span>
+    <h4><a href="https://www.moneycontrol.com/world/japan-denies-deal-to-accept-1-lakh-bangladeshi-workers-says-viral-claims-are-false-article-14063760.html" target="_blank" rel="noopener">日本否认承诺引进十万孟籍劳工</a></h4>
+  </div>
+  <div class="title-en">Japan denies deal to accept 100,000 Bangladeshi workers, says viral claims are false</div>
+  <div class="chips"><span class="chip">日本</span><span class="chip">孟加拉国</span><span class="chip">劳工引进</span><span class="chip">配额</span><span class="chip">合作备忘录</span><span class="chip">海外就业</span><span class="chip">信息核实</span></div>
+  <p class="summary"><b>内容提要</b>　事件10-29、报道10-29。日本外务省外务报道官北村俊博（Kitamura Toshihiro）10月29日在社交平台发文，否认日本政府同意接收10万名孟加拉国劳工，称相关说法不实，10月27日日孟首脑会谈的讨论中亦不存在这一内容。此番澄清针对孟加拉国总理访日、在东京会谈后网络流传的大规模招工说法。据报道，日方对10月27日会谈的表述为加强经济合作、投资、互联互通与地区安全，日本企业对孟投资未来五年预计约1万亿日元、预计创造约20万个就业岗位。『10万』一说源自2025年5月日本商界提出五年接纳至少10万名孟加拉国劳工的计划，以及孟方每年输送10万人的目标；两国10月17日签署的就业与技能发展合作备忘录定于2027年4月1日启动招募，初始期五年、可再延五年，未设每年10万人的强制配额。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>日本外务省外务报道官北村俊博（Kitamura Toshihiro）10月29日在社交平台发文，否认日本政府同意接收10万名孟加拉国劳工。他表示，近期网络帖文称日本政府同意接纳10万名孟加拉国劳工，这一说法不实，10月27日日孟首脑会谈的讨论中也不存在相关内容，并请公众查阅外务省网站公布的会谈信息。
+
+该澄清出现在孟加拉国总理访日、与日本首相在东京会谈之后。据报道，日方对10月27日会谈的官方表述为：双方同意加强经济合作、投资、互联互通与地区安全；日本企业对孟加拉国的民间投资未来五年预计达到约1万亿日元，预计创造约20万个就业岗位；双方并以『共创繁荣的孟加拉湾产业增长带』新框架推进相关合作。
+
+报道追溯称，『10万』这一数字来自更早的表述：2025年5月，日本商界人士在东京一场人力资源研讨会上宣布，计划在五年内接纳至少10万名孟加拉国劳工，会上签署了两份涉及孟加拉国劳务机构与日本机构的谅解备忘录。孟加拉国方面亦提出每年向日本输送10万名劳工的目标，但报道强调这属于其本国规划，并非日方承诺。
+
+报道并指出，两国于2026年10月17日签署就业与技能发展合作备忘录，为招募、劳工保护与技能培养提供框架；招募定于2027年4月1日启动，初始期五年、期满可再延续五年。该备忘录并未设定每年10万人的强制配额。日方此次澄清，正是要把双边就业与技能合作框架，与『峰会同意接收10万劳工』这一具体说法区分开来。</p></details>
+  <div class="meta">
+    <span>来源：<b>日本外务省外务报道官北村俊博（据 Moneycontrol 报道）</b></span>
+    <span>推荐理由：为外务报道官当日在社交平台的公开澄清，事实与时间线可核，但内容以否认网络传言为主，政策增量有限，故评为较低。</span>
+    <a href="https://www.moneycontrol.com/world/japan-denies-deal-to-accept-1-lakh-bangladeshi-workers-says-viral-claims-are-false-article-14063760.html" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+    <div class="sec-foot"><a href="#sec-global_migration" class="collapse-btn" data-collapse="sec-global_migration">▴ 收起本板块</a></div>
+  </div>
+</details>
+<details class="section" id="sec-border_security">
+  <summary>
+    <span class="sec-title">🛡️ 全球边境安全热点</span>
+    <span class="sec-desc">边境冲突、非法越境、边境管控措施、跨境犯罪治理</span>
+    <span class="sec-count">7 条</span>
+    <span class="sec-arrow">▾</span>
+  </summary>
+  <div class="sec-body">
+    
+<article class="item" id="item-border_security-1">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://www.thenational.ae/news/uk/2026/10/29/gang-jailed-after-charging-migrants-1800-to-be-smuggled-from-uk-to-france" target="_blank" rel="noopener">英人蛇集团21人被判逾84年</a></h4>
+  </div>
+  <div class="title-en">Gang jailed after charging migrants $1,800 to be smuggled from UK to France</div>
+  <div class="chips"><span class="chip">英国</span><span class="chip">偷渡集团</span><span class="chip">英吉利海峡</span><span class="chip">国家打击犯罪局</span><span class="chip">人口贩运</span><span class="chip">判刑</span><span class="chip">法国</span></div>
+  <p class="summary"><b>内容提要</b>　事件10-29、报道10-29。英国国家打击犯罪局（NCA）侦破的一个21人偷渡集团近日系列宣判，累计刑期超过84年。该集团向主要来自孟加拉国、印度、巴基斯坦以及部分尼泊尔籍人员每人收取1800美元，用小客车将其从伦敦送至肯特郡，再由受雇货车司机经英吉利海峡渡轮运入法国，以规避欧盟边检、在欧盟非法务工。这些人多持合法签证入境英国。NCA在2025年7月至2026年1月间拦截10次运送，共拘留196名偷渡者。集团头目舒哈尔·艾哈迈德（Shuhal Ahmed，44岁）认罪，被判8年半；其副手苏赫尔·艾哈迈德（26岁）被判7年；接载司机罗比乌尔·伊斯兰（50岁）被判5年；负责联络司机的罗马尼亚籍拉卡图斯（54岁）被判6年。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>英国国家打击犯罪局侦破的一起英法方向人口偷渡案完成系列宣判。据《国民报》10月29日报道，涉案集团共21人，累计刑期超过84年。
+
+作案模式为：偷渡者主要来自孟加拉国、印度和巴基斯坦，另有部分尼泊尔籍人员，每人支付1800美元；他们先持合法签证进入英国，再由集团用小客车从伦敦送至英格兰东南部肯特郡，与受雇的货车、厢式车司机接头，随后经英吉利海峡渡轮进入法国，以规避欧盟边检、在欧盟境内非法工作。
+
+NCA对该网络实施监控，掌握10次试图将人员运出英国的行程证据，这些行程在2025年7月至2026年1月间被拦截，共196名偷渡者被拘留。侦查中还取得工业园接头、夜间人员挤入货车车厢等监控与热成像画面。
+
+判刑方面：集团头目舒哈尔·艾哈迈德（44岁）承认偷渡相关罪名，被判8年半，为最重刑期；其副手苏赫尔·艾哈迈德（26岁）负责向偷渡者收取1800美元费用并支付出租车司机送人至肯特，经审理被判7年；小型客车司机罗比乌尔·伊斯兰（50岁）负责运送并组织其他司机，认罪后被判5年；罗马尼亚籍的尼库索尔·拉卡图斯（54岁）负责联络愿意收钱运人的重型货车与厢式车司机，经审理被判6年。组织者来自伦敦，司机另有罗马尼亚与北马其顿籍。
+
+NCA高级调查官约翰·特纳（John Turner）称，该案使这一大型偷渡网络从组织者到执行司机被整体瓦解；他警告，无论向哪个方向运送人员过海峡，被查获的可能性都已显著上升。报道并指出，英国脱欧后成为偷渡者规避欧盟边检的中转站，此类反向偷渡业务近年增长。</p></details>
+  <div class="meta">
+    <span>来源：<b>英国国家打击犯罪局（NCA），经阿联酋《国民报》报道</b></span>
+    <span>推荐理由：为英国执法机构主导、法院判决已生效的跨境偷渡案件，人物、金额、刑期与拦截数据均具体可核，来源为权威媒体直接采访NCA，信息完整度高。</span>
+    <a href="https://www.thenational.ae/news/uk/2026/10/29/gang-jailed-after-charging-migrants-1800-to-be-smuggled-from-uk-to-france" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-border_security-2">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://jen.jiji.com/jc/eng_agt?g=nation&amp;k=20261029NATION-40072895" target="_blank" rel="noopener">泰缅口岸查获274万粒冰毒片</a></h4>
+  </div>
+  <div class="title-en">Mae Sai customs seizes 2.74m meth pills hidden in furniture</div>
+  <div class="chips"><span class="chip">泰国</span><span class="chip">缅甸</span><span class="chip">湄赛口岸</span><span class="chip">毒品走私</span><span class="chip">冰毒</span><span class="chip">海关</span><span class="chip">跨境犯罪</span></div>
+  <p class="summary"><b>内容提要</b>　事件10-29、报道10-29。泰国湄赛海关通报，10月29日在清莱府湄赛县泰缅友谊一号桥口岸查获毒品。一辆自缅甸大其力入境的缅甸牌照小型四轮货车载有家具与电器，关员因坐垫重量异常起疑，经X光扫描并在二号桥海关查验点开箱，从床垫与沙发夹层中查出约274万粒甲基苯丙胺片剂，估值约1.37亿泰铢，另有458套电子烟弹。24岁缅籍男司机与46岁缅籍女乘客被捕，两人供称受一名缅甸熟人雇佣，以10万泰铢报酬将货物运往湄赛一家百货分店。案件依2017年海关法与2021年毒品法典移送湄赛警局，多部门联合行动。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>泰国湄赛海关10月29日通报一起口岸毒品走私案。据时事社报道，关员在清莱府湄赛县泰缅友谊一号桥口岸检查一辆自缅甸大其力入境的缅甸牌照小型四轮货车，车上载有家具与电器。
+
+因床垫、沙发重量明显异常，当局将车辆与货物移至二号桥海关查验点作X光扫描，随后开箱查验，在床垫与沙发结构内发现用蓝色塑料袋包装、按每捆1万粒分装的片剂共274捆，合计约274万粒甲基苯丙胺片剂（俗称雅巴）。海关引述现场试剂检测结果称成分为甲基苯丙胺，估值约1.37亿泰铢。关员另查获458套电子烟弹，同样藏于床垫与沙发内部。
+
+被捕者为24岁缅籍男司机与46岁缅籍女乘客。据媒体报道，两人供称受一名缅甸熟人雇佣，以10万泰铢报酬将货物运至湄赛一家百货分店。
+
+行动由湄赛海关会同第三区海关管制部门、海关执法局侦查缉私第三处，以及军方帕孟部队下属特遣队第三骑兵连、清莱移民检查站、湄赛警局、湄赛县行政部门共同实施；参与的禁毒力量包括缉毒警察第三局第二分队、毒品管制委员会禁毒执法局情报与缉毒行动第二分队，以及陆军作战中心情报处禁毒情报中心。当局依2017年海关法关于未完成海关手续进口货物的条款、以及2021年毒品法典关于输入毒品的条款立案，两名嫌疑人及物证已移交湄赛警局继续侦办，以追查其他同伙。</p></details>
+  <div class="meta">
+    <span>来源：<b>泰国海关总署湄赛海关（据时事社英文稿报道）</b></span>
+    <span>推荐理由：为海关当日在口岸的查缉结果通报，缴获数量、估值、涉案人身份与法律依据均具体，多部门联合行动细节清晰，来源为通讯社口岸通报，可信度高。</span>
+    <a href="https://jen.jiji.com/jc/eng_agt?g=nation&amp;k=20261029NATION-40072895" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-border_security-3">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★☆☆☆</span>
+    <h4><a href="https://news.qq.com/rain/a/20261029A08UB200" target="_blank" rel="noopener">泰军令严打跨境电诈与偷渡</a></h4>
+  </div>
+  <div class="title-en">Thailand&#x27;s armed forces chief orders stepped-up action against cross-border scam networks and migrant smuggling</div>
+  <div class="chips"><span class="chip">泰国</span><span class="chip">跨境电诈</span><span class="chip">人口贩运</span><span class="chip">边境管控</span><span class="chip">军队</span><span class="chip">毒品</span><span class="chip">指挥中心</span></div>
+  <p class="summary"><b>内容提要</b>　事件10-29、报道10-29。泰国武装部队最高司令乌克里斯·汶塔农在10月29日的军队指挥官会议上，要求各军种与警察总署全方位应对安全威胁，特别强调加大对毒品和诈骗团伙的打击。总参谋长纳塔蓬·帕劳胶当日在曼谷通报称，10月30日将召开边境安全威胁防范与解决指挥中心例行会议，议题包括打击毒品、跟进跨国犯罪特别是诈骗团伙和人口贩运进展。他表示，边境商品管控依据1981年《边境商品管制皇家法令》，目前化学品、前体物质、手机SIM卡等70多类商品受管制，出口须经正式口岸；边境指挥中心、检查站、拦截点与筛查措施将持续推进。他承认相关网络已转移至邻国内陆，就中国游客经泰国被送往缅甸边境问题承认存在漏网情况。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>泰国武装部队最高司令乌克里斯·汶塔农10月29日主持召开军队指挥官会议，要求各军种和警察总署做好全方位应对安全威胁的准备，并特别强调加大对毒品和诈骗团伙的打击力度。
+
+泰国皇家军队总参谋长纳塔蓬·帕劳胶当日在曼谷泰军司令部通报会议结果时表示，10月30日将召开边境安全威胁防范与解决指挥中心例行会议，主要议题为打击毒品，以及跟进跨国犯罪特别是诈骗团伙和人口贩运的处置进展。
+
+关于边境商品管控，纳塔蓬称依据1981年《边境商品管制皇家法令》，目前有化学品、前体物质、手机SIM卡等70多类商品受管制，出口须经正式边境口岸。他表示，边境指挥中心、检查站、拦截点和筛查措施将持续推进，例行会议将进一步细化相关措施。
+
+他同时承认，尽管此前开展过清剿行动，相关网络已转移至邻国内陆地区；泰方能在本国范围内做的，是整合执法人员与外交部门力量，并提高本国民众的防范意识。就中国游客经泰国被送往缅甸边境的问题，纳塔蓬表示泰方正在努力处理，并承认存在漏网情况，需要各方共同协助；他称在边境安全威胁防范与解决指挥中心架构下，已有专门警察部门负责此事。
+
+此次会议为2027财年首次军队指挥官会议，另讨论了泰军向现代化军队转型的路径，涵盖陆、空、海、太空、网络和电磁频谱六个作战维度，以及联合情报、远程精确打击和反无人机能力建设。乌克里斯在会上感谢各军种与警察总署参与曼谷及周边地区洪灾救援。</p></details>
+  <div class="meta">
+    <span>来源：<b>泰国皇家军队通报，经泰国中文社发布、腾讯新闻转载</b></span>
+    <span>推荐理由：为军方高层会议后的当日本地通报，涉及下一阶段边境执法安排与管制清单，具备政策指向性；但内容以部署表述为主，缺少具体数据，且来源为自媒体账号翻译发布、无原始通报链接，故评为较低。</span>
+    <a href="https://news.qq.com/rain/a/20261029A08UB200" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-border_security-4">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="http://www.chinaview.cn/20261029/161006a346e741adaaff58b786ebe7f8/c.html" target="_blank" rel="noopener">阿富汗解救127名被贩运者</a></h4>
+  </div>
+  <div class="title-en">Afghan police rescue 127 people from trafficking attempt in western region</div>
+  <div class="chips"><span class="chip">阿富汗</span><span class="chip">尼姆鲁兹</span><span class="chip">人口贩运</span><span class="chip">非法越境</span><span class="chip">警方</span><span class="chip">边境管控</span><span class="chip">解救</span></div>
+  <p class="summary"><b>内容提要</b>　事件10-28、报道10-29。据新华社报道，阿富汗西部尼姆鲁兹省警方10月28日解救127名疑似被人口贩运者带离国境的人员，并缴获5辆用于运送他们的车辆。该省警方发言人库德拉特（Mawlawi Gul Mohammad Qudrat）10月29日表示，嫌疑人企图经尼姆鲁兹将这些人非法送出阿富汗；警方不会允许任何人非法越境，将对涉人口贩运者采取严厉措施。报道称，上周警方在同一省份还阻止了一起贩运89人的企图，逮捕3名嫌疑人。报道并指出，在贫困与失业背景下，不少阿富汗人仍以非法途径出境寻找海外工作机会。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>阿富汗西部尼姆鲁兹省警方10月28日采取行动，解救127名疑似被人口贩运团伙带离国境的人员。该省警方发言人库德拉特10月29日向新华社披露上述情况。
+
+库德拉特称，嫌疑人当时正企图经尼姆鲁兹把这些人员非法送出阿富汗；警方在行动中另缴获5辆用于运送人员的车辆。他表示，警方不会允许任何人非法越境，并警告将对参与人口贩运者采取严厉措施。他未提供更多细节。
+
+报道称，上周警方在同一省份还阻止了一起贩运89人的企图，并逮捕3名嫌疑人。
+
+报道指出，在贫困与失业背景下，许多阿富汗人仍以非法方式离境，前往海外寻找就业机会。</p></details>
+  <div class="meta">
+    <span>来源：<b>阿富汗尼姆鲁兹省警方（据新华社报道）</b></span>
+    <span>推荐理由：为省级警方发言人当周行动通报，经国家通讯社发布，人数、车辆与查获情况明确；但细节有限、缺乏后续处置信息，故评为中等。</span>
+    <a href="http://www.chinaview.cn/20261029/161006a346e741adaaff58b786ebe7f8/c.html" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-border_security-5">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://polanddaily24.com/fake-documents-for-migrants-criminal-group-dismantled/global-politics/75989" target="_blank" rel="noopener">波兰边防破伪造学历证件团伙</a></h4>
+  </div>
+  <div class="title-en">Poland&#x27;s Border Guard dismantles ring selling fake school certificates to foreign nationals</div>
+  <div class="chips"><span class="chip">波兰</span><span class="chip">边防卫队</span><span class="chip">伪造证件</span><span class="chip">居留许可</span><span class="chip">学生身份</span><span class="chip">有组织犯罪</span><span class="chip">乌克兰</span></div>
+  <p class="summary"><b>内容提要</b>　事件10-29、报道10-29。波兰边防卫队（Straż Graniczna）10月29日通报，已瓦解一个为在波外国人伪造学历证明、以助其取得居留与工作许可的有组织犯罪团伙，目前共23人被起诉，其中乌克兰籍19人、摩尔多瓦籍3人、格鲁吉亚籍1人。该团伙自2022年6月至2025年底在全国活动，提供5所乌克兰高校的在读或学历证明及2所波兰大专院校的学生证与证明，单份或成套文件收费230至800兹罗提，并附波兰语翻译。文件主要用于向热舒夫、罗兹等地省级机关申请临时居留与工作许可，持学生身份者还可享受26岁以下免缴部分社保等优惠。案件由热舒夫地区检察院监督侦查，仍在进行。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>波兰边防卫队10月29日通报，已瓦解一个以伪造学历证明牟利、帮助在波外国人办理居留与工作许可的有组织犯罪团伙，迄今共23人被起诉。
+
+据比耶什恰迪地区分局发言人扎凯拉日（Piotr Zakielarz）上尉当日说明，团伙成员组织、制作并出售证明文件，内容为在乌克兰高校就读或在波兰大专院校注册；涉及5所乌克兰高等院校，并附有波兰语翻译。此外还提供位于彼得库夫－特雷布纳尔斯基的两所波兰大专院校的证明与学生证。单份文件或成套文件收费230至800兹罗提。
+
+这些文件被乌克兰、摩尔多瓦、白俄罗斯和格鲁吉亚籍在波务工人员用于向热舒夫等省级机关申请临时居留与工作许可，据调查还涉及其他省份的机关。文件对26岁以下人员尤为重要——学生身份在法定情形下可免除缴纳社保义务，并可用于居留与就业合法化程序。案件线索由派驻该机关的边防卫队联络官发现。
+
+侦办过程为：2025年底首次抓捕，在普鲁什奇格但斯基、日拉尔杜夫、华沙、克拉科夫等地搜查6处场所，逮捕3名乌克兰籍人员，其中一名42岁男子被指为团伙头目，当场查获8.7万兹罗提现金，以及手机、存储设备、电脑、乌克兰高校印章和已制作完成的入学证明；该男子被控领导为协助外国人滞留而制作伪造证件的有组织犯罪集团，2025年12月法院裁定对其审前羁押，2026年8月改为非羁押措施，包括5万兹罗提保释金、禁止出境和扣押护照。据调查，约120万兹罗提团伙收益流入其银行账户。2026年5月另逮捕4名乌克兰籍嫌疑人，上周再逮捕6名外国人，罪名涉及使用伪造文件。
+
+被起诉的23人中包括团伙组织者与在热舒夫、罗兹省机关使用伪造证明的外国人。案件由热舒夫地区检察院监督，仍在侦查，不排除进一步抓捕。</p></details>
+  <div class="meta">
+    <span>来源：<b>波兰边防卫队（Straż Graniczna）比耶什恰迪地区分局，经 PolandDaily24 报道</b></span>
+    <span>推荐理由：为边防卫队官方通报的跨境证件造假案，涉案人数、国别构成、收费与侦办节点均具体；但属个案侦办进展，影响范围有限，故评为中等。</span>
+    <a href="https://polanddaily24.com/fake-documents-for-migrants-criminal-group-dismantled/global-politics/75989" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-border_security-6">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★☆☆☆</span>
+    <h4><a href="https://www.thedailystar.net/news/crime-justice/news/bgb-detains-9-including-3-indians-maheshpur-border-jhenaidah-4310551" target="_blank" rel="noopener">孟边防在切尼达截九名越境者</a></h4>
+  </div>
+  <div class="title-en">BGB detains 9, including 3 Indians, at Maheshpur border in Jhenaidah</div>
+  <div class="chips"><span class="chip">孟加拉国</span><span class="chip">印度</span><span class="chip">边防</span><span class="chip">非法越境</span><span class="chip">界桩</span><span class="chip">拦截</span><span class="chip">立案</span></div>
+  <p class="summary"><b>内容提要</b>　事件10-29、报道10-29。孟加拉国边防局（BGB）10月29日凌晨在切尼达（Jhenaidah）马赫什普尔边境拦截9人，其中3人为印度籍、6人为孟加拉国籍，当时他们正试图经非法路线越境进入印度。据第58营通报，拦截地点位于61-R号界桩以内约300码的哈尔达尔帕拉村，属斯里纳特普尔前哨辖区。3名印度籍人员为西孟加拉邦纳迪亚县居民，包括一名27岁女子、一名33岁男子及其14岁女儿，据称此前赴孟参加杜尔迦节探亲，返印时走非法路线。6名孟籍人员来自戈巴尔甘杰、巴里萨尔、皮罗杰布尔与切尼达等地。9人经身份核实并立案后已移交马赫什普尔警局。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>孟加拉国边防局10月29日凌晨在西南部切尼达县马赫什普尔边境地区拦截9人，指其试图经非法路线越境进入印度。
+
+据第58营（马赫什普尔营）通报，拦截地点位于61-R号界桩以内约300码的哈尔达尔帕拉村，属斯里纳特普尔边境前哨辖区。
+
+9人中3人为印度籍，分别为西孟加拉邦纳迪亚县霍森普尔村27岁女子希瓦妮·辛格（Shivani Singh）、同县索纳塔拉村33岁男子德布库马尔·比斯瓦斯（Debkumar Biswas）及其14岁女儿。边防官员称，三人此前赴孟加拉国探亲并参加杜尔迦节活动，返印时选择了非法路线。
+
+其余6人为孟加拉国籍，分别来自戈巴尔甘杰县比什努普尔村与杜穆里亚村、巴里萨尔县拉吉哈尔村、皮罗杰布尔县加纳克帕拉村，以及切尼达县阿南塔普尔村与达卡蒂亚北帕拉村。
+
+第58营助理主任蒙希·伊姆达杜尔·拉赫曼（Munshi Imdadur Rahman）表示，被拦截人员身份已核实，相关案件已立案，9人随后被移交马赫什普尔警局处理。</p></details>
+  <div class="meta">
+    <span>来源：<b>孟加拉国边防局（BGB）第58营（据《每日星报》报道）</b></span>
+    <span>推荐理由：为边防营级单位的日常拦截通报，人数、地点与界桩编号具体，但案情规模小、属常规执法，故评为较低。</span>
+    <a href="https://www.thedailystar.net/news/crime-justice/news/bgb-detains-9-including-3-indians-maheshpur-border-jhenaidah-4310551" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-border_security-7">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★☆☆☆</span>
+    <h4><a href="https://news.laodong.vn/dttg/tin-tuc/bien-phong-quang-tri-va-cong-an-kham-muon-xu-ly-558-vu-vi-pham-1791323.html" target="_blank" rel="noopener">越老边防会谈 累计处理558起</a></h4>
+  </div>
+  <div class="title-en">Quang Tri Border Guard and Kham Muon Police handle 558 violations</div>
+  <div class="chips"><span class="chip">越南</span><span class="chip">老挝</span><span class="chip">边防</span><span class="chip">边境管理</span><span class="chip">跨境犯罪</span><span class="chip">会谈</span><span class="chip">联合演练</span></div>
+  <p class="summary"><b>内容提要</b>　事件10-29、报道10-29。越南广治省边防部队指挥部与老挝甘蒙省公安10月29日举行年度会谈，评估边境管理与犯罪防控协作。双方通报称，近期协同接收18名被不法分子诱骗、煽动的人员返乡；发现并逮捕2名涉非法持有毒品的老挝籍人员；共处理558起违法行为（通报未明确起算时点，为一段时期累计），立案起诉44起、56人；2026年联合举行打击持械跨境毒品贩运犯罪的演练。双方商定继续加强信息交换与边境巡逻管控，重点打击毒品、人口贩运、走私、非法运输武器爆炸物、非法出入境与网络诈骗，并在茶洛—纳炮国际口岸与卡隆—农马副口岸加强检查。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>越南广治省边防部队指挥部与老挝甘蒙省公安10月29日举行2026年度会谈，评估双方在边境管理与保护、维护治安秩序、防范和打击犯罪方面的协作成果，并商定下一阶段合作内容。
+
+据广治省边防部队指挥部通报，过去一段时间双方主动交换信息、协同处置边境地区治安案件：双方协同接收18名被不法分子诱骗、煽动的人员并帮助其返回家乡；发现并逮捕2名涉非法持有毒品的老挝籍人员；共处理558起违法行为，立案起诉44起、56人。双方还在2026年联合组织演练，模拟打击持械跨境贩运毒品的犯罪活动。
+
+除执法协作外，双方在边境地区开展民生项目，包括助学与照明工程，其中一项计划资助13名家庭困难的老挝学生继续学业。
+
+会谈中，双方同意继续加强信息交换，协同巡逻与管控；重点打击毒品、人口贩运、走私、非法运输武器与爆炸物、非法出入境以及网络诈骗等犯罪；在茶洛—纳炮（Cha Lo–Na Phau）国际口岸和卡隆—农马（Ca Roong–Noong Ma）副口岸加强检查管控；协同抓捕通缉对象、依法移交违法人员。双方还商定加强宣传动员民众保护边界线与界碑，重视为老挝边防力量开展业务技能培训，并保持年度会谈机制。会谈结束时，双方代表团签署协作备忘录。</p></details>
+  <div class="meta">
+    <span>来源：<b>越南广治省边防部队指挥部（据《劳动报》报道）</b></span>
+    <span>推荐理由：为两国地方边防与公安的年度会谈通报，含处理案件总量与协作事项，但以工作总结和机制性表态为主，缺少单一重大事件，故评为较低。</span>
+    <a href="https://news.laodong.vn/dttg/tin-tuc/bien-phong-quang-tri-va-cong-an-kham-muon-xu-ly-558-vu-vi-pham-1791323.html" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+    <div class="sec-foot"><a href="#sec-border_security" class="collapse-btn" data-collapse="sec-border_security">▴ 收起本板块</a></div>
+  </div>
+</details>
+<details class="section" id="sec-usa">
+  <summary>
+    <span class="sec-title">🗽 美国移民与边境管理</span>
+    <span class="sec-desc">DHS/CBP/ICE/USCIS 动态、国会立法、司法裁决、美墨边境态势</span>
+    <span class="sec-count">5 条</span>
+    <span class="sec-arrow">▾</span>
+  </summary>
+  <div class="sec-body">
+    
+<article class="item" id="item-usa-1">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://www.nilc.org/press/immigrants-rights-organizations-file-lawsuit-stop-ice-hiding-locations-detained-people/" target="_blank" rel="noopener">移民团体起诉移民局隐匿在押者关押地</a></h4>
+  </div>
+  <div class="title-en">Immigrant legal groups sue ICE for hiding locations of detained people</div>
+  <div class="chips"><span class="chip">美国移民执法</span><span class="chip">在押者定位系统</span><span class="chip">最终递解令</span><span class="chip">联邦诉讼</span><span class="chip">行政程序法</span><span class="chip">律师会见权</span><span class="chip">信息自由法</span></div>
+  <p class="summary"><b>内容提要</b>　事件10-28、报道10-29。四家美国移民法律服务机构的代理律师团队于10月28日在马萨诸塞州联邦地区法院提起诉讼，挑战国土安全部（DHS）与移民与海关执法局（ICE）自今年9月起不再公开部分在押者关押地点的做法，案件名为「大波士顿法律服务处等诉马林」（Greater Boston Legal Services et al. v. Mullin）。起诉方称，ICE自2010年起通过「在押者在线定位系统」允许家属与律师按姓名、出生日期、出生国或A号码查询在押地点；约在9月15日前后，该局在无公开通知的情况下停止披露已被作出最终递解令者的关押地点，部分执法人员还被要求不得在电话中告知。美联社报道称，截至9月，这一变化影响逾1.6万名在押者，而当时移民与海关执法局在押总人数接近6.9万人。诉状主张该做法违反《行政程序法》、侵犯律师与当事人依第一修正案享有的沟通权，并指政府未依《信息自由法》公布政策细节。原告请求法院撤销该政策并申请暂停执行。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>原告为四家长期提供移民法律援助的机构：大波士顿法律服务处（Greater Boston Legal Services）、里安移民中心（Rian Immigrant Center）、弗洛伦斯移民与难民权利项目（Florence Immigrant and Refugee Rights Project）以及阿米卡移民权利中心（Amica Center for Immigrant Rights）。代理律师团队包括全国移民法律中心（NILC）、全国移民项目、美国公民自由联盟（ACLU）及其马萨诸塞州分会，以及一家个人律师事务所。
+
+争议焦点是「在押者在线定位系统」（Online Detainee Locator System）。该系统自2010年前后上线，家属、律师与公众可凭姓名、出生日期、出生国或外国人登记号码查询某人是否在押及所在设施。起诉方称，约在9月中旬，DHS在未作公开说明的情况下，对已被作出最终递解令（final order of removal）的在押者停止披露关押地点，系统查询与电话询问均不再提供信息；美联社报道称涉及人数超过1.6万人。
+
+诉状提出三项主张：一是该政策武断反复，违反《行政程序法》；二是阻断律师与在押当事人之间的联系，侵害原告依第一修正案享有的权利；三是政府未依《信息自由法》公布政策内容。原告请求法院撤销该政策，并表示将很快提出暂停执行的动议。
+
+多份原告声明强调实务后果。大波士顿法律服务处执行主任杰奎琳·鲍曼（Jacquelynne J. Bowman）表示，政府让律师无法找到当事人，等于剥夺其抗辩机会；里安移民中心移民法律服务主任杰基·凯利（Jackie Kelley）称，找不到当事人就无法为其申请本可获得的救济。起诉方同时说明，持有最终递解令者仍可寻求重新开案、人身保护令等救济，但若无法接触律师与法院，这些途径在程序上难以启动。截至报道时，法院尚未就该案作出裁定，ICE与DHS也未就诉讼主张作出完整回应。</p></details>
+  <div class="meta">
+    <span>来源：<b>美国全国移民法律中心（NILC）</b></span>
+    <span>推荐理由：涉及联邦法院新诉讼与ICE在押人员信息政策的实质变化，直接影响数万名在押者获得律师与司法救济的能力；消息源为原告方官方新闻稿并经美联社报道印证，属当日具备制度影响的执法争议。</span>
+    <a href="https://www.nilc.org/press/immigrants-rights-organizations-file-lawsuit-stop-ice-hiding-locations-detained-people/" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-usa-2">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://m.timesofindia.com/world/us/trumps-dhs-hit-by-data-breach-as-hackers-expose-records-of-41000-employees/articleshow/135294676.cms" target="_blank" rel="noopener">美国土安全部逾4万人资料外泄</a></h4>
+  </div>
+  <div class="title-en">Details of more than 41,000 DHS personnel leaked online</div>
+  <div class="chips"><span class="chip">美国国土安全部</span><span class="chip">数据泄露</span><span class="chip">移民执法</span><span class="chip">海关与边境保护局</span><span class="chip">单点登录</span><span class="chip">执法者身份保护</span><span class="chip">网络安全</span></div>
+  <p class="summary"><b>内容提要</b>　事件10-28、报道10-29。英国广播公司（BBC）10月28日报道、《印度时报》10月29日转载，一个可检索的在线数据库公开了美国国土安全部（DHS）逾4.1万名雇员与承包商的资料，其中包括数千名从事移民与边境执法的人员。据报泄露内容包括姓名、工作地址、联系电话与岗位职责说明；按机构划分，逾2.1万人隶属海关与边境保护局（CBP），近6600人隶属移民与海关执法局（ICE），其余涉及国土安全调查局、联邦保护局与网络安全和基础设施安全局。自称「和平部」（Department of Peace）的组织称通过DHS使用的Okta单点登录服务取得数据；记者兼安全研究员迈娅·克兰乌（maia crimew）与泄露档案机构「分布式拒绝秘密」（DDoSecrets）将其整理为名为「冰镐」（Icepick）的数据库发布。DHS发言人称已获悉可能的泄露并正迅速处置；Okta表示未发现自身数据或系统被入侵。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>这是近几周内美国政府机构第三次遭遇重大泄露或入侵。据BBC报道，泄露文件包含姓名、工作地址、工作电话与各人在所属机构承担的工作说明，除人员目录外，还涉及数十个此前未公开的行动代号、负责与参与行动的探员，以及工作中使用的部分技术工具，包括Cellebrite与Palantir相关产品。
+
+按机构分布，海关与边境保护局（CBP）人员逾2.1万人，占已公开名单的最大部分；移民与海关执法局（ICE）人员近6600人；其余记录涉及国土安全调查局（HSI）、联邦保护局（FPS）与网络安全和基础设施安全局（CISA）。各家媒体对ICE人数的统计略有出入，本条采用BBC的近6600人口径。
+
+「分布式拒绝秘密」联合创始人艾玛·贝斯特（Emma Best）称，发布目的不是整理一份DHS雇员总名录，而是以问责取代匿名，点名负责监管秘密行动、卧底行动、追查政府内部泄密者以及参与驱逐与移送项目的人员。自称「和平部」的组织则称，此次公布是对ICE执法行动的回应，并引述国土安全部长马克韦恩·马林（Markwayne Mullin）7月17日关于「加大力度」的表态。
+
+DHS发言人在给媒体的声明中称，该部已获悉可能存在的数据泄露，正迅速而有效地处置，并高度重视针对雇员与执法人员的安全威胁，将在有更多信息时对外通报。Okta方面称已知悉相关说法，但强调公司系统安全，没有证据显示其数据或系统遭到入侵。
+
+BBC指出，这是近几周内美国政府机构第三次遭遇泄露或入侵，此前联邦调查局（FBI）数据被「ShinyHunters」组织窃取，联邦选举委员会（FEC）网站也因疑似攻击短暂下线。执法人员身份信息公开引发安全担忧，一些前DHS官员对媒体称，此类暴露在该部历史上没有先例。</p></details>
+  <div class="meta">
+    <span>来源：<b>英国广播公司（BBC）报道，《印度时报》转载</b></span>
+    <span>推荐理由：属重大执法数据安全事件，直接波及移民与边境执法人员的身份保护与行动安全，具持续影响；但核心事实仍处官方核实阶段，且与日常边境管理运行无直接即时关联，故定为中等偏上。</span>
+    <a href="https://m.timesofindia.com/world/us/trumps-dhs-hit-by-data-breach-as-hackers-expose-records-of-41000-employees/articleshow/135294676.cms" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-usa-3">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://www.ice.gov/news/releases/dozens-illegal-aliens-arrested-nationwide-voter-fraud-crackdown" target="_blank" rel="noopener">美移民执法局称拘捕数十名非法投票者</a></h4>
+  </div>
+  <div class="title-en">ICE says dozens arrested nationwide in voter fraud crackdown</div>
+  <div class="chips"><span class="chip">美国移民执法</span><span class="chip">选民欺诈</span><span class="chip">非公民投票</span><span class="chip">驱逐后果</span><span class="chip">中期选举</span><span class="chip">国土安全部</span><span class="chip">刑事指控</span></div>
+  <p class="summary"><b>内容提要</b>　事件10-29、报道10-29。美国移民与海关执法局（ICE）10月29日发布通报，称已在全美与联邦、州及地方执法伙伴协同拘捕数十名涉嫌非法登记投票或投票的人员，并称其中多人已承认相关行为。通报列举了十余起个案，涉及索马里、柬埔寨、洪都拉斯、越南、古巴、墨西哥、尼加拉瓜、委内瑞拉、萨尔瓦多、危地马拉与德国等国公民，所称投票时间跨度从1992年联邦选举到2026年的选举，多数被指在2024年联邦选举中投票。代理ICE局长戴维·文特雷拉（David J. Venturella）称，这些拘捕是「细致、有条理调查」的结果，并强调美国选举必须依法进行。国土安全部长马克韦恩·马林称「美国选举只属于美国人」。通报未给出拘捕总数以外的统计，也未说明各案被控的具体罪名、受理法院或已审结案件数量，并称所列个案仅是「部分」在办调查。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>通报以「数十名」作为唯一的总量表述，其余为个案举例。按媒体核对，通报正文实际点名14人，而通报自称将列出18起案例，两个数字存在出入，反映官方文本本身对案例数量的表述并不完全统一。被点名者包括：索马里籍的Aden Hassan Aden，被指在2020年联邦选举中非法投票，并有家暴、持有毒品与盗窃的定罪记录；柬埔寨籍的Phath Vorn，被指在1992年联邦选举中投票，曾有意图谋杀的攻击、持危险武器攻击等定罪；洪都拉斯籍的Darwin Yoel Zelaya-Orellana，被指在2026年某次联邦选举中投票；越南籍的Mai Tran，被指在2024年联邦选举中投票。
+
+通报未说明各人被捕的州或联邦司法辖区、具体被控罪名、被捕时间，也未说明是否已就投票类罪名提起公诉；对部分人员仅列出逮捕记录或待决指控，而这些并不等同于定罪。对于被指「在2026年选举中投票」的个案，通报未说明具体是哪一场选举。
+
+法律层面，美国联邦选举投票权限于美国公民；非公民登记投票或投票可能面临刑事指控，并在罪名成立后产生移民后果，包括被驱逐。通报本身未主张相关投票改变了任何选举结果。
+
+该通报发布时点距11月中期选举约一周，正值提前投票展开。此前数月，国土安全部与司法部持续公布涉非公民投票的逮捕与起诉信息，总量口径不一。执法机关强调个案正在推进，被拘捕者在法院判定有罪前推定无罪；围绕此类案件的证据强度与执法边界，法律界与民权组织仍有争议。</p></details>
+  <div class="meta">
+    <span>来源：<b>美国移民与海关执法局（ICE）</b></span>
+    <span>推荐理由：属联邦执法机构主动发布的全国性行动通报，与选举周期高度相关，具政策信号意义；但通报缺乏总量、罪名与辖区等关键细节，实质信息量有限，故评为中等。</span>
+    <a href="https://www.ice.gov/news/releases/dozens-illegal-aliens-arrested-nationwide-voter-fraud-crackdown" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-usa-4">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://en.yna.co.kr/view/AEN20261029014100315" target="_blank" rel="noopener">韩议员赴美签证被拒 美方称美国优先</a></h4>
+  </div>
+  <div class="title-en">US stresses America first visa policy after South Korean lawmaker&#x27;s visa refusal</div>
+  <div class="chips"><span class="chip">美国签证政策</span><span class="chip">拒签</span><span class="chip">韩国议员</span><span class="chip">国务院表态</span><span class="chip">逐案审理</span><span class="chip">议会外交</span><span class="chip">美韩关系</span></div>
+  <p class="summary"><b>内容提要</b>　事件10-29、报道10-29。韩国执政党共同民主党议员陈声准（Jin Sung-joon，音译）10月28日称，其赴美访问美军太平洋司令部的签证申请遭拒，并在社交平台公开了似为拒签的文件。美国国务院发言人10月29日以书面答复韩联社称，特朗普政府继续通过充分执行美国移民法与签证程序，把美国及其利益放在首位，并称国务院对每份签证申请逐案审理，一般而言不评论具体个案。陈声准为韩国国会国防委员会委员长，称原定与美军太平洋司令部司令塞缪尔·帕帕罗（Samuel Paparo）等会面。报道称拒签具体原因不明，有观察人士提及他1991年因违反韩国《国家保安法》被判刑的前科；美方已要求其提交判决书英译本。韩国外交部称正与美方就此磋商，并称其申请流程似乎仍在进行中，但无法核实具体个案的细节。韩国外交部长赵显表示将请美方尽快为韩国议员签发签证。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>事件源于韩国国会国防委员会委员长陈声准的访美计划。他10月28日表示，其赴美签证申请被拒，并在社交平台公开了看起来是拒签通知的文件。按其说法，此行原定与美方关键人士会面，包括美军太平洋司令部司令塞缪尔·帕帕罗（Samuel Paparo）上将；他强调自己2014年曾以国会委员会成员身份访问该司令部，因此难以理解此次被拒。
+
+美国国务院发言人10月29日回应韩联社书面提问时称，特朗普政府继续把美国及其利益放在首位，充分执行美国移民法并通过签证程序确保合法旅行；国务院对每份签证申请逐案审理，作为一般原则不评论具体签证个案的处理。这一表述未直接确认或否认拒签事实。
+
+关于原因，报道称目前并不明确。有观察人士提到，他1991年因违反韩国《国家保安法》被判处三年有期徒刑、停止资格三年，这可能构成考量因素；美方已要求其提交相关法院判决的英译本，他计划照办。
+
+报道并指出，本月早些时候共同民主党前党首郑清来也遇到类似情况：原定参加国会外交统一委员会访美审计活动，因签证申请迟迟未获批而改赴欧洲。韩国外交部长赵显在启程赴亚特兰大出席二十国集团外长会前对记者表示，此事与韩美关系无关，但属不应出现的状况，他将请求美方确保韩国议员的签证及时签发。
+
+报道将上述签证问题置于近期韩美在一系列议题上的摩擦背景中，但同时说明拒签原因尚未确定。就程序而言，签证裁定属领事裁量事项，拒签理由通常不对外公开，此次争议更多体现为议会外交安排受阻与双边沟通压力。</p></details>
+  <div class="meta">
+    <span>来源：<b>韩联社（Yonhap）</b></span>
+    <span>推荐理由：属美国签证审理实践中的具体个案，因涉及盟国在职议员与国防委员会负责人而具外交关注度；但事件规模有限、原因未明，且美方仅作原则性表态，故评为中等。</span>
+    <a href="https://en.yna.co.kr/view/AEN20261029014100315" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-usa-5">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★☆☆☆</span>
+    <h4><a href="https://www.kcrg.com/2026/10/28/ice-detains-3-construction-workers-advocacy-group-says/" target="_blank" rel="noopener">艾奥瓦城三名建筑工人上班途中被带走</a></h4>
+  </div>
+  <div class="title-en">ICE detains three construction workers in Iowa City, advocacy group says</div>
+  <div class="chips"><span class="chip">美国移民执法</span><span class="chip">艾奥瓦州</span><span class="chip">建筑工人</span><span class="chip">无犯罪记录</span><span class="chip">移动房园区</span><span class="chip">倡议组织</span><span class="chip">选举前执法</span></div>
+  <p class="summary"><b>内容提要</b>　事件10-28、报道10-29。美国艾奥瓦州艾奥瓦城三名居民10月28日清晨在前往工地途中被移民执法人员带走。据倡议组织「倾听我的声音—艾奥瓦」（Escucha Mi Voz Iowa）称，被带走者为埃列塞尔·莫伊塞斯·奥索里奥（Eliezer Moisés Osorio）、利布尼·阿马多尔（Libni Amador）与内尔松·伦比·基罗斯（Nelson Lumbi Quiroz），当时正离开所居住的移动房园区，前往锡达拉皮兹一处建筑工地。当地电视台KCRG经查阅公开法庭记录确认，三人在艾奥瓦州均无犯罪记录。移民与海关执法局（ICE）随后回复KCRG称，三人均无合法移民身份、均来自尼加拉瓜；基罗斯于9月被下达最终递解令，此前因酒后驾驶出现在一份监狱在押名单上。按ICE说法，基罗斯目前仍在押，另两人已同意返回尼加拉瓜。该组织称，随着选举临近，移民执法活动正在升级。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>据KCRG报道，事件发生在10月28日（周三）清晨。三名艾奥瓦城居民在离开所居住的移动房园区、准备前往锡达拉皮兹一处建筑工地时被带走。由于现场信息最初主要来自倡议组织与家属，报道对细节保持了限定表述。
+
+倡议组织「倾听我的声音—艾奥瓦」（Escucha Mi Voz Iowa）公开了三人的姓名：埃列塞尔·莫伊塞斯·奥索里奥（Eliezer Moisés Osorio）、利布尼·阿马多尔（Libni Amador）与内尔松·伦比·基罗斯（Nelson Lumbi Quiroz）。该组织长期在艾奥瓦州从事移民权益与劳工权益工作，此次将事件与选举前的执法节奏联系起来，称拘留与遣返活动正在增加。
+
+KCRG记者查阅艾奥瓦州公开法庭记录后确认，三人在该州没有犯罪记录。这一核实针对的是「无犯罪记录」的说法本身，报道并未据此推断执法动因。
+
+报道在更新中补充了ICE的回应：三人均无合法移民身份，且均来自尼加拉瓜；基罗斯于9月被下达最终递解令，此前因酒后驾驶出现在一份监狱在押名单上。ICE称基罗斯仍在押，另两人已同意返回尼加拉瓜。需要注意的是，ICE回复中提到的第三人为「贝利亚达雷斯」（Belladarez），与前文所列姓名不完全一致，报道未就此作出说明。
+
+此类地方性个案通常缺少联邦层面的详细通报，需依赖地方媒体、倡议组织与家属转述，事实边界较为有限。将其置于全国背景时应注意：一方面，联邦执法机构今年在多地加强了针对工作场所与通勤环节的行动；另一方面，个案的具体依据往往未公开，外界难以判断执法是否合法适当。本条目仅记录已由地方媒体核实的信息，不作因果推断。</p></details>
+  <div class="meta">
+    <span>来源：<b>KCRG-TV9（美国艾奥瓦州锡达拉皮兹）</b></span>
+    <span>推荐理由：地方媒体单一来源报道，事件规模小，缺乏法律文书佐证；但记者核实了「无犯罪记录」这一关键细节，并在更新中获得ICE关于三人身份状态与其中一人递解令的说明，事实链条相对完整，故仍评为较低。</span>
+    <a href="https://www.kcrg.com/2026/10/28/ice-detains-3-construction-workers-advocacy-group-says/" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+    <div class="sec-foot"><a href="#sec-usa" class="collapse-btn" data-collapse="sec-usa">▴ 收起本板块</a></div>
+  </div>
+</details>
+<details class="section" id="sec-eu">
+  <summary>
+    <span class="sec-title">🇪🇺 欧盟移民与边境管理</span>
+    <span class="sec-desc">欧盟委员会/Frontex/EUAA 动态、移民与庇护公约执行、申根区管控、成员国政策</span>
+    <span class="sec-count">5 条</span>
+    <span class="sec-arrow">▾</span>
+  </summary>
+  <div class="sec-body">
+    
+<article class="item" id="item-eu-1">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://kdn.rw/rwanda-cannot-be-blamed-for-what-happens-in-dr-congo-fm-says" target="_blank" rel="noopener">卢旺达证实与欧洲五国磋商回返枢纽</a></h4>
+  </div>
+  <div class="title-en">Rwanda confirms talks with five EU states on migrant return hub</div>
+  <div class="chips"><span class="chip">回返枢纽</span><span class="chip">欧盟移民政策</span><span class="chip">卢旺达</span><span class="chip">第三国遣返</span><span class="chip">丹麦</span><span class="chip">荷兰</span><span class="chip">驱逐合作</span></div>
+  <p class="summary"><b>内容提要</b>　事件10-28、报道10-29。卢旺达外交与国际合作部长奥利维耶·恩杜洪吉雷赫（Olivier Nduhungirehe）10月28日在莫斯科出席俄罗斯—非洲峰会期间向法新社确认，卢旺达正与欧洲国家讨论在其境内设立所谓「回返枢纽」（return hub），用于安置被欧盟国家驱逐的人员。他表示，丹麦、奥地利、希腊、德国与荷兰五国寻求建立此类中心，但尚未公布地点；据三名了解谈判情况的欧洲人士称，卢旺达与这五国的协议最早可能在下月签署。恩杜洪吉雷赫称，由于讨论仍在进行，他不能详述，并强调此事对卢旺达「非常敏感」，因为涉及如何给予人、移民与难民以尊严。报道未披露协议草案内容、人数规模、法律保障安排或欧盟方面的出资方案。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>所谓「回返枢纽」，指欧盟成员国与非欧盟国家签约设立、用于安置已被下达遣返决定但暂时无法遣返者的境外设施。欧盟新的《回返条例》已于10月16日生效，为成员国与第三国合作开展遣返提供制度基础，前提是尊重基本权利与不驱回原则。此前有报道称五个成员国正就首个枢纽进行谈判；本次卢旺达方面的表态，是迄今较为直接的地点确认。
+
+恩杜洪吉雷赫是在莫斯科出席俄罗斯—非洲峰会期间作出上述表示的。他说，谈判仍在进行，因此无法细述；同时强调这对卢旺达是敏感议题，因为卢方希望给予人、移民与难民以尊严。他并未说明可能的接收人数、设施位置、停留期限或申请人能否获得法律救济。
+
+法新社援引三名了解谈判的欧洲人士称，协议「最早可能在下月签署」。这一时间表尚未获任何一方官方确认，属消息人士说法，应谨慎对待。
+
+报道同时提到，美国在10月28日对卢旺达国防部及一家卢旺达金融机构实施制裁，指其支持刚果（金）东部的M23武装；恩杜洪吉雷赫在同一场合反驳了卢旺达应为此负责的说法。回返枢纽议题与这一制裁在同一场记者问答中出现，但报道未将两者建立因果联系。
+
+从制度角度看，此类安排面临的核心争点包括：被转移者的法律地位与上诉渠道、基本权利监督由谁承担、若最终无法遣返至原籍国将如何处理，以及第三国自身的人权记录是否会影响「安全第三国」认定。欧盟委员会10月27日提出的边境局（Frontex）扩权方案亦包含协助第三国之间开展遣返的内容，两者在政策方向上相互呼应。上述法律与监督细节目前均未公开。</p></details>
+  <div class="meta">
+    <span>来源：<b>法新社（AFP），经《基加利每日新闻》（KDN）转载</b></span>
+    <span>推荐理由：由当事国外长在法新社采访中直接确认，涉及欧盟五国的境外回返枢纽选址与可能的下月签约时间表，属欧盟遣返政策落地的关键进展，信息源权威度较高。</span>
+    <a href="https://kdn.rw/rwanda-cannot-be-blamed-for-what-happens-in-dr-congo-fm-says" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-eu-2">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://www.europarl.europa.eu/news/en/press-room/20261028IPR48467/rule-of-law-in-hungary-meps-welcome-major-progress-impressive-pace-of-reforms" target="_blank" rel="noopener">欧洲议会代表团：匈牙利庇护准入仍存关切</a></h4>
+  </div>
+  <div class="title-en">EP delegation welcomes Hungary reforms but asylum access remains a concern</div>
+  <div class="chips"><span class="chip">欧洲议会</span><span class="chip">匈牙利</span><span class="chip">第七条程序</span><span class="chip">庇护准入</span><span class="chip">法治评估</span><span class="chip">LIBE委员会</span><span class="chip">基本权利</span></div>
+  <p class="summary"><b>内容提要</b>　事件10-28、报道10-29。欧洲议会赴匈牙利评估法治状况的代表团在结束10月26日至28日布达佩斯访问时表示，欢迎匈牙利自政府更替以来在司法、反腐与基本权利领域的改革，但机构独立性、媒体多元与庇护准入仍存关切，暂不就终止《欧盟条约》第七条程序作出结论。代表团由公民自由、司法与内政委员会（LIBE）民主、法治与基本权利监测组主席索菲·维尔梅斯（Sophie Wilmès）率领，成员包括第七条程序报告员蒂内克·斯特里克（Tineke Strik）。声明列举的进展包括终止以法令施政的紧急状态、撤销主权保护办公室、加入欧洲检察官办公室；在庇护方面，代表团要求确保庇护程序的有效准入并符合欧洲法律标准。代表团将向LIBE委员会报告，议会后续全会将举行辩论并表决决议。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>此次访问属欧洲议会依据《欧盟条约》第七条对匈牙利进行的持续评估。代表团10月26日至28日在布达佩斯会见政府、司法机构、媒体与公民社会组织，28日由团长索菲·维尔梅斯（Sophie Wilmès）对外说明初步结论。
+
+在肯定面，声明列出三项进展：不再延长以法令施政的紧急状态（该状态已于5月13日到期）、撤销主权保护办公室、以及匈牙利加入欧洲检察官办公室（EPPO）。此外还提到司法与反腐改革、媒体独立性的新保障，以及废除《儿童保护法》中针对性少数群体的歧视性条款。欧盟委员会在7月17日发布的法治报告中已记录其中部分变化。代表团同时指出，选举法修改、全面媒体改革与新宪法仍属已宣布的计划而非已完成改革，呼吁就此开展广泛协商，并建立能够跨越政府更迭的持久保障。
+
+在保留面，代表团指出：总检察长选举程序与检察系统的层级结构仍可能带来对个案的政治干预风险；在打击高层腐败方面尚未建立有力记录；国家广告投放的分配仍不够透明公平；媒体所有权集中问题未解；性少数群体权利仅部分改善。
+
+与移民和庇护直接相关的是代表团对「庇护准入」的关切。声明要求匈牙利确保庇护程序的有效准入，并符合欧洲法律标准。这一表述承接了欧盟长期关注的问题，即匈牙利的入境与庇护程序在实务中是否可及；声明未展开具体个案或数据。
+
+程序上，代表团将先向LIBE委员会报告，议会随后在全会举行辩论并就匈牙利问题表决决议，但目前尚未就第七条程序的前途作出决定。声明同时提醒，解除欧盟预算保护措施并不等于关闭第七条程序，也不自动取消获得欧盟资金的全部条件。
+
+七个匈牙利民间组织（包括匈牙利赫尔辛基委员会、国际特赦匈牙利分会与匈牙利公民自由联盟）在10月5日文件中给出更谨慎评价，认为相关问题在法律、制度与实践层面尚未完全解决。</p></details>
+  <div class="meta">
+    <span>来源：<b>欧洲议会（European Parliament）新闻发布</b></span>
+    <span>推荐理由：属欧洲议会对成员国法治与庇护准入的正式评估节点，程序意义明确；但结论为阶段性、未涉及具体个案，且庇护内容仅为声明中的一项，故评为中等。</span>
+    <a href="https://www.europarl.europa.eu/news/en/press-room/20261028IPR48467/rule-of-law-in-hungary-meps-welcome-major-progress-impressive-pace-of-reforms" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-eu-3">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://www.lemonde.fr/en/economy/article/2026/10/29/france-s-demographic-shift-calls-for-a-comprehensive-approach-beyond-pro-natalist-rhetoric-says-economic-council_6766465_19.html" target="_blank" rel="noopener">法国经社环理会年度报告强调移民经济贡献</a></h4>
+  </div>
+  <div class="title-en">France&#x27;s economic council highlights positive economic contribution of immigration</div>
+  <div class="chips"><span class="chip">法国</span><span class="chip">经济社会环境理事会</span><span class="chip">人口结构</span><span class="chip">移民经济贡献</span><span class="chip">劳动力市场</span><span class="chip">社会保障</span><span class="chip">年度报告</span></div>
+  <p class="summary"><b>内容提要</b>　事件10-28、报道10-29。法国经济社会环境理事会（CESE）10月28日发布年度《法国状况报告》，主张以「综合路径」应对人口结构变化，而非仅靠鼓励生育的号召。报告提出应以「女性主义视角」看待相关问题，并强调移民对经济的积极贡献，同时把「移民政策」列为满足劳动力市场需求的杠杆之一。报告还建议通过延长年长劳动者就业年限、帮助更多年轻人进入就业市场来维系社会保障模式。法国《世界报》10月29日报道称，报告未包含戏剧性结论或大胆新提案，但其价值在于由工会人士、企业负责人与各类基层活动人士共同参与形成，立场分歧较大的成员得以达成一份共同分析。报道未列出报告的具体测算数字或政策建议清单。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>法国经济社会环境理事会（Conseil économique, social et environnemental，CESE）是法国宪法规定的咨询机构，成员来自工会、雇主组织、互助协会与环保团体等。其年度《法国状况报告》并不具约束力，但因其成员构成跨越利益阵营，往往被视为社会对话的风向标。
+
+据《世界报》报道，报告的核心判断是：法国已连续多年经历由人口老龄化与出生率显著下降共同驱动的「人口变迁」，应对之道需要「综合路径」，而非仅仅呼吁提高生育率。报告同时主张以「女性主义视角」处理相关问题，把性别平等纳入人口与家庭政策的分析框架。
+
+在移民议题上，报告强调移民对经济的「积极贡献」，并把「移民政策」列为满足劳动力市场需求的「杠杆之一」。这一表述把移民政策工具化地置于人口与就业政策组合中，而非仅作为边境或安全议题处理。报道未提供报告就该主张给出的具体测算，也未列出建议的签证、居留或职业资格承认措施。
+
+在社会保障方面，报告建议通过两条路径维系现有模式：一是延长年长劳动者的就业年限，二是帮助更多年轻人进入就业市场。报道称，这构成为养老金与社保融资寻找支撑的政策组合。
+
+报道对报告的评价较为克制：没有戏剧性结论，也没有大胆新提案，但其价值在于形成过程——工会人士、企业负责人与来自不同议题领域的基层活动人士立场差异很大，能够共同产出一份分析本身即具意义；此外报告采用横向视角，试图同时覆盖人口、就业、家庭与移民等维度，这在法国同类文件中相对少见。
+
+需注意的是，CESE报告属建议性质，与政府立法议程无直接绑定；在法国围绕移民、身份认同与选举议题高度政治化的背景下，此类强调移民经济贡献的表述，其政策影响仍取决于后续立法与预算安排。</p></details>
+  <div class="meta">
+    <span>来源：<b>法国《世界报》（Le Monde）</b></span>
+    <span>推荐理由：为法国宪法咨询机构年度报告的正式发布，涉及移民对经济贡献与劳动力市场政策的官方表述，具政策讨论价值；但报告属建议性质、无具体测算公开，故评为中等。</span>
+    <a href="https://www.lemonde.fr/en/economy/article/2026/10/29/france-s-demographic-shift-calls-for-a-comprehensive-approach-beyond-pro-natalist-rhetoric-says-economic-council_6766465_19.html" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-eu-4">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★☆☆☆</span>
+    <h4><a href="https://www.thenationalherald.com/four-detained-eight-days-for-illegal-entry-and-stay-in-cyprus/" target="_blank" rel="noopener">塞浦路斯羁押四名涉协助非法入境者</a></h4>
+  </div>
+  <div class="title-en">Cyprus court remands four for eight days over illegal entry and stay case</div>
+  <div class="chips"><span class="chip">塞浦路斯</span><span class="chip">非法入境</span><span class="chip">协助偷渡</span><span class="chip">羁押候审</span><span class="chip">刑事调查</span><span class="chip">尼科西亚</span><span class="chip">边境执法</span></div>
+  <p class="summary"><b>内容提要</b>　事件10-28、报道10-29。塞浦路斯尼科西亚地区法院10月28日对四名涉嫌协助他人非法入境、过境与居留的人员发出八日羁押令。据警方通报，四名被捕者年龄分别为19岁、22岁与两名23岁。10月27日上午，一名在尼科西亚执勤的警员发现可疑人员后通知外国人事务与移民部门及尼科西亚警察局到场，共找到七人；这些人先经被占领地区非法进入塞浦路斯，随后试图穿越绿线进入政府控制区。调查认定，七人中有四人持庇护身份在塞居住，并取得证据显示其涉嫌一起偷渡案件；这四人经法院逮捕令被捕并羁押候审，其余三人被送往「普尔纳拉」首个接待中心。案件由尼科西亚刑事调查局（CID）继续侦办。报道未披露四人的国籍与性别。八日为羁押候审期限，并非最终判决，四人未被法院判定有罪。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>据《民族先驱报》报道，尼科西亚地区法院10月28日对四名涉案人员作出八日羁押决定。四人此前一天在尼科西亚被捕，10月28日被带至法院应讯。警方表示，尼科西亚刑事调查局（CID）正在继续侦办此案。
+
+案件起点是10月27日上午：一名在尼科西亚执勤的警员发现若干可疑人员，随后通知外国人事务与移民部门及尼科西亚警察局到场。警方共找到七人，他们先经被占领地区非法进入塞浦路斯，之后试图穿越绿线进入政府控制区。调查确认，七人中有四人持庇护身份在塞浦路斯居住，并取得证据显示其涉嫌一起协助他人非法入境、过境与居留的案件。
+
+这四人经法院逮捕令被捕，为确保讯问顺利进行而先行羁押，10月28日出庭。其余三人被送往「普尔纳拉」（Pournara）首个接待中心。据警方公布，四人年龄分别为19岁、22岁与两名23岁。
+
+案件性质为「协助非法入境、过境与居留」——在塞浦路斯法律实践中，这一类指控通常针对组织或帮助他人未经许可进入、经该国中转，或为其提供停留条件的行为，可能涉及《外国人与移民法》相关条款以及反偷渡立法。
+
+需要强调信息边界：报道未公布四人的国籍与性别，也未说明被协助者的人数、入境方式细节以及是否涉及有组织的偷渡网络；未说明四人是否已聘请律师、是否认罪，亦未提及保释申请。八日羁押属候审性质的临时措施，期满后警方须再次申请延长或由法院决定后续处理，案件实体部分尚未审理。
+
+从背景看，塞浦路斯位于东地中海路线，长期面对经海路与经北部分治线入境的人员流动；该国近年收紧庇护与居留管理，包括对部分学生许可的审查。此类「协助入境」案件的执法与司法处理，是观察其边境执法强度的一个切面，但单个案件不宜用于推断整体趋势。
+
+本条依据的是地方英文媒体报道的法院程序性信息与警方通报要点，属较低层级但事实明确的司法动态；在缺乏起诉书的情况下，不宜对案情作进一步描述。</p></details>
+  <div class="meta">
+    <span>来源：<b>希腊《民族先驱报》（The National Herald）</b></span>
+    <span>推荐理由：为成员国法院的程序性决定，事实明确，警方通报补充了涉案人数、年龄与入境路径，但四名嫌疑人身份、动机与被协助者情况未披露，影响范围限于个案，故评为较低。</span>
+    <a href="https://www.thenationalherald.com/four-detained-eight-days-for-illegal-entry-and-stay-in-cyprus/" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-eu-5">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://www.diplomacynews.com/en/2026/10/29/the-commission-proposes-to-strengthen-frontex-with-greater-border-protection" target="_blank" rel="noopener">欧委会提新规 边境局拟扩至三万人</a></h4>
+  </div>
+  <div class="title-en">The Commission proposes to strengthen Frontex with greater border protection</div>
+  <div class="chips"><span class="chip">欧盟边境管理局</span><span class="chip">授权扩权</span><span class="chip">回返协调</span><span class="chip">预备队</span><span class="chip">社交媒体监测</span><span class="chip">申根边境</span><span class="chip">欧盟预算</span></div>
+  <p class="summary"><b>内容提要</b>　事件10-27、报道10-29（提案仍在欧盟议会与理事会审议，属进行中事项）。欧盟委员会10月27日提出欧洲边境与海岸警卫局（Frontex）新条例草案，拟大幅扩权：常备队伍逐步增至3万人，其中新设1.7万人的「欧洲边境与回返预备队」由成员国掌控、危机时调用，另叠加各国派驻的约7000人。草案新设回返协调中心，并把「回返」置于核心；在与第三国签有协议且遵守基本权利与不驱回原则前提下，Frontex 可协助组织从一个第三国向另一第三国的回返。草案还设快速反应部队与在线监测与响应中心，后者可监测公开的社交媒体内容以发现边境风险；成员国须在24小时内经欧盟边境监视系统（EUROSUR）报告可能重大影响外部边境的事件。委员会提议下一预算期为该局安排118亿欧元，现约60亿欧元。草案须经欧洲议会与理事会通过。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>欧盟委员会10月27日提出一揽子边境与回返立法草案，核心是重写欧洲边境与海岸警卫局（Frontex）条例。委员会称，该局常备队伍将逐步扩充至3万人：一方面把该局自有执法人员规模翻倍，另一方面新设一支1.7万人的「欧洲边境与回返预备队」，人员由成员国提供、平时待命，遇危机时依新机制调用；成员国按原有方式派驻的约7000名边防人员另计。
+
+真正的重心在回返。草案拟设回返协调中心，从认定当事人无权居留开始，串联自愿回返辅导、航班组织与返乡后重新融入支持。更具争议的是地域权限：在取得第三国同意、并遵守基本权利与不驱回原则的前提下，Frontex 将可协助组织从一个第三国向另一个第三国的回返——现行授权不允许此项操作。批评者认为这是为「第三国回返枢纽」铺设法律基础。
+
+危机应对方面，草案设快速反应部队，由该局执行主任在成员国请求下决定派遣；设在线监测与响应中心，授权其监测公开的社交媒体内容、识别影响外部边境管理的事件，并配合处置与边境安全相关的违法内容；成员国须在24小时内经欧盟边境监视系统（EUROSUR）上报可能对外部边境产生重大影响的事件。委员会同时提出第二项条例，推动回返、再入境与重新融入程序的数字化——此前新的《回返条例》已于10月16日生效。
+
+委员会以数据支撑主张：非法越境两年间减少一半以上，回返率升至约三分之一，该局上年度执行约6.4万人的回返、动用220余架次航班。主管内政与移民事务的委员马格努斯·布鲁纳（Magnus Brunner）称，目标是让事件在演变为危机之前被处置。委员会提议在下一预算期为该局安排118亿欧元，现约60亿欧元。草案须经欧洲议会与理事会审议通过，尚存变数；有欧洲议会中间偏左议员批评称，欧洲不需要自己的「移民与海关执法局」（ICE）。</p></details>
+  <div class="meta">
+    <span>来源：<b>欧盟委员会提案，经 Diplomacy News 报道</b></span>
+    <span>推荐理由：欧盟边境治理架构级调整，回返权限与第三国回返条款对未来遣返合作影响深远；但事件发生在10-27，报道见于10-29，属进行中立法进程，非当日新增事实。</span>
+    <a href="https://www.diplomacynews.com/en/2026/10/29/the-commission-proposes-to-strengthen-frontex-with-greater-border-protection" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+    <div class="sec-foot"><a href="#sec-eu" class="collapse-btn" data-collapse="sec-eu">▴ 收起本板块</a></div>
+  </div>
+</details>
+<details class="section" id="sec-china_neighbors">
+  <summary>
+    <span class="sec-title">🧭 中国周边国家动态</span>
+    <span class="sec-desc">东南亚、南亚、中亚、东北亚国家移民管理与边境安全要闻</span>
+    <span class="sec-count">5 条</span>
+    <span class="sec-arrow">▾</span>
+  </summary>
+  <div class="sec-body">
+    
+<article class="item" id="item-china_neighbors-1">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://www.bernama.com/en/news.php?id=2627483" target="_blank" rel="noopener">马突查网赌窝点拘六十四名外籍</a></h4>
+  </div>
+  <div class="title-en">Immigration Busts Online Scam Syndicate, 64 Foreigners Nabbed</div>
+  <div class="chips"><span class="chip">马来西亚</span><span class="chip">移民局</span><span class="chip">网络诈骗</span><span class="chip">外籍人员</span><span class="chip">执法行动</span><span class="chip">空白护照</span><span class="chip">逾期居留</span></div>
+  <p class="summary"><b>内容提要</b>　事件10-28至10-29、报道10-29。马来西亚移民局总监扎卡里亚·沙班（Zakaria Shaaban）10月29日在布城记者会通报，该局与马来西亚通讯与多媒体委员会（MCMC）自10月28日起开展为期两天的联合特别行动，在吉隆坡克灵芝路四间豪华公寓单位及「矿场」（The Mines）住宅区两栋独立式洋房共拘捕64名外籍人员，涉嫌参与网络诈骗集团。被捕者包括44名中国籍、19名越南籍和1名缅甸籍。10月28日首轮行动拘34人，含15名中国籍男子、13名越南籍男子和6名越南籍女子；29日后续行动再拘30人，为29名中国籍和1名缅甸籍。该集团被指近两个月运作，以每月3000至6000令吉薪酬招募成员，每日10时至23时作业，通过数字平台针对境外受害人实施诈骗，日均获利10万至15万令吉。行动查获28台笔记本电脑、81部手机及路由器、调制解调器，总值约5.13万令吉，另发现日本、韩国、美国三本无个人资料的空白护照及相应机票。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>马来西亚移民局10月29日在布城召开记者会，通报与马来西亚通讯与多媒体委员会联合开展的特别行动成果。行动自10月28日开始，持续两天，目标为吉隆坡克灵芝路四间豪华公寓单位和「矿场」（The Mines）住宅区两栋独立式洋房。移民局总监扎卡里亚·沙班称，两天共拘捕64名外籍人员，其中中国籍44人、越南籍19人、缅甸籍1人。
+
+分批情况为：10月28日拘34人，包括15名中国籍男子、13名越南籍男子和6名越南籍女子；10月29日再拘30人，包括29名中国籍和1名缅甸籍。沙班表示，集团成员每日10时至23时工作，月薪3000至6000令吉，集团运作约两个月，日均获利10万至15万令吉，交易记录显示运营人员可获约17%佣金。受害人多为集团成员各自国家的同乡。
+
+现场查获28台各品牌笔记本电脑、81部手机、两台路由器和一台调制解调器，总值约5.13万令吉。执法人员另发现日本、韩国、美国三本未打印个人资料的空白护照，初步判断是供成员在紧急情况下贴上照片外逃使用，同时起获飞往上述三国的机票。设备中发现「BOC Dayou」系统和名为「Feng Pay Control」的支付管理平台，资金经由支付宝、微信支付和银联流转。沙班称，所有被捕者均持真实护照、以游客身份合法入境，当局正核实其是否有犯罪记录，并追查注册本地电话卡的一方，也不排除本地团伙充当中介。案件援引《1959/63年移民法》第56(1A)(c)、第6(1)(c)、第15(1)(c)条及《1963年移民条例》第39(b)条调查。</p></details>
+  <div class="meta">
+    <span>来源：<b>马来西亚国家新闻社（Bernama）</b></span>
+    <span>推荐理由：马来西亚官方通讯社现场记者会一手报道，涉案人数、国籍构成、查获物品与法条均明确，属当日重大执法行动</span>
+    <a href="https://www.bernama.com/en/news.php?id=2627483" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-china_neighbors-2">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://en.antaranews.com/news/438771/indonesia-arrests-21-foreign-nationals-in-bali-online-gambling-raid" target="_blank" rel="noopener">印尼巴厘岛网赌窝点拘二十一名外籍</a></h4>
+  </div>
+  <div class="title-en">Indonesia Arrests 21 Foreign Nationals in Bali Online Gambling Raid</div>
+  <div class="chips"><span class="chip">印度尼西亚</span><span class="chip">巴厘岛</span><span class="chip">移民总局</span><span class="chip">网络赌博</span><span class="chip">居留许可</span><span class="chip">外籍人员</span><span class="chip">突查</span></div>
+  <p class="summary"><b>内容提要</b>　事件10-29、报道10-29。印度尼西亚移民与惩教部移民监督与执法总局10月29日通报，当天上午7时（GMT+8）联合伍拉·赖（Ngurah Rai）移民局，在巴厘岛一处住宅区两栋房屋内拘捕21名外籍人员，指其涉嫌运营国际网络赌博网站并违反居留许可规定。其中8名越南籍人员在第一栋房屋被捕，12名缅甸籍和1名中国籍在第二栋被捕。行动查获36部个人手机、29部运营手机、18台笔记本电脑、6台台式电脑和3台平板电脑。移民总局局长亨达尔萨姆·马兰托科（Hendarsam Marantoko）称，行动前已对该地点监视数日，执法队与社区负责人、物业保安和物业管理人员协调后进入；被捕者持投资前访问签证和远程工作者临时居留许可合法入境，资金据报经由支付宝、微信支付等中国数字支付平台流转。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>印度尼西亚移民与惩教部移民监督与执法总局10月29日通报，当天在巴厘岛一处住宅区开展突击行动，拘捕21名涉嫌运营国际网络赌博集团的外籍人员，国籍构成为12名缅甸籍、8名越南籍和1名中国籍。行动由该总局与伍拉·赖移民局联合执行，当地时间上午7时开始。
+
+移民总局局长亨达尔萨姆·马兰托科在当天的声明中表示，执法人员事先对该地点监视数日，并与社区负责人、住宅区保安和物业管理人员协调后进入两栋被怀疑作为集团运作基地的房屋。8名越南籍人员在第一处住宅被捕，12名缅甸籍和1名中国籍在第二处被捕。
+
+查获物品包括36部个人手机、29部运营用手机、18台笔记本电脑、6台台式电脑和3台平板电脑。调查显示，被捕者均持有效移民证件入境和居留，具体为投资前访问签证和远程工作者临时居留许可。马兰托科称，该团伙被指运营非法赌博网站，资金交易据报经由支付宝和微信支付等中国主要数字支付平台处理。
+
+他表示，此次行动是针对全国外籍人员的常规监管的一部分，巴厘岛是重点地区之一，「对居留许可违规零容忍，尤其是与非法网络赌博等跨国犯罪相关的违规」。所有嫌疑人和查获设备已移交伍拉·赖移民局作进一步调查和法律处理。报道并提及，登巴萨法院此前曾对35名印度籍涉案人员作出判决，印度尼西亚已签署联合国网络犯罪公约。</p></details>
+  <div class="meta">
+    <span>来源：<b>印度尼西亚安塔拉通讯社（ANTARA）</b></span>
+    <span>推荐理由：印尼国家通讯社依据移民总局声明报道，数据与官员表态完整，属常规执法通报，影响面限于一地</span>
+    <a href="https://en.antaranews.com/news/438771/indonesia-arrests-21-foreign-nationals-in-bali-online-gambling-raid" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-china_neighbors-3">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★☆☆☆</span>
+    <h4><a href="https://www.manilatimes.net/2026/10/29/news/national/bi-warns-of-malaysia-fake-job-scheme/2456382" target="_blank" rel="noopener">菲截停三名拟赴马假招聘受害者</a></h4>
+  </div>
+  <div class="title-en">BI warns of Malaysia fake job scheme</div>
+  <div class="chips"><span class="chip">菲律宾</span><span class="chip">移民局</span><span class="chip">人口贩运</span><span class="chip">虚假招聘</span><span class="chip">吉隆坡</span><span class="chip">机场拦截</span><span class="chip">海外就业</span></div>
+  <p class="summary"><b>内容提要</b>　事件10-28、报道10-29。菲律宾移民局10月29日经《马尼拉时报》披露，三名菲律宾人在尼诺·阿基诺国际机场被拦下，原计划经新加坡前往吉隆坡。三人起初称是同事结伴度假，但就业记录、经济能力和旅行申报存在矛盾，引起移民官员进一步审查，随后承认工作安排须抵达马来西亚后才商谈。移民局局长乔尔·安东尼·维亚多（Joel Anthony Viado）10月28日表示，「海外工作机会绝不应该要求你先出境、之后再了解细节」。三人已移交跨机构反人口贩运委员会（IACAT）作进一步调查和评估。移民局称，这是机场一系列打击以欺骗性行程安排输送菲籍人员出境从事虚假就业的行动的最新一例，贩运集团常利用社交媒体、虚假招聘、误导性旅行申报和高薪承诺招募。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>菲律宾移民局10月29日通报，三名菲律宾公民在尼诺·阿基诺国际机场被移民官员拦截，原定经新加坡中转前往马来西亚吉隆坡。移民局称，三人在受询时声称是同事结伴度假，但就业记录、经济能力和旅行申报之间存在不一致，促使官员进一步核查。
+
+经审查，三人承认有关就业安排须在抵达马来西亚后才会商谈。移民局局长乔尔·安东尼·维亚多10月28日就此事表态称，「海外工作机会绝不应该要求你先出境、之后再了解细节」。三人已被移交跨机构反人口贩运委员会，接受进一步调查与评估。
+
+移民局表示，此案是机场一系列针对贩运手法行动的最新一例，这些手法利用欺骗性行程安排将菲律宾人送往境外从事虚假就业。该局警告，贩运集团利用社交媒体、虚假招聘、误导性旅行申报和高薪承诺招募菲律宾人赴海外工作，部分受害人最终陷入强迫劳动、剥削或网络诈骗活动。报道未披露三名当事人原计划从事的具体岗位、招募方身份及拦截的具体日期。</p></details>
+  <div class="meta">
+    <span>来源：<b>菲律宾《马尼拉时报》（The Manila Times）</b></span>
+    <span>推荐理由：主流媒体依据移民局通报报道，事实清晰但个案规模小，属例行警示类消息</span>
+    <a href="https://www.manilatimes.net/2026/10/29/news/national/bi-warns-of-malaysia-fake-job-scheme/2456382" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-china_neighbors-4">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://www.bernama.com/en/general/news.php?id=2627203" target="_blank" rel="noopener">马高院驳回暂缓 缅籍遣返续行</a></h4>
+  </div>
+  <div class="title-en">M&#x27;sia To Proceed With Myanmar Refugee Repatriation - Saifuddin</div>
+  <div class="chips"><span class="chip">马来西亚</span><span class="chip">缅甸籍</span><span class="chip">难民遣返</span><span class="chip">高等法院</span><span class="chip">司法复核</span><span class="chip">内政部</span><span class="chip">律师公会</span></div>
+  <p class="summary"><b>内容提要</b>　事件10-29、报道10-29。马来西亚内政部长赛夫丁·纳苏丁·伊斯迈（Saifuddin Nasution Ismail）10月29日在内政部月度集会暨创新日上表示，高等法院已驳回马来西亚律师公会的暂缓申请，政府将继续通过合法渠道和既有外交程序遣返缅甸籍难民，内政部与外交部将继续与缅方磋商第二批遣返事宜。法官诺丽扎·奥斯曼（Norliza Othman）裁定，在尚未批准司法复核许可前不能发出暂缓令，司法复核定于12月8日审理。律师公会寻求阻止遣返约5000名缅甸难民和寻求庇护者。赛夫丁称，迄今已遣返约1.03万名缅甸籍人员，本月另有约3000人将进入遣返程序，并呼吁公众勿自行对难民采取行动，执法应交由当局。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>马来西亚内政部长赛夫丁·纳苏丁·伊斯迈10月29日在内政部月度集会上表示，政府将继续通过合法渠道和既有外交程序，把缅甸籍难民遣返回原籍国，内政部与外交部将继续与缅甸政府谈判，以推进第二批遣返。
+
+赛夫丁称，遣返将依法院裁决推进，「让法律程序决定结果，在出现相反裁决之前，我们会继续遣返」。他说明，马来西亚律师公会申请暂缓遣返已被驳回，司法复核定于12月8日审理。据媒体报道，高等法院驳回律师公会要求暂缓遣返约5000名缅甸难民和寻求庇护者的申请，裁定在批准司法复核许可前不能给予暂缓；法官诺丽扎·奥斯曼表示，该驳回不影响律师公会在法院裁定是否批准许可后再次提出申请的权利。
+
+赛夫丁同时呼吁公众不要就缅甸难民的存在自行采取行动，强调执法完全属于当局职权。他承认难民问题可能引发各类社会经济问题，但公众不应走极端或超越法律，「他们的到来在某些社区造成经济、政治和社会问题，导致部分民众自行采取行动，例如攻击他们的住所或把他们赶出村庄。警方正在履职，请把问题交给当局和持续开展行动的移民执法机构」。
+
+此前一天，总理安瓦尔·易卜拉欣表示，马来西亚选择与缅甸通过外交途径解决难民问题，尽管因此面临国际谴责与批评；经与缅方商谈，缅方同意自费通过空运和海运方式接回部分在马本国公民。赛夫丁称，迄今已有约1.03万名缅甸籍人员被遣返，本月另有约3000人将接受遣返程序。</p></details>
+  <div class="meta">
+    <span>来源：<b>马来西亚国家新闻社（Bernama）</b></span>
+    <span>推荐理由：官方通讯社报道部长就法院裁决后的政策表态，涉及约五千人遣返与司法复核时点，具政策与法律双重意义</span>
+    <a href="https://www.bernama.com/en/general/news.php?id=2627203" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-china_neighbors-5">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★☆☆☆</span>
+    <h4><a href="https://www.vietnam.vn/en/nang-cao-hieu-qua-quan-ly-bao-ve-bien-gioi" target="_blank" rel="noopener">越柬两省边防会晤商边境管控</a></h4>
+  </div>
+  <div class="title-en">Improving the effectiveness of border management and protection</div>
+  <div class="chips"><span class="chip">越南</span><span class="chip">柬埔寨</span><span class="chip">边防</span><span class="chip">边境管理</span><span class="chip">非法出入境</span><span class="chip">遣返移交</span><span class="chip">双边会晤</span></div>
+  <p class="summary"><b>内容提要</b>　事件10-29、报道10-29。越南林同省边防部队指挥部与柬埔寨蒙多基里省宪兵指挥部10月29日举行2026年度定期会晤并签署会议纪要。双方表示，此前已有效落实会谈纪要内容，定期交换边境管理与保护信息，协同预防、发现、制止和打击边境地区各类犯罪与违法行为。双方同意继续按两国政府签署的边境协定、条约和谅解开展合作，加强打击非法出入境、走私、货物非法运输、人口贩运、毒品与武器贩运等。双方还提议，对在蒙多基里省违反柬埔寨法律但不足以追究刑责的越南公民，协调经口岸移交越方，由越方依法接收处理，并推动边境两侧社区结对交流。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>越南林同省边防部队指挥部与柬埔寨王国蒙多基里省宪兵指挥部10月29日举行2026年度定期会晤。林同省边防部队指挥部代表团接待了蒙多基里省宪兵指挥部代表团，双方回顾已签署会谈纪要的落实情况并签署新的会议纪要。
+
+双方在会谈中表示，过去一段时间两省边防与宪兵力量有效落实纪要内容，定期交换边境管理与保护相关信息，协同预防、发现、制止和打击边境地区各类犯罪和违法行为，为维护两省边境地区安全秩序作出贡献。双方还保持两国传统节日期间的走访互贺，组织座谈、交流并分享工作经验。
+
+在此基础上，双方同意继续按两国政府签署的边境协定、条约和谅解，维持信息交换与边境管理保护协作，并加强在预防和打击非法出入境、走私、货物非法运输、人口贩运、毒品贩运、武器贩运、非法资源开采等违法犯罪方面的配合。
+
+关于人员处置，双方提议，对在蒙多基里省违反柬埔寨法律、但行为尚不足以追究刑事责任的越南公民，协调经边境口岸移交越方，由越方依法接收和处理。双方还提议继续在传统节日期间保持会谈、会晤、走访与交流，并建议上级机关和地方政府推动边境两侧社区结对，为两国民众交流、互助发展经济、减贫改善生活创造条件。会谈结束时，双方代表签署会议纪要。</p></details>
+  <div class="meta">
+    <span>来源：<b>越南《林同报》（Báo Lâm Đồng），经 Vietnam.vn 转载</b></span>
+    <span>推荐理由：越南省级官媒报道的例行年度边防会晤，内容具体但以程序性合作表述为主，影响限于两省边境</span>
+    <a href="https://www.vietnam.vn/en/nang-cao-hieu-qua-quan-ly-bao-ve-bien-gioi" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+    <div class="sec-foot"><a href="#sec-china_neighbors" class="collapse-btn" data-collapse="sec-china_neighbors">▴ 收起本板块</a></div>
+  </div>
+</details>
+<details class="section" id="sec-global_south">
+  <summary>
+    <span class="sec-title">🌏 全球南方国家动态</span>
+    <span class="sec-desc">拉美、非洲、中东等地区移民治理与边境管理动态</span>
+    <span class="sec-count">5 条</span>
+    <span class="sec-arrow">▾</span>
+  </summary>
+  <div class="sec-body">
+    
+<article class="item" id="item-global_south-1">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://www.internazionale.it/ultime-notizie-reuters/2026/10/28/libya-s-eastern-administration-bars-entry-to-iranians-afghans" target="_blank" rel="noopener">利东部政府禁伊阿籍人员入境</a></h4>
+  </div>
+  <div class="title-en">Libya&#x27;s eastern administration bars entry to Iranians, Afghans</div>
+  <div class="chips"><span class="chip">利比亚</span><span class="chip">入境禁令</span><span class="chip">伊朗籍</span><span class="chip">阿富汗籍</span><span class="chip">东部政府</span><span class="chip">居留许可</span><span class="chip">地中海移民</span></div>
+  <p class="summary"><b>内容提要</b>　事件10-28、报道10-29。据路透社报道，利比亚东部班加西政府10月28日深夜在官方认证脸书页面发表声明，禁止伊朗和阿富汗籍人员经由东部所有陆路、海路和航空口岸入境，未说明理由，并称内政部负责执行该决定、并驱逐未持有效居留许可的伊朗和阿富汗籍人员。该措施扩大了今年6月对苏丹、厄立特里亚、埃塞俄比亚和索马里四国公民的入境限制。经认证的外交领事使团成员及家属，以及已获工作许可的医疗、教育从业人员可获豁免。报道称，利比亚自2011年卡扎菲政权被推翻后成为移民前往欧洲的中转通道；联合国6月数据称利比亚境内有逾90万名移民。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>据路透社报道，利比亚东部班加西政府10月28日深夜发表声明，禁止伊朗和阿富汗籍人员经利比亚东部所有陆路、海路和航空口岸入境。声明发布在该政府的认证脸书页面上，未说明作出这一决定的理由。
+
+声明称，「伊朗和阿富汗两国公民被禁止通过利比亚领土的所有陆、空、海入境口岸入境」，并称内政部将负责执行该决定，同时负责驱逐未持有效居留许可的伊朗和阿富汗籍人员。经认证的外交和领事使团成员及其家属不受该禁令限制；在医疗和教育行业工作、且已取得工作许可的人员同样适用豁免。
+
+该措施扩大了同一政府今年6月实施的入境限制。当时班加西政府以「重新规范外国人入境」为由，禁止苏丹、厄立特里亚、埃塞俄比亚和索马里四国公民入境。
+
+报道指出，利比亚自2011年卡扎菲政权在北约支持的起义中被推翻后，成为逃离冲突与贫困的移民经地中海前往欧洲的中转通道。2014年以来，利比亚分裂为东西两个对立政府：总部在班加西的奥萨马·哈马德政府与军事强人哈利法·哈夫塔尔结盟，控制东部和南部大片地区；获国际承认的阿卜杜勒哈米德·德贝巴政府以的黎波里为基地，于2021年经联合国支持的进程上台。联合国6月收集的数据显示，利比亚境内有逾90万名移民。</p></details>
+  <div class="meta">
+    <span>来源：<b>路透社（Reuters），经意大利《国际》周刊网站转载</b></span>
+    <span>推荐理由：路透社一手报道利比亚东部当局口岸入境禁令，涉及两国公民与既有居留者驱逐，属区域性边境政策实质变动</span>
+    <a href="https://www.internazionale.it/ultime-notizie-reuters/2026/10/28/libya-s-eastern-administration-bars-entry-to-iranians-afghans" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-global_south-2">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://www.3news.com/news/ghana-signs-deal-with-russia-to-recruit-workers-for-industrial-jobs" target="_blank" rel="noopener">加纳与俄一经济特区签劳务协议</a></h4>
+  </div>
+  <div class="title-en">Ghana signs deal with Russia to recruit workers for industrial jobs</div>
+  <div class="chips"><span class="chip">加纳</span><span class="chip">俄罗斯</span><span class="chip">劳务协议</span><span class="chip">劳工移民</span><span class="chip">经济特区</span><span class="chip">招聘监管</span><span class="chip">海外就业</span></div>
+  <p class="summary"><b>内容提要</b>　事件10-29、报道10-29。加纳劳工部长伊曼纽尔·阿吉耶库姆（Emmanuel Agyekum）10月29日与俄罗斯阿拉布加（Alabuga）经济特区负责人签署劳务协议，为加纳人赴俄从事制造业和工业岗位开辟渠道。该特区入驻48家企业，需要逾7.5万名工人。加纳劳工部将负责招募协调、核实招聘信息，并在出行前为工人提供指导，以保障其权益。阿吉耶库姆称，协议不限于劳务交换，双方还计划在商业、教育、科研、宗教与文化领域合作；加纳企业将参加在鞑靼斯坦举行的论坛，两国还将探讨学术交流，让加纳教授与研究人员同俄方高校开展研究。他呼吁加纳青年把握这些机会。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>加纳劳工部长伊曼纽尔·阿吉耶库姆10月29日代表加纳与俄罗斯阿拉布加（Alabuga）经济特区负责人签署劳务协议，为加纳人赴俄从事制造业和工业岗位开辟渠道。阿拉布加经济特区为工业枢纽，入驻48家企业，用工需求超过7.5万人。
+
+根据安排，加纳劳工部将主管加方流程，负责协调招募、核实招聘信息，并在工人出行前提供行前指导，以保护其权益。阿吉耶库姆在签约后表示，这一伙伴关系不限于就业，「我们签署了一份很好的协议，不仅是劳务交换」，双方还着眼企业对企业合作，并将在宗教与文化领域推进合作，使双边合作超越单纯的劳工迁移。
+
+在商业往来方面，他表示加纳企业将参加计划在鞑靼斯坦举行的论坛，与俄方同行探讨合作可能。两国还在考虑学术交流，让加纳教授和讲师与俄罗斯高校共同开展研究。
+
+阿吉耶库姆呼吁加纳青年充分利用这一安排预期创造的岗位机会，并称劳工部将把核实招聘真实性和行前培训作为重点，避免求职者落入虚假招工陷阱。报道未披露协议涉及的具体岗位数量、薪酬水平与合同期限。</p></details>
+  <div class="meta">
+    <span>来源：<b>加纳 3News</b></span>
+    <span>推荐理由：加纳主流媒体依据部长签约现场表态报道，涉及跨境劳务输出机制与政府监管职责，细节尚待官方公布</span>
+    <a href="https://www.3news.com/news/ghana-signs-deal-with-russia-to-recruit-workers-for-industrial-jobs" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-global_south-3">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://www.standardmedia.co.ke/national/article/2001561070/release-abducted-tanzanian-amnesty-international-tells-state" target="_blank" rel="noopener">大赦国际促肯尼亚查外籍被绑案</a></h4>
+  </div>
+  <div class="title-en">Release abducted Tanzanian, Amnesty International tells state</div>
+  <div class="chips"><span class="chip">肯尼亚</span><span class="chip">大赦国际</span><span class="chip">强制失踪</span><span class="chip">不驱回原则</span><span class="chip">难民保护</span><span class="chip">跨国镇压</span><span class="chip">坦桑尼亚籍</span></div>
+  <p class="summary"><b>内容提要</b>　事件10-28、报道10-29。大赦国际10月28日发表声明，要求肯尼亚当局查找并保障坦桑尼亚籍活动人士特瓦哈·姆瓦伊帕亚（Twaha Mwaipaya）的安全，调查其失踪情况，并警告其可能被强制转移至坦桑尼亚或其他可能面临迫害的国家。姆瓦伊帕亚据报10月25日在马查科斯郡卡穆卢乘坐出租车访友时，被三辆车（含一辆丰田陆地巡洋舰）拦截后带走。大赦国际称，此案与肯尼亚境内多起外籍人士遭绑架或绑架未遂的报告形成「跨国镇压」模式，并援引2024年乌干达反对派领袖基扎·贝西杰在内罗毕被绑等旧案，强调肯尼亚《2021年难民法》第29条禁止将难民和寻求庇护者遣送至面临迫害的国家。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>大赦国际10月28日发表声明，要求肯尼亚当局查找并保障坦桑尼亚籍活动人士特瓦哈·姆瓦伊帕亚的安全，调查其失踪经过，并警告其可能被强制转移至坦桑尼亚或其他可能使其面临迫害和严重人权侵害的国家。
+
+据报，姆瓦伊帕亚10月25日在马查科斯郡卡穆卢乘坐出租车前往访友途中，被乘三辆车（其中一辆为丰田陆地巡洋舰硬顶车）的人员拦截带走，其下落与安全状况至今不明。大赦国际称，这起事件尤其令人担忧，因为此前已有多次关于外籍人士在肯尼亚境内遭绑架或绑架未遂的报告。
+
+该组织在声明中表示，「肯尼亚必须是安全之地，而不是追捕逃避迫害者的猎场」，并称这些事件指向一种「跨国镇压」模式，即政府或其疑似代理人试图在境外压制批评者。声明强调，肯尼亚当局的否认不能替代保护、调查与问责义务，国家责任不限于是否直接参与绑架，还包括采取合理有效措施防范可预见的威胁、查明失踪者下落并保护面临风险者。
+
+声明援引肯尼亚宪法第28条、第29条关于人的尊严与人身自由安全的规定，以及《公民权利和政治权利国际公约》和难民保护公约义务；并指出《2021年难民法》第29条禁止将难民和寻求庇护者遣返至其面临迫害或生命、人身完整、自由受特定威胁的国家。声明还列举2024年乌干达反对派领袖基扎·贝西杰在内罗毕被绑、2017年南苏丹人权律师董·塞缪尔·卢阿克等人被绑后遇害等旧案，作为同类风险的前例。</p></details>
+  <div class="meta">
+    <span>来源：<b>肯尼亚《旗帜报》（The Standard）</b></span>
+    <span>推荐理由：肯尼亚主流媒体详载国际人权组织声明全文要点，涉及不驱回原则与跨国镇压争议，属人权与难民保护议题</span>
+    <a href="https://www.standardmedia.co.ke/national/article/2001561070/release-abducted-tanzanian-amnesty-international-tells-state" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-global_south-4">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://capitalfm.africa/court-orders-repatriation-of-somali-national-after-passport-fraud-conviction/" target="_blank" rel="noopener">肯法院判索籍伪造身份者遣返</a></h4>
+  </div>
+  <div class="title-en">Kenya Court Orders Repatriation of Somali National After Passport Fraud Conviction</div>
+  <div class="chips"><span class="chip">肯尼亚</span><span class="chip">遣返</span><span class="chip">身份欺诈</span><span class="chip">护照</span><span class="chip">非法居留</span><span class="chip">法院判决</span><span class="chip">索马里籍</span></div>
+  <p class="summary"><b>内容提要</b>　事件10-29、报道10-29。肯尼亚乔莫·肯雅塔国际机场（JKIA）法庭10月29日判处索马里籍男子马哈茂德·穆罕默德·罗布莱（Mohamud Mohammed Roble）罚款共计37万先令，并裁定其在缴清罚款后遣返索马里。罗布莱对三项指控认罪：在肯尼亚非法居留、为取得肯尼亚护照作虚假申报、出示含虚假记载的身份证件以行骗，分别被罚15万、15万和7万先令，不缴罚款可以监禁替代。案件由移民与公民服务调查组侦探从机场移民官员手中接手侦办，查明其通过虚假申报取得肯尼亚登记证件并申领护照。法庭同时要求将骗取的护照交移民总局销毁。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>肯尼亚乔莫·肯雅塔国际机场（JKIA）法庭10月29日对一名索马里籍男子作出判决，在认定其以欺诈手段取得肯尼亚身份证件和护照后，裁定其在缴清罚款后遣返索马里。被告马哈茂德·穆罕默德·罗布莱对三项指控表示认罪。
+
+三项指控分别为：在肯尼亚非法居留；为取得肯尼亚护照而作虚假申报；出示载有虚假记载的身份证件意图行骗。法庭就非法居留判罚15万先令，就虚假申报判罚15万先令，就出示伪造身份证件判罚7万先令，合计37万先令，并规定不缴纳罚款则以监禁替代。
+
+案件由移民与公民服务调查组侦探侦办。该组从乔莫·肯雅塔国际机场的移民官员处接手案件，查明罗布莱先取得肯尼亚登记证件，再利用虚假申报取得肯尼亚护照。法庭同时裁定，将欺诈取得的肯尼亚护照交移民总局局长销毁。
+
+报道未披露被告的羁押起始时间、量刑听证细节，亦未提及辩方意见或是否上诉。</p></details>
+  <div class="meta">
+    <span>来源：<b>肯尼亚首都调频电台（Capital FM）</b></span>
+    <span>推荐理由：肯尼亚主流媒体依据法庭庭审情况的一手报道，三项罪名与罚金数额逐项明确，涉及身份欺诈与遣返处置的执法链条，但属个案、影响面有限</span>
+    <a href="https://capitalfm.africa/court-orders-repatriation-of-somali-national-after-passport-fraud-conviction/" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-global_south-5">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★☆☆☆</span>
+    <h4><a href="https://www.gia.gov.ly/en/2026/10/29/in-implementation-of-the-prime-ministers-directives-minister-of-state-for-prime-minister-and-cabinet-affairs-follows-up-on-the-work-of-the-technical-committee-on-the-displaced-persons-file" target="_blank" rel="noopener">利比亚建成流离失所者数据平台</a></h4>
+  </div>
+  <div class="title-en">Libya completes national platform for managing displaced persons&#x27; data</div>
+  <div class="chips"><span class="chip">利比亚</span><span class="chip">流离失所者</span><span class="chip">数据库</span><span class="chip">国家平台</span><span class="chip">数据治理</span><span class="chip">机构协调</span><span class="chip">人道需求</span></div>
+  <p class="summary"><b>内容提要</b>　事件10-29、报道10-29。利比亚信息总局（GIA）10月29日通报，总理府与内阁事务国务部长穆罕默德·本·加勒本当日与社会事务部长瓦法·基拉尼、流离失所者与人权事务国务部长贾迈勒·阿布·卡林举行会议，检查依据总理第216号（2026年）决议设立的技术委员会工作进展。会议讨论了流离失所者数据库的开发与更新，以及加强相关机构之间的协调与整合，目的是提供准确可靠的数据，用于监测流离失所者状况、识别其需求。信息总局由纳德尔·梅利坦代表参加该委员会工作，并称已会同相关机构完成国家流离失所者数据管理平台的开发，该系统可实现数据统一与更新，提升数据管理与在主管机构之间交换的效率。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>利比亚信息总局10月29日发布通报称，总理府与内阁事务国务部长穆罕默德·本·加勒本当日会见社会事务部长瓦法·基拉尼、流离失所者与人权事务国务部长贾迈勒·阿布·卡林，检查依据总理第216号（2026年）决议设立的技术委员会的工作进展。
+
+通报称，会议讨论了流离失所者数据库的开发与更新情况，以及加强相关主管机构之间的协调与整合，目标是提供准确、可靠的数据，为监测流离失所者状况、识别其需求提供支撑。
+
+信息总局由纳德尔·梅利坦代表参加该委员会工作。该局表示，在与相关机构合作和整合的基础上，已完成国家流离失所者数据管理平台的开发；该系统可实现数据的统一与更新，提升数据管理效率及在主管机构之间的交换效率。
+
+通报将上述工作定位为支持政府联合行动、利用国家信息系统改善服务并强化循证决策的一部分，未披露流离失所者人数、平台上线时间表或数据覆盖范围。</p></details>
+  <div class="meta">
+    <span>来源：<b>利比亚信息总局（GIA）</b></span>
+    <span>推荐理由：利比亚官方信息机构一手通报，反映该国流离失所者数据治理与机构整合进展，但属内部协调事项，无人数、时间表等可核指标，影响偏中长期</span>
+    <a href="https://www.gia.gov.ly/en/2026/10/29/in-implementation-of-the-prime-ministers-directives-minister-of-state-for-prime-minister-and-cabinet-affairs-follows-up-on-the-work-of-the-technical-committee-on-the-displaced-persons-file" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+    <div class="sec-foot"><a href="#sec-global_south" class="collapse-btn" data-collapse="sec-global_south">▴ 收起本板块</a></div>
+  </div>
+</details>
+<details class="section" id="sec-tech">
+  <summary>
+    <span class="sec-title">🤖 移民与边境技术</span>
+    <span class="sec-desc">生物识别、智慧边境、AI 审查、电子签证、边境监控技术应用与争议</span>
+    <span class="sec-count">6 条</span>
+    <span class="sec-arrow">▾</span>
+  </summary>
+  <div class="sec-body">
+    
+<article class="item" id="item-tech-1">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://www.biometricupdate.com/202610/dhs-2-7b-software-deal-highlights-barriers-to-competition-vendor-lock-in" target="_blank" rel="noopener">美生物识别采购被指锁定单一供应商</a></h4>
+  </div>
+  <div class="title-en">DHS $2.7B Software Deal Highlights Barriers to Competition, Vendor Lock-in</div>
+  <div class="chips"><span class="chip">政府采购</span><span class="chip">生物识别</span><span class="chip">供应商锁定</span><span class="chip">指纹比对</span><span class="chip">身份核验</span><span class="chip">合同竞争</span><span class="chip">美国</span></div>
+  <p class="summary"><b>内容提要</b>　事件10-29、报道10-29。美国「生物识别更新」（Biometric Update）10月29日刊出基于联邦采购记录的分析，指美国国土安全部把软件采购集中于少数既有供应商，独家分销、专有技术与转换成本正限制生物识别、身份与监控系统的竞争。最大一例是7月15日签署、期限五年的「卡拉软件」（Carahsoft）一揽子采购协议，估算额度26.57亿美元；该部在独家来源论证中承认，需求被裁剪为仅含由该公司独家分销的产品。记录显示协议下已下单30笔、承付约9700万美元。文章还指该论证在授标约97天后才于10月20日公布，而文件自述应在14天内发布；并援引该部向泰雷兹支付1120万美元维护指纹比对技术，原因是政府缺少源代码与知识产权，其他承包商无法接手。卡拉软件未在发稿前回应。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>事件10-29、报道10-29。「生物识别更新」（Biometric Update）依据联邦采购记录分析指出，美国国土安全部正把软件采购集中到既有供应商周围，独家分销、专有技术与转换成本三重因素叠加，限制了生物识别、身份核验、情报分析与监控领域的竞争。
+
+最受关注的是7月15日签署的「卡拉软件」（Carahsoft）一揽子采购协议，估算额度26.57亿美元，属五年期采购容量而非已拨款金额。该部在独家来源论证中写明，需求被裁剪为仅包含由卡拉软件独家分销的原始设备制造商，并称其他经销商也只能通过该公司取得这些产品。记录显示协议下已产生约30笔订单、承付约9700万美元，其中海关与边境保护局到7月31日承付约1480万美元，移民与海关执法局8月承付1110万美元。
+
+文章强调程序问题：该论证直到10月20日才公布，距授标约97天，而文件自述应在14天内发布；公布时标注为「原始预先征集」，把协议描述为该部拟授标的事项，文件未解释延迟原因。
+
+生物识别现代化最能说明依赖如何形成。该部向泰雷兹（Thales）支付1120万美元维护指纹比对技术，理由是政府不掌握源代码、技术文档与知识产权，其他承包商无法承接；身份管理办公室的少量软件许可也走同一渠道。类似理由还出现在跨国生物识别预警项目、境内追踪项目与社媒监测平台续约中，反复出现的说法是既有投资与已积累数据令替换过贵。
+
+文章也提醒，重启竞争未必产生替代者：移民与海关执法局8月撤回一项1.25亿美元独家来源安排并重新招标，最终仍由原供应商以唯一投标中标。集中采购可能降低单价，但也可能把续约变简单、把技术壁垒原样保留。</p></details>
+  <div class="meta">
+    <span>来源：<b>生物识别更新（Biometric Update）</b></span>
+    <span>推荐理由：以可核查的采购文件揭示边境生物识别基础设施的供应商依赖结构，涉及指纹比对、身份核验与监控系统，对判断系统可替换性与监督空间有实质价值；属分析性报道而非突发事件，影响偏中长期，给4分。</span>
+    <a href="https://www.biometricupdate.com/202610/dhs-2-7b-software-deal-highlights-barriers-to-competition-vendor-lock-in" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-tech-2">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://www.csmonitor.com/USA/Justice/2026/1029/uaw-trump-immigrants-social-media-hellerstein" target="_blank" rel="noopener">美法官去世 社媒AI监控诉讼生变</a></h4>
+  </div>
+  <div class="title-en">Social Media Surveillance Case Faces Uncertainty After Judge&#x27;s Death</div>
+  <div class="chips"><span class="chip">社媒监控</span><span class="chip">人工智能审查</span><span class="chip">第一修正案</span><span class="chip">诉讼</span><span class="chip">签证持有人</span><span class="chip">隐私争议</span><span class="chip">美国</span></div>
+  <p class="summary"><b>内容提要</b>　事件10-28、报道10-29。据美国《基督教科学箴言报》10月29日报道，纽约南区联邦地区法院法官阿尔文·赫勒斯坦（Alvin K. Hellerstein）10月28日去世，令一起挑战政府以人工智能监控移民社交媒体言论的诉讼前景生变。该案由美国汽车工人联合会、通信工人协会与教师联合会提起，主张对数百万签证与绿卡持有人网络活动的监控构成观点歧视、违反第一修正案，并指国务院与国土安全部推行该计划时未遵守联邦程序规则。赫勒斯坦10月1日曾裁定案件可继续推进，但未下达禁令，相关监控仍在运行。法院称其案件将由新法官随机分派，案件管理会议定于11月12日。诉状援引联邦合同称，两部门采购了可追踪情绪变化的「五播」产品与具备人脸识别、情绪分析的彭林克工具。政府方承认会读取部分移民社媒内容，但否认存在铁板一块的监控计划。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>事件10-28、报道10-29。美国《基督教科学箴言报》（The Christian Science Monitor）报道，纽约南区联邦地区法院法官阿尔文·赫勒斯坦（Alvin K. Hellerstein）10月28日去世，使一起针对政府以人工智能监控移民社交媒体言论的诉讼走向不明。法院方面表示，其案件将由新法官「随机」分派。
+
+该案由三家全国性工会——美国汽车工人联合会、美国通信工人协会与美国教师联合会——提起，主张政府对数百万签证与绿卡持有人网络活动的监控构成「观点歧视」，违反宪法第一修正案；同时指国务院与国土安全部在推行该计划时未遵守联邦程序规则，违反《行政程序法》。工会称，已有移民因所表达观点而遭遇「不利的移民处理」。
+
+赫勒斯坦10月1日在一份意见中写下「我同意」，裁定原告所指为一项持续运行的监控计划，正在抑制其成员言论并造成其他损害，案件得以继续推进；但他未同时下达禁令，因此相关监控目前仍在运行。政府方在驳回动议中承认会阅读部分移民的社交媒体内容，但形容为有针对性的做法，助理联邦检察官珍妮弗·朱德称不存在「铁板一块的政府监控计划」，并指原告把不相关个案拼凑成诉状。
+
+诉状援引联邦合同称，国务院与国土安全部采购了多款人工智能网络活动监测工具，包括制造商称可追踪个人发布数据中「情绪与情感变化」的「五播」（Fivecast）产品，以及可对图片做人脸识别、对帖文做情绪分析并将账号加入监视名单的彭林克（PenLink）工具。原告称，面对约5500万签证持有人，人工逐条浏览无法实现这种规模的筛查。
+
+威廉与玛丽法学院教授玛格丽特·胡（Margaret Hu）表示，案件处于早期、推进缓慢，距离下达关停监控计划的禁令仍很远。案件管理会议定于11月12日举行，将确定证据开示规则。国务院称不就进行中的诉讼置评，国土安全部不评论调查手段。</p></details>
+  <div class="meta">
+    <span>来源：<b>基督教科学箴言报（The Christian Science Monitor）</b></span>
+    <span>推荐理由：首次以系统性方式挑战边境与移民管理中的算法化社媒审查，涉及具体采购工具、法律争点与程序节点，且主审法官去世带来不确定性，对观察人工智能审查的合法边界有较高参考价值；案件仍在早期阶段，给4分。</span>
+    <a href="https://www.csmonitor.com/USA/Justice/2026/1029/uaw-trump-immigrants-social-media-hellerstein" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-tech-3">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://www.biometricupdate.com/202610/iata-survey-finds-growing-demand-for-biometrics-as-travel-barriers-persist" target="_blank" rel="noopener">国际航协调查指旅客青睐生物识别</a></h4>
+  </div>
+  <div class="title-en">IATA survey finds growing demand for biometrics as travel barriers persist</div>
+  <div class="chips"><span class="chip">国际航协</span><span class="chip">生物识别</span><span class="chip">数字旅行凭证</span><span class="chip">机场通关</span><span class="chip">电子签证</span><span class="chip">旅客调查</span><span class="chip">无接触旅行</span></div>
+  <p class="summary"><b>内容提要</b>　事件10-29、报道10-29。国际航空运输协会（IATA）10月29日发布《2026年全球旅客调查》，显示约六成旅客过去12个月至少使用过一次生物识别，87%对体验表示满意；78%的旅客表示，若能免于在机场检查点出示护照或登机牌，愿意分享生物特征信息；84%对以数字护照在线值机感兴趣，82%愿在订票付款后向航司提供数字护照以获取个性化服务。协会表示将与各国政府合作推动数字旅行凭证（DTC）的签发与互认，并发布「无接触旅行名录」，新西兰航空与中国香港国际机场成为首批通过「单一身份」（One ID）认证的机构。调查同时显示，入境要求已使43%的旅客放弃某一目的地，高于2025年的33%，其中53%将原因归于手续复杂；逾100个国家签发电子签证，但查验方式缺乏一致性。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>国际航空运输协会（IATA）10月29日发布《2026年全球旅客调查》，并同步推出「无接触旅行名录」，供航空公司、机场与边境机构对接生物识别与数字身份合作方。协会运行、安全与安保高级副总裁尼克·卡林称，旅客正在接受技术以简化出行，人工智能已成为主流行程规划工具，生物识别与数字身份正在让机场流程更快、更顺畅；但许多旅客仍受复杂的入境与签证手续困扰，各国政府可通过简化入境要求、消除重复查验、加快安全数字旅行凭证的签发与互认来改善。
+
+调查的核心数据是：约六成旅客在过去12个月至少体验过一次生物识别，87%对体验表示满意，78%的旅客表示若能免于在检查点出示护照或登机牌，愿意分享生物特征信息。数字护照方面，84%对以数字护照在线值机感兴趣，82%愿在订票付款后向航司提供数字护照以取得个性化服务，同样比例的旅客对以整合数字钱包、数字护照与常旅客卡的方式管理行程有兴趣。
+
+顾虑方面，59%的受访者担心数据泄露，49%担心信息被分享给其他机构，41%担心个人信息处理方式不透明。近半数旅客已用人工智能规划行程，其中21%用于搜索特定目的地的航班，19%用于寻找最低价机票，17%用于咨询目的地建议。
+
+在入境环节，调查显示入境要求已使43%的旅客放弃某一目的地，高于2025年的33%；在因此受阻的旅客中，53%归因于手续复杂，隐私顾虑与费用各占17%。卡林称，逾100个国家签发电子签证，但查验方式缺乏一致性，而解决问题的工具已经存在。
+
+区域差异方面，北美旅客生物识别使用率最高，同时对数据泄露的担忧也最强；亚太次之，且旅客满意度全球最高；欧洲旅客在订票与在线值机环节使用生物识别和数字护照的意愿最低；中东旅客最倾向用人工智能规划行程，对数字护照与生物识别兴趣最强；拉美与加勒比旅客最希望抵达前完成入境手续；非洲对数字旅行解决方案兴趣最高。
+
+协会同时宣布，新西兰航空与中国香港国际机场成为首批获得「单一身份」认证的机构，认证覆盖准入数字化、无接触旅行、生物特征处理以及隐私、同意与治理四个领域。报道并提及印度「数字出行」自11月1日起在七座机场启动国际旅客试点。</p></details>
+  <div class="meta">
+    <span>来源：<b>生物识别更新（Biometric Update），报道国际航空运输协会（IATA）2026年全球旅客调查</b></span>
+    <span>推荐理由：以协会全球旅客调查数据呈现生物识别与数字旅行凭证的接受度与入境手续摩擦，涉及电子签证一致性与边境流程，参考价值明确；但属行业调查与倡议，无政策强制力，给3分</span>
+    <a href="https://www.biometricupdate.com/202610/iata-survey-finds-growing-demand-for-biometrics-as-travel-barriers-persist" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-tech-4">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★☆☆☆</span>
+    <h4><a href="https://www.biometricupdate.com/202610/cameroon-looks-to-cote-divoire-to-advance-digital-civil-registration" target="_blank" rel="noopener">喀麦隆赴科特迪瓦考察数字民事登记</a></h4>
+  </div>
+  <div class="title-en">Cameroon looks to Côte d&#x27;Ivoire to advance digital civil registration</div>
+  <div class="chips"><span class="chip">喀麦隆</span><span class="chip">科特迪瓦</span><span class="chip">民事登记</span><span class="chip">数字身份</span><span class="chip">人口登记册</span><span class="chip">系统互操作</span><span class="chip">南南合作</span></div>
+  <p class="summary"><b>内容提要</b>　事件10-29、报道10-29。喀麦隆国家民事登记局（BUNEC）10月26日至30日派团访问科特迪瓦国家民事登记与身份识别局（ONECI），考察其在数字民事登记、人口登记册管理和系统互操作方面的做法，访问至报道日仍在进行。BUNEC称，此行由其总干事亚历山大·马里·约莫（Alexandre Marie Yomo）率领，目标是找出可在喀麦隆本地适用的实际抓手，重点是加快国家民事登记数据库建设。双方在阿比让围绕四个领域磋商：民事登记系统数字化转型的有效管理、民事登记数据库与国家身份系统的衔接、治理与变革管理、以及维持民事登记机构运转的经济与商业模式。喀麦隆目前为纸电并行，432个主要民事登记中心中仅60个完成信息化；其2025—2029战略计划拟实现全部432个中心信息化，并与医疗机构、法院和身份服务联通，2029年前形成互操作。科特迪瓦则以自然人国家登记册（RNPP）为身份基础设施底座，与ONECI管理的国民身份证和生物识别系统并行。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>喀麦隆国家民事登记局10月26日至30日派代表团访问科特迪瓦国家民事登记与身份识别局，考察其数字民事登记、人口登记册管理与系统互操作做法。BUNEC表示，访问由其总干事亚历山大·马里·约莫率领，目的是识别可移植到喀麦隆的实际做法，特别是加快国家民事登记数据库的推出。该访问属于喀麦隆依2024年12月民事登记组织法推进的改革，也是2025—2029年民事登记与生命统计现代化战略计划的一部分。
+
+在阿比让，双方讨论了四个主要领域：民事登记系统数字化转型的有效管理；民事登记数据库与国家身份系统之间的衔接；治理与变革管理问题；以及维持民事登记机构运转所需的经济与商业模式。
+
+报道指出，数据库衔接是重点之一。喀麦隆目前实行混合模式，纸质登记占主导，数字系统仅在部分市镇运行，全国432个主要民事登记中心中已信息化60个。拟建的国家民事登记数据库将作为统一存储库，并支撑与其他政府身份系统的连接。按2025—2029战略计划，喀麦隆拟将全部432个主要中心信息化，并与医疗机构、法院和身份识别服务机构联通，2029年前实现与全国民事登记管理系统之间的互操作。
+
+科特迪瓦方面已建立自然人国家登记册，作为其身份基础设施的基础组成部分，与ONECI管理的国民身份证和生物识别识别系统并行；喀麦隆正研究其中哪些要素可用于自身改革。约莫此前公开表示，改革面临巨大资金缺口，估计需要约8500万美元，但他对2029年或2030年实现民事登记与生命统计系统全面数字化仍表乐观。</p></details>
+  <div class="meta">
+    <span>来源：<b>生物识别更新（Biometric Update），引述喀麦隆国家民事登记局（BUNEC）公告</b></span>
+    <span>推荐理由：两国身份登记机构之间的技术考察，具体数据（60/432、8500万美元缺口、2029年互操作目标）完整，对观察非洲身份基础设施路径有参考价值，但属访问交流而非政策落地</span>
+    <a href="https://www.biometricupdate.com/202610/cameroon-looks-to-cote-divoire-to-advance-digital-civil-registration" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-tech-5">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://www.biometricupdate.com/202610/world-bank-finds-haitis-biometric-id-infrastructure-underused-as-3m-lack-credentials" target="_blank" rel="noopener">世行诊断海地身份证件缺口</a></h4>
+  </div>
+  <div class="title-en">World Bank finds Haiti&#x27;s biometric ID infrastructure underused as 3M lack credentials</div>
+  <div class="chips"><span class="chip">海地</span><span class="chip">世界银行</span><span class="chip">国民身份证</span><span class="chip">生物识别</span><span class="chip">民事登记</span><span class="chip">被遣返者</span><span class="chip">身份核验</span></div>
+  <p class="summary"><b>内容提要</b>　事件10-29、报道10-29。世界银行新发布的国别诊断报告《身份证生态系统诊断：海地》估算，约270万至310万海地成年人没有有效国民身份证，国民唯一身份证覆盖率约67%，相当于每三名成年人中约有一人缺证。报告称，截至2025年5月，已制作的国民身份证中有逾65万张（约11%）未送达持证人，部分原因在于太子港集中印制、物流困难与安全形势。五岁以下儿童85%已登记出生，但仅77%持有出生证明。报告强调，发证本身不足，须与可及的民事登记、可靠的身份核验基础设施、有效治理机制和完备的数据保护立法同步推进；并点名最易被排斥群体，包括贫困家庭、偏远或不安全地区居民、以及因不安全局势流离失所者、被遣返者与回返者。海地国家身份办公室（ONI）虽具备生物特征去重与数字核验能力，但在政府服务中使用不足，且民事登记、身份与统计系统之间缺乏互操作。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>世界银行新发布的国别诊断报告《身份证生态系统诊断：海地》估算，约270万至310万海地成年人没有有效国民身份证。按世行数据，国民唯一身份证已发放给约67%的海地成年人，约三分之一成年人缺少有效证件。
+
+报告强调，仅靠扩大登记不足以解决问题，还须配套可及的民事登记、可靠的身份核验基础设施、有效的治理机制和完备的数据保护立法。海地通过2020年法令引入带生物识别芯片的身份证，并推动分散印制、扩大服务点，取得一定进展，但发卡与送达仍是主要瓶颈：截至2025年5月，逾65万张国民身份证（约占总制作量11%）未送达持证人，世行将其部分归因于太子港集中印制、物流困难以及安全局势。五岁以下儿童中85%已登记出生，但仅77%持有出生证明，这一差距说明扩大身份证覆盖须同步改善底层民事登记。
+
+世行驻海地国家经理安娜·吕西·勒费弗尔表示，投资身份证生态系统不仅是履行一项基本权利，也是促进海地包容性、可持续就业机会的战略机遇；改善身份系统、使公私服务提供方能够使用，可实现唯一性核验、证件真实性核验和身份信息校验等关键服务。
+
+报告点名最易被排斥的群体：较贫困家庭、居住在偏远或不安全地区者、因文化障碍难以登记出生的妇女，以及因不安全局势流离失所者，包括被遣返者、回返者和境内流离失所者。报告指出，身份证名义上免费，但非正式收费、交通费用、多次往返和误工收入使登记实际成本高昂，建议把服务送到农村与不安全社区、简化逾期出生登记、减少单亲母亲登记子女的障碍。
+
+技术层面，报告还指出海地民事登记、身份识别与统计系统之间缺乏互操作，尚无运行中的国家数据共享基础设施，也没有集中或联邦式人口登记册；国家身份办公室虽具备生物特征去重与数字核验能力，但在政府服务中使用不足，许多机构仍依赖人工核验和各自独立的数据库。报告建议自出生即赋予唯一识别号、建立国家数据共享基础设施、开发可验证数字凭证、扩展远程身份核验能力，并警告对外部资金和专有技术供应商的依赖可能削弱身份基础设施的长期可持续性。
+
+报道并提及，今年8月美洲国家组织与日本的合作协议提供300万美元赠款，用于采购35万张空白生物识别身份证、扩大外展并改善身份证办公室的电力与网络连接。</p></details>
+  <div class="meta">
+    <span>来源：<b>生物识别更新（Biometric Update），报道世界银行《身份证生态系统诊断：海地》</b></span>
+    <span>推荐理由：世界银行国别诊断一手数据，直指回返者与被遣返者等流动人口的身份获取障碍，涉及生物特征去重、系统互操作与供应商依赖，对判断脆弱国家身份基础设施有实质参考价值；属诊断报告而非突发事件，给3分</span>
+    <a href="https://www.biometricupdate.com/202610/world-bank-finds-haitis-biometric-id-infrastructure-underused-as-3m-lack-credentials" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-tech-6">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://www.biometricupdate.com/202610/australia-presses-us-for-biometric-validation-model-that-could-keep-fingerprints-at-home" target="_blank" rel="noopener">澳推动美方改用生物特征核验模式</a></h4>
+  </div>
+  <div class="title-en">Australia Presses US for Validation-Based Biometric Screening Model</div>
+  <div class="chips"><span class="chip">生物识别</span><span class="chip">数据共享</span><span class="chip">免签计划</span><span class="chip">旅客预检</span><span class="chip">身份核验</span><span class="chip">隐私边界</span><span class="chip">澳美关系</span></div>
+  <p class="summary"><b>内容提要</b>　事件10-27、报道10-29。美国「生物识别更新」（Biometric Update）10月29日刊文称，澳大利亚正推动美方接受一种身份核验模式，使美国边境部门可在澳方不直接移交生物特征模板的情况下，用美方提供的身份信息比对澳方记录。相关磋商在10月27日（周二）澳参议院听证会上披露，澳官员称8月与10月已与美方会谈，华盛顿正考虑该提议。报道称磋商涉及美国国土安全部2022年起对免签计划参与国提出的「强化边境安全伙伴关系」要求；由于美方免签电子授权系统不采集指纹，该部称与生物特征关联的国家身份编号可作为「生物特征锚定」标识发起自动查询。澳方倾向只回传「信息是否属实」的确认。两国2014年已签签证与移民信息共享协定，现有五国移民数据网以指纹自动交换。美方设定的12月31日期限构成压力。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>报道由「生物识别更新」刊出，美东时间10月28日16时16分发布，折北京时间10月29日4时16分；所披露的磋商情况来自10月27日澳大利亚参议院听证会，报道并援引澳媒「创新澳洲」（InnovationAus）此前消息。
+
+核心争点是「谁来比对」。澳方希望美方接受核验式安排：由美方提供待查身份信息，澳方在本国系统内比对后只回传「信息是否属实」的确认，而不直接把生物特征模板交给美方。澳官员称，8月与10月已与美方对口部门会谈，华盛顿表示澳方既可选择提供生物特征信息，也可选择确认美方所供信息是否正确，澳方倾向前者之外的后者。
+
+制度背景是美国国土安全部2022年起对免签计划（VWP）参与国提出的「强化边境安全伙伴关系」（EBSP）要求，欧盟委员会将其描述为加入并持续参与该计划的条​件。由于美国免签电子授权（ESTA）不采集指纹，该部称与生物特征关联的国家身份编号可作为「生物特征锚定」的标识发起自动查询；查询命中可返回身份与旅行证件信息、国籍、已知重罪定罪与逮捕记录以及移民身份等。
+
+技术上两国已有基础。澳内政部记录显示，「五国移民数据网」（M5）通过安全实时平台与美国、加拿大、新西兰自动交换指纹；2014年两国签署签证与移民信息共享协定，其执行安排规定初始以指纹为查询标识，但「经各方书面同意可增加其他标识」。文章据此指出，澳方或可在境内完成生物特征比对的同时，授权以其他标识发起查询。
+
+未定事项仍多：美方究竟发送指纹、护照信息还是其他编号；比对是否全部在澳境内完成；命中后回传的是单纯确认，还是一揽子刑事情报与移民记录。程序上，若以现有协定下的非约束性执行安排落地，可能无需再走完整条约程序，澳外交贸易部仅称条约修订属条约行为。时间压力来自美方设定的12月31日期限，欧盟委员会称各伙伴协议预计届时完成；欧盟与美国7月23日完成框架谈判，欧委会9月10日提出签署与临时适用决定，并把自动身份核验与后续信息交换分开处理。</p></details>
+  <div class="meta">
+    <span>来源：<b>生物识别更新（Biometric Update）</b></span>
+    <span>推荐理由：首次系统披露美国免签计划框架下「核验式」生物特征查询的谈判进展与法律、技术路径，涉及查询标识扩展、命中回传范围与条约程序，对判断美澳及美欧生物特征数据互操作走向有实质参考价值；磋商尚无结果、细节未公开，给4分。</span>
+    <a href="https://www.biometricupdate.com/202610/australia-presses-us-for-biometric-validation-model-that-could-keep-fingerprints-at-home" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+    <div class="sec-foot"><a href="#sec-tech" class="collapse-btn" data-collapse="sec-tech">▴ 收起本板块</a></div>
+  </div>
+</details>
+<details class="section" id="sec-research">
+  <summary>
+    <span class="sec-title">📚 移民与边境研究</span>
+    <span class="sec-desc">全球智库报告、学术论文、研究数据：移民治理与边境安全前沿研究成果</span>
+    <span class="sec-count">6 条</span>
+    <span class="sec-arrow">▾</span>
+  </summary>
+  <div class="sec-body">
+    
+<article class="item" id="item-research-1">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://www.pewresearch.org/short-reads/2026/10/27/what-we-know-about-eligible-voters-who-are-naturalized-us-citizens" target="_blank" rel="noopener">皮尤：归化选民占合格选民一成</a></h4>
+  </div>
+  <div class="title-en">What We Know About Eligible Voters Who Are Naturalized U.S. Citizens</div>
+  <div class="chips"><span class="chip">归化公民</span><span class="chip">选民结构</span><span class="chip">美国移民</span><span class="chip">语言多样性</span><span class="chip">人口普查数据</span><span class="chip">教育程度</span><span class="chip">家庭收入</span><span class="chip">族裔构成</span></div>
+  <p class="summary"><b>内容提要</b>　报告10-27发布。皮尤研究中心基于美国社区调查（ACS）2024年数据与2000年人口普查5%样本，刻画了具备投票资格的归化公民群体。归化选民人数从2000年约1200万（占全体合格选民6.2%）增至2024年约2520万（10.3%），增速快于合格选民总体。其中96.4%能讲英语，与本土出生选民的99.9%相差不大；但76.0%同时讲英语以外的至少一种语言，远高于本土出生选民的10.2%，家中最常用的外语依次为西班牙语、中文、印地语及相关语言、菲律宾语／他加禄语。该群体年龄偏大，59.8%在50岁以上，中位年龄54岁（本土出生选民47岁）；家庭收入中位数10.5万美元，高于本土出生选民的9.4万美元；39.8%拥有学士及以上学位。族裔构成上，拉美裔占33.2%、亚裔占32.3%、白人占20.1%、黑人占10.7%；亚裔合格选民中归化者比例达64.7%，是唯一以归化公民为主体的主要族裔群体。出生地以墨西哥居首（约15%），菲律宾、印度、中国、越南随后。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>皮尤研究中心10月27日发布的这篇数据解读，把「归化公民」这一常被笼统讨论的群体拆解为可核对的人口学画像。作者席夫拉·达雅克（Shifra Dayak）与米娅·亨嫩（Mia Hennen）使用的底数是2024年美国社区调查（经明尼苏达大学IPUMS提取）以及2000年人口普查5%样本，因此所有比例都可回溯到公开数据，而非调查估算。
+
+最值得注意的结构性发现有三点。第一是规模与增速：归化选民占比在24年间从6.2%升到10.3%，其增长快于合格选民总体，这意味着这一群体的政治权重在机械地上升。第二是语言：英语能力几乎不构成障碍（96.4%），但多语比例高达76.0%，与本土出生选民的10.2%形成鲜明反差，说明「只会母语、难以融入」的叙事在数据上缺乏支撑。第三是社会经济位置：家庭收入中位数与学士学位比例均高于本土出生选民，这与「移民拉低平均受教育水平」的常见判断方向相反。
+
+族裔维度的差异同样重要。亚裔合格选民中有64.7%为归化公民，是唯一以归化者为主体的主要族裔群体；拉美裔仅约四分之一为归化，其选民增长主要来自本土出生者成年，而非入籍。这一区别提示，把亚裔与拉美裔选民都当作「移民选民」来处理，会误判两组人各自的政治形成路径。
+
+报告同时提醒口径边界：文中所有指标衡量的是「投票资格」，不含登记率与实际投票率；族裔分类采用非拉丁裔单一族裔口径，混血与「其他」不在四类之内。因此这些数字适合描述选民池的构成变化，不宜直接推导为选举结果或党派倾向。</p></details>
+  <div class="meta">
+    <span>来源：<b>皮尤研究中心（Pew Research Center）</b></span>
+    <span>推荐理由：皮尤原创数据分析，口径与数据源公开可核，含多项反直觉的量化结论，对理解美国选民结构变化有直接参考价值；但属描述性统计，未涉及因果推断，且仅覆盖投票资格而非投票行为，故评4分。</span>
+    <a href="https://www.pewresearch.org/short-reads/2026/10/27/what-we-know-about-eligible-voters-who-are-naturalized-us-citizens" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-research-2">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★★</span>
+    <h4><a href="https://www.elibrary.imf.org/view/journals/001/2026/228/001.2026.issue-228-en.xml" target="_blank" rel="noopener">基金组织研究非洲被迫流离宏观影响</a></h4>
+  </div>
+  <div class="title-en">Macroeconomic Effects of Forced Displacement in Sub-Saharan Africa</div>
+  <div class="chips"><span class="chip">被迫流离</span><span class="chip">撒哈拉以南非洲</span><span class="chip">宏观经济影响</span><span class="chip">难民流入</span><span class="chip">财政收支</span><span class="chip">境内流离失所</span><span class="chip">双重差分</span><span class="chip">国别案例</span></div>
+  <p class="summary"><b>内容提要</b>　论文10-23上线。国际货币基金组织（IMF）第228号工作论文以撒哈拉以南非洲为对象，用跨国面板与布基纳法索、南苏丹、乌干达三国案例，估计被迫流离对东道国宏观经济的影响。研究采用双重差分局部投影（LP-DiD）方法，基于1970至2023年数据识别出54次大规模难民流入事件，平均流入规模相当于东道国人口的2.28%，进一步筛选后分析30国的33次冲击。结果显示，大规模难民流入在五年期内对东道国国内生产总值、通胀与经常账户余额均无统计显著影响；财政基本余额看似平稳，但掩盖了对冲结构——政府支出初期上升约1个百分点GDP、两年后峰值约2.5个百分点，财政收入同期上升且五年后税收约高出近2个百分点。若把境内流离失所者一并计入，流离人口超过全国人口5%的国家产出明显走弱，超过7%时更甚，但作者强调该估计难以与冲突本身的破坏效应分离，宜视为上限。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>这篇10月23日上线的工作论文，作者为哈尼·阿卜杜勒-拉蒂夫（Hany Abdel-Latif）、安东尼奥·戴维（Antonio David）、穆哈马杜·穆斯塔法·利（Mouhamadou Moustapha Ly）、埃利塞·温德拉西达·米宁古（Elisee Wendlassida Miningou）、冈本雅辉（Masateru Okamoto）与亚历克斯·瓦瓦尔·皮埃尔-夏尔（Alex Vaval Pierre-Charles）。其价值不在于给出新数字，而在于用相对严格的识别策略，检验一个长期被政治化使用的命题：难民流入是否必然拖累东道国经济。
+
+背景规模先说清楚。区域内被迫流离人口从2010年的870万增至2025年的4090万，约占全球总量35%；其中境内流离者约3000万，接近难民人数的三倍。乌干达收容近200万难民，是区域最大收容国；苏丹境内流离者约910万。约92.5%的难民与寻求庇护者来自邻国，压力高度集中于跨境地带。
+
+核心发现是对称的两面。一面是「没有显著恶化」：五年期内实际GDP、消费物价、经常账户与财政基本余额均无统计显著变化，即便把对照组限定为撒哈拉以南经济体结果依然稳健。另一面是「财政并非无成本」：支出上升与收入上升同时发生，收入端主要来自与难民消费和人道主义活动相关的税收，两者相互抵消，才使基本余额看起来平静。这意味着短期财政压力真实存在，只是被税基扩张掩盖了。
+
+三国案例揭示了国家层面的分化。布基纳法索的境内流离降低了东道社区的就业机会，服务业工资承压、工业工资上升，农业与服务业家庭消费下滑。乌干达的难民流入与就业机会增加相关，尤其在农村，但平均工资未见改善，住房、交通、医疗等服务价格压力使家庭消费下降。南苏丹在2023年4月苏丹冲突后至2025年12月接收约126万难民与回返者，受影响县的食品价格结构出现分化——进口与加工食品涨价，本地生产的谷物相对稳定甚至下跌，玉米粉十二个月内涨68%、小麦粉涨32%，而白小米下跌19%。
+
+政策含义落在「准入」二字上：作者主张让流离人口获得土地、农业投入品、就业与推广服务，既能改善其生计，也能通过本地粮食供给反哺东道社区。需要留意的是，论文以工作论文形式发布，目的是引发讨论，结论不代表基金组织执董会立场；且「流离人口占比越高、产出越弱」的估计无法完全剥离冲突破坏，解读时应保留这一保留。</p></details>
+  <div class="meta">
+    <span>来源：<b>国际货币基金组织（IMF），工作论文第228号</b></span>
+    <span>推荐理由：IMF正式工作论文，方法透明（LP-DiD）、样本与事件识别过程可复核，含三国案例的微观佐证，并明确标注因果识别的局限，对非洲被迫流离的宏观经济争论提供了高质量证据，评5分。</span>
+    <a href="https://www.elibrary.imf.org/view/journals/001/2026/228/001.2026.issue-228-en.xml" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-research-3">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://humanrights.berkeley.edu/publications/climate-induced-human-displacement-and-migration-statewide-topical-report/" target="_blank" rel="noopener">伯克利报告：加州气候迁移未入规划</a></h4>
+  </div>
+  <div class="title-en">Climate-Induced Human Displacement and Migration Statewide Topical Report</div>
+  <div class="chips"><span class="chip">气候迁移</span><span class="chip">加州</span><span class="chip">流离失所</span><span class="chip">适应规划</span><span class="chip">住房不稳定</span><span class="chip">山火疏散</span><span class="chip">社会脆弱性</span><span class="chip">跨部门治理</span></div>
+  <p class="summary"><b>内容提要</b>　报告10-21发布。加州大学伯克利分校人权中心牵头、多学科作者合作的这份全州专题报告，属加州第五次气候变化评估的组成部分，系统梳理气候驱动的流离与迁移在加州的动因、路径与后果。报告指出，山火、洪水、极端高温、干旱与海平面上升叠加住房、基础设施与既有社会不平等，共同决定居民是原地留下、临时搬迁还是永久迁离；租房者、低收入家庭、无证居民、原住民部落、农村人口与气候暴露行业劳动者承受更高风险。2017至2019年重大山火期间，超过一百万加州人接到疏散令，显示山火风险可同时冲击住房、交通、就学、就业与社区生活。报告的核心判断是：气候迁移与流离尚未被系统纳入州与区域适应规划，导致预判能力、公平响应与韧性建设均受限；住房不稳定是将气候冲击转化为流离的核心传导路径。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>这份10月21日发布的报告是加州第五次气候变化评估中的专题卷之一，作者阵容跨越人权、城市规划、公共卫生与环境科学，由侯赛因·阿亚齐（Hossein Ayazi）、贝茜·波普肯（Betsy Popken）领衔，凯伦·查普尔（Karen Chapple）等参与，共18位作者。它的分析框架值得注意：把「动因—路径—后果」三段拆开，而不是笼统讨论「气候移民」。动因是气候、社会、经济与政治因素的交互；路径是流动的形式、时点与地理格局；后果则落到个人、社区、基础设施、公共服务与区域经济。
+
+报告把加州的气候流离分为三类空间尺度：州内流动、州际迁移、进出加州的国际迁移。这一划分避免了把「气候移民」简化为跨境现象——在加州，绝大多数气候驱动的移动其实发生在州内，且往往表现为短距离、临时性、反复发生的撤离与回迁，而非一次性的永久迁离。
+
+最实质的机制发现是住房。报告认为住房不稳定是气候冲击转化为流离的核心传导路径，租房者与低收入居民首当其冲：疏散期间失去住所、保险与租金援助不到位、回迁后住房成本上升，都会把一次天气事件变成长期流离。2017至2019年山火季超过百万人被下令疏散的规模，说明这种转化在加州已反复发生。
+
+治理层面的批评直接而具体。报告指出，气候迁移与流离尚未被系统纳入州与区域适应规划，住房、应急管理、交通、能源、水资源等部门各自为政，缺乏统一的预判口径；社区组织与地方政府在支持流离人口上作用关键，却缺乏稳定资源，也未进入正式规划体系。建议集中在三点：建立跨部门协调与治理对齐、建设可互操作的数据系统以支撑规划与公平政策、发展去中心化的能源与交通等韧性基础设施，同时通过增强社会凝聚力与社区认同来维持韧性。
+
+需要说明的是，这是一份证据综述与政策建议型报告，而非新的实证研究；其说服力来自对既有文献与州级数据的整合，而非原创调查。对关注气候—迁移交叉议题的研究者，它的价值在于提供了一个可操作的州级分析模板与一份明确的规划缺口清单。</p></details>
+  <div class="meta">
+    <span>来源：<b>加州大学伯克利分校人权中心（UC Berkeley Human Rights Center）</b></span>
+    <span>推荐理由：州级气候评估的正式专题报告，作者跨学科、框架清晰，明确指出规划缺口并给出可操作建议；但属证据综述而非原创实证，结论多基于既有文献整合，故评4分。</span>
+    <a href="https://humanrights.berkeley.edu/publications/climate-induced-human-displacement-and-migration-statewide-topical-report/" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-research-4">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://pewresearch.org/race-and-ethnicity/2026/10/16/the-economy-is-the-top-issue-for-latino-voters-in-the-2026-midterms" target="_blank" rel="noopener">皮尤：拉美裔选民最看重经济议题</a></h4>
+  </div>
+  <div class="title-en">The Economy Is the Top Issue for Latino Voters in the 2026 Midterms</div>
+  <div class="chips"><span class="chip">拉美裔选民</span><span class="chip">中期选举</span><span class="chip">议题排序</span><span class="chip">经济评价</span><span class="chip">遣返政策</span><span class="chip">党派差异</span><span class="chip">民调</span><span class="chip">美国政治</span></div>
+  <p class="summary"><b>内容提要</b>　报告10-16发布。皮尤研究中心于2026年9月28日至10月4日访问5062名美国成年人，其中包含774名拉美裔登记选民，考察其在中期选举中的议题排序与政策评价。86%的拉美裔登记选民表示经济对投票「非常重要」，为各议题之首；医保（80%）与教育（75%）次之，民主前途（69%）与移民（64%）紧随。经济议题的优先级跨越党派：支持民主党候选人的拉美裔中89%如此认为，支持共和党候选人的为78%，但在医保与教育上两党支持者相差31与27个百分点。对经济状况的评价明显转差，仅19%认为全国经济极好或良好，低于一年前的26%；74%认为特朗普的经济政策使状况变坏，高于2025年的61%。在驱逐议题上，多数拉美裔选民认为本届政府在遣返上「做得过多」。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>这项10月16日发布的调查，样本为5062名美国成年人，其中拉美裔登记选民774人，调查期为2026年9月28日至10月4日，通过皮尤的美国趋势面板（ATP）以英语和西班牙语实施。就移民议题而言，它提供了两个值得注意的读数。
+
+第一是议题排序中的位置。移民被64%的拉美裔登记选民列为对国会投票「非常重要」，排在民主前途（69%）之后，明显低于经济（86%）、医保（80%）与教育（75%）。这与一种常见假设——拉美裔选民首先以移民议题投票——并不一致。报告的分项数据还显示，支持民主党候选人的拉美裔登记选民中67%、支持共和党候选人的为57%把移民列为非常重要，两者相差仅10个百分点；相比之下医保为87%对56%、教育为84%对57%，落差达31与27个百分点，说明移民议题在拉美裔内部的党派分化反而小于医保与教育。
+
+第二是政策评价的方向。多数拉美裔选民认为本届政府在遣返问题上做得过多，这与该群体对经济状况的悲观评价叠加，构成一个内部的张力：经济是首要关切，而移民执法被视为经济与社区稳定的干扰项之一，而非解决方案。报告还记录了对特朗普经济政策的评价从2025年的61%认为「使状况变坏」升至今年的74%，以及对当前经济状况正面评价从26%降至19%。
+
+在解读上需要保持克制。第一，这是单一时点的横截面调查，无法说明态度变化的因果来源；774名拉美裔登记选民的子样本在细分交叉分析时误差会明显放大，报告本身也未把族裔内部（如古巴裔、墨西哥裔、波多黎各裔）的差异作为主轴。第二，调查衡量的是议题重要性排序与政策评价，不等于投票选择，两者之间还隔着候选人、选区与动员等因素。第三，样本来自自愿加入的概率面板，皮尤虽然做了加权处理，但无应答偏差仍需考虑。
+
+对移民研究而言，这份数据最有用的地方在于把「拉美裔＝移民议题选民」的简化说法，替换为一组可比较的议题权重与政策评价，从而让讨论回到可检验的量度上。</p></details>
+  <div class="meta">
+    <span>来源：<b>皮尤研究中心（Pew Research Center）</b></span>
+    <span>推荐理由：皮尤原创全国概率面板调查，样本量与方法披露完整，含跨党派与议题权重的可比数据，对纠正「拉美裔以移民议题投票」的简化判断有实证价值；但为单时点横截面、子样本较小，且不直接测量投票行为，故评4分。</span>
+    <a href="https://pewresearch.org/race-and-ethnicity/2026/10/16/the-economy-is-the-top-issue-for-latino-voters-in-the-2026-midterms" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-research-5">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://fra.europa.eu/en/publication/2026/migration-bulletin-3-2026" target="_blank" rel="noopener">欧盟季报：三季度移民权利风险盘点</a></h4>
+  </div>
+  <div class="title-en">Migration and Fundamental Rights Bulletin - 3/2026</div>
+  <div class="chips"><span class="chip">基本权利公报</span><span class="chip">地中海死亡</span><span class="chip">休达事件</span><span class="chip">边境安全法</span><span class="chip">芬兰</span><span class="chip">庇护权</span><span class="chip">监督机制</span><span class="chip">临时保护</span></div>
+  <p class="summary"><b>内容提要</b>　报告10-22发布。欧盟基本权利署（FRA）第三期《移民与基本权利公报》覆盖2026年7月1日至9月30日。据国际移民组织数据，该季度地中海及大西洋加那利航线至少852人死亡或失踪，其中西非—大西洋线283人、西地中海229人、东地中海199人、中地中海141人。7月30日逾7.2万人从摩洛哥非正常进入休达，据西班牙内政部数据；媒体报道至少88人在游泳越境途中死亡，涉及生命权风险、对抵境者过度使用武力的指控、接待条件不足与儿童保护等问题。芬兰9月3日提议将《边境安全法》延长至2028年12月31日，该法允许在混合移民事件中暂停部分地区庇护申请；FRA认可其安全关切，但强调延长须配套保障寻求庇护权与不驱回原则。截至9月底，22个成员国已指定基本权利监督机构或相关立法正在通过程序，仅7国开展监督访问，匈牙利、意大利、马耳他、波兰、瑞典尚未落实。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>这是欧盟基本权利署2026年第三期季度公报，10月22日发布，覆盖7月1日至9月30日。季度公报制度本身有法律出处：欧盟《庇护与移民管理条约》第10条第2款h项要求欧盟委员会在评估成员国是否处于移民压力时参考FRA的公报，因此这份文件不是倡议性报告，而是进入欧盟决策流程的输入。
+
+第一组数据关于旅途死亡。国际移民组织记录该季度至少852人在赴欧途中死亡或失踪，分布为西非—大西洋线283人、西地中海229人、东地中海199人、中地中海141人。值得注意的是西非—大西洋（加那利）航线在本季度居首，这与近年该航线船只超载、航程延长、搜救覆盖不足的结构性问题相互印证。
+
+第二组围绕休达。7月30日逾7.2万人从摩洛哥非正常进入休达，为西班牙内政部数据；媒体报道至少88人在游泳越境时死亡。FRA列出的权利关切具体而克制：生命权风险、对抵境者不当使用武力的指控、接待条件不足、儿童保护缺位。这一事件同时是欧盟外部边界治理的测试案例，并与欧盟遣返条例的谈判节奏相互叠加。
+
+第三组是监督机制的落地进度。截至9月底，22个成员国已指定监督机构或立法在途，仅7国开展监督访问，匈牙利、意大利、马耳他、波兰、瑞典五国仍未落实。这与FRA同期发布的另一份更新报告结论一致，两份文件互为印证。
+
+第四组涉及具体国别。芬兰9月3日提议将《边境安全法》延长至2028年12月31日；该法允许政府在混合移民事件中经单独决定暂停部分地区庇护申请，2023年末曾被用于关闭整个东部陆路边界。FRA认可赫尔辛基的安全关切，但要求延长必须附带保障寻求庇护权与不驱回原则的机制。公报同时记录芬兰边境警卫队宣布沿俄罗斯边界的200公里、高4.5米围栏主体结构完工，传感器集成仍在进行。
+
+第五组关于乌克兰流离群体。各国对临时保护延期后的支持范围、水平与替代身份准入差异明显；有兵役义务的乌克兰男性被排除在最新一次临时保护延期之外，但仍可申请庇护，且在某些情形下拒绝服兵役本身可构成保护理由。这一条对理解欧洲临时保护的收缩边界尤为关键。
+
+需要提醒的是，公报是季度汇编性质的监测文件，数字多引自国际移民组织、西班牙内政部与各国通报，FRA自身并不重新测算；其价值在于把分散的权利风险集中呈现并纳入欧盟评估程序。</p></details>
+  <div class="meta">
+    <span>来源：<b>欧盟基本权利署（FRA）</b></span>
+    <span>推荐理由：欧盟机构定期监测公报，数据可溯源至国际移民组织与成员国官方通报，且依条约规定进入欧盟委员会的压力评估程序，政策相关性强；但属季度汇编而非原创实证研究，多数数字为转引，故评4分。</span>
+    <a href="https://fra.europa.eu/en/publication/2026/migration-bulletin-3-2026" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-research-6">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://reliefweb.int/report/iran-islamic-republic/escalation-middle-east-and-beyond-mobility-report-22-october-2026" target="_blank" rel="noopener">移民组织周报追踪中东流离态势</a></h4>
+  </div>
+  <div class="title-en">Escalation in the Middle East and beyond — Mobility Report, 22 October 2026</div>
+  <div class="chips"><span class="chip">流离监测矩阵</span><span class="chip">也门</span><span class="chip">黎巴嫩</span><span class="chip">叙利亚</span><span class="chip">吉布提</span><span class="chip">跨境流动</span><span class="chip">人道准入</span><span class="chip">中东</span></div>
+  <p class="summary"><b>内容提要</b>　报告10-22发布（经ReliefWeb于10-23上网）。国际移民组织（IOM）流离监测矩阵（DTM）发布的中东及周边流动周报显示，也门西海岸冲突升级带来的新增流离与黎巴嫩的回返潮同时发生，叙利亚仍是区域流动的主要汇入端。也门西海岸9月初冲突升级后流离加剧，6月7日至10月19日记录约25.87万名新增流离者，多数被塔伊兹与拉赫季两省收容；截至10月17日，3836名也门人抵达吉布提，报告称系逃离安全局势恶化。黎巴嫩截至9月29日仍有32.92万人在618个乡级单位内流离，较上一报告期下降3%；同期已登记回返者87.72万人，环比增加1%。进入叙利亚的跨境流动持续，截至10月19日累计记录91.7万人次。报告同时指出，伊朗境内基础服务与基础设施中断持续，海运与航空限制影响人员流动与人道准入，但伊朗境内人口移动仍属本地化、临时性与经济驱动，未见大规模流离迹象。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>这份10月22日发布的流动周报，是国际移民组织流离监测矩阵在中东危机背景下持续更新的系列产品之一。它的价值不在预测，而在把分散于多国的登记与流动监测数据放进同一时间轴，使跨境与境内流离的相对规模可比较。
+
+也门是本期压力最集中的一段。西海岸9月初冲突升级后，流离在极短时间内放大：6月7日至10月19日记录约25.87万名新增流离者，多数进入塔伊兹与拉赫季。由于两省本身已承载大量既有流离人口，新增者往往进入资源已被摊薄的安置点与收容社区。报告同时记录了向外的一支：截至10月17日，3836名也门人抵达吉布提，报告判断其动机是逃离恶化的安全局势。
+
+黎巴嫩的读数呈现「回流与流离并存」。截至9月29日，全国618个乡级单位内仍有32.92万人处于流离状态，较9月15日的上一报告期下降3%；同期登记回返者达87.72万人，环比增加1%。回返规模远大于仍在流离的人数，但回返并不等于复原——报告未评估回返地住房与服务的可及性，这一缺口在解读时应予保留。
+
+叙利亚方向仍是区域流动的主要汇入端。截至10月19日，跨境进入叙利亚的流动累计记录91.7万人次，数据来源包括DTM叙利亚团队，并与边境当局、伊拉克边境口岸委员会及巴基斯坦当局协同。伊朗方面，报告判断人道形势持续受反复升级影响，基础服务与基础设施中断未解，海运与航空限制同时压制人员流动与人道准入；但报告明确指出，伊朗境内人口移动仍属本地化、临时性与经济驱动，未见大规模流离迹象。
+
+方法论上需注意三点。第一，DTM数据基于登记与关键信息人报告，覆盖不等于全量，同一家庭重复流动可能被多次记录，因此应读作流动事件而非独立个体。第二，各国的数据截止日期并不统一（10月17日、9月29日、10月19日），跨段比较需谨慎。第三，报告以周为节奏更新，单期读数不宜直接外推为趋势，需连续多期观察。对关注中东流离的研究者与救援机构而言，这份周报的实用之处在于提供了一个口径一致、可连续追踪的基线。</p></details>
+  <div class="meta">
+    <span>来源：<b>国际移民组织（IOM）流离监测矩阵（DTM），经 ReliefWeb 转载</b></span>
+    <span>推荐理由：国际组织一手监测数据报告，覆盖也门、黎巴嫩、叙利亚、伊朗多个流离节点，口径与截止日期标注清晰，具连续可比性；但为登记型监测数据、非全量统计，且各国截止日不统一，故评4分。</span>
+    <a href="https://reliefweb.int/report/iran-islamic-republic/escalation-middle-east-and-beyond-mobility-report-22-october-2026" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+    <div class="sec-foot"><a href="#sec-research" class="collapse-btn" data-collapse="sec-research">▴ 收起本板块</a></div>
+  </div>
+</details>
+  <footer>全球移民与边境安全态势感知日报 · 生成时间 2026-10-30 00:03 · 数据仅供研究参考，观点以原文为准</footer>
+</div>
+<button id="toTop" title="回到顶部">↑</button>
+<script>
+(function() {
+  var secs = Array.prototype.slice.call(document.querySelectorAll('details.section'));
+  // 手风琴：展开一个板块时，自动收起其余板块（解决移动端上方板块无法收起的问题）
+  secs.forEach(function(d) {
+    d.addEventListener('toggle', function() {
+      if (d.open) {
+        secs.forEach(function(o) { if (o !== d) o.open = false; });
+        // 收起上方板块后页面高度变化，滚动对齐当前板块头部
+        setTimeout(function() {
+          var top = d.getBoundingClientRect().top + window.pageYOffset - 52;
+          window.scrollTo({ top: top, behavior: 'smooth' });
+        }, 60);
+      }
+    });
+  });
+  // 锚点跳转（导航条/Top榜/收起按钮）：自动展开目标板块，或收起当前板块
+  document.addEventListener('click', function(e) {
+    var a = e.target.closest('a[href^="#"]');
+    if (!a) return;
+    var id = a.getAttribute('href').slice(1);
+    var el = document.getElementById(id);
+    if (!el) return;
+    e.preventDefault();
+    if (a.hasAttribute('data-collapse')) {
+      el.open = false;
+      var top = el.getBoundingClientRect().top + window.pageYOffset - 52;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+      return;
+    }
+    var sec = el.closest ? (el.matches('details.section') ? el : el.closest('details.section')) : null;
+    if (sec && !sec.open) sec.open = true;
+    setTimeout(function() {
+      var top = el.getBoundingClientRect().top + window.pageYOffset - 52;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+    }, 60);
+  });
+  // 默认展开第一个板块（桌面宽屏），手机端全部收起以便总览
+  if (window.innerWidth >= 768 && secs.length) secs[0].open = true;
+  // 回到顶部按钮
+  var btn = document.getElementById('toTop');
+  window.addEventListener('scroll', function() {
+    btn.style.display = window.pageYOffset > 600 ? 'block' : 'none';
+  });
+  btn.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+})();
+</script>
+<script>
+(function(){
+  var TODAY = [{"a": "item-global_migration-1", "t": "英国宗教类签证新规生效", "e": "UK Immigration Rules changes for Minister of Religion and Religious Worker take effect on 29 October 2026", "s": "全球移民管理热点", "r": 3, "k": ["英国", "移民规则", "宗教工作者", "牧师签证", "担保方", "签证制度", "内政部"], "src": "英国内政部（Home Office）《移民规则》修订声明 HC 584", "u": "https://www.gov.uk/government/publications/statement-of-changes-to-the-immigration-rules-hc-584-3-september-2026/explanatory-memorandum-to-the-statement-of-changes-in-immigration-rules-hc-584-3-september-2026-accessible", "sum": "政策9-03公布、10-29生效。英国《移民规则》修订声明 HC 584（2026年9月3日提交议会）中涉及宗教类签证的条款于10月29日生效，涉及 T2 牧师（Minister of Religion）与临时工作—宗教工作者（Religious Worker）两条路径。据内政部解释性备忘录，牧师路径取消原有6年总期限上限，单次许可最长3年，仍可通往永居；宗教工作者路径最长2年、不直接通往永居，原「居民劳动力审查」要求被取消，改为岗位资格条件：岗位属超编增设、申请人为修会成员且主要居于修会、或申请前6个月内已在与担保机构同属一个信仰组织的海外机构从事宗教工作。两类路径均调整了申请人不受最低工资保障时的生活费与住宿担保要求，须由 A 级担保方在担保证书上承诺。10月29日前提交的申请一般按10月28日有效的规则审理。", "b": "英国政府9月3日向议会提交的《移民规则修订声明》HC 584 中，涉及宗教类签证的条款自10月29日起生效。修订覆盖附录 T2 牧师（Minister of Religion）与临时工作—宗教工作者（Religious Worker）两条路径。\n\n牧师路径方面：单次许可上限为3年，原规定的6年总期限被删除，符合条件者可分段续期，但并非一次申请即获无限期许可；该路径仍可通往永居；路径描述明确涵盖牧师、传教士及其他以牧职为主的人员，以及修会成员，修会成员可从事教学、媒体制作、家务或行政等以非牧职为主的工作。\n\n宗教工作者路径方面：仍为临时路径，最长2年，不直接通往永居，配偶与子女可随行。岗位须以非牧职宗教工作为主，不得包含主持礼拜、讲道等牧师职责；原有的本地招聘测试被替换为三项择一条件——岗位属担保机构常规编制之外的增设岗位、申请人主要居于修会并为其成员、或申请前6个月内在与担保机构有关联的同一宗教组织的海外机构从事宗教工作并提供证明信。\n\n财务要求方面：对不适用国家最低工资的岗位，担保方须在担保证书上承诺在许可期内为申请人及其合资格家属提供生活保障与住宿，申请人不再需要满足1270英镑个人资金证明；适用最低工资的岗位仍按原规定核查资金。\n\n过渡安排方面：10月29日前递交的申请一般按10月28日有效的规则审理；若担保证书在10月29日前签发而申请在此后递交，担保方可能需要补充担保说明。"}, {"a": "item-global_migration-2", "t": "沙巴遣返八百名菲律宾籍被羁者", "e": "Sabah Immigration deports 800 Filipino detainees, six more repatriation exercises planned", "s": "全球移民管理热点", "r": 3, "k": ["马来西亚", "沙巴", "遣返", "菲律宾", "拘留营", "移民局", "超容"], "src": "马来西亚沙巴州移民局（据《星报》报道）", "u": "https://www.thestar.com.my/news/nation/2026/10/29/sabah-immigration-deports-800-filipino-detainees-six-more-repatriation-exercises-planned", "sum": "事件10-29、报道10-29。马来西亚沙巴州移民局10月29日在山打根港执行遣返，将800名菲律宾籍被羁押人员送返菲律宾三宝颜市，乘坐 MV Antonia 1。沙巴移民局局长西蒂·萨利哈（Sh. Sitti Saleha Habib Yussof）称，被遣返者包括590名成年男性、88名成年女性、64名男童和58名女童，来自斗湖、山打根与吧巴三处移民拘留营，年龄最小16天、最大83岁，儿童均由父母或监护人陪同。连同10月27日遣返的269人，本周已送回1069人。她表示，接下来每周将再执行一次约800人的大规模遣返，共六轮，以缓解拘留营超容。今年沙巴已遣返各国籍被羁押者7490人，其中菲律宾籍5357人、印尼籍1789人。", "b": "马来西亚沙巴州移民局10月29日从山打根港执行大规模遣返，800名菲律宾籍被羁押人员乘坐 MV Antonia 1 返回菲律宾三宝颜市。沙巴移民局局长西蒂·萨利哈在现场表示，被遣返者构成为590名成年男性、88名成年女性、64名男童与58名女童，分别来自斗湖、山打根和吧巴移民拘留营；年龄跨度自16天至83岁，儿童均由父母或监护人陪同。\n\n她称，该局计划在后续行动中每周遣返约800名菲律宾籍被羁押者，共六轮，从本周开始持续执行，目的是避免沙巴各拘留营超容。连同10月27日已送返的269人，本周遣返总数达1069人。\n\n数据显示，今年以来沙巴已遣返各国籍被羁押者7490人，其中菲律宾籍5357人、印度尼西亚籍1789人、巴基斯坦籍139人、中国籍141人、越南籍29人，其他国家籍35人。\n\n西蒂·萨利哈表示，拘留营腾出的空间将使移民局及其他执法机构得以加强对无证移民的行动；她并促请各国使领馆加快签发旅行证件，以便被羁押者尽快回国。她提出的目标是，在执法机构移交或当事人服刑完毕后尽快送返，尽可能在一个月内完成；在使领馆协助下，其他国籍被羁押者可在进入拘留营一周内遣返。她同时提醒雇主确保所雇外籍劳工证件有效。就设施改善，她提到斗湖拘留营的升级工程因承包商延误尚未交付。"}, {"a": "item-global_migration-3", "t": "叙伊德利卜229户流离家庭返乡", "e": "Nearly 230 displaced families return home from northern Syria camps", "s": "全球移民管理热点", "r": 3, "k": ["叙利亚", "伊德利卜", "返乡", "流离失所", "营地", "重建", "无营地叙利亚"], "src": "叙利亚阿拉伯通讯社（SANA），引述叙紧急事务与灾害管理部", "u": "https://sana.sy/en/syria/2354364", "sum": "事件10-29、报道10-29。据叙利亚阿拉伯通讯社报道，10月29日一支载有229户流离失所家庭的队伍从叙利亚北部的营地出发，返回伊德利卜、哈马、霍姆斯、大马士革郊区与代尔祖尔五省的家园。行动由国家「无营地叙利亚」倡议委员会监督，叙紧急事务与灾害管理部团队沿途提供医疗服务并协调安全措施，同属执行第59号法令（聚焦受损地区重建与为返乡创造条件）的一部分。此前10月25日，已有220户从伊德利卜北部营地返回八省。伊德利卜乡村 Madinat al-Munawara 营地负责人苏韦德（Ahmed al-Suwaid）称，该营地家庭数已从1700户降至约1000户，滞留者多因无力修复受损房屋或另寻住所。", "b": "叙利亚阿拉伯通讯社10月29日自伊德利卜报道，一支载有229户流离失所家庭的队伍当日从叙利亚北部的营地出发，前往伊德利卜、哈马、霍姆斯、大马士革郊区与代尔祖尔五省的家园。\n\n报道称，行动由国家「无营地叙利亚」倡议委员会监督，叙紧急事务与灾害管理部负责执行；该部团队与其他机构合作，在途中提供医疗服务并协调安全措施。此次返乡也是落实第59号法令的一部分，该法令聚焦受损地区重建和为流离居民返乡创造条件。\n\n这是近期第二次同类行动。10月25日，已有220户家庭从伊德利卜北部营地返回八个省的社区，那次行动由伊德利卜省政府会同地方当局、联合国难民署、叙利亚红新月会及人道组织组织，返乡家庭获得援助和基本家用物资。\n\n报道同时呈现返乡的现实制约：伊德利卜乡村 Madinat al-Munawara 营地负责人苏韦德本周早些时候表示，该营地家庭数已从1700户降至约1000户；仍滞留者多因缺乏资金修复受损房屋或另觅住所，而已返乡者通常是具备重建或修复能力家庭。营地居民仍面临生活条件困难和基本物资短缺，持久返乡因此仍受制约。"}, {"a": "item-global_migration-4", "t": "马移民局称持续清查外侨聚居区", "e": "JIM To Continue Crackdown On Illegal Foreigners' Settlements And Businesses - DG", "s": "全球移民管理热点", "r": 2, "k": ["马来西亚", "移民局", "执法行动", "无证外侨", "聚居区", "网络诈骗", "举报"], "src": "马来西亚移民局（据马新社报道）", "u": "https://www.bernama.com/tv/news.php?id=2627465", "sum": "事件10-29、报道10-29。马来西亚移民局总监扎卡里亚·沙阿班（Zakaria Shaaban）10月29日在布城记者会上表示，移民局不会停止对违反移民法外国人的执法，范围包括被指形成「聚居区」的外国人居住地及其经营活动集中的商业场所，并将在全国持续加强；行动同时针对网络诈骗集团与违法商业活动。他称今年几乎每天都有逮捕和执法行动，但以不影响行动为由拒绝披露当前重点地点。他呼吁公众在向当局举报前不要先在网上散布信息，并以彭亨珍德拜（Janda Baik）案例说明：相关信息在网络流传后，执法人员到场时场所已空，证据也可能被销毁。他并强调社区配合对后续有效执法很重要。", "b": "马来西亚移民局总监扎卡里亚·沙阿班10月29日在布城记者会上表示，移民局不会停止对违反移民法的外国人的执法行动，包括被指形成「聚居区」的外国人居住区域，以及外国人经营活动集中的商业场所。\n\n他说，随着今年逮捕与行动数量增加，全国范围的执法行动将持续加强；行动不只针对外国人居住地，也涉及网络诈骗集团和违反移民法的商业活动。他称，只要属于马来西亚移民局管辖范围，执法就不会止于某一处；无论涉及安置、网络诈骗集团还是商业活动，都会持续加强，今年几乎每天都有逮捕和行动。\n\n对于当前重点监控地点，他表示不能披露，以免影响执法。他并提醒公众，在向当局举报前不要在网络上散布疑似违法外国人的活动信息，因为提前曝光可能导致目标人物逃离、增加执法难度并为销毁证据创造机会。\n\n他以彭亨珍德拜（Janda Baik）事件为例：相关信息在媒体和网络流传后，执法人员赶到时场所已空。他因此呼吁公众先安静地把信息提供给移民局，不要提前公布或传播，否则到场时人员可能已离开，证据也可能被销毁。他强调，社区合作对确保每条信息都能转化为有效执法行动很重要。当日他另主持了移民局级别的全国体育日活动。"}, {"a": "item-global_migration-5", "t": "日本否认承诺引进十万孟籍劳工", "e": "Japan denies deal to accept 100,000 Bangladeshi workers, says viral claims are false", "s": "全球移民管理热点", "r": 2, "k": ["日本", "孟加拉国", "劳工引进", "配额", "合作备忘录", "海外就业", "信息核实"], "src": "日本外务省外务报道官北村俊博（据 Moneycontrol 报道）", "u": "https://www.moneycontrol.com/world/japan-denies-deal-to-accept-1-lakh-bangladeshi-workers-says-viral-claims-are-false-article-14063760.html", "sum": "事件10-29、报道10-29。日本外务省外务报道官北村俊博（Kitamura Toshihiro）10月29日在社交平台发文，否认日本政府同意接收10万名孟加拉国劳工，称相关说法不实，10月27日日孟首脑会谈的讨论中亦不存在这一内容。此番澄清针对孟加拉国总理访日、在东京会谈后网络流传的大规模招工说法。据报道，日方对10月27日会谈的表述为加强经济合作、投资、互联互通与地区安全，日本企业对孟投资未来五年预计约1万亿日元、预计创造约20万个就业岗位。『10万』一说源自2025年5月日本商界提出五年接纳至少10万名孟加拉国劳工的计划，以及孟方每年输送10万人的目标；两国10月17日签署的就业与技能发展合作备忘录定于2027年4月1日启动招募，初始期五年、可再延五年，未设每年10万人的强制配额。", "b": "日本外务省外务报道官北村俊博（Kitamura Toshihiro）10月29日在社交平台发文，否认日本政府同意接收10万名孟加拉国劳工。他表示，近期网络帖文称日本政府同意接纳10万名孟加拉国劳工，这一说法不实，10月27日日孟首脑会谈的讨论中也不存在相关内容，并请公众查阅外务省网站公布的会谈信息。\n\n该澄清出现在孟加拉国总理访日、与日本首相在东京会谈之后。据报道，日方对10月27日会谈的官方表述为：双方同意加强经济合作、投资、互联互通与地区安全；日本企业对孟加拉国的民间投资未来五年预计达到约1万亿日元，预计创造约20万个就业岗位；双方并以『共创繁荣的孟加拉湾产业增长带』新框架推进相关合作。\n\n报道追溯称，『10万』这一数字来自更早的表述：2025年5月，日本商界人士在东京一场人力资源研讨会上宣布，计划在五年内接纳至少10万名孟加拉国劳工，会上签署了两份涉及孟加拉国劳务机构与日本机构的谅解备忘录。孟加拉国方面亦提出每年向日本输送10万名劳工的目标，但报道强调这属于其本国规划，并非日方承诺。\n\n报道并指出，两国于2026年10月17日签署就业与技能发展合作备忘录，为招募、劳工保护与技能培养提供框架；招募定于2027年4月1日启动，初始期五年、期满可再延续五年。该备忘录并未设定每年10万人的强制配额。日方此次澄清，正是要把双边就业与技能合作框架，与『峰会同意接收10万劳工』这一具体说法区分开来。"}, {"a": "item-border_security-1", "t": "英人蛇集团21人被判逾84年", "e": "Gang jailed after charging migrants $1,800 to be smuggled from UK to France", "s": "全球边境安全热点", "r": 4, "k": ["英国", "偷渡集团", "英吉利海峡", "国家打击犯罪局", "人口贩运", "判刑", "法国"], "src": "英国国家打击犯罪局（NCA），经阿联酋《国民报》报道", "u": "https://www.thenational.ae/news/uk/2026/10/29/gang-jailed-after-charging-migrants-1800-to-be-smuggled-from-uk-to-france", "sum": "事件10-29、报道10-29。英国国家打击犯罪局（NCA）侦破的一个21人偷渡集团近日系列宣判，累计刑期超过84年。该集团向主要来自孟加拉国、印度、巴基斯坦以及部分尼泊尔籍人员每人收取1800美元，用小客车将其从伦敦送至肯特郡，再由受雇货车司机经英吉利海峡渡轮运入法国，以规避欧盟边检、在欧盟非法务工。这些人多持合法签证入境英国。NCA在2025年7月至2026年1月间拦截10次运送，共拘留196名偷渡者。集团头目舒哈尔·艾哈迈德（Shuhal Ahmed，44岁）认罪，被判8年半；其副手苏赫尔·艾哈迈德（26岁）被判7年；接载司机罗比乌尔·伊斯兰（50岁）被判5年；负责联络司机的罗马尼亚籍拉卡图斯（54岁）被判6年。", "b": "英国国家打击犯罪局侦破的一起英法方向人口偷渡案完成系列宣判。据《国民报》10月29日报道，涉案集团共21人，累计刑期超过84年。\n\n作案模式为：偷渡者主要来自孟加拉国、印度和巴基斯坦，另有部分尼泊尔籍人员，每人支付1800美元；他们先持合法签证进入英国，再由集团用小客车从伦敦送至英格兰东南部肯特郡，与受雇的货车、厢式车司机接头，随后经英吉利海峡渡轮进入法国，以规避欧盟边检、在欧盟境内非法工作。\n\nNCA对该网络实施监控，掌握10次试图将人员运出英国的行程证据，这些行程在2025年7月至2026年1月间被拦截，共196名偷渡者被拘留。侦查中还取得工业园接头、夜间人员挤入货车车厢等监控与热成像画面。\n\n判刑方面：集团头目舒哈尔·艾哈迈德（44岁）承认偷渡相关罪名，被判8年半，为最重刑期；其副手苏赫尔·艾哈迈德（26岁）负责向偷渡者收取1800美元费用并支付出租车司机送人至肯特，经审理被判7年；小型客车司机罗比乌尔·伊斯兰（50岁）负责运送并组织其他司机，认罪后被判5年；罗马尼亚籍的尼库索尔·拉卡图斯（54岁）负责联络愿意收钱运人的重型货车与厢式车司机，经审理被判6年。组织者来自伦敦，司机另有罗马尼亚与北马其顿籍。\n\nNCA高级调查官约翰·特纳（John Turner）称，该案使这一大型偷渡网络从组织者到执行司机被整体瓦解；他警告，无论向哪个方向运送人员过海峡，被查获的可能性都已显著上升。报道并指出，英国脱欧后成为偷渡者规避欧盟边检的中转站，此类反向偷渡业务近年增长。"}, {"a": "item-border_security-2", "t": "泰缅口岸查获274万粒冰毒片", "e": "Mae Sai customs seizes 2.74m meth pills hidden in furniture", "s": "全球边境安全热点", "r": 4, "k": ["泰国", "缅甸", "湄赛口岸", "毒品走私", "冰毒", "海关", "跨境犯罪"], "src": "泰国海关总署湄赛海关（据时事社英文稿报道）", "u": "https://jen.jiji.com/jc/eng_agt?g=nation&k=20261029NATION-40072895", "sum": "事件10-29、报道10-29。泰国湄赛海关通报，10月29日在清莱府湄赛县泰缅友谊一号桥口岸查获毒品。一辆自缅甸大其力入境的缅甸牌照小型四轮货车载有家具与电器，关员因坐垫重量异常起疑，经X光扫描并在二号桥海关查验点开箱，从床垫与沙发夹层中查出约274万粒甲基苯丙胺片剂，估值约1.37亿泰铢，另有458套电子烟弹。24岁缅籍男司机与46岁缅籍女乘客被捕，两人供称受一名缅甸熟人雇佣，以10万泰铢报酬将货物运往湄赛一家百货分店。案件依2017年海关法与2021年毒品法典移送湄赛警局，多部门联合行动。", "b": "泰国湄赛海关10月29日通报一起口岸毒品走私案。据时事社报道，关员在清莱府湄赛县泰缅友谊一号桥口岸检查一辆自缅甸大其力入境的缅甸牌照小型四轮货车，车上载有家具与电器。\n\n因床垫、沙发重量明显异常，当局将车辆与货物移至二号桥海关查验点作X光扫描，随后开箱查验，在床垫与沙发结构内发现用蓝色塑料袋包装、按每捆1万粒分装的片剂共274捆，合计约274万粒甲基苯丙胺片剂（俗称雅巴）。海关引述现场试剂检测结果称成分为甲基苯丙胺，估值约1.37亿泰铢。关员另查获458套电子烟弹，同样藏于床垫与沙发内部。\n\n被捕者为24岁缅籍男司机与46岁缅籍女乘客。据媒体报道，两人供称受一名缅甸熟人雇佣，以10万泰铢报酬将货物运至湄赛一家百货分店。\n\n行动由湄赛海关会同第三区海关管制部门、海关执法局侦查缉私第三处，以及军方帕孟部队下属特遣队第三骑兵连、清莱移民检查站、湄赛警局、湄赛县行政部门共同实施；参与的禁毒力量包括缉毒警察第三局第二分队、毒品管制委员会禁毒执法局情报与缉毒行动第二分队，以及陆军作战中心情报处禁毒情报中心。当局依2017年海关法关于未完成海关手续进口货物的条款、以及2021年毒品法典关于输入毒品的条款立案，两名嫌疑人及物证已移交湄赛警局继续侦办，以追查其他同伙。"}, {"a": "item-border_security-3", "t": "泰军令严打跨境电诈与偷渡", "e": "Thailand's armed forces chief orders stepped-up action against cross-border scam networks and migrant smuggling", "s": "全球边境安全热点", "r": 2, "k": ["泰国", "跨境电诈", "人口贩运", "边境管控", "军队", "毒品", "指挥中心"], "src": "泰国皇家军队通报，经泰国中文社发布、腾讯新闻转载", "u": "https://news.qq.com/rain/a/20261029A08UB200", "sum": "事件10-29、报道10-29。泰国武装部队最高司令乌克里斯·汶塔农在10月29日的军队指挥官会议上，要求各军种与警察总署全方位应对安全威胁，特别强调加大对毒品和诈骗团伙的打击。总参谋长纳塔蓬·帕劳胶当日在曼谷通报称，10月30日将召开边境安全威胁防范与解决指挥中心例行会议，议题包括打击毒品、跟进跨国犯罪特别是诈骗团伙和人口贩运进展。他表示，边境商品管控依据1981年《边境商品管制皇家法令》，目前化学品、前体物质、手机SIM卡等70多类商品受管制，出口须经正式口岸；边境指挥中心、检查站、拦截点与筛查措施将持续推进。他承认相关网络已转移至邻国内陆，就中国游客经泰国被送往缅甸边境问题承认存在漏网情况。", "b": "泰国武装部队最高司令乌克里斯·汶塔农10月29日主持召开军队指挥官会议，要求各军种和警察总署做好全方位应对安全威胁的准备，并特别强调加大对毒品和诈骗团伙的打击力度。\n\n泰国皇家军队总参谋长纳塔蓬·帕劳胶当日在曼谷泰军司令部通报会议结果时表示，10月30日将召开边境安全威胁防范与解决指挥中心例行会议，主要议题为打击毒品，以及跟进跨国犯罪特别是诈骗团伙和人口贩运的处置进展。\n\n关于边境商品管控，纳塔蓬称依据1981年《边境商品管制皇家法令》，目前有化学品、前体物质、手机SIM卡等70多类商品受管制，出口须经正式边境口岸。他表示，边境指挥中心、检查站、拦截点和筛查措施将持续推进，例行会议将进一步细化相关措施。\n\n他同时承认，尽管此前开展过清剿行动，相关网络已转移至邻国内陆地区；泰方能在本国范围内做的，是整合执法人员与外交部门力量，并提高本国民众的防范意识。就中国游客经泰国被送往缅甸边境的问题，纳塔蓬表示泰方正在努力处理，并承认存在漏网情况，需要各方共同协助；他称在边境安全威胁防范与解决指挥中心架构下，已有专门警察部门负责此事。\n\n此次会议为2027财年首次军队指挥官会议，另讨论了泰军向现代化军队转型的路径，涵盖陆、空、海、太空、网络和电磁频谱六个作战维度，以及联合情报、远程精确打击和反无人机能力建设。乌克里斯在会上感谢各军种与警察总署参与曼谷及周边地区洪灾救援。"}, {"a": "item-border_security-4", "t": "阿富汗解救127名被贩运者", "e": "Afghan police rescue 127 people from trafficking attempt in western region", "s": "全球边境安全热点", "r": 3, "k": ["阿富汗", "尼姆鲁兹", "人口贩运", "非法越境", "警方", "边境管控", "解救"], "src": "阿富汗尼姆鲁兹省警方（据新华社报道）", "u": "http://www.chinaview.cn/20261029/161006a346e741adaaff58b786ebe7f8/c.html", "sum": "事件10-28、报道10-29。据新华社报道，阿富汗西部尼姆鲁兹省警方10月28日解救127名疑似被人口贩运者带离国境的人员，并缴获5辆用于运送他们的车辆。该省警方发言人库德拉特（Mawlawi Gul Mohammad Qudrat）10月29日表示，嫌疑人企图经尼姆鲁兹将这些人非法送出阿富汗；警方不会允许任何人非法越境，将对涉人口贩运者采取严厉措施。报道称，上周警方在同一省份还阻止了一起贩运89人的企图，逮捕3名嫌疑人。报道并指出，在贫困与失业背景下，不少阿富汗人仍以非法途径出境寻找海外工作机会。", "b": "阿富汗西部尼姆鲁兹省警方10月28日采取行动，解救127名疑似被人口贩运团伙带离国境的人员。该省警方发言人库德拉特10月29日向新华社披露上述情况。\n\n库德拉特称，嫌疑人当时正企图经尼姆鲁兹把这些人员非法送出阿富汗；警方在行动中另缴获5辆用于运送人员的车辆。他表示，警方不会允许任何人非法越境，并警告将对参与人口贩运者采取严厉措施。他未提供更多细节。\n\n报道称，上周警方在同一省份还阻止了一起贩运89人的企图，并逮捕3名嫌疑人。\n\n报道指出，在贫困与失业背景下，许多阿富汗人仍以非法方式离境，前往海外寻找就业机会。"}, {"a": "item-border_security-5", "t": "波兰边防破伪造学历证件团伙", "e": "Poland's Border Guard dismantles ring selling fake school certificates to foreign nationals", "s": "全球边境安全热点", "r": 3, "k": ["波兰", "边防卫队", "伪造证件", "居留许可", "学生身份", "有组织犯罪", "乌克兰"], "src": "波兰边防卫队（Straż Graniczna）比耶什恰迪地区分局，经 PolandDaily24 报道", "u": "https://polanddaily24.com/fake-documents-for-migrants-criminal-group-dismantled/global-politics/75989", "sum": "事件10-29、报道10-29。波兰边防卫队（Straż Graniczna）10月29日通报，已瓦解一个为在波外国人伪造学历证明、以助其取得居留与工作许可的有组织犯罪团伙，目前共23人被起诉，其中乌克兰籍19人、摩尔多瓦籍3人、格鲁吉亚籍1人。该团伙自2022年6月至2025年底在全国活动，提供5所乌克兰高校的在读或学历证明及2所波兰大专院校的学生证与证明，单份或成套文件收费230至800兹罗提，并附波兰语翻译。文件主要用于向热舒夫、罗兹等地省级机关申请临时居留与工作许可，持学生身份者还可享受26岁以下免缴部分社保等优惠。案件由热舒夫地区检察院监督侦查，仍在进行。", "b": "波兰边防卫队10月29日通报，已瓦解一个以伪造学历证明牟利、帮助在波外国人办理居留与工作许可的有组织犯罪团伙，迄今共23人被起诉。\n\n据比耶什恰迪地区分局发言人扎凯拉日（Piotr Zakielarz）上尉当日说明，团伙成员组织、制作并出售证明文件，内容为在乌克兰高校就读或在波兰大专院校注册；涉及5所乌克兰高等院校，并附有波兰语翻译。此外还提供位于彼得库夫－特雷布纳尔斯基的两所波兰大专院校的证明与学生证。单份文件或成套文件收费230至800兹罗提。\n\n这些文件被乌克兰、摩尔多瓦、白俄罗斯和格鲁吉亚籍在波务工人员用于向热舒夫等省级机关申请临时居留与工作许可，据调查还涉及其他省份的机关。文件对26岁以下人员尤为重要——学生身份在法定情形下可免除缴纳社保义务，并可用于居留与就业合法化程序。案件线索由派驻该机关的边防卫队联络官发现。\n\n侦办过程为：2025年底首次抓捕，在普鲁什奇格但斯基、日拉尔杜夫、华沙、克拉科夫等地搜查6处场所，逮捕3名乌克兰籍人员，其中一名42岁男子被指为团伙头目，当场查获8.7万兹罗提现金，以及手机、存储设备、电脑、乌克兰高校印章和已制作完成的入学证明；该男子被控领导为协助外国人滞留而制作伪造证件的有组织犯罪集团，2025年12月法院裁定对其审前羁押，2026年8月改为非羁押措施，包括5万兹罗提保释金、禁止出境和扣押护照。据调查，约120万兹罗提团伙收益流入其银行账户。2026年5月另逮捕4名乌克兰籍嫌疑人，上周再逮捕6名外国人，罪名涉及使用伪造文件。\n\n被起诉的23人中包括团伙组织者与在热舒夫、罗兹省机关使用伪造证明的外国人。案件由热舒夫地区检察院监督，仍在侦查，不排除进一步抓捕。"}, {"a": "item-border_security-6", "t": "孟边防在切尼达截九名越境者", "e": "BGB detains 9, including 3 Indians, at Maheshpur border in Jhenaidah", "s": "全球边境安全热点", "r": 2, "k": ["孟加拉国", "印度", "边防", "非法越境", "界桩", "拦截", "立案"], "src": "孟加拉国边防局（BGB）第58营（据《每日星报》报道）", "u": "https://www.thedailystar.net/news/crime-justice/news/bgb-detains-9-including-3-indians-maheshpur-border-jhenaidah-4310551", "sum": "事件10-29、报道10-29。孟加拉国边防局（BGB）10月29日凌晨在切尼达（Jhenaidah）马赫什普尔边境拦截9人，其中3人为印度籍、6人为孟加拉国籍，当时他们正试图经非法路线越境进入印度。据第58营通报，拦截地点位于61-R号界桩以内约300码的哈尔达尔帕拉村，属斯里纳特普尔前哨辖区。3名印度籍人员为西孟加拉邦纳迪亚县居民，包括一名27岁女子、一名33岁男子及其14岁女儿，据称此前赴孟参加杜尔迦节探亲，返印时走非法路线。6名孟籍人员来自戈巴尔甘杰、巴里萨尔、皮罗杰布尔与切尼达等地。9人经身份核实并立案后已移交马赫什普尔警局。", "b": "孟加拉国边防局10月29日凌晨在西南部切尼达县马赫什普尔边境地区拦截9人，指其试图经非法路线越境进入印度。\n\n据第58营（马赫什普尔营）通报，拦截地点位于61-R号界桩以内约300码的哈尔达尔帕拉村，属斯里纳特普尔边境前哨辖区。\n\n9人中3人为印度籍，分别为西孟加拉邦纳迪亚县霍森普尔村27岁女子希瓦妮·辛格（Shivani Singh）、同县索纳塔拉村33岁男子德布库马尔·比斯瓦斯（Debkumar Biswas）及其14岁女儿。边防官员称，三人此前赴孟加拉国探亲并参加杜尔迦节活动，返印时选择了非法路线。\n\n其余6人为孟加拉国籍，分别来自戈巴尔甘杰县比什努普尔村与杜穆里亚村、巴里萨尔县拉吉哈尔村、皮罗杰布尔县加纳克帕拉村，以及切尼达县阿南塔普尔村与达卡蒂亚北帕拉村。\n\n第58营助理主任蒙希·伊姆达杜尔·拉赫曼（Munshi Imdadur Rahman）表示，被拦截人员身份已核实，相关案件已立案，9人随后被移交马赫什普尔警局处理。"}, {"a": "item-border_security-7", "t": "越老边防会谈 累计处理558起", "e": "Quang Tri Border Guard and Kham Muon Police handle 558 violations", "s": "全球边境安全热点", "r": 2, "k": ["越南", "老挝", "边防", "边境管理", "跨境犯罪", "会谈", "联合演练"], "src": "越南广治省边防部队指挥部（据《劳动报》报道）", "u": "https://news.laodong.vn/dttg/tin-tuc/bien-phong-quang-tri-va-cong-an-kham-muon-xu-ly-558-vu-vi-pham-1791323.html", "sum": "事件10-29、报道10-29。越南广治省边防部队指挥部与老挝甘蒙省公安10月29日举行年度会谈，评估边境管理与犯罪防控协作。双方通报称，近期协同接收18名被不法分子诱骗、煽动的人员返乡；发现并逮捕2名涉非法持有毒品的老挝籍人员；共处理558起违法行为（通报未明确起算时点，为一段时期累计），立案起诉44起、56人；2026年联合举行打击持械跨境毒品贩运犯罪的演练。双方商定继续加强信息交换与边境巡逻管控，重点打击毒品、人口贩运、走私、非法运输武器爆炸物、非法出入境与网络诈骗，并在茶洛—纳炮国际口岸与卡隆—农马副口岸加强检查。", "b": "越南广治省边防部队指挥部与老挝甘蒙省公安10月29日举行2026年度会谈，评估双方在边境管理与保护、维护治安秩序、防范和打击犯罪方面的协作成果，并商定下一阶段合作内容。\n\n据广治省边防部队指挥部通报，过去一段时间双方主动交换信息、协同处置边境地区治安案件：双方协同接收18名被不法分子诱骗、煽动的人员并帮助其返回家乡；发现并逮捕2名涉非法持有毒品的老挝籍人员；共处理558起违法行为，立案起诉44起、56人。双方还在2026年联合组织演练，模拟打击持械跨境贩运毒品的犯罪活动。\n\n除执法协作外，双方在边境地区开展民生项目，包括助学与照明工程，其中一项计划资助13名家庭困难的老挝学生继续学业。\n\n会谈中，双方同意继续加强信息交换，协同巡逻与管控；重点打击毒品、人口贩运、走私、非法运输武器与爆炸物、非法出入境以及网络诈骗等犯罪；在茶洛—纳炮（Cha Lo–Na Phau）国际口岸和卡隆—农马（Ca Roong–Noong Ma）副口岸加强检查管控；协同抓捕通缉对象、依法移交违法人员。双方还商定加强宣传动员民众保护边界线与界碑，重视为老挝边防力量开展业务技能培训，并保持年度会谈机制。会谈结束时，双方代表团签署协作备忘录。"}, {"a": "item-usa-1", "t": "移民团体起诉移民局隐匿在押者关押地", "e": "Immigrant legal groups sue ICE for hiding locations of detained people", "s": "美国移民与边境管理", "r": 4, "k": ["美国移民执法", "在押者定位系统", "最终递解令", "联邦诉讼", "行政程序法", "律师会见权", "信息自由法"], "src": "美国全国移民法律中心（NILC）", "u": "https://www.nilc.org/press/immigrants-rights-organizations-file-lawsuit-stop-ice-hiding-locations-detained-people/", "sum": "事件10-28、报道10-29。四家美国移民法律服务机构的代理律师团队于10月28日在马萨诸塞州联邦地区法院提起诉讼，挑战国土安全部（DHS）与移民与海关执法局（ICE）自今年9月起不再公开部分在押者关押地点的做法，案件名为「大波士顿法律服务处等诉马林」（Greater Boston Legal Services et al. v. Mullin）。起诉方称，ICE自2010年起通过「在押者在线定位系统」允许家属与律师按姓名、出生日期、出生国或A号码查询在押地点；约在9月15日前后，该局在无公开通知的情况下停止披露已被作出最终递解令者的关押地点，部分执法人员还被要求不得在电话中告知。美联社报道称，截至9月，这一变化影响逾1.6万名在押者，而当时移民与海关执法局在押总人数接近6.9万人。诉状主张该做法违反《行政程序法》、侵犯律师与当事人依第一修正案享有的沟通权，并指政府未依《信息自由法》公布政策细节。原告请求法院撤销该政策并申请暂停执行。", "b": "原告为四家长期提供移民法律援助的机构：大波士顿法律服务处（Greater Boston Legal Services）、里安移民中心（Rian Immigrant Center）、弗洛伦斯移民与难民权利项目（Florence Immigrant and Refugee Rights Project）以及阿米卡移民权利中心（Amica Center for Immigrant Rights）。代理律师团队包括全国移民法律中心（NILC）、全国移民项目、美国公民自由联盟（ACLU）及其马萨诸塞州分会，以及一家个人律师事务所。\n\n争议焦点是「在押者在线定位系统」（Online Detainee Locator System）。该系统自2010年前后上线，家属、律师与公众可凭姓名、出生日期、出生国或外国人登记号码查询某人是否在押及所在设施。起诉方称，约在9月中旬，DHS在未作公开说明的情况下，对已被作出最终递解令（final order of removal）的在押者停止披露关押地点，系统查询与电话询问均不再提供信息；美联社报道称涉及人数超过1.6万人。\n\n诉状提出三项主张：一是该政策武断反复，违反《行政程序法》；二是阻断律师与在押当事人之间的联系，侵害原告依第一修正案享有的权利；三是政府未依《信息自由法》公布政策内容。原告请求法院撤销该政策，并表示将很快提出暂停执行的动议。\n\n多份原告声明强调实务后果。大波士顿法律服务处执行主任杰奎琳·鲍曼（Jacquelynne J. Bowman）表示，政府让律师无法找到当事人，等于剥夺其抗辩机会；里安移民中心移民法律服务主任杰基·凯利（Jackie Kelley）称，找不到当事人就无法为其申请本可获得的救济。起诉方同时说明，持有最终递解令者仍可寻求重新开案、人身保护令等救济，但若无法接触律师与法院，这些途径在程序上难以启动。截至报道时，法院尚未就该案作出裁定，ICE与DHS也未就诉讼主张作出完整回应。"}, {"a": "item-usa-2", "t": "美国土安全部逾4万人资料外泄", "e": "Details of more than 41,000 DHS personnel leaked online", "s": "美国移民与边境管理", "r": 3, "k": ["美国国土安全部", "数据泄露", "移民执法", "海关与边境保护局", "单点登录", "执法者身份保护", "网络安全"], "src": "英国广播公司（BBC）报道，《印度时报》转载", "u": "https://m.timesofindia.com/world/us/trumps-dhs-hit-by-data-breach-as-hackers-expose-records-of-41000-employees/articleshow/135294676.cms", "sum": "事件10-28、报道10-29。英国广播公司（BBC）10月28日报道、《印度时报》10月29日转载，一个可检索的在线数据库公开了美国国土安全部（DHS）逾4.1万名雇员与承包商的资料，其中包括数千名从事移民与边境执法的人员。据报泄露内容包括姓名、工作地址、联系电话与岗位职责说明；按机构划分，逾2.1万人隶属海关与边境保护局（CBP），近6600人隶属移民与海关执法局（ICE），其余涉及国土安全调查局、联邦保护局与网络安全和基础设施安全局。自称「和平部」（Department of Peace）的组织称通过DHS使用的Okta单点登录服务取得数据；记者兼安全研究员迈娅·克兰乌（maia crimew）与泄露档案机构「分布式拒绝秘密」（DDoSecrets）将其整理为名为「冰镐」（Icepick）的数据库发布。DHS发言人称已获悉可能的泄露并正迅速处置；Okta表示未发现自身数据或系统被入侵。", "b": "这是近几周内美国政府机构第三次遭遇重大泄露或入侵。据BBC报道，泄露文件包含姓名、工作地址、工作电话与各人在所属机构承担的工作说明，除人员目录外，还涉及数十个此前未公开的行动代号、负责与参与行动的探员，以及工作中使用的部分技术工具，包括Cellebrite与Palantir相关产品。\n\n按机构分布，海关与边境保护局（CBP）人员逾2.1万人，占已公开名单的最大部分；移民与海关执法局（ICE）人员近6600人；其余记录涉及国土安全调查局（HSI）、联邦保护局（FPS）与网络安全和基础设施安全局（CISA）。各家媒体对ICE人数的统计略有出入，本条采用BBC的近6600人口径。\n\n「分布式拒绝秘密」联合创始人艾玛·贝斯特（Emma Best）称，发布目的不是整理一份DHS雇员总名录，而是以问责取代匿名，点名负责监管秘密行动、卧底行动、追查政府内部泄密者以及参与驱逐与移送项目的人员。自称「和平部」的组织则称，此次公布是对ICE执法行动的回应，并引述国土安全部长马克韦恩·马林（Markwayne Mullin）7月17日关于「加大力度」的表态。\n\nDHS发言人在给媒体的声明中称，该部已获悉可能存在的数据泄露，正迅速而有效地处置，并高度重视针对雇员与执法人员的安全威胁，将在有更多信息时对外通报。Okta方面称已知悉相关说法，但强调公司系统安全，没有证据显示其数据或系统遭到入侵。\n\nBBC指出，这是近几周内美国政府机构第三次遭遇泄露或入侵，此前联邦调查局（FBI）数据被「ShinyHunters」组织窃取，联邦选举委员会（FEC）网站也因疑似攻击短暂下线。执法人员身份信息公开引发安全担忧，一些前DHS官员对媒体称，此类暴露在该部历史上没有先例。"}, {"a": "item-usa-3", "t": "美移民执法局称拘捕数十名非法投票者", "e": "ICE says dozens arrested nationwide in voter fraud crackdown", "s": "美国移民与边境管理", "r": 3, "k": ["美国移民执法", "选民欺诈", "非公民投票", "驱逐后果", "中期选举", "国土安全部", "刑事指控"], "src": "美国移民与海关执法局（ICE）", "u": "https://www.ice.gov/news/releases/dozens-illegal-aliens-arrested-nationwide-voter-fraud-crackdown", "sum": "事件10-29、报道10-29。美国移民与海关执法局（ICE）10月29日发布通报，称已在全美与联邦、州及地方执法伙伴协同拘捕数十名涉嫌非法登记投票或投票的人员，并称其中多人已承认相关行为。通报列举了十余起个案，涉及索马里、柬埔寨、洪都拉斯、越南、古巴、墨西哥、尼加拉瓜、委内瑞拉、萨尔瓦多、危地马拉与德国等国公民，所称投票时间跨度从1992年联邦选举到2026年的选举，多数被指在2024年联邦选举中投票。代理ICE局长戴维·文特雷拉（David J. Venturella）称，这些拘捕是「细致、有条理调查」的结果，并强调美国选举必须依法进行。国土安全部长马克韦恩·马林称「美国选举只属于美国人」。通报未给出拘捕总数以外的统计，也未说明各案被控的具体罪名、受理法院或已审结案件数量，并称所列个案仅是「部分」在办调查。", "b": "通报以「数十名」作为唯一的总量表述，其余为个案举例。按媒体核对，通报正文实际点名14人，而通报自称将列出18起案例，两个数字存在出入，反映官方文本本身对案例数量的表述并不完全统一。被点名者包括：索马里籍的Aden Hassan Aden，被指在2020年联邦选举中非法投票，并有家暴、持有毒品与盗窃的定罪记录；柬埔寨籍的Phath Vorn，被指在1992年联邦选举中投票，曾有意图谋杀的攻击、持危险武器攻击等定罪；洪都拉斯籍的Darwin Yoel Zelaya-Orellana，被指在2026年某次联邦选举中投票；越南籍的Mai Tran，被指在2024年联邦选举中投票。\n\n通报未说明各人被捕的州或联邦司法辖区、具体被控罪名、被捕时间，也未说明是否已就投票类罪名提起公诉；对部分人员仅列出逮捕记录或待决指控，而这些并不等同于定罪。对于被指「在2026年选举中投票」的个案，通报未说明具体是哪一场选举。\n\n法律层面，美国联邦选举投票权限于美国公民；非公民登记投票或投票可能面临刑事指控，并在罪名成立后产生移民后果，包括被驱逐。通报本身未主张相关投票改变了任何选举结果。\n\n该通报发布时点距11月中期选举约一周，正值提前投票展开。此前数月，国土安全部与司法部持续公布涉非公民投票的逮捕与起诉信息，总量口径不一。执法机关强调个案正在推进，被拘捕者在法院判定有罪前推定无罪；围绕此类案件的证据强度与执法边界，法律界与民权组织仍有争议。"}, {"a": "item-usa-4", "t": "韩议员赴美签证被拒 美方称美国优先", "e": "US stresses America first visa policy after South Korean lawmaker's visa refusal", "s": "美国移民与边境管理", "r": 3, "k": ["美国签证政策", "拒签", "韩国议员", "国务院表态", "逐案审理", "议会外交", "美韩关系"], "src": "韩联社（Yonhap）", "u": "https://en.yna.co.kr/view/AEN20261029014100315", "sum": "事件10-29、报道10-29。韩国执政党共同民主党议员陈声准（Jin Sung-joon，音译）10月28日称，其赴美访问美军太平洋司令部的签证申请遭拒，并在社交平台公开了似为拒签的文件。美国国务院发言人10月29日以书面答复韩联社称，特朗普政府继续通过充分执行美国移民法与签证程序，把美国及其利益放在首位，并称国务院对每份签证申请逐案审理，一般而言不评论具体个案。陈声准为韩国国会国防委员会委员长，称原定与美军太平洋司令部司令塞缪尔·帕帕罗（Samuel Paparo）等会面。报道称拒签具体原因不明，有观察人士提及他1991年因违反韩国《国家保安法》被判刑的前科；美方已要求其提交判决书英译本。韩国外交部称正与美方就此磋商，并称其申请流程似乎仍在进行中，但无法核实具体个案的细节。韩国外交部长赵显表示将请美方尽快为韩国议员签发签证。", "b": "事件源于韩国国会国防委员会委员长陈声准的访美计划。他10月28日表示，其赴美签证申请被拒，并在社交平台公开了看起来是拒签通知的文件。按其说法，此行原定与美方关键人士会面，包括美军太平洋司令部司令塞缪尔·帕帕罗（Samuel Paparo）上将；他强调自己2014年曾以国会委员会成员身份访问该司令部，因此难以理解此次被拒。\n\n美国国务院发言人10月29日回应韩联社书面提问时称，特朗普政府继续把美国及其利益放在首位，充分执行美国移民法并通过签证程序确保合法旅行；国务院对每份签证申请逐案审理，作为一般原则不评论具体签证个案的处理。这一表述未直接确认或否认拒签事实。\n\n关于原因，报道称目前并不明确。有观察人士提到，他1991年因违反韩国《国家保安法》被判处三年有期徒刑、停止资格三年，这可能构成考量因素；美方已要求其提交相关法院判决的英译本，他计划照办。\n\n报道并指出，本月早些时候共同民主党前党首郑清来也遇到类似情况：原定参加国会外交统一委员会访美审计活动，因签证申请迟迟未获批而改赴欧洲。韩国外交部长赵显在启程赴亚特兰大出席二十国集团外长会前对记者表示，此事与韩美关系无关，但属不应出现的状况，他将请求美方确保韩国议员的签证及时签发。\n\n报道将上述签证问题置于近期韩美在一系列议题上的摩擦背景中，但同时说明拒签原因尚未确定。就程序而言，签证裁定属领事裁量事项，拒签理由通常不对外公开，此次争议更多体现为议会外交安排受阻与双边沟通压力。"}, {"a": "item-usa-5", "t": "艾奥瓦城三名建筑工人上班途中被带走", "e": "ICE detains three construction workers in Iowa City, advocacy group says", "s": "美国移民与边境管理", "r": 2, "k": ["美国移民执法", "艾奥瓦州", "建筑工人", "无犯罪记录", "移动房园区", "倡议组织", "选举前执法"], "src": "KCRG-TV9（美国艾奥瓦州锡达拉皮兹）", "u": "https://www.kcrg.com/2026/10/28/ice-detains-3-construction-workers-advocacy-group-says/", "sum": "事件10-28、报道10-29。美国艾奥瓦州艾奥瓦城三名居民10月28日清晨在前往工地途中被移民执法人员带走。据倡议组织「倾听我的声音—艾奥瓦」（Escucha Mi Voz Iowa）称，被带走者为埃列塞尔·莫伊塞斯·奥索里奥（Eliezer Moisés Osorio）、利布尼·阿马多尔（Libni Amador）与内尔松·伦比·基罗斯（Nelson Lumbi Quiroz），当时正离开所居住的移动房园区，前往锡达拉皮兹一处建筑工地。当地电视台KCRG经查阅公开法庭记录确认，三人在艾奥瓦州均无犯罪记录。移民与海关执法局（ICE）随后回复KCRG称，三人均无合法移民身份、均来自尼加拉瓜；基罗斯于9月被下达最终递解令，此前因酒后驾驶出现在一份监狱在押名单上。按ICE说法，基罗斯目前仍在押，另两人已同意返回尼加拉瓜。该组织称，随着选举临近，移民执法活动正在升级。", "b": "据KCRG报道，事件发生在10月28日（周三）清晨。三名艾奥瓦城居民在离开所居住的移动房园区、准备前往锡达拉皮兹一处建筑工地时被带走。由于现场信息最初主要来自倡议组织与家属，报道对细节保持了限定表述。\n\n倡议组织「倾听我的声音—艾奥瓦」（Escucha Mi Voz Iowa）公开了三人的姓名：埃列塞尔·莫伊塞斯·奥索里奥（Eliezer Moisés Osorio）、利布尼·阿马多尔（Libni Amador）与内尔松·伦比·基罗斯（Nelson Lumbi Quiroz）。该组织长期在艾奥瓦州从事移民权益与劳工权益工作，此次将事件与选举前的执法节奏联系起来，称拘留与遣返活动正在增加。\n\nKCRG记者查阅艾奥瓦州公开法庭记录后确认，三人在该州没有犯罪记录。这一核实针对的是「无犯罪记录」的说法本身，报道并未据此推断执法动因。\n\n报道在更新中补充了ICE的回应：三人均无合法移民身份，且均来自尼加拉瓜；基罗斯于9月被下达最终递解令，此前因酒后驾驶出现在一份监狱在押名单上。ICE称基罗斯仍在押，另两人已同意返回尼加拉瓜。需要注意的是，ICE回复中提到的第三人为「贝利亚达雷斯」（Belladarez），与前文所列姓名不完全一致，报道未就此作出说明。\n\n此类地方性个案通常缺少联邦层面的详细通报，需依赖地方媒体、倡议组织与家属转述，事实边界较为有限。将其置于全国背景时应注意：一方面，联邦执法机构今年在多地加强了针对工作场所与通勤环节的行动；另一方面，个案的具体依据往往未公开，外界难以判断执法是否合法适当。本条目仅记录已由地方媒体核实的信息，不作因果推断。"}, {"a": "item-eu-1", "t": "卢旺达证实与欧洲五国磋商回返枢纽", "e": "Rwanda confirms talks with five EU states on migrant return hub", "s": "欧盟移民与边境管理", "r": 4, "k": ["回返枢纽", "欧盟移民政策", "卢旺达", "第三国遣返", "丹麦", "荷兰", "驱逐合作"], "src": "法新社（AFP），经《基加利每日新闻》（KDN）转载", "u": "https://kdn.rw/rwanda-cannot-be-blamed-for-what-happens-in-dr-congo-fm-says", "sum": "事件10-28、报道10-29。卢旺达外交与国际合作部长奥利维耶·恩杜洪吉雷赫（Olivier Nduhungirehe）10月28日在莫斯科出席俄罗斯—非洲峰会期间向法新社确认，卢旺达正与欧洲国家讨论在其境内设立所谓「回返枢纽」（return hub），用于安置被欧盟国家驱逐的人员。他表示，丹麦、奥地利、希腊、德国与荷兰五国寻求建立此类中心，但尚未公布地点；据三名了解谈判情况的欧洲人士称，卢旺达与这五国的协议最早可能在下月签署。恩杜洪吉雷赫称，由于讨论仍在进行，他不能详述，并强调此事对卢旺达「非常敏感」，因为涉及如何给予人、移民与难民以尊严。报道未披露协议草案内容、人数规模、法律保障安排或欧盟方面的出资方案。", "b": "所谓「回返枢纽」，指欧盟成员国与非欧盟国家签约设立、用于安置已被下达遣返决定但暂时无法遣返者的境外设施。欧盟新的《回返条例》已于10月16日生效，为成员国与第三国合作开展遣返提供制度基础，前提是尊重基本权利与不驱回原则。此前有报道称五个成员国正就首个枢纽进行谈判；本次卢旺达方面的表态，是迄今较为直接的地点确认。\n\n恩杜洪吉雷赫是在莫斯科出席俄罗斯—非洲峰会期间作出上述表示的。他说，谈判仍在进行，因此无法细述；同时强调这对卢旺达是敏感议题，因为卢方希望给予人、移民与难民以尊严。他并未说明可能的接收人数、设施位置、停留期限或申请人能否获得法律救济。\n\n法新社援引三名了解谈判的欧洲人士称，协议「最早可能在下月签署」。这一时间表尚未获任何一方官方确认，属消息人士说法，应谨慎对待。\n\n报道同时提到，美国在10月28日对卢旺达国防部及一家卢旺达金融机构实施制裁，指其支持刚果（金）东部的M23武装；恩杜洪吉雷赫在同一场合反驳了卢旺达应为此负责的说法。回返枢纽议题与这一制裁在同一场记者问答中出现，但报道未将两者建立因果联系。\n\n从制度角度看，此类安排面临的核心争点包括：被转移者的法律地位与上诉渠道、基本权利监督由谁承担、若最终无法遣返至原籍国将如何处理，以及第三国自身的人权记录是否会影响「安全第三国」认定。欧盟委员会10月27日提出的边境局（Frontex）扩权方案亦包含协助第三国之间开展遣返的内容，两者在政策方向上相互呼应。上述法律与监督细节目前均未公开。"}, {"a": "item-eu-2", "t": "欧洲议会代表团：匈牙利庇护准入仍存关切", "e": "EP delegation welcomes Hungary reforms but asylum access remains a concern", "s": "欧盟移民与边境管理", "r": 3, "k": ["欧洲议会", "匈牙利", "第七条程序", "庇护准入", "法治评估", "LIBE委员会", "基本权利"], "src": "欧洲议会（European Parliament）新闻发布", "u": "https://www.europarl.europa.eu/news/en/press-room/20261028IPR48467/rule-of-law-in-hungary-meps-welcome-major-progress-impressive-pace-of-reforms", "sum": "事件10-28、报道10-29。欧洲议会赴匈牙利评估法治状况的代表团在结束10月26日至28日布达佩斯访问时表示，欢迎匈牙利自政府更替以来在司法、反腐与基本权利领域的改革，但机构独立性、媒体多元与庇护准入仍存关切，暂不就终止《欧盟条约》第七条程序作出结论。代表团由公民自由、司法与内政委员会（LIBE）民主、法治与基本权利监测组主席索菲·维尔梅斯（Sophie Wilmès）率领，成员包括第七条程序报告员蒂内克·斯特里克（Tineke Strik）。声明列举的进展包括终止以法令施政的紧急状态、撤销主权保护办公室、加入欧洲检察官办公室；在庇护方面，代表团要求确保庇护程序的有效准入并符合欧洲法律标准。代表团将向LIBE委员会报告，议会后续全会将举行辩论并表决决议。", "b": "此次访问属欧洲议会依据《欧盟条约》第七条对匈牙利进行的持续评估。代表团10月26日至28日在布达佩斯会见政府、司法机构、媒体与公民社会组织，28日由团长索菲·维尔梅斯（Sophie Wilmès）对外说明初步结论。\n\n在肯定面，声明列出三项进展：不再延长以法令施政的紧急状态（该状态已于5月13日到期）、撤销主权保护办公室、以及匈牙利加入欧洲检察官办公室（EPPO）。此外还提到司法与反腐改革、媒体独立性的新保障，以及废除《儿童保护法》中针对性少数群体的歧视性条款。欧盟委员会在7月17日发布的法治报告中已记录其中部分变化。代表团同时指出，选举法修改、全面媒体改革与新宪法仍属已宣布的计划而非已完成改革，呼吁就此开展广泛协商，并建立能够跨越政府更迭的持久保障。\n\n在保留面，代表团指出：总检察长选举程序与检察系统的层级结构仍可能带来对个案的政治干预风险；在打击高层腐败方面尚未建立有力记录；国家广告投放的分配仍不够透明公平；媒体所有权集中问题未解；性少数群体权利仅部分改善。\n\n与移民和庇护直接相关的是代表团对「庇护准入」的关切。声明要求匈牙利确保庇护程序的有效准入，并符合欧洲法律标准。这一表述承接了欧盟长期关注的问题，即匈牙利的入境与庇护程序在实务中是否可及；声明未展开具体个案或数据。\n\n程序上，代表团将先向LIBE委员会报告，议会随后在全会举行辩论并就匈牙利问题表决决议，但目前尚未就第七条程序的前途作出决定。声明同时提醒，解除欧盟预算保护措施并不等于关闭第七条程序，也不自动取消获得欧盟资金的全部条件。\n\n七个匈牙利民间组织（包括匈牙利赫尔辛基委员会、国际特赦匈牙利分会与匈牙利公民自由联盟）在10月5日文件中给出更谨慎评价，认为相关问题在法律、制度与实践层面尚未完全解决。"}, {"a": "item-eu-3", "t": "法国经社环理会年度报告强调移民经济贡献", "e": "France's economic council highlights positive economic contribution of immigration", "s": "欧盟移民与边境管理", "r": 3, "k": ["法国", "经济社会环境理事会", "人口结构", "移民经济贡献", "劳动力市场", "社会保障", "年度报告"], "src": "法国《世界报》（Le Monde）", "u": "https://www.lemonde.fr/en/economy/article/2026/10/29/france-s-demographic-shift-calls-for-a-comprehensive-approach-beyond-pro-natalist-rhetoric-says-economic-council_6766465_19.html", "sum": "事件10-28、报道10-29。法国经济社会环境理事会（CESE）10月28日发布年度《法国状况报告》，主张以「综合路径」应对人口结构变化，而非仅靠鼓励生育的号召。报告提出应以「女性主义视角」看待相关问题，并强调移民对经济的积极贡献，同时把「移民政策」列为满足劳动力市场需求的杠杆之一。报告还建议通过延长年长劳动者就业年限、帮助更多年轻人进入就业市场来维系社会保障模式。法国《世界报》10月29日报道称，报告未包含戏剧性结论或大胆新提案，但其价值在于由工会人士、企业负责人与各类基层活动人士共同参与形成，立场分歧较大的成员得以达成一份共同分析。报道未列出报告的具体测算数字或政策建议清单。", "b": "法国经济社会环境理事会（Conseil économique, social et environnemental，CESE）是法国宪法规定的咨询机构，成员来自工会、雇主组织、互助协会与环保团体等。其年度《法国状况报告》并不具约束力，但因其成员构成跨越利益阵营，往往被视为社会对话的风向标。\n\n据《世界报》报道，报告的核心判断是：法国已连续多年经历由人口老龄化与出生率显著下降共同驱动的「人口变迁」，应对之道需要「综合路径」，而非仅仅呼吁提高生育率。报告同时主张以「女性主义视角」处理相关问题，把性别平等纳入人口与家庭政策的分析框架。\n\n在移民议题上，报告强调移民对经济的「积极贡献」，并把「移民政策」列为满足劳动力市场需求的「杠杆之一」。这一表述把移民政策工具化地置于人口与就业政策组合中，而非仅作为边境或安全议题处理。报道未提供报告就该主张给出的具体测算，也未列出建议的签证、居留或职业资格承认措施。\n\n在社会保障方面，报告建议通过两条路径维系现有模式：一是延长年长劳动者的就业年限，二是帮助更多年轻人进入就业市场。报道称，这构成为养老金与社保融资寻找支撑的政策组合。\n\n报道对报告的评价较为克制：没有戏剧性结论，也没有大胆新提案，但其价值在于形成过程——工会人士、企业负责人与来自不同议题领域的基层活动人士立场差异很大，能够共同产出一份分析本身即具意义；此外报告采用横向视角，试图同时覆盖人口、就业、家庭与移民等维度，这在法国同类文件中相对少见。\n\n需注意的是，CESE报告属建议性质，与政府立法议程无直接绑定；在法国围绕移民、身份认同与选举议题高度政治化的背景下，此类强调移民经济贡献的表述，其政策影响仍取决于后续立法与预算安排。"}, {"a": "item-eu-4", "t": "塞浦路斯羁押四名涉协助非法入境者", "e": "Cyprus court remands four for eight days over illegal entry and stay case", "s": "欧盟移民与边境管理", "r": 2, "k": ["塞浦路斯", "非法入境", "协助偷渡", "羁押候审", "刑事调查", "尼科西亚", "边境执法"], "src": "希腊《民族先驱报》（The National Herald）", "u": "https://www.thenationalherald.com/four-detained-eight-days-for-illegal-entry-and-stay-in-cyprus/", "sum": "事件10-28、报道10-29。塞浦路斯尼科西亚地区法院10月28日对四名涉嫌协助他人非法入境、过境与居留的人员发出八日羁押令。据警方通报，四名被捕者年龄分别为19岁、22岁与两名23岁。10月27日上午，一名在尼科西亚执勤的警员发现可疑人员后通知外国人事务与移民部门及尼科西亚警察局到场，共找到七人；这些人先经被占领地区非法进入塞浦路斯，随后试图穿越绿线进入政府控制区。调查认定，七人中有四人持庇护身份在塞居住，并取得证据显示其涉嫌一起偷渡案件；这四人经法院逮捕令被捕并羁押候审，其余三人被送往「普尔纳拉」首个接待中心。案件由尼科西亚刑事调查局（CID）继续侦办。报道未披露四人的国籍与性别。八日为羁押候审期限，并非最终判决，四人未被法院判定有罪。", "b": "据《民族先驱报》报道，尼科西亚地区法院10月28日对四名涉案人员作出八日羁押决定。四人此前一天在尼科西亚被捕，10月28日被带至法院应讯。警方表示，尼科西亚刑事调查局（CID）正在继续侦办此案。\n\n案件起点是10月27日上午：一名在尼科西亚执勤的警员发现若干可疑人员，随后通知外国人事务与移民部门及尼科西亚警察局到场。警方共找到七人，他们先经被占领地区非法进入塞浦路斯，之后试图穿越绿线进入政府控制区。调查确认，七人中有四人持庇护身份在塞浦路斯居住，并取得证据显示其涉嫌一起协助他人非法入境、过境与居留的案件。\n\n这四人经法院逮捕令被捕，为确保讯问顺利进行而先行羁押，10月28日出庭。其余三人被送往「普尔纳拉」（Pournara）首个接待中心。据警方公布，四人年龄分别为19岁、22岁与两名23岁。\n\n案件性质为「协助非法入境、过境与居留」——在塞浦路斯法律实践中，这一类指控通常针对组织或帮助他人未经许可进入、经该国中转，或为其提供停留条件的行为，可能涉及《外国人与移民法》相关条款以及反偷渡立法。\n\n需要强调信息边界：报道未公布四人的国籍与性别，也未说明被协助者的人数、入境方式细节以及是否涉及有组织的偷渡网络；未说明四人是否已聘请律师、是否认罪，亦未提及保释申请。八日羁押属候审性质的临时措施，期满后警方须再次申请延长或由法院决定后续处理，案件实体部分尚未审理。\n\n从背景看，塞浦路斯位于东地中海路线，长期面对经海路与经北部分治线入境的人员流动；该国近年收紧庇护与居留管理，包括对部分学生许可的审查。此类「协助入境」案件的执法与司法处理，是观察其边境执法强度的一个切面，但单个案件不宜用于推断整体趋势。\n\n本条依据的是地方英文媒体报道的法院程序性信息与警方通报要点，属较低层级但事实明确的司法动态；在缺乏起诉书的情况下，不宜对案情作进一步描述。"}, {"a": "item-eu-5", "t": "欧委会提新规 边境局拟扩至三万人", "e": "The Commission proposes to strengthen Frontex with greater border protection", "s": "欧盟移民与边境管理", "r": 4, "k": ["欧盟边境管理局", "授权扩权", "回返协调", "预备队", "社交媒体监测", "申根边境", "欧盟预算"], "src": "欧盟委员会提案，经 Diplomacy News 报道", "u": "https://www.diplomacynews.com/en/2026/10/29/the-commission-proposes-to-strengthen-frontex-with-greater-border-protection", "sum": "事件10-27、报道10-29（提案仍在欧盟议会与理事会审议，属进行中事项）。欧盟委员会10月27日提出欧洲边境与海岸警卫局（Frontex）新条例草案，拟大幅扩权：常备队伍逐步增至3万人，其中新设1.7万人的「欧洲边境与回返预备队」由成员国掌控、危机时调用，另叠加各国派驻的约7000人。草案新设回返协调中心，并把「回返」置于核心；在与第三国签有协议且遵守基本权利与不驱回原则前提下，Frontex 可协助组织从一个第三国向另一第三国的回返。草案还设快速反应部队与在线监测与响应中心，后者可监测公开的社交媒体内容以发现边境风险；成员国须在24小时内经欧盟边境监视系统（EUROSUR）报告可能重大影响外部边境的事件。委员会提议下一预算期为该局安排118亿欧元，现约60亿欧元。草案须经欧洲议会与理事会通过。", "b": "欧盟委员会10月27日提出一揽子边境与回返立法草案，核心是重写欧洲边境与海岸警卫局（Frontex）条例。委员会称，该局常备队伍将逐步扩充至3万人：一方面把该局自有执法人员规模翻倍，另一方面新设一支1.7万人的「欧洲边境与回返预备队」，人员由成员国提供、平时待命，遇危机时依新机制调用；成员国按原有方式派驻的约7000名边防人员另计。\n\n真正的重心在回返。草案拟设回返协调中心，从认定当事人无权居留开始，串联自愿回返辅导、航班组织与返乡后重新融入支持。更具争议的是地域权限：在取得第三国同意、并遵守基本权利与不驱回原则的前提下，Frontex 将可协助组织从一个第三国向另一个第三国的回返——现行授权不允许此项操作。批评者认为这是为「第三国回返枢纽」铺设法律基础。\n\n危机应对方面，草案设快速反应部队，由该局执行主任在成员国请求下决定派遣；设在线监测与响应中心，授权其监测公开的社交媒体内容、识别影响外部边境管理的事件，并配合处置与边境安全相关的违法内容；成员国须在24小时内经欧盟边境监视系统（EUROSUR）上报可能对外部边境产生重大影响的事件。委员会同时提出第二项条例，推动回返、再入境与重新融入程序的数字化——此前新的《回返条例》已于10月16日生效。\n\n委员会以数据支撑主张：非法越境两年间减少一半以上，回返率升至约三分之一，该局上年度执行约6.4万人的回返、动用220余架次航班。主管内政与移民事务的委员马格努斯·布鲁纳（Magnus Brunner）称，目标是让事件在演变为危机之前被处置。委员会提议在下一预算期为该局安排118亿欧元，现约60亿欧元。草案须经欧洲议会与理事会审议通过，尚存变数；有欧洲议会中间偏左议员批评称，欧洲不需要自己的「移民与海关执法局」（ICE）。"}, {"a": "item-china_neighbors-1", "t": "马突查网赌窝点拘六十四名外籍", "e": "Immigration Busts Online Scam Syndicate, 64 Foreigners Nabbed", "s": "中国周边国家动态", "r": 4, "k": ["马来西亚", "移民局", "网络诈骗", "外籍人员", "执法行动", "空白护照", "逾期居留"], "src": "马来西亚国家新闻社（Bernama）", "u": "https://www.bernama.com/en/news.php?id=2627483", "sum": "事件10-28至10-29、报道10-29。马来西亚移民局总监扎卡里亚·沙班（Zakaria Shaaban）10月29日在布城记者会通报，该局与马来西亚通讯与多媒体委员会（MCMC）自10月28日起开展为期两天的联合特别行动，在吉隆坡克灵芝路四间豪华公寓单位及「矿场」（The Mines）住宅区两栋独立式洋房共拘捕64名外籍人员，涉嫌参与网络诈骗集团。被捕者包括44名中国籍、19名越南籍和1名缅甸籍。10月28日首轮行动拘34人，含15名中国籍男子、13名越南籍男子和6名越南籍女子；29日后续行动再拘30人，为29名中国籍和1名缅甸籍。该集团被指近两个月运作，以每月3000至6000令吉薪酬招募成员，每日10时至23时作业，通过数字平台针对境外受害人实施诈骗，日均获利10万至15万令吉。行动查获28台笔记本电脑、81部手机及路由器、调制解调器，总值约5.13万令吉，另发现日本、韩国、美国三本无个人资料的空白护照及相应机票。", "b": "马来西亚移民局10月29日在布城召开记者会，通报与马来西亚通讯与多媒体委员会联合开展的特别行动成果。行动自10月28日开始，持续两天，目标为吉隆坡克灵芝路四间豪华公寓单位和「矿场」（The Mines）住宅区两栋独立式洋房。移民局总监扎卡里亚·沙班称，两天共拘捕64名外籍人员，其中中国籍44人、越南籍19人、缅甸籍1人。\n\n分批情况为：10月28日拘34人，包括15名中国籍男子、13名越南籍男子和6名越南籍女子；10月29日再拘30人，包括29名中国籍和1名缅甸籍。沙班表示，集团成员每日10时至23时工作，月薪3000至6000令吉，集团运作约两个月，日均获利10万至15万令吉，交易记录显示运营人员可获约17%佣金。受害人多为集团成员各自国家的同乡。\n\n现场查获28台各品牌笔记本电脑、81部手机、两台路由器和一台调制解调器，总值约5.13万令吉。执法人员另发现日本、韩国、美国三本未打印个人资料的空白护照，初步判断是供成员在紧急情况下贴上照片外逃使用，同时起获飞往上述三国的机票。设备中发现「BOC Dayou」系统和名为「Feng Pay Control」的支付管理平台，资金经由支付宝、微信支付和银联流转。沙班称，所有被捕者均持真实护照、以游客身份合法入境，当局正核实其是否有犯罪记录，并追查注册本地电话卡的一方，也不排除本地团伙充当中介。案件援引《1959/63年移民法》第56(1A)(c)、第6(1)(c)、第15(1)(c)条及《1963年移民条例》第39(b)条调查。"}, {"a": "item-china_neighbors-2", "t": "印尼巴厘岛网赌窝点拘二十一名外籍", "e": "Indonesia Arrests 21 Foreign Nationals in Bali Online Gambling Raid", "s": "中国周边国家动态", "r": 3, "k": ["印度尼西亚", "巴厘岛", "移民总局", "网络赌博", "居留许可", "外籍人员", "突查"], "src": "印度尼西亚安塔拉通讯社（ANTARA）", "u": "https://en.antaranews.com/news/438771/indonesia-arrests-21-foreign-nationals-in-bali-online-gambling-raid", "sum": "事件10-29、报道10-29。印度尼西亚移民与惩教部移民监督与执法总局10月29日通报，当天上午7时（GMT+8）联合伍拉·赖（Ngurah Rai）移民局，在巴厘岛一处住宅区两栋房屋内拘捕21名外籍人员，指其涉嫌运营国际网络赌博网站并违反居留许可规定。其中8名越南籍人员在第一栋房屋被捕，12名缅甸籍和1名中国籍在第二栋被捕。行动查获36部个人手机、29部运营手机、18台笔记本电脑、6台台式电脑和3台平板电脑。移民总局局长亨达尔萨姆·马兰托科（Hendarsam Marantoko）称，行动前已对该地点监视数日，执法队与社区负责人、物业保安和物业管理人员协调后进入；被捕者持投资前访问签证和远程工作者临时居留许可合法入境，资金据报经由支付宝、微信支付等中国数字支付平台流转。", "b": "印度尼西亚移民与惩教部移民监督与执法总局10月29日通报，当天在巴厘岛一处住宅区开展突击行动，拘捕21名涉嫌运营国际网络赌博集团的外籍人员，国籍构成为12名缅甸籍、8名越南籍和1名中国籍。行动由该总局与伍拉·赖移民局联合执行，当地时间上午7时开始。\n\n移民总局局长亨达尔萨姆·马兰托科在当天的声明中表示，执法人员事先对该地点监视数日，并与社区负责人、住宅区保安和物业管理人员协调后进入两栋被怀疑作为集团运作基地的房屋。8名越南籍人员在第一处住宅被捕，12名缅甸籍和1名中国籍在第二处被捕。\n\n查获物品包括36部个人手机、29部运营用手机、18台笔记本电脑、6台台式电脑和3台平板电脑。调查显示，被捕者均持有效移民证件入境和居留，具体为投资前访问签证和远程工作者临时居留许可。马兰托科称，该团伙被指运营非法赌博网站，资金交易据报经由支付宝和微信支付等中国主要数字支付平台处理。\n\n他表示，此次行动是针对全国外籍人员的常规监管的一部分，巴厘岛是重点地区之一，「对居留许可违规零容忍，尤其是与非法网络赌博等跨国犯罪相关的违规」。所有嫌疑人和查获设备已移交伍拉·赖移民局作进一步调查和法律处理。报道并提及，登巴萨法院此前曾对35名印度籍涉案人员作出判决，印度尼西亚已签署联合国网络犯罪公约。"}, {"a": "item-china_neighbors-3", "t": "菲截停三名拟赴马假招聘受害者", "e": "BI warns of Malaysia fake job scheme", "s": "中国周边国家动态", "r": 2, "k": ["菲律宾", "移民局", "人口贩运", "虚假招聘", "吉隆坡", "机场拦截", "海外就业"], "src": "菲律宾《马尼拉时报》（The Manila Times）", "u": "https://www.manilatimes.net/2026/10/29/news/national/bi-warns-of-malaysia-fake-job-scheme/2456382", "sum": "事件10-28、报道10-29。菲律宾移民局10月29日经《马尼拉时报》披露，三名菲律宾人在尼诺·阿基诺国际机场被拦下，原计划经新加坡前往吉隆坡。三人起初称是同事结伴度假，但就业记录、经济能力和旅行申报存在矛盾，引起移民官员进一步审查，随后承认工作安排须抵达马来西亚后才商谈。移民局局长乔尔·安东尼·维亚多（Joel Anthony Viado）10月28日表示，「海外工作机会绝不应该要求你先出境、之后再了解细节」。三人已移交跨机构反人口贩运委员会（IACAT）作进一步调查和评估。移民局称，这是机场一系列打击以欺骗性行程安排输送菲籍人员出境从事虚假就业的行动的最新一例，贩运集团常利用社交媒体、虚假招聘、误导性旅行申报和高薪承诺招募。", "b": "菲律宾移民局10月29日通报，三名菲律宾公民在尼诺·阿基诺国际机场被移民官员拦截，原定经新加坡中转前往马来西亚吉隆坡。移民局称，三人在受询时声称是同事结伴度假，但就业记录、经济能力和旅行申报之间存在不一致，促使官员进一步核查。\n\n经审查，三人承认有关就业安排须在抵达马来西亚后才会商谈。移民局局长乔尔·安东尼·维亚多10月28日就此事表态称，「海外工作机会绝不应该要求你先出境、之后再了解细节」。三人已被移交跨机构反人口贩运委员会，接受进一步调查与评估。\n\n移民局表示，此案是机场一系列针对贩运手法行动的最新一例，这些手法利用欺骗性行程安排将菲律宾人送往境外从事虚假就业。该局警告，贩运集团利用社交媒体、虚假招聘、误导性旅行申报和高薪承诺招募菲律宾人赴海外工作，部分受害人最终陷入强迫劳动、剥削或网络诈骗活动。报道未披露三名当事人原计划从事的具体岗位、招募方身份及拦截的具体日期。"}, {"a": "item-china_neighbors-4", "t": "马高院驳回暂缓 缅籍遣返续行", "e": "M'sia To Proceed With Myanmar Refugee Repatriation - Saifuddin", "s": "中国周边国家动态", "r": 4, "k": ["马来西亚", "缅甸籍", "难民遣返", "高等法院", "司法复核", "内政部", "律师公会"], "src": "马来西亚国家新闻社（Bernama）", "u": "https://www.bernama.com/en/general/news.php?id=2627203", "sum": "事件10-29、报道10-29。马来西亚内政部长赛夫丁·纳苏丁·伊斯迈（Saifuddin Nasution Ismail）10月29日在内政部月度集会暨创新日上表示，高等法院已驳回马来西亚律师公会的暂缓申请，政府将继续通过合法渠道和既有外交程序遣返缅甸籍难民，内政部与外交部将继续与缅方磋商第二批遣返事宜。法官诺丽扎·奥斯曼（Norliza Othman）裁定，在尚未批准司法复核许可前不能发出暂缓令，司法复核定于12月8日审理。律师公会寻求阻止遣返约5000名缅甸难民和寻求庇护者。赛夫丁称，迄今已遣返约1.03万名缅甸籍人员，本月另有约3000人将进入遣返程序，并呼吁公众勿自行对难民采取行动，执法应交由当局。", "b": "马来西亚内政部长赛夫丁·纳苏丁·伊斯迈10月29日在内政部月度集会上表示，政府将继续通过合法渠道和既有外交程序，把缅甸籍难民遣返回原籍国，内政部与外交部将继续与缅甸政府谈判，以推进第二批遣返。\n\n赛夫丁称，遣返将依法院裁决推进，「让法律程序决定结果，在出现相反裁决之前，我们会继续遣返」。他说明，马来西亚律师公会申请暂缓遣返已被驳回，司法复核定于12月8日审理。据媒体报道，高等法院驳回律师公会要求暂缓遣返约5000名缅甸难民和寻求庇护者的申请，裁定在批准司法复核许可前不能给予暂缓；法官诺丽扎·奥斯曼表示，该驳回不影响律师公会在法院裁定是否批准许可后再次提出申请的权利。\n\n赛夫丁同时呼吁公众不要就缅甸难民的存在自行采取行动，强调执法完全属于当局职权。他承认难民问题可能引发各类社会经济问题，但公众不应走极端或超越法律，「他们的到来在某些社区造成经济、政治和社会问题，导致部分民众自行采取行动，例如攻击他们的住所或把他们赶出村庄。警方正在履职，请把问题交给当局和持续开展行动的移民执法机构」。\n\n此前一天，总理安瓦尔·易卜拉欣表示，马来西亚选择与缅甸通过外交途径解决难民问题，尽管因此面临国际谴责与批评；经与缅方商谈，缅方同意自费通过空运和海运方式接回部分在马本国公民。赛夫丁称，迄今已有约1.03万名缅甸籍人员被遣返，本月另有约3000人将接受遣返程序。"}, {"a": "item-china_neighbors-5", "t": "越柬两省边防会晤商边境管控", "e": "Improving the effectiveness of border management and protection", "s": "中国周边国家动态", "r": 2, "k": ["越南", "柬埔寨", "边防", "边境管理", "非法出入境", "遣返移交", "双边会晤"], "src": "越南《林同报》（Báo Lâm Đồng），经 Vietnam.vn 转载", "u": "https://www.vietnam.vn/en/nang-cao-hieu-qua-quan-ly-bao-ve-bien-gioi", "sum": "事件10-29、报道10-29。越南林同省边防部队指挥部与柬埔寨蒙多基里省宪兵指挥部10月29日举行2026年度定期会晤并签署会议纪要。双方表示，此前已有效落实会谈纪要内容，定期交换边境管理与保护信息，协同预防、发现、制止和打击边境地区各类犯罪与违法行为。双方同意继续按两国政府签署的边境协定、条约和谅解开展合作，加强打击非法出入境、走私、货物非法运输、人口贩运、毒品与武器贩运等。双方还提议，对在蒙多基里省违反柬埔寨法律但不足以追究刑责的越南公民，协调经口岸移交越方，由越方依法接收处理，并推动边境两侧社区结对交流。", "b": "越南林同省边防部队指挥部与柬埔寨王国蒙多基里省宪兵指挥部10月29日举行2026年度定期会晤。林同省边防部队指挥部代表团接待了蒙多基里省宪兵指挥部代表团，双方回顾已签署会谈纪要的落实情况并签署新的会议纪要。\n\n双方在会谈中表示，过去一段时间两省边防与宪兵力量有效落实纪要内容，定期交换边境管理与保护相关信息，协同预防、发现、制止和打击边境地区各类犯罪和违法行为，为维护两省边境地区安全秩序作出贡献。双方还保持两国传统节日期间的走访互贺，组织座谈、交流并分享工作经验。\n\n在此基础上，双方同意继续按两国政府签署的边境协定、条约和谅解，维持信息交换与边境管理保护协作，并加强在预防和打击非法出入境、走私、货物非法运输、人口贩运、毒品贩运、武器贩运、非法资源开采等违法犯罪方面的配合。\n\n关于人员处置，双方提议，对在蒙多基里省违反柬埔寨法律、但行为尚不足以追究刑事责任的越南公民，协调经边境口岸移交越方，由越方依法接收和处理。双方还提议继续在传统节日期间保持会谈、会晤、走访与交流，并建议上级机关和地方政府推动边境两侧社区结对，为两国民众交流、互助发展经济、减贫改善生活创造条件。会谈结束时，双方代表签署会议纪要。"}, {"a": "item-global_south-1", "t": "利东部政府禁伊阿籍人员入境", "e": "Libya's eastern administration bars entry to Iranians, Afghans", "s": "全球南方国家动态", "r": 4, "k": ["利比亚", "入境禁令", "伊朗籍", "阿富汗籍", "东部政府", "居留许可", "地中海移民"], "src": "路透社（Reuters），经意大利《国际》周刊网站转载", "u": "https://www.internazionale.it/ultime-notizie-reuters/2026/10/28/libya-s-eastern-administration-bars-entry-to-iranians-afghans", "sum": "事件10-28、报道10-29。据路透社报道，利比亚东部班加西政府10月28日深夜在官方认证脸书页面发表声明，禁止伊朗和阿富汗籍人员经由东部所有陆路、海路和航空口岸入境，未说明理由，并称内政部负责执行该决定、并驱逐未持有效居留许可的伊朗和阿富汗籍人员。该措施扩大了今年6月对苏丹、厄立特里亚、埃塞俄比亚和索马里四国公民的入境限制。经认证的外交领事使团成员及家属，以及已获工作许可的医疗、教育从业人员可获豁免。报道称，利比亚自2011年卡扎菲政权被推翻后成为移民前往欧洲的中转通道；联合国6月数据称利比亚境内有逾90万名移民。", "b": "据路透社报道，利比亚东部班加西政府10月28日深夜发表声明，禁止伊朗和阿富汗籍人员经利比亚东部所有陆路、海路和航空口岸入境。声明发布在该政府的认证脸书页面上，未说明作出这一决定的理由。\n\n声明称，「伊朗和阿富汗两国公民被禁止通过利比亚领土的所有陆、空、海入境口岸入境」，并称内政部将负责执行该决定，同时负责驱逐未持有效居留许可的伊朗和阿富汗籍人员。经认证的外交和领事使团成员及其家属不受该禁令限制；在医疗和教育行业工作、且已取得工作许可的人员同样适用豁免。\n\n该措施扩大了同一政府今年6月实施的入境限制。当时班加西政府以「重新规范外国人入境」为由，禁止苏丹、厄立特里亚、埃塞俄比亚和索马里四国公民入境。\n\n报道指出，利比亚自2011年卡扎菲政权在北约支持的起义中被推翻后，成为逃离冲突与贫困的移民经地中海前往欧洲的中转通道。2014年以来，利比亚分裂为东西两个对立政府：总部在班加西的奥萨马·哈马德政府与军事强人哈利法·哈夫塔尔结盟，控制东部和南部大片地区；获国际承认的阿卜杜勒哈米德·德贝巴政府以的黎波里为基地，于2021年经联合国支持的进程上台。联合国6月收集的数据显示，利比亚境内有逾90万名移民。"}, {"a": "item-global_south-2", "t": "加纳与俄一经济特区签劳务协议", "e": "Ghana signs deal with Russia to recruit workers for industrial jobs", "s": "全球南方国家动态", "r": 3, "k": ["加纳", "俄罗斯", "劳务协议", "劳工移民", "经济特区", "招聘监管", "海外就业"], "src": "加纳 3News", "u": "https://www.3news.com/news/ghana-signs-deal-with-russia-to-recruit-workers-for-industrial-jobs", "sum": "事件10-29、报道10-29。加纳劳工部长伊曼纽尔·阿吉耶库姆（Emmanuel Agyekum）10月29日与俄罗斯阿拉布加（Alabuga）经济特区负责人签署劳务协议，为加纳人赴俄从事制造业和工业岗位开辟渠道。该特区入驻48家企业，需要逾7.5万名工人。加纳劳工部将负责招募协调、核实招聘信息，并在出行前为工人提供指导，以保障其权益。阿吉耶库姆称，协议不限于劳务交换，双方还计划在商业、教育、科研、宗教与文化领域合作；加纳企业将参加在鞑靼斯坦举行的论坛，两国还将探讨学术交流，让加纳教授与研究人员同俄方高校开展研究。他呼吁加纳青年把握这些机会。", "b": "加纳劳工部长伊曼纽尔·阿吉耶库姆10月29日代表加纳与俄罗斯阿拉布加（Alabuga）经济特区负责人签署劳务协议，为加纳人赴俄从事制造业和工业岗位开辟渠道。阿拉布加经济特区为工业枢纽，入驻48家企业，用工需求超过7.5万人。\n\n根据安排，加纳劳工部将主管加方流程，负责协调招募、核实招聘信息，并在工人出行前提供行前指导，以保护其权益。阿吉耶库姆在签约后表示，这一伙伴关系不限于就业，「我们签署了一份很好的协议，不仅是劳务交换」，双方还着眼企业对企业合作，并将在宗教与文化领域推进合作，使双边合作超越单纯的劳工迁移。\n\n在商业往来方面，他表示加纳企业将参加计划在鞑靼斯坦举行的论坛，与俄方同行探讨合作可能。两国还在考虑学术交流，让加纳教授和讲师与俄罗斯高校共同开展研究。\n\n阿吉耶库姆呼吁加纳青年充分利用这一安排预期创造的岗位机会，并称劳工部将把核实招聘真实性和行前培训作为重点，避免求职者落入虚假招工陷阱。报道未披露协议涉及的具体岗位数量、薪酬水平与合同期限。"}, {"a": "item-global_south-3", "t": "大赦国际促肯尼亚查外籍被绑案", "e": "Release abducted Tanzanian, Amnesty International tells state", "s": "全球南方国家动态", "r": 3, "k": ["肯尼亚", "大赦国际", "强制失踪", "不驱回原则", "难民保护", "跨国镇压", "坦桑尼亚籍"], "src": "肯尼亚《旗帜报》（The Standard）", "u": "https://www.standardmedia.co.ke/national/article/2001561070/release-abducted-tanzanian-amnesty-international-tells-state", "sum": "事件10-28、报道10-29。大赦国际10月28日发表声明，要求肯尼亚当局查找并保障坦桑尼亚籍活动人士特瓦哈·姆瓦伊帕亚（Twaha Mwaipaya）的安全，调查其失踪情况，并警告其可能被强制转移至坦桑尼亚或其他可能面临迫害的国家。姆瓦伊帕亚据报10月25日在马查科斯郡卡穆卢乘坐出租车访友时，被三辆车（含一辆丰田陆地巡洋舰）拦截后带走。大赦国际称，此案与肯尼亚境内多起外籍人士遭绑架或绑架未遂的报告形成「跨国镇压」模式，并援引2024年乌干达反对派领袖基扎·贝西杰在内罗毕被绑等旧案，强调肯尼亚《2021年难民法》第29条禁止将难民和寻求庇护者遣送至面临迫害的国家。", "b": "大赦国际10月28日发表声明，要求肯尼亚当局查找并保障坦桑尼亚籍活动人士特瓦哈·姆瓦伊帕亚的安全，调查其失踪经过，并警告其可能被强制转移至坦桑尼亚或其他可能使其面临迫害和严重人权侵害的国家。\n\n据报，姆瓦伊帕亚10月25日在马查科斯郡卡穆卢乘坐出租车前往访友途中，被乘三辆车（其中一辆为丰田陆地巡洋舰硬顶车）的人员拦截带走，其下落与安全状况至今不明。大赦国际称，这起事件尤其令人担忧，因为此前已有多次关于外籍人士在肯尼亚境内遭绑架或绑架未遂的报告。\n\n该组织在声明中表示，「肯尼亚必须是安全之地，而不是追捕逃避迫害者的猎场」，并称这些事件指向一种「跨国镇压」模式，即政府或其疑似代理人试图在境外压制批评者。声明强调，肯尼亚当局的否认不能替代保护、调查与问责义务，国家责任不限于是否直接参与绑架，还包括采取合理有效措施防范可预见的威胁、查明失踪者下落并保护面临风险者。\n\n声明援引肯尼亚宪法第28条、第29条关于人的尊严与人身自由安全的规定，以及《公民权利和政治权利国际公约》和难民保护公约义务；并指出《2021年难民法》第29条禁止将难民和寻求庇护者遣返至其面临迫害或生命、人身完整、自由受特定威胁的国家。声明还列举2024年乌干达反对派领袖基扎·贝西杰在内罗毕被绑、2017年南苏丹人权律师董·塞缪尔·卢阿克等人被绑后遇害等旧案，作为同类风险的前例。"}, {"a": "item-global_south-4", "t": "肯法院判索籍伪造身份者遣返", "e": "Kenya Court Orders Repatriation of Somali National After Passport Fraud Conviction", "s": "全球南方国家动态", "r": 3, "k": ["肯尼亚", "遣返", "身份欺诈", "护照", "非法居留", "法院判决", "索马里籍"], "src": "肯尼亚首都调频电台（Capital FM）", "u": "https://capitalfm.africa/court-orders-repatriation-of-somali-national-after-passport-fraud-conviction/", "sum": "事件10-29、报道10-29。肯尼亚乔莫·肯雅塔国际机场（JKIA）法庭10月29日判处索马里籍男子马哈茂德·穆罕默德·罗布莱（Mohamud Mohammed Roble）罚款共计37万先令，并裁定其在缴清罚款后遣返索马里。罗布莱对三项指控认罪：在肯尼亚非法居留、为取得肯尼亚护照作虚假申报、出示含虚假记载的身份证件以行骗，分别被罚15万、15万和7万先令，不缴罚款可以监禁替代。案件由移民与公民服务调查组侦探从机场移民官员手中接手侦办，查明其通过虚假申报取得肯尼亚登记证件并申领护照。法庭同时要求将骗取的护照交移民总局销毁。", "b": "肯尼亚乔莫·肯雅塔国际机场（JKIA）法庭10月29日对一名索马里籍男子作出判决，在认定其以欺诈手段取得肯尼亚身份证件和护照后，裁定其在缴清罚款后遣返索马里。被告马哈茂德·穆罕默德·罗布莱对三项指控表示认罪。\n\n三项指控分别为：在肯尼亚非法居留；为取得肯尼亚护照而作虚假申报；出示载有虚假记载的身份证件意图行骗。法庭就非法居留判罚15万先令，就虚假申报判罚15万先令，就出示伪造身份证件判罚7万先令，合计37万先令，并规定不缴纳罚款则以监禁替代。\n\n案件由移民与公民服务调查组侦探侦办。该组从乔莫·肯雅塔国际机场的移民官员处接手案件，查明罗布莱先取得肯尼亚登记证件，再利用虚假申报取得肯尼亚护照。法庭同时裁定，将欺诈取得的肯尼亚护照交移民总局局长销毁。\n\n报道未披露被告的羁押起始时间、量刑听证细节，亦未提及辩方意见或是否上诉。"}, {"a": "item-global_south-5", "t": "利比亚建成流离失所者数据平台", "e": "Libya completes national platform for managing displaced persons' data", "s": "全球南方国家动态", "r": 2, "k": ["利比亚", "流离失所者", "数据库", "国家平台", "数据治理", "机构协调", "人道需求"], "src": "利比亚信息总局（GIA）", "u": "https://www.gia.gov.ly/en/2026/10/29/in-implementation-of-the-prime-ministers-directives-minister-of-state-for-prime-minister-and-cabinet-affairs-follows-up-on-the-work-of-the-technical-committee-on-the-displaced-persons-file", "sum": "事件10-29、报道10-29。利比亚信息总局（GIA）10月29日通报，总理府与内阁事务国务部长穆罕默德·本·加勒本当日与社会事务部长瓦法·基拉尼、流离失所者与人权事务国务部长贾迈勒·阿布·卡林举行会议，检查依据总理第216号（2026年）决议设立的技术委员会工作进展。会议讨论了流离失所者数据库的开发与更新，以及加强相关机构之间的协调与整合，目的是提供准确可靠的数据，用于监测流离失所者状况、识别其需求。信息总局由纳德尔·梅利坦代表参加该委员会工作，并称已会同相关机构完成国家流离失所者数据管理平台的开发，该系统可实现数据统一与更新，提升数据管理与在主管机构之间交换的效率。", "b": "利比亚信息总局10月29日发布通报称，总理府与内阁事务国务部长穆罕默德·本·加勒本当日会见社会事务部长瓦法·基拉尼、流离失所者与人权事务国务部长贾迈勒·阿布·卡林，检查依据总理第216号（2026年）决议设立的技术委员会的工作进展。\n\n通报称，会议讨论了流离失所者数据库的开发与更新情况，以及加强相关主管机构之间的协调与整合，目标是提供准确、可靠的数据，为监测流离失所者状况、识别其需求提供支撑。\n\n信息总局由纳德尔·梅利坦代表参加该委员会工作。该局表示，在与相关机构合作和整合的基础上，已完成国家流离失所者数据管理平台的开发；该系统可实现数据的统一与更新，提升数据管理效率及在主管机构之间的交换效率。\n\n通报将上述工作定位为支持政府联合行动、利用国家信息系统改善服务并强化循证决策的一部分，未披露流离失所者人数、平台上线时间表或数据覆盖范围。"}, {"a": "item-tech-1", "t": "美生物识别采购被指锁定单一供应商", "e": "DHS $2.7B Software Deal Highlights Barriers to Competition, Vendor Lock-in", "s": "移民与边境技术", "r": 4, "k": ["政府采购", "生物识别", "供应商锁定", "指纹比对", "身份核验", "合同竞争", "美国"], "src": "生物识别更新（Biometric Update）", "u": "https://www.biometricupdate.com/202610/dhs-2-7b-software-deal-highlights-barriers-to-competition-vendor-lock-in", "sum": "事件10-29、报道10-29。美国「生物识别更新」（Biometric Update）10月29日刊出基于联邦采购记录的分析，指美国国土安全部把软件采购集中于少数既有供应商，独家分销、专有技术与转换成本正限制生物识别、身份与监控系统的竞争。最大一例是7月15日签署、期限五年的「卡拉软件」（Carahsoft）一揽子采购协议，估算额度26.57亿美元；该部在独家来源论证中承认，需求被裁剪为仅含由该公司独家分销的产品。记录显示协议下已下单30笔、承付约9700万美元。文章还指该论证在授标约97天后才于10月20日公布，而文件自述应在14天内发布；并援引该部向泰雷兹支付1120万美元维护指纹比对技术，原因是政府缺少源代码与知识产权，其他承包商无法接手。卡拉软件未在发稿前回应。", "b": "事件10-29、报道10-29。「生物识别更新」（Biometric Update）依据联邦采购记录分析指出，美国国土安全部正把软件采购集中到既有供应商周围，独家分销、专有技术与转换成本三重因素叠加，限制了生物识别、身份核验、情报分析与监控领域的竞争。\n\n最受关注的是7月15日签署的「卡拉软件」（Carahsoft）一揽子采购协议，估算额度26.57亿美元，属五年期采购容量而非已拨款金额。该部在独家来源论证中写明，需求被裁剪为仅包含由卡拉软件独家分销的原始设备制造商，并称其他经销商也只能通过该公司取得这些产品。记录显示协议下已产生约30笔订单、承付约9700万美元，其中海关与边境保护局到7月31日承付约1480万美元，移民与海关执法局8月承付1110万美元。\n\n文章强调程序问题：该论证直到10月20日才公布，距授标约97天，而文件自述应在14天内发布；公布时标注为「原始预先征集」，把协议描述为该部拟授标的事项，文件未解释延迟原因。\n\n生物识别现代化最能说明依赖如何形成。该部向泰雷兹（Thales）支付1120万美元维护指纹比对技术，理由是政府不掌握源代码、技术文档与知识产权，其他承包商无法承接；身份管理办公室的少量软件许可也走同一渠道。类似理由还出现在跨国生物识别预警项目、境内追踪项目与社媒监测平台续约中，反复出现的说法是既有投资与已积累数据令替换过贵。\n\n文章也提醒，重启竞争未必产生替代者：移民与海关执法局8月撤回一项1.25亿美元独家来源安排并重新招标，最终仍由原供应商以唯一投标中标。集中采购可能降低单价，但也可能把续约变简单、把技术壁垒原样保留。"}, {"a": "item-tech-2", "t": "美法官去世 社媒AI监控诉讼生变", "e": "Social Media Surveillance Case Faces Uncertainty After Judge's Death", "s": "移民与边境技术", "r": 4, "k": ["社媒监控", "人工智能审查", "第一修正案", "诉讼", "签证持有人", "隐私争议", "美国"], "src": "基督教科学箴言报（The Christian Science Monitor）", "u": "https://www.csmonitor.com/USA/Justice/2026/1029/uaw-trump-immigrants-social-media-hellerstein", "sum": "事件10-28、报道10-29。据美国《基督教科学箴言报》10月29日报道，纽约南区联邦地区法院法官阿尔文·赫勒斯坦（Alvin K. Hellerstein）10月28日去世，令一起挑战政府以人工智能监控移民社交媒体言论的诉讼前景生变。该案由美国汽车工人联合会、通信工人协会与教师联合会提起，主张对数百万签证与绿卡持有人网络活动的监控构成观点歧视、违反第一修正案，并指国务院与国土安全部推行该计划时未遵守联邦程序规则。赫勒斯坦10月1日曾裁定案件可继续推进，但未下达禁令，相关监控仍在运行。法院称其案件将由新法官随机分派，案件管理会议定于11月12日。诉状援引联邦合同称，两部门采购了可追踪情绪变化的「五播」产品与具备人脸识别、情绪分析的彭林克工具。政府方承认会读取部分移民社媒内容，但否认存在铁板一块的监控计划。", "b": "事件10-28、报道10-29。美国《基督教科学箴言报》（The Christian Science Monitor）报道，纽约南区联邦地区法院法官阿尔文·赫勒斯坦（Alvin K. Hellerstein）10月28日去世，使一起针对政府以人工智能监控移民社交媒体言论的诉讼走向不明。法院方面表示，其案件将由新法官「随机」分派。\n\n该案由三家全国性工会——美国汽车工人联合会、美国通信工人协会与美国教师联合会——提起，主张政府对数百万签证与绿卡持有人网络活动的监控构成「观点歧视」，违反宪法第一修正案；同时指国务院与国土安全部在推行该计划时未遵守联邦程序规则，违反《行政程序法》。工会称，已有移民因所表达观点而遭遇「不利的移民处理」。\n\n赫勒斯坦10月1日在一份意见中写下「我同意」，裁定原告所指为一项持续运行的监控计划，正在抑制其成员言论并造成其他损害，案件得以继续推进；但他未同时下达禁令，因此相关监控目前仍在运行。政府方在驳回动议中承认会阅读部分移民的社交媒体内容，但形容为有针对性的做法，助理联邦检察官珍妮弗·朱德称不存在「铁板一块的政府监控计划」，并指原告把不相关个案拼凑成诉状。\n\n诉状援引联邦合同称，国务院与国土安全部采购了多款人工智能网络活动监测工具，包括制造商称可追踪个人发布数据中「情绪与情感变化」的「五播」（Fivecast）产品，以及可对图片做人脸识别、对帖文做情绪分析并将账号加入监视名单的彭林克（PenLink）工具。原告称，面对约5500万签证持有人，人工逐条浏览无法实现这种规模的筛查。\n\n威廉与玛丽法学院教授玛格丽特·胡（Margaret Hu）表示，案件处于早期、推进缓慢，距离下达关停监控计划的禁令仍很远。案件管理会议定于11月12日举行，将确定证据开示规则。国务院称不就进行中的诉讼置评，国土安全部不评论调查手段。"}, {"a": "item-tech-3", "t": "国际航协调查指旅客青睐生物识别", "e": "IATA survey finds growing demand for biometrics as travel barriers persist", "s": "移民与边境技术", "r": 3, "k": ["国际航协", "生物识别", "数字旅行凭证", "机场通关", "电子签证", "旅客调查", "无接触旅行"], "src": "生物识别更新（Biometric Update），报道国际航空运输协会（IATA）2026年全球旅客调查", "u": "https://www.biometricupdate.com/202610/iata-survey-finds-growing-demand-for-biometrics-as-travel-barriers-persist", "sum": "事件10-29、报道10-29。国际航空运输协会（IATA）10月29日发布《2026年全球旅客调查》，显示约六成旅客过去12个月至少使用过一次生物识别，87%对体验表示满意；78%的旅客表示，若能免于在机场检查点出示护照或登机牌，愿意分享生物特征信息；84%对以数字护照在线值机感兴趣，82%愿在订票付款后向航司提供数字护照以获取个性化服务。协会表示将与各国政府合作推动数字旅行凭证（DTC）的签发与互认，并发布「无接触旅行名录」，新西兰航空与中国香港国际机场成为首批通过「单一身份」（One ID）认证的机构。调查同时显示，入境要求已使43%的旅客放弃某一目的地，高于2025年的33%，其中53%将原因归于手续复杂；逾100个国家签发电子签证，但查验方式缺乏一致性。", "b": "国际航空运输协会（IATA）10月29日发布《2026年全球旅客调查》，并同步推出「无接触旅行名录」，供航空公司、机场与边境机构对接生物识别与数字身份合作方。协会运行、安全与安保高级副总裁尼克·卡林称，旅客正在接受技术以简化出行，人工智能已成为主流行程规划工具，生物识别与数字身份正在让机场流程更快、更顺畅；但许多旅客仍受复杂的入境与签证手续困扰，各国政府可通过简化入境要求、消除重复查验、加快安全数字旅行凭证的签发与互认来改善。\n\n调查的核心数据是：约六成旅客在过去12个月至少体验过一次生物识别，87%对体验表示满意，78%的旅客表示若能免于在检查点出示护照或登机牌，愿意分享生物特征信息。数字护照方面，84%对以数字护照在线值机感兴趣，82%愿在订票付款后向航司提供数字护照以取得个性化服务，同样比例的旅客对以整合数字钱包、数字护照与常旅客卡的方式管理行程有兴趣。\n\n顾虑方面，59%的受访者担心数据泄露，49%担心信息被分享给其他机构，41%担心个人信息处理方式不透明。近半数旅客已用人工智能规划行程，其中21%用于搜索特定目的地的航班，19%用于寻找最低价机票，17%用于咨询目的地建议。\n\n在入境环节，调查显示入境要求已使43%的旅客放弃某一目的地，高于2025年的33%；在因此受阻的旅客中，53%归因于手续复杂，隐私顾虑与费用各占17%。卡林称，逾100个国家签发电子签证，但查验方式缺乏一致性，而解决问题的工具已经存在。\n\n区域差异方面，北美旅客生物识别使用率最高，同时对数据泄露的担忧也最强；亚太次之，且旅客满意度全球最高；欧洲旅客在订票与在线值机环节使用生物识别和数字护照的意愿最低；中东旅客最倾向用人工智能规划行程，对数字护照与生物识别兴趣最强；拉美与加勒比旅客最希望抵达前完成入境手续；非洲对数字旅行解决方案兴趣最高。\n\n协会同时宣布，新西兰航空与中国香港国际机场成为首批获得「单一身份」认证的机构，认证覆盖准入数字化、无接触旅行、生物特征处理以及隐私、同意与治理四个领域。报道并提及印度「数字出行」自11月1日起在七座机场启动国际旅客试点。"}, {"a": "item-tech-4", "t": "喀麦隆赴科特迪瓦考察数字民事登记", "e": "Cameroon looks to Côte d'Ivoire to advance digital civil registration", "s": "移民与边境技术", "r": 2, "k": ["喀麦隆", "科特迪瓦", "民事登记", "数字身份", "人口登记册", "系统互操作", "南南合作"], "src": "生物识别更新（Biometric Update），引述喀麦隆国家民事登记局（BUNEC）公告", "u": "https://www.biometricupdate.com/202610/cameroon-looks-to-cote-divoire-to-advance-digital-civil-registration", "sum": "事件10-29、报道10-29。喀麦隆国家民事登记局（BUNEC）10月26日至30日派团访问科特迪瓦国家民事登记与身份识别局（ONECI），考察其在数字民事登记、人口登记册管理和系统互操作方面的做法，访问至报道日仍在进行。BUNEC称，此行由其总干事亚历山大·马里·约莫（Alexandre Marie Yomo）率领，目标是找出可在喀麦隆本地适用的实际抓手，重点是加快国家民事登记数据库建设。双方在阿比让围绕四个领域磋商：民事登记系统数字化转型的有效管理、民事登记数据库与国家身份系统的衔接、治理与变革管理、以及维持民事登记机构运转的经济与商业模式。喀麦隆目前为纸电并行，432个主要民事登记中心中仅60个完成信息化；其2025—2029战略计划拟实现全部432个中心信息化，并与医疗机构、法院和身份服务联通，2029年前形成互操作。科特迪瓦则以自然人国家登记册（RNPP）为身份基础设施底座，与ONECI管理的国民身份证和生物识别系统并行。", "b": "喀麦隆国家民事登记局10月26日至30日派代表团访问科特迪瓦国家民事登记与身份识别局，考察其数字民事登记、人口登记册管理与系统互操作做法。BUNEC表示，访问由其总干事亚历山大·马里·约莫率领，目的是识别可移植到喀麦隆的实际做法，特别是加快国家民事登记数据库的推出。该访问属于喀麦隆依2024年12月民事登记组织法推进的改革，也是2025—2029年民事登记与生命统计现代化战略计划的一部分。\n\n在阿比让，双方讨论了四个主要领域：民事登记系统数字化转型的有效管理；民事登记数据库与国家身份系统之间的衔接；治理与变革管理问题；以及维持民事登记机构运转所需的经济与商业模式。\n\n报道指出，数据库衔接是重点之一。喀麦隆目前实行混合模式，纸质登记占主导，数字系统仅在部分市镇运行，全国432个主要民事登记中心中已信息化60个。拟建的国家民事登记数据库将作为统一存储库，并支撑与其他政府身份系统的连接。按2025—2029战略计划，喀麦隆拟将全部432个主要中心信息化，并与医疗机构、法院和身份识别服务机构联通，2029年前实现与全国民事登记管理系统之间的互操作。\n\n科特迪瓦方面已建立自然人国家登记册，作为其身份基础设施的基础组成部分，与ONECI管理的国民身份证和生物识别识别系统并行；喀麦隆正研究其中哪些要素可用于自身改革。约莫此前公开表示，改革面临巨大资金缺口，估计需要约8500万美元，但他对2029年或2030年实现民事登记与生命统计系统全面数字化仍表乐观。"}, {"a": "item-tech-5", "t": "世行诊断海地身份证件缺口", "e": "World Bank finds Haiti's biometric ID infrastructure underused as 3M lack credentials", "s": "移民与边境技术", "r": 3, "k": ["海地", "世界银行", "国民身份证", "生物识别", "民事登记", "被遣返者", "身份核验"], "src": "生物识别更新（Biometric Update），报道世界银行《身份证生态系统诊断：海地》", "u": "https://www.biometricupdate.com/202610/world-bank-finds-haitis-biometric-id-infrastructure-underused-as-3m-lack-credentials", "sum": "事件10-29、报道10-29。世界银行新发布的国别诊断报告《身份证生态系统诊断：海地》估算，约270万至310万海地成年人没有有效国民身份证，国民唯一身份证覆盖率约67%，相当于每三名成年人中约有一人缺证。报告称，截至2025年5月，已制作的国民身份证中有逾65万张（约11%）未送达持证人，部分原因在于太子港集中印制、物流困难与安全形势。五岁以下儿童85%已登记出生，但仅77%持有出生证明。报告强调，发证本身不足，须与可及的民事登记、可靠的身份核验基础设施、有效治理机制和完备的数据保护立法同步推进；并点名最易被排斥群体，包括贫困家庭、偏远或不安全地区居民、以及因不安全局势流离失所者、被遣返者与回返者。海地国家身份办公室（ONI）虽具备生物特征去重与数字核验能力，但在政府服务中使用不足，且民事登记、身份与统计系统之间缺乏互操作。", "b": "世界银行新发布的国别诊断报告《身份证生态系统诊断：海地》估算，约270万至310万海地成年人没有有效国民身份证。按世行数据，国民唯一身份证已发放给约67%的海地成年人，约三分之一成年人缺少有效证件。\n\n报告强调，仅靠扩大登记不足以解决问题，还须配套可及的民事登记、可靠的身份核验基础设施、有效的治理机制和完备的数据保护立法。海地通过2020年法令引入带生物识别芯片的身份证，并推动分散印制、扩大服务点，取得一定进展，但发卡与送达仍是主要瓶颈：截至2025年5月，逾65万张国民身份证（约占总制作量11%）未送达持证人，世行将其部分归因于太子港集中印制、物流困难以及安全局势。五岁以下儿童中85%已登记出生，但仅77%持有出生证明，这一差距说明扩大身份证覆盖须同步改善底层民事登记。\n\n世行驻海地国家经理安娜·吕西·勒费弗尔表示，投资身份证生态系统不仅是履行一项基本权利，也是促进海地包容性、可持续就业机会的战略机遇；改善身份系统、使公私服务提供方能够使用，可实现唯一性核验、证件真实性核验和身份信息校验等关键服务。\n\n报告点名最易被排斥的群体：较贫困家庭、居住在偏远或不安全地区者、因文化障碍难以登记出生的妇女，以及因不安全局势流离失所者，包括被遣返者、回返者和境内流离失所者。报告指出，身份证名义上免费，但非正式收费、交通费用、多次往返和误工收入使登记实际成本高昂，建议把服务送到农村与不安全社区、简化逾期出生登记、减少单亲母亲登记子女的障碍。\n\n技术层面，报告还指出海地民事登记、身份识别与统计系统之间缺乏互操作，尚无运行中的国家数据共享基础设施，也没有集中或联邦式人口登记册；国家身份办公室虽具备生物特征去重与数字核验能力，但在政府服务中使用不足，许多机构仍依赖人工核验和各自独立的数据库。报告建议自出生即赋予唯一识别号、建立国家数据共享基础设施、开发可验证数字凭证、扩展远程身份核验能力，并警告对外部资金和专有技术供应商的依赖可能削弱身份基础设施的长期可持续性。\n\n报道并提及，今年8月美洲国家组织与日本的合作协议提供300万美元赠款，用于采购35万张空白生物识别身份证、扩大外展并改善身份证办公室的电力与网络连接。"}, {"a": "item-tech-6", "t": "澳推动美方改用生物特征核验模式", "e": "Australia Presses US for Validation-Based Biometric Screening Model", "s": "移民与边境技术", "r": 4, "k": ["生物识别", "数据共享", "免签计划", "旅客预检", "身份核验", "隐私边界", "澳美关系"], "src": "生物识别更新（Biometric Update）", "u": "https://www.biometricupdate.com/202610/australia-presses-us-for-biometric-validation-model-that-could-keep-fingerprints-at-home", "sum": "事件10-27、报道10-29。美国「生物识别更新」（Biometric Update）10月29日刊文称，澳大利亚正推动美方接受一种身份核验模式，使美国边境部门可在澳方不直接移交生物特征模板的情况下，用美方提供的身份信息比对澳方记录。相关磋商在10月27日（周二）澳参议院听证会上披露，澳官员称8月与10月已与美方会谈，华盛顿正考虑该提议。报道称磋商涉及美国国土安全部2022年起对免签计划参与国提出的「强化边境安全伙伴关系」要求；由于美方免签电子授权系统不采集指纹，该部称与生物特征关联的国家身份编号可作为「生物特征锚定」标识发起自动查询。澳方倾向只回传「信息是否属实」的确认。两国2014年已签签证与移民信息共享协定，现有五国移民数据网以指纹自动交换。美方设定的12月31日期限构成压力。", "b": "报道由「生物识别更新」刊出，美东时间10月28日16时16分发布，折北京时间10月29日4时16分；所披露的磋商情况来自10月27日澳大利亚参议院听证会，报道并援引澳媒「创新澳洲」（InnovationAus）此前消息。\n\n核心争点是「谁来比对」。澳方希望美方接受核验式安排：由美方提供待查身份信息，澳方在本国系统内比对后只回传「信息是否属实」的确认，而不直接把生物特征模板交给美方。澳官员称，8月与10月已与美方对口部门会谈，华盛顿表示澳方既可选择提供生物特征信息，也可选择确认美方所供信息是否正确，澳方倾向前者之外的后者。\n\n制度背景是美国国土安全部2022年起对免签计划（VWP）参与国提出的「强化边境安全伙伴关系」（EBSP）要求，欧盟委员会将其描述为加入并持续参与该计划的条​件。由于美国免签电子授权（ESTA）不采集指纹，该部称与生物特征关联的国家身份编号可作为「生物特征锚定」的标识发起自动查询；查询命中可返回身份与旅行证件信息、国籍、已知重罪定罪与逮捕记录以及移民身份等。\n\n技术上两国已有基础。澳内政部记录显示，「五国移民数据网」（M5）通过安全实时平台与美国、加拿大、新西兰自动交换指纹；2014年两国签署签证与移民信息共享协定，其执行安排规定初始以指纹为查询标识，但「经各方书面同意可增加其他标识」。文章据此指出，澳方或可在境内完成生物特征比对的同时，授权以其他标识发起查询。\n\n未定事项仍多：美方究竟发送指纹、护照信息还是其他编号；比对是否全部在澳境内完成；命中后回传的是单纯确认，还是一揽子刑事情报与移民记录。程序上，若以现有协定下的非约束性执行安排落地，可能无需再走完整条约程序，澳外交贸易部仅称条约修订属条约行为。时间压力来自美方设定的12月31日期限，欧盟委员会称各伙伴协议预计届时完成；欧盟与美国7月23日完成框架谈判，欧委会9月10日提出签署与临时适用决定，并把自动身份核验与后续信息交换分开处理。"}, {"a": "item-research-1", "t": "皮尤：归化选民占合格选民一成", "e": "What We Know About Eligible Voters Who Are Naturalized U.S. Citizens", "s": "移民与边境研究", "r": 4, "k": ["归化公民", "选民结构", "美国移民", "语言多样性", "人口普查数据", "教育程度", "家庭收入", "族裔构成"], "src": "皮尤研究中心（Pew Research Center）", "u": "https://www.pewresearch.org/short-reads/2026/10/27/what-we-know-about-eligible-voters-who-are-naturalized-us-citizens", "sum": "报告10-27发布。皮尤研究中心基于美国社区调查（ACS）2024年数据与2000年人口普查5%样本，刻画了具备投票资格的归化公民群体。归化选民人数从2000年约1200万（占全体合格选民6.2%）增至2024年约2520万（10.3%），增速快于合格选民总体。其中96.4%能讲英语，与本土出生选民的99.9%相差不大；但76.0%同时讲英语以外的至少一种语言，远高于本土出生选民的10.2%，家中最常用的外语依次为西班牙语、中文、印地语及相关语言、菲律宾语／他加禄语。该群体年龄偏大，59.8%在50岁以上，中位年龄54岁（本土出生选民47岁）；家庭收入中位数10.5万美元，高于本土出生选民的9.4万美元；39.8%拥有学士及以上学位。族裔构成上，拉美裔占33.2%、亚裔占32.3%、白人占20.1%、黑人占10.7%；亚裔合格选民中归化者比例达64.7%，是唯一以归化公民为主体的主要族裔群体。出生地以墨西哥居首（约15%），菲律宾、印度、中国、越南随后。", "b": "皮尤研究中心10月27日发布的这篇数据解读，把「归化公民」这一常被笼统讨论的群体拆解为可核对的人口学画像。作者席夫拉·达雅克（Shifra Dayak）与米娅·亨嫩（Mia Hennen）使用的底数是2024年美国社区调查（经明尼苏达大学IPUMS提取）以及2000年人口普查5%样本，因此所有比例都可回溯到公开数据，而非调查估算。\n\n最值得注意的结构性发现有三点。第一是规模与增速：归化选民占比在24年间从6.2%升到10.3%，其增长快于合格选民总体，这意味着这一群体的政治权重在机械地上升。第二是语言：英语能力几乎不构成障碍（96.4%），但多语比例高达76.0%，与本土出生选民的10.2%形成鲜明反差，说明「只会母语、难以融入」的叙事在数据上缺乏支撑。第三是社会经济位置：家庭收入中位数与学士学位比例均高于本土出生选民，这与「移民拉低平均受教育水平」的常见判断方向相反。\n\n族裔维度的差异同样重要。亚裔合格选民中有64.7%为归化公民，是唯一以归化者为主体的主要族裔群体；拉美裔仅约四分之一为归化，其选民增长主要来自本土出生者成年，而非入籍。这一区别提示，把亚裔与拉美裔选民都当作「移民选民」来处理，会误判两组人各自的政治形成路径。\n\n报告同时提醒口径边界：文中所有指标衡量的是「投票资格」，不含登记率与实际投票率；族裔分类采用非拉丁裔单一族裔口径，混血与「其他」不在四类之内。因此这些数字适合描述选民池的构成变化，不宜直接推导为选举结果或党派倾向。"}, {"a": "item-research-2", "t": "基金组织研究非洲被迫流离宏观影响", "e": "Macroeconomic Effects of Forced Displacement in Sub-Saharan Africa", "s": "移民与边境研究", "r": 5, "k": ["被迫流离", "撒哈拉以南非洲", "宏观经济影响", "难民流入", "财政收支", "境内流离失所", "双重差分", "国别案例"], "src": "国际货币基金组织（IMF），工作论文第228号", "u": "https://www.elibrary.imf.org/view/journals/001/2026/228/001.2026.issue-228-en.xml", "sum": "论文10-23上线。国际货币基金组织（IMF）第228号工作论文以撒哈拉以南非洲为对象，用跨国面板与布基纳法索、南苏丹、乌干达三国案例，估计被迫流离对东道国宏观经济的影响。研究采用双重差分局部投影（LP-DiD）方法，基于1970至2023年数据识别出54次大规模难民流入事件，平均流入规模相当于东道国人口的2.28%，进一步筛选后分析30国的33次冲击。结果显示，大规模难民流入在五年期内对东道国国内生产总值、通胀与经常账户余额均无统计显著影响；财政基本余额看似平稳，但掩盖了对冲结构——政府支出初期上升约1个百分点GDP、两年后峰值约2.5个百分点，财政收入同期上升且五年后税收约高出近2个百分点。若把境内流离失所者一并计入，流离人口超过全国人口5%的国家产出明显走弱，超过7%时更甚，但作者强调该估计难以与冲突本身的破坏效应分离，宜视为上限。", "b": "这篇10月23日上线的工作论文，作者为哈尼·阿卜杜勒-拉蒂夫（Hany Abdel-Latif）、安东尼奥·戴维（Antonio David）、穆哈马杜·穆斯塔法·利（Mouhamadou Moustapha Ly）、埃利塞·温德拉西达·米宁古（Elisee Wendlassida Miningou）、冈本雅辉（Masateru Okamoto）与亚历克斯·瓦瓦尔·皮埃尔-夏尔（Alex Vaval Pierre-Charles）。其价值不在于给出新数字，而在于用相对严格的识别策略，检验一个长期被政治化使用的命题：难民流入是否必然拖累东道国经济。\n\n背景规模先说清楚。区域内被迫流离人口从2010年的870万增至2025年的4090万，约占全球总量35%；其中境内流离者约3000万，接近难民人数的三倍。乌干达收容近200万难民，是区域最大收容国；苏丹境内流离者约910万。约92.5%的难民与寻求庇护者来自邻国，压力高度集中于跨境地带。\n\n核心发现是对称的两面。一面是「没有显著恶化」：五年期内实际GDP、消费物价、经常账户与财政基本余额均无统计显著变化，即便把对照组限定为撒哈拉以南经济体结果依然稳健。另一面是「财政并非无成本」：支出上升与收入上升同时发生，收入端主要来自与难民消费和人道主义活动相关的税收，两者相互抵消，才使基本余额看起来平静。这意味着短期财政压力真实存在，只是被税基扩张掩盖了。\n\n三国案例揭示了国家层面的分化。布基纳法索的境内流离降低了东道社区的就业机会，服务业工资承压、工业工资上升，农业与服务业家庭消费下滑。乌干达的难民流入与就业机会增加相关，尤其在农村，但平均工资未见改善，住房、交通、医疗等服务价格压力使家庭消费下降。南苏丹在2023年4月苏丹冲突后至2025年12月接收约126万难民与回返者，受影响县的食品价格结构出现分化——进口与加工食品涨价，本地生产的谷物相对稳定甚至下跌，玉米粉十二个月内涨68%、小麦粉涨32%，而白小米下跌19%。\n\n政策含义落在「准入」二字上：作者主张让流离人口获得土地、农业投入品、就业与推广服务，既能改善其生计，也能通过本地粮食供给反哺东道社区。需要留意的是，论文以工作论文形式发布，目的是引发讨论，结论不代表基金组织执董会立场；且「流离人口占比越高、产出越弱」的估计无法完全剥离冲突破坏，解读时应保留这一保留。"}, {"a": "item-research-3", "t": "伯克利报告：加州气候迁移未入规划", "e": "Climate-Induced Human Displacement and Migration Statewide Topical Report", "s": "移民与边境研究", "r": 4, "k": ["气候迁移", "加州", "流离失所", "适应规划", "住房不稳定", "山火疏散", "社会脆弱性", "跨部门治理"], "src": "加州大学伯克利分校人权中心（UC Berkeley Human Rights Center）", "u": "https://humanrights.berkeley.edu/publications/climate-induced-human-displacement-and-migration-statewide-topical-report/", "sum": "报告10-21发布。加州大学伯克利分校人权中心牵头、多学科作者合作的这份全州专题报告，属加州第五次气候变化评估的组成部分，系统梳理气候驱动的流离与迁移在加州的动因、路径与后果。报告指出，山火、洪水、极端高温、干旱与海平面上升叠加住房、基础设施与既有社会不平等，共同决定居民是原地留下、临时搬迁还是永久迁离；租房者、低收入家庭、无证居民、原住民部落、农村人口与气候暴露行业劳动者承受更高风险。2017至2019年重大山火期间，超过一百万加州人接到疏散令，显示山火风险可同时冲击住房、交通、就学、就业与社区生活。报告的核心判断是：气候迁移与流离尚未被系统纳入州与区域适应规划，导致预判能力、公平响应与韧性建设均受限；住房不稳定是将气候冲击转化为流离的核心传导路径。", "b": "这份10月21日发布的报告是加州第五次气候变化评估中的专题卷之一，作者阵容跨越人权、城市规划、公共卫生与环境科学，由侯赛因·阿亚齐（Hossein Ayazi）、贝茜·波普肯（Betsy Popken）领衔，凯伦·查普尔（Karen Chapple）等参与，共18位作者。它的分析框架值得注意：把「动因—路径—后果」三段拆开，而不是笼统讨论「气候移民」。动因是气候、社会、经济与政治因素的交互；路径是流动的形式、时点与地理格局；后果则落到个人、社区、基础设施、公共服务与区域经济。\n\n报告把加州的气候流离分为三类空间尺度：州内流动、州际迁移、进出加州的国际迁移。这一划分避免了把「气候移民」简化为跨境现象——在加州，绝大多数气候驱动的移动其实发生在州内，且往往表现为短距离、临时性、反复发生的撤离与回迁，而非一次性的永久迁离。\n\n最实质的机制发现是住房。报告认为住房不稳定是气候冲击转化为流离的核心传导路径，租房者与低收入居民首当其冲：疏散期间失去住所、保险与租金援助不到位、回迁后住房成本上升，都会把一次天气事件变成长期流离。2017至2019年山火季超过百万人被下令疏散的规模，说明这种转化在加州已反复发生。\n\n治理层面的批评直接而具体。报告指出，气候迁移与流离尚未被系统纳入州与区域适应规划，住房、应急管理、交通、能源、水资源等部门各自为政，缺乏统一的预判口径；社区组织与地方政府在支持流离人口上作用关键，却缺乏稳定资源，也未进入正式规划体系。建议集中在三点：建立跨部门协调与治理对齐、建设可互操作的数据系统以支撑规划与公平政策、发展去中心化的能源与交通等韧性基础设施，同时通过增强社会凝聚力与社区认同来维持韧性。\n\n需要说明的是，这是一份证据综述与政策建议型报告，而非新的实证研究；其说服力来自对既有文献与州级数据的整合，而非原创调查。对关注气候—迁移交叉议题的研究者，它的价值在于提供了一个可操作的州级分析模板与一份明确的规划缺口清单。"}, {"a": "item-research-4", "t": "皮尤：拉美裔选民最看重经济议题", "e": "The Economy Is the Top Issue for Latino Voters in the 2026 Midterms", "s": "移民与边境研究", "r": 4, "k": ["拉美裔选民", "中期选举", "议题排序", "经济评价", "遣返政策", "党派差异", "民调", "美国政治"], "src": "皮尤研究中心（Pew Research Center）", "u": "https://pewresearch.org/race-and-ethnicity/2026/10/16/the-economy-is-the-top-issue-for-latino-voters-in-the-2026-midterms", "sum": "报告10-16发布。皮尤研究中心于2026年9月28日至10月4日访问5062名美国成年人，其中包含774名拉美裔登记选民，考察其在中期选举中的议题排序与政策评价。86%的拉美裔登记选民表示经济对投票「非常重要」，为各议题之首；医保（80%）与教育（75%）次之，民主前途（69%）与移民（64%）紧随。经济议题的优先级跨越党派：支持民主党候选人的拉美裔中89%如此认为，支持共和党候选人的为78%，但在医保与教育上两党支持者相差31与27个百分点。对经济状况的评价明显转差，仅19%认为全国经济极好或良好，低于一年前的26%；74%认为特朗普的经济政策使状况变坏，高于2025年的61%。在驱逐议题上，多数拉美裔选民认为本届政府在遣返上「做得过多」。", "b": "这项10月16日发布的调查，样本为5062名美国成年人，其中拉美裔登记选民774人，调查期为2026年9月28日至10月4日，通过皮尤的美国趋势面板（ATP）以英语和西班牙语实施。就移民议题而言，它提供了两个值得注意的读数。\n\n第一是议题排序中的位置。移民被64%的拉美裔登记选民列为对国会投票「非常重要」，排在民主前途（69%）之后，明显低于经济（86%）、医保（80%）与教育（75%）。这与一种常见假设——拉美裔选民首先以移民议题投票——并不一致。报告的分项数据还显示，支持民主党候选人的拉美裔登记选民中67%、支持共和党候选人的为57%把移民列为非常重要，两者相差仅10个百分点；相比之下医保为87%对56%、教育为84%对57%，落差达31与27个百分点，说明移民议题在拉美裔内部的党派分化反而小于医保与教育。\n\n第二是政策评价的方向。多数拉美裔选民认为本届政府在遣返问题上做得过多，这与该群体对经济状况的悲观评价叠加，构成一个内部的张力：经济是首要关切，而移民执法被视为经济与社区稳定的干扰项之一，而非解决方案。报告还记录了对特朗普经济政策的评价从2025年的61%认为「使状况变坏」升至今年的74%，以及对当前经济状况正面评价从26%降至19%。\n\n在解读上需要保持克制。第一，这是单一时点的横截面调查，无法说明态度变化的因果来源；774名拉美裔登记选民的子样本在细分交叉分析时误差会明显放大，报告本身也未把族裔内部（如古巴裔、墨西哥裔、波多黎各裔）的差异作为主轴。第二，调查衡量的是议题重要性排序与政策评价，不等于投票选择，两者之间还隔着候选人、选区与动员等因素。第三，样本来自自愿加入的概率面板，皮尤虽然做了加权处理，但无应答偏差仍需考虑。\n\n对移民研究而言，这份数据最有用的地方在于把「拉美裔＝移民议题选民」的简化说法，替换为一组可比较的议题权重与政策评价，从而让讨论回到可检验的量度上。"}, {"a": "item-research-5", "t": "欧盟季报：三季度移民权利风险盘点", "e": "Migration and Fundamental Rights Bulletin - 3/2026", "s": "移民与边境研究", "r": 4, "k": ["基本权利公报", "地中海死亡", "休达事件", "边境安全法", "芬兰", "庇护权", "监督机制", "临时保护"], "src": "欧盟基本权利署（FRA）", "u": "https://fra.europa.eu/en/publication/2026/migration-bulletin-3-2026", "sum": "报告10-22发布。欧盟基本权利署（FRA）第三期《移民与基本权利公报》覆盖2026年7月1日至9月30日。据国际移民组织数据，该季度地中海及大西洋加那利航线至少852人死亡或失踪，其中西非—大西洋线283人、西地中海229人、东地中海199人、中地中海141人。7月30日逾7.2万人从摩洛哥非正常进入休达，据西班牙内政部数据；媒体报道至少88人在游泳越境途中死亡，涉及生命权风险、对抵境者过度使用武力的指控、接待条件不足与儿童保护等问题。芬兰9月3日提议将《边境安全法》延长至2028年12月31日，该法允许在混合移民事件中暂停部分地区庇护申请；FRA认可其安全关切，但强调延长须配套保障寻求庇护权与不驱回原则。截至9月底，22个成员国已指定基本权利监督机构或相关立法正在通过程序，仅7国开展监督访问，匈牙利、意大利、马耳他、波兰、瑞典尚未落实。", "b": "这是欧盟基本权利署2026年第三期季度公报，10月22日发布，覆盖7月1日至9月30日。季度公报制度本身有法律出处：欧盟《庇护与移民管理条约》第10条第2款h项要求欧盟委员会在评估成员国是否处于移民压力时参考FRA的公报，因此这份文件不是倡议性报告，而是进入欧盟决策流程的输入。\n\n第一组数据关于旅途死亡。国际移民组织记录该季度至少852人在赴欧途中死亡或失踪，分布为西非—大西洋线283人、西地中海229人、东地中海199人、中地中海141人。值得注意的是西非—大西洋（加那利）航线在本季度居首，这与近年该航线船只超载、航程延长、搜救覆盖不足的结构性问题相互印证。\n\n第二组围绕休达。7月30日逾7.2万人从摩洛哥非正常进入休达，为西班牙内政部数据；媒体报道至少88人在游泳越境时死亡。FRA列出的权利关切具体而克制：生命权风险、对抵境者不当使用武力的指控、接待条件不足、儿童保护缺位。这一事件同时是欧盟外部边界治理的测试案例，并与欧盟遣返条例的谈判节奏相互叠加。\n\n第三组是监督机制的落地进度。截至9月底，22个成员国已指定监督机构或立法在途，仅7国开展监督访问，匈牙利、意大利、马耳他、波兰、瑞典五国仍未落实。这与FRA同期发布的另一份更新报告结论一致，两份文件互为印证。\n\n第四组涉及具体国别。芬兰9月3日提议将《边境安全法》延长至2028年12月31日；该法允许政府在混合移民事件中经单独决定暂停部分地区庇护申请，2023年末曾被用于关闭整个东部陆路边界。FRA认可赫尔辛基的安全关切，但要求延长必须附带保障寻求庇护权与不驱回原则的机制。公报同时记录芬兰边境警卫队宣布沿俄罗斯边界的200公里、高4.5米围栏主体结构完工，传感器集成仍在进行。\n\n第五组关于乌克兰流离群体。各国对临时保护延期后的支持范围、水平与替代身份准入差异明显；有兵役义务的乌克兰男性被排除在最新一次临时保护延期之外，但仍可申请庇护，且在某些情形下拒绝服兵役本身可构成保护理由。这一条对理解欧洲临时保护的收缩边界尤为关键。\n\n需要提醒的是，公报是季度汇编性质的监测文件，数字多引自国际移民组织、西班牙内政部与各国通报，FRA自身并不重新测算；其价值在于把分散的权利风险集中呈现并纳入欧盟评估程序。"}, {"a": "item-research-6", "t": "移民组织周报追踪中东流离态势", "e": "Escalation in the Middle East and beyond — Mobility Report, 22 October 2026", "s": "移民与边境研究", "r": 4, "k": ["流离监测矩阵", "也门", "黎巴嫩", "叙利亚", "吉布提", "跨境流动", "人道准入", "中东"], "src": "国际移民组织（IOM）流离监测矩阵（DTM），经 ReliefWeb 转载", "u": "https://reliefweb.int/report/iran-islamic-republic/escalation-middle-east-and-beyond-mobility-report-22-october-2026", "sum": "报告10-22发布（经ReliefWeb于10-23上网）。国际移民组织（IOM）流离监测矩阵（DTM）发布的中东及周边流动周报显示，也门西海岸冲突升级带来的新增流离与黎巴嫩的回返潮同时发生，叙利亚仍是区域流动的主要汇入端。也门西海岸9月初冲突升级后流离加剧，6月7日至10月19日记录约25.87万名新增流离者，多数被塔伊兹与拉赫季两省收容；截至10月17日，3836名也门人抵达吉布提，报告称系逃离安全局势恶化。黎巴嫩截至9月29日仍有32.92万人在618个乡级单位内流离，较上一报告期下降3%；同期已登记回返者87.72万人，环比增加1%。进入叙利亚的跨境流动持续，截至10月19日累计记录91.7万人次。报告同时指出，伊朗境内基础服务与基础设施中断持续，海运与航空限制影响人员流动与人道准入，但伊朗境内人口移动仍属本地化、临时性与经济驱动，未见大规模流离迹象。", "b": "这份10月22日发布的流动周报，是国际移民组织流离监测矩阵在中东危机背景下持续更新的系列产品之一。它的价值不在预测，而在把分散于多国的登记与流动监测数据放进同一时间轴，使跨境与境内流离的相对规模可比较。\n\n也门是本期压力最集中的一段。西海岸9月初冲突升级后，流离在极短时间内放大：6月7日至10月19日记录约25.87万名新增流离者，多数进入塔伊兹与拉赫季。由于两省本身已承载大量既有流离人口，新增者往往进入资源已被摊薄的安置点与收容社区。报告同时记录了向外的一支：截至10月17日，3836名也门人抵达吉布提，报告判断其动机是逃离恶化的安全局势。\n\n黎巴嫩的读数呈现「回流与流离并存」。截至9月29日，全国618个乡级单位内仍有32.92万人处于流离状态，较9月15日的上一报告期下降3%；同期登记回返者达87.72万人，环比增加1%。回返规模远大于仍在流离的人数，但回返并不等于复原——报告未评估回返地住房与服务的可及性，这一缺口在解读时应予保留。\n\n叙利亚方向仍是区域流动的主要汇入端。截至10月19日，跨境进入叙利亚的流动累计记录91.7万人次，数据来源包括DTM叙利亚团队，并与边境当局、伊拉克边境口岸委员会及巴基斯坦当局协同。伊朗方面，报告判断人道形势持续受反复升级影响，基础服务与基础设施中断未解，海运与航空限制同时压制人员流动与人道准入；但报告明确指出，伊朗境内人口移动仍属本地化、临时性与经济驱动，未见大规模流离迹象。\n\n方法论上需注意三点。第一，DTM数据基于登记与关键信息人报告，覆盖不等于全量，同一家庭重复流动可能被多次记录，因此应读作流动事件而非独立个体。第二，各国的数据截止日期并不统一（10月17日、9月29日、10月19日），跨段比较需谨慎。第三，报告以周为节奏更新，单期读数不宜直接外推为趋势，需连续多期观察。对关注中东流离的研究者与救援机构而言，这份周报的实用之处在于提供了一个口径一致、可连续追踪的基线。"}];
+  var CUR = document.body.getAttribute('data-date');
+  var q = document.getElementById('q');
+  var qGo = document.getElementById('qGo');
+  var qHist = document.getElementById('qHist');
+  var res = document.getElementById('qResults');
+  var histCache = {}, idxProm = null, PATH = null;
+  // 跨天数据索引候选路径：站点日报页 / 站点首页 / 本地仓库预览
+  var PATHS = [
+    { idx:'../api/index.json', api:'../api/', rep:function(d){ return d + '.html'; } },
+    { idx:'api/index.json', api:'api/', rep:function(d){ return 'reports/' + d + '.html'; } },
+    { idx:'../../site/api/index.json', api:'../../site/api/', rep:function(d){ return '../../reports/' + d + '/migration-intel-daily-' + d + '.html'; } }
+  ];
+  function esc(s){ return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+  function terms(str){ return (str||'').trim().toLowerCase().split(/\s+/).filter(Boolean); }
+  function hayOf(it){ var kk = Array.isArray(it.k) ? it.k.join(' ') : (it.k || ''); return (it.t+' '+it.e+' '+it.s+' '+it.src+' '+it.u+' '+kk+' '+it.sum+' '+it.b).toLowerCase(); }
+  function hit(it, ts){ return ts.every(function(t){ return hayOf(it).indexOf(t) >= 0; }); }
+  function hi(s, ts){
+    var out = esc(s);
+    ts.forEach(function(t){
+      if (!t) return;
+      var re = new RegExp('(' + t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'ig');
+      out = out.replace(re, '<mark>$1</mark>');
+    });
+    return out;
+  }
+  function getIndex(){
+    if (idxProm) return idxProm;
+    idxProm = new Promise(function(resolve){
+      var i = 0;
+      function tryNext(){
+        if (i >= PATHS.length) return resolve(null);
+        var p = PATHS[i++];
+        fetch(p.idx).then(function(r){ if (!r.ok) throw 0; return r.json(); })
+          .then(function(j){ PATH = p; resolve(j); })
+          .catch(tryNext);
+      }
+      tryNext();
+    });
+    return idxProm;
+  }
+  function todayHtml(ts){
+    var hits = TODAY.filter(function(it){ return hit(it, ts); });
+    return '<h4>今日（' + esc(CUR) + '）· ' + hits.length + ' 条</h4>' +
+      (hits.map(function(it){
+        return '<div class="qr"><a href="#' + it.a + '">' + hi(it.t, ts) + '</a>' +
+          '<div class="qr-meta"><span>' + '★★★★★☆☆☆☆☆'.slice(5 - Math.min(5, Math.max(1, it.r|0)), 10) + '</span>' +
+          '<span>' + esc(it.s) + '</span><span>来源：' + esc(it.src) + '</span>' +
+          '<a href="' + esc(it.u) + '" target="_blank" rel="noopener">原文 ↗</a></div></div>';
+      }).join('') || '<div class="qr" style="color:#5a647c">今日无匹配</div>');
+  }
+  function render(){
+    var ts = terms(q.value);
+    if (!ts.length){ res.style.display = 'none'; res.innerHTML = ''; return; }
+    var histHint = qHist.checked
+      ? '<div class="qhint">💡 按回车或点击「检索」，在全部历史日期中继续查找…</div>'
+      : '<div class="qhint">未启用历史日期检索</div>';
+    res.innerHTML = todayHtml(ts) + '<div id="qHistBox">' + histHint + '</div>';
+    res.style.display = 'block';
+  }
+  function histItemHtml(it, ts, repUrl){
+    return '<div class="qr"><a href="' + esc(it.url) + '" target="_blank" rel="noopener">' + hi(it.title_zh, ts) + '</a>' +
+      '<div class="qr-meta"><span>' + '★★★★★☆☆☆☆☆'.slice(5 - Math.min(5, Math.max(1, it.rating|0 || 3)), 10) + '</span>' +
+      '<span>' + esc(it.section_name || '') + '</span><span>来源：' + esc(it.source || '') + '</span>' +
+      '<a href="' + repUrl + '">当日日报 →</a></div></div>';
+  }
+  function searchHist(){
+    var ts = terms(q.value);
+    if (!ts.length || !qHist.checked) return;
+    var box = document.getElementById('qHistBox');
+    if (!box) return;
+    box.innerHTML = '<div class="qhint">⏳ 正在打开历史数据索引…</div>';
+    getIndex().then(function(idx){
+      if (!idx){ box.innerHTML = '<div class="qhint">⚠️ 当前环境读取不到历史数据索引（file:// 本地直开不支持跨天检索，请通过站点在线访问：https://ljixin415-moker.github.io/ ）。</div>'; return; }
+      var dates = (idx.dates || []).map(function(x){ return x.date; }).filter(function(d){ return d !== CUR; });
+      var done = 0, i = 0, total = dates.length, conc = 4;
+      function worker(){
+        if (i >= dates.length){ finish(); return; }
+        var d = dates[i++];
+        fetch(PATH.api + d + '.json').then(function(r){ return r.json(); }).then(function(j){
+          var items = [];
+          (j.sections || []).forEach(function(s){
+            (s.items || []).forEach(function(it){ it.section_name = s.section_name; items.push(it); });
+          });
+          histCache[d] = items;
+        }).catch(function(){ histCache[d] = []; }).then(function(){
+          done++;
+          var b = document.getElementById('qHistBox');
+          if (b) b.innerHTML = '<div class="qhint">⏳ 正在检索历史 ' + done + '/' + total + ' 期…</div>';
+          worker();
+        });
+      }
+      for (var w = 0; w < conc && w < total; w++) worker();
+      function finish(){
+        var html2 = '', n = 0;
+        (idx.dates || []).forEach(function(x){
+          var d = x.date;
+          if (d === CUR) return;
+          var items = histCache[d] || [];
+          var hits = items.filter(function(it){
+            return hit({ t:it.title_zh, e:it.title_en, s:it.section_name || '', src:it.source || '', u:it.url || '', k:it.keywords || [], sum:it.summary || '', b:it.brief || '' }, ts);
+          });
+          if (hits.length){
+            n += hits.length;
+            html2 += '<h4 style="margin-top:12px">📅 ' + d + ' · ' + hits.length + ' 条<a class="qr-link" href="' + PATH.rep(d) + '">当日日报 →</a></h4>' +
+              hits.map(function(it){ return histItemHtml(it, ts, PATH.rep(d)); }).join('');
+          }
+        });
+        var b = document.getElementById('qHistBox');
+        if (b) b.innerHTML = '<h4>历史日期 · ' + n + ' 条（共检索 ' + total + ' 期）</h4>' +
+          (html2 || '<div class="qr" style="color:#5a647c">历史日期无匹配</div>');
+      }
+    });
+  }
+  var deb = null;
+  q.addEventListener('input', function(){ clearTimeout(deb); deb = setTimeout(render, 200); });
+  qGo.addEventListener('click', function(){ render(); searchHist(); });
+  q.addEventListener('keydown', function(e){ if (e.key === 'Enter'){ render(); searchHist(); } });
+  qHist.addEventListener('change', function(){
+    if (!qHist.checked){ var b = document.getElementById('qHistBox'); if (b) b.innerHTML = '<div class="qhint">未启用历史日期检索</div>'; }
+  });
+})();
+</script>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('../sw.js').then(reg => {
+      reg.update();                          // 每次打开主动检查新版本
+      setInterval(() => reg.update(), 3600*1000); // 常驻页面每小时检查
+    }).catch(()=>{});
+  });
+}
+let deferredPrompt = null;
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  const btn = document.getElementById('pwa-install-btn');
+  if (btn) {
+    btn.style.display = 'inline-block';
+    btn.onclick = async () => {
+      deferredPrompt.prompt();
+      await deferredPrompt.userChoice;
+      deferredPrompt = null;
+      btn.style.display = 'none';
+    };
+  }
+});
+</script>
+</body>
+</html>
