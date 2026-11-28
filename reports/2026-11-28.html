@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>全球移民与边境安全态势感知日报 · 2026-11-28</title>
+<style>
+:root {
+  --bg:#f4f6fa; --card:#ffffff; --ink:#16213a; --muted:#5a647c; --line:#e2e7f0;
+  --navy:#0f2e5c; --accent:#1a4f9c; --accent2:#0e7a6f; --gold:#d99114; --soft:#eaf0fa;
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; font-family:"Microsoft YaHei","PingFang SC","Segoe UI",sans-serif; background:var(--bg); color:var(--ink); line-height:1.75; }
+.wrap { max-width:1080px; margin:0 auto; padding:0 16px 60px; }
+header { background:linear-gradient(120deg,#0a1f40 0%,#0f2e5c 55%,#1a4f9c 100%); color:#fff; padding:38px 16px 30px; }
+header h1 { margin:0 0 6px; font-size:26px; letter-spacing:1px; }
+header .sub { opacity:.9; font-size:13px; }
+.stats { display:flex; gap:12px; flex-wrap:wrap; margin:20px 0 0; }
+.stat { background:rgba(255,255,255,.13); border:1px solid rgba(255,255,255,.25); border-radius:12px; padding:8px 16px; }
+.stat b { font-size:20px; display:block; }
+.stat span { font-size:12px; opacity:.9; }
+.navbar { position:sticky; top:0; z-index:9; background:rgba(255,255,255,.97); backdrop-filter:blur(6px); border-bottom:1px solid var(--line); padding:8px 12px; overflow-x:auto; -webkit-overflow-scrolling:touch; }
+.navbar .inner { max-width:1080px; margin:0 auto; display:flex; gap:8px; flex-wrap:nowrap; }
+@media (min-width:768px) { .navbar .inner { flex-wrap:wrap; } }
+.nav-chip { font-size:12.5px; color:var(--accent); background:var(--soft); border:1px solid #cfdcf5; border-radius:999px; padding:4px 12px; text-decoration:none; white-space:nowrap; }
+.nav-chip b { color:#fff; background:var(--accent); border-radius:999px; padding:0 6px; font-size:11px; margin-left:2px; }
+.panel { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:22px 24px; margin-top:24px; box-shadow:0 2px 10px rgba(15,46,92,.05); }
+.panel h2 { margin:0 0 12px; font-size:20px; border-left:5px solid var(--accent); padding-left:12px; }
+.overview-text h4 { margin:14px 0 6px; color:var(--accent); font-size:15.5px; }
+.overview-text p, .overview-text li { margin:6px 0; color:#2e3850; font-size:14.5px; }
+.top10 { list-style:none; margin:8px 0 0; padding:0; counter-reset:t10; }
+.top10 li { border-bottom:1px dashed var(--line); padding:10px 4px; counter-increment:t10; }
+.top10 li:last-child { border-bottom:none; }
+.top10 a { display:flex; gap:8px; align-items:baseline; text-decoration:none; color:var(--ink); flex-wrap:wrap; }
+.top10 a::before { content:counter(t10); min-width:24px; height:24px; border-radius:8px; background:var(--accent); color:#fff; font-size:13px; display:inline-flex; align-items:center; justify-content:center; font-weight:700; }
+.top10 li:nth-child(-n+3) a::before { background:var(--gold); }
+.t10-rate { color:var(--gold); font-size:13px; letter-spacing:1px; }
+.t10-sec { font-size:12px; color:var(--accent2); background:#e5f4f1; border-radius:999px; padding:1px 10px; }
+.t10-title { font-weight:600; font-size:14.5px; }
+.t10-reason { font-size:12.5px; color:var(--muted); margin:3px 0 0 32px; }
+/* ============ 手风琴板块 ============ */
+details.section { margin-top:16px; background:var(--card); border:1px solid var(--line); border-radius:14px; box-shadow:0 1px 6px rgba(15,46,92,.04); overflow:hidden; }
+details.section > summary { list-style:none; cursor:pointer; display:flex; align-items:center; gap:10px; flex-wrap:wrap; padding:16px 18px; background:linear-gradient(90deg,var(--soft),#fff); border-left:5px solid var(--accent); user-select:none; }
+details.section > summary::-webkit-details-marker { display:none; }
+details.section[open] > summary { border-bottom:1px solid var(--line); }
+.sec-title { font-size:17px; font-weight:700; }
+.sec-desc { font-size:12px; color:var(--muted); flex:1 1 100%; order:9; }
+@media (min-width:768px) { .sec-desc { flex:1; order:0; } }
+.sec-count { font-size:12px; color:#fff; background:var(--accent); border-radius:999px; padding:2px 10px; }
+.sec-arrow { color:var(--accent); transition:transform .2s; }
+details.section[open] .sec-arrow { transform:rotate(180deg); }
+.sec-body { padding:4px 14px 16px; }
+.sec-foot { text-align:center; margin-top:14px; }
+.collapse-btn { font-size:13px; color:var(--accent2); text-decoration:none; border:1px solid #c9e6e1; background:#f0faf8; border-radius:999px; padding:6px 18px; }
+.item { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px 18px; margin-top:12px; }
+.item-head { display:flex; gap:10px; align-items:baseline; flex-wrap:wrap; }
+.rate { color:var(--gold); font-size:13px; letter-spacing:2px; white-space:nowrap; }
+.item h4 { margin:0; font-size:16px; }
+.item h4 a { color:var(--ink); text-decoration:none; }
+.item h4 a:hover { color:var(--accent); text-decoration:underline; }
+.title-en { color:var(--muted); font-size:12.5px; font-style:italic; margin:4px 0 8px; }
+.chips { display:flex; gap:6px; flex-wrap:wrap; margin-bottom:10px; }
+.chip { font-size:12px; color:var(--accent); background:var(--soft); border-radius:999px; padding:2px 10px; }
+.summary { font-size:14px; color:#2e3850; background:#f7f9fd; border-radius:10px; padding:10px 14px; margin:0 0 10px; }
+.summary b { color:var(--accent); }
+.brief { border:1px dashed #c7d6ef; border-radius:10px; padding:8px 14px; background:#fafcff; }
+.brief summary { cursor:pointer; color:var(--accent); font-weight:600; font-size:13.5px; }
+.brief p { font-size:13.8px; color:#37415a; margin:10px 0 4px; }
+.meta { display:flex; gap:14px; flex-wrap:wrap; font-size:12.5px; color:var(--muted); margin-top:10px; border-top:1px solid var(--line); padding-top:9px; }
+.meta a { color:var(--accent); text-decoration:none; }
+.meta .back { margin-left:auto; color:var(--accent2); }
+footer { text-align:center; color:var(--muted); font-size:12.5px; margin-top:40px; }
+#toTop { position:fixed; right:16px; bottom:20px; z-index:20; display:none; width:42px; height:42px; border-radius:50%; border:0; background:var(--accent); color:#fff; font-size:18px; cursor:pointer; box-shadow:0 4px 12px rgba(15,46,92,.3); }
+
+/* ============ 检索栏 ============ */
+.searchbar { display:flex; gap:8px; flex-wrap:wrap; margin:18px 0 0; align-items:stretch; }
+.searchbar input[type=search] { flex:1 1 260px; min-width:200px; border:0; border-radius:10px; padding:11px 14px; font-size:14.5px; outline:none; font-family:inherit; }
+.searchbar label.hist { font-size:12.5px; color:#fff; opacity:.95; display:flex; gap:5px; align-items:center; background:rgba(255,255,255,.13); border:1px solid rgba(255,255,255,.25); border-radius:10px; padding:8px 12px; cursor:pointer; user-select:none; }
+.searchbar label.hist input { accent-color:var(--gold); }
+.searchbar button { border:0; border-radius:10px; padding:10px 18px; font-size:14px; font-weight:700; background:var(--gold); color:#fff; cursor:pointer; font-family:inherit; }
+.searchbar button:hover { filter:brightness(1.08); }
+.qres { background:#fff; color:var(--ink); border-radius:12px; margin-top:12px; padding:12px 16px; display:none; max-height:430px; overflow:auto; text-align:left; box-shadow:0 6px 18px rgba(0,0,0,.18); }
+.qres h4 { margin:4px 0 6px; font-size:13.5px; color:var(--accent); border-left:4px solid var(--accent); padding-left:8px; }
+.qres h4 .qr-link { font-size:12px; font-weight:400; color:var(--accent2); margin-left:8px; text-decoration:none; }
+.qres .qr { border-bottom:1px dashed var(--line); padding:8px 2px; font-size:13.5px; }
+.qres .qr:last-child { border-bottom:none; }
+.qres .qr > a { color:var(--ink); text-decoration:none; font-weight:600; }
+.qres .qr > a:hover { color:var(--accent); }
+.qres mark { background:#ffe9b3; padding:0 1px; border-radius:3px; }
+.qres .qr-meta { font-size:12px; color:var(--muted); margin-top:2px; display:flex; gap:6px; flex-wrap:wrap; align-items:center; }
+.qres .qr-meta a { color:var(--accent2); text-decoration:none; }
+.qres .qhint { font-size:12.5px; color:var(--muted); padding:6px 2px; }
+
+</style>
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#0f2e5c">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="态势感知日报">
+<link rel="apple-touch-icon" href="../icons/icon.svg">
+<link rel="icon" type="image/svg+xml" sizes="any" href="../icons/icon.svg">
+</head>
+<body data-date="2026-11-28">
+<header>
+  <div class="wrap">
+    <h1>🛡️ 全球移民与边境安全态势感知日报</h1>
+    <div class="sub">2026-11-28 · 每日全球移民管理与边境安全情报智能体 · 八大板块 / 政府官网 · 国际组织 · 权威媒体 · 智库 · 学术 · 数据库</div>
+    <div class="stats">
+      <div class="stat"><b>45</b><span>今日情报条数</span></div>
+      <div class="stat"><b>8</b><span>覆盖板块</span></div>
+      <div class="stat"><b>37</b><span>信息来源机构</span></div>
+      <div class="stat"><b>3.4</b><span>平均推荐指数</span></div>
+    </div>
+
+<div class="searchbar">
+  <input id="q" type="search" autocomplete="off" placeholder="🔍 输入关键词检索今日情报（标题 / 摘要 / 关键词 / 来源）…">
+  <label class="hist"><input type="checkbox" id="qHist" checked> 含历史日期</label>
+  <button id="qGo">检索</button>
+</div>
+<div id="qResults" class="qres"></div>
+
+  </div>
+</header>
+<div class="navbar"><div class="inner"><a class="nav-chip" href="#overview">⭐ 总体态势</a><a class="nav-chip" href="#sec-global_migration">🌍 全球移民管理热点 <b>5</b></a><a class="nav-chip" href="#sec-border_security">🛡️ 全球边境安全热点 <b>5</b></a><a class="nav-chip" href="#sec-usa">🗽 美国移民与边境管理 <b>6</b></a><a class="nav-chip" href="#sec-eu">🇪🇺 欧盟移民与边境管理 <b>5</b></a><a class="nav-chip" href="#sec-china_neighbors">🧭 中国周边国家动态 <b>6</b></a><a class="nav-chip" href="#sec-global_south">🌏 全球南方国家动态 <b>5</b></a><a class="nav-chip" href="#sec-tech">🤖 移民与边境技术 <b>5</b></a><a class="nav-chip" href="#sec-research">📚 移民与边境研究 <b>8</b></a></div></div>
+<div class="wrap">
+  <div class="panel" id="overview">
+    <h2>⭐ 每日总体关键态势简报</h2>
+    <div class="overview-text"><h4>今日核心研判</h4>
+<p><strong>研判一：欧洲的人员压力与制度供给出现方向相反的错位。</strong> 一方面，两条主要海路的抵达量在入冬后没有回落：加那利方向11月25日单日约2100人抵岛创纪录，11月27日耶罗岛以南39海里一艘载约100人的船上确认死亡人数由最初报告的8至10人升至14人，84名生还者送抵拉雷斯廷加港（见欧盟板块）；东地中海方向希腊海岸警卫队11月28日在克里特岛南部与加夫多斯岛外海多起行动中救起约903人，加夫多斯岩石海岸另有41名生还者与两具遗体，自11月27日凌晨至28日下午合计逾1100人（见欧盟板块）。另一方面，制度侧的供给在收缩：欧盟特别峰会因长期预算分歧于11月27日凌晨提前收场，2028至2034年预算规模从近2万亿欧元经两轮压缩至约1.78万亿仍遭净出资国反对，边境与庇护资金的盘子被推迟到12月17至18日的例行峰会（见欧盟板块）；与此同时，允许成员国在客流高峰暂停采集指纹与人脸的临时裁量权已于2026年9月到期，80余家旅游与航空机构11月27日在布鲁塞尔要求恢复该权限，意大利民航局则干脆暂停了米兰马尔彭萨机场2027年夏季的客流上限（见欧盟板块、移民与边境技术）。抵达曲线向上、资金与规则曲线向下的组合，意味着明年一季度欧洲边境的实际承载力取决于各国自行加码，而非欧盟层面的统一安排。</p>
+<p><strong>研判二：美国移民治理的冲突形态正从「政策之争」转为「逐案司法纠偏」。</strong> 11月25日蒙大拿联邦地区法院首席法官布赖恩·莫里斯就「韦尔德·埃尔南德斯等诉国土安全部」案同时签发临时限制令、初步禁令与《行政程序法》第706条中止令，禁止在该辖区实施无令状的民事移民逮捕，并要求每次无令状逮捕后72小时内向原告律师提交个别化评估记录与I-213表格、7日内不得将当事人移出辖区；法院称自7月31日以来已审理逾50起不符合法定条件的无令状逮捕（见美国板块）。同日前后，艾奥瓦南区首席法官斯蒂芬妮·罗斯以「如此严重的事实错误几乎令人难以置信」为由，命令政府在24小时内释放10月28日被错抓的危地马拉籍男子，并指出执法部门发现抓错后仍继续羁押（见美国板块）；公民自由联盟则就大陪审团传票起诉联邦政府，听证定于2027年1月6日。司法端在收紧执法边界的同时，行政端的门槛仍在抬高：国务院12月签证公告显示职业移民各类别最终裁定日几乎全线停滞，唯一变动是中国出生申请人非预留类第五优先前进一个月至2017年1月1日；杰出人才类批准率已跌至约32%（见美国板块）。两条线并行，说明实际约束力正从成文规则转向个案诉讼与审理进度。</p>
+<p><strong>研判三：亚洲与欧洲同时用「配额、许可、免签到期」三个工具精细调节劳务输入。</strong> 捷克内政部11月27日提交条例修正草案，拟自2027年1月起把「合格雇员计划」在哈萨克斯坦的名额由500个增至1000个、印度由600个增至1600个、菲律宾由10300个增至12000个，并为印度尼西亚新设300个，合计每年多引入约3500名技术工人，同时对塞尔维亚、爱尔兰、英国、波黑、北马其顿、阿尔巴尼亚六国使馆设定「零配额」，理由是遏制中介借低风险口岸转递申请（见全球移民管理热点）。越南内务部在回应企业建议时明确拒绝对持短期任务外派、与越企存在雇佣关系并直接领取薪金的外籍专家豁免工作许可，并给出10月20日颁布、12月5日生效的第393/2026号法令作为依据（见中国周边国家动态）。马来西亚方面，移民局宣布印度公民30天免签于2027年1月1日终止，旅游业界11月28日公开要求再延一年，并催促在12月1日MyVisa申请开放前给出过渡安排（见中国周边国家动态）。三国动作的共同点是把「总量」换成「结构」：名额给谁、给哪个行业、由谁担保，替代了过去以国籍划线的粗放开放。</p>
+<h4>涉我风险待研（内参选题参考）</h4>
+<ul>
+<li><strong>澳大利亚境内申请附加费的差别待遇与我国留学人员的成本结构变化</strong>。澳大利亚《2026年移民修正（境内申请费及其他措施）条例》11月28日生效，对境内递交的学生签证（500类）、学生监护人（590类）、毕业生临时（485类）、境内配偶及部分家庭类签证每人加收1500澳元，学生签证首期费用由2500澳元升至4000澳元；豁免范围明确包括太平洋地区护照持有人与持东盟成员国护照的学生签证申请人，我国申请人不在其列。需研判：境内续签与转签的成本上升会否推动申请节奏前移或转向第三国递交，以及澳方以「鼓励境外递交」为名实施的差别豁免是否构成事实上的区域倾斜。（需阅板块：全球移民管理热点）</li>
+</ul>
+<ul>
+<li><strong>捷克「合格雇员计划」扩额与零配额名单对我国劳务输出通道的挤压</strong>。捷克拟将印度名额提至1600个、菲律宾提至12000个、印尼新开300个，同时对塞尔维亚、阿尔巴尼亚、北马其顿等六国使馆设零配额以封堵中介转递。需研判：中东欧国家以「使馆直办＋行业定向」替代中介链条后，我国相关人力资源服务企业在捷克及周边市场的合规空间；以及零配额名单扩大是否会促使转递路径向其他国家使馆迁移，形成新的灰色通道。（需阅板块：全球移民管理热点）</li>
+</ul>
+<ul>
+<li><strong>马来西亚印度免签终止与MyVisa上线的连带效应</strong>。马移民局宣布印度公民30天免签2027年1月1日终止，内政部长赛夫丁·纳苏申称理由是强化行前筛查；12月1日MyVisa申请系统开放。需研判：马方以「风险导向筛查」重构短期访问准入后，对我国公民现行免签安排的稳定性评估、对我赴马旅游与商务流量的传导，以及在马中资企业派驻人员签证办理周期的变化。（需阅板块：中国周边国家动态）</li>
+</ul>
+<ul>
+<li><strong>越南第393/2026号法令生效后我在越企业派遣专家的合规义务</strong>。法令12月5日生效，取代第219/2025号法令，明确一年内在一家或多家雇主累计工作不超过90天的短期外籍劳工无需办理工作许可豁免确认书，但雇主须提前至少3个工作日通知主管部门；对存在有偿雇佣关系者仍保留工作许可要求，办结时限为收到完整材料后最长10个工作日。需研判：中资项目「短期技术支持」与「实质雇佣」的边界认定标准、通知义务的履行主体与留痕要求，以及越南以「工作实际性质而非合同名称」判断雇佣关系对派遣模式的影响。（需阅板块：中国周边国家动态）</li>
+</ul>
+<ul>
+<li><strong>美国无令状逮捕的司法纠偏对我国在美人员权利救济的参照价值</strong>。蒙大拿案确立的「个别化脱逃风险评估＋72小时文件披露＋7日不得移出辖区」三项要求，与艾奥瓦案对「发现抓错后仍继续羁押」的否定，共同构成对行政逮捕的程序约束。需研判：此类禁令的辖区效力边界、能否为我国在美人员遭遇无令状盘查或羁押时提供可援引的先例，以及杰出人才类批准率降至32%、职业移民排期停滞背景下高层次人才赴美预期的重新评估。（需阅板块：美国移民与边境管理）</li>
+</ul>
+<h4>分板块要点</h4>
+<ul>
+<li><strong>全球移民管理热点（5条）</strong>：澳大利亚11月28日起对境内递交的学生、监护人、毕业生、配偶及部分家庭类签证每人加收1500澳元「境内申请费」，学生签证首期费用升至4000澳元，太平洋与东盟护照持有人及就读强化英语或非学位课程者豁免，大学协会称国际学生新生入学人数已下降12%；捷克拟自2027年1月上调哈、印、菲、印尼四国工作签证名额合计约3500个，并对六国使馆设零配额，11月30日提交政府审议；西班牙以新准则明确季节工居留变更规则；美国国防部总监察长报告披露关塔那摩拘押移民支出逾8000万美元；加拿大移民部门发布十项材料完整性提示以减少延误。</li>
+</ul>
+<ul>
+<li><strong>全球边境安全热点（5条）</strong>：利比亚东部海岸警卫队与港口部门11月27日在东部海域救起240人；以色列国防军与边防警察11月28日截获走私气球，缴获毒品与15支步枪；印度旁遮普邦警方与边境安全部队查获疑由无人机空投的枪弹；德里警察犯罪科在诺伊达一处假呼叫中心解救164名被贩运外籍人员，事件11月26日、报道11月28日；波兰内政与行政部11月28日宣布第十次延长波白边境缓冲区通行限制90天，自11月30日起覆盖12月至次年2月，1月1日至11月8日记录482起非法越境尝试。</li>
+</ul>
+<ul>
+<li><strong>美国移民与边境管理（6条）</strong>：蒙大拿联邦法官签发禁令，禁止辖区实施无令状民事移民逮捕并附文件披露与72小时报告义务；艾奥瓦联邦法官令24小时内释放被错抓的危地马拉籍男子；公民自由联盟就大陪审团传票起诉联邦政府，2027年1月6日听证；国务院12月签证公告显示职业移民最终裁定日几乎全线停滞，中国出生非预留类第五优先前进一个月；杰出人才类批准率跌至约32%；国土安全部与加州长滩就地方警方撤离执法现场公开交锋。</li>
+</ul>
+<ul>
+<li><strong>欧盟移民与边境管理（5条）</strong>：希腊海岸警卫队11月28日在克里特岛南部与加夫多斯外海救起约903人，加夫多斯岩石海岸发现41名生还者与两具遗体，两日合计逾1100人；耶罗岛海难死亡人数升至14人、84人生还，加那利1月1日至11月15日抵达24364人、同比增65.9%，西班牙11月29日大选；欧盟特别峰会因长期预算分歧于11月27日凌晨提前收场，谈判推迟至12月17至18日，24国支持2027年追加对乌贷款最高450亿欧元；80余家旅游与航空机构要求恢复客流高峰暂停生物采集的裁量权；欧盟理事会爱尔兰轮值主席国官网发布峰会结论。</li>
+</ul>
+<ul>
+<li><strong>中国周边国家动态（6条）</strong>：马来西亚旅游联合会11月28日要求把2027年1月1日到期的印度公民30天免签再延一年，并催促在12月1日MyVisa开放前给出过渡安排；越南内务部拒绝为存在雇佣关系的短期外籍专家豁免工作许可，第393/2026号法令12月5日生效、办结时限10个工作日；印尼巴厘岛机场拦阻12名拟赴瓦努阿图旅客，其中6人涉分离组织；印度古尔冈警方拘捕并遣返27名孟加拉籍人员；越南广治省15D国道塌方致越老国际口岸通道中断；泰国移民局在曼谷一处窝点抓获6名韩国籍赌博嫌疑人。</li>
+</ul>
+<ul>
+<li><strong>全球南方国家动态（5条）</strong>：南非特别调查组通报558650个交通登记号存在发放与登记不规范、应从全国交通信息系统注销，前十来源国含津巴布韦、尼日利亚、莫桑比克等，并在马塞卢口岸逮捕一名涉22本护照违规办理的边境官员；哥斯达黎加移民总局11月26日在机场拒绝联合国巴勒斯坦被占领土人权状况特别报告员阿尔巴内塞入境，宪法法庭下达临时裁定允许其暂留并限24小时说明理由；苏丹军方宣布夺回青尼罗河州马甘扎地区，南苏丹伦克县一周接收逾1.4万名逃出民众；埃塞俄比亚莫亚莱停火后300辆肯尼亚货车回境；肯尼亚年内拘押逾千名无证移民，埃塞籍过半。</li>
+</ul>
+<ul>
+<li><strong>移民与边境技术（5条）</strong>：新加坡竞争与消费者委员会11月25日就艾玛迪斯收购Idemia Public Security（交易额12亿欧元、约14亿美元）启动咨询，12月8日截止，关注边境生物识别、旅客流程技术与API/PNR三块业务重叠；肯尼亚就eCitizen平台740GB数据泄露展开调查，涉600GB KYC数据、100GB政府数据库与40GB源码，注册用户1367万；意大利民航局11月27日暂停米兰马尔彭萨一号航站楼2027年夏季客流上限（原拟由每小时4300人降至4100人），11月30日交通部磋商；中国政府采购网披露勐康边检站观通装备询价（预算19.89万元）与山东边检「境灵」AI建设平台C包成交（21.5万元）。</li>
+</ul>
+<ul>
+<li><strong>移民与边境研究（8条）</strong>：《族群与移民研究杂志》11月27日在线刊出英国男性遣送中心的民族志研究，基于15个月田野与24名被拘留男子的追踪访谈，论证拘留作为「地位贬损的制度性技术」在释放后仍持续生效；《国际移民评论》11月28日预上线「防御性入籍」研究，以1906年《归化法》至1940年入籍档案的手工编码样本链接三次人口普查，发现当时较不受欢迎的移民反而更快归化；《迁移研究》同日刊出亚洲双边劳务协定的「跨国拼装」分析与德国新移民反应性族群认同研究；《国际移民》刊出委内瑞拉移民在秘鲁的锚定机制研究；世界经济论坛与大西洋理事会11月18日发布《前瞻简报：战略咽喉点》白皮书。</li>
+</ul>
+<h4>追踪信号</h4>
+<ul>
+<li><strong>12月17至18日欧盟例行峰会</strong>：2028至2034年长期预算能否在1.78万亿欧元基础上收敛，直接决定2028年后边境管理与庇护资金的分配框架；若再度流会，成员国自行加码的趋势会进一步固化。</li>
+</ul>
+<ul>
+<li><strong>12月8日新加坡竞争与消费者委员会咨询截止</strong>：艾玛迪斯收购Idemia Public Security是否进入第二阶段审查，关系到欧洲边境生物识别供应链的集中度。</li>
+</ul>
+<ul>
+<li><strong>12月1日马来西亚MyVisa开放与2027年1月1日印度免签终止</strong>：过渡安排是否覆盖已确认订单与旅行团，是观察马方「风险导向筛查」落地尺度的第一个节点。</li>
+</ul>
+<ul>
+<li><strong>11月30日捷克政府审议「合格雇员计划」修正案</strong>：若通过，新配额将在30天内刊入法律汇编，六国「零配额」名单是否扩围值得跟。</li>
+</ul>
+<ul>
+<li><strong>12月5日越南第393/2026号法令生效</strong>：短期外籍劳工「提前3个工作日通知」的执行口径，将决定在越中资项目技术支持的派遣节奏。</li>
+</ul>
+<ul>
+<li><strong>美国蒙大拿禁令的辖区效力与上诉</strong>：政府是否上诉、其他辖区是否出现同类裁定，决定无令状逮捕的实际约束范围；2027年1月6日大陪审团传票案听证为另一观察点。</li>
+</ul></div>
+    <h2 style="margin-top:24px">🔥 今日关键情报 Top 8<small style="font-size:12.5px;color:var(--muted);font-weight:400;margin-left:10px">按推荐指数排序 · 点击自动展开对应板块</small></h2>
+    <ol class="top10"><li><a href="#item-research-5"><span class="t10-rate">★★★★★</span><span class="t10-sec">📚 移民与边境研究</span><span class="t10-title">英国男性遣送中心的失尊与暴力</span></a><div class="t10-reason">以罕见的在押加释放后追踪民族志，把「失尊」确立为可操作的分析概念，对拘留改革（改良还是废除）的政策辩论给出有力实证支撑。</div></li><li><a href="#item-global_migration-1"><span class="t10-rate">★★★★☆</span><span class="t10-sec">🌍 全球移民管理热点</span><span class="t10-title">澳洲境内签证申请加收一千五百澳元</span></a><div class="t10-reason">政策当日生效，金额、豁免范围与适用签证类别均有明确条文支撑，多家机构交叉印证，属可直接落地解读的制度性调整。</div></li><li><a href="#item-global_migration-2"><span class="t10-rate">★★★★☆</span><span class="t10-sec">🌍 全球移民管理热点</span><span class="t10-title">捷克拟扩四国工作签证年度配额</span></a><div class="t10-reason">名额调整数字具体、生效月份与立法流程清晰，反映中东欧国家以配额工具精细化调节劳务移民的取向。</div></li><li><a href="#item-global_migration-4"><span class="t10-rate">★★★★☆</span><span class="t10-sec">🌍 全球移民管理热点</span><span class="t10-title">美军关塔那摩拘押移民支出逾八千万</span></a><div class="t10-reason">以官方监察报告为核心证据，成本与在押规模的反差具监督价值，数字链条完整可核。</div></li><li><a href="#item-border_security-2"><span class="t10-rate">★★★★☆</span><span class="t10-sec">🛡️ 全球边境安全热点</span><span class="t10-title">以军截获走私气球 缴毒品与十五支步枪</span></a><div class="t10-reason">当日事件、军方通报，缴获品类与数量具体，完整体现低空越境走私手段的演变。</div></li><li><a href="#item-usa-1"><span class="t10-rate">★★★★☆</span><span class="t10-sec">🗽 美国移民与边境管理</span><span class="t10-title">民权联盟起诉联邦 阻大陪审团传票查批评者</span></a><div class="t10-reason">首次就「大陪审团传票揭露匿名批评者」进入公开司法程序，直指执法权与言论自由的边界，具判例意义。</div></li><li><a href="#item-usa-2"><span class="t10-rate">★★★★☆</span><span class="t10-sec">🗽 美国移民与边境管理</span><span class="t10-title">杰出人才签证批准率跌至三成二</span></a><div class="t10-reason">以官方审理数据揭示合法移民通道实质性收紧，直接影响高技能人才流向，且与「吸引最优秀人才」的政策宣示形成反差。</div></li><li><a href="#item-usa-5"><span class="t10-rate">★★★★☆</span><span class="t10-sec">🗽 美国移民与边境管理</span><span class="t10-title">蒙大拿联邦法官裁定禁无令状逮捕</span></a><div class="t10-reason">裁定以逾50起个案的量化认定支撑「模式与惯例」结论，并附72小时文书义务与7日禁止跨区转移等可执行条款，是同类诉讼中约束力较强的一例。</div></li></ol>
+  </div>
+  
+<details class="section" id="sec-global_migration">
+  <summary>
+    <span class="sec-title">🌍 全球移民管理热点</span>
+    <span class="sec-desc">各国移民政策调整、签证制度改革、国际移民治理动态</span>
+    <span class="sec-count">5 条</span>
+    <span class="sec-arrow">▾</span>
+  </summary>
+  <div class="sec-body">
+    
+<article class="item" id="item-global_migration-1">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://www.hindustantimes.com/world-news/australia-increases-onshore-student-visa-charge-universities-warn-of-impact-101795853406203-amp.html" target="_blank" rel="noopener">澳洲境内签证申请加收一千五百澳元</a></h4>
+  </div>
+  <div class="title-en">Australia increases onshore student visa charge; universities warn of impact</div>
+  <div class="chips"><span class="chip">澳大利亚</span><span class="chip">签证收费</span><span class="chip">境内申请</span><span class="chip">国际学生</span><span class="chip">移民改革</span><span class="chip">净海外移民</span><span class="chip">大学协会</span></div>
+  <p class="summary"><b>内容提要</b>　事件11-28、报道11-28。澳大利亚《2026年移民修正（境内申请费及其他措施）条例》自11月28日生效，对在澳境内递交的学生签证（500类）、学生监护人签证（590类）、毕业生临时签证（485类）、境内配偶签证以及部分父母、子女和其他家庭类签证，每名申请人加收1500澳元「境内申请费」。学生签证首期费用因此由2500澳元升至4000澳元。豁免范围包括太平洋地区护照持有人、持东盟成员国护照的学生签证申请人，以及就读强化英语课程或非学位课程者。澳大利亚大学协会当日发表声明，首席执行官卢克·希伊称，国际学生新生入学人数已下降百分之十二，国际教育年产值约550亿澳元、支撑约25万个就业岗位，频繁调价将进一步削弱澳洲吸引力。政府称该措施落实2026至2027财年预算安排，意在鼓励申请人从境外递交，并对净海外移民形成下行压力。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>背景：澳大利亚在2026至2027财年预算中提出，通过提高境内递交成本，引导签证申请回到境外办理，以压低净海外移民规模。机制：配套条例编号F2026L01607，于11月26日制定、27日登记、28日生效，在现有签证申请费首期款之上增设「境内申请费」，标准为每人1500澳元，按人头计而非按申请计，一个三口之家在境内递交仅此项即需4500澳元。适用对象包括学生签证500类、学生监护人590类、毕业生临时485类全类别、境内配偶801类，以及年迈父母804类、缴费型年迈父母864与884类、子女802与837类、受抚养子女445类、剩余亲属835类、照护者836类和年迈受赡养亲属838类。太平洋地区护照持有人、持东盟护照的学生签证申请人、就读强化英语课程或非学位课程者，以及在境外存在可选路径的部分申请人可获豁免。影响：485类只能在澳境内申请，因此全部申请人实际都要承担新增费用；学生签证首期费用由2500澳元升至4000澳元。行业方面，澳大学协会指出国际学生新生入学人数已下降百分之十二，国际教育年产值约550亿澳元、关联约25万个岗位，频繁调价会削弱竞争力。时间线：10月2日起多数人已无法在境内首次申请学生签证；11月13日起485类对随行家属设限；11月28日境内申请费落地；11月30日起雇主担保相关（482、186、494类）的过桥签证B旅行期限收紧。观察点在于新收费是否加速生源转向其他国家，以及境外递交比例的实际变化。</p></details>
+  <div class="meta">
+    <span>来源：<b>印度斯坦时报（HT）</b></span>
+    <span>推荐理由：政策当日生效，金额、豁免范围与适用签证类别均有明确条文支撑，多家机构交叉印证，属可直接落地解读的制度性调整。</span>
+    <a href="https://www.hindustantimes.com/world-news/australia-increases-onshore-student-visa-charge-universities-warn-of-impact-101795853406203-amp.html" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-global_migration-2">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://www.ceskenoviny.cz/zpravy/ministerstvo-vnitra-navrhuje-navysit-kvoty-pro-pracovniky-z-ciziny/2907571" target="_blank" rel="noopener">捷克拟扩四国工作签证年度配额</a></h4>
+  </div>
+  <div class="title-en">Czech Interior Ministry moves to enlarge work-visa quotas for India, Philippines, Kazakhstan and Indonesia</div>
+  <div class="chips"><span class="chip">捷克</span><span class="chip">工作签证</span><span class="chip">配额</span><span class="chip">合格雇员计划</span><span class="chip">劳动力短缺</span><span class="chip">印度</span><span class="chip">菲律宾</span><span class="chip">印度尼西亚</span></div>
+  <p class="summary"><b>内容提要</b>　事件11-27、报道11-27。捷克内政部11月27日提交政府第220/2019号条例修正草案，拟自2027年1月起上调「合格雇员计划」在四国使馆的年度名额：哈萨克斯坦由500个增至1000个，印度由600个增至1600个，菲律宾由10300个增至12000个，并为印度尼西亚新设300个名额，合计每年可多引入约3500名技术工人。内政部称制造业、建筑业与运输业缺工最重，新增名额中一部分将专项保留给这三个行业；印度与哈萨克斯坦的现行名额长期提前用尽，进入该计划的等待时间已超过一年。草案同时对塞尔维亚、爱尔兰、英国、波斯尼亚和黑塞哥维那、北马其顿及阿尔巴尼亚的使馆设定「零配额」，理由是集中受理能力、遏制中介借欧洲低风险口岸转递申请，类似限制自今年年中起已在德国德累斯顿领事馆实施。政府将于11月30日（周一）审议该修正案；若获通过，新配额将在30天内刊入法律汇编。工业和贸易部长卡雷尔·哈夫利切克称这是缓解建筑业人手短缺的途径之一，并称获选人员由企业挑选、不存在安全风险。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>背景：捷克长期面临制造业、建筑业与运输业用工缺口，经济增速放缓使企业更依赖外部劳动力。「合格雇员计划」是捷克面向特定来源国的项目制劳务通道，申请须在指定使馆递交，名额按国别年度封顶，长期出现名额提前耗尽、预约排队逾年的情况。机制：内政部11月27日提交对第220/2019号政府条例的修正草案，直接调整四国使馆的年度受理上限，哈萨克斯坦500增至1000，印度600增至1600，菲律宾10300增至12000，印度尼西亚新设300，合计每年新增约3500个名额；新增额度中有一部分限定用于加工制造业、建筑业与运输业。同时把塞尔维亚、爱尔兰、英国、波黑、北马其顿、阿尔巴尼亚等使馆额度归零，官方解释是把受理资源集中到优先市场，并抑制中介把申请人绕道欧洲安全风险较低的使馆递交；同类限制自2026年年中起已在德国德累斯顿领事馆执行。影响：对企业而言，印度与菲律宾通道的排队时间有望明显缩短，2027年1月的递交窗口更具可预期性；对申请者而言，家庭随行仍需另行申请长期签证，搬迁预算须同步上调。时间线：草案11月27日提交，政府11月30日审议，通过后30天内公布，2027年1月起执行。后续需观察议会与雇主团体是否提出附加条件，以及零配额使馆是否引发在欧申请人的路径转移。</p></details>
+  <div class="meta">
+    <span>来源：<b>捷克通讯社（ČTK）</b></span>
+    <span>推荐理由：名额调整数字具体、生效月份与立法流程清晰，反映中东欧国家以配额工具精细化调节劳务移民的取向。</span>
+    <a href="https://www.ceskenoviny.cz/zpravy/ministerstvo-vnitra-navrhuje-navysit-kvoty-pro-pracovniky-z-ciziny/2907571" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-global_migration-3">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://www.visahq.news/2026-11-27/es/new-criterion-32026-updates-rules-for-modifying-seasonal-worker-residence-permits" target="_blank" rel="noopener">西班牙明确季节工居留变更规则</a></h4>
+  </div>
+  <div class="title-en">New Criterion 3/2026 updates rules for modifying seasonal-worker residence permits</div>
+  <div class="chips"><span class="chip">西班牙</span><span class="chip">季节工</span><span class="chip">居留许可</span><span class="chip">移民条例</span><span class="chip">用工变更</span><span class="chip">农业用工</span><span class="chip">最高法院</span></div>
+  <p class="summary"><b>内容提要</b>　事件11-27、报道11-27。西班牙移民管理总局11月27日发布第3/2026号管理准则，明确各地移民办公室如何办理依据《移民条例》（第1155/2024号皇家法令）第191.6条签发的季节性居留与工作许可变更。要点包括：外籍季节工完成首份合同后，可在不离境情况下变更雇主，但须在同一行业，且新合同须在旧合同结束后30天内开始；连续持季节性许可在西班牙停留的时间，今后计入转为普通工作居留所需的两年居住期；雇主须在变更雇主或工作地点后5个工作日内向外国人事务办公室报备，并继续提供适当住房与返程机票担保。准则自发布起立即生效，统一适用于全国52个省级移民办公室。此举回应最高法院2026年7月8日第868/2026号判决部分撤销2024年条例条款后的执行空白，也服务于农业、旅游等行业的季节性用工需求。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>背景：西班牙的季节性劳务许可长期采用「入境—合同期满—离境」的闭环设计，续接与转轨空间有限。2024年11月19日第1155/2024号皇家法令修订《移民条例》后，部分条款被最高法院第868/2026号判决（2026年7月8日）撤销，导致各地移民办公室在变更许可时的尺度不一。机制：移民管理总局以管理准则而非修法方式填补空白，第3/2026号准则明确三件事。第一，允许在同一行业内更换雇主而不必离境，前提是新合同在旧合同结束后30天内生效，实质是把季节工从单一雇主绑定中部分解绑。第二，连续持季节性许可在境内停留的时间计入转办普通工作居留所需的两年居住期，打通了季节工向常规就业的转轨路径。第三，强化雇主义务，变更雇主或工作地点须在5个工作日内报备，并继续提供合适住房与返程机票担保。同一批通报中另有第4/2026号准则，专门处理条例被撤销条款的适用问题。影响：对农业、旅游与人力派遣企业而言，旺季调动人手的合规成本下降、周期缩短，可减少反复出入境的开支；对工人而言，转轨路径更清晰，但仍受同行业限制，跨行业流动依旧受限。时间线：准则11月27日发布并即时生效，全国52个省级办公室统一执行；通报经阿拉坎特外国人事务专业委员会第85期简报向从业者散发，2027年收获季与旅游旺季的用工安排将率先适用。后续观察点是报备义务的执行力度，以及最高法院相关诉讼是否再度改变条款效力。</p></details>
+  <div class="meta">
+    <span>来源：<b>维萨总部新闻（VisaHQ）</b></span>
+    <span>推荐理由：属技术性行政细则，但直接决定南欧季节工的换雇主权利与转轨路径，生效方式与适用范围交代清楚。</span>
+    <a href="https://www.visahq.news/2026-11-27/es/new-criterion-32026-updates-rules-for-modifying-seasonal-worker-residence-permits" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-global_migration-4">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://us.cnn.com/2026/11/27/politics/us-military-spent-81-million-migrants-guantanamo-bay" target="_blank" rel="noopener">美军关塔那摩拘押移民支出逾八千万</a></h4>
+  </div>
+  <div class="title-en">Watchdog finds US military spent $81 million holding fewer than 900 migrants at Guantanamo Bay</div>
+  <div class="chips"><span class="chip">美国</span><span class="chip">关塔那摩</span><span class="chip">移民拘押</span><span class="chip">国防部</span><span class="chip">监察长报告</span><span class="chip">遣返</span><span class="chip">军费</span></div>
+  <p class="summary"><b>内容提要</b>　事件11-25、报道11-27。美国国防部牵头监察长报告显示，「南方守卫行动」自2025年启动以来，五角大楼为在古巴关塔那摩湾海军基地转移与关押移民已承担约8152.5万美元支出，而累计关押人数仅849人，行动期间最大容纳能力为399人；截至9月3日，基地内仅关押8人。2026年7月至9月，被关押者平均停留7天，停留时间延长主因是部分来源国不愿接收本国公民及航班安排受限，最长一例达102天。截至2026年9月，约350名军人驻守基地支援国土安全部行动，费用大部分由陆军承担。2025年1月，总统要求准备关押所谓高优先级非法移民，并称基地有3万个床位，官员当时即质疑该容量已不存在。报告11月25日公开，媒体11月27日披露细节。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>背景：2025年1月，美国行政部门要求联邦机构准备关押被界定为高优先级的非法居留者，并提出利用关塔那摩湾海军基地的3万个床位扩容，随后军方搭建帐篷设施、增派数百名人员，形成「南方守卫行动」。机制：该行动由军方为国土安全部提供运输与拘押支援，费用计入国防部预算。牵头监察长报告核算，行动启动以来累计承付约8152.5万美元，其中陆军占比最大，报告未逐项列明支出构成，但陆军通常是大型后勤行动的主导军种。规模方面，累计关押849人，行动期间最大容纳能力399人，9月3日在押仅8人，表明先期扩容与实际需求严重脱节。滞留方面，7月至9月平均停留7天，因来源国接收意愿不足与航班排期受限，平均时长在行动期间上升，个别个案滞留102天。影响：报告实质上对「大规模扩容」的决策逻辑提出质疑，也为后续预算审查与国会监督提供数据基础；对遣返谈判而言，来源国接收意愿成为决定成本的关键变量。时间线：2025年1月下达指令并启动扩容；行动持续至2026年；2026年11月25日报告公开；11月27日主流媒体披露细节。后续观察点是国会是否据此调整拨款，以及基地在押规模是否继续维持低位。</p></details>
+  <div class="meta">
+    <span>来源：<b>美国有线电视新闻网（CNN）</b></span>
+    <span>推荐理由：以官方监察报告为核心证据，成本与在押规模的反差具监督价值，数字链条完整可核。</span>
+    <a href="https://us.cnn.com/2026/11/27/politics/us-military-spent-81-million-migrants-guantanamo-bay" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-global_migration-5">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★☆☆☆</span>
+    <h4><a href="https://punchng.com/canada-releases-10-tips-to-prevent-immigration-application-delays" target="_blank" rel="noopener">加拿大发布十项提示避免申请延误</a></h4>
+  </div>
+  <div class="title-en">Canada releases 10 tips to prevent immigration application delays</div>
+  <div class="chips"><span class="chip">加拿大</span><span class="chip">移民申请</span><span class="chip">材料完整</span><span class="chip">认证翻译</span><span class="chip">家庭成员申报</span><span class="chip">审理延误</span></div>
+  <p class="summary"><b>内容提要</b>　事件11-28、报道11-28。加拿大移民、难民及公民部11月28日通过官方社交账号发布十项提示，要求申请人递交完整、准确的申请，并警告缺失信息、错误文件或不符合要求会拖慢审理进度。十项要点为：尽可能在线递交；逐项如实作答，不适用的栏目填写「不适用」；使用各项目提供的官方文件清单；非英语或法语文件须由认证译者翻译；按要求提交指定文件，未获要求时不寄送原件、不附加多余材料；照片须符合官方规格；申报全部家庭成员，包括不随行或不移民者；核对电子邮箱与邮寄地址等联系方式；表格须签名并注明日期，费用与支付方式须正确；收到补充材料要求后在期限内尽快回应。该提示属程序性提醒，不改变现行移民政策，但直接影响申请人的时间成本与退回风险。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>背景：加拿大移民、难民及公民部近年持续扩大在线递交比例，申请存量与审理周期成为舆论焦点，官方多次以操作指引方式降低因材料缺陷导致的补件与退回。机制：11月28日的提示并未修改法规，而是把既有要求集中重申为可执行的自查清单，核心环节有四类：一是完整性，在线递交并逐项作答，不适用处明确标注，避免空白被视为隐瞒；二是文件合规，使用官方文件清单，非英语或法语材料须附认证翻译，照片须符合规格，未获要求时不寄送原件；三是家庭信息申报，须列明全部家庭成员，即便其不随行或不打算移民；四是沟通与响应，联系方式须准确，收到补件要求后应在期限内回复，否则审理顺延。影响：该清单与移民部官网「如何避免延误或被拒」的问答口径一致，可作为申请人、雇主与留学中介的行前材料核对依据，减少因可预防缺陷导致的重复递交。时间线：11月28日经官方X账号发布，多家媒体当日转载。后续观察点是官方是否把该清单并入正式申请指南，以及在线系统能否在递交环节前置提示缺件。</p></details>
+  <div class="meta">
+    <span>来源：<b>尼日利亚《Punch》</b></span>
+    <span>推荐理由：属程序性提醒而非政策变动，信息增量有限，但发布时间与来源明确，对申请人具备实操参考价值。</span>
+    <a href="https://punchng.com/canada-releases-10-tips-to-prevent-immigration-application-delays" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+    <div class="sec-foot"><a href="#sec-global_migration" class="collapse-btn" data-collapse="sec-global_migration">▴ 收起本板块</a></div>
+  </div>
+</details>
+<details class="section" id="sec-border_security">
+  <summary>
+    <span class="sec-title">🛡️ 全球边境安全热点</span>
+    <span class="sec-desc">边境冲突、非法越境、边境管控措施、跨境犯罪治理</span>
+    <span class="sec-count">5 条</span>
+    <span class="sec-arrow">▾</span>
+  </summary>
+  <div class="sec-body">
+    
+<article class="item" id="item-border_security-1">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="http://chinaview.cn/africa/20261128/66b8f5ea186749daa67ddd3f421f9b5b/c.html" target="_blank" rel="noopener">利比亚东部海岸警卫队救起二百四十人</a></h4>
+  </div>
+  <div class="title-en">Libyan coast guard rescues 240 migrants</div>
+  <div class="chips"><span class="chip">利比亚</span><span class="chip">海岸警卫队</span><span class="chip">海上拦截</span><span class="chip">非法移民</span><span class="chip">地中海</span><span class="chip">遣返</span><span class="chip">托布鲁克</span></div>
+  <p class="summary"><b>内容提要</b>　事件11-27、报道11-28。利比亚东部海岸警卫队与港口安全机构11月27日宣布，其所属单位在从西部邦巴湾到东部巴尔迪之间的责任海域，分多起行动从8艘船上救起240名不同国籍的移民，包括孟加拉国、埃及、巴基斯坦和埃塞俄比亚籍人员。获救者随后被移交打击非法移民部门，以便安排遣返原籍国。相关行动由托布鲁克海岸警卫队区发布，机构在官方社交页面公布了消息。利比亚长期是经中地中海前往欧洲的主要中转地，东部当局近年多次在近海拦截出港船只，并对被拦截者实施集中收容与遣返，这一做法在人道组织与联合国机构文件中长期存在争议。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>背景：利比亚自2011年后长期处于政治分裂状态，西部与东部各有行政与安全机构，海岸警卫力量分属不同体系。中地中海路线以利比亚西部与东部港口为起点，向东可抵达克里特与加夫多斯，向北可抵达意大利兰佩杜萨与马耳他。机制：本次行动由东部海岸警卫队与港口安全机构执行，责任海域自西部的邦巴湾延伸至东部的巴尔迪，覆盖托布鲁克周边主要出港水域。行动分多起进行，共涉及8艘船、240人，国籍包括孟加拉国、埃及、巴基斯坦与埃塞俄比亚。处置流程为海上拦截、集中上岸、移交打击非法移民部门，随后进入遣返程序。影响：海上拦截在短期内减少出港船只数量，但把人留在利比亚境内也意味着收容设施压力上升；联合国机构与法律援助组织多次指出，利比亚境内被拦截者面临拘押条件恶劣与保护不足的风险，遣返若未经个体风险评估可能违反不驱回原则。时间线：11月27日东部当局发布消息，通讯社11月28日播发；同期西侧大西洋路线同样承压，11月27日西班牙耶罗岛外海一艘载近百人的移民船被发现时船上至少有8人遇难、约90人获救。观察点在于东部当局的拦截强度能否持续，以及被拦截者遣返前的拘押时长与条件。</p></details>
+  <div class="meta">
+    <span>来源：<b>新华通讯社（Xinhua）</b></span>
+    <span>推荐理由：一手通讯社短讯，人数、船舶数量与责任海域交代具体，可反映中地中海出发段拦截态势。</span>
+    <a href="http://chinaview.cn/africa/20261128/66b8f5ea186749daa67ddd3f421f9b5b/c.html" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-border_security-2">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://www.jpost.com/israel-news/article-916375" target="_blank" rel="noopener">以军截获走私气球 缴毒品与十五支步枪</a></h4>
+  </div>
+  <div class="title-en">IDF intercepts smuggling balloons carrying over 100 kg of drugs, 15 Kalashnikov rifles</div>
+  <div class="chips"><span class="chip">以色列</span><span class="chip">气球走私</span><span class="chip">武器走私</span><span class="chip">毒品</span><span class="chip">边境拦截</span><span class="chip">约旦河谷</span><span class="chip">边防警察</span></div>
+  <p class="summary"><b>内容提要</b>　事件11-28、报道11-28。以色列国防军与边防警察11月28日凌晨拦截数个自西侧越境的走私气球，查获逾100公斤毒品、15支卡拉什尼科夫步枪和2部手机，物品已移交安全部门进一步处理。军方称士兵发现气球越境后前往现场，找到气球并取出其中的毒品与武器。另据同一报道，以军11月27日在约旦河谷东部边界的搜索中发现6支手枪并移交警方；本周二在阿拉德附近查获一辆卡车运载的约9万枚盖有伪造印章的鸡蛋。此次截获同时包含军用级步枪与大批毒品，显示同一通道可能兼作武器输入与毒品分销。军方未说明气球的具体起放位置与落点推算，亦未公布是否有人接应。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>背景：以色列西部边界毗邻地中海，加沙与西奈方向长期存在武器与毒品走私通道。近年走私手段从地道、海上小艇向低空平台扩散，气球因成本低、可载重、雷达特征小，成为无人机之外的补充手段。机制：本次行动中，军方先发现多个气球自西侧越境，随后派兵赴现场查获15支卡拉什尼科夫步枪、逾100公斤毒品与2部手机，全部移交安全部门。被捕物品同时包含军用级步枪与大宗毒品，指向同一物流与接头网络既服务武器输入也服务毒品分销。影响：气球可分散投放、单位载重有限，增加了边境雷达与拦截兵力在低空慢速目标上的识别负担；对以方而言，武器与毒品混合查获意味着单次拦截难以切断上游供货。时间线：11月28日凌晨发生并完成查获，同日由军方通报；11月27日约旦河谷东部边界另一起行动查获6支手枪；本周二在阿拉德附近查获约9万枚伪造印章鸡蛋。观察点在于气球与无人机混合使用是否促使以方调整低空监视与拦截规则，以及查获武器的来源链条能否被追溯。</p></details>
+  <div class="meta">
+    <span>来源：<b>耶路撒冷邮报（JPost）</b></span>
+    <span>推荐理由：当日事件、军方通报，缴获品类与数量具体，完整体现低空越境走私手段的演变。</span>
+    <a href="https://www.jpost.com/israel-news/article-916375" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-border_security-3">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://www.uniindia.com/north-india/crime-punjab-bsf-seize-weapons/259937" target="_blank" rel="noopener">印度旁遮普查获疑无人机空投枪弹</a></h4>
+  </div>
+  <div class="title-en">Punjab Police, BSF seize pistols, grenades in Gurdaspur; suspect cross-border drone delivery</div>
+  <div class="chips"><span class="chip">印度</span><span class="chip">旁遮普</span><span class="chip">无人机走私</span><span class="chip">枪弹</span><span class="chip">边境安全部队</span><span class="chip">反无人机</span><span class="chip">国际边界</span></div>
+  <p class="summary"><b>内容提要</b>　事件11-28、报道11-28。印度旁遮普邦警察与边境安全部队11月28日在古尔达斯普尔县展开联合搜查行动，在哈多恰尼村农田发现一个可疑包裹，内有2支手枪、59发实弹和4枚手榴弹。警方怀疑该批枪弹由巴基斯坦一侧通过无人机投送入境，已依据《武器法》《爆炸物法》相关条款在萨达尔古尔达斯普尔警察局立案，并扣押全部物品。事发地段位于印巴国际边界旁遮普段，该段边界以农业地带为主、地势平坦、村镇密集，便于小型无人机低空越境；印方近年在这一线频繁查获无人机投送的枪械与毒品，反无人机系统与夜视装备成为边防建设重点。警方正沿落点周边排查接应人员与投放航线，尚未公布是否有嫌疑人被捕。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>背景：印巴国际边界旁遮普段以农业地带为主，地势平坦、村镇密集，便于小型无人机低空越境。近年印方在旁遮普与查谟一线频繁查获由无人机投送的枪械、毒品与伪钞，反无人机系统与夜视装备成为边防建设重点。机制：本次行动由邦警察与边境安全部队联合实施，属针对可疑包裹的农田搜索。查获物包括2支手枪、59发实弹与4枚手榴弹，集中于一个包裹内，警方据此怀疑为跨境无人机投送。案件依据《武器法》《爆炸物法》立案，后续将追查接收方与投放航线。影响：手枪与手榴弹组合通常指向境内暴力犯罪或武装团伙补给，而非单纯走私牟利，说明边境投送正从货物走私向武器输送延伸；小型包裹落地后由本地接应者取走，追溯难度大，依赖村民举报与技侦手段。时间线：11月28日完成搜查与立案，报道与事件同日。观察点在于查获频率是否随冬季浓雾期上升，以及旁遮普警方能否沿包裹来源锁定投放点位。</p></details>
+  <div class="meta">
+    <span>来源：<b>印度联合新闻社（UNI）</b></span>
+    <span>推荐理由：事件与报道同日，指向无人机越境投送这一新型手法，但作案主体与航线仍待调查确认。</span>
+    <a href="https://www.uniindia.com/north-india/crime-punjab-bsf-seize-weapons/259937" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-border_security-4">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://www.hindustantimes.com/india-news/fake-call-centre-164-rescued-foreigners-to-be-sent-back-to-their-countries-say-police-101795745987109.html" target="_blank" rel="noopener">印度诺伊达解救164名被贩运外籍人</a></h4>
+  </div>
+  <div class="title-en">Fake call centre: 164 rescued foreigners to be sent back to their countries, say police</div>
+  <div class="chips"><span class="chip">印度</span><span class="chip">人口贩运</span><span class="chip">电诈园区</span><span class="chip">印度尼西亚</span><span class="chip">马来西亚</span><span class="chip">遣返</span><span class="chip">网络奴役</span></div>
+  <p class="summary"><b>内容提要</b>　事件11-26、报道11-28。印度德里警察犯罪科在诺伊达第136区一处商业楼六层查获假国际呼叫中心，解救164名被贩运的印度尼西亚与马来西亚籍人员，其中印尼籍92人、马来西亚籍72人，并逮捕一名25岁马来西亚籍嫌疑人，两名印度籍嫌疑人（苏尼尔·库马尔、苏希尔·库马尔）在逃。受害者以商务签证入境后被收走护照，被限制人身自由并被迫按脚本对本国居民实施投资类诈骗。11月28日，警方表示将经由外交部与外国人地区登记处安排遣返，认定这批人员属人口贩运与所谓网络奴役的受害者，不会受到处罚。现场查获355部手机、168台台式机、26台笔记本电脑、63张电话卡以及174本印尼与马来西亚护照，另有9本护照持有人下落不明。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>背景：东南亚电诈园区长期以虚假招聘把南亚与非洲劳工骗入缅甸、柬埔寨、老挝的封闭园区，印度自身也出现反向流动——外籍人员被贩运入境从事诈骗。此类案件在印度司法实践中极少见，警方称本案属该国首批涉及外籍被害人的此类查获之一。机制：招募方以印度高薪岗位为诱饵，安排受害者持商务签证入境，落地即收走护照，集中安置在诺伊达一处65个房间的租住公寓，工作地为第136区写字楼六层的假呼叫中心，以「SKV企业」名义运作约三个月。作业方式为虚构女性身份在社交平台建立关系，引导目标在伪造的投资平台入金，目标人群为印尼与马来西亚居民。抵抗者遭殴打，饮食与通讯受严格管控。影响：案件同时具备人口贩运、强迫劳动与跨境电诈三重属性，说明诈骗产业链已出现跨区域双向流动。处置方面，警方与外交部、外国人地区登记处对接，为受害者安排临时住所与回国航班，两国使馆参与核验身份；案件在犯罪科警察局立案，所引条款涉绑架、人口贩运、剥削被贩运者、非法强制劳动、非法拘禁、冒名诈骗、刑事恐吓与刑事共谋。时间线：11月25日夜间实施搜查，11月26日对外通报，11月27日披露受害者构成与查获清单，11月28日确认遣返安排与不予追责的立场。后续观察点是两名在逃嫌疑人能否落网，以及174本护照对应的9名尚未找到人员下落。</p></details>
+  <div class="meta">
+    <span>来源：<b>印度斯坦时报（HT）</b></span>
+    <span>推荐理由：跨境人口贩运案件的处置进展，受害者构成、查获物证与遣返流程均具体，具区域治理参考价值。</span>
+    <a href="https://www.hindustantimes.com/india-news/fake-call-centre-164-rescued-foreigners-to-be-sent-back-to-their-countries-say-police-101795745987109.html" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-border_security-5">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://tvpworld.com/96756956/poland-extends-belarus-border-buffer-zone-through-february-2027" target="_blank" rel="noopener">波兰第十次延长对白俄边境缓冲区</a></h4>
+  </div>
+  <div class="title-en">Poland extends restricted zone along Belarus border for another 90 days</div>
+  <div class="chips"><span class="chip">波兰</span><span class="chip">白俄罗斯</span><span class="chip">缓冲区</span><span class="chip">边境限制</span><span class="chip">非法越境</span><span class="chip">欧盟外部边界</span><span class="chip">边防</span></div>
+  <p class="summary"><b>内容提要</b>　事件11-28、报道11-28。波兰内政与行政部11月28日宣布，将波兰与白俄罗斯边境部分地段的通行限制再延长90天，缓冲区自11月30日（周一）起继续生效，覆盖12月、1月与2月。这是该措施2024年6月13日设立以来的第十次延长。政府称，波白边境段的移民压力以及「有组织的越境尝试」仍然真实存在。据延长措施的法规说明，1月1日至11月8日共记录482起非法越境尝试。限制区域范围维持不变：多数地段为沿边界约200米纵深，自然保护区内部分地段扩至约2公里，一处湿地段达4公里；城镇与旅游线路一般不在限制范围内，以减轻对居民、游客与商户的影响。1月1日至10月27日，边防部门对进入限制区开出13张罚单、向法院移送2起、作出警告141次。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>背景：2021年波白边境出现大规模越境潮，华沙将其归因于明斯克方面以运送移民方式对波兰与欧盟施压。此后波兰在边境修建实体屏障，并于2024年6月13日起在部分地段设立禁止停留的缓冲区，以压缩蛇头组织与接应人员的活动空间。该措施此前已九次延长，本次为第十次，法律形式为内政与行政部发布的法规，需逐期续期。机制：缓冲区不是全面封闭，而是对特定纵深地带的停留权作出限制：多数地段约200米，自然保护区周边部分地段约2公里，湿地段约4公里；城镇、旅游线路与居民日常通行被排除在外。执法上由边防部门负责巡查与处罚，本年内已开出13张罚单、移送法院2起、警告141次，说明实际处置以劝离与警告为主。官方给出的续期理由是移民压力与「有组织的越境尝试」持续存在，并援引1月1日至11月8日482起非法越境尝试作为量化依据。影响：一方面，缓冲区把越境行为推离屏障正面，缩短了发现到拦截的时间；另一方面，限制居民与媒体进入也长期招致人权组织与部分地方业者的批评。值得注意的是，482起尝试相较2021年危机高峰期已大幅下降，波兰的做法正从应急手段转为常态化冬季管理。时间线：11月28日（周六）内政与行政部宣布，11月30日生效，覆盖12月至次年2月。观察点在于入冬后越境尝试是否随冰雪条件变化而反弹、欧盟对以停留禁令替代实体管控的合法性讨论，以及第十一次续期时官方是否仍以同一量级数据作为依据。</p></details>
+  <div class="meta">
+    <span>来源：<b>波兰电视台世界频道（TVP World）</b></span>
+    <span>推荐理由：官方宣布、当日发稿，措施范围、生效时间与量化依据完整，可反映欧盟东翼边境管控的常态化趋势。</span>
+    <a href="https://tvpworld.com/96756956/poland-extends-belarus-border-buffer-zone-through-february-2027" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+    <div class="sec-foot"><a href="#sec-border_security" class="collapse-btn" data-collapse="sec-border_security">▴ 收起本板块</a></div>
+  </div>
+</details>
+<details class="section" id="sec-usa">
+  <summary>
+    <span class="sec-title">🗽 美国移民与边境管理</span>
+    <span class="sec-desc">DHS/CBP/ICE/USCIS 动态、国会立法、司法裁决、美墨边境态势</span>
+    <span class="sec-count">6 条</span>
+    <span class="sec-arrow">▾</span>
+  </summary>
+  <div class="sec-body">
+    
+<article class="item" id="item-usa-1">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://abcnews.go.com/Politics/wireStory/aclu-seeks-court-order-blocking-trump-administrations-efforts-138488643" target="_blank" rel="noopener">民权联盟起诉联邦 阻大陪审团传票查批评者</a></h4>
+  </div>
+  <div class="title-en">ACLU seeks court order blocking Trump administration&#x27;s efforts to unmask ICE critics on social media</div>
+  <div class="chips"><span class="chip">大陪审团传票</span><span class="chip">言论自由</span><span class="chip">公民自由联盟</span><span class="chip">移民执法</span><span class="chip">匿名账户</span><span class="chip">初步禁令</span><span class="chip">社交平台</span></div>
+  <p class="summary"><b>内容提要</b>　事件11-27、报道11-27。美国公民自由联盟（ACLU）11月27日向华盛顿哥伦比亚特区联邦地区法院提交集体诉讼，请求法院禁止司法部与国土安全部通过大陪审团传票，迫使Meta、Bluesky、X等社交平台交出匿名批评移民执法用户的账户与个人信息。诉状称，政府律师已发出数十份大陪审团传票，将信息交给移民与海关执法局调查人员，属「恶意调查」，侵犯第一修正案言论自由。四名匿名原告包括一名在Bluesky发文谈纽约移民执法枪击事件的用户、一名在X上批评联邦机构的大学生。首席法官博阿斯伯格本周裁定案件解封，并定于2027年1月6日就初步禁令举行听证，政府须在12月14日前书面答辩。被告列为华盛顿联邦检察官皮罗、司法部长布兰奇与国土安全部长马林。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>本案的关键不在个别帖文，而在取证工具的转换。原告称，过去一年国土安全部向科技公司发出数百份行政传票索取批评者信息，遭到用户与平台抵制后，转向更隐蔽、更难挑战的大陪审团传票，检察方内部以「第18号调查」称之。行政传票可被当事人动议撤销，大陪审团传票则附带刑事程序色彩与保密义务，这使被调查者往往在不知情的情况下被识别。司法层面的争点有三：一是政府是否借刑事程序达成民事执法与舆论压制目的；二是平台是否必须披露账号背后的真实身份；三是匿名政治言论在何种条件下可被追溯。程序上，案件已由秘密转为公开，博阿斯伯格要求政府在12月14日前答辩，1月6日听证初步禁令，时间表本身就构成对执法节奏的约束。政治层面，此案与近期多起机场、法院内抓捕争议叠加，使「执法是否越界」从个案上升为系统性追问；国会1月复会后，围绕传票权的听证与立法施压概率上升。风险面在于：若法院拒绝禁令，行政与司法部门可能加速以传票建立批评者名单；若法院支持禁令，则可能限制执法部门在真正的威胁案件中使用同类工具，边界划定将成为后续上诉的核心。对移民维权组织与媒体而言，此案也提示匿名信息保护的现实脆弱性。</p></details>
+  <div class="meta">
+    <span>来源：<b>美国广播公司新闻（ABC News，转载美联社稿）</b></span>
+    <span>推荐理由：首次就「大陪审团传票揭露匿名批评者」进入公开司法程序，直指执法权与言论自由的边界，具判例意义。</span>
+    <a href="https://abcnews.go.com/Politics/wireStory/aclu-seeks-court-order-blocking-trump-administrations-efforts-138488643" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-usa-2">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://www.washingtonpost.com/business/2026/11/27/trump-administration-has-escalated-denials-einstein-visa/" target="_blank" rel="noopener">杰出人才签证批准率跌至三成二</a></h4>
+  </div>
+  <div class="title-en">Denials soar for &#x27;extraordinary ability&#x27; visa in program once used by Melania Trump</div>
+  <div class="chips"><span class="chip">杰出人才签证</span><span class="chip">批准率下降</span><span class="chip">职业移民</span><span class="chip">自由裁量</span><span class="chip">人才竞争</span><span class="chip">补件要求</span><span class="chip">审查标准</span></div>
+  <p class="summary"><b>内容提要</b>　事件11-27、报道11-27。《华盛顿邮报》11月27日报道，美国为「杰出能力」人士设置的职业移民第一优先类别（EB-1A，俗称「爱因斯坦签证」）批准率由拜登任期最后几个月的75%降至2026年年中的32%。据联邦移民数据，2026财年前三季度约5200人获批，2024年同期接近8900人；移民数据公司Lawfully估计，2026财年第四季度批准率可能进一步降至约27%。报道称，部分律所因拒签率过高已停止受理此类案件；一名曾融资逾6000万美元、出售过公司并有20篇媒体报道的科技创业者被认定「一项标准都未达标」而拒签。国土安全部回应称，公民及移民服务局「绝不会为速度牺牲审查质量」，并称拜登政府时期「审查几乎不存在」。报道同时指出，未发现白宫曾直接下令提高拒签率。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>EB-1A属职业移民第一优先，无需雇主担保与劳工证，申请人须满足十项标准中的至少三项，或在奥运会、奥斯卡等级别的一次性重大成就，随后由移民官作「最终价值判断」。制度设计上，最后这一步本就留有裁量空间，争议也正是围绕它展开：律师称，过去审理者倾向于在材料中寻找批准理由，如今更多寻找拒绝理由，标准从法条可核验的清单滑向整体印象。数据可佐证趋势的幅度而非原因。2026财年前三季度约5200人获批，较2024年同期近8900人明显下滑；Lawfully根据其收录的数百万案件推算第四季度或降至约27%，但这是公司预测，不是官方统计。归因存在多条线索：一是审查趋严，补件通知增多，而补件往往预示拒签；二是申请质量下降，部分中介以模板或人工智能批量生成薄弱材料，收费高昂；三是审理人力不足，买断与裁员削弱了资深审理人员队伍。三条线索并不互斥，也解释了为何「最优秀最聪明」的政治口号与基层审理结果出现落差。影响层面，科技创业、科研与体育艺术领域的申请人首当其冲，部分律所退出该业务将进一步提高信息成本；若趋势延续，人才可能转向加拿大、欧洲与中东的快速通道。需要留意的是，EB-1A并非配额瓶颈型类别，其收紧反映的是裁量而非数量限制，因而更难通过诉讼挑战，也更依赖行政指引的透明化。</p></details>
+  <div class="meta">
+    <span>来源：<b>华盛顿邮报（The Washington Post）</b></span>
+    <span>推荐理由：以官方审理数据揭示合法移民通道实质性收紧，直接影响高技能人才流向，且与「吸引最优秀人才」的政策宣示形成反差。</span>
+    <a href="https://www.washingtonpost.com/business/2026/11/27/trump-administration-has-escalated-denials-einstein-visa/" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-usa-3">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://nypost.com/2026/11/27/us-news/dhs-accuses-california-of-endangering-ice-officers-after-bodycam-shows-police-telling-agents-good-luck" target="_blank" rel="noopener">联邦与加州就警方撤离执法现场交锋</a></h4>
+  </div>
+  <div class="title-en">DHS Accuses Long Beach Police of Endangering ICE Officers After Bodycam Shows &#x27;Good Luck&#x27; Pullout</div>
+  <div class="chips"><span class="chip">执法记录仪</span><span class="chip">庇护政策</span><span class="chip">地方与联邦</span><span class="chip">长滩</span><span class="chip">移民执法</span><span class="chip">公众围观</span><span class="chip">独立审查</span></div>
+  <p class="summary"><b>内容提要</b>　事件11-25、报道11-27。美国国土安全部11月25日就长滩警方11月19日公布的执法记录仪视频发表声明，联邦与地方围绕10月17日一次移民执法行动的处置公开交锋。视频显示，联邦执法人员被围观人群围堵时，长滩市一名警员告知联邦探员，其值班指挥官已下令地方警力撤离，并称「我们奉命撤离，你们只能靠自己了……祝好运」。国土安全部长马林称画面「实在令人不安」，批评加州庇护政策让联邦人员孤立无援。长滩警方与市政府回应称，警员到场是为公共安全、医疗需求与疏通被堵道路，并非协助移民执法，街道安全风险解除后撤离；警察局长赫贝什为下属辩护。该行动中一名40岁男子被强力制服并受伤，其家属与当地媒体称其为美国公民、前市政工人，市长理查森已要求独立审查。11月27日起全国媒体报道放大了争议。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>这起冲突的核心不是一次抓捕是否合法，而是「谁在什么条件下必须出手相助」。加州《价值法案》与长滩市地方条例基本禁止市警协助联邦移民执法，联邦机构则认为在人员被围堵、车辆被阻时，地方警力撤离构成对联邦人员安全的放任。视频提供的是一个高度可传播的瞬间——「你们只能靠自己了……祝好运」——这句话在政治上比任何法条都更有动员效果，也解释了为何视频在11月19日由警方公布、国土安全部选择在11月25日以声明接续放大。事实层面仍有多处空白：双方均未公布完整的调度记录，无法确定地方上级下令撤离与联邦车辆脱困的先后顺序；被制服男子国籍与身份存在官方与家属两种说法；市长要求的独立审查尚未出结果。机制层面，此类争议的走向通常取决于三点：地方是否在「公共安全」与「移民执法」之间划出可操作的界线；联邦是否将地方不配合认定为妨碍执法并寻求法律救济；以及国会是否以拨款条件施压庇护辖区。对执法实务的影响是明显的：联邦行动前的风险评估将更多纳入地方协作意愿，行动方式可能进一步转向夜间、外围与情报主导，减少街头对峙，但也降低透明度与问责便利。对地方而言，真正的难题在于如何在遵守州法与地方条例的同时，避免被指「见危不救」，这需要事前明确交界规则，例如在何种情形下以公共安全名义提供交通管制与医疗支援而不介入身份核查。这一模糊地带，正是未来一年联邦与庇护辖区冲突最可能反复出现的位置。</p></details>
+  <div class="meta">
+    <span>来源：<b>纽约邮报（New York Post）</b></span>
+    <span>推荐理由：以一手执法视频呈现联邦与地方在庇护政策下的协作断裂，是理解2027年执法冲突升级的具体样本。</span>
+    <a href="https://nypost.com/2026/11/27/us-news/dhs-accuses-california-of-endangering-ice-officers-after-bodycam-shows-police-telling-agents-good-luck" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-usa-4">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://www.yahoo.com/news/us/articles/iowa-judge-calls-ice-mistakes-191323406.html" target="_blank" rel="noopener">联邦法官令释放被误抓危地马拉男子</a></h4>
+  </div>
+  <div class="title-en">Judge orders ICE to free Iowa man jailed by mistake, calling it &#x27;almost beyond belief&#x27;</div>
+  <div class="chips"><span class="chip">错误羁押</span><span class="chip">正当程序</span><span class="chip">保释听证</span><span class="chip">联邦地区法院</span><span class="chip">强制羁押政策</span><span class="chip">身份误认</span><span class="chip">司法审查</span></div>
+  <p class="summary"><b>内容提要</b>　事件11-27、报道11-27。美国艾奥瓦州南区联邦地区法院首席法官罗斯近日作出裁定，要求政府在24小时内将被错误逮捕并羁押的危地马拉籍男子佩雷斯·雷西诺斯从波尔克县监狱释放，裁定内容于11月27日经地方媒体报道。裁定认定，执法人员10月28日原本要抓捕一名因性侵未成年人被州法院通缉的男子，却因体貌描述相近抓错人；发现错误后，得梅因办公室人员指示继续羁押，并另行取得移民逮捕令。法官指出，两人身高相差约三英寸、体重相差二十至三十磅，如此明显的事实错误「几乎令人难以置信」，且当事人无犯罪记录、从无缺席移民庭记录，被剥夺了保释听证机会，违反正当程序。法官同时批评近期执法部门在羁押非公民时的错误数量持续增加，并提及今年1月该州另一起类似裁定。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>案件事实链条清晰：2023年6月当事人以未成年无陪伴儿童身份入境，随后被释放交由其姐妹监护；此后一直按期报到，无犯罪记录。2026年10月28日，执法人员在寻找另一名通缉犯时将其带走，发现抓错后并未释放，而是联系得梅因办公室，得到「继续羁押并移送」的指示，随后补办移民逮捕令。法官的核心论证是：政府固然可以在遣返程序期间羁押非公民，但不能在没有新事实、没有保释听证的情况下，重新拘押一名数年前已被有条件释放且始终守法的人。司法部在答辩中未能指出授权羁押的具体法条，只是重复了此前已被其他法官驳回的论点，这一点被裁定特别点明。制度背景是本届政府的「强制羁押」政策：主张对特定类别非公民一律不予保释，而全国已有数百名各级法官在逾千起案件中否定该主张。此类裁定的累积效应有三：一是形成事实上的辖区差异，同一政策在不同法院辖区执行结果不同；二是抬高执法部门的合规成本，要求其保存并披露羁押理由；三是为集体诉讼提供素材。对当事人的意义是即时的——24小时内释放；对政策的意味则是渐进的：单案难以推翻政策，但持续的司法否定会迫使机构修改内部指引。释放不等于案件终结，遣返程序仍在继续；对地方羁押设施而言，此类裁定意味着接收联邦羁押请求时需更谨慎地核对法律依据，否则可能成为共同被告。下一步的观察点在于政府是否上诉，以及是否会在上诉期间以「情形变化」为由再次羁押同一人。</p></details>
+  <div class="meta">
+    <span>来源：<b>艾奥瓦首府快讯（Iowa Capital Dispatch）11月27日报道，雅虎新闻转载</b></span>
+    <span>推荐理由：裁定直指「强制羁押、不给保释听证」政策的合法性软肋，且以极具冲击力的事实细节呈现执法误判的代价。</span>
+    <a href="https://www.yahoo.com/news/us/articles/iowa-judge-calls-ice-mistakes-191323406.html" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-usa-5">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://storage.courtlistener.com/recap/gov.uscourts.mtd.86202/gov.uscourts.mtd.86202.21.0.pdf" target="_blank" rel="noopener">蒙大拿联邦法官裁定禁无令状逮捕</a></h4>
+  </div>
+  <div class="title-en">Judge blocks warrantless civil immigration arrests across Montana</div>
+  <div class="chips"><span class="chip">蒙大拿</span><span class="chip">无令状逮捕</span><span class="chip">初步禁令</span><span class="chip">脱逃风险评估</span><span class="chip">自行离境</span><span class="chip">人身保护令</span><span class="chip">集体诉讼</span></div>
+  <p class="summary"><b>内容提要</b>　事件11-25、报道11-27。美国蒙大拿联邦地区法院大瀑布城分院首席法官布赖恩·莫里斯11月25日就「韦尔德·埃尔南德斯等诉国土安全部」案（案号CV-26-301-GF-BMM）作出裁定，同时签发临时限制令、初步禁令与《行政程序法》第706条中止令，禁止联邦机构在该辖区实施无令状的民事移民逮捕，除非事先就「被捕对象很可能在取得令状前脱逃」作出个别化判断。裁定称，法院自7月31日以来已审理逾50起不符合法定条件的无令状逮捕，并认定7月以来该州多数由国土安全部执行的移民逮捕均无令状、且未充分进行脱逃风险评估。禁令要求该部向执法人员分发裁定、留存个别化评估记录，在每次无令状逮捕后72小时内向原告律师提供评估文件与I-213表格，并禁止7日内将此类被捕者移出该辖区。法院还认定，被羁押者可能在无律师接触机会、且基于对法律后果的错误认知下被「逼向自行离境」。四名原告9月25日起诉并代表同类人员，法院10月14日听证，新闻周刊11月27日报道。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>本案的法律入口是《移民与国籍法》第1357条第a款第2项：移民官员在有理由相信当事人非法居留、且在取得令状前很可能脱逃时，可实施无令状逮捕。争点由此转为「个案判断是否存在」而非「能否无令状」。莫里斯的裁定认为，蒙大拿辖区自7月31日以来的多数逮捕没有任何可核验的脱逃风险评估，事实上形成「先抓再补令状」的做法，而这是条文所不允许的；法院并援引同院「埃尔南德斯诉克罗斯森」案的既判认定，以及至少五个其他联邦辖区的同类判决，认定存在「模式与惯例」。禁令的可执行性被设计得相当具体：分发裁定、72小时文书义务（含I-213表格）、7日内不得跨区转移，这三点压缩了「抓完就送到外州」的空间，也便于后续以藐视法庭追究。横向看，科罗拉多、俄勒冈、加利福尼亚与纽约的法官已作出类似认定，蒙大拿的意义在于把判例覆盖到移民执法量较小、法律资源稀薄的州；九月该院曾下令释放关押在喀斯喀特县的24人，说明法官与联邦机构之间已形成反复交涉的关系。另一条值得注意的线是「自行离境」认定：法院认为羁押被当作施压工具，使本可通过人身保护令获释的人放弃救济，若被上诉法院采纳，将触及羁押期间的告知义务与律师接触权。对执法实务的影响是即时的：在蒙大拿行动前必须形成书面的脱逃风险评估并留存记录；对全国政策的影响则取决于第九巡回上诉法院的态度，以及政府是否申请在上诉期间中止禁令。观察点在于政府是否在72小时文书义务上出现系统性违规，以及其他尚未介入的州是否出现同类诉讼。</p></details>
+  <div class="meta">
+    <span>来源：<b>美国蒙大拿联邦地区法院大瀑布城分院（裁定文书第21号）；新闻周刊（Newsweek）11月27日报道</b></span>
+    <span>推荐理由：裁定以逾50起个案的量化认定支撑「模式与惯例」结论，并附72小时文书义务与7日禁止跨区转移等可执行条款，是同类诉讼中约束力较强的一例。</span>
+    <a href="https://storage.courtlistener.com/recap/gov.uscourts.mtd.86202/gov.uscourts.mtd.86202.21.0.pdf" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-usa-6">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2027/visa-bulletin-for-december-2026.html" target="_blank" rel="noopener">美十二月排期公布 职业移民几近停滞</a></h4>
+  </div>
+  <div class="title-en">Visa Bulletin For December 2026</div>
+  <div class="chips"><span class="chip">签证公告</span><span class="chip">职业移民</span><span class="chip">排期倒退</span><span class="chip">绿卡配额</span><span class="chip">亲属移民</span><span class="chip">国别限额</span><span class="chip">国务院</span></div>
+  <p class="summary"><b>内容提要</b>　事件11-27、报道11-27。美国国务院11月27日发布2026年12月签证公告，新日期自12月1日起适用，职业移民各类别最终裁定日几乎全线停滞，唯一变动是中国出生申请人非预留类第五优先前进一个月至2017年1月1日。第一优先对中国大陆为2023年8月1日、印度为2023年2月1日，其余国家有名额；第二优先多数国家为2025年4月1日，中国为2021年10月1日、印度为2013年11月1日；第三优先多数国家为2024年6月15日，中国为2022年1月22日、印度为2014年1月22日；亲属类第二优先多数国家前进一个月至2026年11月22日，墨西哥第三优先前进一年。公告称，因行政当局与国务院为维护国家安全采取的措施（含第10949、10998号总统公告）导致移民签证签发率下降，近月各类别日期被推进，但未来数月可能需要倒退，个别类别可能在财年结束前即无配额；第四优先特定宗教工作者类别经H.R. 6500延至2026年12月11日。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>排期的机械原理值得先厘清：职业移民全球年度配额约14万，单一出生国不得超过其中的7%，因此中国与印度长期排队，「有名额」只表示无需等待签证号。签证公告每月发布两张表，表A决定何时可以批准，表B决定何时可以递交，境内调整身份适用哪张表由公民及移民服务局另行公布，12月适用哪张表须以该局公告为准。本次公告最关键的信息不是数字，而是国务院给出的解释：移民签证签发率下降，使部分类别此前得以前进，但为避免超出年度与国别上限，未来数月可能需要倒退，个别类别甚至会在财年结束前显示无配额。这也解释了亲属类与职业类走势分化：亲属移民几乎全部在海外领事馆完成，领事签发放缓会先反映在亲属表上；职业移民有相当比例走境内调整，受领事端波动影响较小，因此表现为原地踏步。风险面有三：一是排期前进带来的「虚假窗口」，申请人据此准备材料、体检与担保文件，若下月倒退则成本沉没；二是第四优先特定宗教工作者类别仅获拨款至12月11日，若国会不续期，该类别将转为无配额；三是国别上限与年度上限同时逼近时，先到先得的顺序会让部分早期优先日反而失去机会。对申请人的实务含义是：在窗口开放期尽快完成递交，以收件日而非寄出日计算；对观察者而言，12月与1月的对比将检验国务院的倒退预警究竟是技术性提示还是实质收缩的前奏。</p></details>
+  <div class="meta">
+    <span>来源：<b>美国国务院领事事务局（travel.state.gov）</b></span>
+    <span>推荐理由：官方月度配额文件，是判断合法移民通道拥挤程度与年度配额风险的基准数据；本期同时给出倒退预警，但发布本身属例行。</span>
+    <a href="https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2027/visa-bulletin-for-december-2026.html" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+    <div class="sec-foot"><a href="#sec-usa" class="collapse-btn" data-collapse="sec-usa">▴ 收起本板块</a></div>
+  </div>
+</details>
+<details class="section" id="sec-eu">
+  <summary>
+    <span class="sec-title">🇪🇺 欧盟移民与边境管理</span>
+    <span class="sec-desc">欧盟委员会/Frontex/EUAA 动态、移民与庇护公约执行、申根区管控、成员国政策</span>
+    <span class="sec-count">5 条</span>
+    <span class="sec-arrow">▾</span>
+  </summary>
+  <div class="sec-body">
+    
+<article class="item" id="item-eu-1">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://travellingforbusiness.co.uk/news/ees-queues-biometric-checks-pause" target="_blank" rel="noopener">旅游联盟吁欧盟暂缓入境生物识别采集</a></h4>
+  </div>
+  <div class="title-en">EES queues: tourism alliance asks EU to pause biometric checks</div>
+  <div class="chips"><span class="chip">出入境系统</span><span class="chip">生物识别</span><span class="chip">申根口岸</span><span class="chip">排队拥堵</span><span class="chip">旅游联盟</span><span class="chip">临时豁免</span><span class="chip">预登记应用</span></div>
+  <p class="summary"><b>内容提要</b>　事件11-27、报道11-28。由80余家公共与私营旅游机构组成的欧洲「旅游宣言」联盟11月27日在布鲁塞尔发表声明，要求欧盟委员会恢复成员国边境部门在客流高峰时暂停采集指纹与人脸图像的临时裁量权；声明由欧洲旅行社与运营商协会同步散发。该灵活性安排已于2026年9月到期，此后申根区多个机场在入境与出境环节出现长队，部分旅客错过转机航班，个别航班旅客被迫滞留机舱等待航站楼腾出空间。联盟称问题集中在人手、设施、设备与系统稳定性四处，且岛国与支线机场尤为脆弱，目前仅两个成员国提供入境预登记应用。行业援引世界旅游理事会的调查称，若长队成为常态，约六成三受访者会考虑申根区以外的目的地，最坏情形下约4100万人次与454亿美元消费面临风险。欧盟委员会尚未回应，并在此前表示仅约20个口岸存在严重排队，全面暂停既无必要也不可行。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>出入境系统自2025年10月分阶段上线、2026年4月全面部署，对非欧盟短期停留者采集护照信息、人脸图像与指纹，覆盖美英加澳等免签国旅客。制度设计上的关键节点是2026年9月：允许边境部门在高峰时段跳过生物识别登记的过渡条款到期，此后拥堵从局部变为普遍投诉。行业诉求并非废除系统，而是恢复「口岸裁量」——在排队超出承受能力时临时跳过采集。这一诉求的技术合理性在于，生物识别登记只需在首次入境完成，一旦完成即可复用，因此高压时段的强制采集带来的边际安全收益最低，而延误成本最高。争议点在于欧盟委员会的态度：其此前判断仅约20个口岸存在严重排队，认为全面暂停既无必要也不可行，并将问题归于成员国的设施与人手投入；委员会同时强调机场无法自行修复由政府部门控制的环节。政治层面，这一议题已被纳入更大的边境数字化叙事——入境预授权系统推迟上线、部分成员国延迟全面实施，使「系统能否承载」成为对欧盟边境管理能力的直接质疑。对旅客的现实影响是可预期的：首次入境预留更长时间、避免紧凑转机、确认到达机场是否支持预登记。对未来一年的判断是，全面暂停概率低，但针对特定口岸的个案豁免与更大规模的预登记推广更可能成为折中方案；若冬季高峰出现大规模误机，委员会将面临来自航空与旅游业的集中施压。</p></details>
+  <div class="meta">
+    <span>来源：<b>英国商旅出行网（Travelling for Business）</b></span>
+    <span>推荐理由：首次以八十余家机构联名方式要求恢复生物识别豁免，把技术系统的运行瓶颈转化为政治议题，直接影响2027年1月收紧前的决策窗口。</span>
+    <a href="https://travellingforbusiness.co.uk/news/ees-queues-biometric-checks-pause" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-eu-2">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://www.cna.com.tw/news/aopl/202611280093.aspx" target="_blank" rel="noopener">加那利移民船十四人遇难 耶罗岛承压</a></h4>
+  </div>
+  <div class="title-en">Fourteen found dead on migrant boat off Spain&#x27;s Canary Islands</div>
+  <div class="chips"><span class="chip">加那利群岛</span><span class="chip">耶罗岛</span><span class="chip">移民船难</span><span class="chip">单日纪录</span><span class="chip">接待能力</span><span class="chip">紧急状态</span><span class="chip">大选议题</span></div>
+  <p class="summary"><b>内容提要</b>　事件11-27、报道11-28。西班牙埃菲社与路透社报道，11月27日在耶罗岛以南39海里（约72公里）处获救的一艘载约100人的船只上发现遗体，海上救援部门最初报告8至10人死亡、6名重伤者由直升机送医；西班牙领土政策大臣托雷斯11月28日在社交平台确认死亡人数升至14人，84名生还者由另一艘船送至耶罗岛拉雷斯廷加港，该港设有移民接待中心与野战医院。加那利群岛11月25日单日抵达约2100人，创该航线单日纪录，多数抵耶罗岛（人口约1.14万）。内政部数据显示，1月1日至11月15日加那利海上抵达24364人，较2025年同期14690人增加约65.9%，其中11月前15天即达11037人，超过10月全月的6194人。耶罗岛11月7日宣布社会紧急状态、11月25日宣布卫生紧急状态，11月27日约765人由该岛转往特内里费等接待中心。西班牙11月29日举行大选，移民已成核心议题。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>这起事故的三个数字构成一条完整压力链：14人死亡说明船只超载与航程风险已到极限——船在耶罗岛以南39海里处被发现，载员约百人，救护力量只能先直升机转运6名重伤者，其余生还者由另一艘船接驳至设有野战医院的拉雷斯廷加港；2100人单日抵达（11月25日）说明流量本身在加速，且高度集中于人口仅约1.14万、接待中心设计容量数百人的耶罗岛；24364人、同比增65.9%则说明这不是单日异常，而是整个11月前半月（11037人）就超过10月全月（6194人）的结构性跳升。机制上，耶罗岛的问题在于「小岛接大流量」：临时接待中心在72小时内要完成指纹采集、身份核验与卷宗开立，一旦抵达速度超过登记速度，第一个环节即堵死，人员被迫滞留港口过夜，这也是11月7日社会紧急状态、11月25日卫生紧急状态的现实背景。11月27日约765人转往特内里费与加那利其他接待中心，属于减压而非解决——转运只是把瓶颈后移到本土床位与航班。政治层面，事故发生在11月29日大选前两天，区域主席克拉维霍公开要求马德里与欧盟委员会介入、包括部署欧盟边境局力量，并把根源指向塞内加尔与冈比亚的出发岸线；首相桑切斯则强调与西非国家的联合巡逻已见效。选后无论谁执政，可动用的工具仍是转运、扩容与对外合作三条，而真正决定流量的是西非出发国的巡逻强度与就业状况。</p></details>
+  <div class="meta">
+    <span>来源：<b>中央通讯社（CNA，综合埃菲社与路透社报道）</b></span>
+    <span>推荐理由：死亡人数在投票前两日上修至14人，叠加单日2100人的历史纪录与岛内转运，把大西洋航线的人道代价与接待体系极限同时推到选举议题中心。</span>
+    <a href="https://www.cna.com.tw/news/aopl/202611280093.aspx" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-eu-3">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://irish-presidency.consilium.europa.eu/en/news/results-of-the-special-european-council-26-27-november-2026" target="_blank" rel="noopener">欧盟特别峰会提前收场 边境资金悬而未决</a></h4>
+  </div>
+  <div class="title-en">EU special summit ends early as leaders clash over long-term budget</div>
+  <div class="chips"><span class="chip">长期预算</span><span class="chip">特别峰会</span><span class="chip">边境与移民资金</span><span class="chip">财政分歧</span><span class="chip">安全防务</span><span class="chip">十二月峰会</span><span class="chip">成员国对立</span></div>
+  <p class="summary"><b>内容提要</b>　事件11-26至27、报道11-27—28。欧盟11月26日起在布鲁塞尔举行特别峰会，讨论2028至2034年长期预算与对乌援助。因分歧严重，原定两天的会议于27日凌晨提前结束，27日上午议程取消，相关谈判推迟至12月17日至18日的例行峰会。预算方案从欧委会近2万亿欧元，经轮值主席国爱尔兰10月折中至约1.83万亿，再于11月21日由欧洲理事会主席科斯塔压缩至约1.78万亿，仍遭德国、荷兰等净出资国反对，认为规模过大并要求停止增加共同债务；法国称削减是「战略性错误」，将压缩产业竞争力投资；「凝聚力之友」小组反对削减农业补贴与地区发展拨款；德国与芬兰则不满安全防务与竞争力支出被削。欧洲理事会公告称，24个成员国支持欧委会提出的2027年追加对乌贷款方案（最高450亿欧元），其中保加利亚仅参与非军事部分。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>把这场峰会放进移民治理框架看，关键在于长期预算的「上游决定下游」效应。2028至2034年预算中的边境管理、庇护与移民专项，是各国扩建接待设施、采购监控设备、参与欧盟边境局行动、开展遣返与重新接纳合作的资金来源；预算规模与科目结构一旦确定，未来七年的能力上限随之锁定。当前的分歧结构有三层：规模之争（德国、荷兰等净出资国要求进一步压缩并停止增加共同债务）、结构之争（南欧与东欧的「凝聚力之友」要求保住农业补贴与地区拨款，德国、芬兰要求保住安全防务与竞争力支出）、以及融资工具之争（爱尔兰、卢森堡对数字服务税等新自有资源持异议）。三层互相牵制，使得任何单点妥协都会引发其他方要价，这也是27日上午议程被取消、会议提前收场的机制性原因。对乌援助构成第二重压力：欧委会11月18日提议2027年追加最高450亿欧元贷款，由资本市场举债、预算担保，其中最高250亿用于军事、最高200亿用于预算支持；德国主张把对乌融资与长期预算挂钩并作为同意预算的前置条件，捷克、匈牙利、斯洛伐克则要求分开处理。时间约束同样紧迫：若12月17至18日峰会仍无突破，2028年起的新预算框架将面临衔接风险，过渡期安排会挤压移民与边境专项的确定性。另一个值得关注的细节是，欧盟委员会主席冯德莱恩在会后强调新自有资源已取得进展、数字服务税获得广泛支持，并将其视为继续推进的基础；这意味着12月的谈判焦点可能从「总量」转向「钱从哪里来」。对成员国的现实影响是，在预算未定期间，边境与接待投入更依赖国家财政与临时性欧盟工具，能力建设节奏将明显放缓。</p></details>
+  <div class="meta">
+    <span>来源：<b>欧盟理事会爱尔兰轮值主席国官网（欧洲理事会会议结论公告）</b></span>
+    <span>推荐理由：预算僵局虽以财政为主线，但直接决定2028年后边境管理、庇护接待与遣返合作的资金盘子，是移民治理的上游变量。</span>
+    <a href="https://irish-presidency.consilium.europa.eu/en/news/results-of-the-special-european-council-26-27-november-2026" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-eu-4">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://www.fakti.bg/en/world/1105533-more-than-900-migrants-rescued-off-cretes-southern-coast" target="_blank" rel="noopener">希腊克里特岛外海单日救起九百余人</a></h4>
+  </div>
+  <div class="title-en">More than 900 migrants rescued off Crete’s southern coast</div>
+  <div class="chips"><span class="chip">希腊</span><span class="chip">克里特岛</span><span class="chip">加夫多斯</span><span class="chip">海上救援</span><span class="chip">欧盟边境管理局</span><span class="chip">地中海航线</span><span class="chip">利比亚</span></div>
+  <p class="summary"><b>内容提要</b>　事件11-28、报道11-28。希腊海岸警卫队11月28日通报，当日在克里特岛南部与加夫多斯岛外海的多起行动中共救起约903人，未报告人员伤亡。凌晨过后，在加夫多斯外海、卡利利梅内斯港以及斯法基亚的特里皮蒂海滩一带共发现约583名外籍人员；随后欧盟边境管理局的无人机在卡利利梅内斯以南发现4艘船，救起约274人并送往港口；另一起行动中，海警巡逻艇在耶拉派特拉西南方向救起约46人。上述行动均由联合搜救协调中心统一指挥。希腊方面称，2026年截至11月6日已有逾2.3万人抵达克里特岛及加夫多斯岛，同期经海路与陆路入境希腊者超过3.8万人，2025年全年约为4.9万人。该航线自利比亚东部海岸出发，近期入境压力持续上升。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>背景：中地中海东段近年出现结构性位移，从利比亚东部出港的船只不再主要驶向意大利兰佩杜萨，而是向东北漂向克里特岛南岸与加夫多斯岛。加夫多斯面积小、无常规收容设施，抵达者往往先被安置在临时帐篷或直接由渡轮转运至克里特岛，再向北转移至希腊本土。希腊方面数据显示，2026年截至11月6日抵克里特与加夫多斯者逾2.3万人，同期经海陆入境希腊者逾3.8万人，而2025年全年约4.9万人，说明总量并未超过上年、但空间分布明显集中。机制：本次行动分三个时段。凌晨过后，海警在加夫多斯外海、卡利利梅内斯港与特里皮蒂海滩一带发现约583人，其中部分人已上岸；随后欧盟边境管理局的无人机在卡利利梅内斯以南锁定4艘船，救起约274人；第三段为海警巡逻艇在耶拉派特拉西南发现的一艘船，救起约46人。三段合计约903人，均由联合搜救协调中心指挥调度。无人机先发现、巡逻艇再接收，是希土与利比亚方向救援的常规分工，可显著缩短漂航时间。影响：一日近九百人对卡利利梅内斯、耶拉派特拉、斯法基亚等小港的接收、登记与医疗构成瞬时压力，转运至莱斯沃斯等岛的安排此前已有记录。持续大流量亦会抬高希腊与欧盟在遣返、收容标准上的政治成本。时间线：11月28日完成多起救援并由海岸警卫队通报，保加利亚通讯社当日发稿。观察点在于无人机与巡逻艇的接续效率能否维持、克里特南部临时安置点扩容进度，以及入冬后海况恶化是否令伤亡数字上升。</p></details>
+  <div class="meta">
+    <span>来源：<b>保加利亚通讯社（BTA），Fakti.bg 刊发</b></span>
+    <span>推荐理由：官方通报、当日发稿，人数、海域与分段行动交代清楚，是观察中地中海东段路线位移的实证样本。</span>
+    <a href="https://www.fakti.bg/en/world/1105533-more-than-900-migrants-rescued-off-cretes-southern-coast" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-eu-5">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://apnews.com/article/greece-migration-libya-north-africa-return-hubs-4a9adfe8ab9757039b04f0f530476fa0" target="_blank" rel="noopener">加夫多斯岛船只触礁 两人身亡四十一人获救</a></h4>
+  </div>
+  <div class="title-en">More than 1,100 migrants reach the Greek islands of Crete and Gavdos in 2 days, with 2 reported dead</div>
+  <div class="chips"><span class="chip">希腊</span><span class="chip">加夫多斯</span><span class="chip">克里特岛</span><span class="chip">触礁</span><span class="chip">海上救援</span><span class="chip">利比亚航线</span><span class="chip">人员死亡</span></div>
+  <p class="summary"><b>内容提要</b>　事件11-28、报道11-28。希腊海岸警卫队通报，11月28日在加夫多斯岛一处岩石海岸发现41名生还者与两具遗体，4名生还者被送往克里特岛医院；当地媒体称该船抵岛时疑似触礁，死亡原因尚待确认。海岸警卫队自11月27日凌晨至28日下午的通报合计显示，希腊方面与欧盟边境局在克里特岛与加夫多斯岛附近共发现并救起逾1,100人。本月早些时候，两艘自利比亚驶往希腊南部的船上共发现22具遗体。希腊是拟在卢旺达设立遣返中心的五个欧盟国家之一，该计划受到人权组织批评。自利比亚东部海岸至希腊南部岛屿的海路近年成为进入欧洲最常用路线之一，希腊政府虽采取强硬移民政策，抵达人数仍在上升。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>这起事故与同日的大规模海上救援需要分开看：前者是「抵岸时刻的死亡」，后者是「漂航途中的救援」。11月28日在加夫多斯岛岩石海岸发现的41名生还者与两具遗体，说明船只在靠岸阶段撞上礁石——这是利比亚至希腊南部航线上最危险的一刻，因为加夫多斯面积小、岸线多岩石、没有常规收容设施，船只一旦在夜间或涌浪中抵岸，往往直接触礁。希腊海岸警卫队称死亡原因尚待确认，4名生还者转往克里特岛医院，另有一批人员在同一时段被巡逻艇与欧盟边境局无人机发现后接走。把两天数字合起来，自11月27日凌晨至28日下午逾1,100人进入克里特与加夫多斯，说明该航线流量并未随入冬下降；本月早些时候两艘自利比亚出发的船上发现22具遗体，印证同一趋势。机制上，利比亚东部出港、向东北漂向克里特南岸与加夫多斯的路线近年被反复使用，原因是中地中海西段与突尼斯方向的拦截强度上升，蛇头把出发点与目的地同时东移；对希腊而言，压力集中在小港口与临时安置点，登记、医疗与转运能力被瞬时击穿。政策背景同样重要：希腊是拟在卢旺达设遣返中心的五个欧盟国家之一，该计划被批评为把保护责任外移；当抵达人数持续走高、境外遣返仍停留在纸面时，希腊可用的工具依然只有搜救、收容与转运三件。观察点在于加夫多斯是否增设常设救援与收容力量、触礁死亡是否促使希腊调整南岸夜间监视部署，以及欧盟边境局无人机在该海域的出动频次是否继续加码。</p></details>
+  <div class="meta">
+    <span>来源：<b>美联社（AP）</b></span>
+    <span>推荐理由：通讯社现场通报，伤亡与获救人数、海域、时间线清楚，补足了同批救援通报里缺失的死亡环节，可与单日救起九百余人一条互为印证。</span>
+    <a href="https://apnews.com/article/greece-migration-libya-north-africa-return-hubs-4a9adfe8ab9757039b04f0f530476fa0" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+    <div class="sec-foot"><a href="#sec-eu" class="collapse-btn" data-collapse="sec-eu">▴ 收起本板块</a></div>
+  </div>
+</details>
+<details class="section" id="sec-china_neighbors">
+  <summary>
+    <span class="sec-title">🧭 中国周边国家动态</span>
+    <span class="sec-desc">东南亚、南亚、中亚、东北亚国家移民管理与边境安全要闻</span>
+    <span class="sec-count">6 条</span>
+    <span class="sec-arrow">▾</span>
+  </summary>
+  <div class="sec-body">
+    
+<article class="item" id="item-china_neighbors-1">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://www.indonesianow.co/news/8773983/12-passengers-bound-for-vanuatu-blocked-by-indonesian-immigration-at-bali-airport" target="_blank" rel="noopener">巴厘岛拦阻赴瓦努阿图旅客 六人涉分离组织</a></h4>
+  </div>
+  <div class="title-en">12 Passengers Bound for Vanuatu Blocked by Indonesian Immigration at Bali Airport</div>
+  <div class="chips"><span class="chip">印度尼西亚</span><span class="chip">巴厘岛</span><span class="chip">移民查验</span><span class="chip">出境限制</span><span class="chip">机场执法</span><span class="chip">瓦努阿图</span><span class="chip">巴布亚</span></div>
+  <p class="summary"><b>内容提要</b>　事件11-27、报道11-28。印度尼西亚巴厘岛伍拉·赖国际机场移民部门27日22时许在国际出发大厅拦阻12名拟经悉尼转机前往瓦努阿图维拉港的旅客，致其全部错过捷星航空航班。印尼国民军总司令情报助理里奥·菲尔迪安托少将28日说明，12名巴布亚裔旅客中有6人涉嫌为巴布亚分离组织成员，原定赴维拉港参加该组织和解会议，6人因此被拒出境。巴厘法律援助机构维权负责人伊格纳修斯·拉迪特则称，事件起于数人护照无法被自动查验系统读取、被转入人工复核，证件随后被带入单独房间；工作人员称奉上级指示进一步核查，最初仅两人获准继续行程，其余十人证件被扣约一小时，经口头交涉后又有四人放行，另六人证件因据称来自移民与惩教部移民总局局长的指示未归还，先前获准离开的六人随后在登机口再度被拦。至28日12人仍滞留机场移民检查室，未获任何书面说明。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>此案的关键在于性质判断：起初由法律援助机构对外陈述，呈现为证件系统故障引发的任意扣留，易被读作程序失当的样本；印尼军方随后披露的信息则显示，12人中有6人系巴布亚分离组织成员，拟赴境外参加该组织的和解会议，出境限制具有政治安全指向。两条叙述并不互斥——即便存在安全理由，执行环节仍以口头指令层层加码、扣押证件近一小时、最终在登机口二次拦截，全程无书面决定与救济告知，程序瑕疵客观存在。从制度背景看，印尼新设移民与惩教部把原属司法人权系统的移民总局并入，强化对出入境环节的统一管控，边检机关依据移民法对特定外国人享有禁止出境裁量权，通常用于刑事调查、司法程序或国家安全评估。此类裁量的透明度是该国出入境治理的薄弱环节：当事人往往无从知晓被限制的依据、期限与申辩途径。对区域观察者而言，值得跟踪的是印尼对巴布亚相关人员出境的一贯做法是否形成惯例，以及是否会在国际民航承运人层面产生连锁影响——登机牌已发放而旅客被拒出境，退改签与责任分担缺乏明确规则。</p></details>
+  <div class="meta">
+    <span>来源：<b>印尼现在新闻网（Indonesia Now，引述点滴网巴厘版）</b></span>
+    <span>推荐理由：军方与法律援助机构两条信息源交叉，时间、人数、航班与处置节点具体；但双方对拦截理由的表述差异大，移民部门未发布正式说明，结论需保留。</span>
+    <a href="https://www.indonesianow.co/news/8773983/12-passengers-bound-for-vanuatu-blocked-by-indonesian-immigration-at-bali-airport" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-china_neighbors-2">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://www.thestar.com.my/news/nation/2026/11/28/group-calls-for-30-day-visa-exemption-for-indian-nationals-to-be-extended-for-another-year" target="_blank" rel="noopener">马旅游业界呼吁延长印度公民免签一年</a></h4>
+  </div>
+  <div class="title-en">Group calls for 30-day visa exemption for Indian nationals to be extended for another year</div>
+  <div class="chips"><span class="chip">马来西亚</span><span class="chip">印度</span><span class="chip">免签</span><span class="chip">签证政策</span><span class="chip">旅游业</span><span class="chip">行前筛查</span><span class="chip">移民局</span></div>
+  <p class="summary"><b>内容提要</b>　事件11-28、报道11-28。马来西亚旅游联合会28日发表声明，呼吁将原定2027年1月1日到期的印度公民30天免签安排再延长一年。该会主席斯里·加内什·米歇尔称，印度是马来西亚最大客源市场之一，2025年访马印度旅客逾150万人次，2026年1月至9月为82万8550人次；马来西亚旅游同业协会统计显示，2025年印度市场带来约148亿林吉特旅游收入。移民局25日宣布印度公民免签将于2027年1月1日终止，内政部长赛夫丁·纳苏申此前表示短期访问免签将于12月31日结束，理由是强化行前筛查、确保入境秩序可控。加内什要求政府在12月1日MyVisa申请开放前尽快决定，并给出清晰过渡安排，包括对已确认订单旅客、旅行团和已签约活动主办方的具体指引；他同时建议召集内政部、旅游艺术文化部、财政部、移民局、马来西亚旅游促进局、航空公司与行业协会紧急磋商，改用风险导向筛查，并每季度检讨成效。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>马来西亚对印度公民的30天免签属近年单方面开放举措，配套要求包括出发前72小时内填报数字入境卡、提供回程或续程机票与住宿证明。此次转向的背景是三年间记录的逾1.8万宗签证违规案件，以及社会对外籍人员从事快递配送、无证经营等议题的关注度上升。内政部将免签终止与行前筛查绑定，逻辑是把审核前移到申请端，用签证与电子系统替代口岸拦截，从而降低入境后处置成本。旅游业的反弹则源于市场结构：印度连续多年位居马来西亚前三客源市场，2026年前三季度已近83万人次，航空运力、地接社与活动主办方的2027年排期均已按免签假设锁定。若政策如期收紧，短期将出现两重摩擦——一是签证申请量在12月集中涌入，审批与预约能力面临压力；二是已购机票旅客若未及时办证，可能引发退改与投诉。区域内竞争亦不容忽视，泰国、斯里兰卡、越南近年相继放宽对印签证，客源争夺趋于激烈。后续关键在于政府能否在12月1日系统开放前给出明确过渡条款，以及是否采纳风险导向筛查、把免签与违规记录挂钩的分层方案。</p></details>
+  <div class="meta">
+    <span>来源：<b>星报（The Star）</b></span>
+    <span>推荐理由：主流媒体一手报道，政策生效节点、数据与业界诉求均具体可核，清晰呈现东南亚签证收紧与旅游经济利益之间的张力。</span>
+    <a href="https://www.thestar.com.my/news/nation/2026/11/28/group-calls-for-30-day-visa-exemption-for-indian-nationals-to-be-extended-for-another-year" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-china_neighbors-3">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://www.thehindu.com/news/national/27-bangladeshi-nationals-held-for-illegal-stay-in-gurugram-sent-back-police/article71754034.ece" target="_blank" rel="noopener">印度古尔冈遣返二十七名孟加拉籍人员</a></h4>
+  </div>
+  <div class="title-en">27 Bangladeshi nationals held for illegal stay in Gurugram sent back: Police</div>
+  <div class="chips"><span class="chip">印度</span><span class="chip">孟加拉国</span><span class="chip">非法居留</span><span class="chip">遣返</span><span class="chip">拘留中心</span><span class="chip">外国人管理</span><span class="chip">跨境移民</span></div>
+  <p class="summary"><b>内容提要</b>　事件11-27、报道11-28。印度哈里亚纳邦古尔冈警方28日表示，27名因涉嫌非法居留被捕的孟加拉国籍人员已于27日由警方押送乘火车遣返。警方称，这批人员分别在古尔冈警察反恐小队与警务行动人员的两次行动中被查获，初步调查显示其没有有效签证、护照或其他获准居留的证件；随后被送往马内萨尔拘留中心完成法律与行政手续。为确保押送，铁路部门专门加挂一节普通车厢。一名警官称，27人随警员一同登车，列车按既定程序发车，整个过程组织有序。警方表示，将继续在辖区内排查核验涉嫌非法居留的外国人。该案是古尔冈警方本月系列清查的延续：11月7日反恐小队联合努赫、罗塔克特别行动组查获14人，9日警务人员又在巴杰格拉地区查获15人，均移送马内萨尔拘留中心。据当地警方通报，被查者多经西孟加拉邦水路、边境围栏或管道入境，随后辗转至古尔冈。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>印度对无证外国人的处置已形成固定链条：地方警察在反恐、治安或举报核查中查获嫌疑人，先核验证件与入境记录，再移送移民局设于马内萨尔等地的拘留中心，最后由外国人管理机关安排遣返。本案的特殊之处在押送方式——27人由警员随车全程护送，铁路部门加挂车厢，既降低途中脱逃与群体聚集风险，也便于在沿途各站交接。这类集体遣返通常经陆路口岸移交孟加拉国边防部门，费用与程序由印方承担。从政策脉络看，古尔冈自11月初起连续开展核查，执法重点从边境拦截前移至内陆城市，依托住宿申报、用工登记与举报线索排查，且在行动层级上由地方反恐小队主导，安全化色彩明显。其效应是双向的：一方面压缩无证居留空间，另一方面也使部分务工者转向更隐蔽的就业形态，增加被中介剥削的风险。对孟加拉国而言，接收能力与身份核验压力同步上升。观察点在于，印度是否会以拘留中心容量、航班与口岸运力为约束，形成常态化的定期遣返节奏，以及两国能否在执法合作与人员往来便利之间取得平衡。</p></details>
+  <div class="meta">
+    <span>来源：<b>印度教徒报（The Hindu）</b></span>
+    <span>推荐理由：主流媒体依据警方通报，时间、人数、押送方式与法律流程清晰；但属例行清查个案，增量信息有限，价值在于呈现南亚内陆执法前移趋势。</span>
+    <a href="https://www.thehindu.com/news/national/27-bangladeshi-nationals-held-for-illegal-stay-in-gurugram-sent-back-police/article71754034.ece" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-china_neighbors-4">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://vietnamnet.vn/en/landslide-cuts-off-road-to-vietnam-laos-international-border-gate-2579627.html" target="_blank" rel="noopener">越南老挝国际口岸通道因塌方中断</a></h4>
+  </div>
+  <div class="title-en">Landslide cuts off road to Vietnam-Laos international border gate</div>
+  <div class="chips"><span class="chip">越南</span><span class="chip">老挝</span><span class="chip">拉莱口岸</span><span class="chip">边境通道</span><span class="chip">塌方</span><span class="chip">跨境运输</span><span class="chip">应急响应</span></div>
+  <p class="summary"><b>内容提要</b>　事件11-28、报道11-28。越南广治省15D国道28日清晨6时30分许在拉莱乡9加400公里处发生严重塌方，约1500立方米土石将路面完全掩埋，通往拉莱国际口岸的唯一公路交通中断。拉莱乡人民委员会主席黎光石表示，塌方后当地公安与军队立即到场设置警示标志并阻止人车靠近；7时30分许，边防部队与公路养护人员到场协同处置。广治省建设厅要求公路管理单位会同边防与公安设置路障，禁止通行。机械设备已调集，但因持续塌方风险无法进入现场清障。同一地点本月13日与25日已两度塌方，此前约3000余立方米土石滑落。15D国道是通往拉莱国际口岸的唯一道路，塌方已影响跨境客货运输。11月18日，广治省人民委员会已就15D、12A、12C、9C等国道路段损毁宣布自然灾害紧急状态。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>拉莱国际口岸位于广治省达克容县，是越南中部通往老挝南部沙拉湾、塞公两省的主要陆路通道，也是东西经济走廊的支线节点。该口岸货运以农产品、木薯、矿产与建材为主，越老双边贸易中相当比重的过境货物依赖15D国道单一路径。本月三次塌方集中出现在同一路段，暴露出在地质脆弱区维持单线通道的结构性风险：一旦断通，车辆只能绕行数百公里至劳保口岸，运输时间与成本成倍上升。越南中部近年极端降雨频次增加，气象部门将其与厄尔尼诺背景下的强降水联系起来，道路边坡稳定性持续下降。11月18日宣布的自然灾害紧急状态，为动用应急预算、简化抢修采购提供了依据，但也意味着后续修复需按灾后重建标准推进，而非简单清障。对跨境流动而言，直接影响有三：一是货运车辆滞留口岸两侧，冷链与鲜活农产品损耗上升；二是边民往来与小额贸易中断，依赖口岸生计的群体收入受损；三是人员通行改道，增加其他口岸查验压力。观察点在于抢修能否在雨季间歇窗口完成，以及越老双方是否就临时绕行通关安排形成协作机制。</p></details>
+  <div class="meta">
+    <span>来源：<b>越南网（VietNamNet）</b></span>
+    <span>推荐理由：一手现场报道，时间、地点、方量与处置措施具体，揭示单线边境通道在地质灾害下的脆弱性；事件级别不大但具区域物流参考价值。</span>
+    <a href="https://vietnamnet.vn/en/landslide-cuts-off-road-to-vietnam-laos-international-border-gate-2579627.html" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-china_neighbors-5">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://vietnamnet.vn/en/vietnam-rejects-work-permit-exemption-for-paid-foreign-experts-2579722.html" target="_blank" rel="noopener">越南内务部拒绝对短期外籍专家免办许可</a></h4>
+  </div>
+  <div class="title-en">Vietnam rejects work permit exemption for paid foreign experts</div>
+  <div class="chips"><span class="chip">越南</span><span class="chip">工作许可</span><span class="chip">外籍专家</span><span class="chip">短期派遣</span><span class="chip">劳务管理</span><span class="chip">法令修订</span><span class="chip">用工合规</span></div>
+  <p class="summary"><b>内容提要</b>　事件11-28、报道11-28。越南内务部在回应越南工商会汇总的10月企业建议时，拒绝为持短期任务外派、与越南企业建立雇佣关系并直接领取薪金的外籍专家豁免工作许可。该部说明，2026年10月20日颁布、12月5日生效的第393/2026号法令取代第219/2025号法令，短期外籍劳工指一年内在越南一家或多家雇主累计工作不超过90天者，此类人员无需办理工作许可豁免确认书，但雇主须至少提前3个工作日通知主管部门。就业司司长何进胜表示，对存在有偿雇佣关系者保留工作许可要求，是为与2019年劳动法典保持一致、强化监管、防止政策滥用并保障各方权利义务。针对企业抱怨办理周期长达两三个月，他称按第393号法令第23条第3款，收到完整材料后最长办理时限为10个工作日，且企业只需提交一份说明用工需求并申请工作许可的文件，即附录一第03号表格。他强调，是否构成雇佣关系应按工作实际性质判断，不能只看合同名称。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>此事的实质是越南在放宽与收紧之间做出的取舍：一方面第393/2026号法令把短期外籍劳工的界定、通知义务与豁免确认书取消等手续做了简化，另一方面明确不接受「有偿雇佣即免办工作许可」的口径。制度逻辑很清楚——90天内累计工作、由越方企业直接管理并发放薪金的，本质是劳动关系，须走工作许可与劳动合同轨道；只有不构成雇佣的短期商务、技术指导才适用通知制。这一区分与越南近年稽查实践相互印证：以访问签证、落地签在工地或工厂实际作业的外籍人员，历来是移民与劳动部门联合查处的重点，处罚包括罚款、遣返与入境限制。对企业而言，成本并非只在办证本身，而在时间不可控——项目排期常按「人到即开工」设定，一旦需要10个工作日审批加材料准备，短期任务的经济性会被侵蚀，这也正是行业协会提出豁免的动因。部方以「10个工作日上限」「一份表格合并申请」回应，实际是把矛盾从制度豁免转向执行效率。区域比较看，泰国、马来西亚、印尼对短期技术支援同样保留许可或通报义务，越南此举与周边趋同，而非例外。后续值得跟踪两点：一是12月5日新法令生效后，各地劳动与移民部门对「实际性质」的认定尺度是否统一，尤其是分包商派员、总部派驻与本地雇佣混合的情形；二是行政复议与司法救济渠道是否畅通，企业若被认定违规，能否在遣返前完成申辩。</p></details>
+  <div class="meta">
+    <span>来源：<b>越南网（VietNamNet）</b></span>
+    <span>推荐理由：部方直接回应企业诉求，法令编号、生效日、时限与表格编号均可核；事件为政策口径确认而非新立法，增量在于明确短期派遣的合规划界。</span>
+    <a href="https://vietnamnet.vn/en/vietnam-rejects-work-permit-exemption-for-paid-foreign-experts-2579722.html" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-china_neighbors-6">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://thai.news/news/immigration/bang-na-korean-gambling-raid" target="_blank" rel="noopener">泰移民局曼谷抓六名韩国籍赌博嫌疑人</a></h4>
+  </div>
+  <div class="title-en">Bangkok Bang Na raid nets 6 Korean gambling suspects</div>
+  <div class="chips"><span class="chip">泰国</span><span class="chip">移民局</span><span class="chip">网络赌博</span><span class="chip">外籍人员</span><span class="chip">驱逐出境</span><span class="chip">跨境执法</span><span class="chip">居留许可</span></div>
+  <p class="summary"><b>内容提要</b>　事件11-28、报道11-28。泰国移民局28日与韩国警方协作，在曼谷邦纳区一处价值逾2000万泰铢的独栋住宅内拘捕6名韩国籍男子，指其经营面向韩国本土赌客的境外网络赌博后台。行动由移民局局长诺帕辛·普萨瓦警察中将指挥，副局长他尼·泰瓦差拉玛、曾隆·林帕迪两位警察少将到场。移民局称，案件始于韩国驻泰大使馆请求协查一名与韩国境内大型赌博网络相关的重点对象，侦查历时逾三个月，该团伙在春武里、曼谷及周边府多次转移据点。房主称团伙经中介以月租8.5万泰铢租下房屋，11月5日入住。现场查扣11台电脑、25部手机、20个一次性密码生成器与17个银行账户登录令牌；调查认定其关联5个韩语赌博网站、会员逾20万，月流水估计约5亿泰铢，资金往来含泰达币转账。韩国驻泰大使向移民局致谢，首尔警方预计索取证据，待6人被遣离后由韩方检方接手。移民局未公布6人具体签证类别。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>本案的观察价值不在赌资规模，而在处置路径。泰国移民局并未等待赌博罪名走完刑事程序，而是以移民法为工具先行处理停留资格：移民法第12条列举可拒绝入境的情形，包括可能扰乱公共秩序或从事违背公共秩序行为者；第36条授权撤销临时停留许可，当事人可在48小时内向部长提出申诉。10月素坤逸公寓案中，10名韩国籍嫌疑人当日即被撤销停留许可并羁押待遣，说明这套「先撤停留、后谈刑责」的机制已进入常规操作。第二个看点是执法触发方式：案件由外国使馆提出协查请求而起，泰方以三个月布控换取一次收网，随后由韩方检方接手证据，形成「属地查缉、属人追诉」的分工。这与泰国2026年推行的专项行动相衔接，官方称已清查190个高风险区域，春武里一带占比最高。第三是可复制的识别特征：高端住宅短租、集中电脑与通讯设备、夜间大额配送、租期与人员规模不匹配，这些已成为移民稽查的画像，房东与中介的核查义务随之上升。对区域治理的含义是双面的：一方面压缩了以外籍身份在第三国运营跨境博彩的空间，另一方面也提示务工与居留合规风险正从「签证类型」扩展到「实际活动性质」。值得跟踪的是6人被遣返后韩方追诉进展，以及泰方是否将签证类别、涉案平台信息纳入后续通报，从而为同类案件的证据互认提供模板。</p></details>
+  <div class="meta">
+    <span>来源：<b>泰国新闻网（THAI.NEWS）</b></span>
+    <span>推荐理由：现场细节、指挥层级、扣押清单与金额估算完整，且呈现使馆协查至遣返衔接的完整链路；属执法个案，涉案人姓名与签证类别未公布，结论留有余地。</span>
+    <a href="https://thai.news/news/immigration/bang-na-korean-gambling-raid" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+    <div class="sec-foot"><a href="#sec-china_neighbors" class="collapse-btn" data-collapse="sec-china_neighbors">▴ 收起本板块</a></div>
+  </div>
+</details>
+<details class="section" id="sec-global_south">
+  <summary>
+    <span class="sec-title">🌏 全球南方国家动态</span>
+    <span class="sec-desc">拉美、非洲、中东等地区移民治理与边境管理动态</span>
+    <span class="sec-count">5 条</span>
+    <span class="sec-arrow">▾</span>
+  </summary>
+  <div class="sec-body">
+    
+<article class="item" id="item-global_south-1">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://www.citizen.co.za/news/558-650-trns-identified-siu-flags-foreign-nationals-possible-abuse-of-nsfas-and-raf" target="_blank" rel="noopener">南非查出五十五万外国人车辆登记号待注销</a></h4>
+  </div>
+  <div class="title-en">558 650 TRNs identified: SIU flags foreign nationals&#x27; possible abuse of Nsfas and RAF</div>
+  <div class="chips"><span class="chip">南非</span><span class="chip">交通登记号</span><span class="chip">身份欺诈</span><span class="chip">边境管理</span><span class="chip">反腐</span><span class="chip">外国人管理</span><span class="chip">口岸</span></div>
+  <p class="summary"><b>内容提要</b>　事件11-28、报道11-28。南非特别调查组28日通报，经调查发现558650个交通登记号在发放与登记环节存在不规范，应从全国交通信息系统注销。通报表示，边境管理与移民反腐败论坛本周举行季度会议审议整改进展；边境管理局会同其他执法机构在莱索托首都马塞卢口岸逮捕一名涉嫌移民欺诈与腐败的官员，涉违规办理22本护照。边境管理局称87%人员已提交审查申请，其22起纪律案件中有18起涉及「协助与纵容」，为当前最突出失当风险。调查还发现同一手机号被用于数百份登记号申请，9个高频号码关联2458份申请，并查出多辆无融资记录的豪华车登记。登记号持有者来源国前十为津巴布韦、尼日利亚、莫桑比克、马拉维、巴基斯坦、埃塞俄比亚、刚果（布）、印度、孟加拉国和莱索托。特别调查组还发现部分登记号被用于申请国家学生资助与道路事故基金。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>交通登记号是南非为非公民与非法人组织办理车辆与驾驶相关业务而设的识别号码，本身不构成居留或工作许可，却长期被当作准身份凭证使用。其漏洞在于发放环节分散：申请人只需提交护照与住址材料，由省级交通部门录入，缺少与内政部签证审核系统、国家移民识别系统和人员流动管理系统的实时校验。内政部此前对2000年1月至2023年7月间签发的107万2582个登记号做了交叉比对，仅2.7%能与移民识别系统匹配，74.7万个无法与签证审核记录对应，规模性失配由此暴露。特别调查组此次把风险清单扩展到衍生用途：有登记号被用于申请国家学生资助与道路事故基金，意味着身份漏洞可转化为财政支出损失；同一手机号承担数百份申请、护照号与出生日期不匹配等模式，则指向有组织代办与多重身份。查获清单中还出现31辆宾利、26辆玛莎拉蒂、21辆兰博基尼等无融资记录的豪车，说明该号码亦被用于资产隐匿。边境管理局的内部治理同样吃紧，马塞卢口岸官员涉违规办理22本护照被捕，「协助与纵容」占其纪律案件八成以上，说明口岸一线的廉洁风险高于技术风险。特别调查组建议建立跨交通、内政、高教与财政部门的集中监测系统，用异常模式识别替代逐案稽核。</p></details>
+  <div class="meta">
+    <span>来源：<b>公民报（The Citizen）</b></span>
+    <span>推荐理由：基于官方调查机构通报，数据、风险类型与治理建议完整，直接反映边境身份核验与口岸廉洁的交互风险，参考价值较高。</span>
+    <a href="https://www.citizen.co.za/news/558-650-trns-identified-siu-flags-foreign-nationals-possible-abuse-of-nsfas-and-raf" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-global_south-2">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://citizen.digital/article/ethiopian-troops-escort-300-kenyan-trucks-across-volatile-moyale-border-n394642" target="_blank" rel="noopener">埃塞莫亚莱停火 三百辆肯尼亚货车回境</a></h4>
+  </div>
+  <div class="title-en">Ethiopian troops escort 300 Kenyan trucks across volatile Moyale border</div>
+  <div class="chips"><span class="chip">埃塞俄比亚</span><span class="chip">肯尼亚</span><span class="chip">莫亚莱</span><span class="chip">边境冲突</span><span class="chip">停火</span><span class="chip">跨境运输</span><span class="chip">流离失所</span></div>
+  <p class="summary"><b>内容提要</b>　事件11-26、报道11-27。埃塞俄比亚联邦部队26日在莫亚莱边境护送约300辆滞留的肯尼亚重型货车返回肯尼亚。此前奥罗米亚族与索马里族武装在埃塞南部毗邻肯尼亚的边境地带冲突逾一个月，货车司机被困。据27日报道，在肯尼亚政府与肯尼亚货车司机协会斡旋下，车队26日在重兵护卫下驶入肯尼亚；埃塞政府同日宣布两族停火，为期34天的战事暂告段落，联邦警察随后部署以恢复秩序。莫亚莱为两国共管的边境城镇，也是内罗毕至亚的斯亚贝巴运输走廊的关键节点。冲突已迫使边境两侧家庭逃入肯尼亚，人道机构称逾5万人受影响，多栖息于临时营地与学校，肯尼亚一侧部分学校提前停课；跨境通行受限亦使商户停业、司机失去收入。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>莫亚莱是非洲之角少见的双城结构：同一城镇被国界一分为二，两侧居民同族同语，日常往来依赖跨境集市与运输。这一地理特征使冲突具有天然的跨境外溢性——10月中旬因争议地区行政归属与旗帜问题爆发的武装对抗，很快从埃塞一侧蔓延至肯尼亚境内，流弹与炮弹落入民居，学校被迫提前放假。运输维度的影响被长期低估：内罗毕至亚的斯亚贝巴走廊承担两国大量农产品、燃料与建材运输，逾300辆货车在边境滞留一个多月，意味着冷链货物报废、车辆贷款违约与司机家庭断收三重损失，其经济传导效应远超冲突本身的地理范围。此次停火的特殊性在于，斡旋主体是肯尼亚政府与货车司机协会而非传统调解方，且联邦警察部署先于政治协议细节公开，说明恢复通商是各方最迫切的共同利益。风险仍在：官方未公布停火签署方与监督机制，争议地区的行政归属问题未触及，轻武器在边民中广泛存在，任何一起治安事件都可能重启对抗。人道层面，逾5万人在临时营地过冬（另有报道称流离失所者逾6万），其返乡意愿与其说取决于安全评估，不如说取决于房屋与牲畜是否尚存。观察点在于口岸是否恢复常态化通关，以及肯埃两国是否启动边境共管机制。</p></details>
+  <div class="meta">
+    <span>来源：<b>公民数字（Citizen Digital）</b></span>
+    <span>推荐理由：报道时间与事件节点明确，通商中断与流离数据具体；但停火细节未公开、单一来源，需结合后续口岸恢复情况判断。</span>
+    <a href="https://citizen.digital/article/ethiopian-troops-escort-300-kenyan-trucks-across-volatile-moyale-border-n394642" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-global_south-3">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://apnews.com/article/costa-rica-block-airport-francesca-albanese-63323d8a7852bc461372a321aaf0fb58" target="_blank" rel="noopener">哥斯达黎加拒绝联合国报告员入境</a></h4>
+  </div>
+  <div class="title-en">UN rapporteur Albanese in limbo at airport after being denied entry to Costa Rica</div>
+  <div class="chips"><span class="chip">哥斯达黎加</span><span class="chip">联合国特别报告员</span><span class="chip">拒绝入境</span><span class="chip">国家安全</span><span class="chip">移民局</span><span class="chip">人身保护令</span><span class="chip">国际豁免</span></div>
+  <p class="summary"><b>内容提要</b>　事件11-26、报道11-27。哥斯达黎加移民总局26日在首都圣何塞胡安圣塔玛丽亚国际机场拒绝联合国巴勒斯坦被占领土人权状况特别报告员弗朗切斯卡·阿尔巴内塞入境，局长奥梅尔·巴迪亚称其「因涉嫌恐怖活动而受国际警报」，未说明警报由何方发出。阿尔巴内塞此行系应哥斯达黎加大学邀请领取荣誉博士学位，被拒后滞留机场，以视频方式参加授位仪式。其代理人向最高法院宪法法庭申请人身保护令，法庭下达临时裁定允许其暂留境内，并限移民部门24小时内说明理由；总统府部长、前总统罗德里戈·查韦斯公开抨击司法机构「又一次越权」。人权高专沃尔克·图尔克表示「深感关切」，敦促重新考虑；哥人权监察官办公室质疑移民部门未评估其特别报告员身份与豁免。阿尔巴内塞称护照被收走、一度被威胁强行押上返巴黎班机，当晚获准转往机场附近酒店过夜，定于28日前往墨西哥。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>此案的关键在于「入境裁量权」与「国际豁免」的正面碰撞。哥斯达黎加移民总局援引「国际警报」将一名联合国人权理事会任命的独立专家列为国家安全风险，却未公开警报来源与具体指控，使拒绝入境的理由难以被外部核查；当事人与校方、人权高专、本国监察官办公室分别从学术自由、报告员身份与豁免、程序审慎三个方向提出质疑，宪法法庭则以人身保护令迅速介入，形成行政、司法、国际机制三方同时发力的小型宪政事件。阿尔巴内塞2025年7月被美国制裁，此番被拒入境发生在其长期批评以色列加沙军事行动的背景下，以色列常驻联合国代表公开表示欢迎，政治动因难以排除。对区域移民治理更具启示的是程序层面：哥方以安全预警为由「自动」拒绝，未经个案评估即处置持联合国通行证件者，这与该国近年接收美国第三国遣返人员、安全与外交政策向华盛顿靠拢的整体转向一致，说明移民与边境工具正被用于外交站队。观察点在于宪法法庭的最终裁定是否确立对特别报告员豁免的审查标准，以及哥方是否公布警报的来源与内容。</p></details>
+  <div class="meta">
+    <span>来源：<b>美联社（AP）</b></span>
+    <span>推荐理由：通讯社现场报道，时间、当事官员表态与司法进展完整，直接反映入境裁量与联合国人员豁免的冲突，具较高参考价值。</span>
+    <a href="https://apnews.com/article/costa-rica-block-airport-francesca-albanese-63323d8a7852bc461372a321aaf0fb58" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-global_south-4">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://u.aa.com.tr/en/middle-east/sudanese-army-announces-recapture-of-area-in-blue-nile-state-amid-escalating-fighting/4140417" target="_blank" rel="noopener">苏丹青尼罗河战事 万四人逃入南苏丹</a></h4>
+  </div>
+  <div class="title-en">Sudanese army announces recapture of area in Blue Nile state amid escalating fighting</div>
+  <div class="chips"><span class="chip">苏丹</span><span class="chip">青尼罗河州</span><span class="chip">南苏丹</span><span class="chip">伦克县</span><span class="chip">跨境流离</span><span class="chip">快速支援部队</span><span class="chip">人道准入</span></div>
+  <p class="summary"><b>内容提要</b>　事件11-27、报道11-27。苏丹军方第四步兵师27日宣布，经与快速支援部队及苏丹人民解放运动北方局交战后，重新控制青尼罗河州东南部马甘扎地区，该地位于州首府达马津以南。同日，独立的青尼罗河州民间社会倡议称，南苏丹上尼罗州伦克县一周内接收逾1.4万名自青尼罗河州逃出的民众，多数抵达肖梅迪与阿达姆村一带，急需食物、安全饮水、住所与医疗，并警告家庭失去生计、收容社区承压。倡议呼吁立即停火、保护平民并保障人道准入。此前24日，苏方指认快速支援部队以无人机袭击达马津与罗塞里斯两市，致17人死亡、数十人受伤；25日军方宣布「苏丹盾牌部队」抵达增援，并称夺回索达地区。2023年4月爆发的战事已致数万人死亡、约1300万人流离。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>青尼罗河州此前并非苏丹战事的主要焦点，其战略意义在于毗邻南苏丹上尼罗州，且达马津是青尼罗河上游的重要农业与电力节点。本轮冲突的新特征有三：一是战场向东南部扩散，快速支援部队与其盟友苏丹人民解放运动北方局形成协同，政府军则投入「苏丹盾牌部队」等盟军补强，战线呈多点拉锯；二是跨境流向明确，伦克县成为主要落点，逾1.4万人一周内涌入，远超当地收容能力，食物、饮水、住所与医疗同时告急，而该县本已收容大量苏丹难民与返乡者；三是无人机成为主要打击手段，针对城市目标的空中袭击造成平民伤亡，也使道路与桥梁受损，反过来阻断援助运输。对区域治理而言，风险在于流离的反复性：家庭多次迁移耗尽积蓄，收容社区服务本已超载，一旦战事沿青尼罗河继续南下，跨境流量可能在数周内再上台阶，并加剧南苏丹上尼罗州的治安与人道压力。观察点在于停火呼吁是否被交战方接受、伦克县是否建立登记与转运机制，以及人道机构能否获得不受限的跨境通行许可。</p></details>
+  <div class="meta">
+    <span>来源：<b>阿纳多卢通讯社（Anadolu）</b></span>
+    <span>推荐理由：事件与报道同日，数字与地名具体，且由通讯社基于当地民间倡议发布；但伤亡与流离数据未经官方核实，停火与战线信息单一来源。</span>
+    <a href="https://u.aa.com.tr/en/middle-east/sudanese-army-announces-recapture-of-area-in-blue-nile-state-amid-escalating-fighting/4140417" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-global_south-5">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://eastleighvoice.co.ke/headlines/428861/ethiopian-nationals-top-list-of-undocumented-immigrants-arrested-in-kenya-report" target="_blank" rel="noopener">肯尼亚年拘千余无证移民 埃塞籍过半</a></h4>
+  </div>
+  <div class="title-en">Ethiopian nationals top list of undocumented immigrants arrested in Kenya - report</div>
+  <div class="chips"><span class="chip">肯尼亚</span><span class="chip">无证移民</span><span class="chip">埃塞俄比亚</span><span class="chip">身份文件造假</span><span class="chip">边境管控</span><span class="chip">议会报告</span><span class="chip">遣返</span></div>
+  <p class="summary"><b>内容提要</b>　事件11-27、报道11-27。肯尼亚媒体27日披露一份政府安全报告，2025年9月至2026年8月全国共逮捕无证移民1048人，同比增10%；其中埃塞俄比亚籍592人，占56.5%，低于上年同期的670人；索马里籍156人、厄立特里亚籍126人、布隆迪籍50人、乌干达籍26人、坦桑尼亚籍25人、尼日利亚籍24人、卢旺达籍14人，苏丹、瑞典、加拿大籍各1人。该报告由政府于上周提交议会、由总统鲁托在国情咨文场合列明，指无证人员经口岸流动直接损害国家安全，走私与贩运网络利用边境脆弱环节；国家警察部门已设「打击有组织移民犯罪单位」。报告还称护照造假案增65起、身份证造假增40起，伪造证件被用于办理手机卡、移动支付与银行账户，内罗毕、布西亚、加里萨、曼德拉、蒙巴萨等地高发。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>这份报告的价值不在逮捕总数，而在结构：埃塞俄比亚籍长期占据肯尼亚无证拘捕的首位，即使今年同比下降，仍超过索马里、厄立特里亚、布隆迪三国之和，说明「埃塞南下—肯尼亚中转」已是东部非洲最稳定的非正规通道之一，其驱动是冲突、政治不稳与经济困顿的叠加，而非单一推因素。报告把身份文件造假单列，指出护照与身份证造假分别增加65起与40起，并点明伪造证件可打通手机卡实名、移动支付与银行开户，这意味着移民违法与金融犯罪、恐怖融资在同一节点汇合，边境核查的失灵会直接传导为反洗钱与反恐缺口。报告自承问题根源在于「腐败与数字库中未经验证的历史数据」：系统虽已数字化，但存量数据未清洗，造假者仍可借合法外观的旧记录通过校验。治理对策侧重供给侧——多部门联合行动、收紧对招募与旅行社的监管、增加文件检验人员、修法加重刑罚，并把民事登记与生命统计系统与各机构实时对接。观察点在于「打击有组织移民犯罪单位」的编制与办案量能否公开，以及埃塞方向的拘捕与遣返是否与两国边境合作同步推进。</p></details>
+  <div class="meta">
+    <span>来源：<b>东利声道（The Eastleigh Voice）</b></span>
+    <span>推荐理由：数据来自提交议会的政府安全报告并经当地媒体披露，国籍结构与造假分类清晰；但报告属一周前的存量信息，官方原文未公开。</span>
+    <a href="https://eastleighvoice.co.ke/headlines/428861/ethiopian-nationals-top-list-of-undocumented-immigrants-arrested-in-kenya-report" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+    <div class="sec-foot"><a href="#sec-global_south" class="collapse-btn" data-collapse="sec-global_south">▴ 收起本板块</a></div>
+  </div>
+</details>
+<details class="section" id="sec-tech">
+  <summary>
+    <span class="sec-title">🤖 移民与边境技术</span>
+    <span class="sec-desc">生物识别、智慧边境、AI 审查、电子签证、边境监控技术应用与争议</span>
+    <span class="sec-count">5 条</span>
+    <span class="sec-arrow">▾</span>
+  </summary>
+  <div class="sec-body">
+    
+<article class="item" id="item-tech-1">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://www.biometricupdate.com/202611/amadeus-idemia-ps-deal-faces-singapore-review-over-border-biometrics" target="_blank" rel="noopener">艾玛迪斯收购法国生物识别厂商遭新加坡审查</a></h4>
+  </div>
+  <div class="title-en">Amadeus–Idemia PS deal faces Singapore review over border biometrics</div>
+  <div class="chips"><span class="chip">并购审查</span><span class="chip">边境生物识别</span><span class="chip">自助通关</span><span class="chip">航空口岸</span><span class="chip">旅客预报信息</span><span class="chip">市场竞争</span><span class="chip">供应链集中</span></div>
+  <p class="summary"><b>内容提要</b>　事件11-25、报道11-27。新加坡竞争与消费者委员会（CCS）11月25日就艾玛迪斯（Amadeus）以12亿欧元（约14亿美元）收购法国生物识别企业公共安全业务（Idemia Public Security）一事启动公众咨询，核查该交易是否违反《2004年竞争法》第54条「实质减少竞争」条款，意见征集截至12月8日17时。CCS列明双方在新加坡重叠的三块业务：边境生物识别查验、旅客流程技术，以及旅客预报信息（API）与旅客订座记录（PNR）系统；并提示被收购方提供的后台生物识别系统与门禁方案，可能与艾玛迪斯的前端系统捆绑销售。被收购方在新加坡的子公司 Idemia Singapore 长期为该国航空、陆路与海路口岸提供生物识别与自动化通关方案，一旦并入，新加坡口岸技术供应链将进一步集中，这也是监管方最直接的关切点。交易于今年4月公布，若获批将形成覆盖航空、边境与酒店业的全球巨头。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>交易本身在2026年4月公布：艾玛迪斯宣布以12亿欧元收购法国生物识别企业公共安全业务，官方口径是打造覆盖航空、边境管控与酒店业的全球平台。按双方提交给新加坡竞争与消费者委员会（CCS）的申报材料，在新加坡市场上重叠的领域有三处——边境生物识别查验、机场旅客流程技术，以及旅客预报信息（API）与旅客订座记录（PNR）系统。CCS于11月25日发布咨询公告，请公众就交易是否违反《2004年竞争法》第54条发表意见，咨询窗口至12月8日17时（新加坡时间）。公告特别提到，被收购方除前端闸机与人脸比对外，还提供后台生物识别系统与门禁控制方案，这类后台能力与艾玛迪斯的前端平台存在捆绑销售的可能，从而使竞争对手难以在同等条件下投标。对新加坡而言，实际影响落在航空、陆路与海路口岸：被收购方的新加坡子公司 Idemia Singapore 是当地自动化边境查验方案的现役供应商，交易完成后，同一集团将同时掌握机场旅客处理平台与边境生物识别设备，议价与集成话语权明显上升。技术面上，被收购方9月底在新加坡首届亚洲旅客航站楼博览会（PTE Asia）上刚展示其面向亚太的机场生物识别走廊方案，主打缓解航站楼拥堵，这与艾玛迪斯的旅客流程产品形成正面重叠。后续看点有三：一是CCS是否要求剥离新加坡子公司业务作为放行条件；二是其他司法辖区（欧盟、美国）的反垄断审查是否同步加码；三是机场与口岸运营方在供应商集中后如何通过分包或双源采购维持议价能力。截至目前，两家公司均未就审查发表新的公开回应。</p></details>
+  <div class="meta">
+    <span>来源：<b>生物识别更新网（Biometric Update）</b></span>
+    <span>推荐理由：涉及12亿欧元级跨境并购与口岸供应链集中，监管文件可核，对边境技术采购格局有直接影响，但属企业层面消息。</span>
+    <a href="https://www.biometricupdate.com/202611/amadeus-idemia-ps-deal-faces-singapore-review-over-border-biometrics" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-tech-2">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://www.biometricupdate.com/202611/kenya-probes-740gb-ecitizen-data-breach-claim" target="_blank" rel="noopener">肯尼亚调查政务平台数据泄露</a></h4>
+  </div>
+  <div class="title-en">Kenya probes 740GB eCitizen data breach claim</div>
+  <div class="chips"><span class="chip">数据泄露</span><span class="chip">政务服务门户</span><span class="chip">单点登录</span><span class="chip">身份文件</span><span class="chip">护照申请</span><span class="chip">人脸图像</span><span class="chip">数据保护法</span></div>
+  <p class="summary"><b>内容提要</b>　事件11-22、报道11-27。化名「ByteToBreach」的黑客11月22日在暗网论坛发帖，声称从肯尼亚政务服务门户 eCitizen 窃取约740GB数据，包括约600GB「了解你的客户」身份文件、100GB政府数据库记录和40GB源代码，并称已获取该平台单点登录与授权系统的访问权限。肯尼亚内政部与移民及公民服务国务部表示正在核实事件范围，eCitizen 目前仍正常运行，但截至11月27日未确认是否真的发生未授权访问。该平台承载护照申请、无犯罪记录证明等业务，注册用户逾1367万，上线服务由2022年约500项增至2026年2.4万项。若所窃身份文件中包含自拍人脸图像，其影响将超出密码重置可弥补的范围。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>事件起源于11月22日：化名「ByteToBreach」的攻击者在暗网论坛发帖，宣称从 eCitizen 拿走约740GB数据，构成为约600GB的客户身份审核文件、100GB政府数据库记录、40GB源代码，据南非科技媒体 ITWeb Africa 报道，部分文件时间戳为11月14日与15日；入侵路径据称是文件上传功能的漏洞，随后植入网页后门以获得远程执行权限。更敏感的是，攻击者称接触到了 eCitizen 的 OAuth 与单点登录层，而依赖这一层做身份认证的还有社会健康管理局（SHA）、刑事调查局（DCI）与国家警察署的系统，政府方面尚未确认任何接入机构受影响。肯尼亚内政与国民管理部称技术与安全团队正与其他政府机构联合调查；移民及公民服务国务部表示平台保持运行，建议在别处复用同一密码的用户立即更换，并提醒民众警惕冒充平台名义的电话、短信与链接。合规层面存在两处空白：该国《数据保护法》第43条要求数据控制者在知悉发生未授权访问且存在实质伤害风险后72小时内通报数据保护专员，官方未说明是否已达该门槛、是否已通报；也未说明监控系统是否在帖文出现前发现异常。分析人士指出，风险分两类——身份文件泄露带来冒名与精准诈骗；认证层失守则可能波及多个机构，实际影响取决于攻击者是否拿到令牌签名密钥、管理权限或活跃会话，这些均未披露。若身份文件含自拍与人脸图像，真证件配真面孔正是深度伪造与远程开户注入攻击的原料，无法通过改密码消除。该平台此前已有前科：2023年7月分布式拒绝服务攻击曾导致护照、签证与驾照办理中断；2023财年审计还发现其缺少经批准的ICT政策、ICT指导委员会与业务连续性计划；本月另有企业注册服务（BRS）泄露逾两百万家企业记录，监管机构发出执法通知后结案未处罚。</p></details>
+  <div class="meta">
+    <span>来源：<b>生物识别更新网（Biometric Update）</b></span>
+    <span>推荐理由：政务平台同时承载护照与身份证明业务，认证层风险具跨机构传导性，且暴露通报义务履行与审计整改的长期缺口。</span>
+    <a href="https://www.biometricupdate.com/202611/kenya-probes-740gb-ecitizen-data-breach-claim" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-tech-3">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★☆☆☆</span>
+    <h4><a href="https://www.ccgp.gov.cn/cggg/zygg/xjgg/202611/t20261127_27775396.htm" target="_blank" rel="noopener">勐康边检站采购监控存储装备</a></h4>
+  </div>
+  <div class="title-en">Inquiry announcement: observation and communication equipment procurement, Mengkang Exit and Entry Border Inspection Station</div>
+  <div class="chips"><span class="chip">视频监控存储</span><span class="chip">边检查验设备</span><span class="chip">口岸监控</span><span class="chip">政府采购</span><span class="chip">询价采购</span><span class="chip">录像留存</span><span class="chip">边境一线</span></div>
+  <p class="summary"><b>内容提要</b>　事件11-27、报道11-27。中国政府采购网11月27日发布询价公告，云南勐康出入境边防检查站采购一批观通装备，预算与最高限价均为19.89万元。采购清单为硬盘录像机4台（单价限价7725元，合计3.09万元）与监控专用硬盘48块（单价限价3500元，合计16.8万元）。供应商须在12月4日9时前提交响应文件，合同签订后20个日历日内完成供货与安装调试；项目对小微企业给予10%价格扣除，不接受联合体投标。以单机12块盘位测算，48块硬盘意味着该站视频监控存储容量将成倍扩容，直接关系到口岸限定区域录像留存天数与事件回溯能力。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>公告显示，采购人为中华人民共和国勐康出入境边防检查站，项目编号YNS（普）202601-05，采购方式为询价，预算金额与最高限价均为19.89万元，采购文件获取期为11月27日至12月2日，响应文件提交与开启时间同为12月4日9时，开标在乐采云平台进行。标的清单很具体：硬盘录像机4台，单价限价7725元，合计30900元；监控专用硬盘48块，单价限价3500元，合计168000元；合计198900元。采购说明写明用途为「根据实际工作需要」，合同履行期限为签订后20个日历日内完成供货及安装调试，本项目非专门面向中小企业，小微企业价格扣除优惠比例10%，不接受联合体投标。把这组数字放到边检业务场景里看就清楚了：一台录像机若按12盘位配置，48块硬盘正好支撑4台设备满配，属于典型的存储扩容而非新建系统；监控级硬盘强调7×24小时连续写入与振动耐受，与普通桌面硬盘不同，其容量决定单个摄像头可回溯的天数。对口岸而言，录像留存天数直接挂钩两类需求——一是旅客滞留、争执、携带可疑物品等现场事件的回溯取证；二是上级对限定区域管理的检查要求。勐康口岸位于云南普洱江城中老边境一线，通道以货运与边民往来为主，查验场地分散、夜间值守压力大，摄像点位多但存储周期往往偏短，扩容属于低成本高收益的补强。此类小额分散采购也反映边检技术保障的现实路径：核心查验系统由上级统一建设，站级单位则在监控、通信、存储等外围环节按需补缺，采购节奏快、金额小、供应商以本地集成商为主，交付与售后响应速度往往比价格更关键。</p></details>
+  <div class="meta">
+    <span>来源：<b>中国政府采购网（CCGP）</b></span>
+    <span>推荐理由：可核的边检站级常规小额采购（不足20万元的录像机与硬盘），无技术看点，仅作口岸视频留存能力的旁证。</span>
+    <a href="https://www.ccgp.gov.cn/cggg/zygg/xjgg/202611/t20261127_27775396.htm" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-tech-4">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://www.corriere.it/economia/trasporti/aerei/26_novembre_27/malpensa-l-enac-taglia-i-voli-all-alba-per-ridurre-le-code-in-dogana-gli-aeroporti-europei-a-salvini-danno-senza-precedenti-d0c6bbd6-e58c-49db-bb38-c40dded9axlk.shtml" target="_blank" rel="noopener">意大利民航局暂停马尔彭萨2027夏客流上限</a></h4>
+  </div>
+  <div class="title-en">Italy&#x27;s ENAC suspends Malpensa summer 2027 passenger cap adopted over EES queues</div>
+  <div class="chips"><span class="chip">出入境系统</span><span class="chip">机场容量</span><span class="chip">生物信息采集</span><span class="chip">排队拥堵</span><span class="chip">时刻分配</span><span class="chip">航空监管</span><span class="chip">申根边境</span></div>
+  <p class="summary"><b>内容提要</b>　事件11-27、报道11-27。意大利民航局（ENAC）11月27日声明，暂停执行针对米兰马尔彭萨机场一号航站楼2027年夏季的客流上限，该上限原为应对欧盟出入境系统（EES）生物信息采集造成的长时间排队而设。按此前容量表，一号航站楼每小时出港旅客上限拟由4300人降至4100人，二号航站楼维持2500人，并附条件要求2027年5月前在安检区新增至少200平方米排队空间。欧洲机场理事会（ACI Europe）总干事扬科韦茨11月19日致信意大利基础设施与交通部长萨尔维尼反对该限制，指其将迫使航空公司削减已排定的清晨洲际航班，并称马尔彭萨是唯一被设容量上限的机场。ENAC称容量参数「目前维持不变」，11月30日将在交通部召集各方磋商。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>事件的技术根因是欧盟出入境系统（EES）：自2025年10月12日分阶段启动、2026年4月10日全面运行后，非欧盟短期停留旅客须在自助终端采集指纹与面部图像，以替代此前的护照盖章。登记强制化后排队迅速拉长，欧洲机场理事会（ACI Europe）、欧洲航司协会（A4E）与国际航空运输协会（IATA）在7月1日公开信中指出，高峰时段等待时间最长约五小时。各国本可在拥堵时暂停生物采集，但这一弹性安排于2026年9月6日到期，马尔彭萨排队随即回升。意大利民航局据此在10月中旬由伦巴第办事处发函，以非申根旅客出入境查验耗时与安检拥堵造成「严重不便」为由，把马尔彭萨一号航站楼2027年夏季（3月底至10月底）每小时出港旅客上限从4300人下调至4100人，二号航站楼（仅易捷航空使用）维持2500人；据意大利时刻协调机构 Assoclearance 的文件，4100这一参数以2027年5月前新增至少200平方米安检排队空间为前置条件。ACI Europe总干事扬科韦茨11月19日致信交通部长萨尔维尼（抄送内政部长皮安泰多西、旅游部长马齐），表达「最深切的担忧」，称该限制「前所未有」，将使航空公司无法执飞已为下个夏季排定的部分航班，损失属净损失且不可回收；他并强调巴黎戴高乐、阿姆斯特丹、法兰克福、慕尼黑、雅典、里斯本同样排长队，唯独马尔彭萨被设容量上限。意大利交通部称暂停决定系萨尔维尼介入后作出。11月27日ENAC声明容量参数目前不变、下调通知暂停执行，措辞保留「目前」，未公布替代方案，11月30日将在基础设施与交通部开会磋商。争议核心已从机场设施转为制度设计：行业主张把暂停生物采集的弹性机制永久化并延续至2027年及以后，ACI Europe并已就此致信欧盟内政与移民委员布伦纳。</p></details>
+  <div class="meta">
+    <span>来源：<b>意大利《晚邮报》（Corriere della Sera，记者 Leonardo Berberi）</b></span>
+    <span>推荐理由：把生物采集系统的运行故障直接推到航班时刻与容量监管层面，是EES落地摩擦升级为航空管制问题的标志性案例。</span>
+    <a href="https://www.corriere.it/economia/trasporti/aerei/26_novembre_27/malpensa-l-enac-taglia-i-voli-all-alba-per-ridurre-le-code-in-dogana-gli-aeroporti-europei-a-salvini-danno-senza-precedenti-d0c6bbd6-e58c-49db-bb38-c40dded9axlk.shtml" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-tech-5">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://www.ccgp.gov.cn/cggg/zygg//cjgg/202611/t20261127_27774026.htm" target="_blank" rel="noopener">「境灵」AI平台C包采购成交</a></h4>
+  </div>
+  <div class="title-en">Contract award notice: Jingling AI platform service project (Package C), Shandong Exit and Entry Border Inspection General Station</div>
+  <div class="chips"><span class="chip">人工智能平台</span><span class="chip">边检信息化</span><span class="chip">公文智能生成</span><span class="chip">政府采购</span><span class="chip">大模型应用</span><span class="chip">智能审查辅助</span><span class="chip">内部办公系统</span></div>
+  <p class="summary"><b>内容提要</b>　事件11-27、报道11-27。中国政府采购网11月27日发布成交公告，山东出入境边防检查总站「境灵」AI建设平台服务项目C包由山东东创科技有限公司中标，成交金额21.5万元，综合评分93.51分。C包内容为公文智能生成、公文校核、公文排版、词库管理、资料查询检索与平台系统管理等模块的集成，要求深度融合人工智能技术，支持按不少于15种法定公文种类生成材料，并在合同签订后30个日历天内完成部署调试，提供3年免费质保。公告显示评审采用综合评分法，代理服务费按成交额1.5%的七折计取。此类平台将大模型能力引入边检机关内部办公与业务辅助流程，是口岸执法单位智能化建设的缩影。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>公告披露，项目编号SHZB2026-728，采购人为中华人民共和国山东出入境边防检查总站，项目名称为「境灵」AI建设平台服务项目，本次公告对应C包。成交供应商为山东东创科技有限公司，注册地在济南市历下区，成交金额21.5万元，评审采用综合评分法，最终得分93.51分，评审专家为王德保、王猛、于骁。C包的标的范围包括公文智能生成、公文校核、公文排版、词库管理、公文资料查询与检索、平台系统管理以及系统集成，服务要求明确须深度融合人工智能技术，提供智能问答与公文写作服务，并支持按照文章类型与不少于15种法定公文种类生成公文材料；交付时间为合同签订后30个日历天内完成部署安装调试，质保期为3年免费服务。代理服务费按成交金额的1.5%再乘0.7计取，合计2257.5元，由成交方承担。从技术取向看，这是一个把通用大模型能力嵌入机关办公流程的典型项目：以词库与法定文种约束输出格式，以校核模块做合规与用语检查，以检索模块对接既有资料库，风险点在于涉密与敏感信息的本地化处理、生成内容的可追溯性，以及模型更新后的持续调优责任划分。对边检系统而言，这类平台虽不直接参与旅客查验决策，但处在「人工智能＋政务」的入口位置，往往先于查验类算法落地，其数据治理与审计安排会为此后引入辅助研判功能提供先例。项目金额不大，却显示省级边检总站正以分包方式逐块推进智能化，C包聚焦办公与知识管理，其他分包可能覆盖业务侧能力。</p></details>
+  <div class="meta">
+    <span>来源：<b>中国政府采购网（CCGP）</b></span>
+    <span>推荐理由：可核的边检系统人工智能平台成交公告，金额较小、偏内部办公，但对观察口岸执法单位AI建设路径有价值。</span>
+    <a href="https://www.ccgp.gov.cn/cggg/zygg//cjgg/202611/t20261127_27774026.htm" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+    <div class="sec-foot"><a href="#sec-tech" class="collapse-btn" data-collapse="sec-tech">▴ 收起本板块</a></div>
+  </div>
+</details>
+<details class="section" id="sec-research">
+  <summary>
+    <span class="sec-title">📚 移民与边境研究</span>
+    <span class="sec-desc">全球智库报告、学术论文、研究数据：移民治理与边境安全前沿研究成果</span>
+    <span class="sec-count">8 条</span>
+    <span class="sec-arrow">▾</span>
+  </summary>
+  <div class="sec-body">
+    
+<article class="item" id="item-research-1">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://doi.org/10.1111/imig.70258" target="_blank" rel="noopener">委内瑞拉移民在秘鲁的锚定与返乡盘算</a></h4>
+  </div>
+  <div class="title-en">Anchoring and Return Considerations Among Venezuelan Migrants in Peru</div>
+  <div class="chips"><span class="chip">返乡意愿</span><span class="chip">移民锚定</span><span class="chip">委内瑞拉移民</span><span class="chip">秘鲁</span><span class="chip">归属感</span><span class="chip">再迁移</span></div>
+  <p class="summary"><b>内容提要</b>　论文11-28在线首发（归入2027年第65卷第1期）。本文为同行评议论文，刊于《国际移民》（International Migration）。研究以「锚定」概念替代留居与返乡的二元框架，基于对秘鲁境内30名委内瑞拉移民的半结构访谈，把锚定区分为结构性锚定（权利、公共服务、经济稳定）与情感锚定（归属感、身份认同、社会关系）。作者在两类锚定组合中归纳出五种返乡取向，并提出两个新概念：锚定缺失，即在秘鲁与委内瑞拉同时缺乏立足点；双重锚定，即对两地同时保有依恋。结论指出，返乡由锚定形态的演化与移民把愿望转化为行动的能力共同决定，而非仅由居留时长决定。情感纽带可在结构性稳定时维持返乡期待，而缺乏归属的结构性锚定则常把计划推向继续前行。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>研究问题：为何同样在秘鲁获得一定生活稳定的委内瑞拉移民，对是否返乡判断差异巨大？作者认为既有文献把留居与返乡当作二元选择，忽略了移民在两地同时有依恋、或两地均无落脚点的情形。方法：在秘鲁对30名委内瑞拉移民开展半结构深度访谈，采用溯因式主题编码，把「锚定」拆为结构性维度（合法身份与权利、公共服务可及性、经济稳定）与情感维度（归属、认同、社会关系网络），据此类型化返乡取向。核心发现：共归纳出五种返乡取向；锚定缺失者因两地皆无落脚点而长期悬置，双重锚定者在两地均有依恋、意愿随情境摆动。关键机制是移民将愿望转化为行动的相对能力，居留时间本身解释力有限——结构稳定但缺乏归属者更易转向第三国再迁移，情感纽带强而结构不稳者反而维持返乡期待。政策含义：作者主张政策应同时改善「归属感」与「可预期性」两项条件；身份正规化若不同步提升社会接纳，难以稳定留居预期；对东道国而言，可预期的身份路径与融入措施是抑制二次流动的关键。局限：样本仅30人且为单一时点访谈，无法观察锚定随时间演变；受访者来自特定城市网络，对秘鲁其他地区代表性有限；未量化五种取向的分布比例。</p></details>
+  <div class="meta">
+    <span>来源：<b>国际移民（International Migration）</b></span>
+    <span>推荐理由：顶级移民期刊在线首发，用「锚定」重构返乡决策的二元框架，对拉美接收国的身份正规化与融入政策有直接可操作性；不足是质性小样本。</span>
+    <a href="https://doi.org/10.1111/imig.70258" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-research-2">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://doi.org/10.1093/migration/mnag066" target="_blank" rel="noopener">受歧视如何催生德国新移民的族群认同</a></h4>
+  </div>
+  <div class="title-en">Discrimination and the development of reactive ethnicity among new immigrants in Germany</div>
+  <div class="chips"><span class="chip">反应性族群认同</span><span class="chip">歧视</span><span class="chip">德国</span><span class="chip">新移民</span><span class="chip">动态暴露回归</span><span class="chip">身份拒斥</span></div>
+  <p class="summary"><b>内容提要</b>　论文11-25在线首发。本文为同行评议论文，刊于《迁移研究》（Migration Studies）。研究检验「反应性族群认同」假说所预设的时序：先遭遇歧视，后改变认同与对接收社会的看法。作者使用德国「近期移民过程与早期融入轨迹」调查的面板数据，采取两期动态暴露回归策略，以回应族群接触研究长期面临的因果顺序难题。结果显示存在与反应性认同理论一致的纵向面板证据，但关系更为微妙：在两波调查之间经历歧视者，对德国身份的拒斥显著上升；而未经历歧视者反而对德国态度转暖。这一衰减模式主要由波兰移民驱动。作者据此提出，数十年基于横截面数据的反应性认同研究需重新解读。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>研究问题：反应性族群认同概念假定歧视在前、认同重估在后，但横截面数据无法排除「认同疏离者本就更容易感知歧视」的反向因果，这与族群接触研究中的因果顺序问题同构。方法：使用德国近期移民过程与早期融入轨迹调查的两期面板数据，覆盖新近入境移民；核心自变量为两波之间是否经历歧视，因变量为对德国身份的接受或拒斥程度与对接收社会的态度；采用两期动态暴露回归，以两波调查之间是否经历歧视为核心对照来观察认同态度的时序变化。核心发现：整体证据支持反应性认同所假设的时序——波间遭遇歧视者其后对德国身份的拒斥显著上升，而未遭遇歧视者态度反而转暖，形成双向分化而非普遍恶化；该衰减模式主要由波兰移民亚群驱动，提示不同来源国群体的认同弹性差异明显。政策含义：歧视经历不仅影响个体福祉，还会通过认同通道削弱融入意愿，因此反歧视执法与雇主、住房、公共服务中的差别对待治理具有融入政策属性；融入项目应设置早期干预窗口，因为态度分化在入境后较短周期内即已发生。局限：仅两波数据，难以刻画更长的认同轨迹；歧视为主观自述，可能包含感知偏差；结果由波兰移民驱动，其他来源国群体样本量或不足以单独估计。</p></details>
+  <div class="meta">
+    <span>来源：<b>迁移研究（Migration Studies）</b></span>
+    <span>推荐理由：以面板设计回应反应性认同研究数十年未解的因果顺序质疑，方法上有实质推进；结论对反歧视政策与早期融入干预有清晰含义。</span>
+    <a href="https://doi.org/10.1093/migration/mnag066" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-research-3">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://doi.org/10.1093/migration/mnag065" target="_blank" rel="noopener">亚洲双边劳务协定的跨国拼装视角</a></h4>
+  </div>
+  <div class="title-en">Lives of labor agreements: A transnational assemblage approach to migration governance</div>
+  <div class="chips"><span class="chip">双边劳务协定</span><span class="chip">亚洲</span><span class="chip">移民治理</span><span class="chip">跨国拼装</span><span class="chip">孟加拉</span><span class="chip">马来西亚</span><span class="chip">尼泊尔</span></div>
+  <p class="summary"><b>内容提要</b>　论文11-26在线首发。本文为同行评议论文，刊于《迁移研究》（Migration Studies）。作者指出，1990年代以来亚洲已成为全球双边劳务协定与谅解备忘录密度最高的地区，但既有研究多以国家为中心、以比较方法处理，难以解释协定群之间的联动。文章提出「跨国拼装」路径，把此类协定视为由多重不可化约逻辑共同生成的异质构成物，并以孟加拉—马来西亚—尼泊尔三角为经验对象，识别跨场域、跨尺度的联结：协定及其相互关系的历时展开、国际法与国际组织的枢纽作用、围绕移民形成的跨国公共领域，以及地缘政治与地缘经济想象的重要性。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>研究问题：亚洲双边劳务协定（bilateral labour agreements，简称 BLA）与谅解备忘录数量全球最多，但研究长期以单一协定为单位、以国家为分析容器，无法解释协定之间如何相互引用、叠加与抵消，也难以说明国际组织与非国家行动者如何进入谈判。方法：提出跨国拼装（transnational assemblage）分析路径，把协定视为由法律、外交、市场与人道等多重逻辑共同生产的异质构成，采取归纳式、多场域的民族志取向，以孟加拉—马来西亚—尼泊尔三角为案例，追踪文本、人员与话语在输出国、接收国与国际组织之间的流动。核心发现：其一，协定并非孤立双边文件，而是随时间层层展开、彼此参照的协定群，跨场域跨尺度的联结须同时纳入视野；其二，国际法与联合国机构在技术标准与合法性授予上扮演枢纽角色，使双边文本嵌入多边规范；其三，围绕迁移的跨国公共领域（媒体、倡议组织、侨民社群）能改变协定谈判的可见度与政治成本；其四，地缘政治与地缘经济想象（区域一体化、劳工来源多元化）构成协定的隐性脚本。政策含义：作者主张治理工具本身即是政治协商与道德话语的场域，评估一份协定的效果必须放在协定群与跨尺度关系中看；对输出国而言，善用国际规范与跨国公共领域可部分弥补双边权力不对称；对接收国而言，协定条款的可执行性取决于国内执法与中介监管的配套。局限：单一大三角案例，向海湾、东亚等其他走廊外推需谨慎；民族志取向难以量化协定条款的约束力；未系统比较协定与非协定路径的福利后果。</p></details>
+  <div class="meta">
+    <span>来源：<b>迁移研究（Migration Studies）</b></span>
+    <span>推荐理由：为亚洲劳务移民治理提供了替代国家中心主义的新分析框架，案例覆盖南亚—东南亚一条重要劳务走廊，对理解双边协定谈判有方法论价值。</span>
+    <a href="https://doi.org/10.1093/migration/mnag065" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-research-4">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://doi.org/10.1080/1369183X.2026.2768100" target="_blank" rel="noopener">荷兰二代移民的文化误认与招聘差距</a></h4>
+  </div>
+  <div class="title-en">‘It’s very un-Dutch’: cultural misrecognition and hiring disparities among second-generation migrants in the Netherlands</div>
+  <div class="chips"><span class="chip">招聘歧视</span><span class="chip">二代移民</span><span class="chip">文化资本</span><span class="chip">荷兰</span><span class="chip">文化误认</span><span class="chip">刻板印象</span></div>
+  <p class="summary"><b>内容提要</b>　论文11-27在线首发。本文为同行评议论文，刊于《族群与移民研究杂志》（Journal of Ethnic and Migration Studies）。研究考察荷兰商业服务业招聘中，二代移民的身体化文化资本如何被误认，而在该场域中「契合度」本身充当了行业内部的默认信条。作者基于对36名二代移民与14名人力资源从业者的半结构访谈，指出劳动力市场不平等源于两种误认机制：性情错位，即行为倾向与招聘方期待的默认风格不符；类别化刻板印象，即按族群与宗教类别预设特质。阶层、族群与宗教交叉决定候选人遭遇哪一种机制。作者认为这为口味型歧视与统计性歧视理论补上了评价标准本身的来源问题。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>研究问题：二代移民在教育与语言上已与主流接近，为何在招聘环节仍持续处于劣势？既有解释分为口味型歧视（雇主偏好）与统计性歧视（以群体均值推断个体），但两者都未说明评价标准本身如何被生产。方法：以荷兰商业服务业为场域，该行业把「契合度」当作不言自明的行业信条；采用布迪厄式文化资本与误认框架，对36名在荷兰出生、至少一名父母在国外出生的二代移民，以及14名人力资源从业者开展半结构访谈，并对招聘话语作文本分析。核心发现：不平等通过两种误认机制运作——性情错位，即候选人的举止、表达与互动风格不符合招聘方默认的荷兰式职业性情；类别化刻板印象，即依据族群与宗教类别直接预设能力与可靠性。阶层、族群与宗教三者交叉，决定个体主要撞上哪一种机制：中产阶层二代更多遭遇性情错位，宗教标识明显或族群被高度问题化的群体更多遭遇类别化刻板印象。作者据此主张，契合度并非中性标准，而是把主流群体的文化特征编码为能力要求，使不平等在看似绩效主义的程序中完成。政策含义：仅做匿名简历与多元化培训不足以应对，因为问题出在评价维度而非信息缺失；雇主需把契合度操作化为与岗位相关的可观察行为，并对面试评分维度作结构化改造；监管层面可将招聘标准的可解释性纳入反歧视审查。局限：质性设计、样本非随机，无法估计两种机制在总体中的相对贡献；仅覆盖商业服务业，公共部门与蓝领岗位的外部效度待检验；人力资源从业者可能给出社会期许性回答。</p></details>
+  <div class="meta">
+    <span>来源：<b>族群与移民研究杂志（JEMS）</b></span>
+    <span>推荐理由：把「契合度」这一招聘默认标准本身问题化，为反歧视政策提供了超越匿名简历的干预点；质性证据扎实但样本有限。</span>
+    <a href="https://doi.org/10.1080/1369183X.2026.2768100" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-research-5">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★★</span>
+    <h4><a href="https://doi.org/10.1080/1369183X.2026.2763235" target="_blank" rel="noopener">英国男性遣送中心的失尊与暴力</a></h4>
+  </div>
+  <div class="title-en">Dishonour, gender and race in UK men’s Immigration Removal Centres</div>
+  <div class="chips"><span class="chip">移民拘留</span><span class="chip">遣送中心</span><span class="chip">失尊</span><span class="chip">种族化</span><span class="chip">男性气质</span><span class="chip">废除拘留</span></div>
+  <p class="summary"><b>内容提要</b>　论文11-27在线首发。本文为同行评议论文，刊于《族群与移民研究杂志》（Journal of Ethnic and Migration Studies）。作者论证移民拘留是一种「地位贬损的制度性技术」，在分析层面可与奴役类比，并追踪以荣誉为中心的持久支配关系如何借由基于失尊的暴力在当代边界化中被再生产。材料来自15个月民族志田野，对24名在英国男性专用遣送中心（IRC）被拘留的男子在押期间及释放后进行访谈，用以展示英国国家如何生产种族化与性别化的主体。研究发现，拘留对自主性、尊严与身体完整性的日常剥夺共同生产「失尊」，其运作依托种族化的他者建构与男性气质期待，且效果在释放之后仍然延续。作者据此认为改良式改革无法消除拘留的贬损功能，并支持废除拘留的主张。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>研究问题：移民拘留除限制自由之外，还通过何种机制生产从属性？既有研究多从法律地位或心理健康切入，较少处理拘留如何作为一种象征性地位剥夺运作。方法：借用帕特森1982年提出的「失尊」概念（社会性死亡三要素之一），并把它与批判种族、性别与移民研究对接；在15个月民族志田野中对英国男性专用遣送中心（IRC）的24名被拘留男子开展在押期间访谈，并在其释放后追踪回访；分析采用扎根取向的主题编码。核心发现三条：其一，自主性被制度化地剥夺，包括无限期拘留带来的不确定性；其二，社会尊严被褫夺，表现为犯罪化与种族化标签，且释放后延续；其三，身体完整性遭破坏。三者互构，共同生产「失尊」。政策含义：作者主张失尊产生于拘留的日常运作而非个别失范，故时限收紧、弱势豁免与工作人员行为改良等措施无法消除其贬损功能，反而可能赋予其正当性，据此支持废除拘留的倡议。局限：单国别、24人访谈样本，无法量化失尊在被拘留人群中的分布，亦未做跨设施比较。核验边界：仅依据公开摘要，具体中心名称与事件统计数字未获原文核实，故未采用。</p></details>
+  <div class="meta">
+    <span>来源：<b>族群与移民研究杂志（JEMS）</b></span>
+    <span>推荐理由：以罕见的在押加释放后追踪民族志，把「失尊」确立为可操作的分析概念，对拘留改革（改良还是废除）的政策辩论给出有力实证支撑。</span>
+    <a href="https://doi.org/10.1080/1369183X.2026.2763235" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-research-6">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★★☆</span>
+    <h4><a href="https://doi.org/10.1177/01979183261503293" target="_blank" rel="noopener">防御性入籍：二十世纪初美国移民归化</a></h4>
+  </div>
+  <div class="title-en">Defensive Naturalization: Immigrants and Citizenship Acquisition in Early Twentieth-Century America</div>
+  <div class="chips"><span class="chip">入籍</span><span class="chip">公民身份</span><span class="chip">归化法</span><span class="chip">美国移民史</span><span class="chip">记录链接</span><span class="chip">防御性入籍</span></div>
+  <p class="summary"><b>内容提要</b>　论文11-28在线首发（预上线版本，尚未编入卷期）。本文为同行评议论文，刊于《国际移民评论》（International Migration Review）。属历史社会学／历史政治学研究，以1906年《归化法》至1940年美国入籍档案为对象，非当代政策评估。研究重估1906年《归化法》的效应：既有研究认为该法成功阻吓了最不受欢迎、资源最少的移民取得公民身份，但作者指出它也改变了公民身份的价值——在各类外国人身份惩罚之下，部分原本最不看重公民身份的移民反而更快归化。作者构建了入籍意向声明与入籍申请表格的手工编码样本，并与1920、1930、1940年人口普查记录链接，利用文件中独有的出生地、身高、肤色等信息，测量申请人走完各归化步骤的速度。结果虽混杂，但更多证据支持「防御性入籍」假说：当时特征较不受欢迎的移民归化更快。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>研究问题：1906年美国《归化法》把原本非正式、轻度监管的入籍程序改为复杂化、官僚化的程序。既有研究据此认为该法达到了预期目标，即抑制最不受欢迎与资源最少的移民归化。作者反问：该法同时提高了不具有公民身份的成本（就业、财产、福利等领域的各类外国人身份惩罚），这是否改变了公民身份的相对价值，从而使部分移民更快归化？方法：构建新的手工编码数据集，涵盖入籍意向声明表与入籍申请表，并链接至1920、1930、1940年三年人口普查；利用归化文件中独有、普查中不可得的信息（详细出生地、身高、肤色）辅助匹配与特征刻画；以申请人走完从声明意向到提交申请各步骤的速度为因变量，检验「防御性入籍」假说。核心发现：结果存在混杂，但更多证据支持防御性入籍：在当时评价体系中特征较不受欢迎的移民，反而以更快的速度完成归化流程。这提示程序复杂化并不必然抑制归化，反而可能因提高非公民身份的代价而产生反向激励，使最需要公民身份保护的人更急于取得。政策含义（编者引申，摘要未涉及）：入籍程序的繁简与费用不仅影响归化总量，也改变归化者的构成；提高门槛可能筛选出的是更弱势、更亟需身份保障的申请人，而非更优质的申请人；评估入籍政策应以分群体归化速度而非总量为指标。局限：样本为特定时期、特定地区的手工编码数据，代表性受限；速度指标混合了个人意愿与行政处理时滞；身高、肤色等特征作为当时不受欢迎程度的代理变量，测量效度有限。核验边界：仅依据公开摘要。</p></details>
+  <div class="meta">
+    <span>来源：<b>国际移民评论（IMR）</b></span>
+    <span>推荐理由：顶级移民期刊，以原始档案链接数据推翻「提高门槛即抑制归化」的通行判断，对当代入籍费用与程序改革的辩论有直接反讽意义；历史情境外推需谨慎。</span>
+    <a href="https://doi.org/10.1177/01979183261503293" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-research-7">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://www.weforum.org/publications/the-foresight-brief-chokepoints-past-present-and-future" target="_blank" rel="noopener">前瞻简报：战略咽喉点的过去与未来</a></h4>
+  </div>
+  <div class="title-en">The Foresight Brief: Chokepoints Past, Present and Future</div>
+  <div class="chips"><span class="chip">咽喉点</span><span class="chip">边境风险</span><span class="chip">印孟边界</span><span class="chip">供应链韧性</span><span class="chip">地缘政治</span><span class="chip">战略预判</span></div>
+  <p class="summary"><b>内容提要</b>　报告11-18发布。本报告为世界经济论坛与大西洋理事会合作发布的展望型白皮书，非同行评议。报告把「咽喉点」界定为替代方案极少的战略性连接节点，指出其集中了经济价值与脆弱性，单点中断会跨系统级联扩散，并以2026年霍尔木兹海峡关闭为例。分析沿经济、地缘政治、治理与生态四条线索展开，覆盖海峡运河、港口河流、海底光缆、数据中心与云设施，并触及气候物理变迁与天基依赖等新兴风险。据媒体对该报告的梳理，印度—孟加拉国边界被列入亚太战略性咽喉点，与马六甲海峡、台湾海峡及中国主要港口并列，报告指出的四项风险为移民紧张、走私、安全限制与拥堵。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>研究问题：全球化与数字化是否降低了物理基础设施的重要性？报告认为没有，反而使少数关键连接节点承载过高比例的货物流、资源流与信息流，其集中度同时放大战略影响力与系统性脆弱性。方法：属展望型白皮书而非实证研究，采取情景与案例结合的方式，沿经济、地缘政治、治理、生态四条线索，对海峡、运河、港口、河流、海底光缆、数据中心与云设施作类型化梳理，并以2026年霍尔木兹海峡关闭、1956年苏伊士运河危机说明中断的级联效应，同时讨论气候物理重塑与潜在的天基依赖。核心发现：咽喉点的意义不只取决于通行量，还取决于替代方案的可得性与中断后果；物理通道与数字基础设施已结构性互联，风险可跨域传导；替代能力有限，绕行好望角会使部分航程延长约两周并推高运力消耗；据媒体梳理，印度—孟加拉国边界被列为亚太战略咽喉点，与马六甲海峡、台湾海峡并列，风险被概括为移民紧张、走私、安全限制与拥堵四项，但报告未量化暴露的贸易额，也未指明具体口岸。政策含义：报告主张政府与企业应做战略预判——先识别关键依赖、再分散替代、最后在危机前建设韧性；对边境管理而言，其价值在于把移民摩擦与走私视为与海关效率、通关能力相互缠绕的复合风险，提示单一加严检查可能以物流成本与供应链延误为代价。局限：框架性前瞻文本，未提供可检验的因果识别；移民与边境部分着墨有限；媒体转述与原文可能存在偏差。核验边界：边境风险四项系依据媒体梳理，未见原文逐字表述。</p></details>
+  <div class="meta">
+    <span>来源：<b>世界经济论坛与大西洋理事会（WEF / Atlantic Council）</b></span>
+    <span>推荐理由：由两大机构联合发布、议题框架清晰，把边境摩擦纳入供应链与地缘风险的复合视角，适合作为分析框架引用；但移民内容占比小、缺乏量化，证据强度一般。</span>
+    <a href="https://www.weforum.org/publications/the-foresight-brief-chokepoints-past-present-and-future" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+<article class="item" id="item-research-8">
+  <div class="item-head">
+    <span class="rate" title="推荐指数">★★★☆☆</span>
+    <h4><a href="https://doi.org/10.1080/1369183X.2026.2769654" target="_blank" rel="noopener">伦敦移民美容院与后世俗城市空间</a></h4>
+  </div>
+  <div class="title-en">Communal geographies in the postsecular city: ethnography of migrant-run beauty salons in London</div>
+  <div class="chips"><span class="chip">移民宗教性</span><span class="chip">后世俗城市</span><span class="chip">社群地理</span><span class="chip">南亚侨民</span><span class="chip">美容院</span><span class="chip">城市空间</span></div>
+  <p class="summary"><b>内容提要</b>　论文11-27在线首发。本文为同行评议论文，刊于《族群与移民研究杂志》（Journal of Ethnic and Migration Studies）。作者指出，西方城市社会因跨国迁移而在宗教上更趋多元，但既有关于宗教与城市空间的研究多囿于世俗与神圣的二元对立，很少把镜头转向日常空间。作者把来自南亚研究的「社群地理」框架与后世俗城市视角并用，考察宗教认同如何通过空间支配与空间排斥得以表达，并将两套视角应用于伦敦两家服务第一代南亚女性的移民经营美容院的民族志材料，说明宗教在移民日常使用空间的生产中所扮演的角色，同时呈现空间的诗学与政治。作者主张，理解移民宗教性如何改造城市空间，需同时操作本地、城市与跨国三个空间尺度。</p>
+  <details class="brief"><summary>📋 详细简报</summary><p>研究问题：跨国迁移使西方城市在宗教上更加多元，但宗教与城市空间的研究长期被世俗与神圣的二分所束缚，日常商业空间（如美容院）如何承载宗教认同与区隔，几乎未被系统考察。方法：采用民族志取向，在伦敦两家由移民经营、主要服务第一代南亚女性的美容院收集田野材料；分析框架把南亚研究中用以刻画宗教认同如何通过空间支配与空间排斥表达的「社群地理」概念，与「后世俗城市」视角并置，避免把宗教简化为私人信仰或公共冲突两个极端。核心发现：美容院并非纯粹商业场所，而是宗教认同与空间秩序被日常生产与协商的空间，宗教身份既可通过空间支配被表达，也可通过空间排斥被强化，空间的诗学与政治同时在场；作者强调，理解移民宗教性如何改造城市空间，必须同时操作本地（店铺内部）、城市（邻里与族裔经济）与跨国（与来源国宗教网络及品味的连接）三个尺度，否则会把跨国的宗教地理误读为本地文化习惯。政策含义（编者引申，摘要未涉及）：城市治理若把这些场所仅视为商业单位或潜在冲突点，会错失其作为社区基础设施的功能；规划与社会服务应识别其准公共属性，在语言、执照与卫生监管中避免对宗教实践的过度限制。局限：仅两家场所的深度个案，难以概括伦敦南亚社群的多样宗教构成；未提供量化证据；单一城市的政策语境限制外推；作者亦未系统比较不同宗教或教派之间的差异。核验边界：仅依据公开摘要。</p></details>
+  <div class="meta">
+    <span>来源：<b>族群与移民研究杂志（JEMS）</b></span>
+    <span>推荐理由：把宗教地理研究从寺庙清真寺推进到日常商业空间，对理解城市移民社区基础设施有启发；但议题偏文化地理，与边境管理政策关联弱，证据为双个案民族志。</span>
+    <a href="https://doi.org/10.1080/1369183X.2026.2769654" target="_blank" rel="noopener">原文链接 ↗</a>
+    <a href="#overview" class="back">返回态势 ↑</a>
+  </div>
+</article>
+    <div class="sec-foot"><a href="#sec-research" class="collapse-btn" data-collapse="sec-research">▴ 收起本板块</a></div>
+  </div>
+</details>
+  <footer>全球移民与边境安全态势感知日报 · 生成时间 2026-11-29 00:21 · 数据仅供研究参考，观点以原文为准</footer>
+</div>
+<button id="toTop" title="回到顶部">↑</button>
+<script>
+(function() {
+  var secs = Array.prototype.slice.call(document.querySelectorAll('details.section'));
+  // 手风琴：展开一个板块时，自动收起其余板块（解决移动端上方板块无法收起的问题）
+  secs.forEach(function(d) {
+    d.addEventListener('toggle', function() {
+      if (d.open) {
+        secs.forEach(function(o) { if (o !== d) o.open = false; });
+        // 收起上方板块后页面高度变化，滚动对齐当前板块头部
+        setTimeout(function() {
+          var top = d.getBoundingClientRect().top + window.pageYOffset - 52;
+          window.scrollTo({ top: top, behavior: 'smooth' });
+        }, 60);
+      }
+    });
+  });
+  // 锚点跳转（导航条/Top榜/收起按钮）：自动展开目标板块，或收起当前板块
+  document.addEventListener('click', function(e) {
+    var a = e.target.closest('a[href^="#"]');
+    if (!a) return;
+    var id = a.getAttribute('href').slice(1);
+    var el = document.getElementById(id);
+    if (!el) return;
+    e.preventDefault();
+    if (a.hasAttribute('data-collapse')) {
+      el.open = false;
+      var top = el.getBoundingClientRect().top + window.pageYOffset - 52;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+      return;
+    }
+    var sec = el.closest ? (el.matches('details.section') ? el : el.closest('details.section')) : null;
+    if (sec && !sec.open) sec.open = true;
+    setTimeout(function() {
+      var top = el.getBoundingClientRect().top + window.pageYOffset - 52;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+    }, 60);
+  });
+  // 默认展开第一个板块（桌面宽屏），手机端全部收起以便总览
+  if (window.innerWidth >= 768 && secs.length) secs[0].open = true;
+  // 回到顶部按钮
+  var btn = document.getElementById('toTop');
+  window.addEventListener('scroll', function() {
+    btn.style.display = window.pageYOffset > 600 ? 'block' : 'none';
+  });
+  btn.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+})();
+</script>
+<script>
+(function(){
+  var TODAY = [{"a": "item-global_migration-1", "t": "澳洲境内签证申请加收一千五百澳元", "e": "Australia increases onshore student visa charge; universities warn of impact", "s": "全球移民管理热点", "r": 4, "k": ["澳大利亚", "签证收费", "境内申请", "国际学生", "移民改革", "净海外移民", "大学协会"], "src": "印度斯坦时报（HT）", "u": "https://www.hindustantimes.com/world-news/australia-increases-onshore-student-visa-charge-universities-warn-of-impact-101795853406203-amp.html", "sum": "事件11-28、报道11-28。澳大利亚《2026年移民修正（境内申请费及其他措施）条例》自11月28日生效，对在澳境内递交的学生签证（500类）、学生监护人签证（590类）、毕业生临时签证（485类）、境内配偶签证以及部分父母、子女和其他家庭类签证，每名申请人加收1500澳元「境内申请费」。学生签证首期费用因此由2500澳元升至4000澳元。豁免范围包括太平洋地区护照持有人、持东盟成员国护照的学生签证申请人，以及就读强化英语课程或非学位课程者。澳大利亚大学协会当日发表声明，首席执行官卢克·希伊称，国际学生新生入学人数已下降百分之十二，国际教育年产值约550亿澳元、支撑约25万个就业岗位，频繁调价将进一步削弱澳洲吸引力。政府称该措施落实2026至2027财年预算安排，意在鼓励申请人从境外递交，并对净海外移民形成下行压力。", "b": "背景：澳大利亚在2026至2027财年预算中提出，通过提高境内递交成本，引导签证申请回到境外办理，以压低净海外移民规模。机制：配套条例编号F2026L01607，于11月26日制定、27日登记、28日生效，在现有签证申请费首期款之上增设「境内申请费」，标准为每人1500澳元，按人头计而非按申请计，一个三口之家在境内递交仅此项即需4500澳元。适用对象包括学生签证500类、学生监护人590类、毕业生临时485类全类别、境内配偶801类，以及年迈父母804类、缴费型年迈父母864与884类、子女802与837类、受抚养子女445类、剩余亲属835类、照护者836类和年迈受赡养亲属838类。太平洋地区护照持有人、持东盟护照的学生签证申请人、就读强化英语课程或非学位课程者，以及在境外存在可选路径的部分申请人可获豁免。影响：485类只能在澳境内申请，因此全部申请人实际都要承担新增费用；学生签证首期费用由2500澳元升至4000澳元。行业方面，澳大学协会指出国际学生新生入学人数已下降百分之十二，国际教育年产值约550亿澳元、关联约25万个岗位，频繁调价会削弱竞争力。时间线：10月2日起多数人已无法在境内首次申请学生签证；11月13日起485类对随行家属设限；11月28日境内申请费落地；11月30日起雇主担保相关（482、186、494类）的过桥签证B旅行期限收紧。观察点在于新收费是否加速生源转向其他国家，以及境外递交比例的实际变化。"}, {"a": "item-global_migration-2", "t": "捷克拟扩四国工作签证年度配额", "e": "Czech Interior Ministry moves to enlarge work-visa quotas for India, Philippines, Kazakhstan and Indonesia", "s": "全球移民管理热点", "r": 4, "k": ["捷克", "工作签证", "配额", "合格雇员计划", "劳动力短缺", "印度", "菲律宾", "印度尼西亚"], "src": "捷克通讯社（ČTK）", "u": "https://www.ceskenoviny.cz/zpravy/ministerstvo-vnitra-navrhuje-navysit-kvoty-pro-pracovniky-z-ciziny/2907571", "sum": "事件11-27、报道11-27。捷克内政部11月27日提交政府第220/2019号条例修正草案，拟自2027年1月起上调「合格雇员计划」在四国使馆的年度名额：哈萨克斯坦由500个增至1000个，印度由600个增至1600个，菲律宾由10300个增至12000个，并为印度尼西亚新设300个名额，合计每年可多引入约3500名技术工人。内政部称制造业、建筑业与运输业缺工最重，新增名额中一部分将专项保留给这三个行业；印度与哈萨克斯坦的现行名额长期提前用尽，进入该计划的等待时间已超过一年。草案同时对塞尔维亚、爱尔兰、英国、波斯尼亚和黑塞哥维那、北马其顿及阿尔巴尼亚的使馆设定「零配额」，理由是集中受理能力、遏制中介借欧洲低风险口岸转递申请，类似限制自今年年中起已在德国德累斯顿领事馆实施。政府将于11月30日（周一）审议该修正案；若获通过，新配额将在30天内刊入法律汇编。工业和贸易部长卡雷尔·哈夫利切克称这是缓解建筑业人手短缺的途径之一，并称获选人员由企业挑选、不存在安全风险。", "b": "背景：捷克长期面临制造业、建筑业与运输业用工缺口，经济增速放缓使企业更依赖外部劳动力。「合格雇员计划」是捷克面向特定来源国的项目制劳务通道，申请须在指定使馆递交，名额按国别年度封顶，长期出现名额提前耗尽、预约排队逾年的情况。机制：内政部11月27日提交对第220/2019号政府条例的修正草案，直接调整四国使馆的年度受理上限，哈萨克斯坦500增至1000，印度600增至1600，菲律宾10300增至12000，印度尼西亚新设300，合计每年新增约3500个名额；新增额度中有一部分限定用于加工制造业、建筑业与运输业。同时把塞尔维亚、爱尔兰、英国、波黑、北马其顿、阿尔巴尼亚等使馆额度归零，官方解释是把受理资源集中到优先市场，并抑制中介把申请人绕道欧洲安全风险较低的使馆递交；同类限制自2026年年中起已在德国德累斯顿领事馆执行。影响：对企业而言，印度与菲律宾通道的排队时间有望明显缩短，2027年1月的递交窗口更具可预期性；对申请者而言，家庭随行仍需另行申请长期签证，搬迁预算须同步上调。时间线：草案11月27日提交，政府11月30日审议，通过后30天内公布，2027年1月起执行。后续需观察议会与雇主团体是否提出附加条件，以及零配额使馆是否引发在欧申请人的路径转移。"}, {"a": "item-global_migration-3", "t": "西班牙明确季节工居留变更规则", "e": "New Criterion 3/2026 updates rules for modifying seasonal-worker residence permits", "s": "全球移民管理热点", "r": 3, "k": ["西班牙", "季节工", "居留许可", "移民条例", "用工变更", "农业用工", "最高法院"], "src": "维萨总部新闻（VisaHQ）", "u": "https://www.visahq.news/2026-11-27/es/new-criterion-32026-updates-rules-for-modifying-seasonal-worker-residence-permits", "sum": "事件11-27、报道11-27。西班牙移民管理总局11月27日发布第3/2026号管理准则，明确各地移民办公室如何办理依据《移民条例》（第1155/2024号皇家法令）第191.6条签发的季节性居留与工作许可变更。要点包括：外籍季节工完成首份合同后，可在不离境情况下变更雇主，但须在同一行业，且新合同须在旧合同结束后30天内开始；连续持季节性许可在西班牙停留的时间，今后计入转为普通工作居留所需的两年居住期；雇主须在变更雇主或工作地点后5个工作日内向外国人事务办公室报备，并继续提供适当住房与返程机票担保。准则自发布起立即生效，统一适用于全国52个省级移民办公室。此举回应最高法院2026年7月8日第868/2026号判决部分撤销2024年条例条款后的执行空白，也服务于农业、旅游等行业的季节性用工需求。", "b": "背景：西班牙的季节性劳务许可长期采用「入境—合同期满—离境」的闭环设计，续接与转轨空间有限。2024年11月19日第1155/2024号皇家法令修订《移民条例》后，部分条款被最高法院第868/2026号判决（2026年7月8日）撤销，导致各地移民办公室在变更许可时的尺度不一。机制：移民管理总局以管理准则而非修法方式填补空白，第3/2026号准则明确三件事。第一，允许在同一行业内更换雇主而不必离境，前提是新合同在旧合同结束后30天内生效，实质是把季节工从单一雇主绑定中部分解绑。第二，连续持季节性许可在境内停留的时间计入转办普通工作居留所需的两年居住期，打通了季节工向常规就业的转轨路径。第三，强化雇主义务，变更雇主或工作地点须在5个工作日内报备，并继续提供合适住房与返程机票担保。同一批通报中另有第4/2026号准则，专门处理条例被撤销条款的适用问题。影响：对农业、旅游与人力派遣企业而言，旺季调动人手的合规成本下降、周期缩短，可减少反复出入境的开支；对工人而言，转轨路径更清晰，但仍受同行业限制，跨行业流动依旧受限。时间线：准则11月27日发布并即时生效，全国52个省级办公室统一执行；通报经阿拉坎特外国人事务专业委员会第85期简报向从业者散发，2027年收获季与旅游旺季的用工安排将率先适用。后续观察点是报备义务的执行力度，以及最高法院相关诉讼是否再度改变条款效力。"}, {"a": "item-global_migration-4", "t": "美军关塔那摩拘押移民支出逾八千万", "e": "Watchdog finds US military spent $81 million holding fewer than 900 migrants at Guantanamo Bay", "s": "全球移民管理热点", "r": 4, "k": ["美国", "关塔那摩", "移民拘押", "国防部", "监察长报告", "遣返", "军费"], "src": "美国有线电视新闻网（CNN）", "u": "https://us.cnn.com/2026/11/27/politics/us-military-spent-81-million-migrants-guantanamo-bay", "sum": "事件11-25、报道11-27。美国国防部牵头监察长报告显示，「南方守卫行动」自2025年启动以来，五角大楼为在古巴关塔那摩湾海军基地转移与关押移民已承担约8152.5万美元支出，而累计关押人数仅849人，行动期间最大容纳能力为399人；截至9月3日，基地内仅关押8人。2026年7月至9月，被关押者平均停留7天，停留时间延长主因是部分来源国不愿接收本国公民及航班安排受限，最长一例达102天。截至2026年9月，约350名军人驻守基地支援国土安全部行动，费用大部分由陆军承担。2025年1月，总统要求准备关押所谓高优先级非法移民，并称基地有3万个床位，官员当时即质疑该容量已不存在。报告11月25日公开，媒体11月27日披露细节。", "b": "背景：2025年1月，美国行政部门要求联邦机构准备关押被界定为高优先级的非法居留者，并提出利用关塔那摩湾海军基地的3万个床位扩容，随后军方搭建帐篷设施、增派数百名人员，形成「南方守卫行动」。机制：该行动由军方为国土安全部提供运输与拘押支援，费用计入国防部预算。牵头监察长报告核算，行动启动以来累计承付约8152.5万美元，其中陆军占比最大，报告未逐项列明支出构成，但陆军通常是大型后勤行动的主导军种。规模方面，累计关押849人，行动期间最大容纳能力399人，9月3日在押仅8人，表明先期扩容与实际需求严重脱节。滞留方面，7月至9月平均停留7天，因来源国接收意愿不足与航班排期受限，平均时长在行动期间上升，个别个案滞留102天。影响：报告实质上对「大规模扩容」的决策逻辑提出质疑，也为后续预算审查与国会监督提供数据基础；对遣返谈判而言，来源国接收意愿成为决定成本的关键变量。时间线：2025年1月下达指令并启动扩容；行动持续至2026年；2026年11月25日报告公开；11月27日主流媒体披露细节。后续观察点是国会是否据此调整拨款，以及基地在押规模是否继续维持低位。"}, {"a": "item-global_migration-5", "t": "加拿大发布十项提示避免申请延误", "e": "Canada releases 10 tips to prevent immigration application delays", "s": "全球移民管理热点", "r": 2, "k": ["加拿大", "移民申请", "材料完整", "认证翻译", "家庭成员申报", "审理延误"], "src": "尼日利亚《Punch》", "u": "https://punchng.com/canada-releases-10-tips-to-prevent-immigration-application-delays", "sum": "事件11-28、报道11-28。加拿大移民、难民及公民部11月28日通过官方社交账号发布十项提示，要求申请人递交完整、准确的申请，并警告缺失信息、错误文件或不符合要求会拖慢审理进度。十项要点为：尽可能在线递交；逐项如实作答，不适用的栏目填写「不适用」；使用各项目提供的官方文件清单；非英语或法语文件须由认证译者翻译；按要求提交指定文件，未获要求时不寄送原件、不附加多余材料；照片须符合官方规格；申报全部家庭成员，包括不随行或不移民者；核对电子邮箱与邮寄地址等联系方式；表格须签名并注明日期，费用与支付方式须正确；收到补充材料要求后在期限内尽快回应。该提示属程序性提醒，不改变现行移民政策，但直接影响申请人的时间成本与退回风险。", "b": "背景：加拿大移民、难民及公民部近年持续扩大在线递交比例，申请存量与审理周期成为舆论焦点，官方多次以操作指引方式降低因材料缺陷导致的补件与退回。机制：11月28日的提示并未修改法规，而是把既有要求集中重申为可执行的自查清单，核心环节有四类：一是完整性，在线递交并逐项作答，不适用处明确标注，避免空白被视为隐瞒；二是文件合规，使用官方文件清单，非英语或法语材料须附认证翻译，照片须符合规格，未获要求时不寄送原件；三是家庭信息申报，须列明全部家庭成员，即便其不随行或不打算移民；四是沟通与响应，联系方式须准确，收到补件要求后应在期限内回复，否则审理顺延。影响：该清单与移民部官网「如何避免延误或被拒」的问答口径一致，可作为申请人、雇主与留学中介的行前材料核对依据，减少因可预防缺陷导致的重复递交。时间线：11月28日经官方X账号发布，多家媒体当日转载。后续观察点是官方是否把该清单并入正式申请指南，以及在线系统能否在递交环节前置提示缺件。"}, {"a": "item-border_security-1", "t": "利比亚东部海岸警卫队救起二百四十人", "e": "Libyan coast guard rescues 240 migrants", "s": "全球边境安全热点", "r": 3, "k": ["利比亚", "海岸警卫队", "海上拦截", "非法移民", "地中海", "遣返", "托布鲁克"], "src": "新华通讯社（Xinhua）", "u": "http://chinaview.cn/africa/20261128/66b8f5ea186749daa67ddd3f421f9b5b/c.html", "sum": "事件11-27、报道11-28。利比亚东部海岸警卫队与港口安全机构11月27日宣布，其所属单位在从西部邦巴湾到东部巴尔迪之间的责任海域，分多起行动从8艘船上救起240名不同国籍的移民，包括孟加拉国、埃及、巴基斯坦和埃塞俄比亚籍人员。获救者随后被移交打击非法移民部门，以便安排遣返原籍国。相关行动由托布鲁克海岸警卫队区发布，机构在官方社交页面公布了消息。利比亚长期是经中地中海前往欧洲的主要中转地，东部当局近年多次在近海拦截出港船只，并对被拦截者实施集中收容与遣返，这一做法在人道组织与联合国机构文件中长期存在争议。", "b": "背景：利比亚自2011年后长期处于政治分裂状态，西部与东部各有行政与安全机构，海岸警卫力量分属不同体系。中地中海路线以利比亚西部与东部港口为起点，向东可抵达克里特与加夫多斯，向北可抵达意大利兰佩杜萨与马耳他。机制：本次行动由东部海岸警卫队与港口安全机构执行，责任海域自西部的邦巴湾延伸至东部的巴尔迪，覆盖托布鲁克周边主要出港水域。行动分多起进行，共涉及8艘船、240人，国籍包括孟加拉国、埃及、巴基斯坦与埃塞俄比亚。处置流程为海上拦截、集中上岸、移交打击非法移民部门，随后进入遣返程序。影响：海上拦截在短期内减少出港船只数量，但把人留在利比亚境内也意味着收容设施压力上升；联合国机构与法律援助组织多次指出，利比亚境内被拦截者面临拘押条件恶劣与保护不足的风险，遣返若未经个体风险评估可能违反不驱回原则。时间线：11月27日东部当局发布消息，通讯社11月28日播发；同期西侧大西洋路线同样承压，11月27日西班牙耶罗岛外海一艘载近百人的移民船被发现时船上至少有8人遇难、约90人获救。观察点在于东部当局的拦截强度能否持续，以及被拦截者遣返前的拘押时长与条件。"}, {"a": "item-border_security-2", "t": "以军截获走私气球 缴毒品与十五支步枪", "e": "IDF intercepts smuggling balloons carrying over 100 kg of drugs, 15 Kalashnikov rifles", "s": "全球边境安全热点", "r": 4, "k": ["以色列", "气球走私", "武器走私", "毒品", "边境拦截", "约旦河谷", "边防警察"], "src": "耶路撒冷邮报（JPost）", "u": "https://www.jpost.com/israel-news/article-916375", "sum": "事件11-28、报道11-28。以色列国防军与边防警察11月28日凌晨拦截数个自西侧越境的走私气球，查获逾100公斤毒品、15支卡拉什尼科夫步枪和2部手机，物品已移交安全部门进一步处理。军方称士兵发现气球越境后前往现场，找到气球并取出其中的毒品与武器。另据同一报道，以军11月27日在约旦河谷东部边界的搜索中发现6支手枪并移交警方；本周二在阿拉德附近查获一辆卡车运载的约9万枚盖有伪造印章的鸡蛋。此次截获同时包含军用级步枪与大批毒品，显示同一通道可能兼作武器输入与毒品分销。军方未说明气球的具体起放位置与落点推算，亦未公布是否有人接应。", "b": "背景：以色列西部边界毗邻地中海，加沙与西奈方向长期存在武器与毒品走私通道。近年走私手段从地道、海上小艇向低空平台扩散，气球因成本低、可载重、雷达特征小，成为无人机之外的补充手段。机制：本次行动中，军方先发现多个气球自西侧越境，随后派兵赴现场查获15支卡拉什尼科夫步枪、逾100公斤毒品与2部手机，全部移交安全部门。被捕物品同时包含军用级步枪与大宗毒品，指向同一物流与接头网络既服务武器输入也服务毒品分销。影响：气球可分散投放、单位载重有限，增加了边境雷达与拦截兵力在低空慢速目标上的识别负担；对以方而言，武器与毒品混合查获意味着单次拦截难以切断上游供货。时间线：11月28日凌晨发生并完成查获，同日由军方通报；11月27日约旦河谷东部边界另一起行动查获6支手枪；本周二在阿拉德附近查获约9万枚伪造印章鸡蛋。观察点在于气球与无人机混合使用是否促使以方调整低空监视与拦截规则，以及查获武器的来源链条能否被追溯。"}, {"a": "item-border_security-3", "t": "印度旁遮普查获疑无人机空投枪弹", "e": "Punjab Police, BSF seize pistols, grenades in Gurdaspur; suspect cross-border drone delivery", "s": "全球边境安全热点", "r": 3, "k": ["印度", "旁遮普", "无人机走私", "枪弹", "边境安全部队", "反无人机", "国际边界"], "src": "印度联合新闻社（UNI）", "u": "https://www.uniindia.com/north-india/crime-punjab-bsf-seize-weapons/259937", "sum": "事件11-28、报道11-28。印度旁遮普邦警察与边境安全部队11月28日在古尔达斯普尔县展开联合搜查行动，在哈多恰尼村农田发现一个可疑包裹，内有2支手枪、59发实弹和4枚手榴弹。警方怀疑该批枪弹由巴基斯坦一侧通过无人机投送入境，已依据《武器法》《爆炸物法》相关条款在萨达尔古尔达斯普尔警察局立案，并扣押全部物品。事发地段位于印巴国际边界旁遮普段，该段边界以农业地带为主、地势平坦、村镇密集，便于小型无人机低空越境；印方近年在这一线频繁查获无人机投送的枪械与毒品，反无人机系统与夜视装备成为边防建设重点。警方正沿落点周边排查接应人员与投放航线，尚未公布是否有嫌疑人被捕。", "b": "背景：印巴国际边界旁遮普段以农业地带为主，地势平坦、村镇密集，便于小型无人机低空越境。近年印方在旁遮普与查谟一线频繁查获由无人机投送的枪械、毒品与伪钞，反无人机系统与夜视装备成为边防建设重点。机制：本次行动由邦警察与边境安全部队联合实施，属针对可疑包裹的农田搜索。查获物包括2支手枪、59发实弹与4枚手榴弹，集中于一个包裹内，警方据此怀疑为跨境无人机投送。案件依据《武器法》《爆炸物法》立案，后续将追查接收方与投放航线。影响：手枪与手榴弹组合通常指向境内暴力犯罪或武装团伙补给，而非单纯走私牟利，说明边境投送正从货物走私向武器输送延伸；小型包裹落地后由本地接应者取走，追溯难度大，依赖村民举报与技侦手段。时间线：11月28日完成搜查与立案，报道与事件同日。观察点在于查获频率是否随冬季浓雾期上升，以及旁遮普警方能否沿包裹来源锁定投放点位。"}, {"a": "item-border_security-4", "t": "印度诺伊达解救164名被贩运外籍人", "e": "Fake call centre: 164 rescued foreigners to be sent back to their countries, say police", "s": "全球边境安全热点", "r": 3, "k": ["印度", "人口贩运", "电诈园区", "印度尼西亚", "马来西亚", "遣返", "网络奴役"], "src": "印度斯坦时报（HT）", "u": "https://www.hindustantimes.com/india-news/fake-call-centre-164-rescued-foreigners-to-be-sent-back-to-their-countries-say-police-101795745987109.html", "sum": "事件11-26、报道11-28。印度德里警察犯罪科在诺伊达第136区一处商业楼六层查获假国际呼叫中心，解救164名被贩运的印度尼西亚与马来西亚籍人员，其中印尼籍92人、马来西亚籍72人，并逮捕一名25岁马来西亚籍嫌疑人，两名印度籍嫌疑人（苏尼尔·库马尔、苏希尔·库马尔）在逃。受害者以商务签证入境后被收走护照，被限制人身自由并被迫按脚本对本国居民实施投资类诈骗。11月28日，警方表示将经由外交部与外国人地区登记处安排遣返，认定这批人员属人口贩运与所谓网络奴役的受害者，不会受到处罚。现场查获355部手机、168台台式机、26台笔记本电脑、63张电话卡以及174本印尼与马来西亚护照，另有9本护照持有人下落不明。", "b": "背景：东南亚电诈园区长期以虚假招聘把南亚与非洲劳工骗入缅甸、柬埔寨、老挝的封闭园区，印度自身也出现反向流动——外籍人员被贩运入境从事诈骗。此类案件在印度司法实践中极少见，警方称本案属该国首批涉及外籍被害人的此类查获之一。机制：招募方以印度高薪岗位为诱饵，安排受害者持商务签证入境，落地即收走护照，集中安置在诺伊达一处65个房间的租住公寓，工作地为第136区写字楼六层的假呼叫中心，以「SKV企业」名义运作约三个月。作业方式为虚构女性身份在社交平台建立关系，引导目标在伪造的投资平台入金，目标人群为印尼与马来西亚居民。抵抗者遭殴打，饮食与通讯受严格管控。影响：案件同时具备人口贩运、强迫劳动与跨境电诈三重属性，说明诈骗产业链已出现跨区域双向流动。处置方面，警方与外交部、外国人地区登记处对接，为受害者安排临时住所与回国航班，两国使馆参与核验身份；案件在犯罪科警察局立案，所引条款涉绑架、人口贩运、剥削被贩运者、非法强制劳动、非法拘禁、冒名诈骗、刑事恐吓与刑事共谋。时间线：11月25日夜间实施搜查，11月26日对外通报，11月27日披露受害者构成与查获清单，11月28日确认遣返安排与不予追责的立场。后续观察点是两名在逃嫌疑人能否落网，以及174本护照对应的9名尚未找到人员下落。"}, {"a": "item-border_security-5", "t": "波兰第十次延长对白俄边境缓冲区", "e": "Poland extends restricted zone along Belarus border for another 90 days", "s": "全球边境安全热点", "r": 3, "k": ["波兰", "白俄罗斯", "缓冲区", "边境限制", "非法越境", "欧盟外部边界", "边防"], "src": "波兰电视台世界频道（TVP World）", "u": "https://tvpworld.com/96756956/poland-extends-belarus-border-buffer-zone-through-february-2027", "sum": "事件11-28、报道11-28。波兰内政与行政部11月28日宣布，将波兰与白俄罗斯边境部分地段的通行限制再延长90天，缓冲区自11月30日（周一）起继续生效，覆盖12月、1月与2月。这是该措施2024年6月13日设立以来的第十次延长。政府称，波白边境段的移民压力以及「有组织的越境尝试」仍然真实存在。据延长措施的法规说明，1月1日至11月8日共记录482起非法越境尝试。限制区域范围维持不变：多数地段为沿边界约200米纵深，自然保护区内部分地段扩至约2公里，一处湿地段达4公里；城镇与旅游线路一般不在限制范围内，以减轻对居民、游客与商户的影响。1月1日至10月27日，边防部门对进入限制区开出13张罚单、向法院移送2起、作出警告141次。", "b": "背景：2021年波白边境出现大规模越境潮，华沙将其归因于明斯克方面以运送移民方式对波兰与欧盟施压。此后波兰在边境修建实体屏障，并于2024年6月13日起在部分地段设立禁止停留的缓冲区，以压缩蛇头组织与接应人员的活动空间。该措施此前已九次延长，本次为第十次，法律形式为内政与行政部发布的法规，需逐期续期。机制：缓冲区不是全面封闭，而是对特定纵深地带的停留权作出限制：多数地段约200米，自然保护区周边部分地段约2公里，湿地段约4公里；城镇、旅游线路与居民日常通行被排除在外。执法上由边防部门负责巡查与处罚，本年内已开出13张罚单、移送法院2起、警告141次，说明实际处置以劝离与警告为主。官方给出的续期理由是移民压力与「有组织的越境尝试」持续存在，并援引1月1日至11月8日482起非法越境尝试作为量化依据。影响：一方面，缓冲区把越境行为推离屏障正面，缩短了发现到拦截的时间；另一方面，限制居民与媒体进入也长期招致人权组织与部分地方业者的批评。值得注意的是，482起尝试相较2021年危机高峰期已大幅下降，波兰的做法正从应急手段转为常态化冬季管理。时间线：11月28日（周六）内政与行政部宣布，11月30日生效，覆盖12月至次年2月。观察点在于入冬后越境尝试是否随冰雪条件变化而反弹、欧盟对以停留禁令替代实体管控的合法性讨论，以及第十一次续期时官方是否仍以同一量级数据作为依据。"}, {"a": "item-usa-1", "t": "民权联盟起诉联邦 阻大陪审团传票查批评者", "e": "ACLU seeks court order blocking Trump administration's efforts to unmask ICE critics on social media", "s": "美国移民与边境管理", "r": 4, "k": ["大陪审团传票", "言论自由", "公民自由联盟", "移民执法", "匿名账户", "初步禁令", "社交平台"], "src": "美国广播公司新闻（ABC News，转载美联社稿）", "u": "https://abcnews.go.com/Politics/wireStory/aclu-seeks-court-order-blocking-trump-administrations-efforts-138488643", "sum": "事件11-27、报道11-27。美国公民自由联盟（ACLU）11月27日向华盛顿哥伦比亚特区联邦地区法院提交集体诉讼，请求法院禁止司法部与国土安全部通过大陪审团传票，迫使Meta、Bluesky、X等社交平台交出匿名批评移民执法用户的账户与个人信息。诉状称，政府律师已发出数十份大陪审团传票，将信息交给移民与海关执法局调查人员，属「恶意调查」，侵犯第一修正案言论自由。四名匿名原告包括一名在Bluesky发文谈纽约移民执法枪击事件的用户、一名在X上批评联邦机构的大学生。首席法官博阿斯伯格本周裁定案件解封，并定于2027年1月6日就初步禁令举行听证，政府须在12月14日前书面答辩。被告列为华盛顿联邦检察官皮罗、司法部长布兰奇与国土安全部长马林。", "b": "本案的关键不在个别帖文，而在取证工具的转换。原告称，过去一年国土安全部向科技公司发出数百份行政传票索取批评者信息，遭到用户与平台抵制后，转向更隐蔽、更难挑战的大陪审团传票，检察方内部以「第18号调查」称之。行政传票可被当事人动议撤销，大陪审团传票则附带刑事程序色彩与保密义务，这使被调查者往往在不知情的情况下被识别。司法层面的争点有三：一是政府是否借刑事程序达成民事执法与舆论压制目的；二是平台是否必须披露账号背后的真实身份；三是匿名政治言论在何种条件下可被追溯。程序上，案件已由秘密转为公开，博阿斯伯格要求政府在12月14日前答辩，1月6日听证初步禁令，时间表本身就构成对执法节奏的约束。政治层面，此案与近期多起机场、法院内抓捕争议叠加，使「执法是否越界」从个案上升为系统性追问；国会1月复会后，围绕传票权的听证与立法施压概率上升。风险面在于：若法院拒绝禁令，行政与司法部门可能加速以传票建立批评者名单；若法院支持禁令，则可能限制执法部门在真正的威胁案件中使用同类工具，边界划定将成为后续上诉的核心。对移民维权组织与媒体而言，此案也提示匿名信息保护的现实脆弱性。"}, {"a": "item-usa-2", "t": "杰出人才签证批准率跌至三成二", "e": "Denials soar for 'extraordinary ability' visa in program once used by Melania Trump", "s": "美国移民与边境管理", "r": 4, "k": ["杰出人才签证", "批准率下降", "职业移民", "自由裁量", "人才竞争", "补件要求", "审查标准"], "src": "华盛顿邮报（The Washington Post）", "u": "https://www.washingtonpost.com/business/2026/11/27/trump-administration-has-escalated-denials-einstein-visa/", "sum": "事件11-27、报道11-27。《华盛顿邮报》11月27日报道，美国为「杰出能力」人士设置的职业移民第一优先类别（EB-1A，俗称「爱因斯坦签证」）批准率由拜登任期最后几个月的75%降至2026年年中的32%。据联邦移民数据，2026财年前三季度约5200人获批，2024年同期接近8900人；移民数据公司Lawfully估计，2026财年第四季度批准率可能进一步降至约27%。报道称，部分律所因拒签率过高已停止受理此类案件；一名曾融资逾6000万美元、出售过公司并有20篇媒体报道的科技创业者被认定「一项标准都未达标」而拒签。国土安全部回应称，公民及移民服务局「绝不会为速度牺牲审查质量」，并称拜登政府时期「审查几乎不存在」。报道同时指出，未发现白宫曾直接下令提高拒签率。", "b": "EB-1A属职业移民第一优先，无需雇主担保与劳工证，申请人须满足十项标准中的至少三项，或在奥运会、奥斯卡等级别的一次性重大成就，随后由移民官作「最终价值判断」。制度设计上，最后这一步本就留有裁量空间，争议也正是围绕它展开：律师称，过去审理者倾向于在材料中寻找批准理由，如今更多寻找拒绝理由，标准从法条可核验的清单滑向整体印象。数据可佐证趋势的幅度而非原因。2026财年前三季度约5200人获批，较2024年同期近8900人明显下滑；Lawfully根据其收录的数百万案件推算第四季度或降至约27%，但这是公司预测，不是官方统计。归因存在多条线索：一是审查趋严，补件通知增多，而补件往往预示拒签；二是申请质量下降，部分中介以模板或人工智能批量生成薄弱材料，收费高昂；三是审理人力不足，买断与裁员削弱了资深审理人员队伍。三条线索并不互斥，也解释了为何「最优秀最聪明」的政治口号与基层审理结果出现落差。影响层面，科技创业、科研与体育艺术领域的申请人首当其冲，部分律所退出该业务将进一步提高信息成本；若趋势延续，人才可能转向加拿大、欧洲与中东的快速通道。需要留意的是，EB-1A并非配额瓶颈型类别，其收紧反映的是裁量而非数量限制，因而更难通过诉讼挑战，也更依赖行政指引的透明化。"}, {"a": "item-usa-3", "t": "联邦与加州就警方撤离执法现场交锋", "e": "DHS Accuses Long Beach Police of Endangering ICE Officers After Bodycam Shows 'Good Luck' Pullout", "s": "美国移民与边境管理", "r": 3, "k": ["执法记录仪", "庇护政策", "地方与联邦", "长滩", "移民执法", "公众围观", "独立审查"], "src": "纽约邮报（New York Post）", "u": "https://nypost.com/2026/11/27/us-news/dhs-accuses-california-of-endangering-ice-officers-after-bodycam-shows-police-telling-agents-good-luck", "sum": "事件11-25、报道11-27。美国国土安全部11月25日就长滩警方11月19日公布的执法记录仪视频发表声明，联邦与地方围绕10月17日一次移民执法行动的处置公开交锋。视频显示，联邦执法人员被围观人群围堵时，长滩市一名警员告知联邦探员，其值班指挥官已下令地方警力撤离，并称「我们奉命撤离，你们只能靠自己了……祝好运」。国土安全部长马林称画面「实在令人不安」，批评加州庇护政策让联邦人员孤立无援。长滩警方与市政府回应称，警员到场是为公共安全、医疗需求与疏通被堵道路，并非协助移民执法，街道安全风险解除后撤离；警察局长赫贝什为下属辩护。该行动中一名40岁男子被强力制服并受伤，其家属与当地媒体称其为美国公民、前市政工人，市长理查森已要求独立审查。11月27日起全国媒体报道放大了争议。", "b": "这起冲突的核心不是一次抓捕是否合法，而是「谁在什么条件下必须出手相助」。加州《价值法案》与长滩市地方条例基本禁止市警协助联邦移民执法，联邦机构则认为在人员被围堵、车辆被阻时，地方警力撤离构成对联邦人员安全的放任。视频提供的是一个高度可传播的瞬间——「你们只能靠自己了……祝好运」——这句话在政治上比任何法条都更有动员效果，也解释了为何视频在11月19日由警方公布、国土安全部选择在11月25日以声明接续放大。事实层面仍有多处空白：双方均未公布完整的调度记录，无法确定地方上级下令撤离与联邦车辆脱困的先后顺序；被制服男子国籍与身份存在官方与家属两种说法；市长要求的独立审查尚未出结果。机制层面，此类争议的走向通常取决于三点：地方是否在「公共安全」与「移民执法」之间划出可操作的界线；联邦是否将地方不配合认定为妨碍执法并寻求法律救济；以及国会是否以拨款条件施压庇护辖区。对执法实务的影响是明显的：联邦行动前的风险评估将更多纳入地方协作意愿，行动方式可能进一步转向夜间、外围与情报主导，减少街头对峙，但也降低透明度与问责便利。对地方而言，真正的难题在于如何在遵守州法与地方条例的同时，避免被指「见危不救」，这需要事前明确交界规则，例如在何种情形下以公共安全名义提供交通管制与医疗支援而不介入身份核查。这一模糊地带，正是未来一年联邦与庇护辖区冲突最可能反复出现的位置。"}, {"a": "item-usa-4", "t": "联邦法官令释放被误抓危地马拉男子", "e": "Judge orders ICE to free Iowa man jailed by mistake, calling it 'almost beyond belief'", "s": "美国移民与边境管理", "r": 3, "k": ["错误羁押", "正当程序", "保释听证", "联邦地区法院", "强制羁押政策", "身份误认", "司法审查"], "src": "艾奥瓦首府快讯（Iowa Capital Dispatch）11月27日报道，雅虎新闻转载", "u": "https://www.yahoo.com/news/us/articles/iowa-judge-calls-ice-mistakes-191323406.html", "sum": "事件11-27、报道11-27。美国艾奥瓦州南区联邦地区法院首席法官罗斯近日作出裁定，要求政府在24小时内将被错误逮捕并羁押的危地马拉籍男子佩雷斯·雷西诺斯从波尔克县监狱释放，裁定内容于11月27日经地方媒体报道。裁定认定，执法人员10月28日原本要抓捕一名因性侵未成年人被州法院通缉的男子，却因体貌描述相近抓错人；发现错误后，得梅因办公室人员指示继续羁押，并另行取得移民逮捕令。法官指出，两人身高相差约三英寸、体重相差二十至三十磅，如此明显的事实错误「几乎令人难以置信」，且当事人无犯罪记录、从无缺席移民庭记录，被剥夺了保释听证机会，违反正当程序。法官同时批评近期执法部门在羁押非公民时的错误数量持续增加，并提及今年1月该州另一起类似裁定。", "b": "案件事实链条清晰：2023年6月当事人以未成年无陪伴儿童身份入境，随后被释放交由其姐妹监护；此后一直按期报到，无犯罪记录。2026年10月28日，执法人员在寻找另一名通缉犯时将其带走，发现抓错后并未释放，而是联系得梅因办公室，得到「继续羁押并移送」的指示，随后补办移民逮捕令。法官的核心论证是：政府固然可以在遣返程序期间羁押非公民，但不能在没有新事实、没有保释听证的情况下，重新拘押一名数年前已被有条件释放且始终守法的人。司法部在答辩中未能指出授权羁押的具体法条，只是重复了此前已被其他法官驳回的论点，这一点被裁定特别点明。制度背景是本届政府的「强制羁押」政策：主张对特定类别非公民一律不予保释，而全国已有数百名各级法官在逾千起案件中否定该主张。此类裁定的累积效应有三：一是形成事实上的辖区差异，同一政策在不同法院辖区执行结果不同；二是抬高执法部门的合规成本，要求其保存并披露羁押理由；三是为集体诉讼提供素材。对当事人的意义是即时的——24小时内释放；对政策的意味则是渐进的：单案难以推翻政策，但持续的司法否定会迫使机构修改内部指引。释放不等于案件终结，遣返程序仍在继续；对地方羁押设施而言，此类裁定意味着接收联邦羁押请求时需更谨慎地核对法律依据，否则可能成为共同被告。下一步的观察点在于政府是否上诉，以及是否会在上诉期间以「情形变化」为由再次羁押同一人。"}, {"a": "item-usa-5", "t": "蒙大拿联邦法官裁定禁无令状逮捕", "e": "Judge blocks warrantless civil immigration arrests across Montana", "s": "美国移民与边境管理", "r": 4, "k": ["蒙大拿", "无令状逮捕", "初步禁令", "脱逃风险评估", "自行离境", "人身保护令", "集体诉讼"], "src": "美国蒙大拿联邦地区法院大瀑布城分院（裁定文书第21号）；新闻周刊（Newsweek）11月27日报道", "u": "https://storage.courtlistener.com/recap/gov.uscourts.mtd.86202/gov.uscourts.mtd.86202.21.0.pdf", "sum": "事件11-25、报道11-27。美国蒙大拿联邦地区法院大瀑布城分院首席法官布赖恩·莫里斯11月25日就「韦尔德·埃尔南德斯等诉国土安全部」案（案号CV-26-301-GF-BMM）作出裁定，同时签发临时限制令、初步禁令与《行政程序法》第706条中止令，禁止联邦机构在该辖区实施无令状的民事移民逮捕，除非事先就「被捕对象很可能在取得令状前脱逃」作出个别化判断。裁定称，法院自7月31日以来已审理逾50起不符合法定条件的无令状逮捕，并认定7月以来该州多数由国土安全部执行的移民逮捕均无令状、且未充分进行脱逃风险评估。禁令要求该部向执法人员分发裁定、留存个别化评估记录，在每次无令状逮捕后72小时内向原告律师提供评估文件与I-213表格，并禁止7日内将此类被捕者移出该辖区。法院还认定，被羁押者可能在无律师接触机会、且基于对法律后果的错误认知下被「逼向自行离境」。四名原告9月25日起诉并代表同类人员，法院10月14日听证，新闻周刊11月27日报道。", "b": "本案的法律入口是《移民与国籍法》第1357条第a款第2项：移民官员在有理由相信当事人非法居留、且在取得令状前很可能脱逃时，可实施无令状逮捕。争点由此转为「个案判断是否存在」而非「能否无令状」。莫里斯的裁定认为，蒙大拿辖区自7月31日以来的多数逮捕没有任何可核验的脱逃风险评估，事实上形成「先抓再补令状」的做法，而这是条文所不允许的；法院并援引同院「埃尔南德斯诉克罗斯森」案的既判认定，以及至少五个其他联邦辖区的同类判决，认定存在「模式与惯例」。禁令的可执行性被设计得相当具体：分发裁定、72小时文书义务（含I-213表格）、7日内不得跨区转移，这三点压缩了「抓完就送到外州」的空间，也便于后续以藐视法庭追究。横向看，科罗拉多、俄勒冈、加利福尼亚与纽约的法官已作出类似认定，蒙大拿的意义在于把判例覆盖到移民执法量较小、法律资源稀薄的州；九月该院曾下令释放关押在喀斯喀特县的24人，说明法官与联邦机构之间已形成反复交涉的关系。另一条值得注意的线是「自行离境」认定：法院认为羁押被当作施压工具，使本可通过人身保护令获释的人放弃救济，若被上诉法院采纳，将触及羁押期间的告知义务与律师接触权。对执法实务的影响是即时的：在蒙大拿行动前必须形成书面的脱逃风险评估并留存记录；对全国政策的影响则取决于第九巡回上诉法院的态度，以及政府是否申请在上诉期间中止禁令。观察点在于政府是否在72小时文书义务上出现系统性违规，以及其他尚未介入的州是否出现同类诉讼。"}, {"a": "item-usa-6", "t": "美十二月排期公布 职业移民几近停滞", "e": "Visa Bulletin For December 2026", "s": "美国移民与边境管理", "r": 3, "k": ["签证公告", "职业移民", "排期倒退", "绿卡配额", "亲属移民", "国别限额", "国务院"], "src": "美国国务院领事事务局（travel.state.gov）", "u": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2027/visa-bulletin-for-december-2026.html", "sum": "事件11-27、报道11-27。美国国务院11月27日发布2026年12月签证公告，新日期自12月1日起适用，职业移民各类别最终裁定日几乎全线停滞，唯一变动是中国出生申请人非预留类第五优先前进一个月至2017年1月1日。第一优先对中国大陆为2023年8月1日、印度为2023年2月1日，其余国家有名额；第二优先多数国家为2025年4月1日，中国为2021年10月1日、印度为2013年11月1日；第三优先多数国家为2024年6月15日，中国为2022年1月22日、印度为2014年1月22日；亲属类第二优先多数国家前进一个月至2026年11月22日，墨西哥第三优先前进一年。公告称，因行政当局与国务院为维护国家安全采取的措施（含第10949、10998号总统公告）导致移民签证签发率下降，近月各类别日期被推进，但未来数月可能需要倒退，个别类别可能在财年结束前即无配额；第四优先特定宗教工作者类别经H.R. 6500延至2026年12月11日。", "b": "排期的机械原理值得先厘清：职业移民全球年度配额约14万，单一出生国不得超过其中的7%，因此中国与印度长期排队，「有名额」只表示无需等待签证号。签证公告每月发布两张表，表A决定何时可以批准，表B决定何时可以递交，境内调整身份适用哪张表由公民及移民服务局另行公布，12月适用哪张表须以该局公告为准。本次公告最关键的信息不是数字，而是国务院给出的解释：移民签证签发率下降，使部分类别此前得以前进，但为避免超出年度与国别上限，未来数月可能需要倒退，个别类别甚至会在财年结束前显示无配额。这也解释了亲属类与职业类走势分化：亲属移民几乎全部在海外领事馆完成，领事签发放缓会先反映在亲属表上；职业移民有相当比例走境内调整，受领事端波动影响较小，因此表现为原地踏步。风险面有三：一是排期前进带来的「虚假窗口」，申请人据此准备材料、体检与担保文件，若下月倒退则成本沉没；二是第四优先特定宗教工作者类别仅获拨款至12月11日，若国会不续期，该类别将转为无配额；三是国别上限与年度上限同时逼近时，先到先得的顺序会让部分早期优先日反而失去机会。对申请人的实务含义是：在窗口开放期尽快完成递交，以收件日而非寄出日计算；对观察者而言，12月与1月的对比将检验国务院的倒退预警究竟是技术性提示还是实质收缩的前奏。"}, {"a": "item-eu-1", "t": "旅游联盟吁欧盟暂缓入境生物识别采集", "e": "EES queues: tourism alliance asks EU to pause biometric checks", "s": "欧盟移民与边境管理", "r": 3, "k": ["出入境系统", "生物识别", "申根口岸", "排队拥堵", "旅游联盟", "临时豁免", "预登记应用"], "src": "英国商旅出行网（Travelling for Business）", "u": "https://travellingforbusiness.co.uk/news/ees-queues-biometric-checks-pause", "sum": "事件11-27、报道11-28。由80余家公共与私营旅游机构组成的欧洲「旅游宣言」联盟11月27日在布鲁塞尔发表声明，要求欧盟委员会恢复成员国边境部门在客流高峰时暂停采集指纹与人脸图像的临时裁量权；声明由欧洲旅行社与运营商协会同步散发。该灵活性安排已于2026年9月到期，此后申根区多个机场在入境与出境环节出现长队，部分旅客错过转机航班，个别航班旅客被迫滞留机舱等待航站楼腾出空间。联盟称问题集中在人手、设施、设备与系统稳定性四处，且岛国与支线机场尤为脆弱，目前仅两个成员国提供入境预登记应用。行业援引世界旅游理事会的调查称，若长队成为常态，约六成三受访者会考虑申根区以外的目的地，最坏情形下约4100万人次与454亿美元消费面临风险。欧盟委员会尚未回应，并在此前表示仅约20个口岸存在严重排队，全面暂停既无必要也不可行。", "b": "出入境系统自2025年10月分阶段上线、2026年4月全面部署，对非欧盟短期停留者采集护照信息、人脸图像与指纹，覆盖美英加澳等免签国旅客。制度设计上的关键节点是2026年9月：允许边境部门在高峰时段跳过生物识别登记的过渡条款到期，此后拥堵从局部变为普遍投诉。行业诉求并非废除系统，而是恢复「口岸裁量」——在排队超出承受能力时临时跳过采集。这一诉求的技术合理性在于，生物识别登记只需在首次入境完成，一旦完成即可复用，因此高压时段的强制采集带来的边际安全收益最低，而延误成本最高。争议点在于欧盟委员会的态度：其此前判断仅约20个口岸存在严重排队，认为全面暂停既无必要也不可行，并将问题归于成员国的设施与人手投入；委员会同时强调机场无法自行修复由政府部门控制的环节。政治层面，这一议题已被纳入更大的边境数字化叙事——入境预授权系统推迟上线、部分成员国延迟全面实施，使「系统能否承载」成为对欧盟边境管理能力的直接质疑。对旅客的现实影响是可预期的：首次入境预留更长时间、避免紧凑转机、确认到达机场是否支持预登记。对未来一年的判断是，全面暂停概率低，但针对特定口岸的个案豁免与更大规模的预登记推广更可能成为折中方案；若冬季高峰出现大规模误机，委员会将面临来自航空与旅游业的集中施压。"}, {"a": "item-eu-2", "t": "加那利移民船十四人遇难 耶罗岛承压", "e": "Fourteen found dead on migrant boat off Spain's Canary Islands", "s": "欧盟移民与边境管理", "r": 4, "k": ["加那利群岛", "耶罗岛", "移民船难", "单日纪录", "接待能力", "紧急状态", "大选议题"], "src": "中央通讯社（CNA，综合埃菲社与路透社报道）", "u": "https://www.cna.com.tw/news/aopl/202611280093.aspx", "sum": "事件11-27、报道11-28。西班牙埃菲社与路透社报道，11月27日在耶罗岛以南39海里（约72公里）处获救的一艘载约100人的船只上发现遗体，海上救援部门最初报告8至10人死亡、6名重伤者由直升机送医；西班牙领土政策大臣托雷斯11月28日在社交平台确认死亡人数升至14人，84名生还者由另一艘船送至耶罗岛拉雷斯廷加港，该港设有移民接待中心与野战医院。加那利群岛11月25日单日抵达约2100人，创该航线单日纪录，多数抵耶罗岛（人口约1.14万）。内政部数据显示，1月1日至11月15日加那利海上抵达24364人，较2025年同期14690人增加约65.9%，其中11月前15天即达11037人，超过10月全月的6194人。耶罗岛11月7日宣布社会紧急状态、11月25日宣布卫生紧急状态，11月27日约765人由该岛转往特内里费等接待中心。西班牙11月29日举行大选，移民已成核心议题。", "b": "这起事故的三个数字构成一条完整压力链：14人死亡说明船只超载与航程风险已到极限——船在耶罗岛以南39海里处被发现，载员约百人，救护力量只能先直升机转运6名重伤者，其余生还者由另一艘船接驳至设有野战医院的拉雷斯廷加港；2100人单日抵达（11月25日）说明流量本身在加速，且高度集中于人口仅约1.14万、接待中心设计容量数百人的耶罗岛；24364人、同比增65.9%则说明这不是单日异常，而是整个11月前半月（11037人）就超过10月全月（6194人）的结构性跳升。机制上，耶罗岛的问题在于「小岛接大流量」：临时接待中心在72小时内要完成指纹采集、身份核验与卷宗开立，一旦抵达速度超过登记速度，第一个环节即堵死，人员被迫滞留港口过夜，这也是11月7日社会紧急状态、11月25日卫生紧急状态的现实背景。11月27日约765人转往特内里费与加那利其他接待中心，属于减压而非解决——转运只是把瓶颈后移到本土床位与航班。政治层面，事故发生在11月29日大选前两天，区域主席克拉维霍公开要求马德里与欧盟委员会介入、包括部署欧盟边境局力量，并把根源指向塞内加尔与冈比亚的出发岸线；首相桑切斯则强调与西非国家的联合巡逻已见效。选后无论谁执政，可动用的工具仍是转运、扩容与对外合作三条，而真正决定流量的是西非出发国的巡逻强度与就业状况。"}, {"a": "item-eu-3", "t": "欧盟特别峰会提前收场 边境资金悬而未决", "e": "EU special summit ends early as leaders clash over long-term budget", "s": "欧盟移民与边境管理", "r": 3, "k": ["长期预算", "特别峰会", "边境与移民资金", "财政分歧", "安全防务", "十二月峰会", "成员国对立"], "src": "欧盟理事会爱尔兰轮值主席国官网（欧洲理事会会议结论公告）", "u": "https://irish-presidency.consilium.europa.eu/en/news/results-of-the-special-european-council-26-27-november-2026", "sum": "事件11-26至27、报道11-27—28。欧盟11月26日起在布鲁塞尔举行特别峰会，讨论2028至2034年长期预算与对乌援助。因分歧严重，原定两天的会议于27日凌晨提前结束，27日上午议程取消，相关谈判推迟至12月17日至18日的例行峰会。预算方案从欧委会近2万亿欧元，经轮值主席国爱尔兰10月折中至约1.83万亿，再于11月21日由欧洲理事会主席科斯塔压缩至约1.78万亿，仍遭德国、荷兰等净出资国反对，认为规模过大并要求停止增加共同债务；法国称削减是「战略性错误」，将压缩产业竞争力投资；「凝聚力之友」小组反对削减农业补贴与地区发展拨款；德国与芬兰则不满安全防务与竞争力支出被削。欧洲理事会公告称，24个成员国支持欧委会提出的2027年追加对乌贷款方案（最高450亿欧元），其中保加利亚仅参与非军事部分。", "b": "把这场峰会放进移民治理框架看，关键在于长期预算的「上游决定下游」效应。2028至2034年预算中的边境管理、庇护与移民专项，是各国扩建接待设施、采购监控设备、参与欧盟边境局行动、开展遣返与重新接纳合作的资金来源；预算规模与科目结构一旦确定，未来七年的能力上限随之锁定。当前的分歧结构有三层：规模之争（德国、荷兰等净出资国要求进一步压缩并停止增加共同债务）、结构之争（南欧与东欧的「凝聚力之友」要求保住农业补贴与地区拨款，德国、芬兰要求保住安全防务与竞争力支出）、以及融资工具之争（爱尔兰、卢森堡对数字服务税等新自有资源持异议）。三层互相牵制，使得任何单点妥协都会引发其他方要价，这也是27日上午议程被取消、会议提前收场的机制性原因。对乌援助构成第二重压力：欧委会11月18日提议2027年追加最高450亿欧元贷款，由资本市场举债、预算担保，其中最高250亿用于军事、最高200亿用于预算支持；德国主张把对乌融资与长期预算挂钩并作为同意预算的前置条件，捷克、匈牙利、斯洛伐克则要求分开处理。时间约束同样紧迫：若12月17至18日峰会仍无突破，2028年起的新预算框架将面临衔接风险，过渡期安排会挤压移民与边境专项的确定性。另一个值得关注的细节是，欧盟委员会主席冯德莱恩在会后强调新自有资源已取得进展、数字服务税获得广泛支持，并将其视为继续推进的基础；这意味着12月的谈判焦点可能从「总量」转向「钱从哪里来」。对成员国的现实影响是，在预算未定期间，边境与接待投入更依赖国家财政与临时性欧盟工具，能力建设节奏将明显放缓。"}, {"a": "item-eu-4", "t": "希腊克里特岛外海单日救起九百余人", "e": "More than 900 migrants rescued off Crete’s southern coast", "s": "欧盟移民与边境管理", "r": 3, "k": ["希腊", "克里特岛", "加夫多斯", "海上救援", "欧盟边境管理局", "地中海航线", "利比亚"], "src": "保加利亚通讯社（BTA），Fakti.bg 刊发", "u": "https://www.fakti.bg/en/world/1105533-more-than-900-migrants-rescued-off-cretes-southern-coast", "sum": "事件11-28、报道11-28。希腊海岸警卫队11月28日通报，当日在克里特岛南部与加夫多斯岛外海的多起行动中共救起约903人，未报告人员伤亡。凌晨过后，在加夫多斯外海、卡利利梅内斯港以及斯法基亚的特里皮蒂海滩一带共发现约583名外籍人员；随后欧盟边境管理局的无人机在卡利利梅内斯以南发现4艘船，救起约274人并送往港口；另一起行动中，海警巡逻艇在耶拉派特拉西南方向救起约46人。上述行动均由联合搜救协调中心统一指挥。希腊方面称，2026年截至11月6日已有逾2.3万人抵达克里特岛及加夫多斯岛，同期经海路与陆路入境希腊者超过3.8万人，2025年全年约为4.9万人。该航线自利比亚东部海岸出发，近期入境压力持续上升。", "b": "背景：中地中海东段近年出现结构性位移，从利比亚东部出港的船只不再主要驶向意大利兰佩杜萨，而是向东北漂向克里特岛南岸与加夫多斯岛。加夫多斯面积小、无常规收容设施，抵达者往往先被安置在临时帐篷或直接由渡轮转运至克里特岛，再向北转移至希腊本土。希腊方面数据显示，2026年截至11月6日抵克里特与加夫多斯者逾2.3万人，同期经海陆入境希腊者逾3.8万人，而2025年全年约4.9万人，说明总量并未超过上年、但空间分布明显集中。机制：本次行动分三个时段。凌晨过后，海警在加夫多斯外海、卡利利梅内斯港与特里皮蒂海滩一带发现约583人，其中部分人已上岸；随后欧盟边境管理局的无人机在卡利利梅内斯以南锁定4艘船，救起约274人；第三段为海警巡逻艇在耶拉派特拉西南发现的一艘船，救起约46人。三段合计约903人，均由联合搜救协调中心指挥调度。无人机先发现、巡逻艇再接收，是希土与利比亚方向救援的常规分工，可显著缩短漂航时间。影响：一日近九百人对卡利利梅内斯、耶拉派特拉、斯法基亚等小港的接收、登记与医疗构成瞬时压力，转运至莱斯沃斯等岛的安排此前已有记录。持续大流量亦会抬高希腊与欧盟在遣返、收容标准上的政治成本。时间线：11月28日完成多起救援并由海岸警卫队通报，保加利亚通讯社当日发稿。观察点在于无人机与巡逻艇的接续效率能否维持、克里特南部临时安置点扩容进度，以及入冬后海况恶化是否令伤亡数字上升。"}, {"a": "item-eu-5", "t": "加夫多斯岛船只触礁 两人身亡四十一人获救", "e": "More than 1,100 migrants reach the Greek islands of Crete and Gavdos in 2 days, with 2 reported dead", "s": "欧盟移民与边境管理", "r": 3, "k": ["希腊", "加夫多斯", "克里特岛", "触礁", "海上救援", "利比亚航线", "人员死亡"], "src": "美联社（AP）", "u": "https://apnews.com/article/greece-migration-libya-north-africa-return-hubs-4a9adfe8ab9757039b04f0f530476fa0", "sum": "事件11-28、报道11-28。希腊海岸警卫队通报，11月28日在加夫多斯岛一处岩石海岸发现41名生还者与两具遗体，4名生还者被送往克里特岛医院；当地媒体称该船抵岛时疑似触礁，死亡原因尚待确认。海岸警卫队自11月27日凌晨至28日下午的通报合计显示，希腊方面与欧盟边境局在克里特岛与加夫多斯岛附近共发现并救起逾1,100人。本月早些时候，两艘自利比亚驶往希腊南部的船上共发现22具遗体。希腊是拟在卢旺达设立遣返中心的五个欧盟国家之一，该计划受到人权组织批评。自利比亚东部海岸至希腊南部岛屿的海路近年成为进入欧洲最常用路线之一，希腊政府虽采取强硬移民政策，抵达人数仍在上升。", "b": "这起事故与同日的大规模海上救援需要分开看：前者是「抵岸时刻的死亡」，后者是「漂航途中的救援」。11月28日在加夫多斯岛岩石海岸发现的41名生还者与两具遗体，说明船只在靠岸阶段撞上礁石——这是利比亚至希腊南部航线上最危险的一刻，因为加夫多斯面积小、岸线多岩石、没有常规收容设施，船只一旦在夜间或涌浪中抵岸，往往直接触礁。希腊海岸警卫队称死亡原因尚待确认，4名生还者转往克里特岛医院，另有一批人员在同一时段被巡逻艇与欧盟边境局无人机发现后接走。把两天数字合起来，自11月27日凌晨至28日下午逾1,100人进入克里特与加夫多斯，说明该航线流量并未随入冬下降；本月早些时候两艘自利比亚出发的船上发现22具遗体，印证同一趋势。机制上，利比亚东部出港、向东北漂向克里特南岸与加夫多斯的路线近年被反复使用，原因是中地中海西段与突尼斯方向的拦截强度上升，蛇头把出发点与目的地同时东移；对希腊而言，压力集中在小港口与临时安置点，登记、医疗与转运能力被瞬时击穿。政策背景同样重要：希腊是拟在卢旺达设遣返中心的五个欧盟国家之一，该计划被批评为把保护责任外移；当抵达人数持续走高、境外遣返仍停留在纸面时，希腊可用的工具依然只有搜救、收容与转运三件。观察点在于加夫多斯是否增设常设救援与收容力量、触礁死亡是否促使希腊调整南岸夜间监视部署，以及欧盟边境局无人机在该海域的出动频次是否继续加码。"}, {"a": "item-china_neighbors-1", "t": "巴厘岛拦阻赴瓦努阿图旅客 六人涉分离组织", "e": "12 Passengers Bound for Vanuatu Blocked by Indonesian Immigration at Bali Airport", "s": "中国周边国家动态", "r": 3, "k": ["印度尼西亚", "巴厘岛", "移民查验", "出境限制", "机场执法", "瓦努阿图", "巴布亚"], "src": "印尼现在新闻网（Indonesia Now，引述点滴网巴厘版）", "u": "https://www.indonesianow.co/news/8773983/12-passengers-bound-for-vanuatu-blocked-by-indonesian-immigration-at-bali-airport", "sum": "事件11-27、报道11-28。印度尼西亚巴厘岛伍拉·赖国际机场移民部门27日22时许在国际出发大厅拦阻12名拟经悉尼转机前往瓦努阿图维拉港的旅客，致其全部错过捷星航空航班。印尼国民军总司令情报助理里奥·菲尔迪安托少将28日说明，12名巴布亚裔旅客中有6人涉嫌为巴布亚分离组织成员，原定赴维拉港参加该组织和解会议，6人因此被拒出境。巴厘法律援助机构维权负责人伊格纳修斯·拉迪特则称，事件起于数人护照无法被自动查验系统读取、被转入人工复核，证件随后被带入单独房间；工作人员称奉上级指示进一步核查，最初仅两人获准继续行程，其余十人证件被扣约一小时，经口头交涉后又有四人放行，另六人证件因据称来自移民与惩教部移民总局局长的指示未归还，先前获准离开的六人随后在登机口再度被拦。至28日12人仍滞留机场移民检查室，未获任何书面说明。", "b": "此案的关键在于性质判断：起初由法律援助机构对外陈述，呈现为证件系统故障引发的任意扣留，易被读作程序失当的样本；印尼军方随后披露的信息则显示，12人中有6人系巴布亚分离组织成员，拟赴境外参加该组织的和解会议，出境限制具有政治安全指向。两条叙述并不互斥——即便存在安全理由，执行环节仍以口头指令层层加码、扣押证件近一小时、最终在登机口二次拦截，全程无书面决定与救济告知，程序瑕疵客观存在。从制度背景看，印尼新设移民与惩教部把原属司法人权系统的移民总局并入，强化对出入境环节的统一管控，边检机关依据移民法对特定外国人享有禁止出境裁量权，通常用于刑事调查、司法程序或国家安全评估。此类裁量的透明度是该国出入境治理的薄弱环节：当事人往往无从知晓被限制的依据、期限与申辩途径。对区域观察者而言，值得跟踪的是印尼对巴布亚相关人员出境的一贯做法是否形成惯例，以及是否会在国际民航承运人层面产生连锁影响——登机牌已发放而旅客被拒出境，退改签与责任分担缺乏明确规则。"}, {"a": "item-china_neighbors-2", "t": "马旅游业界呼吁延长印度公民免签一年", "e": "Group calls for 30-day visa exemption for Indian nationals to be extended for another year", "s": "中国周边国家动态", "r": 4, "k": ["马来西亚", "印度", "免签", "签证政策", "旅游业", "行前筛查", "移民局"], "src": "星报（The Star）", "u": "https://www.thestar.com.my/news/nation/2026/11/28/group-calls-for-30-day-visa-exemption-for-indian-nationals-to-be-extended-for-another-year", "sum": "事件11-28、报道11-28。马来西亚旅游联合会28日发表声明，呼吁将原定2027年1月1日到期的印度公民30天免签安排再延长一年。该会主席斯里·加内什·米歇尔称，印度是马来西亚最大客源市场之一，2025年访马印度旅客逾150万人次，2026年1月至9月为82万8550人次；马来西亚旅游同业协会统计显示，2025年印度市场带来约148亿林吉特旅游收入。移民局25日宣布印度公民免签将于2027年1月1日终止，内政部长赛夫丁·纳苏申此前表示短期访问免签将于12月31日结束，理由是强化行前筛查、确保入境秩序可控。加内什要求政府在12月1日MyVisa申请开放前尽快决定，并给出清晰过渡安排，包括对已确认订单旅客、旅行团和已签约活动主办方的具体指引；他同时建议召集内政部、旅游艺术文化部、财政部、移民局、马来西亚旅游促进局、航空公司与行业协会紧急磋商，改用风险导向筛查，并每季度检讨成效。", "b": "马来西亚对印度公民的30天免签属近年单方面开放举措，配套要求包括出发前72小时内填报数字入境卡、提供回程或续程机票与住宿证明。此次转向的背景是三年间记录的逾1.8万宗签证违规案件，以及社会对外籍人员从事快递配送、无证经营等议题的关注度上升。内政部将免签终止与行前筛查绑定，逻辑是把审核前移到申请端，用签证与电子系统替代口岸拦截，从而降低入境后处置成本。旅游业的反弹则源于市场结构：印度连续多年位居马来西亚前三客源市场，2026年前三季度已近83万人次，航空运力、地接社与活动主办方的2027年排期均已按免签假设锁定。若政策如期收紧，短期将出现两重摩擦——一是签证申请量在12月集中涌入，审批与预约能力面临压力；二是已购机票旅客若未及时办证，可能引发退改与投诉。区域内竞争亦不容忽视，泰国、斯里兰卡、越南近年相继放宽对印签证，客源争夺趋于激烈。后续关键在于政府能否在12月1日系统开放前给出明确过渡条款，以及是否采纳风险导向筛查、把免签与违规记录挂钩的分层方案。"}, {"a": "item-china_neighbors-3", "t": "印度古尔冈遣返二十七名孟加拉籍人员", "e": "27 Bangladeshi nationals held for illegal stay in Gurugram sent back: Police", "s": "中国周边国家动态", "r": 3, "k": ["印度", "孟加拉国", "非法居留", "遣返", "拘留中心", "外国人管理", "跨境移民"], "src": "印度教徒报（The Hindu）", "u": "https://www.thehindu.com/news/national/27-bangladeshi-nationals-held-for-illegal-stay-in-gurugram-sent-back-police/article71754034.ece", "sum": "事件11-27、报道11-28。印度哈里亚纳邦古尔冈警方28日表示，27名因涉嫌非法居留被捕的孟加拉国籍人员已于27日由警方押送乘火车遣返。警方称，这批人员分别在古尔冈警察反恐小队与警务行动人员的两次行动中被查获，初步调查显示其没有有效签证、护照或其他获准居留的证件；随后被送往马内萨尔拘留中心完成法律与行政手续。为确保押送，铁路部门专门加挂一节普通车厢。一名警官称，27人随警员一同登车，列车按既定程序发车，整个过程组织有序。警方表示，将继续在辖区内排查核验涉嫌非法居留的外国人。该案是古尔冈警方本月系列清查的延续：11月7日反恐小队联合努赫、罗塔克特别行动组查获14人，9日警务人员又在巴杰格拉地区查获15人，均移送马内萨尔拘留中心。据当地警方通报，被查者多经西孟加拉邦水路、边境围栏或管道入境，随后辗转至古尔冈。", "b": "印度对无证外国人的处置已形成固定链条：地方警察在反恐、治安或举报核查中查获嫌疑人，先核验证件与入境记录，再移送移民局设于马内萨尔等地的拘留中心，最后由外国人管理机关安排遣返。本案的特殊之处在押送方式——27人由警员随车全程护送，铁路部门加挂车厢，既降低途中脱逃与群体聚集风险，也便于在沿途各站交接。这类集体遣返通常经陆路口岸移交孟加拉国边防部门，费用与程序由印方承担。从政策脉络看，古尔冈自11月初起连续开展核查，执法重点从边境拦截前移至内陆城市，依托住宿申报、用工登记与举报线索排查，且在行动层级上由地方反恐小队主导，安全化色彩明显。其效应是双向的：一方面压缩无证居留空间，另一方面也使部分务工者转向更隐蔽的就业形态，增加被中介剥削的风险。对孟加拉国而言，接收能力与身份核验压力同步上升。观察点在于，印度是否会以拘留中心容量、航班与口岸运力为约束，形成常态化的定期遣返节奏，以及两国能否在执法合作与人员往来便利之间取得平衡。"}, {"a": "item-china_neighbors-4", "t": "越南老挝国际口岸通道因塌方中断", "e": "Landslide cuts off road to Vietnam-Laos international border gate", "s": "中国周边国家动态", "r": 3, "k": ["越南", "老挝", "拉莱口岸", "边境通道", "塌方", "跨境运输", "应急响应"], "src": "越南网（VietNamNet）", "u": "https://vietnamnet.vn/en/landslide-cuts-off-road-to-vietnam-laos-international-border-gate-2579627.html", "sum": "事件11-28、报道11-28。越南广治省15D国道28日清晨6时30分许在拉莱乡9加400公里处发生严重塌方，约1500立方米土石将路面完全掩埋，通往拉莱国际口岸的唯一公路交通中断。拉莱乡人民委员会主席黎光石表示，塌方后当地公安与军队立即到场设置警示标志并阻止人车靠近；7时30分许，边防部队与公路养护人员到场协同处置。广治省建设厅要求公路管理单位会同边防与公安设置路障，禁止通行。机械设备已调集，但因持续塌方风险无法进入现场清障。同一地点本月13日与25日已两度塌方，此前约3000余立方米土石滑落。15D国道是通往拉莱国际口岸的唯一道路，塌方已影响跨境客货运输。11月18日，广治省人民委员会已就15D、12A、12C、9C等国道路段损毁宣布自然灾害紧急状态。", "b": "拉莱国际口岸位于广治省达克容县，是越南中部通往老挝南部沙拉湾、塞公两省的主要陆路通道，也是东西经济走廊的支线节点。该口岸货运以农产品、木薯、矿产与建材为主，越老双边贸易中相当比重的过境货物依赖15D国道单一路径。本月三次塌方集中出现在同一路段，暴露出在地质脆弱区维持单线通道的结构性风险：一旦断通，车辆只能绕行数百公里至劳保口岸，运输时间与成本成倍上升。越南中部近年极端降雨频次增加，气象部门将其与厄尔尼诺背景下的强降水联系起来，道路边坡稳定性持续下降。11月18日宣布的自然灾害紧急状态，为动用应急预算、简化抢修采购提供了依据，但也意味着后续修复需按灾后重建标准推进，而非简单清障。对跨境流动而言，直接影响有三：一是货运车辆滞留口岸两侧，冷链与鲜活农产品损耗上升；二是边民往来与小额贸易中断，依赖口岸生计的群体收入受损；三是人员通行改道，增加其他口岸查验压力。观察点在于抢修能否在雨季间歇窗口完成，以及越老双方是否就临时绕行通关安排形成协作机制。"}, {"a": "item-china_neighbors-5", "t": "越南内务部拒绝对短期外籍专家免办许可", "e": "Vietnam rejects work permit exemption for paid foreign experts", "s": "中国周边国家动态", "r": 3, "k": ["越南", "工作许可", "外籍专家", "短期派遣", "劳务管理", "法令修订", "用工合规"], "src": "越南网（VietNamNet）", "u": "https://vietnamnet.vn/en/vietnam-rejects-work-permit-exemption-for-paid-foreign-experts-2579722.html", "sum": "事件11-28、报道11-28。越南内务部在回应越南工商会汇总的10月企业建议时，拒绝为持短期任务外派、与越南企业建立雇佣关系并直接领取薪金的外籍专家豁免工作许可。该部说明，2026年10月20日颁布、12月5日生效的第393/2026号法令取代第219/2025号法令，短期外籍劳工指一年内在越南一家或多家雇主累计工作不超过90天者，此类人员无需办理工作许可豁免确认书，但雇主须至少提前3个工作日通知主管部门。就业司司长何进胜表示，对存在有偿雇佣关系者保留工作许可要求，是为与2019年劳动法典保持一致、强化监管、防止政策滥用并保障各方权利义务。针对企业抱怨办理周期长达两三个月，他称按第393号法令第23条第3款，收到完整材料后最长办理时限为10个工作日，且企业只需提交一份说明用工需求并申请工作许可的文件，即附录一第03号表格。他强调，是否构成雇佣关系应按工作实际性质判断，不能只看合同名称。", "b": "此事的实质是越南在放宽与收紧之间做出的取舍：一方面第393/2026号法令把短期外籍劳工的界定、通知义务与豁免确认书取消等手续做了简化，另一方面明确不接受「有偿雇佣即免办工作许可」的口径。制度逻辑很清楚——90天内累计工作、由越方企业直接管理并发放薪金的，本质是劳动关系，须走工作许可与劳动合同轨道；只有不构成雇佣的短期商务、技术指导才适用通知制。这一区分与越南近年稽查实践相互印证：以访问签证、落地签在工地或工厂实际作业的外籍人员，历来是移民与劳动部门联合查处的重点，处罚包括罚款、遣返与入境限制。对企业而言，成本并非只在办证本身，而在时间不可控——项目排期常按「人到即开工」设定，一旦需要10个工作日审批加材料准备，短期任务的经济性会被侵蚀，这也正是行业协会提出豁免的动因。部方以「10个工作日上限」「一份表格合并申请」回应，实际是把矛盾从制度豁免转向执行效率。区域比较看，泰国、马来西亚、印尼对短期技术支援同样保留许可或通报义务，越南此举与周边趋同，而非例外。后续值得跟踪两点：一是12月5日新法令生效后，各地劳动与移民部门对「实际性质」的认定尺度是否统一，尤其是分包商派员、总部派驻与本地雇佣混合的情形；二是行政复议与司法救济渠道是否畅通，企业若被认定违规，能否在遣返前完成申辩。"}, {"a": "item-china_neighbors-6", "t": "泰移民局曼谷抓六名韩国籍赌博嫌疑人", "e": "Bangkok Bang Na raid nets 6 Korean gambling suspects", "s": "中国周边国家动态", "r": 3, "k": ["泰国", "移民局", "网络赌博", "外籍人员", "驱逐出境", "跨境执法", "居留许可"], "src": "泰国新闻网（THAI.NEWS）", "u": "https://thai.news/news/immigration/bang-na-korean-gambling-raid", "sum": "事件11-28、报道11-28。泰国移民局28日与韩国警方协作，在曼谷邦纳区一处价值逾2000万泰铢的独栋住宅内拘捕6名韩国籍男子，指其经营面向韩国本土赌客的境外网络赌博后台。行动由移民局局长诺帕辛·普萨瓦警察中将指挥，副局长他尼·泰瓦差拉玛、曾隆·林帕迪两位警察少将到场。移民局称，案件始于韩国驻泰大使馆请求协查一名与韩国境内大型赌博网络相关的重点对象，侦查历时逾三个月，该团伙在春武里、曼谷及周边府多次转移据点。房主称团伙经中介以月租8.5万泰铢租下房屋，11月5日入住。现场查扣11台电脑、25部手机、20个一次性密码生成器与17个银行账户登录令牌；调查认定其关联5个韩语赌博网站、会员逾20万，月流水估计约5亿泰铢，资金往来含泰达币转账。韩国驻泰大使向移民局致谢，首尔警方预计索取证据，待6人被遣离后由韩方检方接手。移民局未公布6人具体签证类别。", "b": "本案的观察价值不在赌资规模，而在处置路径。泰国移民局并未等待赌博罪名走完刑事程序，而是以移民法为工具先行处理停留资格：移民法第12条列举可拒绝入境的情形，包括可能扰乱公共秩序或从事违背公共秩序行为者；第36条授权撤销临时停留许可，当事人可在48小时内向部长提出申诉。10月素坤逸公寓案中，10名韩国籍嫌疑人当日即被撤销停留许可并羁押待遣，说明这套「先撤停留、后谈刑责」的机制已进入常规操作。第二个看点是执法触发方式：案件由外国使馆提出协查请求而起，泰方以三个月布控换取一次收网，随后由韩方检方接手证据，形成「属地查缉、属人追诉」的分工。这与泰国2026年推行的专项行动相衔接，官方称已清查190个高风险区域，春武里一带占比最高。第三是可复制的识别特征：高端住宅短租、集中电脑与通讯设备、夜间大额配送、租期与人员规模不匹配，这些已成为移民稽查的画像，房东与中介的核查义务随之上升。对区域治理的含义是双面的：一方面压缩了以外籍身份在第三国运营跨境博彩的空间，另一方面也提示务工与居留合规风险正从「签证类型」扩展到「实际活动性质」。值得跟踪的是6人被遣返后韩方追诉进展，以及泰方是否将签证类别、涉案平台信息纳入后续通报，从而为同类案件的证据互认提供模板。"}, {"a": "item-global_south-1", "t": "南非查出五十五万外国人车辆登记号待注销", "e": "558 650 TRNs identified: SIU flags foreign nationals' possible abuse of Nsfas and RAF", "s": "全球南方国家动态", "r": 4, "k": ["南非", "交通登记号", "身份欺诈", "边境管理", "反腐", "外国人管理", "口岸"], "src": "公民报（The Citizen）", "u": "https://www.citizen.co.za/news/558-650-trns-identified-siu-flags-foreign-nationals-possible-abuse-of-nsfas-and-raf", "sum": "事件11-28、报道11-28。南非特别调查组28日通报，经调查发现558650个交通登记号在发放与登记环节存在不规范，应从全国交通信息系统注销。通报表示，边境管理与移民反腐败论坛本周举行季度会议审议整改进展；边境管理局会同其他执法机构在莱索托首都马塞卢口岸逮捕一名涉嫌移民欺诈与腐败的官员，涉违规办理22本护照。边境管理局称87%人员已提交审查申请，其22起纪律案件中有18起涉及「协助与纵容」，为当前最突出失当风险。调查还发现同一手机号被用于数百份登记号申请，9个高频号码关联2458份申请，并查出多辆无融资记录的豪华车登记。登记号持有者来源国前十为津巴布韦、尼日利亚、莫桑比克、马拉维、巴基斯坦、埃塞俄比亚、刚果（布）、印度、孟加拉国和莱索托。特别调查组还发现部分登记号被用于申请国家学生资助与道路事故基金。", "b": "交通登记号是南非为非公民与非法人组织办理车辆与驾驶相关业务而设的识别号码，本身不构成居留或工作许可，却长期被当作准身份凭证使用。其漏洞在于发放环节分散：申请人只需提交护照与住址材料，由省级交通部门录入，缺少与内政部签证审核系统、国家移民识别系统和人员流动管理系统的实时校验。内政部此前对2000年1月至2023年7月间签发的107万2582个登记号做了交叉比对，仅2.7%能与移民识别系统匹配，74.7万个无法与签证审核记录对应，规模性失配由此暴露。特别调查组此次把风险清单扩展到衍生用途：有登记号被用于申请国家学生资助与道路事故基金，意味着身份漏洞可转化为财政支出损失；同一手机号承担数百份申请、护照号与出生日期不匹配等模式，则指向有组织代办与多重身份。查获清单中还出现31辆宾利、26辆玛莎拉蒂、21辆兰博基尼等无融资记录的豪车，说明该号码亦被用于资产隐匿。边境管理局的内部治理同样吃紧，马塞卢口岸官员涉违规办理22本护照被捕，「协助与纵容」占其纪律案件八成以上，说明口岸一线的廉洁风险高于技术风险。特别调查组建议建立跨交通、内政、高教与财政部门的集中监测系统，用异常模式识别替代逐案稽核。"}, {"a": "item-global_south-2", "t": "埃塞莫亚莱停火 三百辆肯尼亚货车回境", "e": "Ethiopian troops escort 300 Kenyan trucks across volatile Moyale border", "s": "全球南方国家动态", "r": 3, "k": ["埃塞俄比亚", "肯尼亚", "莫亚莱", "边境冲突", "停火", "跨境运输", "流离失所"], "src": "公民数字（Citizen Digital）", "u": "https://citizen.digital/article/ethiopian-troops-escort-300-kenyan-trucks-across-volatile-moyale-border-n394642", "sum": "事件11-26、报道11-27。埃塞俄比亚联邦部队26日在莫亚莱边境护送约300辆滞留的肯尼亚重型货车返回肯尼亚。此前奥罗米亚族与索马里族武装在埃塞南部毗邻肯尼亚的边境地带冲突逾一个月，货车司机被困。据27日报道，在肯尼亚政府与肯尼亚货车司机协会斡旋下，车队26日在重兵护卫下驶入肯尼亚；埃塞政府同日宣布两族停火，为期34天的战事暂告段落，联邦警察随后部署以恢复秩序。莫亚莱为两国共管的边境城镇，也是内罗毕至亚的斯亚贝巴运输走廊的关键节点。冲突已迫使边境两侧家庭逃入肯尼亚，人道机构称逾5万人受影响，多栖息于临时营地与学校，肯尼亚一侧部分学校提前停课；跨境通行受限亦使商户停业、司机失去收入。", "b": "莫亚莱是非洲之角少见的双城结构：同一城镇被国界一分为二，两侧居民同族同语，日常往来依赖跨境集市与运输。这一地理特征使冲突具有天然的跨境外溢性——10月中旬因争议地区行政归属与旗帜问题爆发的武装对抗，很快从埃塞一侧蔓延至肯尼亚境内，流弹与炮弹落入民居，学校被迫提前放假。运输维度的影响被长期低估：内罗毕至亚的斯亚贝巴走廊承担两国大量农产品、燃料与建材运输，逾300辆货车在边境滞留一个多月，意味着冷链货物报废、车辆贷款违约与司机家庭断收三重损失，其经济传导效应远超冲突本身的地理范围。此次停火的特殊性在于，斡旋主体是肯尼亚政府与货车司机协会而非传统调解方，且联邦警察部署先于政治协议细节公开，说明恢复通商是各方最迫切的共同利益。风险仍在：官方未公布停火签署方与监督机制，争议地区的行政归属问题未触及，轻武器在边民中广泛存在，任何一起治安事件都可能重启对抗。人道层面，逾5万人在临时营地过冬（另有报道称流离失所者逾6万），其返乡意愿与其说取决于安全评估，不如说取决于房屋与牲畜是否尚存。观察点在于口岸是否恢复常态化通关，以及肯埃两国是否启动边境共管机制。"}, {"a": "item-global_south-3", "t": "哥斯达黎加拒绝联合国报告员入境", "e": "UN rapporteur Albanese in limbo at airport after being denied entry to Costa Rica", "s": "全球南方国家动态", "r": 4, "k": ["哥斯达黎加", "联合国特别报告员", "拒绝入境", "国家安全", "移民局", "人身保护令", "国际豁免"], "src": "美联社（AP）", "u": "https://apnews.com/article/costa-rica-block-airport-francesca-albanese-63323d8a7852bc461372a321aaf0fb58", "sum": "事件11-26、报道11-27。哥斯达黎加移民总局26日在首都圣何塞胡安圣塔玛丽亚国际机场拒绝联合国巴勒斯坦被占领土人权状况特别报告员弗朗切斯卡·阿尔巴内塞入境，局长奥梅尔·巴迪亚称其「因涉嫌恐怖活动而受国际警报」，未说明警报由何方发出。阿尔巴内塞此行系应哥斯达黎加大学邀请领取荣誉博士学位，被拒后滞留机场，以视频方式参加授位仪式。其代理人向最高法院宪法法庭申请人身保护令，法庭下达临时裁定允许其暂留境内，并限移民部门24小时内说明理由；总统府部长、前总统罗德里戈·查韦斯公开抨击司法机构「又一次越权」。人权高专沃尔克·图尔克表示「深感关切」，敦促重新考虑；哥人权监察官办公室质疑移民部门未评估其特别报告员身份与豁免。阿尔巴内塞称护照被收走、一度被威胁强行押上返巴黎班机，当晚获准转往机场附近酒店过夜，定于28日前往墨西哥。", "b": "此案的关键在于「入境裁量权」与「国际豁免」的正面碰撞。哥斯达黎加移民总局援引「国际警报」将一名联合国人权理事会任命的独立专家列为国家安全风险，却未公开警报来源与具体指控，使拒绝入境的理由难以被外部核查；当事人与校方、人权高专、本国监察官办公室分别从学术自由、报告员身份与豁免、程序审慎三个方向提出质疑，宪法法庭则以人身保护令迅速介入，形成行政、司法、国际机制三方同时发力的小型宪政事件。阿尔巴内塞2025年7月被美国制裁，此番被拒入境发生在其长期批评以色列加沙军事行动的背景下，以色列常驻联合国代表公开表示欢迎，政治动因难以排除。对区域移民治理更具启示的是程序层面：哥方以安全预警为由「自动」拒绝，未经个案评估即处置持联合国通行证件者，这与该国近年接收美国第三国遣返人员、安全与外交政策向华盛顿靠拢的整体转向一致，说明移民与边境工具正被用于外交站队。观察点在于宪法法庭的最终裁定是否确立对特别报告员豁免的审查标准，以及哥方是否公布警报的来源与内容。"}, {"a": "item-global_south-4", "t": "苏丹青尼罗河战事 万四人逃入南苏丹", "e": "Sudanese army announces recapture of area in Blue Nile state amid escalating fighting", "s": "全球南方国家动态", "r": 3, "k": ["苏丹", "青尼罗河州", "南苏丹", "伦克县", "跨境流离", "快速支援部队", "人道准入"], "src": "阿纳多卢通讯社（Anadolu）", "u": "https://u.aa.com.tr/en/middle-east/sudanese-army-announces-recapture-of-area-in-blue-nile-state-amid-escalating-fighting/4140417", "sum": "事件11-27、报道11-27。苏丹军方第四步兵师27日宣布，经与快速支援部队及苏丹人民解放运动北方局交战后，重新控制青尼罗河州东南部马甘扎地区，该地位于州首府达马津以南。同日，独立的青尼罗河州民间社会倡议称，南苏丹上尼罗州伦克县一周内接收逾1.4万名自青尼罗河州逃出的民众，多数抵达肖梅迪与阿达姆村一带，急需食物、安全饮水、住所与医疗，并警告家庭失去生计、收容社区承压。倡议呼吁立即停火、保护平民并保障人道准入。此前24日，苏方指认快速支援部队以无人机袭击达马津与罗塞里斯两市，致17人死亡、数十人受伤；25日军方宣布「苏丹盾牌部队」抵达增援，并称夺回索达地区。2023年4月爆发的战事已致数万人死亡、约1300万人流离。", "b": "青尼罗河州此前并非苏丹战事的主要焦点，其战略意义在于毗邻南苏丹上尼罗州，且达马津是青尼罗河上游的重要农业与电力节点。本轮冲突的新特征有三：一是战场向东南部扩散，快速支援部队与其盟友苏丹人民解放运动北方局形成协同，政府军则投入「苏丹盾牌部队」等盟军补强，战线呈多点拉锯；二是跨境流向明确，伦克县成为主要落点，逾1.4万人一周内涌入，远超当地收容能力，食物、饮水、住所与医疗同时告急，而该县本已收容大量苏丹难民与返乡者；三是无人机成为主要打击手段，针对城市目标的空中袭击造成平民伤亡，也使道路与桥梁受损，反过来阻断援助运输。对区域治理而言，风险在于流离的反复性：家庭多次迁移耗尽积蓄，收容社区服务本已超载，一旦战事沿青尼罗河继续南下，跨境流量可能在数周内再上台阶，并加剧南苏丹上尼罗州的治安与人道压力。观察点在于停火呼吁是否被交战方接受、伦克县是否建立登记与转运机制，以及人道机构能否获得不受限的跨境通行许可。"}, {"a": "item-global_south-5", "t": "肯尼亚年拘千余无证移民 埃塞籍过半", "e": "Ethiopian nationals top list of undocumented immigrants arrested in Kenya - report", "s": "全球南方国家动态", "r": 3, "k": ["肯尼亚", "无证移民", "埃塞俄比亚", "身份文件造假", "边境管控", "议会报告", "遣返"], "src": "东利声道（The Eastleigh Voice）", "u": "https://eastleighvoice.co.ke/headlines/428861/ethiopian-nationals-top-list-of-undocumented-immigrants-arrested-in-kenya-report", "sum": "事件11-27、报道11-27。肯尼亚媒体27日披露一份政府安全报告，2025年9月至2026年8月全国共逮捕无证移民1048人，同比增10%；其中埃塞俄比亚籍592人，占56.5%，低于上年同期的670人；索马里籍156人、厄立特里亚籍126人、布隆迪籍50人、乌干达籍26人、坦桑尼亚籍25人、尼日利亚籍24人、卢旺达籍14人，苏丹、瑞典、加拿大籍各1人。该报告由政府于上周提交议会、由总统鲁托在国情咨文场合列明，指无证人员经口岸流动直接损害国家安全，走私与贩运网络利用边境脆弱环节；国家警察部门已设「打击有组织移民犯罪单位」。报告还称护照造假案增65起、身份证造假增40起，伪造证件被用于办理手机卡、移动支付与银行账户，内罗毕、布西亚、加里萨、曼德拉、蒙巴萨等地高发。", "b": "这份报告的价值不在逮捕总数，而在结构：埃塞俄比亚籍长期占据肯尼亚无证拘捕的首位，即使今年同比下降，仍超过索马里、厄立特里亚、布隆迪三国之和，说明「埃塞南下—肯尼亚中转」已是东部非洲最稳定的非正规通道之一，其驱动是冲突、政治不稳与经济困顿的叠加，而非单一推因素。报告把身份文件造假单列，指出护照与身份证造假分别增加65起与40起，并点明伪造证件可打通手机卡实名、移动支付与银行开户，这意味着移民违法与金融犯罪、恐怖融资在同一节点汇合，边境核查的失灵会直接传导为反洗钱与反恐缺口。报告自承问题根源在于「腐败与数字库中未经验证的历史数据」：系统虽已数字化，但存量数据未清洗，造假者仍可借合法外观的旧记录通过校验。治理对策侧重供给侧——多部门联合行动、收紧对招募与旅行社的监管、增加文件检验人员、修法加重刑罚，并把民事登记与生命统计系统与各机构实时对接。观察点在于「打击有组织移民犯罪单位」的编制与办案量能否公开，以及埃塞方向的拘捕与遣返是否与两国边境合作同步推进。"}, {"a": "item-tech-1", "t": "艾玛迪斯收购法国生物识别厂商遭新加坡审查", "e": "Amadeus–Idemia PS deal faces Singapore review over border biometrics", "s": "移民与边境技术", "r": 4, "k": ["并购审查", "边境生物识别", "自助通关", "航空口岸", "旅客预报信息", "市场竞争", "供应链集中"], "src": "生物识别更新网（Biometric Update）", "u": "https://www.biometricupdate.com/202611/amadeus-idemia-ps-deal-faces-singapore-review-over-border-biometrics", "sum": "事件11-25、报道11-27。新加坡竞争与消费者委员会（CCS）11月25日就艾玛迪斯（Amadeus）以12亿欧元（约14亿美元）收购法国生物识别企业公共安全业务（Idemia Public Security）一事启动公众咨询，核查该交易是否违反《2004年竞争法》第54条「实质减少竞争」条款，意见征集截至12月8日17时。CCS列明双方在新加坡重叠的三块业务：边境生物识别查验、旅客流程技术，以及旅客预报信息（API）与旅客订座记录（PNR）系统；并提示被收购方提供的后台生物识别系统与门禁方案，可能与艾玛迪斯的前端系统捆绑销售。被收购方在新加坡的子公司 Idemia Singapore 长期为该国航空、陆路与海路口岸提供生物识别与自动化通关方案，一旦并入，新加坡口岸技术供应链将进一步集中，这也是监管方最直接的关切点。交易于今年4月公布，若获批将形成覆盖航空、边境与酒店业的全球巨头。", "b": "交易本身在2026年4月公布：艾玛迪斯宣布以12亿欧元收购法国生物识别企业公共安全业务，官方口径是打造覆盖航空、边境管控与酒店业的全球平台。按双方提交给新加坡竞争与消费者委员会（CCS）的申报材料，在新加坡市场上重叠的领域有三处——边境生物识别查验、机场旅客流程技术，以及旅客预报信息（API）与旅客订座记录（PNR）系统。CCS于11月25日发布咨询公告，请公众就交易是否违反《2004年竞争法》第54条发表意见，咨询窗口至12月8日17时（新加坡时间）。公告特别提到，被收购方除前端闸机与人脸比对外，还提供后台生物识别系统与门禁控制方案，这类后台能力与艾玛迪斯的前端平台存在捆绑销售的可能，从而使竞争对手难以在同等条件下投标。对新加坡而言，实际影响落在航空、陆路与海路口岸：被收购方的新加坡子公司 Idemia Singapore 是当地自动化边境查验方案的现役供应商，交易完成后，同一集团将同时掌握机场旅客处理平台与边境生物识别设备，议价与集成话语权明显上升。技术面上，被收购方9月底在新加坡首届亚洲旅客航站楼博览会（PTE Asia）上刚展示其面向亚太的机场生物识别走廊方案，主打缓解航站楼拥堵，这与艾玛迪斯的旅客流程产品形成正面重叠。后续看点有三：一是CCS是否要求剥离新加坡子公司业务作为放行条件；二是其他司法辖区（欧盟、美国）的反垄断审查是否同步加码；三是机场与口岸运营方在供应商集中后如何通过分包或双源采购维持议价能力。截至目前，两家公司均未就审查发表新的公开回应。"}, {"a": "item-tech-2", "t": "肯尼亚调查政务平台数据泄露", "e": "Kenya probes 740GB eCitizen data breach claim", "s": "移民与边境技术", "r": 4, "k": ["数据泄露", "政务服务门户", "单点登录", "身份文件", "护照申请", "人脸图像", "数据保护法"], "src": "生物识别更新网（Biometric Update）", "u": "https://www.biometricupdate.com/202611/kenya-probes-740gb-ecitizen-data-breach-claim", "sum": "事件11-22、报道11-27。化名「ByteToBreach」的黑客11月22日在暗网论坛发帖，声称从肯尼亚政务服务门户 eCitizen 窃取约740GB数据，包括约600GB「了解你的客户」身份文件、100GB政府数据库记录和40GB源代码，并称已获取该平台单点登录与授权系统的访问权限。肯尼亚内政部与移民及公民服务国务部表示正在核实事件范围，eCitizen 目前仍正常运行，但截至11月27日未确认是否真的发生未授权访问。该平台承载护照申请、无犯罪记录证明等业务，注册用户逾1367万，上线服务由2022年约500项增至2026年2.4万项。若所窃身份文件中包含自拍人脸图像，其影响将超出密码重置可弥补的范围。", "b": "事件起源于11月22日：化名「ByteToBreach」的攻击者在暗网论坛发帖，宣称从 eCitizen 拿走约740GB数据，构成为约600GB的客户身份审核文件、100GB政府数据库记录、40GB源代码，据南非科技媒体 ITWeb Africa 报道，部分文件时间戳为11月14日与15日；入侵路径据称是文件上传功能的漏洞，随后植入网页后门以获得远程执行权限。更敏感的是，攻击者称接触到了 eCitizen 的 OAuth 与单点登录层，而依赖这一层做身份认证的还有社会健康管理局（SHA）、刑事调查局（DCI）与国家警察署的系统，政府方面尚未确认任何接入机构受影响。肯尼亚内政与国民管理部称技术与安全团队正与其他政府机构联合调查；移民及公民服务国务部表示平台保持运行，建议在别处复用同一密码的用户立即更换，并提醒民众警惕冒充平台名义的电话、短信与链接。合规层面存在两处空白：该国《数据保护法》第43条要求数据控制者在知悉发生未授权访问且存在实质伤害风险后72小时内通报数据保护专员，官方未说明是否已达该门槛、是否已通报；也未说明监控系统是否在帖文出现前发现异常。分析人士指出，风险分两类——身份文件泄露带来冒名与精准诈骗；认证层失守则可能波及多个机构，实际影响取决于攻击者是否拿到令牌签名密钥、管理权限或活跃会话，这些均未披露。若身份文件含自拍与人脸图像，真证件配真面孔正是深度伪造与远程开户注入攻击的原料，无法通过改密码消除。该平台此前已有前科：2023年7月分布式拒绝服务攻击曾导致护照、签证与驾照办理中断；2023财年审计还发现其缺少经批准的ICT政策、ICT指导委员会与业务连续性计划；本月另有企业注册服务（BRS）泄露逾两百万家企业记录，监管机构发出执法通知后结案未处罚。"}, {"a": "item-tech-3", "t": "勐康边检站采购监控存储装备", "e": "Inquiry announcement: observation and communication equipment procurement, Mengkang Exit and Entry Border Inspection Station", "s": "移民与边境技术", "r": 2, "k": ["视频监控存储", "边检查验设备", "口岸监控", "政府采购", "询价采购", "录像留存", "边境一线"], "src": "中国政府采购网（CCGP）", "u": "https://www.ccgp.gov.cn/cggg/zygg/xjgg/202611/t20261127_27775396.htm", "sum": "事件11-27、报道11-27。中国政府采购网11月27日发布询价公告，云南勐康出入境边防检查站采购一批观通装备，预算与最高限价均为19.89万元。采购清单为硬盘录像机4台（单价限价7725元，合计3.09万元）与监控专用硬盘48块（单价限价3500元，合计16.8万元）。供应商须在12月4日9时前提交响应文件，合同签订后20个日历日内完成供货与安装调试；项目对小微企业给予10%价格扣除，不接受联合体投标。以单机12块盘位测算，48块硬盘意味着该站视频监控存储容量将成倍扩容，直接关系到口岸限定区域录像留存天数与事件回溯能力。", "b": "公告显示，采购人为中华人民共和国勐康出入境边防检查站，项目编号YNS（普）202601-05，采购方式为询价，预算金额与最高限价均为19.89万元，采购文件获取期为11月27日至12月2日，响应文件提交与开启时间同为12月4日9时，开标在乐采云平台进行。标的清单很具体：硬盘录像机4台，单价限价7725元，合计30900元；监控专用硬盘48块，单价限价3500元，合计168000元；合计198900元。采购说明写明用途为「根据实际工作需要」，合同履行期限为签订后20个日历日内完成供货及安装调试，本项目非专门面向中小企业，小微企业价格扣除优惠比例10%，不接受联合体投标。把这组数字放到边检业务场景里看就清楚了：一台录像机若按12盘位配置，48块硬盘正好支撑4台设备满配，属于典型的存储扩容而非新建系统；监控级硬盘强调7×24小时连续写入与振动耐受，与普通桌面硬盘不同，其容量决定单个摄像头可回溯的天数。对口岸而言，录像留存天数直接挂钩两类需求——一是旅客滞留、争执、携带可疑物品等现场事件的回溯取证；二是上级对限定区域管理的检查要求。勐康口岸位于云南普洱江城中老边境一线，通道以货运与边民往来为主，查验场地分散、夜间值守压力大，摄像点位多但存储周期往往偏短，扩容属于低成本高收益的补强。此类小额分散采购也反映边检技术保障的现实路径：核心查验系统由上级统一建设，站级单位则在监控、通信、存储等外围环节按需补缺，采购节奏快、金额小、供应商以本地集成商为主，交付与售后响应速度往往比价格更关键。"}, {"a": "item-tech-4", "t": "意大利民航局暂停马尔彭萨2027夏客流上限", "e": "Italy's ENAC suspends Malpensa summer 2027 passenger cap adopted over EES queues", "s": "移民与边境技术", "r": 4, "k": ["出入境系统", "机场容量", "生物信息采集", "排队拥堵", "时刻分配", "航空监管", "申根边境"], "src": "意大利《晚邮报》（Corriere della Sera，记者 Leonardo Berberi）", "u": "https://www.corriere.it/economia/trasporti/aerei/26_novembre_27/malpensa-l-enac-taglia-i-voli-all-alba-per-ridurre-le-code-in-dogana-gli-aeroporti-europei-a-salvini-danno-senza-precedenti-d0c6bbd6-e58c-49db-bb38-c40dded9axlk.shtml", "sum": "事件11-27、报道11-27。意大利民航局（ENAC）11月27日声明，暂停执行针对米兰马尔彭萨机场一号航站楼2027年夏季的客流上限，该上限原为应对欧盟出入境系统（EES）生物信息采集造成的长时间排队而设。按此前容量表，一号航站楼每小时出港旅客上限拟由4300人降至4100人，二号航站楼维持2500人，并附条件要求2027年5月前在安检区新增至少200平方米排队空间。欧洲机场理事会（ACI Europe）总干事扬科韦茨11月19日致信意大利基础设施与交通部长萨尔维尼反对该限制，指其将迫使航空公司削减已排定的清晨洲际航班，并称马尔彭萨是唯一被设容量上限的机场。ENAC称容量参数「目前维持不变」，11月30日将在交通部召集各方磋商。", "b": "事件的技术根因是欧盟出入境系统（EES）：自2025年10月12日分阶段启动、2026年4月10日全面运行后，非欧盟短期停留旅客须在自助终端采集指纹与面部图像，以替代此前的护照盖章。登记强制化后排队迅速拉长，欧洲机场理事会（ACI Europe）、欧洲航司协会（A4E）与国际航空运输协会（IATA）在7月1日公开信中指出，高峰时段等待时间最长约五小时。各国本可在拥堵时暂停生物采集，但这一弹性安排于2026年9月6日到期，马尔彭萨排队随即回升。意大利民航局据此在10月中旬由伦巴第办事处发函，以非申根旅客出入境查验耗时与安检拥堵造成「严重不便」为由，把马尔彭萨一号航站楼2027年夏季（3月底至10月底）每小时出港旅客上限从4300人下调至4100人，二号航站楼（仅易捷航空使用）维持2500人；据意大利时刻协调机构 Assoclearance 的文件，4100这一参数以2027年5月前新增至少200平方米安检排队空间为前置条件。ACI Europe总干事扬科韦茨11月19日致信交通部长萨尔维尼（抄送内政部长皮安泰多西、旅游部长马齐），表达「最深切的担忧」，称该限制「前所未有」，将使航空公司无法执飞已为下个夏季排定的部分航班，损失属净损失且不可回收；他并强调巴黎戴高乐、阿姆斯特丹、法兰克福、慕尼黑、雅典、里斯本同样排长队，唯独马尔彭萨被设容量上限。意大利交通部称暂停决定系萨尔维尼介入后作出。11月27日ENAC声明容量参数目前不变、下调通知暂停执行，措辞保留「目前」，未公布替代方案，11月30日将在基础设施与交通部开会磋商。争议核心已从机场设施转为制度设计：行业主张把暂停生物采集的弹性机制永久化并延续至2027年及以后，ACI Europe并已就此致信欧盟内政与移民委员布伦纳。"}, {"a": "item-tech-5", "t": "「境灵」AI平台C包采购成交", "e": "Contract award notice: Jingling AI platform service project (Package C), Shandong Exit and Entry Border Inspection General Station", "s": "移民与边境技术", "r": 3, "k": ["人工智能平台", "边检信息化", "公文智能生成", "政府采购", "大模型应用", "智能审查辅助", "内部办公系统"], "src": "中国政府采购网（CCGP）", "u": "https://www.ccgp.gov.cn/cggg/zygg//cjgg/202611/t20261127_27774026.htm", "sum": "事件11-27、报道11-27。中国政府采购网11月27日发布成交公告，山东出入境边防检查总站「境灵」AI建设平台服务项目C包由山东东创科技有限公司中标，成交金额21.5万元，综合评分93.51分。C包内容为公文智能生成、公文校核、公文排版、词库管理、资料查询检索与平台系统管理等模块的集成，要求深度融合人工智能技术，支持按不少于15种法定公文种类生成材料，并在合同签订后30个日历天内完成部署调试，提供3年免费质保。公告显示评审采用综合评分法，代理服务费按成交额1.5%的七折计取。此类平台将大模型能力引入边检机关内部办公与业务辅助流程，是口岸执法单位智能化建设的缩影。", "b": "公告披露，项目编号SHZB2026-728，采购人为中华人民共和国山东出入境边防检查总站，项目名称为「境灵」AI建设平台服务项目，本次公告对应C包。成交供应商为山东东创科技有限公司，注册地在济南市历下区，成交金额21.5万元，评审采用综合评分法，最终得分93.51分，评审专家为王德保、王猛、于骁。C包的标的范围包括公文智能生成、公文校核、公文排版、词库管理、公文资料查询与检索、平台系统管理以及系统集成，服务要求明确须深度融合人工智能技术，提供智能问答与公文写作服务，并支持按照文章类型与不少于15种法定公文种类生成公文材料；交付时间为合同签订后30个日历天内完成部署安装调试，质保期为3年免费服务。代理服务费按成交金额的1.5%再乘0.7计取，合计2257.5元，由成交方承担。从技术取向看，这是一个把通用大模型能力嵌入机关办公流程的典型项目：以词库与法定文种约束输出格式，以校核模块做合规与用语检查，以检索模块对接既有资料库，风险点在于涉密与敏感信息的本地化处理、生成内容的可追溯性，以及模型更新后的持续调优责任划分。对边检系统而言，这类平台虽不直接参与旅客查验决策，但处在「人工智能＋政务」的入口位置，往往先于查验类算法落地，其数据治理与审计安排会为此后引入辅助研判功能提供先例。项目金额不大，却显示省级边检总站正以分包方式逐块推进智能化，C包聚焦办公与知识管理，其他分包可能覆盖业务侧能力。"}, {"a": "item-research-1", "t": "委内瑞拉移民在秘鲁的锚定与返乡盘算", "e": "Anchoring and Return Considerations Among Venezuelan Migrants in Peru", "s": "移民与边境研究", "r": 4, "k": ["返乡意愿", "移民锚定", "委内瑞拉移民", "秘鲁", "归属感", "再迁移"], "src": "国际移民（International Migration）", "u": "https://doi.org/10.1111/imig.70258", "sum": "论文11-28在线首发（归入2027年第65卷第1期）。本文为同行评议论文，刊于《国际移民》（International Migration）。研究以「锚定」概念替代留居与返乡的二元框架，基于对秘鲁境内30名委内瑞拉移民的半结构访谈，把锚定区分为结构性锚定（权利、公共服务、经济稳定）与情感锚定（归属感、身份认同、社会关系）。作者在两类锚定组合中归纳出五种返乡取向，并提出两个新概念：锚定缺失，即在秘鲁与委内瑞拉同时缺乏立足点；双重锚定，即对两地同时保有依恋。结论指出，返乡由锚定形态的演化与移民把愿望转化为行动的能力共同决定，而非仅由居留时长决定。情感纽带可在结构性稳定时维持返乡期待，而缺乏归属的结构性锚定则常把计划推向继续前行。", "b": "研究问题：为何同样在秘鲁获得一定生活稳定的委内瑞拉移民，对是否返乡判断差异巨大？作者认为既有文献把留居与返乡当作二元选择，忽略了移民在两地同时有依恋、或两地均无落脚点的情形。方法：在秘鲁对30名委内瑞拉移民开展半结构深度访谈，采用溯因式主题编码，把「锚定」拆为结构性维度（合法身份与权利、公共服务可及性、经济稳定）与情感维度（归属、认同、社会关系网络），据此类型化返乡取向。核心发现：共归纳出五种返乡取向；锚定缺失者因两地皆无落脚点而长期悬置，双重锚定者在两地均有依恋、意愿随情境摆动。关键机制是移民将愿望转化为行动的相对能力，居留时间本身解释力有限——结构稳定但缺乏归属者更易转向第三国再迁移，情感纽带强而结构不稳者反而维持返乡期待。政策含义：作者主张政策应同时改善「归属感」与「可预期性」两项条件；身份正规化若不同步提升社会接纳，难以稳定留居预期；对东道国而言，可预期的身份路径与融入措施是抑制二次流动的关键。局限：样本仅30人且为单一时点访谈，无法观察锚定随时间演变；受访者来自特定城市网络，对秘鲁其他地区代表性有限；未量化五种取向的分布比例。"}, {"a": "item-research-2", "t": "受歧视如何催生德国新移民的族群认同", "e": "Discrimination and the development of reactive ethnicity among new immigrants in Germany", "s": "移民与边境研究", "r": 4, "k": ["反应性族群认同", "歧视", "德国", "新移民", "动态暴露回归", "身份拒斥"], "src": "迁移研究（Migration Studies）", "u": "https://doi.org/10.1093/migration/mnag066", "sum": "论文11-25在线首发。本文为同行评议论文，刊于《迁移研究》（Migration Studies）。研究检验「反应性族群认同」假说所预设的时序：先遭遇歧视，后改变认同与对接收社会的看法。作者使用德国「近期移民过程与早期融入轨迹」调查的面板数据，采取两期动态暴露回归策略，以回应族群接触研究长期面临的因果顺序难题。结果显示存在与反应性认同理论一致的纵向面板证据，但关系更为微妙：在两波调查之间经历歧视者，对德国身份的拒斥显著上升；而未经历歧视者反而对德国态度转暖。这一衰减模式主要由波兰移民驱动。作者据此提出，数十年基于横截面数据的反应性认同研究需重新解读。", "b": "研究问题：反应性族群认同概念假定歧视在前、认同重估在后，但横截面数据无法排除「认同疏离者本就更容易感知歧视」的反向因果，这与族群接触研究中的因果顺序问题同构。方法：使用德国近期移民过程与早期融入轨迹调查的两期面板数据，覆盖新近入境移民；核心自变量为两波之间是否经历歧视，因变量为对德国身份的接受或拒斥程度与对接收社会的态度；采用两期动态暴露回归，以两波调查之间是否经历歧视为核心对照来观察认同态度的时序变化。核心发现：整体证据支持反应性认同所假设的时序——波间遭遇歧视者其后对德国身份的拒斥显著上升，而未遭遇歧视者态度反而转暖，形成双向分化而非普遍恶化；该衰减模式主要由波兰移民亚群驱动，提示不同来源国群体的认同弹性差异明显。政策含义：歧视经历不仅影响个体福祉，还会通过认同通道削弱融入意愿，因此反歧视执法与雇主、住房、公共服务中的差别对待治理具有融入政策属性；融入项目应设置早期干预窗口，因为态度分化在入境后较短周期内即已发生。局限：仅两波数据，难以刻画更长的认同轨迹；歧视为主观自述，可能包含感知偏差；结果由波兰移民驱动，其他来源国群体样本量或不足以单独估计。"}, {"a": "item-research-3", "t": "亚洲双边劳务协定的跨国拼装视角", "e": "Lives of labor agreements: A transnational assemblage approach to migration governance", "s": "移民与边境研究", "r": 4, "k": ["双边劳务协定", "亚洲", "移民治理", "跨国拼装", "孟加拉", "马来西亚", "尼泊尔"], "src": "迁移研究（Migration Studies）", "u": "https://doi.org/10.1093/migration/mnag065", "sum": "论文11-26在线首发。本文为同行评议论文，刊于《迁移研究》（Migration Studies）。作者指出，1990年代以来亚洲已成为全球双边劳务协定与谅解备忘录密度最高的地区，但既有研究多以国家为中心、以比较方法处理，难以解释协定群之间的联动。文章提出「跨国拼装」路径，把此类协定视为由多重不可化约逻辑共同生成的异质构成物，并以孟加拉—马来西亚—尼泊尔三角为经验对象，识别跨场域、跨尺度的联结：协定及其相互关系的历时展开、国际法与国际组织的枢纽作用、围绕移民形成的跨国公共领域，以及地缘政治与地缘经济想象的重要性。", "b": "研究问题：亚洲双边劳务协定（bilateral labour agreements，简称 BLA）与谅解备忘录数量全球最多，但研究长期以单一协定为单位、以国家为分析容器，无法解释协定之间如何相互引用、叠加与抵消，也难以说明国际组织与非国家行动者如何进入谈判。方法：提出跨国拼装（transnational assemblage）分析路径，把协定视为由法律、外交、市场与人道等多重逻辑共同生产的异质构成，采取归纳式、多场域的民族志取向，以孟加拉—马来西亚—尼泊尔三角为案例，追踪文本、人员与话语在输出国、接收国与国际组织之间的流动。核心发现：其一，协定并非孤立双边文件，而是随时间层层展开、彼此参照的协定群，跨场域跨尺度的联结须同时纳入视野；其二，国际法与联合国机构在技术标准与合法性授予上扮演枢纽角色，使双边文本嵌入多边规范；其三，围绕迁移的跨国公共领域（媒体、倡议组织、侨民社群）能改变协定谈判的可见度与政治成本；其四，地缘政治与地缘经济想象（区域一体化、劳工来源多元化）构成协定的隐性脚本。政策含义：作者主张治理工具本身即是政治协商与道德话语的场域，评估一份协定的效果必须放在协定群与跨尺度关系中看；对输出国而言，善用国际规范与跨国公共领域可部分弥补双边权力不对称；对接收国而言，协定条款的可执行性取决于国内执法与中介监管的配套。局限：单一大三角案例，向海湾、东亚等其他走廊外推需谨慎；民族志取向难以量化协定条款的约束力；未系统比较协定与非协定路径的福利后果。"}, {"a": "item-research-4", "t": "荷兰二代移民的文化误认与招聘差距", "e": "‘It’s very un-Dutch’: cultural misrecognition and hiring disparities among second-generation migrants in the Netherlands", "s": "移民与边境研究", "r": 4, "k": ["招聘歧视", "二代移民", "文化资本", "荷兰", "文化误认", "刻板印象"], "src": "族群与移民研究杂志（JEMS）", "u": "https://doi.org/10.1080/1369183X.2026.2768100", "sum": "论文11-27在线首发。本文为同行评议论文，刊于《族群与移民研究杂志》（Journal of Ethnic and Migration Studies）。研究考察荷兰商业服务业招聘中，二代移民的身体化文化资本如何被误认，而在该场域中「契合度」本身充当了行业内部的默认信条。作者基于对36名二代移民与14名人力资源从业者的半结构访谈，指出劳动力市场不平等源于两种误认机制：性情错位，即行为倾向与招聘方期待的默认风格不符；类别化刻板印象，即按族群与宗教类别预设特质。阶层、族群与宗教交叉决定候选人遭遇哪一种机制。作者认为这为口味型歧视与统计性歧视理论补上了评价标准本身的来源问题。", "b": "研究问题：二代移民在教育与语言上已与主流接近，为何在招聘环节仍持续处于劣势？既有解释分为口味型歧视（雇主偏好）与统计性歧视（以群体均值推断个体），但两者都未说明评价标准本身如何被生产。方法：以荷兰商业服务业为场域，该行业把「契合度」当作不言自明的行业信条；采用布迪厄式文化资本与误认框架，对36名在荷兰出生、至少一名父母在国外出生的二代移民，以及14名人力资源从业者开展半结构访谈，并对招聘话语作文本分析。核心发现：不平等通过两种误认机制运作——性情错位，即候选人的举止、表达与互动风格不符合招聘方默认的荷兰式职业性情；类别化刻板印象，即依据族群与宗教类别直接预设能力与可靠性。阶层、族群与宗教三者交叉，决定个体主要撞上哪一种机制：中产阶层二代更多遭遇性情错位，宗教标识明显或族群被高度问题化的群体更多遭遇类别化刻板印象。作者据此主张，契合度并非中性标准，而是把主流群体的文化特征编码为能力要求，使不平等在看似绩效主义的程序中完成。政策含义：仅做匿名简历与多元化培训不足以应对，因为问题出在评价维度而非信息缺失；雇主需把契合度操作化为与岗位相关的可观察行为，并对面试评分维度作结构化改造；监管层面可将招聘标准的可解释性纳入反歧视审查。局限：质性设计、样本非随机，无法估计两种机制在总体中的相对贡献；仅覆盖商业服务业，公共部门与蓝领岗位的外部效度待检验；人力资源从业者可能给出社会期许性回答。"}, {"a": "item-research-5", "t": "英国男性遣送中心的失尊与暴力", "e": "Dishonour, gender and race in UK men’s Immigration Removal Centres", "s": "移民与边境研究", "r": 5, "k": ["移民拘留", "遣送中心", "失尊", "种族化", "男性气质", "废除拘留"], "src": "族群与移民研究杂志（JEMS）", "u": "https://doi.org/10.1080/1369183X.2026.2763235", "sum": "论文11-27在线首发。本文为同行评议论文，刊于《族群与移民研究杂志》（Journal of Ethnic and Migration Studies）。作者论证移民拘留是一种「地位贬损的制度性技术」，在分析层面可与奴役类比，并追踪以荣誉为中心的持久支配关系如何借由基于失尊的暴力在当代边界化中被再生产。材料来自15个月民族志田野，对24名在英国男性专用遣送中心（IRC）被拘留的男子在押期间及释放后进行访谈，用以展示英国国家如何生产种族化与性别化的主体。研究发现，拘留对自主性、尊严与身体完整性的日常剥夺共同生产「失尊」，其运作依托种族化的他者建构与男性气质期待，且效果在释放之后仍然延续。作者据此认为改良式改革无法消除拘留的贬损功能，并支持废除拘留的主张。", "b": "研究问题：移民拘留除限制自由之外，还通过何种机制生产从属性？既有研究多从法律地位或心理健康切入，较少处理拘留如何作为一种象征性地位剥夺运作。方法：借用帕特森1982年提出的「失尊」概念（社会性死亡三要素之一），并把它与批判种族、性别与移民研究对接；在15个月民族志田野中对英国男性专用遣送中心（IRC）的24名被拘留男子开展在押期间访谈，并在其释放后追踪回访；分析采用扎根取向的主题编码。核心发现三条：其一，自主性被制度化地剥夺，包括无限期拘留带来的不确定性；其二，社会尊严被褫夺，表现为犯罪化与种族化标签，且释放后延续；其三，身体完整性遭破坏。三者互构，共同生产「失尊」。政策含义：作者主张失尊产生于拘留的日常运作而非个别失范，故时限收紧、弱势豁免与工作人员行为改良等措施无法消除其贬损功能，反而可能赋予其正当性，据此支持废除拘留的倡议。局限：单国别、24人访谈样本，无法量化失尊在被拘留人群中的分布，亦未做跨设施比较。核验边界：仅依据公开摘要，具体中心名称与事件统计数字未获原文核实，故未采用。"}, {"a": "item-research-6", "t": "防御性入籍：二十世纪初美国移民归化", "e": "Defensive Naturalization: Immigrants and Citizenship Acquisition in Early Twentieth-Century America", "s": "移民与边境研究", "r": 4, "k": ["入籍", "公民身份", "归化法", "美国移民史", "记录链接", "防御性入籍"], "src": "国际移民评论（IMR）", "u": "https://doi.org/10.1177/01979183261503293", "sum": "论文11-28在线首发（预上线版本，尚未编入卷期）。本文为同行评议论文，刊于《国际移民评论》（International Migration Review）。属历史社会学／历史政治学研究，以1906年《归化法》至1940年美国入籍档案为对象，非当代政策评估。研究重估1906年《归化法》的效应：既有研究认为该法成功阻吓了最不受欢迎、资源最少的移民取得公民身份，但作者指出它也改变了公民身份的价值——在各类外国人身份惩罚之下，部分原本最不看重公民身份的移民反而更快归化。作者构建了入籍意向声明与入籍申请表格的手工编码样本，并与1920、1930、1940年人口普查记录链接，利用文件中独有的出生地、身高、肤色等信息，测量申请人走完各归化步骤的速度。结果虽混杂，但更多证据支持「防御性入籍」假说：当时特征较不受欢迎的移民归化更快。", "b": "研究问题：1906年美国《归化法》把原本非正式、轻度监管的入籍程序改为复杂化、官僚化的程序。既有研究据此认为该法达到了预期目标，即抑制最不受欢迎与资源最少的移民归化。作者反问：该法同时提高了不具有公民身份的成本（就业、财产、福利等领域的各类外国人身份惩罚），这是否改变了公民身份的相对价值，从而使部分移民更快归化？方法：构建新的手工编码数据集，涵盖入籍意向声明表与入籍申请表，并链接至1920、1930、1940年三年人口普查；利用归化文件中独有、普查中不可得的信息（详细出生地、身高、肤色）辅助匹配与特征刻画；以申请人走完从声明意向到提交申请各步骤的速度为因变量，检验「防御性入籍」假说。核心发现：结果存在混杂，但更多证据支持防御性入籍：在当时评价体系中特征较不受欢迎的移民，反而以更快的速度完成归化流程。这提示程序复杂化并不必然抑制归化，反而可能因提高非公民身份的代价而产生反向激励，使最需要公民身份保护的人更急于取得。政策含义（编者引申，摘要未涉及）：入籍程序的繁简与费用不仅影响归化总量，也改变归化者的构成；提高门槛可能筛选出的是更弱势、更亟需身份保障的申请人，而非更优质的申请人；评估入籍政策应以分群体归化速度而非总量为指标。局限：样本为特定时期、特定地区的手工编码数据，代表性受限；速度指标混合了个人意愿与行政处理时滞；身高、肤色等特征作为当时不受欢迎程度的代理变量，测量效度有限。核验边界：仅依据公开摘要。"}, {"a": "item-research-7", "t": "前瞻简报：战略咽喉点的过去与未来", "e": "The Foresight Brief: Chokepoints Past, Present and Future", "s": "移民与边境研究", "r": 3, "k": ["咽喉点", "边境风险", "印孟边界", "供应链韧性", "地缘政治", "战略预判"], "src": "世界经济论坛与大西洋理事会（WEF / Atlantic Council）", "u": "https://www.weforum.org/publications/the-foresight-brief-chokepoints-past-present-and-future", "sum": "报告11-18发布。本报告为世界经济论坛与大西洋理事会合作发布的展望型白皮书，非同行评议。报告把「咽喉点」界定为替代方案极少的战略性连接节点，指出其集中了经济价值与脆弱性，单点中断会跨系统级联扩散，并以2026年霍尔木兹海峡关闭为例。分析沿经济、地缘政治、治理与生态四条线索展开，覆盖海峡运河、港口河流、海底光缆、数据中心与云设施，并触及气候物理变迁与天基依赖等新兴风险。据媒体对该报告的梳理，印度—孟加拉国边界被列入亚太战略性咽喉点，与马六甲海峡、台湾海峡及中国主要港口并列，报告指出的四项风险为移民紧张、走私、安全限制与拥堵。", "b": "研究问题：全球化与数字化是否降低了物理基础设施的重要性？报告认为没有，反而使少数关键连接节点承载过高比例的货物流、资源流与信息流，其集中度同时放大战略影响力与系统性脆弱性。方法：属展望型白皮书而非实证研究，采取情景与案例结合的方式，沿经济、地缘政治、治理、生态四条线索，对海峡、运河、港口、河流、海底光缆、数据中心与云设施作类型化梳理，并以2026年霍尔木兹海峡关闭、1956年苏伊士运河危机说明中断的级联效应，同时讨论气候物理重塑与潜在的天基依赖。核心发现：咽喉点的意义不只取决于通行量，还取决于替代方案的可得性与中断后果；物理通道与数字基础设施已结构性互联，风险可跨域传导；替代能力有限，绕行好望角会使部分航程延长约两周并推高运力消耗；据媒体梳理，印度—孟加拉国边界被列为亚太战略咽喉点，与马六甲海峡、台湾海峡并列，风险被概括为移民紧张、走私、安全限制与拥堵四项，但报告未量化暴露的贸易额，也未指明具体口岸。政策含义：报告主张政府与企业应做战略预判——先识别关键依赖、再分散替代、最后在危机前建设韧性；对边境管理而言，其价值在于把移民摩擦与走私视为与海关效率、通关能力相互缠绕的复合风险，提示单一加严检查可能以物流成本与供应链延误为代价。局限：框架性前瞻文本，未提供可检验的因果识别；移民与边境部分着墨有限；媒体转述与原文可能存在偏差。核验边界：边境风险四项系依据媒体梳理，未见原文逐字表述。"}, {"a": "item-research-8", "t": "伦敦移民美容院与后世俗城市空间", "e": "Communal geographies in the postsecular city: ethnography of migrant-run beauty salons in London", "s": "移民与边境研究", "r": 3, "k": ["移民宗教性", "后世俗城市", "社群地理", "南亚侨民", "美容院", "城市空间"], "src": "族群与移民研究杂志（JEMS）", "u": "https://doi.org/10.1080/1369183X.2026.2769654", "sum": "论文11-27在线首发。本文为同行评议论文，刊于《族群与移民研究杂志》（Journal of Ethnic and Migration Studies）。作者指出，西方城市社会因跨国迁移而在宗教上更趋多元，但既有关于宗教与城市空间的研究多囿于世俗与神圣的二元对立，很少把镜头转向日常空间。作者把来自南亚研究的「社群地理」框架与后世俗城市视角并用，考察宗教认同如何通过空间支配与空间排斥得以表达，并将两套视角应用于伦敦两家服务第一代南亚女性的移民经营美容院的民族志材料，说明宗教在移民日常使用空间的生产中所扮演的角色，同时呈现空间的诗学与政治。作者主张，理解移民宗教性如何改造城市空间，需同时操作本地、城市与跨国三个空间尺度。", "b": "研究问题：跨国迁移使西方城市在宗教上更加多元，但宗教与城市空间的研究长期被世俗与神圣的二分所束缚，日常商业空间（如美容院）如何承载宗教认同与区隔，几乎未被系统考察。方法：采用民族志取向，在伦敦两家由移民经营、主要服务第一代南亚女性的美容院收集田野材料；分析框架把南亚研究中用以刻画宗教认同如何通过空间支配与空间排斥表达的「社群地理」概念，与「后世俗城市」视角并置，避免把宗教简化为私人信仰或公共冲突两个极端。核心发现：美容院并非纯粹商业场所，而是宗教认同与空间秩序被日常生产与协商的空间，宗教身份既可通过空间支配被表达，也可通过空间排斥被强化，空间的诗学与政治同时在场；作者强调，理解移民宗教性如何改造城市空间，必须同时操作本地（店铺内部）、城市（邻里与族裔经济）与跨国（与来源国宗教网络及品味的连接）三个尺度，否则会把跨国的宗教地理误读为本地文化习惯。政策含义（编者引申，摘要未涉及）：城市治理若把这些场所仅视为商业单位或潜在冲突点，会错失其作为社区基础设施的功能；规划与社会服务应识别其准公共属性，在语言、执照与卫生监管中避免对宗教实践的过度限制。局限：仅两家场所的深度个案，难以概括伦敦南亚社群的多样宗教构成；未提供量化证据；单一城市的政策语境限制外推；作者亦未系统比较不同宗教或教派之间的差异。核验边界：仅依据公开摘要。"}];
+  var CUR = document.body.getAttribute('data-date');
+  var q = document.getElementById('q');
+  var qGo = document.getElementById('qGo');
+  var qHist = document.getElementById('qHist');
+  var res = document.getElementById('qResults');
+  var histCache = {}, idxProm = null, PATH = null;
+  // 跨天数据索引候选路径：站点日报页 / 站点首页 / 本地仓库预览
+  var PATHS = [
+    { idx:'../api/index.json', api:'../api/', rep:function(d){ return d + '.html'; } },
+    { idx:'api/index.json', api:'api/', rep:function(d){ return 'reports/' + d + '.html'; } },
+    { idx:'../../site/api/index.json', api:'../../site/api/', rep:function(d){ return '../../reports/' + d + '/migration-intel-daily-' + d + '.html'; } }
+  ];
+  function esc(s){ return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+  function terms(str){ return (str||'').trim().toLowerCase().split(/\s+/).filter(Boolean); }
+  function hayOf(it){ var kk = Array.isArray(it.k) ? it.k.join(' ') : (it.k || ''); return (it.t+' '+it.e+' '+it.s+' '+it.src+' '+it.u+' '+kk+' '+it.sum+' '+it.b).toLowerCase(); }
+  function hit(it, ts){ return ts.every(function(t){ return hayOf(it).indexOf(t) >= 0; }); }
+  function hi(s, ts){
+    var out = esc(s);
+    ts.forEach(function(t){
+      if (!t) return;
+      var re = new RegExp('(' + t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'ig');
+      out = out.replace(re, '<mark>$1</mark>');
+    });
+    return out;
+  }
+  function getIndex(){
+    if (idxProm) return idxProm;
+    idxProm = new Promise(function(resolve){
+      var i = 0;
+      function tryNext(){
+        if (i >= PATHS.length) return resolve(null);
+        var p = PATHS[i++];
+        fetch(p.idx).then(function(r){ if (!r.ok) throw 0; return r.json(); })
+          .then(function(j){ PATH = p; resolve(j); })
+          .catch(tryNext);
+      }
+      tryNext();
+    });
+    return idxProm;
+  }
+  function todayHtml(ts){
+    var hits = TODAY.filter(function(it){ return hit(it, ts); });
+    return '<h4>今日（' + esc(CUR) + '）· ' + hits.length + ' 条</h4>' +
+      (hits.map(function(it){
+        return '<div class="qr"><a href="#' + it.a + '">' + hi(it.t, ts) + '</a>' +
+          '<div class="qr-meta"><span>' + '★★★★★☆☆☆☆☆'.slice(5 - Math.min(5, Math.max(1, it.r|0)), 10) + '</span>' +
+          '<span>' + esc(it.s) + '</span><span>来源：' + esc(it.src) + '</span>' +
+          '<a href="' + esc(it.u) + '" target="_blank" rel="noopener">原文 ↗</a></div></div>';
+      }).join('') || '<div class="qr" style="color:#5a647c">今日无匹配</div>');
+  }
+  function render(){
+    var ts = terms(q.value);
+    if (!ts.length){ res.style.display = 'none'; res.innerHTML = ''; return; }
+    var histHint = qHist.checked
+      ? '<div class="qhint">💡 按回车或点击「检索」，在全部历史日期中继续查找…</div>'
+      : '<div class="qhint">未启用历史日期检索</div>';
+    res.innerHTML = todayHtml(ts) + '<div id="qHistBox">' + histHint + '</div>';
+    res.style.display = 'block';
+  }
+  function histItemHtml(it, ts, repUrl){
+    return '<div class="qr"><a href="' + esc(it.url) + '" target="_blank" rel="noopener">' + hi(it.title_zh, ts) + '</a>' +
+      '<div class="qr-meta"><span>' + '★★★★★☆☆☆☆☆'.slice(5 - Math.min(5, Math.max(1, it.rating|0 || 3)), 10) + '</span>' +
+      '<span>' + esc(it.section_name || '') + '</span><span>来源：' + esc(it.source || '') + '</span>' +
+      '<a href="' + repUrl + '">当日日报 →</a></div></div>';
+  }
+  function searchHist(){
+    var ts = terms(q.value);
+    if (!ts.length || !qHist.checked) return;
+    var box = document.getElementById('qHistBox');
+    if (!box) return;
+    box.innerHTML = '<div class="qhint">⏳ 正在打开历史数据索引…</div>';
+    getIndex().then(function(idx){
+      if (!idx){ box.innerHTML = '<div class="qhint">⚠️ 当前环境读取不到历史数据索引（file:// 本地直开不支持跨天检索，请通过站点在线访问：https://ljixin415-moker.github.io/ ）。</div>'; return; }
+      var dates = (idx.dates || []).map(function(x){ return x.date; }).filter(function(d){ return d !== CUR; });
+      var done = 0, i = 0, total = dates.length, conc = 4;
+      function worker(){
+        if (i >= dates.length){ finish(); return; }
+        var d = dates[i++];
+        fetch(PATH.api + d + '.json').then(function(r){ return r.json(); }).then(function(j){
+          var items = [];
+          (j.sections || []).forEach(function(s){
+            (s.items || []).forEach(function(it){ it.section_name = s.section_name; items.push(it); });
+          });
+          histCache[d] = items;
+        }).catch(function(){ histCache[d] = []; }).then(function(){
+          done++;
+          var b = document.getElementById('qHistBox');
+          if (b) b.innerHTML = '<div class="qhint">⏳ 正在检索历史 ' + done + '/' + total + ' 期…</div>';
+          worker();
+        });
+      }
+      for (var w = 0; w < conc && w < total; w++) worker();
+      function finish(){
+        var html2 = '', n = 0;
+        (idx.dates || []).forEach(function(x){
+          var d = x.date;
+          if (d === CUR) return;
+          var items = histCache[d] || [];
+          var hits = items.filter(function(it){
+            return hit({ t:it.title_zh, e:it.title_en, s:it.section_name || '', src:it.source || '', u:it.url || '', k:it.keywords || [], sum:it.summary || '', b:it.brief || '' }, ts);
+          });
+          if (hits.length){
+            n += hits.length;
+            html2 += '<h4 style="margin-top:12px">📅 ' + d + ' · ' + hits.length + ' 条<a class="qr-link" href="' + PATH.rep(d) + '">当日日报 →</a></h4>' +
+              hits.map(function(it){ return histItemHtml(it, ts, PATH.rep(d)); }).join('');
+          }
+        });
+        var b = document.getElementById('qHistBox');
+        if (b) b.innerHTML = '<h4>历史日期 · ' + n + ' 条（共检索 ' + total + ' 期）</h4>' +
+          (html2 || '<div class="qr" style="color:#5a647c">历史日期无匹配</div>');
+      }
+    });
+  }
+  var deb = null;
+  q.addEventListener('input', function(){ clearTimeout(deb); deb = setTimeout(render, 200); });
+  qGo.addEventListener('click', function(){ render(); searchHist(); });
+  q.addEventListener('keydown', function(e){ if (e.key === 'Enter'){ render(); searchHist(); } });
+  qHist.addEventListener('change', function(){
+    if (!qHist.checked){ var b = document.getElementById('qHistBox'); if (b) b.innerHTML = '<div class="qhint">未启用历史日期检索</div>'; }
+  });
+})();
+</script>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('../sw.js').then(reg => {
+      reg.update();                          // 每次打开主动检查新版本
+      setInterval(() => reg.update(), 3600*1000); // 常驻页面每小时检查
+    }).catch(()=>{});
+  });
+}
+let deferredPrompt = null;
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  const btn = document.getElementById('pwa-install-btn');
+  if (btn) {
+    btn.style.display = 'inline-block';
+    btn.onclick = async () => {
+      deferredPrompt.prompt();
+      await deferredPrompt.userChoice;
+      deferredPrompt = null;
+      btn.style.display = 'none';
+    };
+  }
+});
+</script>
+</body>
+</html>
